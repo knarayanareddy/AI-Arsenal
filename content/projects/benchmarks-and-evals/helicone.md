@@ -62,7 +62,7 @@ An open-source LLM observability platform using a proxy-based integration model,
 
 ## Why it's in the Arsenal
 
-Open-source LLM observability platform positioned around a simple proxy-based integration model. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the simplest possible integration path for LLM observability — Helicone's proxy-based approach typically requires only a base-URL change rather than instrumenting code with an SDK throughout your application. See Strengths / Limitations below before adopting it.
+Helicone appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,20 +81,21 @@ Upstream: sits between the application and any LLM provider API. Downstream: non
 
 ## Key Use Cases
 
-1. **Scenario**: you want the simplest possible integration path for LLM observability — Helicone's proxy-based approach typically requires only a base-URL change rather than instrumenting code with an SDK throughout your application
-2. **Scenario**: you need cost tracking and caching as first-class features alongside basic tracing, with both open-source self-hosted and managed cloud options
+1. **Running Helicone on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What dominates the decision**: `simplest`, `possible`, `integration`, `path` are the variables that actually move the outcome for Helicone in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare Helicone against `langfuse`, `langsmith-platform`, `phoenix` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want the simplest possible integration path for LLM observability — Helicone's proxy-based approach typically requires only a base-URL change rather than instrumenting code with an SDK throughout your application
-- You need cost tracking and caching as first-class features alongside basic tracing, with both open-source self-hosted and managed cloud options
+- What Helicone gives you that reading the feature list does not: operates primarily as a proxy that sits between an application and its LLM provider (requiring only a base-URL redirect rather than SDK instrumentation throughout the codebase), capturing requests/responses for tracing, cost calculation, and optional response caching; also offers an async logging SDK for teams that prefer not to route traffic through a proxy, which is the part you have to evaluate against your own workload.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need deep, structured evaluation workflows as a primary feature — Helicone's strength is lightweight observability/cost-tracking rather than rigorous evaluation tooling like Braintrust or LangSmith offer
-- A proxy-based architecture doesn't fit your infrastructure constraints — some teams prefer SDK-based instrumentation that doesn't route traffic through an intermediary
-
-_Verified for Helicone: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
+- Adoption risk for Helicone is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Helicone against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Helicone overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

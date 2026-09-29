@@ -87,20 +87,20 @@ print(generate("用一句话解释检索增强生成（RAG）。", max_new_token
 
 ## Key Use Cases
 
-1. **Scenario**: you're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point
-2. **Scenario**: you need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives
+1. **Where it fits**: You're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point
+2. **Adoption checkpoint**: before building on Yi, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-- You're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point
-- You need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives
+- The implementation detail worth checking before adopting Yi is specific — yi ships as dense, decoder-only Transformer checkpoints in 6B, 9B, and 34B sizes that load through the standard Hugging Face transformers stack, so no bespoke runtime is required. The models are trained for bilingual English/Chinese coverage and were released with long-context variants. The published checkpoints are unquantized (supports_quantization: false in this entry's frontmatter), so serving the 34B size for low-latency inference generally means sizing GPU memory accordingly or adding an external quantization/serving layer — because that is where the capability claim either survives contact with your data or does not.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need active vendor support or frequent updates — GitHub issue activity on 01-ai/Yi shows sparse, community-only engagement in 2026 with no clear maintainer response pattern, and 01.AI's public focus has shifted toward newer, less-established projects
-- You want a model with strong current-generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023-2024 release
-
-_Enrichment status: draft. Yi's maintenance status and leaderboard positioning here are inferred from 01.AI's own repository signals and this entry's frontmatter, not from independent benchmarking by the Arsenal. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the Yi footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Yi at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Yi here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

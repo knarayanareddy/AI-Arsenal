@@ -110,7 +110,7 @@ git clone https://github.com/google-research-datasets/natural-questions
 
 ## Relation to the Arsenal
 
-Retrieval / RAG evaluation benchmark. Complements RAG projects in `content/projects/data-and-retrieval/`, RAG tips in `content/tips-and-tricks/rag-and-retrieval/`, and evaluation tooling.
+Natural Questions is the retrieval benchmark that most RAG papers still quote, and it is a retrieval benchmark rather than an end-to-end one: it scores whether the right passage was retrieved, not whether the answer built from it was correct. That distinction is what to carry forward — a system can score well here and still fail at generation. Pair it with an end-to-end RAG evaluation for the latter, and with `rgb` for a controlled multi-hop comparison.
 
 ## Resources
 

@@ -62,7 +62,7 @@ An open-source OpenTelemetry-native instrumentation library from Traceloop for G
 
 ## Why it's in the Arsenal
 
-Traceloop's OpenTelemetry-native instrumentation library for GenAI/LLM applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want standardized, OpenTelemetry-based instrumentation for LLM applications specifically, backed by Traceloop, with broad framework/provider auto-instrumentation coverage. See Strengths / Limitations below before adopting it.
+OpenLLMetry is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ Upstream: built on the OpenTelemetry SDK and semantic conventions. Downstream: p
 
 ## Key Use Cases
 
-1. **Scenario**: you want standardized, OpenTelemetry-based instrumentation for LLM applications specifically, backed by Traceloop, with broad framework/provider auto-instrumentation coverage
-2. **Scenario**: you need traces to flow into an existing OTel-compatible observability backend rather than adopting a new dedicated LLM-observability platform
+1. **Running OpenLLMetry on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What the OpenLLMetry scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare OpenLLMetry against `langfuse`, `langsmith-platform`, `phoenix` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want standardized, OpenTelemetry-based instrumentation for LLM applications specifically, backed by Traceloop, with broad framework/provider auto-instrumentation coverage
-- You need traces to flow into an existing OTel-compatible observability backend rather than adopting a new dedicated LLM-observability platform
+- The implementation detail worth checking before adopting OpenLLMetry is specific — provides auto-instrumentation packages following OpenTelemetry semantic conventions for GenAI, automatically capturing spans for LLM calls, embedding operations, and vector database queries across supported providers/frameworks without requiring manual instrumentation of each call site — because that is where the capability claim either survives contact with your data or does not.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want an all-in-one platform combining tracing with prompt management and evaluation UI — OpenLLMetry is instrumentation-focused; pair it with a platform like Langfuse or Traceloop's own hosted product for the full workflow
-- You're not using or planning to use OpenTelemetry-based observability — a purpose-built platform may have a simpler onboarding path
+- Adoption risk for OpenLLMetry is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running OpenLLMetry against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where OpenLLMetry overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

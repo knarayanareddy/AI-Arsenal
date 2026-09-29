@@ -58,7 +58,7 @@ Microsoft's current agent-development framework, released as a production-ready 
 
 ## Why it's in the Arsenal
 
-Microsoft's current, officially-recommended agent framework, positioned as the convergence point for AutoGen and Semantic Kernel. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Microsoft/Azure and want the officially-supported, enterprise-SLA path for agent development going forward, including migration paths from AutoGen or Semantic Kernel. See Strengths / Limitations below before adopting it.
+Microsoft Agent Framework appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ pip install microsoft-agent-framework
 
 ## Key Use Cases
 
-1. **Scenario**: you're building on Microsoft/Azure and want the officially-supported, enterprise-SLA path for agent development going forward, including migration paths from AutoGen or Semantic Kernel
-2. **Scenario**: you need production-grade orchestration spanning simple single agents through graph-based multi-agent workflows in both Python and .NET
+1. **Adopting the abstraction**: for Microsoft Agent Framework, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What to measure first**: `building`, `microsoft`, `azure`, `officially-supported` decide whether Microsoft Agent Framework works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Microsoft Agent Framework against `autogen`, `semantic-kernel` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're building on Microsoft/Azure and want the officially-supported, enterprise-SLA path for agent development going forward, including migration paths from AutoGen or Semantic Kernel
-- You need production-grade orchestration spanning simple single agents through graph-based multi-agent workflows in both Python and .NET
+- Beyond the headline description, Microsoft Agent Framework's architecture section is the honest source: spans a range of orchestration complexity from simple single agents through graph-based multi-agent workflows, with deep integration into Azure telemetry, Semantic Kernel's plugin/skill model, and enterprise compliance tooling; supports both Python and .NET as first-class languages.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a lighter-weight framework for quick prototyping — reviewers note MAF 1.0 is 'much heavier' than AutoGen's original conversational-loop model, trading simplicity for enterprise rigor
-- Your stack is not Microsoft/Azure-centric — the framework's strongest value proposition (deep Azure telemetry, Semantic Kernel integration, compliance guardrails) is most relevant inside that ecosystem
+- The cost this entry cannot quantify for you is operational: the Microsoft Agent Framework footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Microsoft Agent Framework at your scale need measuring before this informs a production decision.
+- Where Microsoft Agent Framework overlaps `autogen`, `semantic-kernel`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

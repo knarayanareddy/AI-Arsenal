@@ -93,20 +93,22 @@ Models download on first use, so the first read is slower. Set gpu=True when a C
 
 ## Key Use Cases
 
-1. Multilingual batch OCR: read mixed-script documents such as invoices, packaging labels or scanned forms in one pass by passing multiple language codes.
-2. Fast prototyping of an extraction step: add OCR to a script in a few lines to check whether the corpus is legible before investing in a document pipeline.
-3. Region-targeted extraction: use the returned bounding boxes and confidence scores to ignore low-confidence regions rather than committing every detected string.
+1. **First workload**: You need OCR working today across many scripts including Latin
+2. **Second workload**: Chinese
+3. **Third workload**: Arabic
+4. **Adoption checkpoint**: before building on EasyOCR, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-- Eighty-plus languages and all major writing scripts in one library, which avoids running and reconciling several OCR engines.
-- Minimal setup: a Reader configured with language codes is the whole integration, with models fetched on first use.
-- Returns bounding boxes and per-region confidence, so callers can filter weak results before using them.
-- A web demo and published Gradio Spaces let you evaluate accuracy on your own document type before installing anything.
+- Beyond the headline description, EasyOCR's architecture section is the honest source: the library wraps two stages, text detection to find where text is on the image and recognition to transcribe each region, with the model choice per language handled internally. The reader API takes an image path, a list of languages, and returns recognised text together with the bounding boxes for each result, so callers can filter by confidence or by region without re-running recognition. Models are fetched and cached on first use rather than specified by the caller, which is what removes the configuration step. Language selection is explicit at read time, so a document with mixed scripts is handled by passing more than one language code rather than by detection. On the deployment side the same code is wrapped in Gradio for a web demo and published as Hugging Face Spaces, which is why the project can offer a hosted try-it without a separate service.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-The project's own roadmap lists handwritten text support as not yet done, which is a real boundary for forms, notes and scanned handwriting. The output is text plus boxes rather than a reconstructed page, so reading order, tables and layout have to be handled downstream, and a document pipeline will need a layout-aware tool in front of or after this one. Maintenance is slow: the README's newest release note is version 1.7.2 from September 2024 and the last commit is from December 2025, so compatibility with current Python and torch versions is worth checking before pinning. Accuracy on clean, well-segmented text is strong, but on photographs, low contrast or unusual layouts it degrades without the parameter control that a lower-level engine gives you. It is a local library rather than a service, so throughput on a large corpus is a function of your own batching and hardware.
+- The cost this entry cannot quantify for you is operational: the EasyOCR footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for EasyOCR at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside EasyOCR here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

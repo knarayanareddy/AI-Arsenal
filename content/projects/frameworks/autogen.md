@@ -57,7 +57,7 @@ Microsoft's early open-source framework for building multi-agent conversational 
 
 ## Why it's in the Arsenal
 
-Microsoft's original multi-agent conversation framework, now in maintenance mode. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing AutoGen-based system and need to maintain it, or you're studying its agent-to-agent conversation pattern as a research reference. See Strengths / Limitations below before adopting it.
+AutoGen appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -83,18 +83,21 @@ user.initiate_chat(assistant, message="Draft a 3-step plan.")
 
 ## Key Use Cases
 
-1. **Scenario**: you have an existing AutoGen-based system and need to maintain it, or you're studying its agent-to-agent conversation pattern as a research reference
-2. **Scenario**: you want the community-driven AG2 fork if you need continued feature development on the original AutoGen codebase without moving to Microsoft's newer framework
+1. **Adopting the abstraction**: for AutoGen, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `existing`, `autogen-based`, `system`, `maintain` are the variables that actually move the outcome for AutoGen in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare AutoGen against `microsoft-agent-framework` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You have an existing AutoGen-based system and need to maintain it, or you're studying its agent-to-agent conversation pattern as a research reference
-- You want the community-driven AG2 fork if you need continued feature development on the original AutoGen codebase without moving to Microsoft's newer framework
+- The implementation detail worth checking before adopting AutoGen is specific — agents are modeled as conversational participants that exchange messages in a group-chat-style pattern; a 'conversable agent' abstraction handles message passing, tool invocation, and human-in-the-loop checkpoints, with orchestration driven by conversation flow rather than an explicit graph or state machine — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're starting a new production project — Microsoft has placed AutoGen in maintenance mode (critical security patches only, no new features) and now recommends Microsoft Agent Framework 1.0 for new work
-- You need enterprise Azure integration, A2A orchestration protocol support, or ongoing architectural improvements — those are only landing in Microsoft Agent Framework, not AutoGen
+- Adoption risk for AutoGen is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for AutoGen at your scale need measuring before this informs a production decision.
+- Where AutoGen overlaps `microsoft-agent-framework`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -56,7 +56,7 @@ A Python framework for orchestrating multi-agent systems modeled as a 'crew' of 
 
 ## Why it's in the Arsenal
 
-Role-based multi-agent orchestration framework, positioned as more opinionated/higher-level than graph-based alternatives. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to model a multi-agent system as a 'crew' of role-based agents (researcher, writer, reviewer, etc.) with a higher-level API than explicit graph construction. See Strengths / Limitations below before adopting it.
+CrewAI is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install crewai
 
 ## Key Use Cases
 
-1. **Scenario**: you want to model a multi-agent system as a 'crew' of role-based agents (researcher, writer, reviewer, etc.) with a higher-level API than explicit graph construction
-2. **Scenario**: you need both a lightweight open-source framework and an optional managed platform (CrewAI Enterprise) for deploying and monitoring crews in production
+1. **Depending on it safely**: the work is the boundary — which calls go through CrewAI, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the CrewAI scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare CrewAI against `langgraph`, `metagpt`, `autogpt` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want to model a multi-agent system as a 'crew' of role-based agents (researcher, writer, reviewer, etc.) with a higher-level API than explicit graph construction
-- You need both a lightweight open-source framework and an optional managed platform (CrewAI Enterprise) for deploying and monitoring crews in production
+- Beyond the headline description, CrewAI's architecture section is the honest source: agents are defined with a role, goal, and backstory (shaping their behavior via prompting), then assigned tasks within a Crew that manages turn-taking and delegation. The separate Flows API allows more deterministic, event-driven orchestration when the free-form crew model is too loose for a given workflow.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need fine-grained control over state transitions, branching, and durable checkpointing — LangGraph's explicit graph model gives you that level of control, which CrewAI's higher-level abstraction trades away for simplicity
-- Your workflow doesn't naturally decompose into distinct agent 'roles' — a role-based framing can add unnecessary structure for simple pipeline tasks
+- Adoption risk for CrewAI is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where CrewAI overlaps `langgraph`, `metagpt`, `autogpt`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

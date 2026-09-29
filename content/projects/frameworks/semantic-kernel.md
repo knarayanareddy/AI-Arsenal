@@ -55,7 +55,7 @@ Microsoft's earlier open-source SDK for integrating AI orchestration — plugins
 
 ## Why it's in the Arsenal
 
-Microsoft's earlier SDK for integrating AI orchestration into applications, now being converged into Microsoft Agent Framework. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing Semantic Kernel-based application in .NET or Python and need to maintain or incrementally extend it. See Strengths / Limitations below before adopting it.
+Semantic Kernel appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -78,18 +78,21 @@ pip install semantic-kernel
 
 ## Key Use Cases
 
-1. **Scenario**: you have an existing Semantic Kernel-based application in .NET or Python and need to maintain or incrementally extend it
-2. **Scenario**: you specifically need Semantic Kernel's plugin/skill abstraction model for integrating AI capabilities into a larger existing application architecture
+1. **Adopting the abstraction**: for Semantic Kernel, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What the Semantic Kernel scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You have an existing Semantic Kernel-based application in .NET or Python and need to maintain or incrementally extend it
-- You specifically need Semantic Kernel's plugin/skill abstraction model for integrating AI capabilities into a larger existing application architecture
+- The implementation detail worth checking before adopting Semantic Kernel is specific — applications integrate AI capability through 'plugins' (functions exposed to the model) and 'planners' (components that sequence plugin calls to satisfy a goal), designed to slot into existing application architectures rather than serve as a standalone agent platform — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're starting a new agent project on Microsoft's stack — Microsoft now recommends Agent Framework 1.0, which explicitly builds on and is positioned as the evolution of Semantic Kernel
-- You want the newest agent-orchestration patterns (graph-based multi-agent workflows) — those are the focus of Agent Framework, not Semantic Kernel's original plugin-oriented design
+- Adoption risk for Semantic Kernel is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Semantic Kernel at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Semantic Kernel here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

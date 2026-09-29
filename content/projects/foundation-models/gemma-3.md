@@ -62,7 +62,7 @@ Google DeepMind's third-generation open-weight model family, released in 2025, a
 
 ## Why it's in the Arsenal
 
-Google DeepMind's third-generation open-weight model family with efficient long-context multimodal support. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a 128K-context multimodal (text+image) open-weight model that runs efficiently on constrained hardware, thanks to its interleaved local/global attention design. See Strengths / Limitations below before adopting it.
+Gemma 3 appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -88,18 +88,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you need a 128K-context multimodal (text+image) open-weight model that runs efficiently on constrained hardware, thanks to its interleaved local/global attention design
-2. **Scenario**: you want Google's current-generation open-weight family across a wide size range (1B-27B) for anything from edge deployment to strong general-purpose serving
+1. **Taking the dependency**: the weights for Gemma 3 are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What to measure first**: `k-context`, `multimodal`, `text`, `image` decide whether Gemma 3 works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need a 128K-context multimodal (text+image) open-weight model that runs efficiently on constrained hardware, thanks to its interleaved local/global attention design
-- You want Google's current-generation open-weight family across a wide size range (1B-27B) for anything from edge deployment to strong general-purpose serving
+- The implementation detail worth checking before adopting Gemma 3 is specific — a dense decoder-only transformer using Grouped-Query Attention with QK-norm (replacing Gemma 2's soft-capping), and a distinguishing 5:1 interleaving of local sliding-window attention layers (1024-token span) to global attention layers. Only the global layers (1/6 of total) need to retain KV cache for the full 128K context, which is the specific architectural mechanism that keeps long-context inference memory-feasible on constrained hardware. RoPE base frequency is 1M on global layers and 10K on local layers — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the absolute latest Google open-weight generation — Gemma 4 launched in April 2026 and is the newer architecture; evaluate whether its improvements matter for your use case before defaulting to Gemma 3
-- You need audio or video understanding — Gemma 3's multimodal support is text+image only, not full omni-modal input
+- Adoption risk for Gemma 3 is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Gemma 3 at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Gemma 3 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

@@ -57,7 +57,7 @@ A multi-model database combining relational, document, graph, vector, and time-s
 
 ## Why it's in the Arsenal
 
-Multi-model database (relational, document, graph, vector, time-series) positioned specifically around unifying AI agent memory and context alongside application data. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to consolidate multiple data models (relational, document, graph, vector) into a single database rather than operating separate systems for structured data, vector search, and graph relationships. See Strengths / Limitations below before adopting it.
+SurrealDB is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -76,18 +76,21 @@ Upstream: none of particular note. Downstream: none of particular note yet given
 
 ## Key Use Cases
 
-1. **Scenario**: you want to consolidate multiple data models (relational, document, graph, vector) into a single database rather than operating separate systems for structured data, vector search, and graph relationships
-2. **Scenario**: you're building AI agents that need persistent, synchronized memory and context graphs embedded directly at the database layer — SurrealDB 3.0 specifically targets this as a first-class capability
+1. **Integrating SurrealDB**: treat it as a dependency with its own failure modes rather than a library call — decide timeout, retry and degraded-mode behaviour before the first query goes through it, and put it behind an interface so it can be replaced without a rewrite.
+2. **What to measure first**: `consolidate`, `multiple`, `data`, `models` decide whether SurrealDB works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare SurrealDB against `milvus`, `lancedb` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want to consolidate multiple data models (relational, document, graph, vector) into a single database rather than operating separate systems for structured data, vector search, and graph relationships
-- You're building AI agents that need persistent, synchronized memory and context graphs embedded directly at the database layer — SurrealDB 3.0 specifically targets this as a first-class capability
+- Beyond the headline description, SurrealDB's architecture section is the honest source: built in Rust, SurrealDB 3.0 unifies multiple data models (relational, document, graph, time-series, vector, geospatial, key-value) queryable through a single query language (SurrealQL), with vector indexing for millisecond-precision embedding retrieval and 'context graphs' embedded directly in the database layer specifically designed for AI agent memory, plus a plugin framework (Surrealism) for embedding business logic and access control as transactional modules inside the database runtime.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a database with a long, extensively battle-tested production track record — SurrealDB is comparatively young (founded 2021) and, despite recent funding and 3.0's reliability-focused architecture changes, has a shorter production history than PostgreSQL+pgvector or Milvus
-- You need best-in-class performance in any single data model (pure vector search, pure graph traversal) rather than a well-rounded multi-model system — specialized single-purpose databases will generally outperform a generalist in their specific niche
+- Adoption risk for SurrealDB is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for SurrealDB at your scale need measuring before this informs a production decision.
+- Where SurrealDB overlaps `milvus`, `lancedb`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -55,7 +55,7 @@ A universal LLM deployment engine built on machine-learning compilation (Apache 
 
 ## Why it's in the Arsenal
 
-The compiler-based answer to on-device inference: where llama.cpp hand-writes kernels per backend, MLC compiles models through TVM to reach iOS, Android, WebGPU and desktop GPUs from a single pipeline — it powered the first credible in-browser and on-phone Llama demos. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition. See Strengths / Limitations below before adopting it.
+MLC LLM is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -74,18 +74,21 @@ mlc_llm chat HF://mlc-ai/Llama-3.2-3B-Instruct-q4f16_1-MLC
 
 ## Key Use Cases
 
-1. **Scenario**: you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition
-2. **Scenario**: you are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options
+1. **Depending on it safely**: the work is the boundary — which calls go through MLC LLM, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the MLC LLM scenarios have in common**: they are separated by hardware and concurrency rather than by capability, which is the axis on which runtimes genuinely differ.
+3. **Choosing between candidates**: compare MLC LLM against `llama-cpp`, `ollama` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition
-- You are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options
+- What MLC LLM gives you that reading the feature list does not: models are expressed in a Python IR, quantized (3/4-bit grouped quantization), and compiled through TVM's tensor-program optimization into platform-specific libraries; MLCEngine exposes an OpenAI-compatible API with continuous batching on server targets, while iOS/Android SDKs and the WebLLM JS package wrap the same compiled artifacts for edge targets, which is the part you have to evaluate against your own workload.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want maximum server-side throughput on NVIDIA GPUs — vLLM, SGLang, or TensorRT-LLM outperform it for datacenter serving
-- You rely on the newest model architectures immediately — compiler-based stacks lag hand-optimized runtimes when novel attention/MoE variants ship
+- The cost this entry cannot quantify for you is operational: the MLC LLM footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where MLC LLM overlaps `llama-cpp`, `ollama`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

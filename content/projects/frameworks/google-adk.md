@@ -56,7 +56,7 @@ Google's official open-source framework for building, evaluating, and deploying 
 
 ## Why it's in the Arsenal
 
-Google's official agent development framework, positioned as the Google Cloud-native path for building and deploying agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling. See Strengths / Limitations below before adopting it.
+Google ADK is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -79,20 +79,21 @@ pip install google-adk
 
 ## Key Use Cases
 
-1. **Scenario**: you're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling
-2. **Scenario**: you need multi-agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation
+1. **Adopting the abstraction**: for Google ADK, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `building`, `google`, `cloud`, `vertex` are the variables that actually move the outcome for Google ADK in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare Google ADK against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling
-- You need multi-agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation
+- The implementation detail worth checking before adopting Google ADK is specific — provides an agent abstraction with built-in support for tool use, multi-agent composition, and evaluation, plus tooling for deploying agents to Google Cloud infrastructure; supports both Python and other language bindings per Google's official samples — because that is where the capability claim either survives contact with your data or does not.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a cloud-agnostic framework — ADK's deployment and tooling story is most complete within Google Cloud, so a cloud-agnostic choice like LangGraph or CrewAI may fit better outside that ecosystem
-- You want the largest possible existing community and third-party tutorial base — as a comparatively newer entrant, ADK's community resources are smaller than LangChain/LangGraph's
-
-_Enrichment status: draft. Google ADK's Cloud/Vertex-native positioning here is drawn from Google's own docs and sample repos; independent production case studies were limited. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the Google ADK footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where Google ADK overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

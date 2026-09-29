@@ -55,7 +55,7 @@ Alibaba Cloud's original open-weight large language model family — the Qwen/Qw
 
 ## Why it's in the Arsenal
 
-Alibaba's original open-weight Qwen model family (Qwen 1/2 generation). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Qwen/Qwen2 generation for compatibility with an existing pipeline or as a comparative research baseline. See Strengths / Limitations below before adopting it.
+The case for Qwen rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ print(generate("用一句话解释检索增强生成（RAG）。", max_new_token
 
 ## Key Use Cases
 
-1. **Scenario**: you specifically need the original Qwen/Qwen2 generation for compatibility with an existing pipeline or as a comparative research baseline
-2. **Scenario**: you're studying the evolution of Alibaba's open-weight model line from its earlier, simpler dense-transformer generation
+1. **Running it in anger**: the first real evaluation of Qwen is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What to measure first**: `specifically`, `original`, `qwen`, `qwen2` decide whether Qwen works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You specifically need the original Qwen/Qwen2 generation for compatibility with an existing pipeline or as a comparative research baseline
-- You're studying the evolution of Alibaba's open-weight model line from its earlier, simpler dense-transformer generation
+- The implementation detail worth checking before adopting Qwen is specific — a dense decoder-only transformer family released across multiple parameter sizes, following the standard architecture conventions of its 2023-era release window without the later generations' MoE variants or extended multilingual/agentic post-training — because that is where the capability claim either survives contact with your data or does not.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're starting a new project — Alibaba has since shipped Qwen 2.5, Qwen3, and as of 2026 Qwen3.5/3.6/3.7, all of which substantially outperform this generation and are the vendor's actively promoted line
-- You need MoE efficiency or agentic/coding specialization — those capabilities were introduced in later Qwen generations, not this one
+- Adoption risk for Qwen is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Qwen here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

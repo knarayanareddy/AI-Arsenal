@@ -56,7 +56,7 @@ OpenAI's official, lightweight Python SDK for building agentic applications, pro
 
 ## Why it's in the Arsenal
 
-OpenAI's official, lightweight agent-building SDK, positioned as the provider-native path for building agents against OpenAI's models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building primarily against OpenAI's models and want a lightweight, officially-supported SDK rather than a heavier, provider-agnostic framework. See Strengths / Limitations below before adopting it.
+The case for OpenAI Agents SDK rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,20 +79,21 @@ pip install openai-agents-sdk
 
 ## Key Use Cases
 
-1. **Scenario**: you're building primarily against OpenAI's models and want a lightweight, officially-supported SDK rather than a heavier, provider-agnostic framework
-2. **Scenario**: you want a simple mental model (agents, handoffs, guardrails) without the abstraction overhead of a full graph-based orchestration framework
+1. **Adopting the abstraction**: for OpenAI Agents SDK, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What the OpenAI Agents SDK scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare OpenAI Agents SDK against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're building primarily against OpenAI's models and want a lightweight, officially-supported SDK rather than a heavier, provider-agnostic framework
-- You want a simple mental model (agents, handoffs, guardrails) without the abstraction overhead of a full graph-based orchestration framework
+- The implementation detail worth checking before adopting OpenAI Agents SDK is specific — built around a small set of primitives: agents (an LLM with instructions and tools), handoffs (explicit transfer of control between agents), and guardrails (input/output validation); orchestration logic is kept intentionally minimal compared to graph-based frameworks — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need to be model-provider-agnostic — this SDK is designed around OpenAI's API and model behavior; a framework like LangGraph or Pydantic AI is more naturally multi-provider
-- You need the deep durability/checkpointing features of a graph-based framework — this SDK's simplicity trades away some of that fine-grained state control
-
-_Enrichment status: draft. The OpenAI Agents SDK's capabilities here are drawn from OpenAI's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the OpenAI Agents SDK footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running OpenAI Agents SDK against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where OpenAI Agents SDK overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

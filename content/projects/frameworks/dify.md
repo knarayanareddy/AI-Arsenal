@@ -56,7 +56,7 @@ An open-source platform for building LLM applications through a visual workflow 
 
 ## Why it's in the Arsenal
 
-Open-source LLM application development platform with a visual workflow builder, positioned as a low-code alternative to hand-coded agent frameworks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a self-hostable, visual workflow builder for LLM applications (RAG, agents, chatbots) rather than writing orchestration code directly. See Strengths / Limitations below before adopting it.
+The case for Dify rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install dify
 
 ## Key Use Cases
 
-1. **Scenario**: you want a self-hostable, visual workflow builder for LLM applications (RAG, agents, chatbots) rather than writing orchestration code directly
-2. **Scenario**: your team includes non-engineers who need to iterate on prompt/workflow logic without deploying code changes
+1. **Depending on it safely**: the work is the boundary — which calls go through Dify, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Dify scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare Dify against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a self-hostable, visual workflow builder for LLM applications (RAG, agents, chatbots) rather than writing orchestration code directly
-- Your team includes non-engineers who need to iterate on prompt/workflow logic without deploying code changes
+- Beyond the headline description, Dify's architecture section is the honest source: applications are built as node-based visual workflows (similar in spirit to a flowchart) connecting LLM calls, retrieval steps, tool calls, and conditional logic; the platform also exposes a backend API and SDK for embedding built workflows into external applications.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the flexibility of a code-first framework — visual builders like Dify trade off fine-grained control and version-control-friendly workflows for ease of iteration
-- You need deep custom logic that doesn't map cleanly onto Dify's node-based workflow model — at that point a code framework like LangGraph or a custom FastAPI service gives more control
+- The cost this entry cannot quantify for you is operational: the Dify footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where Dify overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

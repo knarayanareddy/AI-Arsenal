@@ -62,7 +62,7 @@ An open-source, high-throughput inference and serving engine for large language 
 
 ## Why it's in the Arsenal
 
-The de facto default high-throughput LLM serving engine, built around PagedAttention memory management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage. See Strengths / Limitations below before adopting it.
+vLLM is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ vllm serve meta-llama/Llama-3.1-8B-Instruct   # OpenAI-compatible API on :8000
 
 ## Key Use Cases
 
-1. **Scenario**: you're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage
-2. **Scenario**: you need proven, mature continuous batching and memory-efficient KV cache management (PagedAttention) for high-concurrency serving
+1. **Running it in anger**: the first real evaluation of vLLM is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What dominates the decision**: `deploying`, `open-weight`, `model`, `production` are the variables that actually move the outcome for vLLM in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage
-- You need proven, mature continuous batching and memory-efficient KV cache management (PagedAttention) for high-concurrency serving
+- Beyond the headline description, vLLM's architecture section is the honest source: pagedAttention divides the KV cache into fixed-size blocks (analogous to OS virtual-memory pages) rather than requiring contiguous memory per sequence, dramatically reducing memory waste and enabling continuous batching across many concurrent requests; supports tensor and pipeline parallelism for multi-GPU serving and an OpenAI-compatible API server.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- Your workload is dominated by heavily shared-prefix requests (repeated system prompts, RAG with common context) at scale — SGLang's RadixAttention specifically targets and often outperforms vLLM in that scenario
-- You're serving a single model on a single consumer GPU for local development — the operational overhead of vLLM's server model is unnecessary compared to Ollama or llama.cpp direct usage
+- The cost this entry cannot quantify for you is operational: the vLLM footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for vLLM at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside vLLM here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

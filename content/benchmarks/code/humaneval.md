@@ -109,7 +109,7 @@ None yet in the Arsenal for code – see `content/benchmarks/code/` index.
 
 ## Relation to the Arsenal
 
-Code generation benchmark. Complements code-generation projects in `content/projects/frameworks/` and code-generation tips.
+HumanEval is the reference point for functional correctness in code generation and remains the number most model cards quote. Its limits are well documented: 164 short, self-contained, single-function tasks that are now largely memorised by frontier models, so a high pass@1 on it is weak evidence of programming ability and a low one is not evidence of absence. Read it as a floor, and read `bigcodebench` alongside it for multi-library composition and `swe-bench` for repository-scale work.
 
 ## Resources
 

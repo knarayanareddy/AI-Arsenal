@@ -62,7 +62,7 @@ An open-source LLM evaluation and observability platform from Comet, extending C
 
 ## Why it's in the Arsenal
 
-Comet's open-source LLM evaluation and observability platform, extending Comet's existing ML experiment-tracking product line into the LLM/agent space. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship. See Strengths / Limitations below before adopting it.
+Opik appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,20 +81,21 @@ Upstream: built by Comet, leveraging their existing ML platform infrastructure a
 
 ## Key Use Cases
 
-1. **Scenario**: you're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship
-2. **Scenario**: you want an open-source evaluation platform backed by an established ML-tooling company (Comet) with both self-hosted and managed options
+1. **Running Opik on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What to measure first**: `already`, `using`, `comet`, `classic` decide whether Opik works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Opik against `langfuse`, `langsmith-platform`, `phoenix` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship
-- You want an open-source evaluation platform backed by an established ML-tooling company (Comet) with both self-hosted and managed options
+- The implementation detail worth checking before adopting Opik is specific — provides tracing instrumentation for LLM application calls, an evaluation framework with both heuristic and LLM-graded metrics, and a dashboard shared conceptually with Comet's broader ML experiment-tracking platform, available as both open-source self-hosted and managed cloud offerings — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're not already invested in the Comet ecosystem — a standalone tool like Langfuse may be a lighter-weight choice with a larger community specifically in the LLM-observability space
-- You need the deepest LangChain-specific integration — LangSmith, built by the LangChain team, has tighter native support for that specific framework
-
-_Verified for Opik: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
+- The cost this entry cannot quantify for you is operational: the Opik footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Opik against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Opik overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

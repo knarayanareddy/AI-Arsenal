@@ -56,7 +56,7 @@ A minimal, code-first agent framework from Hugging Face, designed around the ide
 
 ## Why it's in the Arsenal
 
-Hugging Face's minimal, code-first agent framework emphasizing simplicity over feature breadth. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface. See Strengths / Limitations below before adopting it.
+Smolagents is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install smolagents
 
 ## Key Use Cases
 
-1. **Scenario**: you want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface
-2. **Scenario**: you prefer agents that write and execute Python code to take actions (code-agent pattern) rather than JSON-based tool-calling exclusively
+1. **Adopting the abstraction**: for Smolagents, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What to measure first**: `simplest`, `possible`, `agent`, `framework` decide whether Smolagents works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Smolagents against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface
-- You prefer agents that write and execute Python code to take actions (code-agent pattern) rather than JSON-based tool-calling exclusively
+- Beyond the headline description, Smolagents's architecture section is the honest source: agents reason in a loop and express actions as executable Python code snippets (run in a sandboxed interpreter) rather than JSON function-call payloads, an approach Hugging Face argues reduces the friction and error rate of complex multi-step tool use.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need extensive built-in integrations, durability features, or enterprise tooling — smolagents' minimalism is a deliberate tradeoff against LangGraph or CrewAI's larger feature sets
-- You need multi-agent orchestration at scale — smolagents is oriented toward single or simply-composed agents rather than complex multi-agent graphs
+- Adoption risk for Smolagents is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Smolagents against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Smolagents overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

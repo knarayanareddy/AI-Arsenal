@@ -55,7 +55,7 @@ A fine-tuning and alignment framework from Alibaba's ModelScope covering 600+ te
 
 ## Why it's in the Arsenal
 
-Alibaba's answer to LLaMA-Factory: the broadest model-coverage fine-tuning framework, especially strong on Chinese-ecosystem and multimodal models (Qwen-VL, InternVL, DeepSeek-VL) that other trainers support late or not at all. It earns a place in the Arsenal because it directly addresses a recurring decision point: you fine-tune Qwen-family or Chinese-ecosystem multimodal models — ms-swift typically has day-one training support because it is maintained by the same org. See Strengths / Limitations below before adopting it.
+ms-swift is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -74,18 +74,21 @@ swift sft --model Qwen/Qwen3-8B --dataset AI-ModelScope/alpaca-gpt4-data-en --tr
 
 ## Key Use Cases
 
-1. **Scenario**: you fine-tune Qwen-family or Chinese-ecosystem multimodal models — ms-swift typically has day-one training support because it is maintained by the same org
-2. **Scenario**: you need one framework spanning SFT, DPO/GRPO, sequence-parallel long-context training, quantized training, and Megatron-backed scale-out without switching stacks
+1. **Running it in anger**: the first real evaluation of ms-swift is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What dominates the decision**: `fine-tune`, `qwen-family`, `chinese-ecosystem`, `multimodal` are the variables that actually move the outcome for ms-swift in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare ms-swift against `llamafactory`, `axolotl`, `unsloth` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You fine-tune Qwen-family or Chinese-ecosystem multimodal models — ms-swift typically has day-one training support because it is maintained by the same org
-- You need one framework spanning SFT, DPO/GRPO, sequence-parallel long-context training, quantized training, and Megatron-backed scale-out without switching stacks
+- The implementation detail worth checking before adopting ms-swift is specific — a layered CLI (swift sft, swift rlhf, swift infer, swift deploy) over pluggable backends: PEFT-based tuners (LoRA, QLoRA, DoRA, and research tuners), DeepSpeed ZeRO or Megatron parallelism for scale, and vLLM/SGLang/LMDeploy for accelerated rollout and inference. RLHF support includes DPO, GRPO, PPO, KTO and reward-model training across both text and multimodal models — because that is where the capability claim either survives contact with your data or does not.
+- It is a training-and-alignment entry in this catalog, so the comparison that matters is against the other training-and-alignment projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- Your models are all Western-ecosystem text LLMs — Axolotl or LLaMA-Factory have larger English-speaking communities and more battle-tested recipes for that slice
-- You want minimal dependency surface — the framework's breadth (ModelScope hub integration, many optional backends) makes for a heavy install and complex failure modes
+- The cost this entry cannot quantify for you is operational: the ms-swift footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running ms-swift against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where ms-swift overlaps `llamafactory`, `axolotl`, `unsloth`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

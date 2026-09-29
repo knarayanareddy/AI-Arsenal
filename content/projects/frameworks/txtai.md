@@ -61,7 +61,7 @@ An open-source, all-in-one framework combining embeddings-based semantic search,
 
 ## Why it's in the Arsenal
 
-All-in-one embeddings/semantic-search framework, positioned as a lighter, more self-contained alternative to assembling separate vector-DB plus orchestration-framework stacks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want semantic search, embeddings, and lightweight LLM orchestration in a single, more self-contained library rather than assembling a vector database plus a separate framework. See Strengths / Limitations below before adopting it.
+txtai appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -84,20 +84,21 @@ pip install txtai
 
 ## Key Use Cases
 
-1. **Scenario**: you want semantic search, embeddings, and lightweight LLM orchestration in a single, more self-contained library rather than assembling a vector database plus a separate framework
-2. **Scenario**: you're building a smaller-scale application where txtai's all-in-one embeddings database (which can run embedded, without a separate server) is simpler to operate than a dedicated vector database deployment
+1. **Depending on it safely**: the work is the boundary — which calls go through txtai, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the txtai scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want semantic search, embeddings, and lightweight LLM orchestration in a single, more self-contained library rather than assembling a vector database plus a separate framework
-- You're building a smaller-scale application where txtai's all-in-one embeddings database (which can run embedded, without a separate server) is simpler to operate than a dedicated vector database deployment
+- Beyond the headline description, txtai's architecture section is the honest source: provides an embeddable 'embeddings database' that can run in-process (SQLite-backed) or scale to external vector stores, combined with a workflow API for chaining semantic search with LLM calls, positioned as a lighter-weight alternative to a full RAG-framework-plus-vector-database stack.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need to scale to very large vector datasets in a distributed, production-grade vector database — txtai's embedded model is not designed to compete with dedicated systems like Milvus or Qdrant at that scale
-- You want the largest integration ecosystem — txtai has a smaller third-party integration and community footprint than LangChain or LlamaIndex
-
-_Enrichment status: draft. txtai's all-in-one positioning here is drawn from the project's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
+- Adoption risk for txtai is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside txtai here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

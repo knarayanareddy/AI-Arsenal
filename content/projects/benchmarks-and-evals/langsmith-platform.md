@@ -63,7 +63,7 @@ LangChain's managed platform for tracing, evaluating, and monitoring application
 
 ## Why it's in the Arsenal
 
-LangChain's managed observability and evaluation platform, with the deepest first-party integration for LangChain/LangGraph applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building with LangChain or LangGraph and want first-party tracing/evaluation with minimal integration work, maintained by the same team as those frameworks. See Strengths / Limitations below before adopting it.
+LangSmith appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ Upstream: tightly coupled to LangChain/LangGraph's instrumentation hooks. Downst
 
 ## Key Use Cases
 
-1. **Scenario**: you're building with LangChain or LangGraph and want first-party tracing/evaluation with minimal integration work, maintained by the same team as those frameworks
-2. **Scenario**: you want managed, polished tracing dashboards without operating your own observability backend
+1. **Running LangSmith on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What the LangSmith scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare LangSmith against `langfuse`, `phoenix`, `helicone` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're building with LangChain or LangGraph and want first-party tracing/evaluation with minimal integration work, maintained by the same team as those frameworks
-- You want managed, polished tracing dashboards without operating your own observability backend
+- What LangSmith gives you that reading the feature list does not: langChain/LangGraph applications emit trace data automatically via the integration; the managed backend stores and renders traces alongside evaluation runs, prompt versions (via LangSmith Hub), and monitoring dashboards, with a closed-source, cloud-hosted architecture, which is the part you have to evaluate against your own workload.
+- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want a framework-agnostic or fully open-source/self-hostable observability stack — Langfuse is the more natural choice for either of those requirements
-- Cost at high trace volume is a concern and you haven't compared pricing against self-hosted alternatives — LangSmith is a managed-only, closed-source product
+- The cost this entry cannot quantify for you is operational: the LangSmith footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where LangSmith overlaps `langfuse`, `phoenix`, `helicone`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

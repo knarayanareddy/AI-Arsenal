@@ -61,7 +61,7 @@ An open-source, self-hosted RAG engine combining deep document understanding, re
 
 ## Why it's in the Arsenal
 
-Self-hosted, all-in-one RAG engine combining deep document understanding, retrieval, agent workflows, and a web UI in a single deployable stack. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately. See Strengths / Limitations below before adopting it.
+RAGFlow is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -80,18 +80,21 @@ Upstream: integrates with Infinity, InfiniFlow's own AI-native database, as an a
 
 ## Key Use Cases
 
-1. **Scenario**: you want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately
-2. **Scenario**: you need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature
+1. **Integrating RAGFlow**: treat it as a dependency with its own failure modes rather than a library call — decide timeout, retry and degraded-mode behaviour before the first query goes through it, and put it behind an interface so it can be replaced without a rewrite.
+2. **What to measure first**: `complete`, `self-hostable`, `platform`, `document` decide whether RAGFlow works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately
-- You need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature
+- Beyond the headline description, RAGFlow's architecture section is the honest source: deployed as a multi-container Docker Compose stack combining Elasticsearch (or the lighter Infinity engine) for document search, MySQL for metadata, MinIO for object storage, and Redis for task queuing, with a Python backend implementing document parsing, chunking, retrieval, and an agent workflow engine, plus an MCP server for agent-driven interaction and a web UI for knowledge-base management.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want a lightweight deployment — RAGFlow's full stack includes Elasticsearch (requiring 16GB+ RAM due to memory-lock behavior), MySQL, MinIO, and Redis, which is substantially heavier than a single vector database plus a thin application layer
-- You need fine-grained code-level control over the RAG pipeline — RAGFlow's all-in-one platform model trades some of that flexibility for out-of-the-box completeness
+- Adoption risk for RAGFlow is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running RAGFlow against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside RAGFlow here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

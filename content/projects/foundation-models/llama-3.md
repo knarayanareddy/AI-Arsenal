@@ -62,7 +62,7 @@ Meta's third-generation open-weight language model family, spanning 1B to 405B p
 
 ## Why it's in the Arsenal
 
-Meta's open-weight model family with the broadest inference/tooling ecosystem support of any open model line. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the broadest possible ecosystem compatibility — Llama models have the deepest support across inference engines (vLLM, SGLang, TGI, Ollama, llama.cpp), quantization tooling, and fine-tuning frameworks of any open-weight family. See Strengths / Limitations below before adopting it.
+Llama 3.x appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -88,18 +88,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you need the broadest possible ecosystem compatibility — Llama models have the deepest support across inference engines (vLLM, SGLang, TGI, Ollama, llama.cpp), quantization tooling, and fine-tuning frameworks of any open-weight family
-2. **Scenario**: you need a range of sizes from edge (1B/3B) through frontier-adjacent (405B) within one consistent model family and licensing structure
+1. **Taking the dependency**: the weights for Llama 3.x are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What dominates the decision**: `broadest`, `possible`, `ecosystem`, `compatibility` are the variables that actually move the outcome for Llama 3.x in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need the broadest possible ecosystem compatibility — Llama models have the deepest support across inference engines (vLLM, SGLang, TGI, Ollama, llama.cpp), quantization tooling, and fine-tuning frameworks of any open-weight family
-- You need a range of sizes from edge (1B/3B) through frontier-adjacent (405B) within one consistent model family and licensing structure
+- Beyond the headline description, Llama 3.x's architecture section is the honest source: a dense (not MoE) decoder-only transformer family across all Llama 3.x sizes, in contrast to the MoE design Meta introduced later with Llama 4. Sizes span 1B, 3B, 8B, 11B, 70B, 90B, and 405B, with the 11B/90B variants adding vision encoder support for multimodal input.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need Meta's current-generation architecture — Llama 4 (April 2025) introduced Meta's first mixture-of-experts design (Scout: 109B total/17B active with a 10M-token context; Maverick: 400B total/17B active) and is the vendor's recommended path for new projects
-- Your use case is EU-based commercial deployment — Llama 4's license carries EU-specific restrictions, and Llama 3's custom license also requires review of acceptable-use terms before commercial use
+- The cost this entry cannot quantify for you is operational: the Llama 3.x footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Llama 3.x here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

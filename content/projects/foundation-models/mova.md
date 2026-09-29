@@ -78,20 +78,20 @@ Model weights are published as a Hugging Face collection rather than in the repo
 
 ## Key Use Cases
 
-1. Talking-character clips where phoneme timing must match lip movement, without a separate lip-sync or dubbing pass.
-2. Scene-dependent sound design, where footsteps, impacts or ambient noise have to follow what is visibly occurring in the generated frame.
-3. Domain adaptation of a video-audio generator, using the LoRA scripts to align output with a specific visual or audio style the base checkpoint does not cover.
+1. **Where it fits**: "You are producing short clips where lip-sync matters, and a cascaded video model plus a separate audio model keeps drifting apart
+2. **Adoption checkpoint**: before building on MOVA, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-- Single-pass bimodal generation, so audio-visual consistency is decided during generation rather than patched afterwards.
-- Bidirectional cross-attention between pretrained towers, which reuses strong unimodal backbones instead of training a joint encoder from scratch.
-- Full release including training code, LoRA fine-tuning and an Arena benchmark set, which is unusual in a field dominated by closed video models.
-- Evaluation harness published after the fact, so lip-sync and sound-effect claims are testable on a fixed sample list.
+- The implementation detail worth checking before adopting MOVA is specific — generation is a diffusion process over two coupled latent streams. A pretrained video tower and a pretrained audio tower are used asymmetrically, so their capacity and conditioning behaviour are not forced to be symmetric, and a bidirectional cross-attention fusion module lets the video branch attend to audio features and vice versa while denoising proceeds. Because both streams advance in the same loop, the audio schedule is conditioned on the video state rather than on a finished clip, which is what keeps mouth movements and phonemes aligned. On top of the released checkpoint, the repository provides LoRA fine-tuning scripts for domain adaptation and an evaluation harness with the Arena benchmark set, so claims about lip-sync and sound-effect quality can be checked against a fixed sample list instead of cherry-picked demos. Inference runs locally from the released weights; a ComfyUI integration and a hosted API exist for people who do not want to run diffusion locally — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-Cost is the first constraint, since joint video-audio diffusion is among the most expensive generation workloads and the natural hardware is a serious GPU rather than a workstation. Single-frame image quality is not the objective and should not be compared directly against still-image or video-only SOTA on visual fidelity alone. The Arena benchmark is 732 samples produced for a specific comparison, which is small enough that aggregate numbers move on a handful of items. Licences and weights are open, but a hosted API and a separate upstream usage agreement also exist, so a commercial product needs licence review rather than an assumption that open weights mean unrestricted use. Model size and the diffusion schedule make interactive iteration slow, and a LoRA adapts style far more readily than it fixes a lip-sync defect.
+- Adoption risk for MOVA is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running MOVA against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- MOVA is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

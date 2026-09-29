@@ -62,7 +62,7 @@ An open-source LLM observability platform offering tracing, analytics, and promp
 
 ## Why it's in the Arsenal
 
-Smaller open-source LLM observability platform offering tracing, analytics, and prompt management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a lightweight, open-source observability option with a straightforward pricing/usage model and are comfortable with a smaller community than the leading platforms. See Strengths / Limitations below before adopting it.
+The case for Lunary rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,20 +81,21 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 
 ## Key Use Cases
 
-1. **Scenario**: you want a lightweight, open-source observability option with a straightforward pricing/usage model and are comfortable with a smaller community than the leading platforms
-2. **Scenario**: your evaluation needs are modest and you prioritize simplicity over the deepest feature set
+1. **Running Lunary on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What to measure first**: `lightweight`, `open-source`, `observability`, `option` decide whether Lunary works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Lunary against `langfuse`, `langsmith-platform`, `phoenix` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a lightweight, open-source observability option with a straightforward pricing/usage model and are comfortable with a smaller community than the leading platforms
-- Your evaluation needs are modest and you prioritize simplicity over the deepest feature set
+- Beyond the headline description, Lunary's architecture section is the honest source: provides SDK-based instrumentation for capturing traces and analytics from LLM applications, plus prompt management features, following the general pattern of the broader LLM observability platform category.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the largest community, most third-party integrations, or the strongest evidence of large-scale production deployment — Langfuse and LangSmith have substantially more visible adoption and community activity
-- You need advanced evaluation workflows — Lunary's public documentation footprint suggests a narrower feature set than platforms purpose-built around rigorous evaluation
-
-_Verified for Lunary: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
+- The cost this entry cannot quantify for you is operational: the Lunary footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Lunary against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Lunary overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -55,7 +55,7 @@ The Spring team's official framework for AI engineering in Java: portable abstra
 
 ## Why it's in the Arsenal
 
-The sanctioned on-ramp for AI in enterprise Java: ChatClient, vector-store, advisor (RAG/memory), tool-calling and MCP abstractions that follow Spring conventions exactly, so the millions of Spring Boot services can add LLM features without leaving their operational model. It earns a place in the Arsenal because it directly addresses a recurring decision point: your organization runs on Spring Boot and needs LLM features inside existing services — auto-configured starters, Micrometer observability, and familiar dependency-injection patterns beat bolting on a Python sidecar. See Strengths / Limitations below before adopting it.
+Spring AI appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ Upstream: the Spring Boot/Framework platform (Broadcom-stewarded), all major mod
 
 ## Key Use Cases
 
-1. **Scenario**: your organization runs on Spring Boot and needs LLM features inside existing services — auto-configured starters, Micrometer observability, and familiar dependency-injection patterns beat bolting on a Python sidecar
-2. **Scenario**: you need portable provider/vector-store abstractions with enterprise governance — one API across OpenAI/Anthropic/Bedrock/Azure/Ollama and 20+ vector stores, swappable via configuration
+1. **Adopting the abstraction**: for Spring AI, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What to measure first**: `organization`, `runs`, `spring`, `boot` decide whether Spring AI works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Spring AI against `langchain` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- Your organization runs on Spring Boot and needs LLM features inside existing services — auto-configured starters, Micrometer observability, and familiar dependency-injection patterns beat bolting on a Python sidecar
-- You need portable provider/vector-store abstractions with enterprise governance — one API across OpenAI/Anthropic/Bedrock/Azure/Ollama and 20+ vector stores, swappable via configuration
+- What Spring AI gives you that reading the feature list does not: chatClient offers a fluent request API over provider-specific model implementations; Advisors compose cross-cutting concerns (chat memory, RAG retrieval, safety) around calls in interceptor style; VectorStore abstracts 20+ backends behind one similarity-search interface with portable metadata filtering; tool calling maps @Tool-annotated Java methods into schema-validated function calls, and MCP support covers both consuming and exposing tool servers, which is the part you have to evaluate against your own workload.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You are starting greenfield and language-flexible — the Python/TypeScript ecosystems get new capabilities (and community answers) months earlier
-- You need cutting-edge agentic patterns — Spring AI's agent story (effectors/advisors, MCP) is solid but conservative; graph-style orchestration frameworks iterate faster
+- The cost this entry cannot quantify for you is operational: the Spring AI footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Spring AI at your scale need measuring before this informs a production decision.
+- Where Spring AI overlaps `langchain`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

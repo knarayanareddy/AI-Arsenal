@@ -85,15 +85,20 @@ Install MMEngine/MMCV and MMagic, pick a task config from the model zoo, and run
 
 ## Key Use Cases
 
-Image/video super-resolution and restoration; inpainting and matting; comparing generative and low-level vision models; fine-tuning AIGC pipelines under one framework.
+1. **Where it fits**: "You want one framework covering diffusion generation plus super-resolution, inpainting, matting, and restoration
+2. **Adoption checkpoint**: before building on MMagic, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-Very broad task coverage across generation and restoration, unified config-driven API, large model zoo, Apache-2.0 license, and OpenMMLab ecosystem integration.
+- Beyond the headline description, MMagic's architecture section is the honest source: built on MMEngine/MMCV, MMagic composes each model from registry components declared in Python config files, so datasets, backbones, generators, discriminators, and losses are swappable. It implements diffusion and GAN generators alongside super-resolution and restoration networks, and its unified runner handles training, evaluation with task-specific metrics, and inference through a common MMagicInferencer interface.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-Upstream cadence slowed after 2024 so newest diffusion models may be absent, the MMCV/MMEngine stack has a learning curve, and for mainstream generation the Diffusers library is more convenient and current.
+- The cost this entry cannot quantify for you is operational: the MMagic footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for MMagic at your scale need measuring before this informs a production decision.
+- MMagic is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

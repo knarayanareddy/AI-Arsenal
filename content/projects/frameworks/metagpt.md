@@ -56,7 +56,7 @@ A multi-agent framework that assigns LLM agents distinct software-company roles 
 
 ## Why it's in the Arsenal
 
-Multi-agent framework modeling a software company's roles (PM, architect, engineer, QA) to collaboratively generate software from a requirement. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're researching multi-agent role-based collaboration patterns for complex, multi-step generation tasks (MetaGPT's core research contribution, published as a paper and accepted at top-tier venues). See Strengths / Limitations below before adopting it.
+MetaGPT is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install metagpt
 
 ## Key Use Cases
 
-1. **Scenario**: you're researching multi-agent role-based collaboration patterns for complex, multi-step generation tasks (MetaGPT's core research contribution, published as a paper and accepted at top-tier venues)
-2. **Scenario**: you want to study or experiment with the 'standard operating procedure' (SOP) approach to constraining multi-agent collaboration, which MetaGPT pioneered
+1. **Depending on it safely**: the work is the boundary — which calls go through MetaGPT, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the MetaGPT scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare MetaGPT against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You're researching multi-agent role-based collaboration patterns for complex, multi-step generation tasks (MetaGPT's core research contribution, published as a paper and accepted at top-tier venues)
-- You want to study or experiment with the 'standard operating procedure' (SOP) approach to constraining multi-agent collaboration, which MetaGPT pioneered
+- What MetaGPT gives you that reading the feature list does not: agents are organized into role-based pipelines mirroring a software team's division of labor; a shared message pool and structured document artifacts (requirements docs, design docs) flow between roles in a defined sequence, constraining the otherwise open-ended nature of multi-agent collaboration, which is the part you have to evaluate against your own workload.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a production-ready coding agent for real software delivery — MetaGPT is better understood as a research artifact demonstrating the SOP-based multi-agent pattern than a polished production tool
-- You want an actively-supported commercial product — MGX (MetaGPT's commercial launch) is the productized direction, but the open-source repo itself is maintained more as an active research codebase than an enterprise product
+- The cost this entry cannot quantify for you is operational: the MetaGPT footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running MetaGPT against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where MetaGPT overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

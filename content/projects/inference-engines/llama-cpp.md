@@ -62,7 +62,7 @@ A pure C/C++ inference engine for running LLaMA-family and other GGUF-format qua
 
 ## Why it's in the Arsenal
 
-Pure C/C++ CPU/GPU inference engine underlying much of the local-LLM ecosystem (Ollama, LM Studio, and others build on it). It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies. See Strengths / Limitations below before adopting it.
+The case for llama.cpp rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ llama-server -hf ggml-org/Llama-3.2-1B-Instruct-GGUF   # API on http://localhost
 
 ## Key Use Cases
 
-1. **Scenario**: you need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies
-2. **Scenario**: you're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server
+1. **Sizing llama.cpp**: the decision is hardware and load, not features — measure throughput and time to first token at your concurrency, and size memory for the longest sequence you actually serve rather than the longest the model allows.
+2. **What dominates the decision**: `quantized`, `llms`, `efficiently`, `cpu-only` are the variables that actually move the outcome for llama.cpp in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies
-- You're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server
+- The implementation detail worth checking before adopting llama.cpp is specific — implements transformer inference directly in C/C++ with extensive support for quantization formats (from 2-bit through 8-bit and beyond) via the GGUF file format, with backend support spanning pure CPU, Apple Metal, CUDA, and Vulkan — prioritizing minimal dependencies and portability over Python-ecosystem integration — because that is where the capability claim either survives contact with your data or does not.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need maximum multi-GPU server-side throughput for high-concurrency production serving — vLLM or SGLang's batching and scheduling are purpose-built for that, while llama.cpp targets single-node/edge efficiency first
-- You want a Python-native development experience — llama.cpp's core is C/C++, and while Python bindings exist, they're a secondary interface, not the primary one
+- Adoption risk for llama.cpp is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for llama.cpp at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside llama.cpp here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

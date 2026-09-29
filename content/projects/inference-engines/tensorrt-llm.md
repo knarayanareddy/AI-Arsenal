@@ -55,7 +55,7 @@ An open-source library for high-performance LLM inference on NVIDIA GPUs: models
 
 ## Why it's in the Arsenal
 
-NVIDIA's first-party inference stack: when you need the last 20-30% of throughput from H100/B200-class hardware and are willing to trade flexibility for hand-optimized kernels, FP8/NVFP4 quantization, and tight Triton Inference Server integration. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run large fleets of NVIDIA GPUs where peak tokens-per-dollar justifies engine-build complexity — TRT-LLM's fused kernels and FP8/FP4 paths typically lead published throughput benchmarks on Hopper/Blackwell. See Strengths / Limitations below before adopting it.
+TensorRT-LLM is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -75,18 +75,21 @@ python -c "from tensorrt_llm import LLM; llm = LLM(model='TinyLlama/TinyLlama-1.
 
 ## Key Use Cases
 
-1. **Scenario**: you run large fleets of NVIDIA GPUs where peak tokens-per-dollar justifies engine-build complexity — TRT-LLM's fused kernels and FP8/FP4 paths typically lead published throughput benchmarks on Hopper/Blackwell
-2. **Scenario**: you already operate Triton Inference Server and want LLMs behind the same production serving layer as your other models
+1. **Depending on it safely**: the work is the boundary — which calls go through TensorRT-LLM, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What dominates the decision**: `large`, `fleets`, `nvidia`, `gpus` are the variables that actually move the outcome for TensorRT-LLM in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare TensorRT-LLM against `vllm`, `sglang`, `lmdeploy` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You run large fleets of NVIDIA GPUs where peak tokens-per-dollar justifies engine-build complexity — TRT-LLM's fused kernels and FP8/FP4 paths typically lead published throughput benchmarks on Hopper/Blackwell
-- You already operate Triton Inference Server and want LLMs behind the same production serving layer as your other models
+- The implementation detail worth checking before adopting TensorRT-LLM is specific — two execution paths: the classic TensorRT engine-compilation flow (graph capture, kernel fusion, per-shape optimization) and a PyTorch runtime path that trades some peak performance for flexibility. Serving-critical features — in-flight batching, chunked prefill, paged/quantized KV cache, tensor/pipeline/expert parallelism, speculative decoding (Medusa, EAGLE, draft models) — are built into the runtime, and the Triton Inference Server backend exposes them behind a production API — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You iterate over many models or need instant model swaps — TRT-LLM historically requires per-model engine compilation, and its PyTorch runtime is still maturing relative to vLLM's load-and-go workflow
-- You may ever need non-NVIDIA hardware — the stack is CUDA-only by design; vLLM/SGLang preserve portability
+- Adoption risk for TensorRT-LLM is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running TensorRT-LLM against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where TensorRT-LLM overlaps `vllm`, `sglang`, `lmdeploy`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -75,18 +75,21 @@ Follow the official documentation at null for the authentication and configurati
 
 ## Key Use Cases
 
-1. **Scenario**: you're building an AI product's front-end and want ready-made, community-contributed UI components rather than designing every element from scratch
+1. **Depending on it safely**: the work is the boundary — which calls go through Uiverse Design, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What dominates the decision**: `building`, `product`, `front-end`, `library` are the variables that actually move the outcome for Uiverse Design in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- Free, open-source, and MIT-licensed
-- Large community-contributed component library
+- The implementation detail worth checking before adopting Uiverse Design is specific — a community-contributed collection of standalone CSS/Tailwind snippets and components, browsable and copyable individually rather than distributed as a single importable package with an internal architecture of its own — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- No AI-specific functionality — this is a general front-end resource, not an AI project
-- Scope fit for an AI-focused catalog is questionable and flagged for maintainer review
-- Verify maintenance cadence and component quality/consistency before depending on specific components
+- Adoption risk for Uiverse Design is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Uiverse Design here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

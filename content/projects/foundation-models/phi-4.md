@@ -61,7 +61,7 @@ A 14-billion-parameter dense language model from Microsoft Research, released in
 
 ## Why it's in the Arsenal
 
-Microsoft's synthetic-data-centric small language model, optimized for reasoning-per-parameter rather than raw scale. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a small (14B) dense model that competes with much larger models on reasoning/knowledge benchmarks (MMLU, GPQA) due to Microsoft's synthetic-data-heavy training approach. See Strengths / Limitations below before adopting it.
+The case for Phi-4 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -87,18 +87,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you want a small (14B) dense model that competes with much larger models on reasoning/knowledge benchmarks (MMLU, GPQA) due to Microsoft's synthetic-data-heavy training approach
-2. **Scenario**: you need a well-documented, MIT-licensed model with a public technical report detailing its training methodology, useful as a study/reference baseline for data-centric training approaches
+1. **Depending on it safely**: the work is the boundary — which calls go through Phi-4, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Phi-4 scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want a small (14B) dense model that competes with much larger models on reasoning/knowledge benchmarks (MMLU, GPQA) due to Microsoft's synthetic-data-heavy training approach
-- You need a well-documented, MIT-licensed model with a public technical report detailing its training methodology, useful as a study/reference baseline for data-centric training approaches
+- Beyond the headline description, Phi-4's architecture section is the honest source: a dense decoder-only transformer following the phi-3-medium architecture with modifications: tiktoken tokenizer (100,352 vocabulary) for improved multilingual support, full attention across a 4K context (rather than phi-3-medium's 2K sliding window), later extended to 16K context during a midtraining phase. Trained on approximately 10 trillion tokens with synthetic data constituting the bulk of training data, generated via diverse techniques targeting reasoning-focused tasks, using 1,920 H100 GPUs over 21 days with supervised fine-tuning and direct preference optimization.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the largest possible context window — Phi-4's native context is a comparatively modest 16K tokens (extended from a 4K default during midtraining), well below Gemma 3 or Llama's 128K
-- You need strong multimodal or agentic tool-use capability out of the box — Phi-4's core strength is text reasoning/knowledge density, not multimodal or agent-native behavior (Microsoft's separate Phi-4-multimodal variant addresses the former)
+- The cost this entry cannot quantify for you is operational: the Phi-4 footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Phi-4 against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Phi-4 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

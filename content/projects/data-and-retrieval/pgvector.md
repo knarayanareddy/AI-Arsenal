@@ -62,7 +62,7 @@ An open-source PostgreSQL extension that adds vector similarity search directly 
 
 ## Why it's in the Arsenal
 
-PostgreSQL extension adding vector similarity search, positioned as the 'use the database you already have' option rather than adding a new dedicated vector store. It earns a place in the Arsenal because it directly addresses a recurring decision point: you already run PostgreSQL for your application data and want to add vector search without introducing and operating a separate dedicated vector database. See Strengths / Limitations below before adopting it.
+pgvector is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ Upstream: depends entirely on PostgreSQL as its host database. Downstream: suppo
 
 ## Key Use Cases
 
-1. **Scenario**: you already run PostgreSQL for your application data and want to add vector search without introducing and operating a separate dedicated vector database
-2. **Scenario**: you need vector search combined with the full power of SQL (joins, transactions, complex filtering) in a single consistent system rather than syncing data across two databases
+1. **Depending on it safely**: the work is the boundary — which calls go through pgvector, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What dominates the decision**: `already`, `postgresql`, `application`, `data` are the variables that actually move the outcome for pgvector in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You already run PostgreSQL for your application data and want to add vector search without introducing and operating a separate dedicated vector database
-- You need vector search combined with the full power of SQL (joins, transactions, complex filtering) in a single consistent system rather than syncing data across two databases
+- The implementation detail worth checking before adopting pgvector is specific — implemented as a native Postgres extension adding a vector column type and both exact and approximate (IVFFlat, HNSW) nearest-neighbor index types, so vector search queries can be combined with standard SQL joins, filters, and transactions in the same query — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the absolute best ANN search performance/recall at very large scale — dedicated vector databases (Milvus, Qdrant) generally outperform pgvector at billion-scale vector counts, since PostgreSQL wasn't originally architected for that
-- You don't already use PostgreSQL — introducing Postgres solely to get pgvector, when you had no other need for a relational database, adds unnecessary operational surface versus a purpose-built vector store
+- The cost this entry cannot quantify for you is operational: the pgvector footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for pgvector at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside pgvector here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

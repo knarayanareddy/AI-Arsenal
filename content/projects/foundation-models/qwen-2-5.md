@@ -62,7 +62,7 @@ Alibaba Cloud's open-weight model generation released in 2024, spanning general-
 
 ## Why it's in the Arsenal
 
-Alibaba's widely-adopted open-weight model generation spanning general, coding, and reasoning-specialized variants. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models. See Strengths / Limitations below before adopting it.
+Qwen 2.5 / QwQ appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -88,18 +88,21 @@ print(generate("用一句话解释检索增强生成（RAG）。", max_new_token
 
 ## Key Use Cases
 
-1. **Scenario**: you need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models
-2. **Scenario**: you want strong open-weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record
+1. **Taking the dependency**: the weights for Qwen 2.5 / QwQ are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What the Qwen 2.5 / QwQ scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models
-- You want strong open-weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record
+- The implementation detail worth checking before adopting Qwen 2.5 / QwQ is specific — a dense decoder-only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post-training branches: Qwen2.5-Coder for code generation and QwQ as an early reasoning-focused variant using extended chain-of-thought training, predating the more thoroughly reasoning-optimized Qwen3 generation — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want Alibaba's current frontier line — as of 2026 Alibaba has shipped Qwen3, Qwen3.5, and Qwen3.6/3.7 (hybrid Gated Delta Networks + sparse MoE architecture, 201-language support), which meaningfully outperform Qwen2.5 on reasoning and agentic benchmarks
-- You need the efficiency of a sparse MoE architecture — Qwen2.5's mainline models are dense; MoE variants arrived in the Qwen3.5+ generation
+- The cost this entry cannot quantify for you is operational: the Qwen 2.5 / QwQ footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Qwen 2.5 / QwQ against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Qwen 2.5 / QwQ here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

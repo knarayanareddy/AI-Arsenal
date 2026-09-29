@@ -62,7 +62,7 @@ An open-source observability toolkit for LLM applications built natively on Open
 
 ## Why it's in the Arsenal
 
-Open-source, OpenTelemetry-native observability toolkit for LLM applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want LLM observability built natively on OpenTelemetry standards, so traces integrate directly with an existing OTel-based observability stack (Grafana, Datadog, Jaeger, etc.) rather than requiring a dedicated LLM-specific platform. See Strengths / Limitations below before adopting it.
+OpenLIT appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ Upstream: built on the OpenTelemetry standard and its SDKs. Downstream: none of 
 
 ## Key Use Cases
 
-1. **Scenario**: you want LLM observability built natively on OpenTelemetry standards, so traces integrate directly with an existing OTel-based observability stack (Grafana, Datadog, Jaeger, etc.) rather than requiring a dedicated LLM-specific platform
-2. **Scenario**: you need self-hostable, open-source instrumentation without vendor lock-in to a specific observability platform's proprietary data format
+1. **Running OpenLIT on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What dominates the decision**: `observability`, `built`, `natively`, `opentelemetry` are the variables that actually move the outcome for OpenLIT in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare OpenLIT against `langfuse`, `langsmith-platform`, `phoenix` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want LLM observability built natively on OpenTelemetry standards, so traces integrate directly with an existing OTel-based observability stack (Grafana, Datadog, Jaeger, etc.) rather than requiring a dedicated LLM-specific platform
-- You need self-hostable, open-source instrumentation without vendor lock-in to a specific observability platform's proprietary data format
+- The implementation detail worth checking before adopting OpenLIT is specific — instruments LLM calls, vector database operations, and GPU metrics using standard OpenTelemetry conventions, exporting trace and metric data in OTel's standard format so it can flow into any OTel-compatible backend (Grafana, Datadog, Jaeger, or a dedicated LLM platform that also accepts OTel data) — because that is where the capability claim either survives contact with your data or does not.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You don't already have or want an OpenTelemetry-based observability stack — a purpose-built LLM platform like Langfuse may have a gentler learning curve if OTel is unfamiliar
-- You need the richest LLM-specific evaluation features built directly into the observability tool — OTel-native tools tend to focus on tracing/metrics standardization rather than LLM-specific evaluation workflows
+- Adoption risk for OpenLIT is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running OpenLIT against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where OpenLIT overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

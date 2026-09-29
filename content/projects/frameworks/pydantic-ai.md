@@ -55,7 +55,7 @@ A Python agent framework from the team behind Pydantic, built around typed, vali
 
 ## Why it's in the Arsenal
 
-Lightweight Python agent framework from the Pydantic team, treating typed/validated outputs as a first-class design principle. It earns a place in the Arsenal because it directly addresses a recurring decision point: your team already uses Pydantic and FastAPI, and you want an agent framework that fits that same typed, validation-first mental model rather than a separate paradigm. See Strengths / Limitations below before adopting it.
+The case for Pydantic AI rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -78,18 +78,21 @@ pip install pydantic-ai
 
 ## Key Use Cases
 
-1. **Scenario**: your team already uses Pydantic and FastAPI, and you want an agent framework that fits that same typed, validation-first mental model rather than a separate paradigm
-2. **Scenario**: you want a lightweight alternative to graph-based frameworks for building typed, production Python agents without heavy orchestration machinery
+1. **Running it in anger**: the first real evaluation of Pydantic AI is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What to measure first**: `team`, `already`, `uses`, `pydantic` decide whether Pydantic AI works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- Your team already uses Pydantic and FastAPI, and you want an agent framework that fits that same typed, validation-first mental model rather than a separate paradigm
-- You want a lightweight alternative to graph-based frameworks for building typed, production Python agents without heavy orchestration machinery
+- Beyond the headline description, Pydantic AI's architecture section is the honest source: agents are defined with typed input/output models and tool functions using Pydantic's validation; the framework validates model outputs against declared schemas, using a dependency-injection-style pattern for passing context/state into tools, deliberately lighter-weight than graph-based orchestration frameworks.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-- You need complex multi-agent graph orchestration with durable checkpointing across long-running workflows — LangGraph's explicit graph model and persistence layer are purpose-built for that
-- Your stack is not Python — this framework has no meaningful presence outside the Python ecosystem
+- The cost this entry cannot quantify for you is operational: the Pydantic AI footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Pydantic AI at your scale need measuring before this informs a production decision.
+- Pydantic AI is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

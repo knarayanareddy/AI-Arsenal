@@ -87,15 +87,20 @@ Install with `pip install paddlespeech` (and PaddlePaddle), then run tasks throu
 
 ## Key Use Cases
 
-Streaming Chinese/English transcription with punctuation; streaming TTS services; speaker verification; speech translation and keyword spotting; fine-tuning speech models on PaddlePaddle.
+1. **Where it fits**: "You work in the PaddlePaddle ecosystem and want streaming ASR with punctuation and streaming TTS out of the box
+2. **Adoption checkpoint**: before building on PaddleSpeech, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-Broad task coverage, streaming ASR/TTS, strong Chinese support, easy one-line model usage, active org-backed maintenance, and an Apache-2.0 license.
+- Beyond the headline description, PaddleSpeech's architecture section is the honest source: paddleSpeech implements conformer/transformer ASR encoders with CTC and attention decoding, FastSpeech/VITS-style TTS acoustic models plus neural vocoders, and speaker-embedding models, all in PaddlePaddle. It exposes a command-line and Python API where a single call downloads and runs a pretrained model, and it includes a server module for streaming ASR/TTS deployment.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-It requires the PaddlePaddle framework, which is less common than PyTorch outside China; documentation is partly Chinese-first; and, like other full frameworks, it is heavier than a purpose-built embedded runtime.
+- Adoption risk for PaddleSpeech is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for PaddleSpeech at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside PaddleSpeech here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

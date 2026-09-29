@@ -83,15 +83,21 @@ Author tasks and workflows with the `flytekit` Python SDK, test locally, then re
 
 ## Key Use Cases
 
-Reproducible production ML pipelines; large-scale data workflows on Kubernetes; caching-heavy iterative pipelines; workflows needing strong typing and lineage.
+1. **Adopting the abstraction**: for Flyte, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What to measure first**: `data`, `pipelines`, `kubernetes`, `typed` decide whether Flyte works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-Strongly-typed workflows, content-addressed caching, Kubernetes-native scaling, versioning and lineage, dynamic branching, production maturity, and an Apache-2.0 license.
+- The implementation detail worth checking before adopting Flyte is specific — in Flyte, Python @task functions with typed signatures compose into @workflow DAGs; the compiler captures the typed interface and the control plane (Go, on Kubernetes) schedules each task as a container, passing typed artifacts between them. Content-addressed caching skips recomputation when inputs are unchanged, dynamic workflows allow branching decided at runtime, and every execution is versioned with full data lineage for reproducibility — because that is where the capability claim either survives contact with your data or does not.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-It requires a Kubernetes environment and real operational investment to run, has a steeper setup and learning curve than lightweight schedulers, and is overkill for simple local pipelines that do not need typed, versioned, distributed execution.
+- The cost this entry cannot quantify for you is operational: the Flyte footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Flyte against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Flyte here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

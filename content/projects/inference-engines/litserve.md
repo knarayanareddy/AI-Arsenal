@@ -80,21 +80,21 @@ pip install litserve
 
 ## Key Use Cases
 
-1. **Scenario**: serve a vision or audio model (or several models) with batching + GPU scaling behind one API
-2. **Scenario**: quickly stand up a production inference endpoint without hand-rolling FastAPI concurrency
-3. **Scenario where this is NOT the right fit**: single-LLM max-throughput serving — a paged-attention engine like vLLM is faster
+1. **Depending on it safely**: the work is the boundary — which calls go through LitServe, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the LitServe scenarios have in common**: they are separated by hardware and concurrency rather than by capability, which is the axis on which runtimes genuinely differ.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- General-purpose: any model type, multi-model pipelines
-- Batching, streaming, GPU autoscaling built in
-- Python-first, minimal boilerplate over FastAPI
+- Beyond the headline description, LitServe's architecture section is the honest source: litServe wraps your model in an API class and runs a server that queues requests, batches them dynamically, and dispatches to worker processes bound to devices. Streaming and multi-model setups are configuration on top of that loop, so you get serving features without implementing the concurrency and batching machinery yourself.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-- Not tuned to LLM-specific throughput like vLLM/SGLang — a paged-attention engine wins for single-LLM max-token workloads
-- A serving layer, not a full MLOps platform: no built-in model registry, versioning, or canary rollout
-- You still own the infrastructure and scaling decisions; LitServe handles batching/serving, not cluster provisioning
+- Adoption risk for LitServe is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- LitServe is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

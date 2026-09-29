@@ -55,7 +55,7 @@ A benchmark and evaluation harness for AI agents operating in a terminal: each t
 
 ## Why it's in the Arsenal
 
-The benchmark that measures what coding agents actually do all day: multi-step tasks executed in real Docker-sandboxed terminals with outcome-based verification, adopted by frontier labs as a headline agentic metric alongside SWE-bench. It earns a place in the Arsenal because it directly addresses a recurring decision point: you are evaluating or building terminal/coding agents — tasks span compiling, debugging, sysadmin, data processing and even model training, each verified by executable checks rather than LLM judges. See Strengths / Limitations below before adopting it.
+Terminal-Bench is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -75,18 +75,21 @@ tb run --agent claude-code --model claude-sonnet-4-5 --task-id hello-world
 
 ## Key Use Cases
 
-1. **Scenario**: you are evaluating or building terminal/coding agents — tasks span compiling, debugging, sysadmin, data processing and even model training, each verified by executable checks rather than LLM judges
-2. **Scenario**: you want a harness, not just a dataset — the tb CLI runs any agent (built-in adapters for Claude Code, Codex CLI, and custom agents) against containerized tasks reproducibly
+1. **Running Terminal-Bench on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What the Terminal-Bench scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare Terminal-Bench against `swe-bench` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You are evaluating or building terminal/coding agents — tasks span compiling, debugging, sysadmin, data processing and even model training, each verified by executable checks rather than LLM judges
-- You want a harness, not just a dataset — the tb CLI runs any agent (built-in adapters for Claude Code, Codex CLI, and custom agents) against containerized tasks reproducibly
+- What Terminal-Bench gives you that reading the feature list does not: tasks are self-contained Docker environments with a task.yaml (instruction, timeouts), setup scripts, and outcome-verification tests; the tb CLI orchestrates agent-environment sessions, records full terminal transcripts (asciinema), and computes pass rates. Agent adapters wrap commercial CLIs (Claude Code, Codex, Gemini CLI) and custom agents behind a common interface, so results are comparable across harnesses, which is the part you have to evaluate against your own workload.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-- You need a mature, saturated benchmark with years of comparable scores — it is young and the task set is still evolving between versions
-- Your agents do not operate through a shell — browser-only or API-orchestration agents need different harnesses
+- The cost this entry cannot quantify for you is operational: the Terminal-Bench footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Terminal-Bench against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Terminal-Bench is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

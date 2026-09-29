@@ -56,7 +56,7 @@ One of the earliest widely-publicized autonomous AI agent projects, which popula
 
 ## Why it's in the Arsenal
 
-Early, highly-visible autonomous-agent platform that popularized the 'autonomous AI agent' concept. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a ready-made, deployable autonomous agent platform with an active project (the Significant-Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with. See Strengths / Limitations below before adopting it.
+AutoGPT appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install autogpt
 
 ## Key Use Cases
 
-1. **Scenario**: you want a ready-made, deployable autonomous agent platform with an active project (the Significant-Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with
-2. **Scenario**: you're studying the history and design patterns of early autonomous-agent systems as a reference point
+1. **Adopting the abstraction**: for AutoGPT, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What to measure first**: `ready-made`, `deployable`, `autonomous`, `agent` decide whether AutoGPT works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare AutoGPT against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a ready-made, deployable autonomous agent platform with an active project (the Significant-Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with
-- You're studying the history and design patterns of early autonomous-agent systems as a reference point
+- Beyond the headline description, AutoGPT's architecture section is the honest source: has evolved from its original 2023 single-script recursive-planning-loop design into a fuller platform (AutoGPT Platform) with a web UI, credential management, and a broader agent-building workflow, rather than remaining a bare autonomous-loop library.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a lightweight, embeddable agent framework to build your own application on top of — AutoGPT is closer to a standalone platform/product than a library, unlike LangGraph, CrewAI, or Pydantic AI
-- You need the most current agent-architecture patterns (planning, tool-use reliability) — AutoGPT's original 2023 design was more exploratory/experimental than today's more disciplined agent frameworks
+- The cost this entry cannot quantify for you is operational: the AutoGPT footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for AutoGPT at your scale need measuring before this informs a production decision.
+- Where AutoGPT overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

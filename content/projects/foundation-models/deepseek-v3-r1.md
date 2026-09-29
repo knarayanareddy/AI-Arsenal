@@ -62,7 +62,7 @@ An open-weight Mixture-of-Experts language model family from DeepSeek AI: V3 is 
 
 ## Why it's in the Arsenal
 
-Open-weight frontier-class reasoning and general-purpose model family, MIT-licensed. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need frontier-class reasoning performance (R1) or general chat/coding performance (V3) in an MIT-licensed, self-hostable model. See Strengths / Limitations below before adopting it.
+The case for DeepSeek-V3 / R1 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -88,18 +88,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you need frontier-class reasoning performance (R1) or general chat/coding performance (V3) in an MIT-licensed, self-hostable model
-2. **Scenario**: you have or can access multi-GPU infrastructure capable of serving a 671B-parameter MoE model (37B active per token) and want the best open-weight reasoning quality available
+1. **Running it in anger**: the first real evaluation of DeepSeek-V3 / R1 is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the DeepSeek-V3 / R1 scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need frontier-class reasoning performance (R1) or general chat/coding performance (V3) in an MIT-licensed, self-hostable model
-- You have or can access multi-GPU infrastructure capable of serving a 671B-parameter MoE model (37B active per token) and want the best open-weight reasoning quality available
+- Beyond the headline description, DeepSeek-V3 / R1's architecture section is the honest source: 671 billion total parameters with only 37 billion activated per token via a sparse Mixture-of-Experts design (256 routed experts, DeepSeekMoE). Uses Multi-head Latent Attention (MLA) to compress the KV cache and reduce memory pressure at inference, an auxiliary-loss-free load-balancing strategy across experts, a Multi-Token Prediction (MTP) module for speculative-decoding-style training/inference speedups, and native FP8 mixed-precision training — trained on 14.8 trillion tokens for roughly 2.788M H800 GPU-hours.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need to run inference on a single consumer GPU — even with only 37B active parameters, the full 671B parameter set must be resident for MoE routing, which requires serious multi-GPU or high-memory infrastructure
-- You need guaranteed data residency outside China-affiliated infrastructure for regulatory reasons — evaluate DeepSeek's terms of use and your own compliance requirements before adopting for regulated workloads
+- The cost this entry cannot quantify for you is operational: the DeepSeek-V3 / R1 footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running DeepSeek-V3 / R1 against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside DeepSeek-V3 / R1 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

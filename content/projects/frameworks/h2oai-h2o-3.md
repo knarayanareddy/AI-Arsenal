@@ -95,21 +95,20 @@ The R and Java clients speak the same REST protocol, so one cluster serves all t
 
 ## Key Use Cases
 
-1. Training an interpretable model — a GLM with elastic net, or a GAM with spline terms — on a table larger than one machine's memory, where coefficient-level explainability is a requirement.
-2. Running a broad AutoML sweep with cross-validation and stacked ensembles over a heterogeneous algorithm set without assembling a benchmark harness yourself.
-3. Deploying to a constrained runtime via MOJO, so a production service evaluates a compact model artefact without the h2o-3 runtime or a JVM cluster.
+1. **Where it fits**: "You need a model you can explain to a risk or compliance audience, since a GLM with elastic net and a GAM give per-feature contributions without a post-hoc explainer
+2. **Adoption checkpoint**: before building on h2o-3, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-- Distributed, in-memory execution over a shared KeyedFrame, so the data is loaded once and reused across algorithms, cross-validation, and AutoML.
-- Broad algorithm coverage including GAMs and rule-based models, giving genuinely interpretable options at platform scale, not just as an afterthought.
-- MOJO model format with a lightweight standalone predictor, so production does not need the training cluster.
-- One cluster with R, Python, and Java clients and a shared REST protocol, which is unusual in a data-science platform.
-  
+- Beyond the headline description, h2o-3's architecture section is the honest source: an H2O cluster runs a JVM coordinator plus workers, and the KeyedFrame is stored in column-partitioned compressed chunks with a global row count and a key column; algorithms operate on it in parallel across workers by splitting columns and rows, and the distributed implementations use map-reduce and AllReduce to combine partial gradients. A model algorithm implements a distributed gradient-descent loop over the frame, so GBM, GLM, and deep learning share the same execution skeleton with different loss and regularisation; the GLM path adds coordinate descent with elastic net penalties and drop constraints for correlated features, and the GAM path uses a distributed binned-spline or tensor-product basis so a nonlinear term stays a curve you can plot. Cross-validation is a first-class operation that reuses the in-memory frame across folds rather than reloading it. AutoML builds validation frames, trains a configured set of algorithms with time and memory limits, ranks them on the validation metrics, and optionally trains a stacked ensemble over the top models. Serving separates from training: MOJO serialises the model as a key-value binary plus a compact runtime library, so a predictor evaluates it standalone — which is how the platform avoids requiring the training cluster in production.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-The JVM runtime is a real operational commitment: you maintain a cluster, a JVM, and a Python client that talks to it, where a single-node library needs none of that. On data that fits in memory, single-node LightGBM and CatBoost are usually faster and equally accurate, and h2o-3 rarely wins the leaderboard. The Python surface is a client, not native objects, so model inspection, tooling, and debugging are less pleasant than in a pure-Python library, and the third-party ecosystem around those model objects is thin. Tuning is less well documented than LightGBM's, defaults are less well tuned, and getting genuinely competitive accuracy takes more effort than the AutoML wrapper suggests. Some models export to ONNX and others do not, so portability is per-algorithm, and platform upgrades have historically required a coordinated client and cluster version.
+- Adoption risk for h2o-3 is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for h2o-3 at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside h2o-3 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

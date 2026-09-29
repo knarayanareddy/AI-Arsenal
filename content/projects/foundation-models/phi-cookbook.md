@@ -55,7 +55,7 @@ Microsoft's official collection of samples, tutorials, and deployment recipes fo
 
 ## Why it's in the Arsenal
 
-Microsoft's official companion resource of samples and guides for building with the Phi model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building an application on Phi-4 or other Phi models and want Microsoft's own reference implementations, fine-tuning recipes, and deployment samples rather than reverse-engineering usage patterns. See Strengths / Limitations below before adopting it.
+Phi Cookbook is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -75,18 +75,21 @@ git clone https://github.com/microsoft/PhiCookBook
 
 ## Key Use Cases
 
-1. **Scenario**: you're building an application on Phi-4 or other Phi models and want Microsoft's own reference implementations, fine-tuning recipes, and deployment samples rather than reverse-engineering usage patterns
-2. **Scenario**: you want a curated, actively-maintained (2026 commit activity confirmed) collection of Phi usage patterns across multiple frameworks and deployment targets
+1. **Taking the dependency**: the weights for Phi Cookbook are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What dominates the decision**: `building`, `application`, `phi-4`, `models` are the variables that actually move the outcome for Phi Cookbook in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You're building an application on Phi-4 or other Phi models and want Microsoft's own reference implementations, fine-tuning recipes, and deployment samples rather than reverse-engineering usage patterns
-- You want a curated, actively-maintained (2026 commit activity confirmed) collection of Phi usage patterns across multiple frameworks and deployment targets
+- What Phi Cookbook gives you that reading the feature list does not: not a model architecture itself — a curated repository of Jupyter notebooks, sample code, and guides covering fine-tuning, quantization, and deployment patterns across multiple frameworks (Hugging Face Transformers, ONNX Runtime, Ollama) for the Phi model family, which is the part you have to evaluate against your own workload.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're looking for the model weights themselves rather than usage guidance — this is a cookbook/samples repository, not the Phi-4 model repository
-- You need cookbook-style guidance for a different model family — this repo is Phi-specific and won't transfer directly to Llama, Qwen, or Gemma tooling patterns
+- The cost this entry cannot quantify for you is operational: the Phi Cookbook footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Phi Cookbook against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Phi Cookbook here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

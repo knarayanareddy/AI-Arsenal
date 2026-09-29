@@ -62,7 +62,7 @@ Hugging Face's original toolkit for serving large language models in production,
 
 ## Why it's in the Arsenal
 
-Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes. See Strengths / Limitations below before adopting it.
+Text Generation Inference appears in this catalog as a reference point for the inference-engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practice. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ docker run --gpus all -p 8080:80 ghcr.io/huggingface/text-generation-inference \
 
 ## Key Use Cases
 
-1. **Scenario**: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes
-2. **Scenario**: you specifically need a documented long-prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload
+1. **Depending on it safely**: the work is the boundary — which calls go through Text Generation Inference, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Text Generation Inference scenarios have in common**: they are separated by hardware and concurrency rather than by capability, which is the axis on which runtimes genuinely differ.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes
-- You specifically need a documented long-prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload
+- What Text Generation Inference gives you that reading the feature list does not: a Rust-and-Python serving stack implementing continuous batching, tensor parallelism, and quantization support for production LLM deployment, historically notable for strong long-prompt/long-context handling performance documented in its V3 architecture overview, which is the part you have to evaluate against your own workload.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're starting a new production serving deployment — Hugging Face officially placed TGI into maintenance mode as of December 11, 2025, accepting only minor bug fixes and documentation updates, and now directs new work toward vLLM, SGLang, llama.cpp, and MLX
-- You need ongoing feature development, new model architecture support, or active performance optimization — none of that is happening in TGI going forward per Hugging Face's own documentation
+- Adoption risk for Text Generation Inference is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Text Generation Inference here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

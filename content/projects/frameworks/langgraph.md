@@ -56,7 +56,7 @@ LangChain's graph-based orchestration framework for building stateful, durable L
 
 ## Why it's in the Arsenal
 
-Graph-based orchestration framework for durable, stateful multi-agent workflows, LangChain's production-agent-focused offering. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need explicit control over agent state, branching, retries, and human-in-the-loop interruptions via a directed-graph execution model, not an implicit conversational loop. See Strengths / Limitations below before adopting it.
+LangGraph is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install langgraph
 
 ## Key Use Cases
 
-1. **Scenario**: you need explicit control over agent state, branching, retries, and human-in-the-loop interruptions via a directed-graph execution model, not an implicit conversational loop
-2. **Scenario**: you're already in the LangChain ecosystem and want production-grade durability (checkpointing, persistence, streaming) for agent workflows
+1. **Running it in anger**: the first real evaluation of LangGraph is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the LangGraph scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare LangGraph against `crewai`, `openai-agents-sdk`, `google-adk` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You need explicit control over agent state, branching, retries, and human-in-the-loop interruptions via a directed-graph execution model, not an implicit conversational loop
-- You're already in the LangChain ecosystem and want production-grade durability (checkpointing, persistence, streaming) for agent workflows
+- Beyond the headline description, LangGraph's architecture section is the honest source: applications are modeled as a directed graph of nodes (units of work) and edges (state routing); graph state is persisted across steps via checkpointing, enabling human-in-the-loop pauses, retries, and streaming — a lower-level, more explicit model than conversational-loop agent frameworks.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want a quick single-prompt agent or demo — LangGraph's explicit graph construction is unnecessary overhead for simple, linear tasks
-- You want a no-code visual builder or a simpler role-based abstraction — CrewAI's higher-level API trades control for less setup
+- Adoption risk for LangGraph is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where LangGraph overlaps `crewai`, `openai-agents-sdk`, `google-adk`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -55,7 +55,7 @@ A framework from Stanford NLP for programming and automatically optimizing langu
 
 ## Why it's in the Arsenal
 
-Stanford NLP's framework for programmatically optimizing LLM pipelines rather than hand-tuning prompts. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to treat prompt engineering as an optimization problem — DSPy compiles and tunes prompts/few-shot examples automatically against a metric, rather than requiring manual prompt iteration. See Strengths / Limitations below before adopting it.
+DSPy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -78,18 +78,21 @@ pip install dspy
 
 ## Key Use Cases
 
-1. **Scenario**: you want to treat prompt engineering as an optimization problem — DSPy compiles and tunes prompts/few-shot examples automatically against a metric, rather than requiring manual prompt iteration
-2. **Scenario**: you're building a multi-step LLM pipeline (e.g. retrieve-then-generate) and want a framework that can jointly optimize the prompts across all steps against an end-to-end metric
+1. **Adopting the abstraction**: for DSPy, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `treat`, `prompt`, `engineering`, `optimization` are the variables that actually move the outcome for DSPy in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want to treat prompt engineering as an optimization problem — DSPy compiles and tunes prompts/few-shot examples automatically against a metric, rather than requiring manual prompt iteration
-- You're building a multi-step LLM pipeline (e.g. retrieve-then-generate) and want a framework that can jointly optimize the prompts across all steps against an end-to-end metric
+- What DSPy gives you that reading the feature list does not: developers define a pipeline's structure (modules like 'retrieve' and 'generate') and a target metric; DSPy's compiler then automatically searches over prompt formulations, few-shot examples, and even fine-tuning to optimize the pipeline's performance against that metric, separating pipeline logic from prompt engineering, which is the part you have to evaluate against your own workload.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a simple, single-prompt integration — DSPy's programming model and compilation step add complexity that isn't worth it for straightforward use cases
-- Your team isn't prepared to invest in defining evaluation metrics and training/validation examples — DSPy's optimization approach depends on having those in place to be effective
+- Adoption risk for DSPy is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running DSPy against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside DSPy here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

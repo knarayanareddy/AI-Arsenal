@@ -56,7 +56,7 @@ An open-source platform for autonomous AI software-engineering agents (formerly 
 
 ## Why it's in the Arsenal
 
-Open-source autonomous coding-agent platform (formerly OpenDevin) for end-to-end software engineering tasks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a deployable, open-source autonomous coding agent that can read/write code, run commands, and browse the web to complete software engineering tasks end to end. See Strengths / Limitations below before adopting it.
+The case for OpenHands rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,18 +79,21 @@ pip install openhands
 
 ## Key Use Cases
 
-1. **Scenario**: you want a deployable, open-source autonomous coding agent that can read/write code, run commands, and browse the web to complete software engineering tasks end to end
-2. **Scenario**: you need a self-hostable alternative to closed coding-agent products, with the ability to fork and adapt the agent's tool set or execution sandbox
+1. **Depending on it safely**: the work is the boundary — which calls go through OpenHands, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the OpenHands scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Choosing between candidates**: compare OpenHands against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a deployable, open-source autonomous coding agent that can read/write code, run commands, and browse the web to complete software engineering tasks end to end
-- You need a self-hostable alternative to closed coding-agent products, with the ability to fork and adapt the agent's tool set or execution sandbox
+- Beyond the headline description, OpenHands's architecture section is the honest source: an agent loop operates within a sandboxed execution environment (typically a Docker container) with access to a shell, code editor, and browser; the agent plans and executes multi-step coding tasks, observing command output and iterating, with the platform providing the surrounding orchestration, sandboxing, and UI.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a narrowly-scoped code-completion or pair-programming assistant rather than a full autonomous agent — a lighter tool integrated into your IDE may be a better fit than an autonomous execution platform
-- You're not prepared to operate the sandboxed execution environment autonomous coding agents require — running arbitrary generated code safely needs real infrastructure investment
+- The cost this entry cannot quantify for you is operational: the OpenHands footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running OpenHands against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where OpenHands overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

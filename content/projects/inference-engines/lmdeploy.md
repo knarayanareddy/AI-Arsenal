@@ -61,7 +61,7 @@ An inference and serving toolkit from Shanghai AI Laboratory (InternLM's develop
 
 ## Why it's in the Arsenal
 
-InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese-origin open-weight models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization. See Strengths / Limitations below before adopting it.
+LMDeploy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -80,20 +80,21 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 
 ## Key Use Cases
 
-1. **Scenario**: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization
-2. **Scenario**: you need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline
+1. **Sizing LMDeploy**: the decision is hardware and load, not features — measure throughput and time to first token at your concurrency, and size memory for the longest sequence you actually serve rather than the longest the model allows.
+2. **What dominates the decision**: `deploying`, `internlm`, `models`, `specifically` are the variables that actually move the outcome for LMDeploy in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You're deploying InternLM models specifically and want the toolkit built and optimized by the same organization
-- You need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline
+- Beyond the headline description, LMDeploy's architecture section is the honest source: provides both a Python inference engine and a serving component with support for continuous batching, tensor parallelism, and quantization formats (AWQ, W4A16) targeting efficient multi-GPU deployment.
+- Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the largest community and broadest model-family support — vLLM and SGLang have substantially larger adoption and community integration coverage across model families
-- You want the most actively-innovating serving engine for cutting-edge model architectures — LMDeploy's development pace and community size are smaller than vLLM/SGLang's
-
-_Verified for LMDeploy: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
+- The cost this entry cannot quantify for you is operational: the LMDeploy footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running LMDeploy against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside LMDeploy here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

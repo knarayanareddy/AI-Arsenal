@@ -55,7 +55,7 @@ An open-source RL training library for LLMs from ByteDance's Volcengine team, im
 
 ## Why it's in the Arsenal
 
-The RL library behind much of the open reasoning-model wave: verl's HybridFlow design decouples the RL dataflow definition from execution backends, and most open GRPO reasoning reproductions built on it. It earns a place in the Arsenal because it directly addresses a recurring decision point: you are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts. See Strengths / Limitations below before adopting it.
+The case for verl rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -76,18 +76,21 @@ bash examples/ppo_trainer/run_qwen2-7b_seq_balance.sh
 
 ## Key Use Cases
 
-1. **Scenario**: you are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts
-2. **Scenario**: you need to express non-standard RL dataflows (multi-turn, tool-calling rewards, agentic rollouts) — the hybrid-controller programming model makes custom pipelines first-class rather than forks
+1. **Depending on it safely**: the work is the boundary — which calls go through verl, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the verl scenarios have in common**: they are separated by data scale and hardware budget, which rule most methods out before any quality claim is tested.
+3. **Choosing between candidates**: compare verl against `openrlhf`, `trl` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts
-- You need to express non-standard RL dataflows (multi-turn, tool-calling rewards, agentic rollouts) — the hybrid-controller programming model makes custom pipelines first-class rather than forks
+- What verl gives you that reading the feature list does not: the hybrid-controller model splits RL into a single-controller dataflow (the algorithm: rollout, reward, advantage, update) and multi-controller execution (each model's parallelism strategy). 3D-HybridEngine resharding switches the actor between training and generation layouts without full weight copies, which is the main throughput win over naive PPO implementations. Supports PPO, GRPO, DAPO, and multi-turn/agentic RL recipes, which is the part you have to evaluate against your own workload.
+- Sits in the training-and-alignment phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want a small-scale alignment run with minimal infrastructure — TRL on a single node covers DPO/PPO without Megatron/FSDP operational overhead
-- Your team cannot invest in understanding the hybrid-controller abstraction — the flexibility comes with a steeper learning curve than recipe-style trainers
+- The cost this entry cannot quantify for you is operational: the verl footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where verl overlaps `openrlhf`, `trl`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

@@ -62,7 +62,7 @@ A high-performance serving framework for large language and multimodal models, d
 
 ## Why it's in the Arsenal
 
-High-performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains. See Strengths / Limitations below before adopting it.
+SGLang is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ python -m sglang.launch_server --model-path meta-llama/Llama-3.1-8B-Instruct --p
 
 ## Key Use Cases
 
-1. **Scenario**: you have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains
-2. **Scenario**: you need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled
+1. **Sizing SGLang**: the decision is hardware and load, not features — measure throughput and time to first token at your concurrency, and size memory for the longest sequence you actually serve rather than the longest the model allows.
+2. **What dominates the decision**: `workloads`, `significant`, `shared-prefix`, `reuse` are the variables that actually move the outcome for SGLang in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains
-- You need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled
+- What SGLang gives you that reading the feature list does not: radixAttention stores KV cache entries in a radix tree indexed at the token level, automatically identifying shared prefixes across different requests (e.g. repeated system prompts or RAG context) and reusing cached computation rather than recomputing it — combined with continuous batching and support for constrained/structured generation with minimal throughput penalty via overlapped grammar-mask generation, which is the part you have to evaluate against your own workload.
+- Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the broadest hardware support — SGLang supports NVIDIA and AMD GPUs but not Intel GPUs, AWS Trainium/Inferentia, or Google TPUs, while vLLM has broader hardware coverage
-- You want the largest, most mature community and integration ecosystem — vLLM remains the more widely adopted default despite SGLang's competitive or superior benchmarks in specific scenarios
+- Adoption risk for SGLang is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running SGLang against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside SGLang here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

@@ -55,7 +55,7 @@ An open-source node-based application for generative media: image, video, audio,
 
 ## Why it's in the Arsenal
 
-The de facto operating system of open image/video generation: every significant model release (SDXL, Flux, SD3, Wan, Hunyuan Video) gets day-one ComfyUI support, and its node-graph pipelines have become the interchange format for generative-media workflows. It earns a place in the Arsenal because it directly addresses a recurring decision point: you build custom image/video/audio generation pipelines — the node graph exposes every stage (conditioning, sampling, upscaling, control) as composable units that GUIs with fixed pipelines cannot express. See Strengths / Limitations below before adopting it.
+ComfyUI appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -76,18 +76,21 @@ python main.py
 
 ## Key Use Cases
 
-1. **Scenario**: you build custom image/video/audio generation pipelines — the node graph exposes every stage (conditioning, sampling, upscaling, control) as composable units that GUIs with fixed pipelines cannot express
-2. **Scenario**: you need reproducible, shareable generative workflows — workflows serialize to JSON (embedded in generated images), and only changed subgraphs re-execute between runs
+1. **Adopting the abstraction**: for ComfyUI, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What the ComfyUI scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You build custom image/video/audio generation pipelines — the node graph exposes every stage (conditioning, sampling, upscaling, control) as composable units that GUIs with fixed pipelines cannot express
-- You need reproducible, shareable generative workflows — workflows serialize to JSON (embedded in generated images), and only changed subgraphs re-execute between runs
+- Beyond the headline description, ComfyUI's architecture section is the honest source: a Python execution engine with a graph scheduler that caches node outputs and re-executes only changed subgraphs; model loading is backend-aware (offloading, quantized variants, smart VRAM management). The custom-node ecosystem (thousands of community extensions) extends it with control networks, video pipelines, and API integrations; workflows are JSON-serializable and embeddable in output images for exact reproduction.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want one-click simple image generation — the node interface has a real learning curve; simpler UIs or hosted services serve casual use better
-- You need a headless, code-first pipeline library for production services — ComfyUI can run as an API but diffusers-based code gives cleaner programmatic control
+- Adoption risk for ComfyUI is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside ComfyUI here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

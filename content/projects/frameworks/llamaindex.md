@@ -62,7 +62,7 @@ A data framework purpose-built for connecting large language models to external 
 
 ## Why it's in the Arsenal
 
-Data framework specifically focused on connecting LLMs to your data via document ingestion, indexing, and retrieval. It earns a place in the Arsenal because it directly addresses a recurring decision point: your primary need is building RAG pipelines and document-centric agents — LlamaIndex's abstractions (data connectors, indices, query engines) are purpose-built for retrieval over your own data. See Strengths / Limitations below before adopting it.
+LlamaIndex appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -85,18 +85,21 @@ pip install llamaindex
 
 ## Key Use Cases
 
-1. **Scenario**: your primary need is building RAG pipelines and document-centric agents — LlamaIndex's abstractions (data connectors, indices, query engines) are purpose-built for retrieval over your own data
-2. **Scenario**: you want a large library of pre-built data connectors (LlamaHub) for ingesting from many different document/data sources with minimal custom code
+1. **Adopting the abstraction**: for LlamaIndex, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `primary`, `building`, `pipelines`, `document-centric` are the variables that actually move the outcome for LlamaIndex in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- Your primary need is building RAG pipelines and document-centric agents — LlamaIndex's abstractions (data connectors, indices, query engines) are purpose-built for retrieval over your own data
-- You want a large library of pre-built data connectors (LlamaHub) for ingesting from many different document/data sources with minimal custom code
+- What LlamaIndex gives you that reading the feature list does not: data flows through data connectors (ingestion) into indices (vector, keyword, or hybrid), which are then queried through query engines that handle retrieval and response synthesis; higher-level agent abstractions are built on top of this retrieval-centric core rather than being the framework's primary focus, which is the part you have to evaluate against your own workload.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- Your application is primarily general-purpose agent orchestration with retrieval as a secondary concern — LangGraph or CrewAI may fit the primary use case better, with LlamaIndex as a retrieval component within them
-- You need the broadest non-retrieval integration ecosystem (arbitrary tool use, multi-provider chains) — LangChain's scope is broader beyond the retrieval-specific focus
+- The cost this entry cannot quantify for you is operational: the LlamaIndex footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside LlamaIndex here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

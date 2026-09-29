@@ -61,7 +61,7 @@ A 104-billion-parameter dense transformer chat model from Cohere, released in 20
 
 ## Why it's in the Arsenal
 
-Enterprise RAG- and tool-use-optimized chat model, positioned as Cohere's mid-tier open-weight offering. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open-weight model specifically tuned for RAG with citation grounding and multi-step tool use. See Strengths / Limitations below before adopting it.
+The case for Command R+ rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -87,18 +87,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you need an open-weight model specifically tuned for RAG with citation grounding and multi-step tool use
-2. **Scenario**: you're building enterprise multilingual applications and want a model with strong retrieval-augmented behavior out of the box
+1. **Running it in anger**: the first real evaluation of Command R+ is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What to measure first**: `open-weight`, `model`, `specifically`, `tuned` decide whether Command R+ works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need an open-weight model specifically tuned for RAG with citation grounding and multi-step tool use
-- You're building enterprise multilingual applications and want a model with strong retrieval-augmented behavior out of the box
+- Beyond the headline description, Command R+'s architecture section is the honest source: command R+ is a dense (non-MoE) decoder-only transformer with a 128K token context window. Its distinguishing design choice versus a generic chat model is post-training specifically shaped around RAG: the model is trained to consume retrieved documents and produce grounded responses with inline citations, and to plan and execute multi-step tool-calling sequences rather than single-shot function calls.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need Cohere's current flagship — as of mid-2026 Cohere has moved on to Command A and the newer Command A+ (May 2026), which supersede Command R+ on most benchmarks and throughput
-- You need a permissively licensed model for unrestricted commercial redistribution — Command R+ ships under Cohere's custom, non-Apache/MIT license (CC-BY-NC for research use; commercial use requires a separate agreement)
+- Adoption risk for Command R+ is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Command R+ against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Command R+ here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

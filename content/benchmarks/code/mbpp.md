@@ -111,7 +111,7 @@ Dataset: https://github.com/google-research/google-research/tree/master/mbpp
 
 ## Relation to the Arsenal
 
-Code generation benchmark. Complements code-generation projects in `content/projects/frameworks/` and code-generation tips.
+MBPP was built to be less saturated than HumanEval, using crowd-sourced programming problems with a test-driven prompt format. It shares most of HumanEval's structural limits — short, self-contained functions, and increasingly likely contamination — so the pair is a trend line rather than two independent measurements. Where HumanEval is the floor, MBPP is the check that the floor has not moved, and neither speaks to multi-file or multi-step work.
 
 ## Resources
 

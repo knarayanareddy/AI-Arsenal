@@ -61,7 +61,7 @@ An open-weight small-to-mid-size language model family from the Technology Innov
 
 ## Why it's in the Arsenal
 
-UAE-backed (TII) open-weight small/mid-size model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want an open-weight model backed by a national research institute (TII, UAE) as an alternative to the US/China-dominated open-weight landscape. See Strengths / Limitations below before adopting it.
+Falcon 3 appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -87,18 +87,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you want an open-weight model backed by a national research institute (TII, UAE) as an alternative to the US/China-dominated open-weight landscape
-2. **Scenario**: you need a small-to-mid-size dense model (1B-10B class) for local or edge deployment with a permissive-leaning custom license
+1. **Depending on it safely**: the work is the boundary — which calls go through Falcon 3, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Falcon 3 scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want an open-weight model backed by a national research institute (TII, UAE) as an alternative to the US/China-dominated open-weight landscape
-- You need a small-to-mid-size dense model (1B-10B class) for local or edge deployment with a permissive-leaning custom license
+- The implementation detail worth checking before adopting Falcon 3 is specific — a dense decoder-only transformer family, documented publicly at the model-card level (parameter counts, context length, tokenizer) but with less architectural novelty disclosed than TII's newer Falcon-H1 line, which explicitly documents its hybrid State Space Model plus attention design — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need TII's current architecture — Falcon-3 has been succeeded by Falcon-H1, which uses a hybrid State Space Model plus attention architecture (0.5B-34B) that TII positions as more efficient than Falcon-3's plain transformer design
-- You need the broadest possible community tooling support — Falcon models have meaningfully smaller ecosystem adoption than Llama or Qwen, so quantization/fine-tuning recipes are less abundant
+- Adoption risk for Falcon 3 is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Falcon 3 against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Falcon 3 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

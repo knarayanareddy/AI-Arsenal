@@ -62,7 +62,7 @@ deepset's open-source framework for building production search, retrieval-augmen
 
 ## Why it's in the Arsenal
 
-Modular pipeline framework spanning production RAG, semantic search, and agent orchestration — deepset's flagship open-source project. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a retrieval-first, production-oriented framework with explicit, composable pipeline components (retrievers, generators, routers) rather than an implicit conversational-agent abstraction. See Strengths / Limitations below before adopting it.
+Haystack appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 _This entry consolidates the former separate haystack-agents.md entry: the same underlying project is documented here with multiple ecosystem_role values rather than as duplicate files, since it is the same codebase/repository._
 
@@ -87,18 +87,21 @@ pip install haystack
 
 ## Key Use Cases
 
-1. **Scenario**: you want a retrieval-first, production-oriented framework with explicit, composable pipeline components (retrievers, generators, routers) rather than an implicit conversational-agent abstraction
-2. **Scenario**: you need agent capabilities (routing, tool use, memory) built on the same modular pipeline foundation you use for RAG and semantic search, rather than maintaining two separate frameworks for RAG and agents
+1. **Running it in anger**: the first real evaluation of Haystack is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the Haystack scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want a retrieval-first, production-oriented framework with explicit, composable pipeline components (retrievers, generators, routers) rather than an implicit conversational-agent abstraction
-- You need agent capabilities (routing, tool use, memory) built on the same modular pipeline foundation you use for RAG and semantic search, rather than maintaining two separate frameworks for RAG and agents
+- Beyond the headline description, Haystack's architecture section is the honest source: applications are modeled as pipelines of composable components (retrievers, generators, routers, agents) connected in a directed graph; agent workflows are built explicitly from these same components rather than hidden inside a separate conversational abstraction, giving one consistent mental model across RAG and agent use cases.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need a lightweight single-prompt agent or a no-code visual builder — Haystack's component/pipeline model has more setup overhead than either extreme
-- You want the graph-based explicit-state-machine model that LangGraph offers — Haystack's pipeline abstraction is more linear/DAG-oriented than LangGraph's general graph model
+- The cost this entry cannot quantify for you is operational: the Haystack footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Haystack against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Haystack here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

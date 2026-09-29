@@ -56,7 +56,7 @@ A TypeScript-native framework for building AI agents and workflows, aimed at giv
 
 ## Why it's in the Arsenal
 
-TypeScript-native agent framework, positioned to serve the JS/TS ecosystem the way LangGraph/CrewAI serve Python. It earns a place in the Arsenal because it directly addresses a recurring decision point: your stack is TypeScript/JavaScript-first and you want an agent framework designed natively for that ecosystem rather than a Python framework with a thinner JS wrapper. See Strengths / Limitations below before adopting it.
+Mastra appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -79,20 +79,21 @@ pip install mastra
 
 ## Key Use Cases
 
-1. **Scenario**: your stack is TypeScript/JavaScript-first and you want an agent framework designed natively for that ecosystem rather than a Python framework with a thinner JS wrapper
-2. **Scenario**: you need agent workflows integrated tightly with a Node.js backend and want first-party TypeScript type safety throughout
+1. **Adopting the abstraction**: for Mastra, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `stack`, `typescript`, `javascript-first`, `agent` are the variables that actually move the outcome for Mastra in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare Mastra against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- Your stack is TypeScript/JavaScript-first and you want an agent framework designed natively for that ecosystem rather than a Python framework with a thinner JS wrapper
-- You need agent workflows integrated tightly with a Node.js backend and want first-party TypeScript type safety throughout
+- Beyond the headline description, Mastra's architecture section is the honest source: provides agent, workflow, and tool abstractions built natively in TypeScript with full type safety, targeting Node.js backends and integrating with common JS-ecosystem deployment targets (Vercel, Node servers).
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- Your team is Python-first — the much larger Python agent-framework ecosystem (LangGraph, CrewAI, Pydantic AI) will have more examples, integrations, and community support
-- You need the widest possible third-party integration coverage — as a newer, smaller-ecosystem framework, Mastra has fewer pre-built integrations than the most established Python frameworks
-
-_Enrichment status: draft. Mastra's capabilities here are drawn from the project's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the Mastra footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Mastra against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Mastra overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

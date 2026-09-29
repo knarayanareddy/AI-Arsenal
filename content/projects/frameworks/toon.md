@@ -77,20 +77,20 @@ The full specification lives at github.com/toon-format/spec, and the CLI ships w
 
 ## Key Use Cases
 
-1. Shrink tool results: return a hundred-row record set as TOON instead of JSON and cut the repeated key overhead on every item.
-2. Improve parse reliability: give the model an explicit field header per table so it reads columns positionally instead of matching braces.
-3. Debug a prompt by eye: read the encoded payload in a log and see the structure a human can verify, rather than counting brackets.
+1. **Where it fits**: "You are sending arrays of same-shaped records to a model and paying for repeated JSON key names on every item
+2. **Adoption checkpoint**: before building on toon, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-- Lossless round-trip of the JSON data model, so no information is traded for the token savings.
-- Shape-directed encoding picks tabular, keyed tabular, inline, or structural form automatically per node.
-- Nested field groups fold uniform sub-objects into the table header, keeping rows flat and headers single-declaration.
-- Human-readable output, which makes an encoded prompt reviewable in a log - something binary formats give up entirely.
+- Beyond the headline description, toon's architecture section is the honest source: encoding is a shape-directed descent over the JSON value tree. At each node the encoder inspects whether children share a uniform key set; when they do, it emits a tabular header listing each field once and writes the rows inline, handling nested uniform sub-objects as a parenthesized field suffix. Uniform arrays of primitives collapse to a single key plus a comma-separated list, while non-uniform arrays fall back to an indented list of records, so the output stays flat and line-oriented rather than repeating a key per row. The decoder is the inverse: it reads the header to rebuild the array of records, then walks the indentation depth to rebuild nesting, so a round trip is deterministic and the token saving comes from the header being written once per table rather than once per row.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-The gain is concentrated in uniform arrays and it evaporates on deeply nested or irregular structures, where the README explicitly says JSON may be more efficient. There is a crossover point at small record counts where the header line costs more than the keys it saves. Adoption is an ecosystem problem more than a technical one: if any consumer in your chain expects JSON, you need a decode step, and models trained on JSON have no prior for this syntax. The project itself warns the format is stable but still an idea in progress, with the spec open to change. The benchmarks are self-published by the format's authors, so the parse-accuracy and token-count deltas should be reproduced on your own data before you commit an architecture to them.
+- Adoption risk for toon is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running toon against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- toon is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

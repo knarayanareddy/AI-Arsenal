@@ -55,7 +55,7 @@ The first generation of Google DeepMind's open-weight small language model famil
 
 ## Why it's in the Arsenal
 
-Google DeepMind's first-generation open-weight small model family (Gemma 1/2). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Gemma 1/2 generation for compatibility with existing pipelines or comparative research. See Strengths / Limitations below before adopting it.
+The case for Gemma rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,18 +81,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you specifically need the original Gemma 1/2 generation for compatibility with existing pipelines or comparative research
-2. **Scenario**: you want Google's smallest, most local-deployment-friendly open-weight models rather than the larger, newer Gemma 3/4 variants
+1. **Depending on it safely**: the work is the boundary — which calls go through Gemma, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What to measure first**: `specifically`, `original`, `gemma`, `generation` decide whether Gemma works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You specifically need the original Gemma 1/2 generation for compatibility with existing pipelines or comparative research
-- You want Google's smallest, most local-deployment-friendly open-weight models rather than the larger, newer Gemma 3/4 variants
+- What Gemma gives you that reading the feature list does not: a dense decoder-only transformer built from the same research lineage as Gemini, released in 2B/7B (Gemma 1) and later 2B/9B/27B (Gemma 2) sizes, without the interleaved local/global sliding-window attention mechanism introduced later in Gemma 3, which is the part you have to evaluate against your own workload.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You're starting a new project — Gemma 3 (and now Gemma 4, released April 2026) supersede this generation with longer context, multimodal input, and better benchmarks at the same or smaller sizes
-- You need the efficient long-context architecture (interleaved local/global attention) that only shipped starting with Gemma 3
+- The cost this entry cannot quantify for you is operational: the Gemma footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Gemma at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Gemma here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

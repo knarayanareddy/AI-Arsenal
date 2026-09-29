@@ -110,7 +110,7 @@ python evalue.py --dataset en --modelname chatgpt --noise_rate 0.6 --passage_num
 
 ## Relation to the Arsenal
 
-Retrieval / RAG evaluation benchmark. Complements RAG projects in `content/projects/data-and-retrieval/`, RAG tips in `content/tips-and-tricks/rag-and-retrieval/`, and evaluation tooling.
+RGB is the controlled counterpart to Natural Questions: same retrieval setting, but the queries vary in difficulty in ways NQ's naturally-occurring questions do not, which makes it the better choice for isolating whether a retrieval change helped. It is smaller and newer, so published numbers are noisier. Use NQ for comparability with existing work and RGB when you need the ablation to be interpretable.
 
 ## Resources
 
