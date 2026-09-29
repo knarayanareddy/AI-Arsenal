@@ -20,7 +20,7 @@ This guide compares tools for the `data-labeling` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Human judgement data is the bottleneck in most applied work, and the tooling is chosen under time pressure against a budget. Grouping by this job keeps the shortlist next to the decision that actually determines cost: what you pay per item, who adjudicates disagreement, and whether the data can leave your network.
 
 ## Key Features
 

@@ -20,7 +20,7 @@ This guide compares tools for the `structured-output` job. Use it as a routing p
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Parsing model output is a correctness boundary, and the difference between constrained decoding and validate-and-retry is a guarantee, a latency cost and a different failure mode. Grouping by this job keeps those three options comparable, and makes the schema-evolution gap — the case most implementations break on quietly — visible at selection time.
 
 ## Key Features
 

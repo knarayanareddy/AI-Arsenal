@@ -20,7 +20,7 @@ This guide compares tools for the `orchestration` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+When one call is not enough, the hard part is not the framework but representing failure, state and resumption explicitly. Grouping by this job makes those trade-offs findable alongside the tool choices, and keeps observability visible, since debugging a graph without per-step traces is guesswork.
 
 ## Key Features
 

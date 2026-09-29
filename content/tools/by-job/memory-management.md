@@ -20,7 +20,7 @@ This guide compares tools for the `memory-management` job. Use it as a routing p
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+An agent that forgets is a support ticket, and one that recalls the wrong fact is worse than one that recalls nothing. Grouping by this job keeps the retrieval trade-offs, the eviction problem and the deletion requirement in one place, because all three are production requirements rather than refinements.
 
 ## Key Features
 

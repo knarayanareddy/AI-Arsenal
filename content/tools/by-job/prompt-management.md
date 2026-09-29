@@ -20,7 +20,7 @@ This guide compares tools for the `prompt-management` job. Use it as a routing p
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Prompts drift across services, and the drift is invisible until a regression reaches users. Grouping by this job keeps versioning, templating and A/B testing distinguishable, and makes the dependency on evaluation explicit — a prompt registry without tests is a change log.
 
 ## Key Features
 

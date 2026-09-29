@@ -20,7 +20,7 @@ This guide compares tools for the `fine-tuning` job. Use it as a routing page, t
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Fine-tuning is reached for when prompting has plateaued, and it is easy to reach for before that plateau has actually been established. Grouping by this job makes the method and its resource cost visible at the decision point, including the VRAM and time figures that usually rule a method out.
 
 ## Key Features
 

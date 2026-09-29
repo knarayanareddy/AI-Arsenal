@@ -20,7 +20,7 @@ This guide compares tools for the `security-and-guardrails` job. Use it as a rou
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Untrusted input reaches the model at several points, and each entry point needs a different mechanism: input filtering, output filtering, tool-argument validation and access control are not substitutes for one another. Grouping by this job keeps the false-positive cost visible, since a guardrail that blocks legitimate traffic is its own outage.
 
 ## Key Features
 

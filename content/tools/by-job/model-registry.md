@@ -20,7 +20,7 @@ This guide compares tools for the `model-registry` job. Use it as a routing page
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Reproducibility is a versioned-artefact problem: the weights, the preprocessor and the prompt that produced a given output. Grouping by this job makes that explicit, and separates registry infrastructure from experiment tracking, which are frequently bought as one product and used as two.
 
 ## Key Features
 

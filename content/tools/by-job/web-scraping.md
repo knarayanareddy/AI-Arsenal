@@ -20,7 +20,7 @@ This guide compares tools for the `web-scraping` job. Use it as a routing page, 
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Ingestion is where a project first discovers that its data is not what it assumed, and scraping is where that discovery is most expensive — silent encoding damage, missing content behind a login, and rate limits that arrive as an outage rather than an error. Grouping by this job keeps the shortlist next to that decision, ordered by the failure mode rather than the feature list.
 
 ## Key Features
 

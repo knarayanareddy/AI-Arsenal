@@ -56,7 +56,7 @@ No dated upload evidence for the YouTube channel specifically was found within a
 
 ## Safety & moderation
 
-No moderation or trust concerns apply -- this is a one-way video publication channel, not an interactive community space.
+No moderation surface applies here: this is a one-way video publication channel with no comment, forum or messaging function to moderate, so the usual community-safety questions do not have an equivalent. The signal worth watching is instead editorial — whether published technical content stays current with the API, which is checkable by comparing a recent video against the documented behaviour.
 
 ## Relation to the Arsenal
 

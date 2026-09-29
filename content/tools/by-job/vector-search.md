@@ -20,7 +20,7 @@ This guide compares tools for the `vector-search` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Retrieval quality is decided by a chain — chunking, embeddings, index, ranking — and when it is poor the instinct is to blame the vector store, which is usually the wrong link. Grouping by this job makes the shortlist available next to the decision, so the store gets sized for the stage it actually sits in rather than chosen by benchmark.
 
 ## Key Features
 

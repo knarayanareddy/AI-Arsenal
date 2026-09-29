@@ -20,7 +20,7 @@ This guide compares tools for the `production-serving` job. Use it as a routing 
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+The gap between a working model and a working service is where most projects spend their unplanned engineering time, and the choices made there — managed endpoint versus own cluster, packaging format, autoscaling — are the ones that are expensive to reverse. Grouping by this job surfaces them before the commitment rather than after the first incident.
 
 ## Key Features
 

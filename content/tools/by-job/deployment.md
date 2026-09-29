@@ -20,7 +20,7 @@ This guide compares tools for the `deployment` job. Use it as a routing page, th
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+A model becomes a deployment through packaging, and the packaging choice is the one that shows up in code review and in rollback plans. Grouping by this job keeps the bundle, the registry and the hosting decision adjacent, so the platform-lock-in cost is visible before rather than after the first migration.
 
 ## Key Features
 

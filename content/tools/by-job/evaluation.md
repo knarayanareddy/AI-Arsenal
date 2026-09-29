@@ -20,7 +20,7 @@ This guide compares tools for the `evaluation` job. Use it as a routing page, th
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Every model, prompt and agent change is a hypothesis, and without an offline signal the only way to learn whether it helped is to ship it. Grouping by this job makes the tooling findable at the point where the gap is felt, and keeps offline eval, runtime tracing and online metrics distinguishable rather than bundled as one thing.
 
 ## Key Features
 

@@ -20,7 +20,7 @@ This guide compares tools for the `prototyping` job. Use it as a routing page, t
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+A prototype is a tool for testing a hypothesis cheaply, and the failure is carrying its architecture forward. Grouping by this job makes the reversibility question explicit — which prototype choices are cheap to undo — and separates demo behaviour from quality on your own data, which is the distinction prototypes most often blur.
 
 ## Key Features
 
