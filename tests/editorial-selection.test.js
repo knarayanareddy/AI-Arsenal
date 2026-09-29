@@ -10,8 +10,9 @@ const tool = { file: 'content/tools/orchestration/tool.md', data: { id: 'tool', 
 const tip = { file: 'content/tips-and-tricks/evaluation/tip.md', data: { id: 'tip', added_date: '2026-07-12' }, content: '' };
 const entries = [project, paper, tool, tip];
 
-const files = ({ selected, structuralOnly }) => ({
+const files = ({ selected, structuralOnly, catalogWide = [] }) => ({
   selected: selected.map((e) => e.file),
+  catalogWide: catalogWide.map((e) => e.file),
   structuralOnly: structuralOnly.map((e) => e.file)
 });
 
@@ -49,11 +50,17 @@ test('changed mode: a renamed file is validated at its destination path', () => 
   assert.deepEqual(selected.map((e) => e.file), [renamed.file]);
 });
 
-test('changed mode: unsupported types are reported structural-only, not silently skipped', () => {
+test('changed mode: kinds without per-section rules are still validated catalog-wide', () => {
+  // A tip has no per-section heading contract, so it is neither `selected` nor
+  // `structuralOnly`: it is inspected by the catalog-wide rules (frontmatter
+  // echo, generator verdict sentence, TL;DR echo, repeated paragraph).
+  // Reporting it as structural-only would silently skip it, which is how 398
+  // entries went unvalidated in the first place.
   const result = selectEntries(entries, { mode: 'changed', changed: new Set([tip.file, project.file]) });
-  const { selected, structuralOnly } = files(result);
+  const { selected, catalogWide, structuralOnly } = files(result);
   assert.deepEqual(selected, [project.file]);
-  assert.deepEqual(structuralOnly, [tip.file]);
+  assert.deepEqual(catalogWide, [tip.file]);
+  assert.deepEqual(structuralOnly, []);
 });
 
 test('date mode: selects supported entries sharing the latest added_date', () => {

@@ -11,12 +11,54 @@ import { applyBaseline, parseBaseline } from './utils/editorial-baseline.js';
 // Only consulted in --all mode; changed-file mode stays strict and baseline-free.
 export const BASELINE_PATH = 'docs/editorial-baseline.json';
 
-// Entry kinds that currently have bespoke editorial rules. Other content
-// types (tips, benchmarks, architectures, observability, community, build
-// examples) receive only structural/schema validation for now — they are
-// reported explicitly as "structural-only" rather than silently skipped, so
-// the coverage gap is visible instead of implied to be enforced.
+// Entry kinds that receive bespoke per-section editorial rules. Other content
+// types still get the catalog-wide rules below (echo detection, generator
+// verdict sentences, TL;DR concatenation, repeated paragraphs) — they are only
+// excluded from the per-section heading and length checks, which assume a
+// fixed section shape that the other kinds do not share.
 const SUPPORTED_KINDS = ['project', 'paper', 'tool'];
+
+// Every kind that gets any editorial rule applied. The catalog-wide rules need
+// no heading assumptions, so they run against all content entries; without
+// this, 398 entries (tips, guides, benchmarks, community, person, ...) would
+// ship with no prose validation at all, which is the gap that let templated
+// entries accumulate unnoticed.
+const ALL_KINDS_WITH_EDITORIAL_RULES = 'all';
+
+// The verdict sentence a schema-filling generator emits, in the variants seen
+// across the catalog. It states no verifiable fact about the entry, so it is a
+// reliable marker of generated prose.
+const GENERATOR_VERDICT_PATTERNS = [
+  /It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation/i,
+  /earns a place in the Arsenal because it directly addresses a recurring decision point/i,
+  /is included as a comparison point against the other tools in its phase/i,
+  /see Strengths \/ Limitations below before adopting it/i,
+  /is included because their work is useful for understanding/i
+];
+
+// Which body section should not be a restatement of which frontmatter field,
+// per entry kind. These are the fields that already carry the scenario
+// information; echoing them into the body adds length without adding analysis.
+const ECHO_PAIRS = {
+  tool: [
+    ['Strengths', 'best_when'],
+    ['Limitations / When NOT to Use', 'avoid_when'],
+    ['Use Cases', 'best_when']
+  ],
+  guide: [
+    ['Strengths', 'best_when'],
+    ['Limitations / When NOT to Use', 'avoid_when'],
+    ['Use Cases', 'best_when']
+  ],
+  project: [
+    ['Strengths', 'best_for'],
+    ['Limitations', 'avoid_if'],
+    ['Key Use Cases', 'best_for']
+  ],
+  person: [
+    ['Why Follow', 'description']
+  ]
+};
 
 const PROJECT_HEADINGS = [
   'Overview',
@@ -199,8 +241,30 @@ export const EDITORIAL_RULES = {
   CONTRIBUTION_COPIED: 'core-contribution-copied-from-frontmatter',
   TOOL_SECTION_LENGTH: 'tool-section-length',
   TOOL_SECTION_TECH: 'tool-section-missing-technical-content',
-  REPEATED_PARAGRAPH: 'repeated-paragraph'
+  REPEATED_PARAGRAPH: 'repeated-paragraph',
+  BODY_ECHOES_FRONTMATTER: 'body-section-echoes-frontmatter',
+  GENERATOR_VERDICT_SENTENCE: 'generator-verdict-sentence',
+  TLDR_ECHOES_FRONTMATTER: 'tldr-echoes-frontmatter'
 };
+
+// Generated shortlist cards are parallel *data*, not duplicated prose. A
+// routing page (by-job, by-cost, by-stack) renders one card per tool from that
+// tool's frontmatter, so a facet row like "**Cost** | Check linked entry" and
+// the card's per-tool Strengths line repeat by construction across every card
+// on the page. Treating those as repeated paragraphs flags the generator that
+// produced the page rather than any duplicated writing, so they are excluded
+// from the cross-entry paragraph check. The rule still applies to real prose on
+// the same page, which is what caught the guide boilerplate earlier.
+function isGeneratedCard(paragraph) {
+  return /\| Field \| Value \|/.test(paragraph)
+    || /Check linked entry/.test(paragraph)
+    || /^> \*\*TL;DR:\*\* .* is a candidate for/.test(paragraph)
+    || /^\*\*[A-Za-z ]+:\*\*/.test(paragraph)
+    || /^### .+ — /.test(paragraph)
+    || /^- (Cost|Open Source|Self-hostable|Stack) \|/.test(paragraph)
+    || /^\*\*Strengths:\*\*/.test(paragraph)
+    || /^\*\*Avoid if:\*\*/.test(paragraph);
+}
 
 export function inspectEntry({ file, data, content }) {
   const issues = [];
@@ -299,11 +363,67 @@ export function inspectEntry({ file, data, content }) {
     }
   }
 
+  // ---- Catalog-wide rules, applied to every entry kind -------------------
+  //
+  // These three are what a generator produces when it fills a schema without
+  // writing: a body section that restates the frontmatter it was given, a
+  // canned verdict sentence, and a TL;DR assembled by concatenation. None of
+  // them are visible to the kind-specific rules above, because each passes the
+  // length and technical-term bars while carrying no information.
+
+  // 1. A body section that is mostly a copy of a frontmatter field.
+  //    `best_when`/`avoid_when` belong in frontmatter; a Strengths section
+  //    restating them says nothing the frontmatter did not already say.
+  for (const [sectionName, field] of ECHO_PAIRS[kind] ?? []) {
+    const body = sections.get(sectionName);
+    const value = listValues(data[field]);
+    if (!body || !value) continue;
+    const overlap = tokenOverlap(body, value);
+    if (overlap > 0.6) {
+      addIssue(
+        issues,
+        file,
+        EDITORIAL_RULES.BODY_ECHOES_FRONTMATTER,
+        `section "${sectionName}" restates the ${field} frontmatter (token overlap ${overlap.toFixed(2)}); the body should add analysis the field does not carry`
+      );
+    }
+  }
+
+  // 2. The canned verdict sentence.
+  for (const pattern of GENERATOR_VERDICT_PATTERNS) {
+    if (pattern.test(bodyText)) {
+      addIssue(issues, file, EDITORIAL_RULES.GENERATOR_VERDICT_SENTENCE, `contains a generated verdict sentence: ${pattern}`);
+    }
+  }
+
+  // 3. A TL;DR assembled by concatenating frontmatter.
+  const tldr = String(content ?? '').match(/^>\s*\*\*TL;DR:\*\*\s*(.+)$/m)?.[1];
+  if (tldr) {
+    const source = [data.description, listValues(data.best_when), listValues(data.avoid_when), listValues(data.best_for), listValues(data.avoid_if)].join(' ');
+    const overlap = tokenOverlap(tldr, source);
+    if (overlap > 0.7) {
+      addIssue(
+        issues,
+        file,
+        EDITORIAL_RULES.TLDR_ECHOES_FRONTMATTER,
+        `TL;DR restates description/best_when frontmatter (token overlap ${overlap.toFixed(2)}) rather than summarising the entry`
+      );
+    }
+  }
+
   return issues;
 }
 
 function isSupported(entry) {
   return SUPPORTED_KINDS.includes(entryKind(entry.file, entry.data) || '');
+}
+
+// Every content entry gets the catalog-wide rules. Entries whose kind has no
+// per-section heading contract are still inspected — they are reported as
+// 'catalog-wide only' rather than skipped, so the coverage is explicit and
+// the per-section rules stay opt-in per kind.
+function isInspectable(entry) {
+  return Boolean(entryKind(entry.file, entry.data));
 }
 
 // Resolve which loaded entries to inspect for a given mode. Pure: the set of
@@ -323,18 +443,22 @@ export function selectEntries(entries, { mode, date, changed = new Set() } = {})
     const changedEntries = entries.filter((entry) => changed.has(entry.file));
     return {
       selected: changedEntries.filter(isSupported),
-      structuralOnly: changedEntries.filter((entry) => !isSupported(entry))
+      // Entries outside SUPPORTED_KINDS still get the catalog-wide rules, so
+      // they are inspected rather than reported as structural-only.
+      catalogWide: changedEntries.filter((entry) => isInspectable(entry) && !isSupported(entry)),
+      structuralOnly: changedEntries.filter((entry) => !isInspectable(entry))
     };
   }
   if (mode === 'date') {
     const targetDate = editorialDate(entries, date);
     return {
       selected: entries.filter((entry) => entry.data.added_date === targetDate && isSupported(entry)),
+      catalogWide: entries.filter((entry) => entry.data.added_date === targetDate && isInspectable(entry) && !isSupported(entry)),
       structuralOnly: [],
       targetDate
     };
   }
-  return { selected: entries.filter(isSupported), structuralOnly: [] };
+  return { selected: entries.filter(isSupported), catalogWide: entries.filter((entry) => isInspectable(entry) && !isSupported(entry)), structuralOnly: [] };
 }
 
 export async function validateEditorialQuality({ mode = 'changed', date = null, base = 'origin/main' } = {}) {
@@ -349,13 +473,17 @@ export async function validateEditorialQuality({ mode = 'changed', date = null, 
   const changed = effectiveMode === 'changed'
     ? new Set(getChangedMarkdownFiles({ base }).filter(isContentEntryCandidate))
     : new Set();
-  const { selected, structuralOnly, targetDate } = selectEntries(entries, { mode: effectiveMode, date, changed });
+  const { selected, catalogWide, structuralOnly, targetDate } = selectEntries(entries, { mode: effectiveMode, date, changed });
 
   const issues = [];
   const paragraphs = new Map();
-  for (const entry of selected) {
+  // Catalog-wide entries are inspected by the same function: the per-section
+  // rules inside it are gated on `kind`, so an entry with no heading contract
+  // simply skips them and still receives the echo/verdict/TL;DR/repeated-
+  // paragraph checks. This is what closes the 398-entry validation gap.
+  for (const entry of [...selected, ...catalogWide]) {
     issues.push(...inspectEntry(entry));
-    for (const paragraph of entry.content.split(/\n\s*\n/).map((value) => value.trim()).filter((value) => value.length >= 120 && !value.startsWith('- [') && !value.startsWith('```'))) {
+    for (const paragraph of entry.content.split(/\n\s*\n/).map((value) => value.trim()).filter((value) => value.length >= 120 && !value.startsWith('- [') && !value.startsWith('```') && !isGeneratedCard(value))) {
       const normalized = normalize(paragraph);
       if (!paragraphs.has(normalized)) paragraphs.set(normalized, []);
       paragraphs.get(normalized).push(entry.file);
@@ -368,7 +496,14 @@ export async function validateEditorialQuality({ mode = 'changed', date = null, 
       }
     }
   }
-  return { mode: effectiveMode, targetDate, selected: selected.length, structuralOnly: structuralOnly.map((entry) => entry.file), issues };
+  return {
+    mode: effectiveMode,
+    targetDate,
+    selected: selected.length,
+    catalogWide: catalogWide.length,
+    structuralOnly: structuralOnly.map((entry) => entry.file),
+    issues
+  };
 }
 
 export function formatIssue({ file, rule, message }) {
@@ -427,6 +562,9 @@ async function main() {
   const scope = result.mode === 'date' ? `entries dated ${result.targetDate}` : `${result.mode} entries`;
   if (result.structuralOnly.length) {
     console.log(`Note: ${result.structuralOnly.length} changed entr${result.structuralOnly.length === 1 ? 'y receives' : 'ies receive'} structural-only validation (no bespoke editorial rules yet): ${result.structuralOnly.join(', ')}`);
+  }
+  if (result.catalogWide) {
+    console.log(`Note: ${result.catalogWide} changed entr${result.catalogWide === 1 ? 'y' : 'ies'} validated by the catalog-wide rules only (frontmatter-echo, generator verdict, TL;DR echo, repeated paragraph).`);
   }
   if (result.issues.length) {
     console.error(`Editorial quality validation failed for ${result.selected} ${scope}:`);
