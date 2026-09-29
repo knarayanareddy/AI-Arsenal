@@ -85,9 +85,10 @@ Cascade combines a repo index, a trace of your recent editor actions, and tool a
 
 ## Integration Patterns
 
-- Compare against `cursor`, `github-copilot`, `cline` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `windsurf`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Windsurf as a TypeScript package in the same runtime as your API against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `cursor`, `github-copilot`, `cline` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

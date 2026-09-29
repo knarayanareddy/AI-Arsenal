@@ -81,10 +81,10 @@ pip install promptlayer
 
 ## Integration Patterns
 
-- Compare against [Langfuse Prompts](./langfuse-prompts.md), [LangSmith Hub](./langsmith-hub.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `promptlayer`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt PromptLayer over an HTTP endpoint from whichever service owns the call site against the `prompt-management` job.  For evaluation or tracing, emit spans and scores from your own service so a bad generation is traceable back to the prompt, the model and the parameters that produced it, rather than only visible as an aggregate score.
+- *Alternatives*: `langfuse-prompts`, `langsmith-hub` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

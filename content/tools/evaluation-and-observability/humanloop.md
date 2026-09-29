@@ -80,7 +80,10 @@ Prompts are versioned in Humanloop's platform; evaluation runs and user feedback
 
 ## Integration Patterns
 
-Link this tool from reference stacks, decision trees, and project entries using its canonical ID `humanloop` rather than duplicating details.
+- *Wiring*: adopt Humanloop over an HTTP endpoint from whichever service owns the call site against the `prompt-management, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

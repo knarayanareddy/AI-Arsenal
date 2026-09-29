@@ -82,7 +82,11 @@ The canonical artefact is a flow document rather than reviewable source, so chan
 
 ## Integration Patterns
 
-This is the current visual-builder entry in content/tools/orchestration, replacing the archived Flowise slot next to it. It sits alongside the code-first framework entries in content/projects/frameworks and overlaps with the serving entries in content/tools/serving-and-deployment once a flow becomes a production endpoint. Its observability integrations line up with the tracing tools in content/tools/evaluation-and-observability.
+- *Wiring*: adopt Langflow over an HTTP endpoint from whichever service owns the call site against the `orchestration, prototyping` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `flowise`, `n8n`, `dify` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `langchain` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

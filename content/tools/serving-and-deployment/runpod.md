@@ -86,9 +86,11 @@ pip install runpod
 
 ## Integration Patterns
 
-- Compare against `modal`, `replicate`, `fireworks-ai` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `runpod`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt RunPod over an HTTP endpoint from whichever service owns the call site against the `production-serving, deployment, fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `modal`, `replicate`, `fireworks-ai` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `vllm` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

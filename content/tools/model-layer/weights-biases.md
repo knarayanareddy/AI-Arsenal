@@ -81,10 +81,10 @@ pip install wandb
 
 ## Integration Patterns
 
-- Compare against [DVC](./dvc.md), [Hugging Face Hub](./hugging-face-hub.md), [MLflow](./mlflow.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `weights-biases`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Weights & Biases as a Python dependency or sidecar service against the `model-registry, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `dvc`, `hugging-face-hub`, `mlflow` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

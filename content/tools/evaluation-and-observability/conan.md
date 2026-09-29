@@ -84,7 +84,10 @@ _Verified for Conan: stars, license and last-commit come from the GitHub API as 
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Conan as a Python dependency or sidecar service against the `monitoring, tracing` job.  For evaluation or tracing, emit spans and scores from your own service so a bad generation is traceable back to the prompt, the model and the parameters that produced it, rather than only visible as an aggregate score.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

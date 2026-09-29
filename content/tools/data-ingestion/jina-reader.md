@@ -80,10 +80,10 @@ curl https://r.jina.ai/http://example.com
 
 ## Integration Patterns
 
-- Compare against [Crawl4AI](./crawl4ai-tool.md), [Firecrawl](./firecrawl-tool.md), [Playwright](./playwright.md), [Puppeteer](./puppeteer.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `jina-reader`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Jina AI Reader through its HTTP API, decoupled from your service language against the `web-scraping` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `crawl4ai-tool`, `firecrawl-tool`, `playwright`, `puppeteer` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
