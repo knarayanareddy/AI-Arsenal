@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-30T08:52:41.199Z",
+  "generated_at": "2026-09-30T08:58:35.990Z",
   "mode": "changed-only",
   "files_checked": 722,
-  "urls_found": 1733,
+  "urls_found": 1730,
   "urls_checked": 500,
   "max_urls": 500,
   "max_urls_per_host": 100,
   "capped": true,
-  "urls_skipped_by_cap": 1233,
+  "urls_skipped_by_cap": 1230,
   "broken_links": [
     {
-      "url": "https://developers.llamaindex.ai/python/llama_deploy/cli//",
+      "url": "https://developers.llamaindex.ai/python/llama_deploy/cli/",
       "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:http-404",
+      "status": 404,
+      "error": "http-404",
       "soft": false,
       "files": [
         "content/projects/inference-engines/run-llama-llama-deploy.md"
@@ -1040,7 +1040,7 @@
     "warnings": 99,
     "contacted": 403,
     "skipped_host_cap": 77,
-    "skipped_url_cap": 1233,
+    "skipped_url_cap": 1230,
     "warnings_by_type": {
       "host_cap": 77,
       "http_soft": 0,

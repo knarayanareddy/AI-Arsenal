@@ -76,3 +76,37 @@ test('placeholder handling is reversible via LINK_CHECK_STRICT_URLS', () => {
   // And placeholders must still never be fetched.
   assert.match(src, /!STRICT_URLS\s*&&\s*\(isPlaceholderReason/);
 });
+
+test('a 404 from HEAD must not be reported as a broken link', () => {
+  // Regression guard. Some documentation hosts answer HEAD with 404 while
+  // serving GET normally — developers.llamaindex.ai/python/llama_deploy/cli/
+  // is the observed case. check-links.js returns on the first conclusive status,
+  // so returning "broken" on HEAD reported a live page as dead and failed CI.
+  //
+  // The fix falls through to GET on a 404/410 from HEAD and only reports
+  // broken if GET agrees.
+  const src = readFileSync(new URL('../scripts/check-links.js', import.meta.url), 'utf8');
+
+  const brokenBranch = src.match(
+    /if \(category === 'broken'\) \{[\s\S]*?\n {4}\}/,
+  );
+  assert.ok(brokenBranch, 'the broken-category branch must still exist');
+  const body = brokenBranch[0];
+
+  assert.match(
+    body,
+    /if \(method === 'GET'\)[\s\S]*?soft: false/,
+    'only GET may conclude that a link is broken'
+  );
+  assert.match(
+    body,
+    /continue;/,
+    'a 404/410 on HEAD must fall through to GET rather than returning'
+  );
+  // Guard against the old single-line form returning unconditionally.
+  assert.doesNotMatch(
+    body,
+    /^\s*return \{ url: rawUrl, ok: false, status: response\.status, error: `http-\$\{response\.status\}`, soft: false \};$/m,
+    'the broken branch must not return without checking the method'
+  );
+});

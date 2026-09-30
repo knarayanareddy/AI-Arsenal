@@ -194,7 +194,14 @@ async function checkUrl(rawUrl, redirectDepth = 0) {
 
     const category = categorizeHttpStatus(response.status);
     if (category === 'ok') return { url: rawUrl, ok: true, status: response.status };
-    if (category === 'broken') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: false };
+    // A 404/410 from HEAD is not conclusive: a number of documentation hosts
+    // (llamaindex.ai, for one) answer HEAD with 404 while serving GET normally.
+    // Returning here would report a live page as dead, so fall through to GET
+    // and only treat the status as broken if GET agrees.
+    if (category === 'broken') {
+      if (method === 'GET') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: false };
+      continue;
+    }
     // 'soft' — non-404/410 >= 400 (5xx, 405, etc.) on GET: transient warning.
     if (method === 'GET') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: true };
     // On HEAD with an unexpected status, fall through to GET (HEAD may be blocked).
