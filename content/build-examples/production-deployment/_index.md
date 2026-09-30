@@ -12,7 +12,7 @@ End-to-end blueprints where the primary challenge is deployment and serving infr
 
 ## What does NOT belong here
 
-If the build is primarily about getting a RAG pipeline or agent working correctly and it happens to include a Docker file and a deploy step, it stays in `rag-systems/` or `agent-systems/` — deployment concerns there are secondary. A single tip about batching, caching, or timeout handling for a serving layer that doesn't require a full working deployment belongs in `tips-and-tricks/inference-and-serving/`, not here. Choosing a deployment target in the abstract (Modal vs. Fly.io vs. Bedrock) is a decision tree — see `architectures/decision-trees/choose-deployment-target.md` — not a build example.
+If the build is primarily about getting a RAG pipeline or agent working correctly and it happens to include a Docker file and a deploy step, it stays in `rag-systems/` or `agent-systems/` — deployment concerns there are secondary. A single tip about batching, caching, or timeout handling for a serving layer that doesn't require a full working deployment belongs in `tips-and-tricks/inference-and-serving/`, not here. Choosing a deployment target in the abstract (Modal vs. Fly.io vs. Bedrock) is a decision tree — see `architectures/serving-patterns/choose-deployment-target.md` — not a build example.
 
 ## Quick-start: highest-signal build examples in this phase
 

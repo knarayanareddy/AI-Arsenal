@@ -23,7 +23,7 @@ Several entries here have a corresponding tool entry under `content/tools/evalua
 Before selecting an evaluation/observability platform:
 - Key question to ask: do I need RAG-specific metrics (favor Ragas/DeepEval), general tracing (favor Langfuse/LangSmith/Phoenix), or OpenTelemetry-native instrumentation (favor OpenLIT/OpenLLMetry)?
 - If you need usage guidance rather than architectural depth: see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md)
-- See [Choose an Eval Framework](../../architectures/decision-trees/choose-eval-framework.md) and [Choose an Observability Tool](../../architectures/decision-trees/choose-observability-tool.md) for cross-cutting guidance
+- See [Choose an Eval Framework](../../architectures/evaluation-strategy/choose-eval-framework.md) and [Choose an Observability Tool](../../architectures/evaluation-strategy/choose-observability-tool.md) for cross-cutting guidance
 
 ## Projects in this category
 

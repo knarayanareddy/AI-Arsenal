@@ -23,7 +23,7 @@ Several entries here have a corresponding tool entry under `content/tools/data-i
 Before selecting a data/retrieval component:
 - Key question to ask: do I need a dedicated vector database, or can I add vector search to a database I already operate (e.g. pgvector on existing PostgreSQL)?
 - If you need usage guidance rather than architectural depth: see [tools/data-ingestion/](../../tools/data-ingestion/_index.md)
-- See [Choose a Vector DB](../../architectures/decision-trees/choose-vector-db.md) for cross-cutting selection guidance
+- See [Choose a Vector DB](../../architectures/data-strategy/choose-vector-db.md) for cross-cutting selection guidance
 
 ## Projects in this category
 
