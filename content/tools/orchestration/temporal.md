@@ -88,7 +88,7 @@ This is an orchestration-phase tool and the durable-execution counterpart to n8n
 
 - [GitHub - temporalio/temporal](https://github.com/temporalio/temporal)
 - [Documentation - docs.temporal.io](https://docs.temporal.io)
-- [Temporal CLI and dev server quick start](https://docs.temporal.io/develop/go/getting-started)
+- [Temporal CLI and dev server quick start](https://docs.temporal.io/develop/go)
 
 ## Buzz & Reception
 

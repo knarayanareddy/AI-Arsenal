@@ -1,142 +1,22 @@
 {
-  "generated_at": "2026-09-30T08:38:52.428Z",
+  "generated_at": "2026-09-30T08:45:52.070Z",
   "mode": "changed-only",
   "files_checked": 722,
-  "urls_found": 1737,
+  "urls_found": 1731,
   "urls_checked": 500,
   "max_urls": 500,
   "max_urls_per_host": 100,
   "capped": true,
-  "urls_skipped_by_cap": 1237,
+  "urls_skipped_by_cap": 1231,
   "broken_links": [
     {
-      "url": "https://crates.io/crates/llmfit",
+      "url": "https://developers.llamaindex.ai/cli/",
       "ok": false,
       "status": 404,
       "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/model-layer/llmfit.md"
-      ]
-    },
-    {
-      "url": "https://daft.ai/docs",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:http-404",
-      "soft": false,
-      "files": [
-        "content/projects/data-and-retrieval/daft.md"
-      ]
-    },
-    {
-      "url": "https://dataelem.feishu.cn/wiki/R7HZwH5ZGiJUDrkHZXicA9pInif",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/projects/agent-systems/bisheng.md"
-      ]
-    },
-    {
-      "url": "https://dlthub.com/docs/verified-sources/overview",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/data-ingestion/dlt.md"
-      ]
-    },
-    {
-      "url": "https://docs.agentops.ai/introduction",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/evaluation-and-observability/agentops.md"
-      ]
-    },
-    {
-      "url": "https://docs.getdbt.com/docs/collaborate/data-platforms",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/projects/frameworks/dbt-labs-dbt.md"
-      ]
-    },
-    {
-      "url": "https://docs.greatexpectations.io/docs/core/connect_to_data/dataframes/introduction",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/data-ingestion/great-expectations.md"
-      ]
-    },
-    {
-      "url": "https://docs.langflow.org/deployment",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:http-404",
-      "soft": false,
-      "files": [
-        "content/tools/orchestration/langflow.md"
-      ]
-    },
-    {
-      "url": "https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:http-404",
       "soft": false,
       "files": [
         "content/projects/inference-engines/run-llama-llama-deploy.md"
-      ]
-    },
-    {
-      "url": "https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/cli/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:http-404",
-      "soft": false,
-      "files": [
-        "content/projects/inference-engines/run-llama-llama-deploy.md"
-      ]
-    },
-    {
-      "url": "https://docs.nomic.ai/atlas/introduction",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/data-ingestion/nomic-atlas.md"
-      ]
-    },
-    {
-      "url": "https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/examples/advanced/fp8_primer.html",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/projects/inference-engines/nvidia-transformerengine.md"
-      ]
-    },
-    {
-      "url": "https://docs.polyaxon.com/intro/self-hosting/installation",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:http-404",
-      "soft": false,
-      "files": [
-        "content/projects/frameworks/polyaxon-polyaxon.md"
       ]
     },
     {
@@ -1164,13 +1044,13 @@
     }
   ],
   "summary": {
-    "ok": 387,
+    "ok": 399,
     "ignored": 0,
-    "broken": 14,
+    "broken": 2,
     "warnings": 99,
     "contacted": 403,
     "skipped_host_cap": 77,
-    "skipped_url_cap": 1237,
+    "skipped_url_cap": 1231,
     "warnings_by_type": {
       "host_cap": 77,
       "http_soft": 0,
