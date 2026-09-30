@@ -126,7 +126,7 @@ This is a framework-phase entry in the voice-audio category, and it is the signa
 
 - [Torchaudio GitHub repository](https://github.com/pytorch/audio)
 - [Torchaudio documentation](https://pytorch.org/audio)
-- [Torchaudio audio backends guide](https://pytorch.org/audio/tutorials/audio_backend.html)
+- [Torchaudio audio backends guide](https://docs.pytorch.org/audio/stable/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (2,949 stars, last commit 2026-09-28, license BSD-2-Clause, verified via GitHub API on 2026-09-28)*

@@ -118,7 +118,7 @@ This is an inference-engine phase entry in the document-processing subcategory, 
 
 - [docTR GitHub repository](https://github.com/mindee/doctr)
 - [docTR documentation](https://mindee.github.io/doctr/)
-- [docTR pretrained model zoo](https://mindee.github.io/doctr/using_doctr/pretrained_models.html)
+- [docTR pretrained model zoo](https://github.com/mindee/doctr)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (6,366 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

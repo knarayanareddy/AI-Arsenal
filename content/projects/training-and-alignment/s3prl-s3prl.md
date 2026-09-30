@@ -130,7 +130,7 @@ This is a frameworks-phase entry in the voice-audio category, and it sits upstre
 
 - [S3PRL GitHub repository](https://github.com/s3prl/s3prl)
 - [S3PRL documentation](https://s3prl.github.io/s3prl/)
-- [S3PRL upstream model hub listing](https://s3prl.github.io/s3prl/hub.html)
+- [S3PRL upstream model hub listing](https://github.com/s3prl/s3prl)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (2,566 stars, last commit 2026-03-12, license Apache-2.0, verified via GitHub API on 2026-09-28)*

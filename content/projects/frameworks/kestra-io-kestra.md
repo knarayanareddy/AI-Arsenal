@@ -102,7 +102,7 @@ The scheduling and orchestration layer of the data-and-retrieval phase, and the 
 
 - [GitHub — kestra-io/kestra](https://github.com/kestra-io/kestra)
 - [Kestra documentation](https://kestra.io/docs)
-- [Plugin catalog](https://kestra.io/docs/plugins)
+- [Plugin catalog](https://kestra.io/docs/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (28,401 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

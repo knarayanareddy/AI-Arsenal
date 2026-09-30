@@ -16,7 +16,7 @@ github_stars: 1225
 github_stars_last_30d: 0
 trending_score: 0
 last_commit: "2026-09-16"
-docs_url: "https://sufe-aiflm-lab.github.io/LightAgent/"
+docs_url: "https://github.com/SUFE-AIFLM-Lab/"
 demo_url: null
 phase: framework
 domain: [general-purpose]
@@ -99,5 +99,5 @@ This framework-phase entry is the runnable runtime among the frameworks in the s
 ## Resources
 
 - [Repository](https://github.com/wanxingai/LightAgent)
-- [Documentation site](https://sufe-aiflm-lab.github.io/LightAgent/)
+- [Documentation site](https://github.com/SUFE-AIFLM-Lab/)
 - [Design paper on arXiv](https://arxiv.org/abs/2509.09292)

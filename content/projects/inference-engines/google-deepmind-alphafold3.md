@@ -109,7 +109,7 @@ This is the structural-prediction entry in content/projects/inference-engines, w
 ## Resources
 
 - [AlphaFold 3 GitHub repository](https://github.com/google-deepmind/alphafold3)
-- [AlphaFold 3 technical report](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alpha-fold-3.pdf)
+- [AlphaFold 3 technical report](https://github.com/google-deepmind/alphafold3)
 - [AlphaFold Server, for predictions without local setup](https://alphafoldserver.com/)
 
 ---

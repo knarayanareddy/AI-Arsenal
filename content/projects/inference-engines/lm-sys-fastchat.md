@@ -17,7 +17,7 @@ github_stars: 39550
 github_stars_last_30d: 0
 trending_score: 32
 last_commit: "2026-05-01"
-docs_url: "https://lm-sys.github.io/FastChat"
+docs_url: "https://lmsys.org/"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -104,7 +104,7 @@ The bridge entry between training and evaluation in the Arsenal: it implements t
 ## Resources
 
 - [GitHub — lm-sys/FastChat](https://github.com/lm-sys/FastChat)
-- [FastChat documentation](https://lm-sys.github.io/FastChat)
+- [FastChat documentation](https://lmsys.org/)
 - [Chatbot Arena paper on arXiv](https://arxiv.org/abs/2403.04132)
 
 ---

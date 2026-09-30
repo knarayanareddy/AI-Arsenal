@@ -114,7 +114,7 @@ This is the language-model entry in content/projects/frameworks for the Paddle s
 
 - [PaddleNLP documentation](https://paddlenlp.readthedocs.io)
 - [PaddleNLP GitHub repository](https://github.com/PaddlePaddle/PaddleNLP)
-- [PaddleNLP large model development guide](https://paddlenlp.readthedocs.io/zh/latest/llm/index.html)
+- [PaddleNLP large model development guide](https://paddlenlp.readthedocs.io/zh/latest/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (12,979 stars, last commit 2026-05-23, license Apache-2.0, verified via GitHub API on 2026-09-28)*

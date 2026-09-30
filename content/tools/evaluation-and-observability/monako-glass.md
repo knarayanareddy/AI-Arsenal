@@ -4,7 +4,7 @@ name: Monako Glass
 type: tool
 job: [monitoring, evaluation]
 description: Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
-url: "https://monako.ai/glass"
+url: "https://monako.ai/"
 cost_model: paid
 pricing_detail: Paid plans
 tags: [monitoring, evaluation]
@@ -63,7 +63,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://monako.ai/glass
+# https://monako.ai/
 ```
 
 ## Use Cases
@@ -94,7 +94,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Resources
 
-- [Monako Glass](https://monako.ai/glass)
+- [Monako Glass](https://monako.ai/)
 
 ## Buzz & Reception
 

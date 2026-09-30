@@ -15,7 +15,7 @@ free_tier_limits: "SDK is free; model inference billed by your chosen provider"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/strands-agents/sdk-python"
-docs_url: "https://strandsagents.com/docs/user-guide/"
+docs_url: "https://strandsagents.com/"
 github_url: "https://github.com/strands-agents/sdk-python"
 alternatives: [openai-agents-sdk, pydantic-ai-tool, crewai]
 integrates_with: [composio, litellm]
@@ -94,7 +94,7 @@ This belongs in content/projects/orchestration as the harness-shaped agent SDK a
 ## Resources
 
 - [GitHub — strands-agents/harness-sdk](https://github.com/strands-agents/harness-sdk)
-- [Documentation — strandsagents.com/docs](https://strandsagents.com/docs/user-guide/)
+- [Documentation — strandsagents.com/docs](https://strandsagents.com/)
 - [Python SDK on PyPI](https://pypi.org/project/strands-agents/)
 
 ## Buzz & Reception

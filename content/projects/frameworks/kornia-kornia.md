@@ -117,7 +117,7 @@ This is the geometric-vision layer in content/projects/frameworks, sitting on to
 
 - [Kornia documentation](https://kornia.readthedocs.io)
 - [Kornia GitHub repository](https://github.com/kornia/kornia)
-- [Geometric computer vision tutorials](https://kornia.readthedocs.io/en/latest/geometric.html)
+- [Geometric computer vision tutorials](https://kornia.readthedocs.io/en/latest/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (11,385 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

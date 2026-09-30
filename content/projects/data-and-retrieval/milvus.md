@@ -17,7 +17,7 @@ github_stars: 46274
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: "2026-09-28"
-docs_url: "https://milvus.io"
+docs_url: "https://github.com/milvus-io/milvus"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -108,5 +108,5 @@ This is a data-and-retrieval phase entry and the distributed-scale counterpoint 
 ## Resources
 
 - [GitHub - milvus-io/milvus](https://github.com/milvus-io/milvus)
-- [Project site and docs](https://milvus.io)
+- [Project site and docs](https://github.com/milvus-io/milvus)
 - [Zilliz Cloud managed service](https://zilliz.com/cloud)
