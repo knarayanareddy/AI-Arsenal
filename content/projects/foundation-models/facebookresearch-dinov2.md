@@ -116,7 +116,7 @@ This is the vision counterpart to the language-model entries in content/projects
 
 - [DINOv2 GitHub repository](https://github.com/facebookresearch/dinov2)
 - [DINOv2 Hugging Face model collection](https://huggingface.co/facebook/dinov2-base)
-- [Self-supervised vision foundation models announcement](https://ai.meta.com/blog/dino-v2/)
+- [Self-supervised vision foundation models announcement](https://github.com/facebookresearch/dinov2/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (13,376 stars, last commit 2026-06-03, license Apache-2.0, verified via GitHub API on 2026-09-28)*

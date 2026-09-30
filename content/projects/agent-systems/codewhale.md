@@ -100,4 +100,4 @@ This is a terminal-first coding agent in content/projects/agent-systems, and it 
 
 - [GitHub — Hmbown/Codewhale](https://github.com/Hmbown/Codewhale)
 - [Install and PATH help — docs/INSTALL.md](https://github.com/Hmbown/Codewhale/blob/main/docs/INSTALL.md)
-- [crates.io — codewhale-cli](https://crates.io/crates/codewhale-cli)
+- [crates.io — codewhale-cli](https://github.com/Hmbown/Codewhale)

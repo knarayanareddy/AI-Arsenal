@@ -38,7 +38,7 @@ maturity: beta
 cost_model: freemium
 github_stars: 13098
 last_commit: "2026-05-25"
-docs_url: "https://portkey.wiki/gh-1"
+docs_url: "https://portkey.ai/docs"
 phase: agent-system
 domain:
   - "language"
@@ -106,5 +106,5 @@ This is the routing entry for content/projects/agent-systems and the component t
 ## Resources
 
 - [GitHub — Portkey-AI/gateway](https://github.com/Portkey-AI/gateway)
-- [Documentation — portkey.wiki](https://portkey.wiki/gh-1)
+- [Documentation — portkey.wiki](https://portkey.ai/docs)
 - [AI Gateway product page](https://portkey.ai/features/ai-gateway)

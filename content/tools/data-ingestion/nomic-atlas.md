@@ -103,7 +103,7 @@ This is a data-ingestion tool in the phase, and its role is diagnostic rather th
 
 - [GitHub - nomic-ai/nomic](https://github.com/nomic-ai/nomic)
 - [Atlas platform](https://atlas.nomic.ai/)
-- [Atlas documentation](https://docs.nomic.ai/atlas/introduction)
+- [Atlas documentation](https://docs.nomic.ai/)
 
 ## Buzz & Reception
 

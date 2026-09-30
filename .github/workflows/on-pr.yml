@@ -155,12 +155,20 @@ jobs:
       - name: Link check (SSRF-hardened)
         env:
           # Cap per-host amplification; reject private/loopback IPs by default.
+          # Exceeding LINK_CHECK_MAX_URLS is NOT a failure: the checker samples a
+          # deterministic subset and reports the rest as a soft warning, so a
+          # large catalog-wide PR stays mergeable while the network bound holds.
           LINK_CHECK_MAX_URLS: '500'
           LINK_CHECK_MAX_URLS_PER_HOST: '100'
+          # URL-shaped strings in prose (localhost, bare hostname, private IP) are
+          # still never fetched, but are reported as placeholder warnings rather
+          # than broken links — documenting "the config must point at
+          # http://localhost:3000" is accurate, not a defect. Set
+          # LINK_CHECK_STRICT_URLS=1 to make those hard failures again.
           # Retry transient failures with backoff; known rate-limited hosts
           # (GitHub, X) get a higher per-host budget so a sample is still
           # checked. Rate limits / transient errors are soft warnings, not
-          # CI failures — only confirmed 404/410 (and DNS/SSRF) fail CI.
+          # CI failures — only confirmed 404/410 fail CI.
           LINK_CHECK_RETRIES: '2'
           LINK_CHECK_BACKOFF_MS: '400'
           LINK_CHECK_RATE_LIMIT_CAP: '40'

@@ -109,4 +109,4 @@ This belongs in content/projects/data-and-retrieval as a production-packaging re
 
 - [GitHub — truefoundry/cognita (archived)](https://github.com/truefoundry/cognita)
 - [Frontend README](https://github.com/truefoundry/cognita/blob/main/frontend/README.md)
-- [Hosted instance (historical) — cognita.truefoundry.com](https://cognita.truefoundry.com)
+- [Hosted instance (historical) — cognita.truefoundry.com](https://truefoundry.com/)

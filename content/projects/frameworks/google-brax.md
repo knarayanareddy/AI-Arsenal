@@ -17,7 +17,7 @@ github_stars: 3241
 github_stars_last_30d: 0
 trending_score: 28
 last_commit: "2026-09-15"
-docs_url: "https://brax.readthedocs.io"
+docs_url: "https://github.com/google/brax"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -131,7 +131,7 @@ This is a framework-phase entry whose upstream dependencies are the Flax and JAX
 ## Resources
 
 - [Brax GitHub repository](https://github.com/google/brax)
-- [Brax documentation](https://brax.readthedocs.io)
+- [Brax documentation](https://github.com/google/brax)
 - [MJX, a differentiable physics backend, as a reference](https://github.com/google/mjx)
 
 ---

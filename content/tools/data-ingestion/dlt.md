@@ -89,7 +89,7 @@ This is the ELT entry in content/tools/data-ingestion, and it is the ingestion s
 
 - [GitHub — dlt-hub/dlt](https://github.com/dlt-hub/dlt)
 - [Docs — dlthub.com/docs](https://dlthub.com/docs)
-- [Verified source marketplace](https://dlthub.com/docs/verified-sources/overview)
+- [Verified source marketplace](https://dlthub.com/docs/)
 
 ## Buzz & Reception
 

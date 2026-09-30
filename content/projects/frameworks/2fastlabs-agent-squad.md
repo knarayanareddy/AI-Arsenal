@@ -131,7 +131,7 @@ This is the multi-agent entry in content/projects/frameworks, and the comparison
 
 - [agent-squad documentation site](https://2fastlabs.github.io/agent-squad/)
 - [agent-squad GitHub repository](https://github.com/2FastLabs/agent-squad)
-- [Multi-agent team examples](https://2fastlabs.github.io/agent-squad/latest/examples/multi-agent-teams/)
+- [Multi-agent team examples](https://2fastlabs.github.io/agent-squad//)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (7,775 stars, last commit 2026-09-23, license Apache-2.0, verified via GitHub API on 2026-09-28)*

@@ -116,7 +116,7 @@ This is the distributed platform entry in content/projects/frameworks, and the c
 
 ## Resources
 
-- [H2O-3 documentation](https://docs.h2o.ai/h2o/latest/stable/h2o_docs/index.html)
+- [H2O-3 documentation](https://docs.h2o.ai/)
 - [H2O-3 GitHub repository](https://github.com/h2oai/h2o-3)
 - [MOJO model format documentation](https://mojoml.ai/)
 

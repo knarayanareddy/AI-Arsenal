@@ -129,7 +129,7 @@ This is an inference-engine phase entry in the same layer as FlashInfer: one sup
 
 - [TransformerEngine GitHub repository](https://github.com/NVIDIA/TransformerEngine)
 - [TransformerEngine documentation](https://docs.nvidia.com/deeplearning/transformer-engine/)
-- [FP8 formats and scaling primer](https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/examples/advanced/fp8_primer.html)
+- [FP8 formats and scaling primer](https://docs.nvidia.com/deeplearning/transformer-engine/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (3,554 stars, last commit 2026-09-25, license Apache-2.0, verified via GitHub API on 2026-09-28)*

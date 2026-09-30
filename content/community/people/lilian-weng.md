@@ -36,7 +36,7 @@ Useful as the best single-document entry point into a subfield you are entering:
 
 ## Resources
 
-- [Large Language Model's Friendly Intro](https://lilianweng.github.io/posts/2023-06-01-intro/)
-- [Self-Critique](https://lilianweng.github.io/posts/2023-11-07-self-critique/)
-- [Hallucination](https://lilianweng.github.io/posts/2024-02-20-hallucination/)
+- [Large Language Model's Friendly Intro](https://lilianweng.github.io/)
+- [Self-Critique](https://lilianweng.github.io/)
+- [Hallucination](https://lilianweng.github.io/posts/2024-07-07-hallucination//)
 

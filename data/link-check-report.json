@@ -1,34 +1,1182 @@
 {
-  "generated_at": "2026-07-19T20:29:05.185Z",
+  "generated_at": "2026-09-30T08:38:52.428Z",
   "mode": "changed-only",
-  "files_checked": 46,
-  "urls_checked": 50,
-  "max_urls_per_host": 10,
-  "broken_links": [],
+  "files_checked": 722,
+  "urls_found": 1737,
+  "urls_checked": 500,
+  "max_urls": 500,
+  "max_urls_per_host": 100,
+  "capped": true,
+  "urls_skipped_by_cap": 1237,
+  "broken_links": [
+    {
+      "url": "https://crates.io/crates/llmfit",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/model-layer/llmfit.md"
+      ]
+    },
+    {
+      "url": "https://daft.ai/docs",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:http-404",
+      "soft": false,
+      "files": [
+        "content/projects/data-and-retrieval/daft.md"
+      ]
+    },
+    {
+      "url": "https://dataelem.feishu.cn/wiki/R7HZwH5ZGiJUDrkHZXicA9pInif",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/projects/agent-systems/bisheng.md"
+      ]
+    },
+    {
+      "url": "https://dlthub.com/docs/verified-sources/overview",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/data-ingestion/dlt.md"
+      ]
+    },
+    {
+      "url": "https://docs.agentops.ai/introduction",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/evaluation-and-observability/agentops.md"
+      ]
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/collaborate/data-platforms",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/projects/frameworks/dbt-labs-dbt.md"
+      ]
+    },
+    {
+      "url": "https://docs.greatexpectations.io/docs/core/connect_to_data/dataframes/introduction",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/data-ingestion/great-expectations.md"
+      ]
+    },
+    {
+      "url": "https://docs.langflow.org/deployment",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:http-404",
+      "soft": false,
+      "files": [
+        "content/tools/orchestration/langflow.md"
+      ]
+    },
+    {
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:http-404",
+      "soft": false,
+      "files": [
+        "content/projects/inference-engines/run-llama-llama-deploy.md"
+      ]
+    },
+    {
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/cli/",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:http-404",
+      "soft": false,
+      "files": [
+        "content/projects/inference-engines/run-llama-llama-deploy.md"
+      ]
+    },
+    {
+      "url": "https://docs.nomic.ai/atlas/introduction",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/data-ingestion/nomic-atlas.md"
+      ]
+    },
+    {
+      "url": "https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/examples/advanced/fp8_primer.html",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/projects/inference-engines/nvidia-transformerengine.md"
+      ]
+    },
+    {
+      "url": "https://docs.polyaxon.com/intro/self-hosting/installation",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:http-404",
+      "soft": false,
+      "files": [
+        "content/projects/frameworks/polyaxon-polyaxon.md"
+      ]
+    },
+    {
+      "url": "https://docs.temporal.io/develop/go/getting-started",
+      "ok": false,
+      "status": 404,
+      "error": "http-404",
+      "soft": false,
+      "files": [
+        "content/tools/orchestration/temporal.md"
+      ]
+    }
+  ],
   "warning_links": [
     {
-      "url": "https://ltx.io/model/ltx-2",
+      "url": "http://localhost",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/benchmarks-and-evals/agenta.md"
+      ]
+    },
+    {
+      "url": "http://localhost:1975/v1.",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "http://localhost:2000",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/inference-engines/candle-vllm.md"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:7777",
+      "ok": false,
+      "error": "private-ip-127.0.0.1",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/gini-agent.md"
+      ]
+    },
+    {
+      "url": "http://localhost:20128",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/inference-engines/9router.md"
+      ]
+    },
+    {
+      "url": "http://localhost:20128/v1,",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/inference-engines/9router.md"
+      ]
+    },
+    {
+      "url": "http://localhost:3000",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/agenticseek.md"
+      ]
+    },
+    {
+      "url": "http://localhost:3000,",
+      "ok": false,
+      "error": "invalid-url",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/benchmarks-and-evals/autocve.md"
+      ]
+    },
+    {
+      "url": "http://localhost:3000.",
+      "ok": false,
+      "error": "invalid-url",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/aionui.md",
+        "content/tools/data-ingestion/aisheets.md"
+      ]
+    },
+    {
+      "url": "http://localhost:3001,",
+      "ok": false,
+      "error": "invalid-url",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/anythingllm.md"
+      ]
+    },
+    {
+      "url": "http://localhost:8088.",
+      "ok": false,
+      "error": "invalid-url",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/evaluation-and-observability/ai-infra-guard.md"
+      ]
+    },
+    {
+      "url": "http://localhost:8233,",
+      "ok": false,
+      "error": "invalid-url",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/orchestration/temporal.md"
+      ]
+    },
+    {
+      "url": "http://localhost:8000",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/ii-agent.md"
+      ]
+    },
+    {
+      "url": "http://localhost:8000/mcp,",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/benchmarks-and-evals/mcpkernel.md"
+      ]
+    },
+    {
+      "url": "http://target",
+      "ok": false,
+      "error": "bare-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/benchmarks-and-evals/vulnclaw.md"
+      ]
+    },
+    {
+      "url": "https://agent-tars.com",
       "ok": false,
       "error": "net-error",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/projects/foundation-models/ltx-2.md"
+        "content/projects/agent-systems/ui-tars-desktop.md"
+      ]
+    },
+    {
+      "url": "https://aimstack.io",
+      "ok": false,
+      "error": "dns-ESERVFAIL",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/frameworks/aimhubio-aim.md"
+      ]
+    },
+    {
+      "url": "https://aimstack.io/aim/latest/quick_start.html",
+      "ok": false,
+      "error": "dns-ESERVFAIL",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/frameworks/aimhubio-aim.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.01852",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/kreileder-2026-rag-chunking.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.02116",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/sulpovar-2026-contextnest.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.02680",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/attarde-2026-k9-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.07666",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/tewari-2026-ensemble-qsp.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.08716",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/wu-2026-proactive-memory-agent.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/weekly-arxiv-picks.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/weekly-arxiv-picks.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1512.03385",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/he-2015-resnet.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1706.03741",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/christiano-2017-rlhf.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1707.06347",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/schulman-2017-ppo.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1907.11692",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/liu-2019-roberta.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1908.10084",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/reimers-2019-sentence-bert.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1910.10683",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/raffel-2019-t5.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1911.02150",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/shazeer-2019-mqa.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2001.08361",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/kaplan-2020-scaling-laws.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2002.08909",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/guu-2020-realm.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2004.04906",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/karpukhin-2020-dpr.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2004.12832",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/khattab-2020-colbert.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2007.01282",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/izacard-2020-fid.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2009.03300",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2010.11929",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/dosovitskiy-2020-vit.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2101.03961",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/fedus-2021-switch-transformer.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2103.00020",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/radford-2021-clip.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2104.09864",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/su-2021-rope.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2107.03374",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/chen-2021-codex.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2109.01652",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/wei-2021-flan.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2110.14168",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/cobbe-2021-gsm8k.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2112.09332",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/nakano-2021-webgpt.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2203.11171",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/wang-2022-self-consistency.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2203.15556",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/hoffmann-2022-chinchilla.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2204.02311",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/chowdhery-2022-palm.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2205.11916",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/kojima-2022-zero-shot-cot.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2205.14135",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/dao-2022-flashattention.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2210.07316",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/muennighoff-2022-mteb.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2211.10438",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/xiao-2022-smoothquant.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2212.04356",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/radford-2022-whisper.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2302.13971",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/touvron-2023-llama.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.08774",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/openai-2023-gpt4.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.11366",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/shinn-2023-reflexion.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2304.03442",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/park-2023-generative-agents.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2304.08485",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/liu-2023-llava.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13048",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/peng-2023-rwkv.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13245",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/ainslie-2023-gqa.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.16291",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/wang-2023-voyager.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.00978",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/lin-2023-awq.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.11644",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/gunasekar-2023-phi-1.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.02483",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/wei-2023-jailbroken.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.03172",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/liu-2023-lost-in-the-middle.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.08691",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/dao-2023-flashattention2.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.09288",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/foundational/touvron-2023-llama2.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2308.11432",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/surveys/wang-2023-agents-survey.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.06180",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/kwon-2023-pagedattention.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.17453",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/inference-and-efficiency/xiao-2023-streamingllm.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.06770",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/jimenez-2023-swe-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.08560",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/packer-2023-memgpt.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.11511",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/asai-2023-self-rag.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2311.05232",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/surveys/huang-2023-hallucination-survey.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.00752",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/gu-2023-mamba.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.10997",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/surveys/gao-2023-rag-survey.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2401.04088",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/jiang-2024-mixtral.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.03300",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/shao-2024-deepseekmath.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.04132",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.07691",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/hong-2024-orpo.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2412.19437",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/architectures/deepseek-ai-2024-deepseek-v3.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2605.25979",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/projects/foundation-models/llava-onevision-2.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2606.29526",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/training-and-alignment/liang-2026-mipi.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.00627",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/potapov-2026-agi-maze.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.01103",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/philipp-2026-medqade.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.01152",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/beaty-2026-agc-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.01360",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/le-2026-pair-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.01740",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/hudson-2026-financial-llm-metabench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.01852",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/kreileder-2026-rag-chunking.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.02116",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/retrieval-and-memory/sulpovar-2026-contextnest.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.02680",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/evaluation-and-safety/attarde-2026-k9-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.07666",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/tewari-2026-ensemble-qsp.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.08716",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/research/agents-and-reasoning/wu-2026-proactive-memory-agent.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2608.17528",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/projects/training-and-alignment/agent-lightning.md"
+      ]
+    },
+    {
+      "url": "https://demo.huginn.io",
+      "ok": false,
+      "error": "dns-ENOTFOUND",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/agent-systems/huginn-huginn.md"
+      ]
+    },
+    {
+      "url": "https://docs.colpali.ai",
+      "ok": false,
+      "error": "dns-ENODATA",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/projects/data-and-retrieval/illuin-tech-colpali.md"
+      ]
+    },
+    {
+      "url": "https://docs.openpipe.ai/introduction",
+      "ok": false,
+      "error": "dns-ENOTFOUND",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/model-layer/openpipe-art.md"
+      ]
+    },
+    {
+      "url": "http://www.bisheng.ai",
+      "ok": false,
+      "error": "net-ETIMEDOUT",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/agent-systems/bisheng.md"
       ]
     }
   ],
   "summary": {
-    "ok": 49,
+    "ok": 387,
     "ignored": 0,
-    "broken": 0,
-    "warnings": 1,
-    "contacted": 50,
-    "skipped_host_cap": 0,
+    "broken": 14,
+    "warnings": 99,
+    "contacted": 403,
+    "skipped_host_cap": 77,
+    "skipped_url_cap": 1237,
     "warnings_by_type": {
-      "host_cap": 0,
+      "host_cap": 77,
       "http_soft": 0,
       "redirect": 0,
-      "transient": 1
+      "transient": 2,
+      "placeholder": 20
     }
   }
 }

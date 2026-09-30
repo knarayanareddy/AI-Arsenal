@@ -36,6 +36,6 @@ FineTuning, a practical guide to parameter-efficient fine-tuning; the Autotrain 
 
 ## Resources
 
-- [FineTuning guide](https://huggingface.co/blog/finetune)
+- [FineTuning guide](https://huggingface.co/docs/transformers/training)
 - [Autotrain Advanced](https://github.com/huggingface/autotrain-advanced)
 

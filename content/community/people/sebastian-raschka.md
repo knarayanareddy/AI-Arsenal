@@ -41,5 +41,5 @@ Useful if you want attention variants, pretraining, LoRA, DPO and quantization u
 
 - [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)
 - [Ahead of AI](https://magazine.sebastianraschka.com/)
-- [machine-learning-with-python](https://github.com/rasbt/machine-learning-with-python)
+- [machine-learning-with-python](https://github.com/rasbt/python-machine-learning-book-3rd-edition)
 

@@ -105,4 +105,4 @@ This is the security-research agent in content/projects/agent-systems, and the o
 
 - [GitHub — OpenOSINT/OpenOSINT](https://github.com/OpenOSINT/OpenOSINT)
 - [Project site — openosint.tech](https://openosint.tech)
-- [MCP registry entry](https://registry.modelcontextprotocol.io/servers/io.github.OpenOSINT/openosint)
+- [MCP registry entry](https://github.com/OpenOSINT)

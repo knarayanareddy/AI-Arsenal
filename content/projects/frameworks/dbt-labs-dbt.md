@@ -127,7 +127,7 @@ This is the transformation entry in content/projects/frameworks and the place wh
 
 - [dbt documentation](https://docs.getdbt.com)
 - [dbt Core GitHub repository](https://github.com/dbt-labs/dbt-core)
-- [dbt platform and adapter list](https://docs.getdbt.com/docs/collaborate/data-platforms)
+- [dbt platform and adapter list](https://docs.getdbt.com/docs/collaborate/govern/about-model-governance)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (13,940 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

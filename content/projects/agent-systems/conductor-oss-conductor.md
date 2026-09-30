@@ -110,7 +110,7 @@ The reliability substrate under the agent entries in content/projects/agent-syst
 
 - [GitHub — conductor-oss/conductor](https://github.com/conductor-oss/conductor)
 - [Orchestrator documentation](https://docs.conductor-oss.org/)
-- [Building custom task workers](https://docs.conductor-oss.org/content/how-tos/system-tasks/custom-task-workers.html)
+- [Building custom task workers](https://docs.conductor-oss.org/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (32,238 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

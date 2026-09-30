@@ -91,7 +91,7 @@ This is a data-ingestion tool and it is the quality gate in the arsenal, sitting
 
 - [GitHub - fivetran/great_expectations](https://github.com/fivetran/great_expectations)
 - [Introduction to GX Core documentation](https://docs.greatexpectations.io/docs/core/introduction/gx_overview)
-- [Compatibility reference for data sources and integrations](https://docs.greatexpectations.io/docs/core/connect_to_data/dataframes/introduction)
+- [Compatibility reference for data sources and integrations](https://docs.greatexpectations.io/)
 
 ## Buzz & Reception
 

@@ -136,7 +136,7 @@ This is a data-and-retrieval phase entry in the data-pipelines subcategory and i
 
 - [Dolma GitHub repository](https://github.com/allenai/dolma)
 - [Dolma documentation](https://allenai.github.io/dolma/)
-- [Dolma toolkit announcement and OLMo data recipes](https://allenai.github.io/blog/olmo-open-language-model/)
+- [Dolma toolkit announcement and OLMo data recipes](https://allenai.org/blog/olmo-open-language-model-87ccfc95f580/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (1,548 stars, last commit 2026-08-24, license Apache-2.0, verified via GitHub API on 2026-09-28)*

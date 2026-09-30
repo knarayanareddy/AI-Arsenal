@@ -69,13 +69,18 @@ export function classifyNetError(err) {
 
 // Bucket a soft-warning link result so reports can distinguish effective
 // network coverage instead of aggregating everything as "soft warnings":
-//   'host_cap'  -> not contacted; skipped by the per-host amplification cap
-//   'http_soft' -> contacted; server returned a non-404/410 >= 400 status
-//   'redirect'  -> a redirect target produced a soft warning
-//   'transient' -> contacted; transient network error (timeout/reset/etc.)
+//   'host_cap'     -> not contacted; skipped by the per-host amplification cap
+//   'http_soft'    -> contacted; server returned a non-404/410 >= 400 status
+//   'redirect'     -> a redirect target produced a soft warning
+//   'transient'    -> contacted; transient network error (timeout/reset/etc.)
+//   'placeholder'  -> not contacted; URL-shaped string in prose (localhost, bare
+//                     hostname, private IP). Never fetched. Not a dead site — see
+//                     LINK_CHECK_STRICT_URLS in scripts/check-links.js to make
+//                     these hard failures again.
 export function warningCategory(result) {
   const error = typeof result?.error === 'string' ? result.error : '';
   if (error === 'host-rate-limited') return 'host_cap';
+  if (result?.placeholder === true) return 'placeholder';
   if (error.startsWith('redirect-unsafe:')) return 'redirect';
   if (error.startsWith('http-')) return 'http_soft';
   return 'transient';

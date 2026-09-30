@@ -120,7 +120,7 @@ This is the agent-harness entry in content/projects/agent-systems, and the compa
 
 - [Strands Agents site and documentation](https://strandsagents.com)
 - [Strands harness-sdk GitHub repository](https://github.com/strands-agents/harness-sdk)
-- [Model and tool configuration reference](https://strandsagents.com/latest/user-guide/concepts/tools/)
+- [Model and tool configuration reference](https://strandsagents.com/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (8,508 stars, last commit 2026-09-28, license Apache-2.0, verified via GitHub API on 2026-09-28)*

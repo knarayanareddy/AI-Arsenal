@@ -16,7 +16,7 @@ github_stars: 1246
 github_stars_last_30d: 0
 trending_score: 0
 last_commit: "2026-09-28"
-docs_url: "https://attack.mitre.org/enterprise/"
+docs_url: "https://attack.mitre.org/"
 demo_url: null
 phase: benchmark-and-eval
 domain: [general-purpose]
@@ -103,4 +103,4 @@ This benchmark-and-eval-phase entry measures readiness rather than model quality
 
 - [Repository](https://github.com/mrwadams/attackgen)
 - [MITRE ATLAS framework](https://atlas.mitre.org/)
-- [MITRE ATT&CK Enterprise](https://attack.mitre.org/enterprise/)
+- [MITRE ATT&CK Enterprise](https://attack.mitre.org/)

@@ -17,7 +17,7 @@ github_stars: 2068
 github_stars_last_30d: 0
 trending_score: 22
 last_commit: "2026-04-06"
-docs_url: "https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/"
+docs_url: "https://developers.llamaindex.ai/"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -138,8 +138,8 @@ This is an inference-engine phase entry in the tools subcategory, and it is the 
 ## Resources
 
 - [llama_deploy GitHub repository](https://github.com/run-llama/llama_deploy)
-- [llama_deploy documentation](https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/)
-- [llama_deploy CLI reference](https://docs.llamaindex.ai/en/stable/module_guides/llama_deploy/cli/)
+- [llama_deploy documentation](https://developers.llamaindex.ai/)
+- [llama_deploy CLI reference](https://developers.llamaindex.ai/cli/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (2,068 stars, last commit 2026-04-06, license MIT, verified via GitHub API on 2026-09-28)*

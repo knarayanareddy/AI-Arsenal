@@ -110,4 +110,4 @@ This is a data-and-retrieval phase entry and the embedded counterpoint to the se
 
 - [GitHub - lancedb/lancedb](https://github.com/lancedb/lancedb)
 - [Documentation](https://lancedb.com/docs)
-- [Python SDK reference](https://lancedb.github.io/lancedb/python)
+- [Python SDK reference](https://lancedb.github.io/lancedb/)

@@ -41,5 +41,5 @@ DeepLearning.AI and the Coursera machine-learning specialisation; Machine Learni
 
 - [Machine Learning Strategy](https://www.deeplearning.ai/courses/machine-learning-strategy/)
 - [DeepLearning.AI short courses](https://www.deeplearning.ai/short-courses/)
-- [Generative AI for Everyone](https://www.coursera.org/learn/generative-ai-everyone)
+- [Generative AI for Everyone](https://www.deeplearning.ai/short-courses/generative-ai-for-everyone/)
 

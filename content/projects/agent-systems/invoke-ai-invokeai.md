@@ -105,7 +105,7 @@ The provenance-first image generation entry for the Arsenal, sitting alongside t
 
 - [GitHub — invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)
 - [InvokeAI documentation](https://invoke-ai.github.io/InvokeAI/)
-- [Invocation and configuration reference](https://invoke-ai.github.io/InvokeAI/features/NODES/)
+- [Invocation and configuration reference](https://invoke-ai.github.io/InvokeAI//)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (28,309 stars, last commit 2026-09-27, license Apache-2.0, verified via GitHub API on 2026-09-28)*

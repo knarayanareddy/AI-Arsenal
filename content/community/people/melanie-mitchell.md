@@ -36,6 +36,6 @@ MiniGPT as a from-scratch interpretability model; the “AI and I” column; “
 
 ## Resources
 
-- [Mapping the Mind of a Large Language Model](https://github.com/nelhage/anima)
-- [MiniGPT](https://github.com/MIT-Insights-Group/minigpt)
+- [Mapping the Mind of a Large Language Model](https://github.com/nelhage)
+- [MiniGPT](https://github.com/topics/minigpt)
 

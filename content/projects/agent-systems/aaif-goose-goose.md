@@ -17,7 +17,7 @@ github_stars: 54732
 github_stars_last_30d: 0
 trending_score: 38
 last_commit: "2026-09-28"
-docs_url: "https://block.github.io/goose/docs/"
+docs_url: "https://github.com/block/goose/"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -103,7 +103,7 @@ The Rust-side counterpart to opencode in the same agent-systems folder, and the 
 ## Resources
 
 - [GitHub — aaif-goose/goose](https://github.com/aaif-goose/goose)
-- [goose documentation and extension guides](https://block.github.io/goose/docs/)
+- [goose documentation and extension guides](https://github.com/block/goose/)
 - [MCP server registry](https://github.com/modelcontextprotocol/servers)
 
 ---

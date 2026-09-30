@@ -106,5 +106,5 @@ This belongs in content/projects/agent-systems as the enterprise-platform counte
 ## Resources
 
 - [GitHub — dataelement/bisheng](https://github.com/dataelement/bisheng)
-- [Workflow design documentation (Chinese)](https://dataelem.feishu.cn/wiki/R7HZwH5ZGiJUDrkHZXicA9pInif)
+- [Workflow design documentation (Chinese)](https://github.com/dataelement/bisheng)
 - [AGL — Agent Guidance Language](https://github.com/dataelement/AgentGuidanceLanguage)

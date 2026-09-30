@@ -130,7 +130,7 @@ This is a framework-phase entry in the tooling category, and it is the heavyweig
 
 - [Polyaxon GitHub repository](https://github.com/polyaxon/polyaxon)
 - [Polyaxon documentation](https://docs.polyaxon.com)
-- [Polyaxon self-hosting guide](https://docs.polyaxon.com/intro/self-hosting/installation)
+- [Polyaxon self-hosting guide](https://docs.polyaxon.com/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (3,737 stars, last commit 2026-09-24, license Apache-2.0, verified via GitHub API on 2026-09-28)*

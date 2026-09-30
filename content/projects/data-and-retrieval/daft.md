@@ -38,7 +38,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 5789
 last_commit: "2026-09-26"
-docs_url: "https://daft.ai/docs"
+docs_url: "https://docs.daft.ai/"
 phase: data-and-retrieval
 domain:
   - language
@@ -116,5 +116,5 @@ This belongs in content/projects/data-and-retrieval as the multimodal data-proce
 ## Resources
 
 - [GitHub — Eventual-Inc/Daft](https://github.com/Eventual-Inc/Daft)
-- [Documentation — daft.ai/docs](https://daft.ai/docs)
+- [Documentation — daft.ai/docs](https://docs.daft.ai/)
 - [Project site — daft.ai](https://daft.ai)

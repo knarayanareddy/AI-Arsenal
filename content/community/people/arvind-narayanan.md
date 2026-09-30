@@ -36,6 +36,6 @@ Useful as a corrective when you are making decisions off benchmark and vendor nu
 
 ## Resources
 
-- [Applied ML — essays and papers](https://arvindn.github.io/)
+- [Applied ML — essays and papers](https://www.cs.princeton.edu/~arvindn//)
 - [Interconnected AI](https://www.interconnected.ai/)
 

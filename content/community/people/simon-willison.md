@@ -41,5 +41,5 @@ The LLM blog and the annual “LLMs in” summaries; the TIL series on prompt in
 
 - [Weblog](https://simonwillison.net/)
 - [Prompt injection tag](https://simonwillison.net/tags/prompt-injection/)
-- [Caching API responses](https://simonwillison.net/2025/Apr/14/caching/)
+- [Caching API responses](https://simonwillison.net/tags/prompt-caching/)
 

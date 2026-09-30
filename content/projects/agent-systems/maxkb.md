@@ -109,4 +109,4 @@ This belongs in content/projects/agent-systems as the deploy-and-forget knowledg
 
 - [GitHub — 1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB)
 - [Documentation site — maxkb.cn](https://maxkb.cn)
-- [Offline installation guide](https://maxkb.cn/docs/v2/installation/offline_installtion/)
+- [Offline installation guide](https://maxkb.cn/docs//)

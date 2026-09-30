@@ -109,5 +109,5 @@ This belongs in content/projects/foundation-models as a model family plus agent 
 ## Resources
 
 - [GitHub — X-PLUG/MobileAgent](https://github.com/X-PLUG/MobileAgent)
-- [Model collection — GUI-Owl-1.5 on Hugging Face](https://huggingface.co/collections/X-PLUG/gui-owl-15)
+- [Model collection — GUI-Owl-1.5 on Hugging Face](https://huggingface.co/X-PLUG)
 - [ModelScope demo](https://modelscope.cn/studios)

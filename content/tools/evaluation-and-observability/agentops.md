@@ -15,7 +15,7 @@ free_tier_limits: "Free tier with limited monthly events and retention"
 self_hostable: false
 open_source: true
 source_url: "https://github.com/AgentOps-AI/agentops"
-docs_url: "https://docs.agentops.ai/introduction"
+docs_url: "https://docs.agentops.ai/"
 github_url: "https://github.com/AgentOps-AI/agentops"
 alternatives: [langsmith, langfuse-prompts, wandb-weave]
 integrates_with: [crewai, autogen, openai-agents-sdk]
@@ -93,7 +93,7 @@ This is one of the observability entries in content/tools/evaluation-and-observa
 ## Resources
 
 - [GitHub — AgentOps-AI/agentops](https://github.com/AgentOps-AI/agentops)
-- [Documentation — docs.agentops.ai](https://docs.agentops.ai/introduction)
+- [Documentation — docs.agentops.ai](https://docs.agentops.ai/)
 - [Self-hosting the app and API backend](https://github.com/AgentOps-AI/agentops/tree/main/app)
 
 ## Buzz & Reception

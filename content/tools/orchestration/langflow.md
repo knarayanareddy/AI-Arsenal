@@ -92,7 +92,7 @@ The canonical artefact is a flow document rather than reviewable source, so chan
 
 - [GitHub — langflow-ai/langflow](https://github.com/langflow-ai/langflow)
 - [Docs — docs.langflow.org](https://docs.langflow.org)
-- [Deployment guides](https://docs.langflow.org/deployment)
+- [Deployment guides](https://docs.langflow.org/)
 
 ## Buzz & Reception
 
