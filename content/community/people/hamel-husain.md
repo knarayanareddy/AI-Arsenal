@@ -39,6 +39,6 @@ Free and Open Source AI (FAAIF); the LLM Engineering and prompt-engineering cour
 
 ## Resources
 
-- [Free and Open Source AI](https://fly.io/blog//)
+- [Free and Open Source AI](https://fly.io/blog/)
 - [Prompt Engineering for Applications](https://learn.deeplearning.ai/courses/prompt-engineering-for-chatgpt/)
 

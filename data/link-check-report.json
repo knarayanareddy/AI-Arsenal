@@ -1,32 +1,22 @@
 {
-  "generated_at": "2026-09-30T08:45:52.070Z",
+  "generated_at": "2026-09-30T08:52:41.199Z",
   "mode": "changed-only",
   "files_checked": 722,
-  "urls_found": 1731,
+  "urls_found": 1733,
   "urls_checked": 500,
   "max_urls": 500,
   "max_urls_per_host": 100,
   "capped": true,
-  "urls_skipped_by_cap": 1231,
+  "urls_skipped_by_cap": 1233,
   "broken_links": [
     {
-      "url": "https://developers.llamaindex.ai/cli/",
+      "url": "https://developers.llamaindex.ai/python/llama_deploy/cli//",
       "ok": false,
-      "status": 404,
-      "error": "http-404",
+      "status": 308,
+      "error": "redirect-unsafe:http-404",
       "soft": false,
       "files": [
         "content/projects/inference-engines/run-llama-llama-deploy.md"
-      ]
-    },
-    {
-      "url": "https://docs.temporal.io/develop/go/getting-started",
-      "ok": false,
-      "status": 404,
-      "error": "http-404",
-      "soft": false,
-      "files": [
-        "content/tools/orchestration/temporal.md"
       ]
     }
   ],
@@ -1044,13 +1034,13 @@
     }
   ],
   "summary": {
-    "ok": 399,
+    "ok": 400,
     "ignored": 0,
-    "broken": 2,
+    "broken": 1,
     "warnings": 99,
     "contacted": 403,
     "skipped_host_cap": 77,
-    "skipped_url_cap": 1231,
+    "skipped_url_cap": 1233,
     "warnings_by_type": {
       "host_cap": 77,
       "http_soft": 0,

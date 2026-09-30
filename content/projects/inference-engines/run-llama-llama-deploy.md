@@ -139,7 +139,7 @@ This is an inference-engine phase entry in the tools subcategory, and it is the 
 
 - [llama_deploy GitHub repository](https://github.com/run-llama/llama_deploy)
 - [llama_deploy documentation](https://developers.llamaindex.ai/)
-- [llama_deploy CLI reference](https://developers.llamaindex.ai/python/llama_deploy/cli//)
+- [llama_deploy CLI reference](https://developers.llamaindex.ai/python/llama_deploy/cli/)
 
 ---
 *Last reviewed: 2026-09-28 by @maintainer — enrichment_status: reviewed (2,068 stars, last commit 2026-04-06, license MIT, verified via GitHub API on 2026-09-28)*

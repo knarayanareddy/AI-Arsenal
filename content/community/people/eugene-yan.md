@@ -39,6 +39,6 @@ The Applied ML series covering LLM architecture, embeddings and retrieval, tool 
 
 ## Resources
 
-- [Applied ML — essays](https://eugeneyan.com/writing//)
-- [Patterns of Building AI Products](https://eugeneyan.com/writing//)
+- [Applied ML — essays](https://eugeneyan.com/writing/)
+- [Patterns of Building AI Products](https://eugeneyan.com/writing/)
 
