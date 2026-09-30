@@ -35,7 +35,7 @@ last_reviewed: "2026-07-08"
 reference_paper: null
 benchmark_suite_project: null
 harness_tools: []
-related_benchmarks: ["beir", "hotpotqa"]
+related_benchmarks: ["beir"]
 enrichment_status: draft
 enrichment_notes: "Authored from the RULER paper (arXiv:2404.06654) and NVIDIA/RULER repo; URLs verified 2026-07-08."
 tags: [evaluation, retrieval, rag, benchmark]
@@ -93,7 +93,7 @@ git clone https://github.com/NVIDIA/RULER
 ## Related Benchmarks
 
 - [BEIR](./beir.md) – retrieval-system quality across domains
-- [HotpotQA](./hotpotqa.md) – multi-hop QA over documents
+- HotpotQA – multi-hop QA over documents
 
 ## Relation to the Arsenal
 

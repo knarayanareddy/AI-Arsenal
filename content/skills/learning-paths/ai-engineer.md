@@ -26,9 +26,38 @@ A catalogue of tools is only useful if someone can turn it into skill, and this 
 
 ## Key Features
 
-- Sequenced so each stage depends only on earlier ones, which is the difference between a path and a link list.
-- Every stage ends in something shippable, so progress is visible as software rather than as reading completed.
-- Out-of-scope areas are marked, which is as useful in a learning plan as what is in scope.
+### Month 1: Foundations
+
+- Learn Python packaging, APIs, async basics, and JSON/schema validation.
+- Study transformers, tokenization, embeddings, and model inference at a conceptual level.
+- Free resources: [Hugging Face NLP course](https://huggingface.co/learn/nlp-course), [fast.ai](https://www.fast.ai/), [Andrej Karpathy YouTube](https://www.youtube.com/@AndrejKarpathy).
+
+### Month 2: First LLM App
+
+- Build a simple chat or extraction app with structured outputs.
+- Add prompt versioning and basic traces.
+- Read: [Prompting fundamentals](../prompt-engineering/fundamentals.md) and [Structured Output tools](../../tools/by-job/structured-output.md).
+
+### Month 3: RAG
+
+- Build a document Q&A system.
+- Learn chunking, embeddings, vector stores, reranking, and retrieval evaluation.
+- Build: [Basic RAG Chatbot](../../build-examples/rag-systems/starter-basic-rag-chatbot.md), then [Production RAG API](../../build-examples/rag-systems/intermediate-production-rag-api.md).
+
+### Month 4: Agents
+
+- Learn tool calling, state, retries, memory, and human approval.
+- Build: [Simple ReAct Agent](../../build-examples/agent-systems/starter-simple-react-agent.md) and [Multi-Tool Agent](../../build-examples/agent-systems/intermediate-multi-tool-agent.md).
+
+### Month 5: Production
+
+- Add evaluation, tracing, cost tracking, deployment, and rollback plans.
+- Read: [Observability Overview](../../observability/_index.md) and [Evaluation Pipelines](../../observability/evaluation-quality/_index.md).
+
+### Month 6: Specialization
+
+- Choose one: production RAG, agent reliability, inference optimization, or LLMOps.
+- Publish one end-to-end portfolio project with docs, evals, and traces.
 
 ## Architecture / How It Works
 
@@ -43,26 +72,27 @@ pnpm run validate:all
 
 ## Use Cases
 
-1. **Scenario**: you are a software engineer moving into applied AI and need an order to learn the layers in rather than a link dump.
-2. **Scenario**: you are choosing what to build first to demonstrate applied-AI competence in a hiring loop.
-3. **Scenario**: you have model API experience and need to know which production concerns you are missing.
+1. **Scenario**: You want a structured learning path instead of a random list of links
+2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
+3. **Scenario**: You need to map skills to concrete projects and production practices
 
 ## Strengths
 
-- Orders the layers so each depends only on the previous one, which is the whole point of a path rather than a list.
-- Pairs every topic with a buildable project, so progress is visible as working software rather than as completed reading.
-- Marks what is out of scope for the role, which is as useful for a learning plan as what is in it.
+- Turns broad AI topics into sequenced milestones
+- Prioritizes free and primary-source resources where possible
+- Connects learning to Arsenal projects, tools, decision trees, and build examples
 
 ## Limitations / When NOT to Use
 
-- A path is an ordering, not a curriculum with prerequisites enforced; nothing stops you reading out of order and getting gaps you will not notice until later.
-- The projects referenced assume you can already read Python and hold a development environment, which is the real barrier for many readers.
-- Roles at this level overlap heavily with ML engineering; the boundary drawn here is one team's, not the field's.
+- Does not replace hands-on building and evaluation
+- Resource quality and availability can change over time
+- Paid resources should be treated as optional unless explicitly required by your team
 
 ## Integration Patterns
 
-- Link a topic here from a tool or project entry when that entry assumes knowledge the topic covers, so a reader is not left with an unexplained dependency.
-- When a project referenced here changes ownership or disappears, replace the link rather than leaving a dead reference in a study plan.
+- Use the learning path as an LLM prompt context when planning a study schedule.
+- Convert each milestone into one portfolio artifact or internal project.
+- Pair every conceptual topic with one build example and one evaluation checklist.
 
 ## Resources
 
