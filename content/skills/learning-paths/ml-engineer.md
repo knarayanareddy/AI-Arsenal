@@ -18,11 +18,11 @@ status: "active"
 
 ## Overview
 
-This path is for ML engineers who already understand datasets, metrics, training, and experiment tracking but need to adapt those skills to LLM applications, RAG, agents, and production inference.
+A path from data science toward owning the platform: the training, serving, registry and monitoring concerns that sit outside the modelling most ML engineers already do. The ordering is general by design, with the specialisation forks called out rather than silently assumed.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+The gap this addresses is specific: most ML engineers arrive from modelling and discover that deployment, monitoring and reproducibility are where the time goes. Sequencing those concerns explicitly is what turns a list of relevant tools into a plan, and pairing each stage with a buildable project is what makes progress visible.
 
 ## Key Features
 
@@ -66,27 +66,29 @@ pnpm run generate:all
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you are a data scientist moving toward owning model deployment and monitoring rather than only notebook work.
+2. **Scenario**: you need to know which training and serving concerns sit outside the modelling you already do well.
+3. **Scenario**: you are re-mapping classical ML instincts onto LLM work and want to know which transfer and which mislead.
+4. **Scenario**: you are choosing a specialisation fork in month five and want the trade-offs written down before you commit.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Separates the modelling you already do from the platform work that is new, which is the actual gap this path closes.
+- Front-loads deployment and monitoring rather than treating them as later-career topics, so the expensive lessons arrive early.
+- Calls out the specialisation forks in month five instead of presenting one ordering as universal.
+- Maps classical ML concepts onto their LLM equivalents explicitly, so you can see which instincts transfer and which mislead.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- Assumes you already understand datasets, metrics, training and experiment tracking; if you do not, start from the AI-engineer path instead.
+- The named tooling changes faster than the concepts. Re-check the vendors before committing to a platform.
+- Does not cover the research half of the role. If your work involves training new models rather than adapting and serving them, this is the wrong path.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Use the concept-remapping table as a review prompt for an LLM judging whether a pull request is a data-engineering change or a modelling change.
+- Convert each phase into one deployable artifact so the path ends with running systems rather than notes.
+- Hold the month-five fork open until you have shipped at least one production service, or the choice will be made on vibes.
 
 ## Resources
 

@@ -56,9 +56,13 @@ Three concrete changes on top of FlashAttention: (1) reduce non-matmul FLOPs, wh
 - Reached 50-73% of theoretical peak FLOPs/s on A100 GPUs, roughly 2x faster than FlashAttention-1 (paper, 2023)
 - Delivered up to ~1.3x end-to-end GPT-style training speedup over v1 in the reported configurations (2023)
 
+Judge these results by what would have happened without the change, measured on the same protocol in the inference-and-efficiency phase; with `dao-2023-flashattention2`, `title`, `flashattention-2`. The claim to verify is the baseline, because an improvement reported against a weaker baseline says more about the baseline than about the method.
+
 ## Methodology
 
 The kernel keeps the tiling + online-softmax structure of v1 but rewrites the CUDA scheduling: loop order is changed so the outer loop is over query blocks (enabling sequence-length parallelism), warp assignments are restructured to avoid shared-memory round-trips, and the number of non-matmul operations per tile is minimized. Benchmarks measure raw attention throughput and end-to-end training speed against v1 and PyTorch baselines.
+
+Read this for what was held constant in the inference-and-efficiency phase; with `dao-2023-flashattention2`, `title`, `flashattention-2`. The dataset split, the baseline, the tuning budget and the evaluation protocol determine whether a comparison means anything; where the paper reports them you can judge transferability, and where it does not, treat the number as provisional.
 
 ## Practical Applicability
 

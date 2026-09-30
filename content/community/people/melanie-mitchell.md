@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Melanie Mitchell is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Does mechanistic interpretability and writes about what these networks do internally, from a position of scepticism about what scale alone buys.
 
 ## Why Follow
 
-Useful for understanding AI reasoning claims and evaluation limitations.
+Useful as the clearest public counter to the assumption that scale yields understanding, and for the interpretability work itself: MiniGPT and ConceptARC are evidence, not argument.
 
 ## Notable Work
 
-Books and essays on AI, complexity, and analogy.
+MiniGPT as a from-scratch interpretability model; the “AI and I” column; “Mapping the Mind of a Large Language Model” (Mechanistic Interpretability, MIT Press); the Anima approach to interpreting networks.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Books and essays on AI, complexity, and analogy.
 
 ## Resources
 
-- [Primary profile](https://melaniemitchell.me)
-- [website](https://melaniemitchell.me)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Mapping the Mind of a Large Language Model](https://github.com/nelhage)
+- [MiniGPT](https://github.com/topics/minigpt)
 

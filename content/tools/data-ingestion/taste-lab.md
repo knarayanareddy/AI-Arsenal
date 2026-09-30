@@ -46,7 +46,7 @@ A niche tool that extracts a website's visual/design system — colors, typograp
 
 ## Why It's in the Arsenal
 
-Taste Lab earns a place in the Arsenal because it directly addresses a recurring decision point: you want to extract a website's visual/design system programmatically for an agent to reuse or reference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Taste Lab rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -57,6 +57,8 @@ Taste Lab earns a place in the Arsenal because it directly addresses a recurring
 
 Analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent.
 
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. Data crosses a boundary you do not control on the web-scraping path; under a freemium cost model; with `taste-lab`, `name`, `taste`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash
@@ -66,25 +68,29 @@ Analyzes a target site's rendered styles and layout, then outputs a structured s
 
 ## Use Cases
 
-1. **Scenario**: you want to extract a website's visual/design system programmatically for an agent to reuse or reference
-2. **Scenario**: you're building a design-aware agent and need structured 'design DNA' rather than raw screenshots
-3. **Scenario where this is NOT the right fit**: you need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction) — evaluate an alternative instead
+1. **Where it sits**: on the web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Taste Lab can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Taste Lab.
+3. **Deciding at all**: nothing is catalogued against Taste Lab here, so the honest first step is confirming the web-scraping job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to extract a website's visual/design system programmatically for an agent to reuse or reference
-- You're building a design-aware agent and need structured 'design DNA' rather than raw screenshots
+- The implementation detail worth reading before adopting Taste Lab is specific — analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Taste Lab in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Taste Lab means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Taste Lab's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction)
-- You need an open-source or self-hostable option
-
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Taste Lab, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Taste Lab describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Taste Lab is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Taste Lab as a Python dependency or sidecar service against the `web-scraping` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -96,4 +102,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

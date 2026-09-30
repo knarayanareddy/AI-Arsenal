@@ -20,17 +20,17 @@ This guide compares tools for the `fine-tuning` job. Use it as a routing page, t
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Fine-tuning is reached for when prompting has plateaued, and it is easy to reach for before that plateau has actually been established. Grouping by this job makes the method and its resource cost visible at the decision point, including the VRAM and time figures that usually rule a method out.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records the VRAM and time cost, because that constraint usually decides the method before quality does.
+- Parameter-efficient and alignment methods are listed together, since the practical choice is often between them.
+- Each entry distinguishes behaviour on a demonstrated distribution from general capability, which the demos blur.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the training and model-layer facets on each tool entry. The comparison axis is the resource cost and the method's interaction with your model and dataset size, since a benchmark delta is not the constraint that decides this choice in practice.
 
 ## Getting Started
 
@@ -177,6 +177,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [Liger Kernel](../model-layer/liger-kernel.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [llmfit](../model-layer/llmfit.md) | model layer | open-source | Yes | Yes | Yes | rust | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OpenPipe ART](../model-layer/openpipe-art.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
@@ -195,23 +196,26 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `fine-tuning` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have prompt-based performance problems and need to know whether fine-tuning is the right lever or a premature one.
+2. **Scenario**: you are comparing parameter-efficient methods and need to know which one your model size and dataset size actually support.
+3. **Scenario**: you are budgeting a fine-tuning run and need to know what the VRAM and time costs are before requesting the hardware.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Distinguishes parameter-efficient methods by what they actually change, which is more useful than a leaderboard of benchmark deltas.
+- Puts the VRAM and time cost up front, since that is the constraint that usually decides the method.
+- Includes the alignment methods alongside classic fine-tuning, because the practical choice is often between them.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Fine-tuning improves behaviour on a distribution you can demonstrate, not general capability, and the demos rarely make that boundary visible.
+- Method choice interacts with model size and dataset size in ways the comparison tables flatten; small models with small datasets are a different regime.
+- Every framework here has a specific failure mode around memory, and your sequence length is the variable that decides which.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a fine-tuning entry here from a project entry that offers training, and from a model entry whose published recipe uses one of these methods.
+- When a build example fine-tunes a model, reference the method here so the resource claims can be checked against the same numbers.
 
 ## Resources
 

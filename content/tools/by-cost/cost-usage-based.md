@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose cost facet is Usage Based. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist of usage-billed tooling, grouped because metering makes your workload an input to your bill. Retries, verbose prompts, long context and agent loops all multiply cost quietly, so the metering point is the fact that decides which optimisations are worth building.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Usage pricing makes your workload an input to your bill, so the metering point decides which optimisations are worth building. Grouping by cost model keeps that visible during selection, at the point where caching and routing decisions are still cheap to make differently.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry states where metering happens, which is what determines which optimisation reduces the bill.
+- Multipliers on spend — retries, long context, agent loops — are called out because they are where unexpected cost originates.
+- Hard caps are described as service-level controls rather than cost controls, since they stop traffic to stop spend.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records where metering happens, which is what determines which optimisation reduces the bill. The page is generated from the cost-model and pricing frontmatter facets, and the metering notes live in the tool entries so they are updated where the behaviour is described.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a cost fit of "Usage Based" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: your spend scales with usage and you need to model the bill before committing to an architecture.
+2. **Scenario**: you want to know which usage-based options have a floor, a cap, or an egress charge that surprises people.
+3. **Scenario**: you are designing for cost control and need to know where metering happens so you can reduce it.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Makes the metering point visible, since that is what determines which optimisations reduce the bill.
+- Treats retries and agent loops as cost multipliers, which is where unexpected spend comes from.
+- Notes the bluntness of hard caps, which stop service rather than cost.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Usage-based pricing makes your workload an input to your bill: retries, verbose prompts and agent loops all multiply cost quietly.
+- Metering granularity differs per provider, so equivalent architectures can cost very different amounts.
+- A hard spend cap is a blunt instrument: it stops spend by stopping service, which is rarely the behaviour you want in production.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a usage-based tool here from any entry whose request volume is user-driven rather than fixed.
+- When a build example adds caching or routing for cost reasons, cross-reference the cost page so the rationale is recorded.
 
 ## Resources
 
@@ -74,12 +77,16 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Claude Code](../dx-and-tooling/claude-code.md) | dx and tooling | prototyping | usage-based | No | No | No | typescript | best-in-class |
 | [Cloudflare Workers AI](../serving-and-deployment/cloudflare-workers-ai.md) | serving and deployment | production-serving | usage-based | Yes | No | No | typescript | solid-choice |
 | [Cohere](../model-layer/cohere.md) | model layer | production-serving | usage-based | Yes | Yes | No | python, polyglot | solid-choice |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | usage-based | Yes | Yes | Yes | python | watching |
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | usage-based | Yes | No | No | python | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
 | [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | deployment, production-serving | usage-based | No | No | No | python | recommended |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | usage-based | Yes | No | No | python | solid-choice |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | prototyping | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
@@ -89,3 +96,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Together AI](../model-layer/together-ai.md) | model layer | production-serving, fine-tuning | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | production-serving, prototyping | usage-based | No | No | No | polyglot | watching |
+| [Zep](../orchestration/zep.md) | orchestration | memory-management | usage-based | Yes | Yes | Yes | python, typescript | recommended |

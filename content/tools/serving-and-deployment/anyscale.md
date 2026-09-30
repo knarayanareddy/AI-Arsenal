@@ -39,11 +39,13 @@ verdict_rationale: The natural managed home for teams standardized on Ray for di
 status: active
 ---
 
-> **TL;DR:** The managed platform from Ray's creators for running distributed AI workloads — distributed training, large-scale batch inference, and serving — on autoscaling Ray clusters with added observability and governance. Usage-based; a solid choice for Ray-native, genuinely distributed workloads.
+> **TL;DR:** Anyscale, for the deployment, production-serving job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
 Anyscale is the commercial platform built by the team behind Ray, the open-source distributed-computing framework. It provides a managed control plane for Ray clusters: autoscaling, cluster lifecycle, observability, and governance, so teams can run distributed training, batch inference, and Ray Serve deployments without operating Ray infrastructure themselves.
+
+The integration surface is an API rather than a vendored library unlike `ray-serve`, `modal`; on the deployment, production-serving path; under a usage-based cost model; with `anyscale`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
 
 ## Why It's in the Arsenal
 
@@ -72,20 +74,22 @@ pip install anyscale
 
 ## Use Cases
 
-1. **Scenario**: distributed batch inference over a huge dataset using Ray Data on an autoscaling cluster
-2. **Scenario**: distributed fine-tuning/training with Ray Train, then serving the result with Ray Serve — all on one managed platform
+1. **Where it sits**: on the deployment, production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Anyscale can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Anyscale.
+3. **Choosing between candidates**: Anyscale's comparison set is `ray-serve`, `modal`, `skypilot`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Removes Ray cluster ops while preserving the open Ray programming model (portable back to self-hosted Ray)
-- Scales to genuinely distributed workloads that single-node serving tools cannot handle
-- Unifies distributed training, batch inference, and serving under one platform
+- The implementation detail worth reading before adopting Anyscale is specific — you write Ray applications (or use Ray libraries), and Anyscale provisions and autoscales the underlying Ray cluster, schedules the workload across nodes, and exposes dashboards/logs. Serving uses Ray Serve under the hood, so deployments inherit Ray's distributed scheduling. The programming model is Ray's; Anyscale manages the cluster and platform layer around it — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Anyscale against `ray-serve`, `modal`, `skypilot`, `baseten` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Anyscale documents a client surface through `ray-serve`, which fixes the expected request and response contract so you are not inferring it from examples.
+- What this entry cannot give you is measured behaviour: measure Anyscale's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Overkill for single-model serving — Modal, Baseten, or a lone vLLM instance are simpler and cheaper there
-- Requires adopting the Ray programming model; teams not on Ray gain little
-- Managed platform (not self-hostable), so strict on-prem-only environments must run open-source Ray themselves
+- There is no self-hosted path to Anyscale, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Anyscale's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Anyscale overlaps `ray-serve`, `modal`, `skypilot`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

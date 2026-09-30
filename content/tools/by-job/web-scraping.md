@@ -20,17 +20,17 @@ This guide compares tools for the `web-scraping` job. Use it as a routing page, 
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Ingestion is where a project first discovers that its data is not what it assumed, and scraping is where that discovery is most expensive — silent encoding damage, missing content behind a login, and rate limits that arrive as an outage rather than an error. Grouping by this job keeps the shortlist next to that decision, ordered by the failure mode rather than the feature list.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Hosted readers, headless browsers and crawlers are listed separately, because they fail in categorically different ways.
+- Every entry states whether it handles JavaScript rendering and authentication, which is where cheap tools stop working.
+- Legal and terms-of-service exposure is kept separate from the technical comparison.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the web-scraping and data-ingestion facets on each tool entry. The comparison axis is how the page is obtained — an HTTP fetch, a headless browser, or a crawler — since that single choice determines the failure modes you will debug in production.
 
 ## Getting Started
 
@@ -153,10 +153,10 @@ This table is exhaustive for tools tagged with job = web-scraping.
 |---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
 | [Agent Reach](../data-ingestion/agent-reach.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
-| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | open-source | Yes | Yes | Yes | java, python | solid-choice |
+| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | open-source | Yes | No | No | typescript | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
-| [Exa](../data-ingestion/exa.md) | data ingestion | freemium | Yes | No | No | python | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | usage-based | Yes | No | No | python | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | freemium | Yes | No | No | polyglot | recommended |
@@ -172,23 +172,26 @@ This table is exhaustive for tools tagged with job = web-scraping.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `web-scraping` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need page content for a corpus and want to know whether a hosted reader, a headless browser or a crawler is the right shape of tool.
+2. **Scenario**: your scraper breaks weekly on the sites that matter and you need to understand which failure mode you are actually hitting.
+3. **Scenario**: you need to check a site's terms and robots posture before you commit to crawling it at scale.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Distinguishes hosted readers, headless browsers and crawlers, because they fail in categorically different ways.
+- Calls out the rendering and authentication cases where a cheap tool stops working, which is where projects actually break.
+- Keeps the legal and terms-of-service question separate from the technical one, so neither is used to answer the other.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Scraping tools are graded on the easy cases; the hard cases are the ones that break in production, and no tool here advertises against them.
+- Hosted readers trade control for convenience: they will not render a login wall or a JS-only page the way a browser you control will.
+- Legal and terms-of-service exposure is yours to assess, and the technical capability of a tool says nothing about whether you may use it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a scraper here from a data-ingestion build example and from any entry whose corpus depends on web text.
+- When a tool here breaks against a specific site pattern, record it in the tool entry rather than leaving the next reader to rediscover it.
 
 ## Resources
 

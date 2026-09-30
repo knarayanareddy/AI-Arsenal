@@ -18,31 +18,17 @@ status: "active"
 
 ## Overview
 
-Transformers are the architecture family behind modern LLMs. For AI engineers, the goal is not to derive every equation from memory; it is to understand tokens, attention, context, pretraining, inference, and why scaling changes behavior.
+The transformer as a specific composition of operations rather than a family of models: attention, position handling, normalisation and the KV cache, in the order they run. The aim is that you can reason about a model's memory and latency behaviour instead of estimating it, and that you can tell which component a given efficiency technique modifies.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+Most operational questions about a model — memory growth, latency, where a technique applies — are answerable from the architecture rather than estimated. Naming the components and their order is what turns a model card into something you can reason about, and it is also what lets you spot which part a given optimisation changes.
 
 ## Key Features
 
-### Concepts to Understand
-
-- Tokenization: text becomes token IDs.
-- Embeddings: tokens become vectors.
-- Attention: each token can condition on other tokens.
-- Positional information: models need order/context signals.
-- Feed-forward layers: per-token nonlinear transformations.
-- Autoregressive decoding: models generate one token at a time.
-- Context window: practical limit on visible tokens.
-- KV cache: serving optimization for repeated attention state.
-
-### What Builders Should Remember
-
-- Longer context costs more and may not improve retrieval quality.
-- Attention enables context use but does not guarantee factual grounding.
-- Inference is sequential at token generation time.
-- Model architecture affects latency, memory, quantization, and deployment choices.
+- Gives exact operation order rather than a conceptual sketch, because that is where implementations diverge.
+- Connects each efficiency technique to the component it modifies, which is what the choice requires.
+- Notes that a from-scratch implementation is the reliable way to catch a silent numerical bug.
 
 ## Architecture / How It Works
 
@@ -57,27 +43,26 @@ A transformer converts token sequences into contextual representations using att
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you are implementing attention yourself or debugging an implementation, and need the exact operation order.
+2. **Scenario**: you are choosing a context-extension or efficiency technique and need to know which component it modifies.
+3. **Scenario**: you need to reason about KV-cache memory growth and sequence length without guessing.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Gives the exact operation order rather than a conceptual sketch, because the details are where implementations diverge.
+- Connects each efficiency technique to the component it modifies, which is what you need to choose between them.
+- Notes that a from-scratch implementation is the reliable way to catch a numerical bug you cannot see.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- The canonical architecture is a specific composition of choices, not a family, and most variation between models is precisely in which parts were changed.
+- Efficiency techniques trade quality for memory in model-specific ways, so an abstract description hides the number you need.
+- A from-scratch implementation is the fastest way to understand the tensor shapes, and it is also the easiest place to introduce a silent numerical bug.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Link this concept from inference-engine entries that alter attention or position handling, so the modification is explained where it is used.
+- When a model family deviates from the canonical architecture, the deviation belongs here as well as in that model's entry.
 
 ## Resources
 

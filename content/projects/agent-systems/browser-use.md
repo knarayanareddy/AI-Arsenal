@@ -5,19 +5,19 @@ version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: browser-agents
-description: "The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously"
+description: "Open-source browser agent that drives Chrome for LLM, available as a Python library, a CLI, or hosted cloud browsers"
 github_url: "https://github.com/browser-use/browser-use"
-license: "MIT"
+license: MIT
 primary_language: Python
 org_or_maintainer: "Browser Use"
-tags: [agents, tool-use, orchestration]
-maturity: beta
+tags: [agents, embeddings]
+maturity: production
 cost_model: open-source
-github_stars: 103506
+github_stars: 116618
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://docs.browser-use.com/cloud/quickstart"
+last_commit: "2026-09-26"
+docs_url: "https://docs.browser-use.com/llms.txt"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -27,12 +27,8 @@ relation_to_stack: [build-on-top, deploy-as-is]
 health_signals: [community-driven, actively-maintained, org-backed]
 ecosystem_role:
   - "The default open-source answer to 'let my agent use the web': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against."
-best_for:
-  - "You want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts"
-  - "You are prototyping agent products that need web access today — the Python API is a few lines, supports any LangChain-compatible LLM, and has a large community of examples"
-avoid_if:
-  - "You need deterministic, repeatable automation for stable pages — LLM-driven navigation is slower, costlier, and less predictable than Playwright scripts or Stagehand's hybrid code+AI model"
-  - "You are deploying unattended agents against authenticated/sensitive accounts — prompt-injection-via-webpage is an unsolved risk class for autonomous browser agents"
+best_for: ["You are automating a booking, checkout or form-heavy portal where the layout changes often enough that hand-written XPath breaks every other week.", "You want an agent to complete CAPTCHA-gated or residential-IP-sensitive flows and you need stealth browsers, proxy rotation and CAPTCHA solving rather than a bare headless Chrome.", "You already run an LLM tool-calling loop and just need the browser handed to it as one more tool, either through the CLI or the Agents API."]
+avoid_if: ["You need deterministic repeatability on a site you control, because an LLM choosing each click makes the same script non-reproducible in a way an assertion-based test is not.", "Your budget cannot absorb per-browser-hour cloud costs at scale, because the hosted tier is billed at $0.02 per browser-hour on top of your model spend.", "You are legally barred from automated access to a target site, because the stealth and residential-proxy feature set exists precisely to defeat the controls that site operator set."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: [stagehand, playwright]
@@ -51,54 +47,53 @@ status: active
 
 ## Overview
 
-An open-source library that makes websites usable by AI agents: it renders pages, extracts interactive elements into a structured text+screenshot representation, and lets an LLM decide clicks, typing, and navigation in a perception-action loop. It became the highest-profile open browser-agent project during the 2025 agent wave, with a hosted cloud offering funding continued development.
+browser-use ships the same agent in three shapes: an open-source Python and TypeScript library you embed, a Browser Use CLI that connects an existing agent to remote or local browsers, and a hosted Agents API plus cloud browsers. The project markets browser-hours at $0.02 with stealth, CAPTCHA solving and residential proxies, which is the piece that makes the open-source agent usable against real commercial sites rather than demo pages. Docs and the product map are published as llms.txt so an agent can read the feature list itself.
 
 ## Why it's in the Arsenal
 
-The default open-source answer to 'let my agent use the web': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts. See Strengths / Limitations below before adopting it.
+The decision it removes is whether a browser task needs a hand-written automation script. A DOM-selector script encodes today's layout and fails the next time marketing ships a redesign, and keeping it alive turns into a maintenance stream of broken specs. An agent instead looks at the accessibility tree and screenshot, decides the next action, and re-derives it each run, so the cost of a UI change moves from a code fix to a re-prompt.
 
 ## Architecture
 
-A perception layer combines DOM parsing (via CDP/Playwright) with optional vision — numbered bounding boxes over interactive elements — into a compact state the LLM reasons over; an action registry (click, input, scroll, tab management, file handling) executes decisions, with retries and self-correction on failures. Supports multi-tab flows, custom functions, and persistent browser profiles for authenticated sessions.
+The agent loop observes the page, compresses the DOM plus screenshot into a prompt the model can reason about, calls a model with a set of action tools, and executes the chosen action through Playwright. Because the model sees the live DOM rather than a pre-baked selector map, the planner re-derives coordinates and targets on every step. The CLI and library layers both connect to a local or remote browser endpoint, while the hosted tier adds browser orchestration, proxy egress and CAPTCHA resolution outside your process.
 
 ## Ecosystem Position
 
-Upstream: Playwright/CDP for browser control; any major LLM for reasoning. Competing: Stagehand (hybrid deterministic+AI automation), Skyvern, and closed operator-style agents (OpenAI Operator, Claude computer use). Complementary: pairs with agent frameworks (LangGraph, CrewAI) as the web-access tool; WebVoyager-style benchmarks report ~89% task success for its cloud configuration — treat vendor-reported numbers as upper bounds.
+It competes directly with Skyvern in the vision-driven browser automation lane and overlaps with Playwright, which supplies the browser control it drives. Where Playwright is a scripted test runner with no model in the loop, browser-use puts an LLM in that loop and gives up determinism for adaptability. It complements content/tools/data-ingestion entries such as crawl4ai when you want a live interactive session instead of a static crawl, and it is a distinct choice from content/projects/agent-systems entries that solve code tasks rather than web tasks.
 
 ## Getting Started
 
+Install the library from PyPI, then start a session with a model key exported:
+
 ```bash
 pip install browser-use
-uvx playwright install chromium --with-deps
-# python:
-from browser_use import Agent, ChatOpenAI
-agent = Agent(task='Find the cheapest direct flight LIS->NYC next month', llm=ChatOpenAI(model='gpt-4.1'))
-await agent.run()
 ```
+
+The library and CLI share one browser endpoint model; the README points at browser-use.com/llms.txt for the current product map covering the open-source agent, Browser Harness, cloud browsers and the hosted Agents API pricing.
 
 ## Key Use Cases
 
-1. **Scenario**: you want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts
-2. **Scenario**: you are prototyping agent products that need web access today — the Python API is a few lines, supports any LangChain-compatible LLM, and has a large community of examples
+1. End-to-end booking: find an available slot, pick a date and time, clear the CAPTCHA, and confirm without writing a single selector.
+2. Legacy portal migration: reproduce a manual operator's click path on a site whose markup keeps shifting, and hand back a short transcript per run.
+3. Competitive monitoring: drive a logged-in dashboard and extract fields that a plain HTTP fetch cannot reach because state lives in JavaScript.
 
 ## Strengths
 
-- You want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts
-- You are prototyping agent products that need web access today — the Python API is a few lines, supports any LangChain-compatible LLM, and has a large community of examples
+- Three deployment shapes from one codebase, so you can prototype in-process and move to cloud browsers without rewriting the agent.
+- Stealth, CAPTCHA solving and residential proxies solve the anti-bot problem that otherwise caps LLM browser work at sandbox demo sites.
+- Both Python and TypeScript implementations, unusual for a tool at this star count.
+- MIT licensed, which keeps the library embeddable in commercial products.
 
 ## Limitations
 
-- You need deterministic, repeatable automation for stable pages — LLM-driven navigation is slower, costlier, and less predictable than Playwright scripts or Stagehand's hybrid code+AI model
-- You are deploying unattended agents against authenticated/sensitive accounts — prompt-injection-via-webpage is an unsolved risk class for autonomous browser agents
+Reliability is bounded by the model you point at it, and a wrong click on a destructive button is a real operational risk with no compile-time guard. Cloud usage is billed per browser-hour, so a loop that fails to terminate costs money rather than just time. The README itself splits the product into three tiers, which is a signal that the open-source library alone does not include the anti-detection machinery that production use needs. Sessions are heavy: each concurrent agent is a full browser with its own memory footprint, and long-horizon tasks accumulate latency at every model call.
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+This is a headline entry in content/projects/agent-systems. Read it next to content/tools/data-ingestion/playwright, which is the deterministic substrate underneath it, and against Skyvern and the commercial stagehand-style tools for the vision-driven alternative. Its cloud browser tier is the counterpart to the self-hosted inference entries in content/projects/inference-engines when you want tokens locally but browsers remote.
 
 ## Resources
 
-- [GitHub](https://github.com/browser-use/browser-use)
-- [Documentation](https://docs.browser-use.com/cloud/quickstart)
-
----
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (103,506 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*
+- [GitHub — browser-use/browser-use](https://github.com/browser-use/browser-use)
+- [Docs index, llms.txt](https://docs.browser-use.com/llms.txt)
+- [Product map and pricing, browser-use.com/llms.txt](https://browser-use.com/llms.txt)

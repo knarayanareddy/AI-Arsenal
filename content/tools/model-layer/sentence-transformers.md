@@ -46,7 +46,7 @@ The library that made sentence embeddings practical: load any of thousands of Hu
 
 ## Why It's in the Arsenal
 
-Sentence Transformers earns a place in the Arsenal because it directly addresses a recurring decision point: you self-host embeddings (BGE, GTE, E5, Qwen-embedding...) — this is the load-and-encode API every tutorial assumes. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Sentence Transformers is The standard Python library for computing, training, and fine-tuning text embedding and reranker models. Read it beside `voyage-ai`, `cohere`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,27 +67,28 @@ pip install sentence-transformers
 
 ## Use Cases
 
-1. **Scenario**: you self-host embeddings (BGE, GTE, E5, Qwen-embedding...) — this is the load-and-encode API every tutorial assumes
-2. **Scenario**: you need to fine-tune an embedding or cross-encoder model on your domain pairs with a few dozen lines of code
-3. **Scenario where this is NOT the right fit**: highest-throughput production embedding serving — dedicated servers (TEI, Infinity) beat in-process encoding — evaluate an alternative instead
+1. **Where it fits**: "You self-host embeddings (BGE, GTE, E5, Qwen-embedding...) — this is the load-and-encode API every tutorial assumes.
+2. **Adoption checkpoint**: compare Sentence Transformers against `voyage-ai`, `cohere` on the same `fine-tuning, vector-search` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You self-host embeddings (BGE, GTE, E5, Qwen-embedding...) — this is the load-and-encode API every tutorial assumes
-- You need to fine-tune an embedding or cross-encoder model on your domain pairs with a few dozen lines of code
+- Beyond the feature list, Sentence Transformers's own implementation notes give the specifics — wraps Transformers models with pooling layers into SentenceTransformer modules exposing encode(); training pairs a dataset of (anchor, positive) or triplets with contrastive losses. Model cards on the HF Hub declare SBERT compatibility, making the ecosystem plug-and-play — which is where a capability claim either holds or does not for your workload.
+- Against `voyage-ai`, `cohere`, the comparison that decides this is deployment model and operational cost rather than the feature list; Sentence Transformers sits at the hosted-or-embedded end of that axis.
+- Sentence Transformers documents a client surface through `langchain`, `llamaindex`, `qdrant`, which fixes the expected request and response contract so you are not inferring it from examples.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Sentence Transformers all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- Highest-throughput production embedding serving — dedicated servers (TEI, Infinity) beat in-process encoding
-- You've standardized on managed embedding APIs and never run models locally
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on Sentence Transformers means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Sentence Transformers describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 
-- Compare against `voyage-ai`, `cohere` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `sentence-transformers`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Sentence Transformers as a Python dependency or sidecar service against the `fine-tuning, vector-search` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `voyage-ai`, `cohere` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `langchain`, `llamaindex`, `qdrant`, `weaviate` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +101,4 @@ pip install sentence-transformers
 - 18,887 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

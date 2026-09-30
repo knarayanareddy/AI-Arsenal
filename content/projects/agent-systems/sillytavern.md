@@ -29,22 +29,16 @@ name: "SillyTavern"
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts"
-github_url: https://github.com/SillyTavern/SillyTavern
-license: "AGPL-3.0"
-primary_language: "Other"
-tags:
-  - "llm"
-  - "local"
-  - "self-hosted"
-  - "memory"
-  - "tool-use"
-  - "community-favorite"
+description: "Local LLM front end unifying text, image and TTS backends with lorebooks, Visual Novel mode and a large extension ecosystem"
+github_url: "https://github.com/SillyTavern/SillyTavern"
+license: AGPL-3.0
+primary_language: Other
+tags: [multimodal, llm]
 maturity: production
 cost_model: open-source
-github_stars: 30583
-last_commit: "2026-07-11"
-docs_url: https://docs.sillytavern.app
+github_stars: 33887
+last_commit: "2026-09-23"
+docs_url: "https://docs.sillytavern.app/"
 phase: agent-system
 domain:
   - "language"
@@ -57,58 +51,63 @@ health_signals:
   - "community-driven"
 ecosystem_role:
   - "A locally hosted conversation frontend that manages personas, prompt assembly, context budgeting, and connections to many local or hosted model backends."
-best_for:
-  - "You want a self-hosted, provider-agnostic chat UI with fine-grained control over system prompts, sampling parameters, and context assembly."
-  - "You run local models (via KoboldCpp, Ollama, text-generation-webui, or an OpenAI-compatible endpoint) and want character/persona management and extensions."
-avoid_if:
-  - "You need a governed, multi-tenant enterprise assistant with SSO and audit controls rather than a single-user power tool."
-  - "You want an opinionated, minimal chat box; SillyTavern exposes many knobs that are unnecessary for simple use."
+best_for: ["You are running a local text model and you want prompt templates, sampling parameters and lorebook-driven world context that a bare completion endpoint does not give you.", "You want one interface over many backends, because the README lists KoboldAI/CPP, Horde, NovelAI, Ooba, Tabby, OpenAI, OpenRouter, Claude and Mistral as supported connections.", "You want to couple text generation with images and speech, since Automatic1111 and ComfyUI image generation plus TTS voice models are integrated into the same session."]
+avoid_if: ["You need an embeddable library or a multi-user service, because this is a locally installed user interface for a single operator rather than a component you build on.", "You need a turnkey chat product with no learning curve, because the project's stated vision explicitly includes a steep learning curve as part of the appeal.", "You need a supported commercial product, because it is a community passion project that is always free and open source with no hosted service."]
 enrichment_notes: "Official repository, AGPL-3.0 license, and 2026-07-11 activity were reviewed on 2026-07-12. Suitability beyond single-user/local use remains draft."
 ---
 
 ## Overview
 
-SillyTavern is a browser-based frontend, served from a local Node.js process, for chatting with LLMs. Its distinguishing feature is explicit control over the prompt: character cards, world/lore books, author's notes, and instruct templates are composed into the context window under user-defined rules, and it connects to local runtimes or OpenAI-compatible APIs.
+SillyTavern is a locally installed user interface for interacting with text generation LLMs, image generation engines and TTS voice models, described as a front end for power users. It provides a single unified interface over many backends including KoboldAI/CPP, Horde, NovelAI, Ooba, Tabby, OpenAI, OpenRouter, Claude and Mistral, with a mobile-friendly layout, Visual Novel Mode, Automatic1111 and ComfyUI image generation integration, text-to-speech, WorldInfo lorebooks, a customizable UI and auto-translate, plus a deliberately large number of prompt options. The project began in February 2023 as a fork of TavernAI 1.2.8 and by the README's account has over 300 contributors and three years of independent development. Hardware needs are minimal: anything that runs NodeJS 20 or higher, with a 3000-series NVIDIA card and 6GB of VRAM recommended if you also run local inference.
 
 ## Why it's in the Arsenal
 
-It is a widely used reference for the client side of local LLM workflows. The engineering interest is in how it does context budgeting, prompt templating, and backend abstraction across many inference servers—problems every conversational application faces once context windows fill up.
+The decision it removes is how much control you have over what actually reaches the model. A chat API gives you a messages array; SillyTavern gives you a prompt construction surface, sampling parameters, and lorebooks that inject world knowledge on keyword match, which is what long-form and roleplay workflows need and ordinary SDKs do not expose. It also removes the need to run separate tools for images and speech in the same session, since ComfyUI and TTS hang off the same conversation. The trade is the interface's own complexity: the vision section openly names a steep learning curve as intentional, and the extension ecosystem is a surface you have to keep an eye on.
 
 ## Architecture
 
-A Node.js server hosts a single-page web UI and proxies requests to a configured backend (KoboldCpp, Ollama, text-generation-webui, or a hosted API). Prompt construction is template-driven: persona, chat history, lore-book entries matched by keyword, and instruct formatting are concatenated with token-budget trimming. Extensions run client-side and can add features such as vector-based retrieval of past turns and text-to-speech.
+A NodeJS 20 server renders the chat interface locally and holds the conversation state, prompt assembly and sampler configuration. Backend connections are adapters over the supported text providers, so the same session can move between a local KoboldAI-compatible server, a hosted API such as OpenAI or Claude, or a Horde worker, and the prompt is built according to whichever template that backend expects. WorldInfo lorebooks sit in the prompt assembly path and inject entries when their keywords appear, which is the mechanism behind persistent world context. Image generation routes to Automatic1111 or ComfyUI over their HTTP APIs, and TTS routes to a voice model, so text, image and speech results share one conversation view. Extensibility is via third-party extensions loaded into the server, and the UI is restyleable, which is why both count as first-class features rather than afterthoughts.
 
 ## Ecosystem Position
 
-SillyTavern competes with other local chat frontends (Open WebUI, LM Studio's chat) and complements inference servers rather than replacing them. Compared to hosted assistant UIs it trades polish for control and privacy; compared to a minimal chat client it offers far richer prompt and memory management. The choice hinges on how much manual prompt control you need versus turnkey simplicity.
+SillyTavern occupies the local chat front-end niche alongside Open WebUI and LM Studio's own chat, and it competes on prompt control and model flexibility rather than on multi-user features: this is a single-operator interface, not a shared assistant. It overlaps with the agent entries in content/projects/agent-systems only loosely, since the conversation is human-driven rather than tool-calling, though extensions are the path to adding tools. Compared with a hosted chat product, it is the same conversation with the weights on your machine and the provider bill removed, which is the trade every local-first front end makes. It complements rather than competes with the inference entries in content/projects/inference-engines, which supply the local server SillyTavern talks to. Its extension ecosystem is also the main supply-chain surface, which is a category-wide concern rather than specific to this project.
 
 ## Getting Started
 
-Clone and run the Node.js server locally, connect one backend (for example an Ollama or OpenAI-compatible endpoint), import a character card, and send a message. Then inspect the assembled prompt in the UI to confirm how history, persona, and lore entries consume the token budget before enabling extensions.
+Clone the repository, install Node dependencies, and start the server, which serves the interface locally:
+
+```bash
+git clone https://github.com/SillyTavern/SillyTavern.git
+cd SillyTavern
+npm install
+node server.js
+```
+
+Open the printed local URL, then add a connection in the API connections panel for a local KoboldAI-compatible endpoint or a hosted provider key. NodeJS 20 or higher is the stated requirement, and the project publishes separate Windows, macOS and Linux install guides under docs.sillytavern.app.
 
 ## Key Use Cases
 
-- Single-user, privacy-preserving chat over local models.
-- Prototyping persona/system-prompt and lore-book strategies before porting them into an application.
-- A testbed for comparing local inference backends behind one UI.
+1. Local model exploration: run a GGUF or full-precision model through llama.cpp or a KoboldAI-compatible server and tune sampling and prompt templates interactively.
+2. Long-form and roleplay writing: use WorldInfo lorebooks for persistent world context and Visual Novel Mode for a scene-oriented interface.
+3. Unified creative session: generate text, images through ComfyUI or Automatic1111, and speech in one conversation without switching tools.
 
 ## Strengths
 
-- Deep, transparent control over prompt assembly and sampling.
-- Backend-agnostic: works across many local and hosted inference servers.
-- Large community, active maintenance, and an extension ecosystem.
+- Deep prompt and sampling control, with the project's stated goal of maximising utility and control over prompts rather than hiding them.
+- One interface over many backends including local servers, Horde and major hosted APIs, so model comparison needs no reconfiguration.
+- Integrated image generation and TTS in the same conversation, avoiding tool-switching for multimodal creative work.
+- Minimal hardware requirements, running on anything with NodeJS 20 while inference happens elsewhere.
 
 ## Limitations
 
-- Designed for single-user local use; it lacks enterprise auth, multi-tenant isolation, and audit logging.
-- The abundance of settings has a steep learning curve and can produce inconsistent prompts if misconfigured.
-- AGPL-3.0 licensing has network-copyleft implications for hosted derivatives.
+AGPL-3.0 rules it out of most closed-source commercial products without a separate arrangement, and the project itself is positioned as a free community passion project with no hosted offering, so support is community Discord rather than an SLA. It is a single-operator local interface with no multi-user auth, tenancy or centralised policy, which is exactly the wrong shape for a shared team assistant. The extension ecosystem is the largest risk surface: third-party extensions run inside the server process, and there is no curation layer comparable to a package registry's trust process. The breadth of prompt and backend options is a real learning cost, and a large community product with 300-plus contributors will accumulate settings that only make sense to people who have read the documentation site.
 
 ## Relation to the Arsenal
 
-SillyTavern is the client-side counterpart to the local inference engines and quantization tooling in the catalog. Treat its prompt-assembly and lore-book mechanics as a case study for context-window management rather than as a production application shell.
+This belongs in content/projects/agent-systems as the local human-in-the-loop chat surface, and it is the natural client for the inference entries in content/projects/inference-engines that expose a local completion endpoint. Compare it against the other self-hosted front ends in this batch to decide which UI suits your workflow, and against the agent frameworks in content/projects/framework if you actually need tool-calling rather than a chat. The retrieval entries in content/projects/data-and-retrieval become relevant the moment you want grounding in your own documents, which SillyTavern does not do natively. For batch or scheduled work, none of this applies and the orchestration entries are the right place.
 
 ## Resources
 
-- [Official source](https://github.com/SillyTavern/SillyTavern)
-- [Documentation](https://docs.sillytavern.app)
+- [GitHub — SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)
+- [Documentation — docs.sillytavern.app](https://docs.sillytavern.app/)
+- [Installation guides, including Windows and macOS](https://docs.sillytavern.app/installation/)

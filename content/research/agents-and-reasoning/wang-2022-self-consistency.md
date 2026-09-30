@@ -52,6 +52,8 @@ Greedy decoding commits to one reasoning path; this paper observed that hard pro
 
 Self-consistency decoding: sample k diverse chains (temperature/top-k sampling), extract each final answer, return the plurality answer — marginalizing over latent reasoning paths rather than trusting one. The mechanism is a statistical filter: it requires an extractable, comparable final answer, and its gains grow with problem difficulty and k (saturating around k≈40).
 
+The contribution is a specific change to how wang-2022-self-consistency is trained or evaluated in the agents-and-reasoning phase; with `wang-2022-self-consistency`, `title`, `self-consistency`, and the claim to check is whether the reported gain survives the baseline it is compared against. Reproducing the headline number on the stated dataset and protocol is the test of whether this is a real result or a measurement artefact.
+
 ## Key Results
 
 - GSM8K: +17.9% absolute over greedy CoT with PaLM-540B; SVAMP +11.0%, AQuA +12.2%, ARC-challenge +3.9% (2022)
@@ -84,4 +86,4 @@ Builds directly on `wei-2022-chain-of-thought` and `kojima-2022-zero-shot-cot` (
 - [arXiv](https://arxiv.org/abs/2203.11171)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -5,15 +5,15 @@ version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
+description: "Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions"
 github_url: "https://github.com/cleanlab/cleanlab"
-license: AGPL-3.0
+license: Apache-2.0
 primary_language: Python
 org_or_maintainer: Cleanlab
-tags: [data, evaluation, self-hosted]
+tags: [embeddings, llm]
 maturity: production
 cost_model: open-source
-github_stars: 11562
+github_stars: 11682
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-01-13"
@@ -27,12 +27,8 @@ relation_to_stack: [build-on-top]
 health_signals: [research-origin, production-proven]
 ecosystem_role:
   - The standard open implementation of confident learning — it cross-examines a model's out-of-sample predicted probabilities against given labels to statistically flag mislabeled, ambiguous, and outlier examples, model-agnostically
-best_for:
-  - You suspect label noise in a training or eval set and want a principled, model-agnostic ranking of which examples to re-review — rather than eyeballing or ad-hoc heuristics
-  - You want dataset-level quality audits (near-duplicates, outliers, class overlap) as a routine step before fine-tuning or building eval sets
-avoid_if:
-  - Your data has no labels or your task isn't classification-like — confident learning needs predicted probabilities against given labels to work with
-  - AGPL-3.0 is incompatible with your distribution model — check licensing before embedding it in shipped products
+best_for: ["You have labeled data and a trained model whose validation score is lower than the data quality deserves, and you suspect label noise is the cause.", "You want to find mislabeled rows in text, image, audio or tabular data using a model you already have, rather than paying for manual relabeling.", "You are doing multi-annotator work and need consensus labels plus a per-annotator quality estimate before you trust an agreement score."]
+avoid_if: ["You have no trained model and no predicted probabilities, because cleanlab's issue detection is built on out-of-sample predictions from a model you fit first.", "You cannot accept the compute, because the workflow requires training at least two models on cross-validated folds and scoring the whole dataset.", "You are on an unsupported platform version, because the library runs on Python 3.10+ on Linux, macOS and Windows and nothing older."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -52,48 +48,61 @@ status: active
 
 ## Overview
 
-cleanlab is a data-centric AI library that audits datasets rather than models: given any classifier's out-of-sample predicted probabilities, it applies confident learning to estimate which labels are likely wrong, which examples are outliers or near-duplicates, and which classes overlap — producing a ranked list of data issues to fix before you train or evaluate on that data.
+Cleanlab's open-source library detects issues in a machine-learning dataset using models you have already trained: you fit a model, obtain feature embeddings and predicted probabilities, and hand both to the library, which estimates which labels are wrong rather than relying on a hand-written heuristic. Datalab is the main entry point, wrapping data and a label column, with find_issues taking features and pred_probs and report producing a prioritised issue list. Beyond label errors it covers outliers, duplicates and near-duplicates, data validation and profiling, out-of-distribution detection, active learning suggestions, and consensus plus annotator-quality inference for multi-annotator datasets.
 
 ## Why it's in the Arsenal
 
-Label noise silently corrupts both fine-tuning data and eval sets, and the usual response is ad-hoc spot-checking. cleanlab is the principled alternative: confident learning is a published, model-agnostic statistical method, and this library is its reference implementation. It fills the dataset-quality-audit slot in the data-and-retrieval phase — upstream of training and eval-set construction, complementary to pipeline-level validation like `great-expectations`.
+The recurring modelling decision is whether to retrain with a better model or clean the data first, and the honest answer is usually that you cannot tell because label noise and model capacity produce the same symptom. Cleanlab's confident-learning approach scores each label by how confidently your model would have predicted it given the feature neighbourhood, which turns a vague suspicion into a ranked list of rows. That converts a research detour into a triage task: fix the top-ranked labels, retrain, and measure the delta.
 
 ## Architecture
 
-Confident learning estimates the joint distribution between given labels and true labels from out-of-sample predicted probabilities, using per-class probability thresholds to identify confidently mislabeled examples. Because it consumes only predictions and labels, it works with any model (sklearn, PyTorch, LLM-as-classifier). The Datalab interface layers additional issue detectors — outliers, near-duplicates, non-IID drift — over the same audit pass.
+The core method computes a self-confidence for every label from cross-validated out-of-sample predicted probabilities, then flags a label as suspect where that confidence undercuts the model's overall accuracy. Because the neighbourhood matters, feature embeddings supplied alongside probabilities let the library weight similar examples, which improves detection on hard classes. Datalab layers issue detection and reporting on top: each detector, whether for label errors, outliers, duplicates or near-duplicates, produces a ranked set, and report renders priorities with per-issue scores rather than a single boolean.
 
 ## Ecosystem Position
 
-Upstream: any trained classifier's cross-validated predictions. Downstream: cleaned training sets and trustworthy eval sets. Complementary: `great-expectations` validates pipeline data against declared expectations (schema/statistics), while cleanlab finds label-level issues expectations can't express; the hosted Cleanlab platform is the commercial extension.
+It competes with data-quality tooling and hand-written validation pipelines, and it is distinct from Label Studio in this catalog, where that project owns the annotation interface and cleanlab decides what deserves annotation. It overlaps with content/projects/training-and-alignment entries such as TRL because a clean dataset is a precondition for every fine-tuning run downstream. Compared with a vector database approach to quality, cleanlab works on labels and model behaviour rather than embedding similarity alone, and it complements content/tools/evaluation-and-observability by explaining why a metric is low.
 
 ## Getting Started
 
+Install from PyPI with uv, pip or conda on Python 3.10 or newer, then run the three-line detection loop:
+
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical Datalab audit workflow.
+pip install cleanlab
 ```
+
+```python
+import cleanlab
+lab = cleanlab.Datalab(data=dataset, label="column_name_for_labels")
+lab.find_issues(features=feature_embeddings, pred_probs=pred_probs)
+lab.report()
+```
+
+Developers tracking the bleeding edge should follow the master branch documentation.
 
 ## Key Use Cases
 
-1. **Scenario**: auditing a fine-tuning or eval dataset for mislabeled examples before trusting metrics computed on it
-2. **Scenario**: routine dataset health checks — outliers, near-duplicates, class overlap — as part of data pipeline hygiene
+1. Label-noise triage on a web-scraped or crowdsourced image set where the reported ceiling is far below what the data should support.
+2. Validation-set cleaning before a fine-tuning run, so the first experiment is not distorted by corrupted labels.
+3. Annotator quality analysis: infer consensus labels and per-annotator accuracy when you have overlapping human labels rather than one gold set.
+4. Active learning: rank unlabelled rows by the model's uncertainty so labelling effort goes where it changes the model most.
 
 ## Strengths
 
-- Peer-reviewed statistical method, not heuristics — and model-agnostic by construction
-- Audits eval sets too, which directly protects the integrity of downstream benchmark numbers
+- Works across modalities: the same approach applies to text, image, audio and tabular data.
+- Reuses your existing model rather than demanding a new annotation contract or a labelling budget.
+- Finds label errors, outliers, duplicates and near-duplicates in one Datalab report with per-issue priority scores.
+- Apache-2.0 licensed with Python 3.10+ support across Linux, macOS and Windows.
 
 ## Limitations
 
-- Needs classification-like tasks with labels and predicted probabilities; not a general text-quality scorer
-- AGPL-3.0 license requires care when embedding in distributed products; open-source cadence has slowed
+The method's accuracy is bounded by the model you feed it: a badly fit model produces confident-learning scores that are confidently wrong, so the workflow assumes at least two cross-validated training runs before detection. That compute is real on large datasets, and finding issues is only half the job since you still pay for relabeling. Detection is not remediation; cleanlab ranks rows and hands the decision back to you or to an annotation queue. And a class with few examples produces less reliable scores than a well-populated one, so rare classes need their own treatment.
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: dataset quality tooling upstream of training and evaluation. For pipeline-level data validation see `great-expectations`; for eval harnesses that consume clean sets see the benchmark-and-eval phase.
+This belongs in content/projects/data-and-retrieval as the data-quality layer that decides what your training set contains. Its natural counterpart is label-studio in content/tools/data-ingestion, which supplies the annotation interface cleanlab's output should flow into, and its output is a precondition for the fine-tuning entries in content/projects/training-and-alignment. If your metrics look wrong, this is the entry to reach for before you blame the model.
 
 ## Resources
 
-- [GitHub](https://github.com/cleanlab/cleanlab)
-- [Documentation](https://docs.cleanlab.ai)
-- [Confident Learning paper](https://arxiv.org/abs/1911.00068)
+- [GitHub — cleanlab/cleanlab](https://github.com/cleanlab/cleanlab)
+- [Docs — cleanlab.ai/docs](https://docs.cleanlab.ai)
+- [Datalab example notebooks](https://github.com/cleanlab/cleanlab/tree/master/docs)

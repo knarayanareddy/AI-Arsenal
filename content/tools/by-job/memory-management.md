@@ -20,17 +20,17 @@ This guide compares tools for the `memory-management` job. Use it as a routing p
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+An agent that forgets is a support ticket, and one that recalls the wrong fact is worse than one that recalls nothing. Grouping by this job keeps the retrieval trade-offs, the eviction problem and the deletion requirement in one place, because all three are production requirements rather than refinements.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every option is framed as a retrieval system, because that is where its failure modes come from: stale entries, irrelevant recall, unbounded growth.
+- Eviction and deletion are listed as requirements, not refinements.
+- In-context window management is distinguished from external memory, since they trade off differently.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the memory and agent-framework facets on each tool entry. The comparison axis is where state lives and who evicts it, because an unbounded memory store is a production incident rather than a tuning decision.
 
 ## Getting Started
 
@@ -132,32 +132,35 @@ This table is exhaustive for tools tagged with job = memory-management.
 |---|---|---|---|---|---|---|---|
 | [Codebase Memory MCP](../dx-and-tooling/codebase-memory-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | cpp | use-with-caution |
 | [Letta](../orchestration/letta.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
-| [Mem0](../orchestration/mem0.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Redis](../orchestration/redis-memory.md) | orchestration | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Redis](../orchestration/redis-memory.md) | orchestration | self-hostable | Yes | Yes | Yes | polyglot | recommended |
 | [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
-| [Zep](../orchestration/zep.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | usage-based | Yes | Yes | Yes | python, typescript | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `memory-management` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: your agent loses context across a long task and you need to decide between truncation, summarisation and external memory.
+2. **Scenario**: you are adding memory to an agent and need to know which failure modes retrieval introduces.
+3. **Scenario**: you are deciding what an agent should remember across sessions and what it must not, given your data retention constraints.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Frames every option as a retrieval system with retrieval's failure modes, which is the framing that actually predicts bugs.
+- Covers the eviction and deletion problem, which is a production requirement and not an optional extra.
+- Distinguishes in-context window management from external memory, because they trade off differently.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Memory is a retrieval system, so it inherits retrieval's failure modes: stale entries, irrelevant recall and unbounded growth.
+- More memory is not better; an agent that recalls the wrong fact is harder to debug than one that recalls nothing.
+- Every option here needs an eviction policy and a deletion path, and neither is automatic.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a memory tool here from any agent entry that claims multi-turn or cross-session continuity.
+- When a build example implements memory, link the entry here so its retention and deletion behaviour is documented in one place.
 
 ## Resources
 

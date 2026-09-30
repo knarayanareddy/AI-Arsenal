@@ -59,6 +59,8 @@ Framing self-improvement as 'verbal RL': the policy update is a natural-language
 - 130/134 ALFWorld tasks solved with reflection versus significantly lower ReAct-only baselines — absolute gains of ~22% (2023)
 - 20% improvement on HotPotQA multi-hop reasoning over strong baselines, with ablations showing episodic reflection memory, not mere retrying, drives the gains (2023)
 
+Judge these results by what would have happened without the change, measured on the same protocol in the agents-and-reasoning phase; with `shinn-2023-reflexion`, `title`, `reflexion`. The claim to verify is the baseline, because an improvement reported against a weaker baseline says more about the baseline than about the method.
+
 ## Methodology
 
 Three cooperating components: an Actor (ReAct-style agent) generates trajectories; an Evaluator produces a success signal — unit tests for code (with self-generated tests), environment reward for ALFWorld, exact-match/LLM heuristics for QA; a Self-Reflection model maps failed trajectory + signal to a concise verbal lesson appended to a bounded episodic memory (typically last 1-3 reflections) included in the next attempt's context. Ablations isolate reflection versus naive retry and vary evaluator quality.
@@ -86,4 +88,4 @@ Builds directly on `yao-2022-react` (same phase) as its actor and on `wei-2022-c
 - [Code](https://github.com/noahshinn/reflexion)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Simon Willison is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Maintains the fastest-moving public record of model and API releases, annotating each one as it lands, and writes practical TIL entries on the operational problems of using them.
 
 ## Why Follow
 
-High-signal practical writing about using LLMs in real software, including security and tooling tradeoffs.
+Useful as a running changelog you can trust to be current, and for the most up-to-date public writing on prompt injection, structured output, caching and LLM evaluation.
 
 ## Notable Work
 
-LLM essays, Datasette, llm CLI ecosystem, prompt injection analysis.
+The LLM blog and the annual “LLMs in” summaries; the TIL series on prompt injection, tool use, embeddings, structured output and caching; datasette and the wider data tooling.
 
 ## Channels
 
@@ -39,10 +39,7 @@ LLM essays, Datasette, llm CLI ecosystem, prompt injection analysis.
 
 ## Resources
 
-- [Primary profile](https://simonwillison.net)
-- [github](https://github.com/simonw)
-- [newsletter](https://simonwillison.net/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Weblog](https://simonwillison.net/)
+- [Prompt injection tag](https://simonwillison.net/tags/prompt-injection/)
+- [Caching API responses](https://simonwillison.net/tags/prompt-caching/)
 

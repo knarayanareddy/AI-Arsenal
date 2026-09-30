@@ -20,17 +20,17 @@ This guide compares tools for the `deployment` job. Use it as a routing page, th
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+A model becomes a deployment through packaging, and the packaging choice is the one that shows up in code review and in rollback plans. Grouping by this job keeps the bundle, the registry and the hosting decision adjacent, so the platform-lock-in cost is visible before rather than after the first migration.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records what the packaging actually pins: environment, weights, GPU and secrets, so the artefact is reviewable rather than implied.
+- Managed platforms and self-hosted targets are listed together, because most models pass through both.
+- The platform-lock-in cost is stated per entry, which the feature list does not show.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the deployment and packaging facets on each tool entry. The comparison axis is what the artefact pins and what the target owns: a bundle you review in git is a review mechanism, while a managed platform removes the cluster work and the configuration options together.
 
 ## Getting Started
 
@@ -201,23 +201,26 @@ This table is exhaustive for tools tagged with job = deployment.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `deployment` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have a model artifact and need to decide how it becomes a versioned, rollback-able deployment.
+2. **Scenario**: you are choosing between a managed platform and your own cluster, and want the operational difference stated plainly.
+3. **Scenario**: you need container packaging for a model that has environment, GPU and weight requirements, and want them pinned rather than implied.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups packaging tools separately from hosting platforms, because you often need one of each.
+- States the platform-lock-in cost of the managed options, which is the part not visible in the pricing.
+- Emphasises that a bundle reviewable in git is a review and audit mechanism, not just a packaging convenience.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Deployment tooling decides how much of your runtime you control; a managed platform removes the cluster work and the configuration options with it.
+- GPU configuration, secrets and autoscaling are usually the platform's responsibility, which means reproducing the environment elsewhere is your problem.
+- A package format that is a directory is easy to review in git, which is the underrated reason to prefer one.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a deployment tool here from any project entry that has a Dockerfile or a serving config, so the packaging story is documented once.
+- When a serving-and-deployment build example exists, reference it from the tool entries involved.
 
 ## Resources
 

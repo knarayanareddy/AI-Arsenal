@@ -55,7 +55,7 @@ Vercel's open-source TypeScript toolkit for building AI applications: a provider
 
 ## Why it's in the Arsenal
 
-The default LLM abstraction of the TypeScript/Next.js world: a unified generateText/streamText/generateObject API over every major provider, plus UI hooks that solve the hard frontend problem — streaming stateful chat into React — that Python-first frameworks ignore. It earns a place in the Arsenal because it directly addresses a recurring decision point: you build AI features in TypeScript/React/Next.js — useChat and streaming RSC integration handle token streaming, tool-call rendering, and message state that you would otherwise hand-roll. See Strengths / Limitations below before adopting it.
+Vercel AI SDK is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -77,18 +77,21 @@ const { text } = await generateText({ model: openai('gpt-4.1'), prompt: 'Hello' 
 
 ## Key Use Cases
 
-1. **Scenario**: you build AI features in TypeScript/React/Next.js — useChat and streaming RSC integration handle token streaming, tool-call rendering, and message state that you would otherwise hand-roll
-2. **Scenario**: you want provider portability with typed structured output — swap OpenAI/Anthropic/Google models by changing one identifier while keeping Zod-schema-validated generateObject calls intact
+1. **Depending on it safely**: the work is the boundary — which calls go through Vercel AI SDK, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What to measure first**: `build`, `features`, `typescript`, `react` decide whether Vercel AI SDK works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Vercel AI SDK against `langchain`, `mastra`, `openai-agents-sdk` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You build AI features in TypeScript/React/Next.js — useChat and streaming RSC integration handle token streaming, tool-call rendering, and message state that you would otherwise hand-roll
-- You want provider portability with typed structured output — swap OpenAI/Anthropic/Google models by changing one identifier while keeping Zod-schema-validated generateObject calls intact
+- What Vercel AI SDK gives you that reading the feature list does not: a layered design: provider adapters normalize each vendor API into a common language-model interface; the core exposes typed generation calls with Zod-schema structured output and a tool-calling loop (stopWhen/prepareStep control agentic iteration); AI SDK UI hooks (useChat, useCompletion) manage streaming transport (SSE), message state, and generative-UI rendering of tool results as React components, which is the part you have to evaluate against your own workload.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- Your backend is Python — the SDK is TypeScript-only; use LiteLLM/Pydantic-AI equivalents there
-- You need deep multi-agent orchestration (graph workflows, checkpointing, human-in-the-loop persistence) — the SDK's agent loop is deliberately simple; LangGraph or Mastra layer richer control flow
+- Adoption risk for Vercel AI SDK is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Vercel AI SDK against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Vercel AI SDK overlaps `langchain`, `mastra`, `openai-agents-sdk`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

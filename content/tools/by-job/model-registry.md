@@ -20,17 +20,17 @@ This guide compares tools for the `model-registry` job. Use it as a routing page
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Reproducibility is a versioned-artefact problem: the weights, the preprocessor and the prompt that produced a given output. Grouping by this job makes that explicit, and separates registry infrastructure from experiment tracking, which are frequently bought as one product and used as two.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records what identity it captures — weights, preprocessor, prompt — because that is what reproducibility requires.
+- Registry infrastructure and experiment tracking are listed separately, since they are frequently bought together and used as two things.
+- Self-hosted options state what you take on, which is the real cost of the free licence.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the registry and experiment-tracking facets on each tool entry. The comparison axis is what identity is captured, since a registry that records weights but not the preprocessor or prompt reproduces nothing useful.
 
 ## Getting Started
 
@@ -139,23 +139,26 @@ This table is exhaustive for tools tagged with job = model-registry.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `model-registry` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to track which weights, prompt and preprocessor version produced a given output, and reproduce it later.
+2. **Scenario**: a staging model needs to be promoted to production with an audit trail.
+3. **Scenario**: your serving layer needs a stable contract for model identity independent of the filesystem layout behind it.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Treats model identity as a versioned artefact including preprocessor and prompt, which is what reproducibility actually requires.
+- Separates registry infrastructure from experiment tracking, which are often bought as one thing and used as two.
+- Makes the self-hosted cost explicit, since a registry is a service you now operate.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- A registry records identity; it does not record the data, so reproducing an output still depends on the training corpus being versioned too.
+- The metadata schema you choose early is expensive to change, because downstream validation tends to encode it.
+- Self-hosted options here are infrastructure you own, which is the trade: control against the cost of running it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a registry here from every serving and fine-tuning entry, since the registry is what makes those reproducible.
+- When a build example promotes a model, note the registry step so the promotion is auditable.
 
 ## Resources
 

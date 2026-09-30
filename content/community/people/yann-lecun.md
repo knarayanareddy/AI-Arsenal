@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Yann LeCun is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Argues publicly that autoregressive next-token prediction plus scale is not a path to the kind of understanding we want, and proposes a world-model alternative.
 
 ## Why Follow
 
-Useful for broader AI research context and critical perspective on current LLM approaches.
+Useful as the most sustained technical dissent from inside the field, and for the concrete world-model research programme offered as an alternative rather than only a critique.
 
 ## Notable Work
 
-Foundational deep learning and representation-learning work.
+The convolutional and residual-architecture work; “A Path Towards Autonomous Machine Intelligence”; the JEPA line of self-supervised world-model research; the TVM compilation stack.
 
 ## Channels
 
@@ -36,9 +36,7 @@ Foundational deep learning and representation-learning work.
 
 ## Resources
 
-- [Primary profile](https://en.wikipedia.org/wiki/Yann_LeCun)
-- [website](https://en.wikipedia.org/wiki/Yann_LeCun)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [A Path Towards Autonomous Machine Intelligence](https://openreview.net/forum?id=BZ5a1r-kVsf)
+- [JEPA](https://github.com/facebookresearch/jepa)
+- [TVM](https://tvm.apache.org/)
 

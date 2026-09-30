@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** Open-source, self-hostable scanner pipeline for LLM inputs and outputs — prompt injection, PII anonymization, secrets, toxicity, ban-topics. Composable; each scanner costs latency.
+> **TL;DR:** LLM Guard is the catalogued option for the security-and-guardrails job. The capability is documented; the false-positive rate on your own traffic is not, so measure it before routing production input through it. Read Strengths and Limitations together — this entry states what it claims to do and what depending on it would commit you to operating.
 
 ## Overview
 
@@ -61,33 +61,40 @@ Each scanner takes the prompt (or output), returns a sanitized version plus a va
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring LLM Guard into anything else. The command below runs against the `security-and-guardrails` job and returns a result you can inspect directly.
+
 ```bash
 pip install llm-guard
 ```
 
+Follow the official documentation at https://protectai.github.io/llm-guard/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: anonymizing PII in user prompts before they reach a third-party model, restoring entities in the response
-2. **Scenario**: scanning RAG context and user input for injection patterns before prompt assembly
-3. **Scenario where this is NOT the right fit**: conversation-policy enforcement ("never discuss competitors") — use NeMo Guardrails' flow rules instead
+1. **What it does in a system**: LLM Guard sits on the security-and-guardrails leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put LLM Guard and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LLM Guard's comparison set is `nemo-guardrails`, `guardrails-ai`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Breadth: one dependency covers injection, PII, secrets, toxicity, and topic bans
-- Fully local operation satisfies data-residency and privacy constraints
-- Per-scanner risk scores integrate cleanly into tracing and alerting
+- What LLM Guard gives you that its headline description does not: each scanner takes the prompt (or output), returns a sanitized version plus a validity flag and risk score; scanners chain sequentially into a pipeline. ML-based scanners load Hugging Face models locally at startup, so detection quality and latency are controlled by which scanners you enable, which is the part to check against your own pipeline before trusting the feature list.
+- LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: LLM Guard is reachable through `langchain`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure LLM Guard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Every enabled ML scanner adds per-request inference latency — measure with your real scanner set
-- Detection is probabilistic: injection scanners reduce, not eliminate, attack surface (layer with least-privilege tool design)
-- Maintenance cadence has slowed relative to the fast-moving attack landscape; review scanner model freshness
+- Depending on LLM Guard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LLM Guard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [NeMo Guardrails](./nemo-guardrails.md), [Guardrails AI](./guardrails-ai.md), and [Rebuff](./rebuff.md) before adopting — they cover flow policy, output structure, and injection detection respectively; LLM Guard is the scanner-breadth option.
-- Link this tool from job guides using its canonical ID `llm-guard`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt LLM Guard as a Python dependency or sidecar service against the `security-and-guardrails` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `nemo-guardrails`, `guardrails-ai`, `rebuff` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `langchain` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

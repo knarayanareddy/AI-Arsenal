@@ -5,18 +5,18 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs"
+description: "Self-hostable personal AI that searches your documents and the web, answers with citations, and runs scheduled automations from any surface"
 github_url: "https://github.com/khoj-ai/khoj"
-license: "AGPL-3.0"
+license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: "Khoj (YC-backed)"
-tags: [agents, rag, self-hosted]
+tags: [self-hosted, rag]
 maturity: production
-cost_model: open-source
-github_stars: 35524
+cost_model: self-hostable
+github_stars: 37531
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-06-24"
+last_commit: "2026-08-02"
 docs_url: "https://docs.khoj.dev"
 demo_url: null
 paper_url: null
@@ -27,12 +27,8 @@ relation_to_stack: [deploy-as-is]
 health_signals: [org-backed, actively-maintained, community-driven]
 ecosystem_role:
   - "The personal-knowledge-first assistant: where document-chat appliances treat files as a corpus, Khoj treats your continuously-updated notes (Obsidian, org-mode, Emacs, WhatsApp) as a second brain, adding custom agents, scheduled automations, and research modes on top."
-best_for:
-  - "You live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator"
-  - "You want scheduled/automated AI workflows (daily digests, recurring research) from a self-hosted personal assistant rather than one-off chat sessions"
-avoid_if:
-  - "You need team/multi-user knowledge management with permissions — Khoj is personal-first; Onyx or AnythingLLM's multi-user Docker mode fit organizations better"
-  - "AGPL licensing conflicts with embedding it in your commercial product — the license is deliberately copyleft"
+best_for: ["You have a large personal corpus across markdown, PDF, Word, org-mode and Notion exports and you want one semantic search surface that reaches all of it from Obsidian or Emacs.", "You want to point a personal assistant at a local model through llama.cpp or any hosted provider and keep the option of running the whole thing on your own machine.", "You want recurring research handled for you, because scheduled automations deliver personal newsletters and smart notifications to your inbox on a timer."]
+avoid_if: ["You are embedding an agent in a product, because this is a personal-assistant application with its own surfaces rather than a library with a stable programmatic interface.", "Your organisation forbids strong-copyleft dependencies in shipped software, because the project is AGPL-3.0 and that reaches networked use.", "You need a guaranteed latency SLA on retrieval, because it is a chat-and-search product that calls whatever model you configure and inherits that model's latency."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: [anythingllm, open-webui]
@@ -51,51 +47,55 @@ status: active
 
 ## Overview
 
-An open-source personal AI application positioned as a 'second brain': it indexes your notes and documents (markdown, org-mode, PDFs, Notion, GitHub), keeps them searchable semantically, and layers chat, custom agents with tuned personalities and tools, scheduled automations, and a deep-research mode over any LLM — self-hosted or via its hosted cloud.
+Khoj is a personal AI application that extends from on-device use to a cloud-scale deployment, covering chat with local or online models including llama3, qwen, gemma, mistral, GPT, Claude, Gemini and DeepSeek. It retrieves from both the internet and your own documents, with the README naming image, PDF, markdown, org-mode, Word and Notion files, and it is reachable from a browser, Obsidian, Emacs, a desktop app and WhatsApp. Beyond answering, it lets you create agents with custom knowledge, persona, chat model and tools, and schedule automations that push newsletters and notifications to your inbox. It also generates images, speaks, and plays back messages. The project markets itself as open-source and self-hostable without exception, with a hosted app available when you do not want to run it.
 
 ## Why it's in the Arsenal
 
-The personal-knowledge-first assistant: where document-chat appliances treat files as a corpus, Khoj treats your continuously-updated notes (Obsidian, org-mode, Emacs, WhatsApp) as a second brain, adding custom agents, scheduled automations, and research modes on top. It earns a place in the Arsenal because it directly addresses a recurring decision point: you live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator. See Strengths / Limitations below before adopting it.
+The decision it removes is whether a personal assistant has to hand your notes to a vendor. Khoj is designed so the whole stack, including the model, can live on your machine, which matters when the corpus is a decade of private notes. It also removes the fragmentation of having a separate app for each surface: the same agent is available from an editor, a phone and a chat app rather than three disconnected copies of the same assistant. The trade is that self-hosting means you own updates, model downloads and the embedding of a retrieval stack into your own schedule.
 
 ## Architecture
 
-A Django-based server indexes content incrementally into embeddings (local sentence-transformers or hosted), with clients for web, Obsidian, Emacs, WhatsApp, and desktop keeping sources synced. Chat routes through configurable LLMs (Ollama-served local models or any API provider); agents combine custom instructions, knowledge subsets, and tools (web search, code execution); automations run agent tasks on cron schedules delivered by email.
+The Python service ingests documents of several formats into a semantic search index, and the README points to a published write-up on its retrieval and reasoning benchmark results rather than publishing numbers inline. Query handling is model-agnostic: a local llama.cpp backend or any hosted provider can serve the same chat surface, so the assistant is a client of the inference layer rather than an owner of it. On top of retrieval sit agent definitions carrying their own knowledge base, persona, chat model and tool set, plus a scheduler for recurring automations that generate newsletters and notifications for inbox delivery. Surfaces are thin clients against that service: web, desktop, Obsidian and Emacs plugins, and WhatsApp, which is why the model-agnostic backend matters more than any single front end.
 
 ## Ecosystem Position
 
-Upstream: sentence-transformers for local embeddings, any LLM backend. Competing: AnythingLLM and Open WebUI (document/chat appliances), Rewind/commercial personal-AI products. Complementary: editor integrations make it the strongest open option for the PKM (personal knowledge management) community; YC backing plus an active open-source cadence signal sustainability.
+Khoj overlaps with the personal-RAG and second-brain tools such as AnythingLLM, Open WebUI and the Obsidian community plugins, and it competes with them on corpus breadth and the number of surfaces rather than on any single retrieval technique. Where AnythingLLM leans toward a workspace-and-document model and Open WebUI toward a general self-hosted chat front end, Khoj differentiates on semantic search across a personal file corpus plus editors and WhatsApp as first-class clients. It is an alternative to hosted assistants of the kind represented in content/projects/agent-systems, since running it locally with llama.cpp removes the API dependency entirely. It complements rather than competes with the vector database entries in content/projects/data-and-retrieval, which is where a larger or shared corpus would move.
 
 ## Getting Started
 
+Self-hosting is the documented path, and pip plus a local model is the shortest version of it:
+
 ```bash
 pip install khoj
-khoj --anonymous-mode
-# open localhost:42110, connect your notes folder or Obsidian vault, pick a local or hosted LLM
+khoj onboard
+khoj search
 ```
+
+`khoj onboard` walks through the interactive setup that registers a model provider or a local llama.cpp server, then points you at `$KHOJ_WORKSPACE` for the folder to index. Start the service with `khoj serve` and open the web client, or use the packaged Docker image from the workflow's published container. The setup docs at docs.khoj.dev cover the self-host and enterprise variants in more detail.
 
 ## Key Use Cases
 
-1. **Scenario**: you live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator
-2. **Scenario**: you want scheduled/automated AI workflows (daily digests, recurring research) from a self-hosted personal assistant rather than one-off chat sessions
+1. Private corpus Q&A: index a notes and PDF directory and ask questions that cite the source document and section, entirely on your own hardware.
+2. Editor-resident assistant: query the same index from inside Obsidian or Emacs so the answer arrives in the tool where you are already writing.
+3. Scheduled personal research: define an automation that runs on a schedule and delivers a newsletter or a notification when something in your corpus or the web changes.
 
 ## Strengths
 
-- You live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator
-- You want scheduled/automated AI workflows (daily digests, recurring research) from a self-hosted personal assistant rather than one-off chat sessions
+- Model-agnostic by design, spanning local llama.cpp backends and hosted providers, so the same assistant works offline and online.
+- Exceptionally wide surface coverage for a personal tool: browser, desktop, Obsidian, Emacs, phone and WhatsApp against one index.
+- Semantically searches a genuinely mixed corpus, spanning PDF, markdown, org-mode, Word and Notion exports rather than one file type.
+- AGPL-3.0 with a hosted option alongside a documented self-host path, so you can start on the cloud app and move the same product in-house.
 
 ## Limitations
 
-- You need team/multi-user knowledge management with permissions — Khoj is personal-first; Onyx or AnythingLLM's multi-user Docker mode fit organizations better
-- AGPL licensing conflicts with embedding it in your commercial product — the license is deliberately copyleft
+AGPL-3.0 is a real constraint if you intend to modify and serve the project, and it rules the code out of many closed-source commercial products without a separate arrangement. Self-hosting is genuinely yours: model downloads, index storage, embedding backends and upgrades are all your problem, and a personal corpus of a decade of notes plus PDFs is a non-trivial indexing job on modest hardware. Search quality inherits from the model you point it at, so a small local model gives weaker answers and the README's quality claims are argued in a blog post rather than in a reproducible benchmark table. The multi-surface ambition means many client integrations, and a WhatsApp bridge in particular adds a dependency on a third-party messaging policy you do not control.
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+This belongs in content/projects/agent-systems as the personal-assistant, self-hosted end of the phase, and it consumes the inference entries in content/projects/inference-engines such as llama-cpp directly when you run a local model. Read it against AnythingLLM and the other workspace assistants in the same phase to pick a personal-RAG shape, and against the vector database entries in content/projects/data-and-retrieval if your corpus outgrows a local index. The retrieval frameworks in content/projects/framework are the alternative if you need the same grounding inside an application you build rather than a personal assistant you run.
 
 ## Resources
 
-- [GitHub](https://github.com/khoj-ai/khoj)
-- [Documentation](https://docs.khoj.dev)
-
----
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (35,524 stars, last commit 2026-06-24, verified via GitHub API on 2026-07-08)*
+- [GitHub — khoj-ai/khoj](https://github.com/khoj-ai/khoj)
+- [Documentation — docs.khoj.dev](https://docs.khoj.dev)
+- [Self-hosting setup guide](https://docs.khoj.dev/get-started/setup)

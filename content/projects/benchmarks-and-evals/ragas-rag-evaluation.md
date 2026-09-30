@@ -61,7 +61,7 @@ An open-source evaluation framework purpose-built for measuring retrieval-augmen
 
 ## Why it's in the Arsenal
 
-The standard open-source evaluation framework specifically for RAG pipeline quality (retrieval and generation) — consolidates the former duplicate ragas.md entry. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need RAG-specific evaluation metrics (faithfulness, context precision/recall, answer relevance) rather than generic LLM output scoring. See Strengths / Limitations below before adopting it.
+Ragas for RAG Evaluation is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -80,22 +80,25 @@ Upstream: model-provider-agnostic, works with any LLM as the judge model. Downst
 
 ## Key Use Cases
 
-1. **Scenario**: you need RAG-specific evaluation metrics (faithfulness, context precision/recall, answer relevance) rather than generic LLM output scoring
-2. **Scenario**: you want to run automated regression tests on retrieval and generation quality after changing chunking, embeddings, retrievers, or prompts
+1. **Depending on it safely**: the work is the boundary — which calls go through Ragas for RAG Evaluation, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What dominates the decision**: `rag-specific`, `evaluation`, `metrics`, `faithfulness` are the variables that actually move the outcome for Ragas for RAG Evaluation in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need RAG-specific evaluation metrics (faithfulness, context precision/recall, answer relevance) rather than generic LLM output scoring
-- You want to run automated regression tests on retrieval and generation quality after changing chunking, embeddings, retrievers, or prompts
+- Beyond the headline description, Ragas for RAG Evaluation's architecture section is the honest source: evaluates examples containing questions, generated answers, retrieved contexts, and (optionally) reference answers using a library of RAG-specific metric functions (faithfulness, context precision, context recall, answer relevance) that combine rule-based checks with LLM-as-judge scoring for the more subjective dimensions.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need general-purpose LLM evaluation beyond RAG-specific metrics — a broader tool like DeepEval or promptfoo may be a better single choice if RAG is only part of your evaluation surface
-- You don't have representative evaluation datasets — Ragas's metrics are only as meaningful as the question/answer/context examples you evaluate against
+- The cost this entry cannot quantify for you is operational: the Ragas for RAG Evaluation footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Ragas for RAG Evaluation against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Ragas for RAG Evaluation here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for Ragas for RAG Evaluation in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

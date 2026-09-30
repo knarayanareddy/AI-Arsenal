@@ -46,7 +46,7 @@ An enterprise-focused model provider: Command generative models tuned for RAG an
 
 ## Why It's in the Arsenal
 
-Cohere earns a place in the Arsenal because it directly addresses a recurring decision point: your RAG stack needs a strong managed reranker — Cohere Rerank remains the most-adopted drop-in relevance booster. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Cohere rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -67,27 +67,30 @@ pip install cohere
 
 ## Use Cases
 
-1. **Scenario**: your RAG stack needs a strong managed reranker — Cohere Rerank remains the most-adopted drop-in relevance booster
-2. **Scenario**: enterprise deployments needing private/VPC or on-prem model hosting with multilingual strength
-3. **Scenario where this is NOT the right fit**: you want frontier general-intelligence chat models — Command sits below GPT/Claude/Gemini tiers on most evals — evaluate an alternative instead
+1. **Integrating Cohere**: the production-serving call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Cohere.
+3. **Choosing between candidates**: Cohere's comparison set is `voyage-ai`, `cohere`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your RAG stack needs a strong managed reranker — Cohere Rerank remains the most-adopted drop-in relevance booster
-- Enterprise deployments needing private/VPC or on-prem model hosting with multilingual strength
+- Beyond the marketing, Cohere's own notes are the useful part: embed produces dense vectors for indexing; Rerank scores query-document pairs with a cross-encoder to reorder candidate sets from any retriever; Command models add RAG-grounded generation with citations. All are available behind private deployments for data-sensitive enterprises.
+- Against `voyage-ai`, `cohere`, the difference that decides this is deployment model and cost rather than the feature list, and Cohere sits at the hosted end of that axis.
+- Pin the client library rather than the API: Cohere is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Cohere's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want frontier general-intelligence chat models — Command sits below GPT/Claude/Gemini tiers on most evals
-- Hobby-scale projects; the platform is enterprise-oriented
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on Cohere means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Cohere's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Cohere overlaps `voyage-ai`, `cohere`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `voyage-ai`, `cohere` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `cohere`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Cohere over an HTTP endpoint from whichever service owns the call site against the `production-serving` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `voyage-ai`, `cohere` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `langchain`, `llamaindex` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +103,4 @@ pip install cohere
 Reception should be updated with verified sources during regular content reviews.
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

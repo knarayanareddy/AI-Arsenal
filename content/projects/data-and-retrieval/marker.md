@@ -55,7 +55,7 @@ A document-conversion tool that turns PDFs, images, EPUBs, and office documents 
 
 ## Why it's in the Arsenal
 
-The model-pipeline approach to PDF conversion: purpose-trained layout/OCR models (the Surya stack) rather than heuristics, sitting between fast-but-lossy converters (MarkItDown) and heavy full-service extractors — a standard choice for scientific-PDF RAG ingestion. It earns a place in the Arsenal because it directly addresses a recurring decision point: you ingest scientific papers or technical PDFs where equations (to LaTeX), tables, and multi-column layout must survive conversion — Marker's benchmark suite specifically targets these failure modes. See Strengths / Limitations below before adopting it.
+Marker appears in this catalog as a reference point for the data-and-retrieval phase; the useful question is what your corpus does to it that its own test data does not. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -76,22 +76,25 @@ marker in_folder/ --workers 4
 
 ## Key Use Cases
 
-1. **Scenario**: you ingest scientific papers or technical PDFs where equations (to LaTeX), tables, and multi-column layout must survive conversion — Marker's benchmark suite specifically targets these failure modes
-2. **Scenario**: you need batch throughput on GPUs — pages process in parallel with reported ~100+ pages/sec on H100-class hardware in batch mode
+1. **Integrating Marker**: treat it as a dependency with its own failure modes rather than a library call — decide timeout, retry and degraded-mode behaviour before the first query goes through it, and put it behind an interface so it can be replaced without a rewrite.
+2. **What to measure first**: `ingest`, `scientific`, `papers`, `technical` decide whether Marker works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare Marker against `docling`, `mineru`, `markitdown` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You ingest scientific papers or technical PDFs where equations (to LaTeX), tables, and multi-column layout must survive conversion — Marker's benchmark suite specifically targets these failure modes
-- You need batch throughput on GPUs — pages process in parallel with reported ~100+ pages/sec on H100-class hardware in batch mode
+- What Marker gives you that reading the feature list does not: built on the Surya model family (detection, recognition, layout, table-rec): pages are segmented into typed blocks, each processed by specialized models, then assembled by a reading-order and post-processing stage into structured output with extracted images. Hybrid mode routes low-confidence blocks to an LLM (Gemini/local) for correction; a FastAPI server and Python API cover service and library use, which is the part you have to evaluate against your own workload.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- GPL-3.0 (plus revenue-conditional commercial terms for the models) conflicts with your product's licensing — Docling (MIT) or MarkItDown (MIT) are safer embeds
-- Your documents are simple digital-native PDFs — pdfplumber-class text extraction is orders of magnitude cheaper than running layout models
+- Adoption risk for Marker is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Marker against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Marker overlaps `docling`, `mineru`, `markitdown`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This sits in content/projects/data-and-retrieval as a document-to-markdown converter, which places it upstream of every entry in this phase that consumes parsed text: an extraction step like this one runs before chunking, and chunking runs before the vector stores such as chroma, qdrant and weaviate. Compared with the RAG platform entries in the same phase it is not a retrieval system at all, so the honest boundary is that you would pair it with one rather than choose between them.
 
 ## Resources
 
@@ -99,4 +102,4 @@ This is a data-and-retrieval entry: it documents a vector database, document-pro
 - [Documentation](https://github.com/datalab-to/marker#readme)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (37,280 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 37280 as of 2026-07-08; last commit 2026-07-07; both verified via the GitHub API.*

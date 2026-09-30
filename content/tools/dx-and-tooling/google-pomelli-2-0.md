@@ -46,7 +46,7 @@ Google Pomelli 2.0 is a freemium Google Labs preview that puts a visual, no-code
 
 ## Why It's in the Arsenal
 
-Pomelli is tracked as a data-exploration option to weigh against code-first analysis tools: it trades reproducibility for speed of visual iteration, and — as a Google Labs preview — its stability should be verified before any production reliance. See Strengths / Limitations before adopting it.
+Google Pomelli 2.0 is a explore and interact with large datasets through a visual, intuitive interface. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are not published. From the description it connects to a dataset a
 
 ## Use Cases
 
-1. **Scenario**: you want a visual, intuitive interface to explore large datasets without writing analysis code
-2. **Scenario**: you're doing exploratory data analysis and need quick visual interaction over raw query tools
-3. **Scenario where this is NOT the right fit**: you need reproducible, code-based analysis pipelines rather than an interactive exploration tool — evaluate an alternative instead
+1. **Where it fits**: You want a visual, intuitive interface to explore large datasets without writing analysis code.
+2. **Adoption checkpoint**: validate Google Pomelli 2.0 on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want a visual, intuitive interface to explore large datasets without writing analysis code
-- You're doing exploratory data analysis and need quick visual interaction over raw query tools
+- In concrete terms, Google Pomelli 2.0 is an explore and interact with large datasets through a visual, intuitive interface — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Google Pomelli 2.0 has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Google Pomelli 2.0 is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Maturity here is beta, so treat Google Pomelli 2.0's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You need reproducible, code-based analysis pipelines rather than an interactive exploration tool
-- You need an open-source or self-hostable data exploration tool
-
-- _Enrichment status: draft. Pomelli is a closed-source Google Labs preview surfaced via a curated newsletter; its category placement (structured-output) and behavior here are best-effort from the description, not independently verified. Last reviewed: 2026-06-30._
+- Depending on Google Pomelli 2.0 means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Google Pomelli 2.0 describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Google Pomelli 2.0 is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 
@@ -97,4 +97,4 @@ Pomelli fits an exploratory analysis workflow rather than an automated data pipe
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

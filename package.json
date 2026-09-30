@@ -77,7 +77,9 @@
     "migration:benchmarks:enforce": "node scripts/check-benchmarks-migration-progress.js --enforce",
     "migration:trending:progress": "node scripts/check-trending-migration-progress.js",
     "migration:trending:enforce": "node scripts/check-trending-migration-progress.js --enforce",
-    "new:benchmark": "node scripts/scaffold.js --type=benchmark"
+    "new:benchmark": "node scripts/scaffold.js --type=benchmark",
+    "validate:semantic": "node scripts/semantic-editorial-pass.js --changed-only",
+    "validate:semantic:all": "node scripts/semantic-editorial-pass.js --all"
   },
   "dependencies": {
     "ajv": "^8.12.0",

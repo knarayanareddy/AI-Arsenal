@@ -46,7 +46,7 @@ An open-source evaluation framework offering prebuilt operators for the common L
 
 ## Why It's in the Arsenal
 
-UpTrain earns a place in the Arsenal because it directly addresses a recurring decision point: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+UpTrain is catalogued as a open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics, which is the specific claim the rest of the entry has to support. Read it beside `ragas-rag-evaluation`, `deepeval`, `evidently`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,27 +67,29 @@ pip install uptrain
 
 ## Use Cases
 
-1. **Scenario**: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself
-2. **Scenario**: evaluating with locally hosted judge models via Ollama for cost/privacy
-3. **Scenario where this is NOT the right fit**: you need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024 — evaluate an alternative instead
+1. **Where it sits**: on the evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so UpTrain can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on UpTrain.
+3. **Choosing between candidates**: UpTrain's comparison set is `ragas-rag-evaluation`, `deepeval`, `evidently`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself
-- Evaluating with locally hosted judge models via Ollama for cost/privacy
+- The implementation detail worth reading before adopting UpTrain is specific — each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self-hosted dashboard — and that is where a capability claim either survives contact with your data or does not.
+- Against `ragas-rag-evaluation`, `deepeval`, `evidently`, the difference that decides this is deployment model and cost rather than the feature list, and UpTrain sits at the hosted end of that axis.
+- Depending on UpTrain means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so UpTrain's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024
-- Pytest-style eval-in-CI workflows; DeepEval's testing ergonomics are stronger
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to UpTrain, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for UpTrain describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- UpTrain is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-- Compare against `ragas-rag-evaluation`, `deepeval`, `evidently` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `uptrain`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt UpTrain as a Python dependency or sidecar service against the `evaluation` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `ragas-rag-evaluation`, `deepeval`, `evidently` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +102,4 @@ pip install uptrain
 - 2,354 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

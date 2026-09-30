@@ -55,7 +55,7 @@ A benchmark suite and evaluation framework for text (and increasingly multimodal
 
 ## Why it's in the Arsenal
 
-The de facto standard for comparing embedding models: every serious embedding release (OpenAI, Cohere, Voyage, Qwen, Gemini) reports MTEB scores, and its Hugging Face leaderboard is where retrieval-stack model selection starts. It earns a place in the Arsenal because it directly addresses a recurring decision point: you are choosing an embedding model for RAG or search — MTEB(Multilingual) and task-specific splits (retrieval, reranking, clustering, STS) let you compare on the task type you actually run rather than a single headline number. See Strengths / Limitations below before adopting it.
+MTEB appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -77,22 +77,25 @@ results = mteb.evaluate(model, tasks=benchmark)
 
 ## Key Use Cases
 
-1. **Scenario**: you are choosing an embedding model for RAG or search — MTEB(Multilingual) and task-specific splits (retrieval, reranking, clustering, STS) let you compare on the task type you actually run rather than a single headline number
-2. **Scenario**: you are evaluating your own fine-tuned embedding or reranker — one `mteb.evaluate` call benchmarks any sentence-transformers-compatible or custom encoder against the public reference points
+1. **Running it in anger**: the first real evaluation of MTEB is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What dominates the decision**: `choosing`, `embedding`, `model`, `search` are the variables that actually move the outcome for MTEB in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You are choosing an embedding model for RAG or search — MTEB(Multilingual) and task-specific splits (retrieval, reranking, clustering, STS) let you compare on the task type you actually run rather than a single headline number
-- You are evaluating your own fine-tuned embedding or reranker — one `mteb.evaluate` call benchmarks any sentence-transformers-compatible or custom encoder against the public reference points
+- What MTEB gives you that reading the feature list does not: tasks are versioned dataset+metric definitions grouped into named benchmarks (MTEB(eng), MTEB(Multilingual), MIEB for images, BEIR compatibility); models implement a minimal encoder interface (or are wrapped automatically from sentence-transformers), and the framework handles batching, caching, metric computation (nDCG@10, MAP, v-measure, Spearman), and result serialization that feeds the public leaderboard, which is the part you have to evaluate against your own workload.
+- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You treat the leaderboard rank as ground truth for your domain — public-benchmark overfitting is a known issue; always validate the top candidates on a private slice of your own retrieval data
-- You need end-to-end RAG quality evaluation — MTEB scores the encoder in isolation; retrieval-pipeline evals (chunking, rerankers, generation) need separate harnesses
+- The cost this entry cannot quantify for you is operational: the MTEB footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside MTEB here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for MTEB in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -100,4 +103,4 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 - [Documentation](https://embeddings-benchmark.github.io/mteb/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (3,344 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 3344 as of 2026-07-08; last commit 2026-07-07; both verified via the GitHub API.*

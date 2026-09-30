@@ -29,21 +29,16 @@ name: "ml-intern"
 artifact_type: tool
 category: agents
 subcategory: autonomous
-description: "Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub"
-github_url: https://github.com/huggingface/ml-intern
-license: "Apache-2.0"
-primary_language: "Python"
-tags:
-  - "agents"
-  - "training"
-  - "tool-use"
-  - "research"
-  - "huggingface"
-maturity: alpha
-cost_model: usage-based
-github_stars: 10661
-last_commit: "2026-06-18"
-docs_url: https://smolagents-ml-intern.hf.space/
+description: "Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down"
+github_url: "https://github.com/huggingface/ml-intern"
+license: Apache-2.0
+primary_language: Python
+tags: [huggingface, agents]
+maturity: experimental
+cost_model: open-source
+github_stars: 10816
+last_commit: "2026-09-14"
+docs_url: "https://huggingface.co/chat/"
 phase: agent-system
 domain:
   - "language"
@@ -56,52 +51,64 @@ health_signals:
 ecosystem_role:
   - "Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing"
   - "smolagents reference for end-to-end ML workflow automation"
-best_for:
-  - "Automating reproducible ML experiment loops"
-  - "Learning how agents connect papers, training, and model publishing"
-avoid_if:
-  - "You need a fully autonomous production training pipeline"
-  - "Your data, credentials, or compute cannot be exposed to agent tools"
+best_for: ["You are studying how an autonomous ML-engineering agent was structured and want its historical documentation as a reference for agent loop, tool use and model routing.", "You already have a deployment built against the ml-intern CLI and you need to know precisely what was retired and what to migrate to instead.", "You want to understand the Hugging Face Inference Providers and Hub integration pattern the agent used, since the retained docs still describe the token and routing setup."]
+avoid_if: ["You need a working agent, because the README states the hosted web application and the ml-intern CLI have both been retired.", "You need support, bug fixes, or security updates, because the repository is archived and explicitly promises none of those.", "You are evaluating it as a maintained dependency, because the maintainers redirect all users to HuggingChat instead."]
 enrichment_notes: "The agent uses hosted Inference Providers by default and can use local OpenAI-compatible servers; compute billing and sandbox controls are operator concerns. Draft pending review."
 ---
 
 ## Overview
 
-ml-intern is an agentic ML workflow rather than a single training script: it can read papers and documentation, formulate an experiment, run training, and publish a resulting model. Built on smolagents, it gives the catalog a concrete example of an agent spanning research and delivery.
+ML Intern was an autonomous agent that researched, wrote and shipped machine-learning code using the Hugging Face ecosystem, with access to documentation, papers, datasets and cloud compute. The retained documentation shows a Python CLI installed from a git clone with uv, requiring HF_TOKEN for Inference Providers and Hub actions plus GITHUB_TOKEN for repository work, with all API model calls routed through Hugging Face Inference Providers. It supported an interactive chat mode and a headless single-prompt auto-approve mode, with flags for sandbox tools from an HF Space, a maximum-iteration cap, streaming control, and per-run model selection, and it also documented a local-model path. The repository is now archived: the README is an IMPORTANT banner stating the project is no longer maintained, the web app and CLI are retired, and users should move to HuggingChat.
 
 ## Why it's in the Arsenal
 
-ml-intern earns a slot because it demonstrates an agent that can span paper reading, experiment execution, model training, and Hub publication. Built on smolagents and backed by Hugging Face Inference Providers, it makes the research-to-checkpoint loop concrete while still allowing local OpenAI-compatible servers.
+The useful thing here is historical rather than operational. ML Intern is a documented example of an agent scoped to one ecosystem, with deep access to that ecosystem's docs, papers, datasets and compute, and the README describes it as having written and shipped ML code rather than merely suggested it. That makes it a readable reference for a design that most agents avoid: narrow domain scope, provider routing through a single hub, and a headless mode built for automation. Anyone choosing an agent today should read it for shape and then use something maintained.
 
 ## Architecture
 
-The CLI uses tool calls and provider routing to coordinate reading, coding, training, evaluation, and Hub operations. Hosted calls go through Hugging Face Inference Providers, while local models are selected through LiteLLM-compatible OpenAI endpoints such as vLLM or Ollama; optional Space sandbox tools constrain execution.
+The architecture visible from the retained docs is a CLI-first agent: uv-managed install from source, a tool registry over the Hugging Face Hub, Inference Providers as the single model access path, and an iteration-bounded loop exposed through --max-iterations. Streaming is on by default with --no-stream to disable, model choice is a per-run flag with a slash command inside the interactive session, and a sandbox-tools option delegates execution to an HF Space. Two credentials separate concerns: HF_TOKEN carries inference and Hub permissions, GITHUB_TOKEN carries the write path for shipped code. The design assumption throughout is that the agent can act, not just advise, which is why a token with repository scope is required.
 
 ## Ecosystem Position
 
-ml-intern complements experiment trackers, training frameworks, and model registries while competing with general-purpose coding agents configured for ML. Its Hugging Face-native path is convenient, but it remains an agent layer rather than a replacement for reliable dataset lineage, cluster scheduling, or human experiment review.
+ML Intern overlaps with the coding agents in content/projects/dx-and-tooling and the research agents in content/projects/agent-systems, but its distinguishing scope was a single ecosystem rather than a general-purpose codebase, which is a narrower proposition than either. Compared with a general coding agent, it traded breadth for depth of access to Hugging Face documentation, datasets and compute, and the retired status means it no longer competes with anything current. Its successor path is the hosted HuggingChat the README names, which is a chat product rather than an autonomous code-shipping agent, so the migration is not like for like. Read it against the still-maintained agent entries in the same phase for a live comparison, and against content/projects/inference-engines for the model-serving decisions it deferred to a hub.
 
 ## Getting Started
 
-Install the `ml-intern` CLI, set an `HF_TOKEN` authorized for Inference Providers, and run a small prompt such as `ml-intern "fine-tune llama on my dataset"`. For local inference, start an Ollama or vLLM endpoint and select it with `--model`; use `--sandbox-tools` when opting into HF Space sandbox tools.
+Nothing here is supported, but the historical install is preserved in the archived documentation if you want to read a working example of the pattern:
+
+```bash
+git clone https://github.com/huggingface/ml-intern.git
+cd ml-intern
+uv sync
+uv tool install -e .
+ml-intern
+```
+
+The README explicitly directs current users to HuggingChat at huggingface.co/chat. Treat this command as documentation archaeology, not as an installation you should expect to depend on.
 
 ## Key Use Cases
 
-Use it to turn a paper or training request into a supervised experiment on controlled data, compare hosted and local model providers, or prototype a path from training to a Hugging Face Hub checkpoint. Keep GPU allocation, dataset access, and publishing behind explicit approvals.
+1. Design reference: read the retained docs to see a narrow-ecosystem autonomous agent with Inference Providers routing, an iteration cap and a headless mode in one readable CLI.
+2. Migration input: for anyone with an existing ml-intern setup, use the retirement notice and the HuggingChat pointer to plan a move rather than debugging a dead CLI.
+3. Scope lesson: use it as a concrete example of what a single-ecosystem agent gives up against a general coding agent before scoping your own the same way.
 
 ## Strengths
 
-The smolagents-based workflow can read papers and docs, invoke training tools, use HF Inference Providers, connect to Ollama/vLLM-compatible endpoints, and ship artifacts to the Hub. Both hosted and local model paths are documented rather than implied.
+- Narrow, deep ecosystem scope is a legible design lesson that most general-purpose agents do not make explicit.
+- Headless auto-approve mode plus an iteration bound is a sane default for an agent that is allowed to write code.
+- Single-token model routing through Inference Providers kept provider configuration in one place.
+- Apache-2.0 licensing on the historical code, so the retired pattern remains readable and forkable.
 
 ## Limitations
 
-Autonomous training can consume substantial GPU time, publish flawed checkpoints, or mishandle credentials and data. Hosted inference is usage-billed, local support requires a separate server, and the project is research-oriented; sandboxing and approval gates are necessary before allowing write access to a Hub organization.
+The repository is archived and the README states the hosted web application and the CLI are both retired, with no support, no bug fixes and no security updates promised. Anyone adopting it today is depending on code nobody maintains, and the local-model path and sandbox-tools behaviour described in the retained docs are frozen in whatever state they were left. The documented successor, HuggingChat, is a chat product, so the migration loses the autonomous code-shipping behaviour entirely. The archived docs are preserved for reference and the README is explicit that they are unsupported, which makes every example a starting point for reading rather than for running.
 
 ## Relation to the Arsenal
 
-ml-intern complements OpenEnv, training frameworks, and model-registry entries, while overlapping with general coding agents configured for ML. It belongs in agent systems as a research-to-delivery harness, not as a replacement for cluster scheduling, dataset lineage, or experiment tracking.
+This belongs in content/projects/agent-systems as a documented dead end and a design reference, and it is most useful read next to the maintained coding agents in content/projects/dx-and-tooling, where the same loop and tool pattern is live. Its ecosystem-scoping decision is a useful counterpoint to the general-purpose agent frameworks in content/projects/framework. The model-serving half, which it delegated to a hosted router, is the same choice the gateway entries in content/projects/agent-systems make today. If you are actually choosing something to build on, the maintenance signals on the live entries matter far more than anything in this repository.
 
 ## Resources
 
-- [GitHub](https://github.com/huggingface/ml-intern)
-- [Live Space](https://smolagents-ml-intern.hf.space/)
+- [GitHub — huggingface/ml-intern (archived)](https://github.com/huggingface/ml-intern)
+- [Retirement notice and historical docs in the README](https://github.com/huggingface/ml-intern#readme)
+- [Successor — HuggingChat](https://huggingface.co/chat/)

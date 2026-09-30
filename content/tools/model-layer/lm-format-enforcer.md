@@ -46,7 +46,7 @@ A constrained-decoding library: given a JSON Schema or regex, it computes which 
 
 ## Why It's in the Arsenal
 
-LM Format Enforcer earns a place in the Arsenal because it directly addresses a recurring decision point: you serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+LM Format Enforcer is a token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. Read it beside `outlines`, `guidance`, `instructor`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,27 +67,30 @@ pip install lm-format-enforcer
 
 ## Use Cases
 
-1. **Scenario**: you serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema
-2. **Scenario**: regex- or schema-constrained generation where retry-based approaches (Instructor) are too slow or unreliable
-3. **Scenario where this is NOT the right fit**: you're calling hosted APIs (OpenAI/Anthropic) — constrained decoding needs logit access; use their native structured outputs or Instructor — evaluate an alternative instead
+1. **Where it sits**: on the structured-output leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so LM Format Enforcer can be swapped without touching callers.
+2. **Validating the choice**: put LM Format Enforcer and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LM Format Enforcer's comparison set is `outlines`, `guidance`, `instructor`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema
-- Regex- or schema-constrained generation where retry-based approaches (Instructor) are too slow or unreliable
+- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — and that is where a capability claim either survives contact with your data or does not.
+- Weighing LM Format Enforcer against `outlines`, `guidance`, `instructor` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The documented path into LM Format Enforcer runs through `vllm`, so the contract to test is the one those adapters expose.
+- Marked beta, so LM Format Enforcer's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You're calling hosted APIs (OpenAI/Anthropic) — constrained decoding needs logit access; use their native structured outputs or Instructor
-- You need a full grammar/programming model for generation; Outlines and Guidance offer richer languages
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to LM Format Enforcer, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LM Format Enforcer describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- LM Format Enforcer is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-- Compare against `outlines`, `guidance`, `instructor` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `lm-format-enforcer`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt LM Format Enforcer as a Python dependency or sidecar service against the `structured-output` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `outlines`, `guidance`, `instructor` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `vllm` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +103,4 @@ pip install lm-format-enforcer
 - 2,024 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

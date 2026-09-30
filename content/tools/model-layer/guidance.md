@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Microsoft guidance library for controlling and constraining language model generation. Open source or free to start. Best for constrained generation experiments.
+> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A library for fine-grained, token-level control over LLM generation, letting you
 
 ## Why It's in the Arsenal
 
-Guidance earns a place in the Arsenal because it directly addresses a recurring decision point: you want fine-grained, token-level control over generation structure (interleaving control flow with model output). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Guidance is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -59,32 +59,39 @@ Generation is expressed as a program mixing literal text, control flow, and mode
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Guidance into anything else. The command below runs against the `structured-output` job and returns a result you can inspect directly.
+
 ```bash
 pip install guidance
 ```
 
+Follow the official documentation at https://github.com/guidance-ai/guidance for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you want fine-grained, token-level control over generation structure (interleaving control flow with model output)
-2. **Scenario**: you're building advanced prompting patterns that need more control than a templating library offers
-3. **Scenario where this is NOT the right fit**: you just need typed structured output extraction with retries (Instructor is simpler for that) — evaluate an alternative instead
+1. **Integrating Guidance**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Guidance and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Guidance's comparison set is `instructor`, `outlines`, `pydantic-ai-tool`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want fine-grained, token-level control over generation structure (interleaving control flow with model output)
-- You're building advanced prompting patterns that need more control than a templating library offers
+- Beyond the marketing, Guidance's own notes are the useful part: generation is expressed as a program mixing literal text, control flow, and model-generated spans; the library drives the underlying model step by step according to that program.
+- Against `instructor`, `outlines`, `pydantic-ai-tool`, the difference that decides this is deployment model and cost rather than the feature list, and Guidance sits at the hosted end of that axis.
+- Depending on Guidance means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Guidance's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You just need typed structured output extraction with retries (Instructor is simpler for that)
-- You need a small, stable dependency surface — Guidance's API has changed significantly across versions, so pin carefully
+- There is no self-hosted path to Guidance, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Guidance describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Guidance overlaps `instructor`, `outlines`, `pydantic-ai-tool`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [Instructor](../dx-and-tooling/instructor.md), [Outlines](./outlines.md), [Pydantic AI](../orchestration/pydantic-ai-tool.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `guidance`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Guidance as a Python dependency or sidecar service against the `structured-output` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `instructor`, `outlines`, `pydantic-ai-tool` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

@@ -55,7 +55,7 @@ A benchmark for code generation with diverse function calls and complex instruct
 
 ## Why it's in the Arsenal
 
-The 'HumanEval is saturated' answer for practical code generation: 1,140 tasks requiring real library usage (pandas, requests, matplotlib across 139 libraries) with branch-coverage test suites, measuring whether models can compose APIs rather than write algorithmic toy functions. It earns a place in the Arsenal because it directly addresses a recurring decision point: you are comparing code models on realistic library-composition tasks — average 5.6 test cases per task with ~99% branch coverage makes pass@k scores far more meaningful than HumanEval's. See Strengths / Limitations below before adopting it.
+BigCodeBench appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -75,22 +75,25 @@ bigcodebench.evaluate --split complete --subset hard --samples <generated>.jsonl
 
 ## Key Use Cases
 
-1. **Scenario**: you are comparing code models on realistic library-composition tasks — average 5.6 test cases per task with ~99% branch coverage makes pass@k scores far more meaningful than HumanEval's
-2. **Scenario**: you want both completion and instruction-following variants — BigCodeBench-Complete (docstring-driven) and -Instruct (NL-driven) separate raw coding ability from instruction alignment
+1. **Running BigCodeBench on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
+2. **What the BigCodeBench scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare BigCodeBench against `swe-bench`, `livecodebench` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You are comparing code models on realistic library-composition tasks — average 5.6 test cases per task with ~99% branch coverage makes pass@k scores far more meaningful than HumanEval's
-- You want both completion and instruction-following variants — BigCodeBench-Complete (docstring-driven) and -Instruct (NL-driven) separate raw coding ability from instruction alignment
+- Beyond the headline description, BigCodeBench's architecture section is the honest source: each task couples a natural-language-rich prompt (Complete: full docstring; Instruct: terse instruction; Hard: a curated difficult subset) with a hidden test suite averaging 5.6 cases at ~99% branch coverage, executed in a sandboxed evaluation harness. Scoring is calibrated pass@k; an Evaluation-as-a-Service leaderboard (with Hugging Face-hosted execution) keeps results comparable across submissions.
+- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need repo-scale, multi-file evaluation — tasks are single-function; SWE-bench and Terminal-Bench cover repository and operational settings
-- You need contamination-proof scoring for the newest models — the dataset is public and static; LiveCodeBench's rolling problems address recency better
+- Adoption risk for BigCodeBench is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running BigCodeBench against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where BigCodeBench overlaps `swe-bench`, `livecodebench`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the practical-coding benchmark in content/projects/benchmarks-and-evals, and the number to read it alongside is HumanEval for self-contained single-function tasks and SWE-Bench for repository-scale work: the unit of evaluation here is a generated function graded by executing it against unit tests, not a merged patch. Where you want to grade your own product instead of a public model, the evaluation tooling in content/tools/evaluation-and-observability is the place to look.
 
 ## Resources
 
@@ -98,4 +101,4 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 - [Documentation](https://bigcode-bench.github.io/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (513 stars, last commit 2026-01-03, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 513 as of 2026-07-08; last commit 2026-01-03; both verified via the GitHub API.*

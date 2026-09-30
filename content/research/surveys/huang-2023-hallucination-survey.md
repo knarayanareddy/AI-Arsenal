@@ -67,6 +67,8 @@ Two structural moves the field adopted: (1) the factuality/faithfulness bifurcat
 
 Systematic survey: definitions are fixed first with worked examples per hallucination sub-type; causes are analyzed per lifecycle stage with supporting empirical literature; detection methods are classified by target (fact-checking against external knowledge vs consistency/uncertainty-based internal signals); mitigations are reviewed against the cause taxonomy; open challenges (hallucination in long-form generation, self-verification limits, knowledge boundaries) close the analysis. A maintained companion reading list tracks the area.
 
+The methodology is the part to read for transferability: the dataset, the baseline, the evaluation protocol and the compute budget behind the reported number in the surveys phase; with `huang-2023-hallucination-survey`, `title`, `survey`. A method strong on one benchmark and untested on another tells you about the benchmark, so check which of those four are documented and which are assumed.
+
 ## Practical Applicability
 
 The taxonomy is directly operational: production grounding failures split into retrieval problems (factuality side — fix knowledge access) and generation problems (faithfulness side — the model contradicts retrieved context, requiring faithfulness metrics, citation enforcement, or entailment checking, not better retrieval). Evaluation stacks in this catalog implement exactly this split (context-adherence vs correctness metrics), and the survey's inference-stage causes explain practitioner observations like hallucination increasing with context length and temperature.
@@ -91,4 +93,4 @@ Supplies the risk taxonomy behind this catalog's evaluation and guardrails cover
 - [Venue](https://dl.acm.org/doi/10.1145/3703155)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

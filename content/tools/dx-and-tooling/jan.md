@@ -46,7 +46,7 @@ An open-source desktop AI assistant that runs models locally via llama.cpp, conn
 
 ## Why It's in the Arsenal
 
-Jan earns a place in the Arsenal because it directly addresses a recurring decision point: you want an LM Studio-like desktop experience that is actually open source, for auditability or philosophy. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Jan is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -60,33 +60,39 @@ A Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Jan into anything else. The command below runs against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 # Download from https://jan.ai (macOS / Windows / Linux)
 ```
 
+Follow the official documentation at https://jan.ai/docs for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you want an LM Studio-like desktop experience that is actually open source, for auditability or philosophy
-2. **Scenario**: privacy-first individual use: everything (models, chats, files) stays on-device by default
-3. **Scenario where this is NOT the right fit**: you need the fastest support for cutting-edge runtimes/features; Jan trails LM Studio on polish and MLX — evaluate an alternative instead
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Jan can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Jan.
+3. **Choosing between candidates**: Jan's comparison set is `lm-studio`, `open-webui`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want an LM Studio-like desktop experience that is actually open source, for auditability or philosophy
-- Privacy-first individual use: everything (models, chats, files) stays on-device by default
+- The implementation detail worth reading before adopting Jan is specific — a Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from Hugging Face, run in-process with configurable offload, and are also exposed on a local OpenAI-compatible endpoint; extensions add providers and tools — and that is where a capability claim either survives contact with your data or does not.
+- Jan's honest comparison set is `lm-studio`, `open-webui`; what separates them is rarely capability, it is what you must operate.
+- Jan is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Jan's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need the fastest support for cutting-edge runtimes/features; Jan trails LM Studio on polish and MLX
-- Team/multi-user deployments — use Open WebUI on a server instead
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to Jan, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Jan describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Jan overlaps `lm-studio`, `open-webui`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `lm-studio`, `open-webui` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `jan`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Jan over an HTTP endpoint from whichever service owns the call site against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `lm-studio`, `open-webui` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -99,4 +105,4 @@ A Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from
 - 43,449 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -5,19 +5,19 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: browser-agents
-description: LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
+description: "Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder"
 github_url: "https://github.com/Skyvern-AI/skyvern"
 license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: Skyvern-AI
-tags: [agents, tool-use, vision]
+tags: [agents, llm]
 maturity: production
-cost_model: self-hostable
-github_stars: 22154
+cost_model: freemium
+github_stars: 23090
 github_stars_last_30d: 0
 trending_score: 60
-last_commit: "2026-07-08"
-docs_url: "https://docs.skyvern.com"
+last_commit: "2026-09-28"
+docs_url: "https://www.skyvern.com/docs/"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -27,12 +27,8 @@ relation_to_stack: [deploy-as-is, study-and-reference]
 health_signals: [actively-maintained, org-backed]
 ecosystem_role:
   - "The workflow-automation pole of the browser-agent space: where browser-use targets developers building agents, Skyvern targets replacing brittle RPA scripts — vision + LLM planning over screenshots so automations survive website redesigns"
-best_for:
-  - You maintain Selenium/Playwright/RPA scripts that break on every site update — Skyvern's per-run visual grounding (annotated screenshots → LLM-chosen actions) removes the hardcoded-selector fragility by mechanism
-  - Your automation spans many unknown or changing third-party sites (procurement portals, government forms, invoice downloads) where writing per-site scripts doesn't scale
-avoid_if:
-  - Your automation runs on a handful of stable, known sites at high volume — deterministic Playwright scripts are faster, cheaper per run, and easier to debug than LLM-planned actions
-  - AGPL-3.0 is incompatible with how you'd embed it — the license propagates for network-service usage; the hosted cloud is the escape hatch
+best_for: ["You are automating the same business process across many different vendor or partner sites and want one workflow definition rather than one script per site.", "You have XPaths breaking on a redesign and need navigation that re-derives targets from the visual page each run instead of following a fixed selector path.", "You want both a Python SDK for engineers and a no-code builder for the operations people who will actually maintain the workflow."]
+avoid_if: ["You need byte-identical reproducibility, because an LLM choosing each interaction means two runs can differ even with the same workflow file.", "You cannot run multiple concurrent browser sessions and pay for the compute behind them, since Skyvern Cloud exists precisely because parallel instances cost infrastructure.", "You have no vision-capable model budget, because every page visit is a vision call rather than a cheap DOM parse."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: [browser-use, stagehand]
@@ -52,48 +48,53 @@ status: active
 
 ## Overview
 
-Skyvern automates browser workflows from natural-language goals: it screenshots the page, detects and annotates interactable elements with computer vision, and asks an LLM to plan the next action — click, type, select — iterating until the goal completes. Because grounding is visual and per-run rather than selector-based and pre-scripted, the same workflow keeps working across site redesigns and across sites it has never seen.
+Skyvern automates browser workflows by pairing a Playwright-compatible SDK with vision LLMs and a no-code workflow builder. Instead of encoding XPath or selector interactions, a swarm of agents comprehends the page visually, plans the next step, and executes it through Playwright, which the README credits to the task-driven design of BabyAGI and AutoGPT. Stated advantages are operating on unseen sites without custom code, resistance to layout changes because no predetermined selectors are searched for, and applying one workflow across many websites by reasoning through the interactions. Skyvern Cloud runs parallel instances with anti-bot detection bundled.
 
 ## Why it's in the Arsenal
 
-Browser automation is the most economically obvious agent application, and its historical failure mode is selector rot. Skyvern is the production-oriented open-source system attacking that failure by mechanism (vision grounding replaces selectors), with company backing and a workflow engine (loops, chained tasks, 2FA handling, proxies) that distinguishes "RPA replacement" from "agent demo." It complements rather than duplicates `browser-use` — different audience, same space.
+The decision it addresses is selector maintenance. A DOM-driven script encodes today's markup, and when marketing ships a redesign your pipeline dies with a timeout rather than a clean failure. Vision-based navigation moves the brittleness into the model, which re-reads the page each run, so a layout change costs accuracy instead of uptime. The tradeoff is that a page the model cannot read now becomes a silent failure where a selector would have been explicit.
 
 ## Architecture
 
-Task loop: Playwright-driven browser → screenshot + DOM-assisted element detection → annotated elements passed to a multimodal LLM → structured action plan → execution → repeat until termination. A workflow layer composes tasks with control flow, data extraction schemas, credential/2FA handling, and webhooks; runs are observable step-by-step with the screenshots and reasoning recorded. Self-host via Docker or use the managed cloud.
+A task-driven planner decomposes the workflow into steps; specialised agents handle comprehension, action synthesis and extraction, exchanging structured outputs rather than free text. Page understanding uses a vision LLM over screenshots, and the chosen action is applied through Playwright, which supplies the actual browser control. Because targets are derived from the current visual state, no selector table is consulted during navigation. Execution is therefore a repeated observe-plan-act loop with the vision model in the critical path of every step.
 
 ## Ecosystem Position
 
-Upstream: multimodal LLM providers, Playwright. Competing: browser-use (developer library), Stagehand (AI-native Playwright extension), classic RPA (UiPath) on the incumbent side. Complementary: orchestration frameworks that trigger Skyvern workflows as steps in larger pipelines.
+It competes directly with browser-use in vision-driven browser automation, and the difference is packaging: Skyvern's pitch centres on a workflow builder plus a swarm of specialised agents for repeatable business processes, while browser-use leads with the open-source agent library and a hosted browser-hour tier. It overlaps with content/tools/data-ingestion/playwright, which is the deterministic substrate Skyvern drives, and complements content/tools/orchestration where a browser step is one node in a larger flow.
 
 ## Getting Started
 
+The SDK is a Python package installed from PyPI, and the cloud tier needs no infrastructure at all:
+
 ```bash
 pip install skyvern
-skyvern quickstart
-skyvern run task --prompt "Find a quote for auto insurance on <site> with these details..."
 ```
+
+Self-hosted installs run the service and point the SDK at your own instance; Skyvern Cloud at app.skyvern.com bundles parallel instances and anti-bot handling.
 
 ## Key Use Cases
 
-1. **Scenario**: replacing a portfolio of breakage-prone RPA scripts (portal logins, form submissions, document downloads) with goal-level automations that tolerate UI changes
-2. **Scenario**: one automation across many heterogeneous third-party sites — e.g. fetching invoices from dozens of vendor portals — where per-site scripting is economically impossible
+1. Vendor onboarding repeated across dozens of partner portals: one workflow definition, applied to each site by reasoning rather than by per-site selectors.
+2. Insurance or expense filing where forms change quarterly and a selector-based script would need a patch every release.
+3. Non-technical workflow ownership: operations staff edit the flow in the builder while engineers keep the SDK path for custom logic.
 
 ## Strengths
 
-- Vision-based grounding removes the root cause of RPA fragility (hardcoded selectors) rather than patching it — the architectural bet the whole project rests on
-- Production workflow machinery beyond the agent loop: chained tasks, loops, structured extraction, 2FA/TOTP support, proxy management, and full run observability
+- One workflow generalises across many sites, which is the specific win over per-site selector scripts.
+- Layout changes degrade accuracy rather than breaking the run, since targets are re-derived every navigation step.
+- Playwright-compatible SDK means existing browser knowledge and debugging tools transfer.
+- Managed cloud with parallel instances and anti-bot handling removes the infrastructure work from small teams.
 
 ## Limitations
 
-- LLM-planned actions cost more per run and are less deterministic than scripted automation — wrong economics for high-volume workflows on stable, known sites
-- AGPL-3.0 constrains embedding in commercial products; and like all browser agents, prompt-injection via hostile page content is an open risk for workflows touching untrusted sites
+AGPL-3.0 is a real constraint for a team that needs to embed modified code in a proprietary product without releasing the corresponding source. Vision inference in the loop makes each step cost a model call, so a long workflow is materially more expensive than a DOM-parsing equivalent and slower per step. Runs are non-deterministic, so regression testing means judging outcomes rather than diffing traces, and Skyvern's own WebVoyager-style numbers are vendor-published. And with a swarm of agents in the path, diagnosing a wrong click means reasoning about several intermediate decisions rather than one selector.
 
 ## Relation to the Arsenal
 
-Sits alongside `browser-use` (developer framework) and `stagehand` (AI-augmented Playwright) as the deploy-as-is workflow platform of the browser-agent trio; agent-reliability guidance in [tips-and-tricks/agents-and-orchestration](../../tips-and-tricks/agents-and-orchestration/_index.md) applies directly.
+This is the workflow-centric browser automation entry in content/projects/agent-systems, and its natural pair is browser-use in the same phase plus playwright in content/tools/data-ingestion as the driver underneath. It differs from the crawling entries such as crawl4ai in that it drives a live session rather than fetching pages. Its parallel-instance story makes it a candidate component for the orchestration entries in content/tools/orchestration when workflows need queuing and retries.
 
 ## Resources
 
-- [GitHub](https://github.com/Skyvern-AI/skyvern)
-- [Documentation](https://docs.skyvern.com)
+- [GitHub — Skyvern-AI/skyvern](https://github.com/Skyvern-AI/skyvern)
+- [Docs — skyvern.com/docs](https://www.skyvern.com/docs/)
+- [Technical report on WebVoyager evaluation](https://www.skyvern.com/blog/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/)

@@ -61,7 +61,7 @@ Mistral AI's open-weight model family, including the original dense Mistral 7B a
 
 ## Why it's in the Arsenal
 
-Mistral AI's open-weight model family, notable for early and influential sparse Mixture-of-Experts (Mixtral) releases. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want influential, efficient open-weight dense (7B) or MoE (8x7B/8x22B Mixtral) models with strong performance-per-parameter and a European vendor's terms. See Strengths / Limitations below before adopting it.
+Mistral / Mixtral appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -87,18 +87,21 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Scenario**: you want influential, efficient open-weight dense (7B) or MoE (8x7B/8x22B Mixtral) models with strong performance-per-parameter and a European vendor's terms
-2. **Scenario**: you need multimodal (Pixtral) or code-specialized (Codestral) variants from the same family and license lineage
+1. **Taking the dependency**: the weights for Mistral / Mixtral are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What to measure first**: `influential`, `efficient`, `open-weight`, `dense` decide whether Mistral / Mixtral works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want influential, efficient open-weight dense (7B) or MoE (8x7B/8x22B Mixtral) models with strong performance-per-parameter and a European vendor's terms
-- You need multimodal (Pixtral) or code-specialized (Codestral) variants from the same family and license lineage
+- The implementation detail worth checking before adopting Mistral / Mixtral is specific — mistral 7B is a dense decoder-only transformer using grouped-query and sliding-window attention. Mixtral 8x7B and 8x22B use a sparse Mixture-of-Experts design (8 experts, 2 active per token), one of the first widely-adopted open-weight MoE releases and a significant influence on the open-model ecosystem's subsequent MoE adoption — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need Mistral's current flagship — as of late 2025/2026 Mistral has shipped Mistral Large 3 (675B total/41B active MoE, Apache-2.0), Ministral 3, and Devstral 2, which supersede the older Mistral 7B/Mixtral models catalogued here on both scale and licensing (Large 3 moved to Apache-2.0 from the older models' more mixed licensing)
-- You need a model with native long-context handling beyond roughly 65K-128K tokens — check the specific variant's context window before committing, since it varies significantly across the Mistral/Mixtral lineage
+- The cost this entry cannot quantify for you is operational: the Mistral / Mixtral footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Mistral / Mixtral here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

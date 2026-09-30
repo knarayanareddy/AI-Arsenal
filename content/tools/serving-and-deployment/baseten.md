@@ -39,7 +39,7 @@ verdict_rationale: A strong managed serving layer for teams that want production
 status: active
 ---
 
-> **TL;DR:** A managed platform for deploying and autoscaling ML/LLM models in production, built on the open-source Truss packaging format, with GPU autoscaling, scale-to-zero, and observability. Usage-based; recommended when you want production serving without running GPU infra.
+> **TL;DR:** Baseten covers the production-serving, deployment leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -72,20 +72,22 @@ pip install truss baseten
 
 ## Use Cases
 
-1. **Scenario**: serving a fine-tuned LLM or embedding model to production traffic with autoscaling, without building a GPU cluster
-2. **Scenario**: deploying a custom multi-step model (pre/post-processing around a checkpoint) as a single versioned endpoint via Truss
+1. **Where it sits**: on the production-serving, deployment leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Baseten can be swapped without touching callers.
+2. **Validating the choice**: put Baseten and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Baseten's comparison set is `modal`, `replicate`, `runpod`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Offloads GPU autoscaling, cold starts, and ops while keeping packaging (Truss) open and portable
-- Scale-to-zero controls cost for spiky or low-baseline workloads
-- Code-defined deployments make serving reproducible and reviewable
+- The implementation detail worth reading before adopting Baseten is specific — you author a Truss describing how to load and call your model, push it to Baseten, and the platform builds a container, provisions GPUs, and serves an autoscaling HTTP endpoint. Traffic drives replica count (up from and down to zero), so you pay for active inference. Because Truss is open and portable, the packaging isn't tied to the platform even though the runtime is — and that is where a capability claim either survives contact with your data or does not.
+- Baseten's honest comparison set is `modal`, `replicate`, `runpod`, `bentoml`; what separates them is rarely capability, it is what you must operate.
+- Baseten is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Baseten's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Managed platform: no fully self-hosted option in your own account, so it may not satisfy strict data-residency needs
-- Usage-based GPU billing can exceed a dedicated box for steady high-throughput workloads — model your traffic first
-- For trivial prototypes, a simpler hosted endpoint (or one always-on server) may be cheaper and faster to reach
+- Depending on Baseten means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Baseten's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Baseten overlaps `modal`, `replicate`, `runpod`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

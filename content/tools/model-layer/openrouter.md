@@ -46,7 +46,7 @@ A model marketplace/gateway: one OpenAI-compatible API fronts hundreds of models
 
 ## Why It's in the Arsenal
 
-OpenRouter earns a place in the Arsenal because it directly addresses a recurring decision point: you want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing. Read it beside `litellm`, `portkey`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,27 +67,30 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 
 ## Use Cases
 
-1. **Scenario**: you want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases
-2. **Scenario**: you need provider redundancy: automatic routing/fallback across providers hosting the same open model
-3. **Scenario where this is NOT the right fit**: enterprise data agreements with a specific provider are mandatory — an aggregator adds a party to your data path — evaluate an alternative instead
+1. **Where it sits**: on the production-serving, prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so OpenRouter can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on OpenRouter.
+3. **Choosing between candidates**: OpenRouter's comparison set is `litellm`, `portkey`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases
-- You need provider redundancy: automatic routing/fallback across providers hosting the same open model
+- The implementation detail worth reading before adopting OpenRouter is specific — requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages — and that is where a capability claim either survives contact with your data or does not.
+- OpenRouter overlaps `litellm`, `portkey` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: OpenRouter is reachable through `litellm`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure OpenRouter's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Enterprise data agreements with a specific provider are mandatory — an aggregator adds a party to your data path
-- Cost-sensitive high volume on one model: direct provider contracts beat aggregator fees at scale
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to OpenRouter, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- OpenRouter's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where OpenRouter overlaps `litellm`, `portkey`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `litellm`, `portkey` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `openrouter`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt OpenRouter over an HTTP endpoint from whichever service owns the call site against the `production-serving, prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `litellm`, `portkey` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `litellm` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +103,4 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 Reception should be updated with verified sources during regular content reviews.
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

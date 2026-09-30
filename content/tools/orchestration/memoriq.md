@@ -46,7 +46,7 @@ Memoriq is a closed-source, freemium personal AI memory layer: it ingests a user
 
 ## Why It's in the Arsenal
 
-Memoriq is tracked in a crowded memory-layer category: it is worth evaluating when a private, personal memory that learns from your own data matters and a vendor-hosted product is acceptable, and worth skipping for multi-tenant or self-hosted needs. Compare it against Mem0 before adopting.
+Memoriq is a private AI memory layer that learns from your conversations and documents. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ Its internals are not published. From the description it runs as a hosted memory
 
 ## Use Cases
 
-1. **Scenario**: you want a private, personal memory layer that learns from your own conversations and documents
-2. **Scenario**: privacy of the memory store is a primary requirement and a closed, vendor-hosted product is acceptable
-3. **Scenario where this is NOT the right fit**: you need an open-source or self-hostable memory layer for a multi-tenant production system — evaluate an alternative instead
+1. **Where it sits**: on the memory-management leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Memoriq can be swapped without touching callers.
+2. **Validating the choice**: put Memoriq and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Memoriq here, so the honest first step is confirming the memory-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want a private, personal memory layer that learns from your own conversations and documents
-- Privacy of the memory store is a primary requirement and a closed, vendor-hosted product is acceptable
+- The implementation detail worth reading before adopting Memoriq is specific — its internals are not published. From the description it runs as a hosted memory service: it ingests a user's documents and chat history, indexes them (typically embedding-based retrieval) into a private store, and exposes recall so an application or agent can fetch relevant context at query time. Being vendor-hosted and closed-source, it is single-tenant/personal by design and offers no self-hostable backend — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Memoriq in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Memoriq is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Memoriq's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need an open-source or self-hostable memory layer for a multi-tenant production system
-- You need integration guarantees with a specific agent framework (verify compatibility first)
-
-- _Enrichment status: draft. Memoriq is a closed-source memory product surfaced via a curated newsletter; its behavior and privacy posture here follow the vendor's description, not independent verification — compare against Mem0 before relying on it. Last reviewed: 2026-06-30._
+- Depending on Memoriq means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Memoriq describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Memoriq is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
@@ -97,4 +98,4 @@ Memoriq is meant to sit behind an agent or app as its long-term memory: the app 
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

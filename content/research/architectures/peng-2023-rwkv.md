@@ -60,6 +60,8 @@ Transformers pay quadratic attention cost and store a KV cache that grows with s
 
 Replace self-attention with a linear, time-mixing recurrence (the WKV operator) plus channel-mixing blocks; express it in a parallel scan form for training and a stepwise recurrent form for generation. Train as a standard autoregressive LM and evaluate on language-modeling and downstream benchmarks.
 
+Read this for what was held constant in the architectures phase; with `peng-2023-rwkv`, `title`, `rwkv`. The dataset split, the baseline, the tuning budget and the evaluation protocol determine whether a comparison means anything; where the paper reports them you can judge transferability, and where it does not, treat the number as provisional.
+
 ## Practical Applicability
 
 RWKV is attractive when inference memory and long-context serving cost dominate — edge/streaming settings, or very long sequences where a Transformer's KV cache is prohibitive. The practical caveats are ecosystem maturity and that recurrent state can be weaker than full attention at precise long-range recall, so validate on your task rather than assuming parity.

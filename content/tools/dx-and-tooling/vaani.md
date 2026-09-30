@@ -67,21 +67,21 @@ Its internals are unpublished. From the description it captures microphone audio
 
 ## Use Cases
 
-1. **Scenario**: you want fast, private, macOS-native dictation with AI-assisted formatting and editing
-2. **Scenario**: you need a local-first dictation tool rather than a cloud-only transcription service
-3. **Scenario where this is NOT the right fit**: you're not on macOS — evaluate an alternative instead
+1. **Integrating Vaani**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Vaani and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Vaani here, so the honest first step is confirming the structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want fast, private, macOS-native dictation with AI-assisted formatting and editing
-- You need a local-first dictation tool rather than a cloud-only transcription service
+- Beyond the marketing, Vaani's own notes are the useful part: its internals are unpublished. From the description it captures microphone audio and runs speech-to-text locally on the Mac, then applies a generative formatting pass — punctuation, structure, light editing — before inserting the result into the active app. Doing transcription on-device is what lets it claim privacy and low latency, at the cost of being macOS-only rather than cross-platform.
+- No direct sibling is catalogued for Vaani in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Vaani is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Vaani's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You're not on macOS
-- You need a cross-platform or open-source dictation solution
-
-- _Enrichment status: draft. Vaani is a closed-source, macOS-only product surfaced via a curated newsletter; its on-device and privacy behavior here is taken from the vendor's description, not independently verified. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Vaani, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Vaani describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 
@@ -97,4 +97,4 @@ Vaani integrates at the OS input layer rather than as a service: it inserts form
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

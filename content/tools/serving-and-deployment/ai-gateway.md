@@ -3,19 +3,19 @@ id: ai-gateway
 name: Envoy AI Gateway
 type: tool
 job: [production-serving, deployment]
-description: An Envoy Gateway extension for routing and governing traffic to generative AI services
+description: "Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally"
 url: "https://aigateway.envoyproxy.io"
 cost_model: open-source
 pricing_detail: Open source (Apache-2.0); infrastructure, provider, and cluster costs are separate
-tags: [inference, routing, cloud, kubernetes, self-hosted]
-maturity: beta
+tags: [kubernetes, agents]
+maturity: production
 stack: [go]
 free_tier: true
 free_tier_limits: The gateway is open source; managed providers and model endpoints have their own charges
 self_hostable: true
 open_source: true
 source_url: "https://github.com/envoyproxy/ai-gateway"
-docs_url: "https://aigateway.envoyproxy.io/docs/"
+docs_url: "https://theagentrouter.ai/docs/getting-started/"
 github_url: "https://github.com/envoyproxy/ai-gateway"
 alternatives: [litellm]
 integrates_with: []
@@ -28,14 +28,8 @@ verdict_rationale: A credible cloud-native gateway boundary for teams that alrea
 status: active
 phase: serving-and-deployment
 audience: [production, prototype]
-best_when:
-  - You need a Kubernetes-native policy boundary for authentication, top-level routing, and rate limiting across multiple model providers
-  - You operate self-hosted inference clusters and want a second gateway tier to select or govern model endpoints
-  - Your platform team already understands Envoy Gateway and prefers declarative infrastructure over a Python SDK
-avoid_when:
-  - You need a single-process local proxy with minimal dependencies; an Envoy Gateway deployment is a larger operational commitment
-  - Your workload depends on provider-specific features that are not represented consistently through the gateway abstraction
-  - You cannot operate Kubernetes, Envoy Gateway, and the supporting control-plane resources
+best_when: ["You already run Kubernetes with Envoy Gateway and want to front several model providers behind one OpenAI-compatible address so application teams stop handling provider credentials.", "You need to attribute usage to teams and enforce quotas centrally, which is a control-plane problem the routing and rate-limit resources solve without touching application code.", "You are migrating off the Envoy AI Gateway name and need to know what breaks, because the project documents exactly which identifiers were preserved and which URLs redirect."]
+avoid_when: ["You are not running Kubernetes with Envoy Gateway, because the data plane is Envoy and the whole design assumes that gateway, so this is not a library you call from a process.", "You want a small single-binary router for a laptop, because a standalone CLI mode exists but the project's centre of gravity is the Kubernetes deployment with custom resources.", "You need deep provider-specific semantics beyond the OpenAI shape, because compatibility is expressed through that one API surface, so providers that diverge from it surface as rough edges rather than handled cases."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: "README and official documentation reviewed 2026-07-19; two-tier gateway and Envoy Gateway dependency are load-bearing placement details."
@@ -43,70 +37,57 @@ enrichment_notes: "README and official documentation reviewed 2026-07-19; two-ti
 
 ## Overview
 
-Envoy AI Gateway extends Envoy Gateway for generative-AI traffic. Its reference architecture separates a tier-one gateway, which handles authentication, global routing, and rate limits, from a tier-two gateway in front of self-hosted model-serving clusters. The project exposes provider integrations while keeping the traffic boundary in the cloud-native gateway layer.
+Agent Router, formerly Envoy AI Gateway, is an Agentic AI Foundation project built on Envoy Gateway. It presents a single OpenAI-compatible endpoint in front of hosted providers, self-hosted inference clusters and MCP servers, and the framing in the README is that the router controls while Envoy carries. Configuration is expressed as Kubernetes custom resources: an AIGatewayRoute describes request matching, an AIServiceBackend describes an upstream, and a BackendSecurityPolicy attaches credentials, all under the aigateway.envoyproxy.io API group. Routing is the part that is genuinely LLM-aware rather than HTTP-aware, since requests for one logical model can be distributed across replicas that differ in cache state. The rename was handled conservatively: the API group, the custom resource names, the aigw CLI, the envoy-ai-gateway-system namespace, the container images, the Helm charts and the Go module path are all unchanged, and old repository and website links redirect.
 
 ## Why It's in the Arsenal
 
-AI gateways often collapse provider translation, authentication, routing, and inference operations into one application. Envoy AI Gateway is worth tracking because it brings those concerns into the Envoy Gateway/Kubernetes ecosystem, where platform teams already manage policy and traffic infrastructure. It is a stronger fit for an infrastructure-owned boundary than for an application developer looking for a quick OpenAI-compatible proxy.
+The decision is who holds the credentials and the limits. Left in application code, every service that calls a model holds a provider key, every team implements its own retry and failover, and usage attribution is reconstructed from billing reports after the fact. Moving that to a gateway means one place to rotate a key, one place to set a quota, and one place to see which service spent what. The cost is infrastructure: this is a Kubernetes control plane with a data plane, not a library, and you are committing to Envoy as the proxy. The documented two-tier pattern exists because global authentication and routing genuinely want to be separate from per-cluster model access, which is a real design constraint rather than bureaucracy.
 
 ## Key Features
 
-- Tier-one and tier-two gateway pattern for hosted providers and self-hosted inference
-- Authentication, global routing, and rate-limiting controls at the gateway boundary
-- Provider integrations including OpenAI, Azure OpenAI, Gemini, Vertex AI, Bedrock, Mistral, Cohere, Groq, and others
-- Endpoint-picker support for fine-grained selection within self-hosted model clusters
+- Credentials, routing and quotas live in version-controlled Kubernetes resources, so a policy change is a reviewable diff rather than a config push.
+- OpenAI compatibility means existing client libraries work unchanged, so adoption does not require rewriting call sites.
+- Built on Envoy Gateway rather than a bespoke proxy, inheriting a mature data plane with its own connection handling and observability.
+- The rename preserved CRDs, CLI, namespace, images, charts and module path, so the migration is genuinely a no-op for existing deployments.
 
 ## Architecture / How It Works
 
-The tier-one gateway is the central application entry point. It applies cross-provider policy and routes requests toward provider services or a tier-two gateway. The tier-two gateway sits closer to a self-hosted serving cluster and can select among model endpoints. This split preserves a global policy layer while allowing model-serving concerns to remain local to a cluster, but it also creates two deployment surfaces and two places to reason about authentication and observability.
+The control plane is the custom resources; the data plane is Envoy Gateway running the translation from them. A route resource binds a listener and path to one or more backends, and a backend security policy carries the credential reference for a given upstream, which is how a single route can span providers with different authentication mechanisms. Because Envoy performs the forwarding, the gateway inherits its connection handling, retry behaviour and observability rather than reimplementing them. The aigw CLI supports a standalone run that exposes a local OpenAI-compatible endpoint on port 1975 with provider auto-configuration, which is the fastest way to evaluate provider translation without deploying anything; the CLI is documented as experimental and under active development. Provider coverage spans the major hosted services across the OpenAI, Google, AWS and Chinese ecosystems. Tool traffic over MCP is handled alongside model traffic, so an agent's model calls and tool calls pass through the same policy surface. On Kubernetes, the deployment follows the standard install pattern with the operator's namespace unchanged across the rename.
 
 ## Getting Started
 
-The project is designed to run with Envoy Gateway and Kubernetes rather than as a standalone binary:
+Run it standalone on a laptop with one command and point any OpenAI-compatible client at the local port:
 
 ```bash
-git clone https://github.com/envoyproxy/ai-gateway.git
-cd ai-gateway
-kubectl version --client
+OPENAI_API_KEY=sk-your-key aigw run
 ```
 
-Follow the official [getting-started guide](https://aigateway.envoyproxy.io/docs/getting-started/) to install Envoy Gateway, apply the AI Gateway CRDs/manifests, configure provider credentials as Kubernetes secrets, and send a request through the resulting gateway. Keep provider keys in cluster secrets rather than embedding them in manifests or shell history.
+Then send requests to http://localhost:1975/v1. The CLI guide covers installation and provider auto-configuration; the Getting Started guide covers deploying on Kubernetes with Envoy Gateway and creating the gateway resources.
 
 ## Use Cases
 
-1. **Scenario**: centralize authentication and rate limits for applications calling several hosted model providers
-2. **Scenario**: expose a self-hosted vLLM or equivalent cluster behind a tier-two gateway while retaining a platform-owned tier-one boundary
-3. **Scenario where this is NOT the right fit**: route a local developer's requests through a lightweight desktop proxy — the Kubernetes control plane is unnecessary overhead
+1. Central credential custody: give teams one internal endpoint and a BackendSecurityPolicy each, so no application holds a provider key and rotation is a resource edit.
+2. Quota and attribution: apply global rate limits at the tier-one gateway and read per-team usage without instrumenting every service.
+3. Failover across providers: route one logical model name to several backends so an outage on one is a routing decision rather than an application change.
 
 ## Strengths
 
-- Aligns AI traffic policy with established Envoy Gateway and Kubernetes operations
-- Separates global provider routing from local self-hosted endpoint selection
-- Apache-2.0 project in a mature cloud-native ecosystem rather than a provider-specific SDK
+It competes with LiteLLM's proxy and with Portkey in the AI gateway category, and the differentiator is that this is a Kubernetes-native control plane on an established data plane rather than a self-contained proxy process - which wins when your platform team already runs Envoy Gateway and loses if you do not. It also overlaps with content/projects/inference-engines entries such as AIBrix, which ships its own LLM gateway plugins for routing inside a Kubernetes inference cluster; the distinction is that one is the enterprise control plane for all AI traffic while the other is the serving control plane for one engine's replicas, so they complement rather than substitute. Compared with content/tools/serving-and-deployment siblings, this owns credential and quota policy rather than model processes. The model backends it fronts are the serving entries in content/projects/inference-engines.
 
 ## Limitations / When NOT to Use
 
-- The two-tier model increases installation, upgrade, and troubleshooting surface compared with a single gateway process
-- Provider APIs and feature parity continue to evolve; a common route does not erase provider-specific semantics
-- The project does not remove the need to secure provider credentials, enforce payload policy, or instrument downstream model servers
-- Kubernetes and Envoy expertise are prerequisites for a production deployment
+The binding constraint is Envoy Gateway: if you do not run it, adopting this means adopting it, and there is no path that avoids that dependency. The compatibility surface is the OpenAI shape, so provider-specific features outside it - vendor tool-calling extensions, non-standard parameters, provider-specific streaming semantics - either do not work or degrade quietly, which is a real source of integration bugs. The aigw CLI is documented as experimental, so the low-friction evaluation path is also the least stable one. Running a gateway in the path of every model call adds a hop and a failure domain, and credential management through a policy resource means an access-control bug there is a fleet-wide exposure rather than a single-service one. Finally, this controls traffic; it does not serve models, so you still need the inference layer behind it.
 
 ## Integration Patterns
 
-- Place tier one behind the platform's existing ingress and identity controls; keep provider credentials in Kubernetes secrets.
-- Put tier two close to the serving cluster and test endpoint selection under realistic latency and capacity conditions.
-- Compare with [MCP Context Forge](mcp-context-forge.md) when protocol federation and registry governance matter more than Envoy-native traffic policy.
+This is the traffic-policy entry in content/tools/serving-and-deployment, sitting above the inference engines rather than beside them. Its Kubernetes-side sibling is AIBrix in content/projects/inference-engines, which routes inside a serving cluster where this one routes across your whole AI estate - the two are frequently deployed together. The model backends it fronts are the engines in content/projects/inference-engines, and if the question is tracing rather than routing, content/projects/evaluation-and-observability holds that.
 
 ## Resources
 
-- [Official documentation](https://aigateway.envoyproxy.io/docs/)
-- [Getting started](https://aigateway.envoyproxy.io/docs/getting-started/)
-- [GitHub](https://github.com/envoyproxy/ai-gateway)
-- [Envoy Gateway](https://github.com/envoyproxy/gateway)
+- [GitHub — theagentrouter/agent-router](https://github.com/theagentrouter/agent-router)
+- [Documentation and quickstart](https://theagentrouter.ai/docs/getting-started/)
+- [CLI guide for the standalone aigw mode](https://theagentrouter.ai/docs/cli/)
 
 ## Buzz & Reception
 
-1.8k GitHub stars verified via the repository API on 2026-07-19; Apache-2.0 and actively developed under the Envoy Proxy ecosystem. Adoption value is highest for teams with existing Kubernetes gateway operations.
-
----
-*Last reviewed: 2026-07-19 by @maintainer*
+Moves provider keys, rate limits and failover out of application code and into Kubernetes custom resources, so one client library points at whichever backend is currently healthy.

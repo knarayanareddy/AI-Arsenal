@@ -41,9 +41,11 @@ status: active
 
 An open-source framework for validating, correcting, or constraining LLM outputs against custom rules (PII, format, toxicity) before they reach end users, composable from reusable validators.
 
+The integration surface is an API rather than a vendored library unlike `llamaguard`, `nemo-guardrails`; on the security-and-guardrails, structured-output path; under a freemium cost model; with `guardrails-ai`, `name`, `guardrails`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
-Guardrails AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Guardrails AI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -55,6 +57,8 @@ Guardrails AI earns a place in the Arsenal because it directly addresses a recur
 
 A 'guard' wraps an LLM call with a configured set of validators; failing outputs can be rejected, corrected via re-prompting, or flagged depending on configuration.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `llamaguard`, `nemo-guardrails`; on the security-and-guardrails, structured-output path; under a freemium cost model; with `guardrails-ai`, `name`, `guardrails`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash
@@ -64,26 +68,29 @@ A 'guard' wraps an LLM call with a configured set of validators; failing outputs
 
 ## Use Cases
 
-1. **Scenario**: you need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users
-2. **Scenario**: you want an open-source, composable validator framework rather than building checks from scratch
-3. **Scenario where this is NOT the right fit**: your structured-output need is purely schema validation with retries (Instructor/Outlines may be simpler and faster) — evaluate an alternative instead
+1. **Integrating Guardrails AI**: the security-and-guardrails, structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Guardrails AI.
+3. **Choosing between candidates**: Guardrails AI's comparison set is `llamaguard`, `nemo-guardrails`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users
-- You want an open-source, composable validator framework rather than building checks from scratch
+- Beyond the marketing, Guardrails AI's own notes are the useful part: a 'guard' wraps an LLM call with a configured set of validators; failing outputs can be rejected, corrected via re-prompting, or flagged depending on configuration.
+- Weighing Guardrails AI against `llamaguard`, `nemo-guardrails`, `rebuff` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Guardrails AI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Guardrails AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Your structured-output need is purely schema validation with retries (Instructor/Outlines may be simpler and faster)
-- You need guardrails enforced at the infrastructure/gateway level across many apps (consider NeMo Guardrails or a gateway like Portkey)
+- Depending on Guardrails AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Guardrails AI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Guardrails AI overlaps `llamaguard`, `nemo-guardrails`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [Llama Guard](./llamaguard.md), [NeMo Guardrails](./nemo-guardrails.md), [Rebuff](./rebuff.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `guardrails-ai`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Guardrails AI as a Python dependency or sidecar service against the `security-and-guardrails, structured-output` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `llamaguard`, `nemo-guardrails`, `rebuff` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

@@ -60,6 +60,8 @@ BERT reported results that many read as an architecture ceiling. RoBERTa's contr
 
 Pretrain the BERT architecture with a masked-language-modeling objective only (no NSP), using dynamic masking regenerated each epoch, an order-of-magnitude more text, larger batches, longer sequences, and longer training. Evaluate by fine-tuning on standard NLU benchmarks.
 
+The methodology is the part to read for transferability: the dataset, the baseline, the evaluation protocol and the compute budget behind the reported number in the foundational phase; with `liu-2019-roberta`, `title`, `roberta`. A method strong on one benchmark and untested on another tells you about the benchmark, so check which of those four are documented and which are assumed.
+
 ## Practical Applicability
 
 The durable takeaway for practitioners is diagnostic discipline: before adding architectural complexity, verify you have trained long enough on enough data with a sound objective. For deployment, RoBERTa and its descendants are strong, cheap encoders for classification and as embedding/reranker backbones where a full generative LLM is overkill.

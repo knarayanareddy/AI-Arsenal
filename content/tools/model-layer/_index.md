@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [llmfit](./llmfit.md)
 - [FastEmbed](./fastembed.md)
 - [Hugging Face Accelerate](./accelerate.md)
 - [Cerebras Inference](./cerebras-inference.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Groq](./groq.md)
 - [Liger Kernel](./liger-kernel.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
-- [Megatron-LM](./megatron-lm.md)
 
 ### Most Popular
 
@@ -44,10 +44,10 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Hugging Face Accelerate](./accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
+- [Hugging Face Accelerate](./accelerate.md) — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
 - [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Cerebras Inference](./cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
-- [ClearML](./clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
+- [ClearML](./clearml.md) — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
@@ -60,6 +60,7 @@ _No star-tracked entries yet._
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [Liger Kernel](./liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [llmfit](./llmfit.md) — Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management

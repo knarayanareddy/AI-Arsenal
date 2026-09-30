@@ -46,7 +46,7 @@ A C++ in-memory search engine focused on speed and operational simplicity: typo 
 
 ## Why It's in the Arsenal
 
-Typesense earns a place in the Arsenal because it directly addresses a recurring decision point: you want Algolia-style instant search you can self-host, with in-memory speed and simple clustering (Raft HA). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Typesense rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,27 +66,30 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 
 ## Use Cases
 
-1. **Scenario**: you want Algolia-style instant search you can self-host, with in-memory speed and simple clustering (Raft HA)
-2. **Scenario**: hybrid semantic+keyword retrieval with built-in or custom embedding models, without adding a second engine
-3. **Scenario where this is NOT the right fit**: memory-constrained deployments with large corpora — the all-in-RAM design gets expensive — evaluate an alternative instead
+1. **What it does in a system**: Typesense sits on the vector-search leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Typesense is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Typesense's comparison set is `meilisearch`, `qdrant`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want Algolia-style instant search you can self-host, with in-memory speed and simple clustering (Raft HA)
-- Hybrid semantic+keyword retrieval with built-in or custom embedding models, without adding a second engine
+- What Typesense gives you that its headline description does not: indexes live fully in RAM backed by disk snapshots; vector fields use HNSW, and hybrid queries fuse keyword and vector rankings with rank fusion. Embedding fields can be declared to auto-generate from document text at index and query time, which is the part to check against your own pipeline before trusting the feature list.
+- Typesense's honest comparison set is `meilisearch`, `qdrant`; what separates them is rarely capability, it is what you must operate.
+- Pin the client library rather than the API: Typesense is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Typesense's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Memory-constrained deployments with large corpora — the all-in-RAM design gets expensive
-- GPL-3.0 constraints conflict with your distribution model (server-side use is typically fine)
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to Typesense, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Typesense describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Typesense overlaps `meilisearch`, `qdrant`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `meilisearch`, `qdrant` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `typesense`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Typesense over an HTTP endpoint from whichever service owns the call site against the `vector-search` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `meilisearch`, `qdrant` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `langchain`, `llamaindex` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -99,4 +102,4 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 - 26,252 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

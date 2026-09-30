@@ -39,7 +39,7 @@ verdict_rationale: The de facto search API for agent frameworks — LLM-tuned ra
 status: active
 ---
 
-> **TL;DR:** A hosted search API designed for LLM agents: one query returns ranked, cleaned, de-duplicated results (optionally with extracted page content and a synthesized answer), so you skip building a search-scrape-clean pipeline. Freemium; recommended as the default agent search step.
+> **TL;DR:** the web-scraping entry for Tavily. Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -73,20 +73,22 @@ pip install tavily-python
 
 ## Use Cases
 
-1. **Scenario**: a research agent that must ground answers in current sources — Tavily supplies ranked snippets with URLs to cite
-2. **Scenario**: a RAG pipeline needing fresh web context to supplement a static index, retrieved as clean text ready to embed or pass to the model
+1. **Where it sits**: on the web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Tavily can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Tavily.
+3. **Choosing between candidates**: Tavily's comparison set is `exa`, `firecrawl-tool`, `jina-reader`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Removes the search-scrape-clean plumbing: one call yields ranked, cleaned, citation-ready text
-- Token-efficient output (boilerplate stripped, optional synthesized answer) reduces context cost versus dumping raw pages
-- Broadly integrated across agent frameworks, so adoption is low-friction
+- The implementation detail worth reading before adopting Tavily is specific — tavily runs the query against web sources, applies its own relevance ranking and content cleaning server-side, and returns structured JSON (results, snippets, optional extracted content and answer). The client is thin — you send a query plus parameters (search depth, max results, domain filters) and get back model-ready text, so the heavy lifting of fetching and cleaning happens in the service — and that is where a capability claim either survives contact with your data or does not.
+- Tavily's honest comparison set is `exa`, `firecrawl-tool`, `jina-reader`; what separates them is rarely capability, it is what you must operate.
+- Tavily is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Tavily's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Hosted only — no self-hosted or on-prem option, so it is unsuitable where data must stay in your environment
-- It is a search API, not a full crawler/browser: JS-heavy rendering, authenticated pages, or deep site crawls need a different tool
-- Result quality and freshness depend on Tavily's index and ranking, which you cannot fully inspect or tune
+- Depending on Tavily means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Tavily describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Tavily overlaps `exa`, `firecrawl-tool`, `jina-reader`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

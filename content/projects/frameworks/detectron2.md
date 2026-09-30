@@ -75,18 +75,21 @@ Upstream: PyTorch. Downstream: countless research forks and derived model system
 
 ## Key Use Cases
 
-1. **Scenario**: training or fine-tuning a classic detection/segmentation architecture with pretrained weights and a modular config system
-2. **Scenario**: implementing detection research against the abstractions the literature already uses
+1. **Running it in anger**: the first real evaluation of Detectron2 (Meta) is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What dominates the decision**: `well-tested`, `implementation`, `classic`, `detection` are the variables that actually move the outcome for Detectron2 (Meta) in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare Detectron2 (Meta) against `ultralytics` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- Battle-tested reference implementations plus a large pretrained zoo — the ground truth many papers compare against
-- Modularity by construction: swapping backbones/heads is configuration, not surgery
+- Beyond the headline description, Detectron2 (Meta)'s architecture section is the honest source: models are composed from interchangeable parts: a backbone (ResNet/FPN variants) produces features, a proposal generator suggests regions, and task-specific ROI heads produce boxes, masks, or keypoints. A registry+config system instantiates any combination from YAML, which is the mechanism that makes architecture swaps a config change. Training uses a hook-based loop with standard distributed support.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- More setup and ceremony than applied-first toolkits for straightforward dataset-to-detector work
-- Model zoo centers on the R-CNN era; transformer/open-vocabulary detection is better served elsewhere
+- The cost this entry cannot quantify for you is operational: the Detectron2 (Meta) footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Detectron2 (Meta) against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Detectron2 (Meta) overlaps `ultralytics`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

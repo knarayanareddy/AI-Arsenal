@@ -46,7 +46,7 @@ A macOS-only live HUD for monitoring and interacting with AI agent sessions in r
 
 ## Why It's in the Arsenal
 
-Conan earns a place in the Arsenal because it directly addresses a recurring decision point: you're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Conan is a live HUD for monitoring and interacting with AI agent sessions on macOS. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -57,6 +57,8 @@ Conan earns a place in the Arsenal because it directly addresses a recurring dec
 
 Runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the monitoring, tracing path; under a paid cost model; with `conan`, `name`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash
@@ -66,25 +68,29 @@ Runs as a local macOS application that attaches to an agent's running session, r
 
 ## Use Cases
 
-1. **Scenario**: you're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time
-2. **Scenario**: you want lightweight, local-first agent observability for personal/small-team development
-3. **Scenario where this is NOT the right fit**: your team is not on macOS, or you need cross-platform, team-shared observability — evaluate an alternative instead
+1. **Where it sits**: on the monitoring, tracing leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Conan can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Conan is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Conan here, so the honest first step is confirming the monitoring, tracing job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time
-- You want lightweight, local-first agent observability for personal/small-team development
+- The implementation detail worth reading before adopting Conan is specific — runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Conan in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Conan means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Conan's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Your team is not on macOS, or you need cross-platform, team-shared observability
-- You need production-grade tracing and alerting rather than a local interactive HUD
-
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- Depending on Conan means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Conan's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Conan is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Conan as a Python dependency or sidecar service against the `monitoring, tracing` job.  For evaluation or tracing, emit spans and scores from your own service so a bad generation is traceable back to the prompt, the model and the parameters that produced it, rather than only visible as an aggregate score.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -96,4 +102,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

@@ -58,7 +58,7 @@ No official, publicly-dated upload-frequency dashboard was found for this specif
 
 ## Safety & moderation
 
-No moderation or trust concerns apply -- this is a one-way video publication channel, not an interactive community space.
+No moderation surface applies: this is a one-way publication channel with no interactive surface to moderate. What to watch instead is release cadence against model publication — conference talks and release announcements are timely, while framework walkthroughs can lag the library version they describe.
 
 ## Relation to the Arsenal
 

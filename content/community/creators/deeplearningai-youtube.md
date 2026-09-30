@@ -58,7 +58,7 @@ No official, publicly-dated upload-frequency dashboard was found for this specif
 
 ## Safety & moderation
 
-No moderation or trust concerns apply -- this is a one-way video publication channel, not an interactive community space.
+No moderation surface applies: this is a one-way video publication channel, not an interactive community, so trust concerns reduce to content accuracy rather than to user conduct. The relevant risk is drift — course material recorded against an older framework version can be misleading without any warning, so check the recording date against the library's release history.
 
 ## Relation to the Arsenal
 

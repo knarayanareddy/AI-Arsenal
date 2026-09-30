@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Jerry Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes about the vector-search infrastructure layer: how index design, recall, filtering and latency actually trade off, and what a specialised vector engine costs you to run.
 
 ## Why Follow
 
-Useful for understanding RAG application patterns and the LlamaIndex ecosystem.
+Useful for the retrieval-infrastructure counterpart to the RAG framework writing, and for benchmarking evidence on when a dedicated vector store is worth its operational cost over brute-force search.
 
 ## Notable Work
 
-LlamaIndex and document-agent tooling.
+Writing and benchmarks on vector database performance and recall; Qdrant's engineering and index-design material; essays on hybrid search, filtering, and the cost of retrieval at scale.
 
 ## Channels
 
@@ -39,10 +39,6 @@ LlamaIndex and document-agent tooling.
 
 ## Resources
 
-- [Primary profile](https://www.llamaindex.ai)
-- [github](https://www.llamaindex.ai)
-- [website](https://www.llamaindex.ai/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Qdrant documentation](https://qdrant.tech/documentation/)
+- [Qdrant GitHub](https://github.com/qdrant/qdrant)
 

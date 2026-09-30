@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Harrison Chase is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Founded LangChain and writes about the retrieval and context decisions that determine whether an agent's answers are any good, rather than about the agent loop itself.
 
 ## Why Follow
 
-Useful to follow for LangChain/LangGraph product direction and agent engineering patterns.
+Useful for chunking, context engineering, and agent design specifically, and for eval-driven development operationalised: LangSmith is where a vague claim about answer quality becomes a measurement you can gate a release on.
 
 ## Notable Work
 
-LangChain, LangGraph, and LangSmith ecosystem work.
+LangChain and LangGraph; “Context Engineering for Agents” and the related essays on context and retrieval quality; LangSmith as the evaluation and observability layer; the LangChain State of AI report.
 
 ## Channels
 
@@ -39,10 +39,7 @@ LangChain, LangGraph, and LangSmith ecosystem work.
 
 ## Resources
 
-- [Primary profile](https://github.com/hwchase17)
-- [github](https://github.com/hwchase17)
-- [website](https://www.langchain.com/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Context Engineering for Agents](https://blog.langchain.com/context-engineering-for-agents/)
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [LangSmith](https://www.langchain.com/langsmith)
 

@@ -44,29 +44,29 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Agno](./agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
+- [Agno](./agno.md) — Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms
 - [AGNT.Hub](./agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
-- [Apache Airflow](./airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
-- [any-agent](./any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
+- [Apache Airflow](./airflow.md) — Batch DAG orchestrator that schedules Python workflows, retries failed tasks and records lineage across data platforms
+- [any-agent](./any-agent.md) — Mozilla AI's thin adapter layer that runs one agent interface across six different agent frameworks
 - [Cloudskill](./cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
-- [Composio](./composio.md) — Integration platform providing 250+ managed, authenticated tools (Gmail, Slack, GitHub...) to any AI agent framework
-- [Dagster](./dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
-- [E2B](./e2b.md) — Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale
+- [Composio](./composio.md) — Hosted tool layer supplying agents with pre-authenticated OAuth sessions for more than a thousand apps
+- [Dagster](./dagster.md) — Asset-oriented Python orchestrator where data assets are typed functions with parameter-derived lineage
+- [E2B](./e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents
 - [Empromptu AI](./empromptu-ai.md) — Build, deploy, and manage custom AI applications that improve over time
-- [Flowise](./flowise.md) — Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack
-- [Langflow](./langflow.md) — Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers
-- [Letta](./letta.md) — Stateful agent framework and memory system formerly known as MemGPT
+- [Flowise](./flowise.md) — Archived Node.js visual builder for LangChain-style agent graphs, now superseded by the Flowise successor
+- [Langflow](./langflow.md) — Python visual builder for agent and RAG workflows that also serves them as REST endpoints and MCP servers
+- [Letta](./letta.md) — Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK
 - [Manus](./manus.md) — AI-powered platform for building full-stack web applications and automating tasks
-- [Mem0](./mem0.md) — Memory layer for AI agents and assistants with long-term user and session memory
+- [Mem0](./mem0.md) — Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval
 - [Memoriq](./memoriq.md) — Private AI memory layer that learns from your conversations and documents
-- [Mirascope](./mirascope.md) — Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python
-- [n8n](./n8n.md) — Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations
+- [Mirascope](./mirascope.md) — Decorator-based LLM interface with typed provider/model strings, Pydantic structured output and resumable tool loops
+- [n8n](./n8n.md) — Fair-code workflow automation canvas with AI nodes, custom code steps and 1500+ integrations
 - [OrchestraML](./orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
-- [Prefect](./prefect.md) — Python workflow orchestration framework useful for AI data, eval, and batch jobs
+- [Prefect](./prefect.md) — Python workflow framework where @flow and @task decorators add scheduling, caching and retries to plain scripts
 - [Prompt flow (Microsoft)](./promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
-- [Pydantic AI](./pydantic-ai-tool.md) — Pydantic agent framework focused on typed outputs, tools, and production Python apps
-- [Redis](./redis-memory.md) — In-memory data store commonly used for caching, session memory, queues, and vector search
+- [Pydantic AI](./pydantic-ai-tool.md) — Typed Python AI SDK with an agent loop, dependency injection, model swapping by string id, and a harness for long-running work
+- [Redis](./redis-memory.md) — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 - [SeaTicket](./seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents
-- [Strands Agents SDK](./strands-agents.md) — Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models
-- [Temporal](./temporal.md) — Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents
-- [Zep](./zep.md) — Memory and context engineering platform for AI agents and assistants
+- [Strands Agents SDK](./strands-agents.md) — Model-driven agent SDK in Python and TypeScript that runs in your process with lifecycle limits, hooks, memory and tracing built in
+- [Temporal](./temporal.md) — Durable execution server that replays workflow history so long-running processes survive crashes
+- [Zep](./zep.md) — Zep Cloud's examples and integration packages for temporal knowledge-graph agent memory, with the OSS engine in Graphiti

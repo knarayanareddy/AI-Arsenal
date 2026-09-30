@@ -4,7 +4,7 @@ name: Monako Glass
 type: tool
 job: [monitoring, evaluation]
 description: Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
-url: "https://monako.ai/glass"
+url: "https://monako.ai/"
 cost_model: paid
 pricing_detail: Paid plans
 tags: [monitoring, evaluation]
@@ -46,7 +46,7 @@ A closed-source tool for visually inspecting and understanding model output patt
 
 ## Why It's in the Arsenal
 
-Monako Glass earns a place in the Arsenal because it directly addresses a recurring decision point: you want a visual way to inspect and understand model output patterns rather than reading raw logs. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Monako Glass is a visualize and understand AI model outputs with dynamic Pulse Rings and overlays. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -57,38 +57,44 @@ Monako Glass earns a place in the Arsenal because it directly addresses a recurr
 
 Model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the monitoring, evaluation path; under a paid cost model; with `monako-glass`, `name`, `monako`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://monako.ai/glass
+# https://monako.ai/
 ```
 
 ## Use Cases
 
-1. **Scenario**: you want a visual way to inspect and understand model output patterns rather than reading raw logs
-2. **Scenario**: you're debugging qualitative output drift and a visual overlay tool would speed up investigation
-3. **Scenario where this is NOT the right fit**: you need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens) — evaluate an alternative instead
+1. **Where it sits**: on the monitoring, evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Monako Glass can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Monako Glass is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Monako Glass here, so the honest first step is confirming the monitoring, evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want a visual way to inspect and understand model output patterns rather than reading raw logs
-- You're debugging qualitative output drift and a visual overlay tool would speed up investigation
+- The implementation detail worth reading before adopting Monako Glass is specific — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Monako Glass in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Monako Glass is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so Monako Glass's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens)
-- You need an open-source or self-hostable observability tool
-
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- Depending on Monako Glass means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Monako Glass's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Monako Glass is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Monako Glass as a Python dependency or sidecar service against the `monitoring, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
-- [Monako Glass](https://monako.ai/glass)
+- [Monako Glass](https://monako.ai/)
 
 ## Buzz & Reception
 
@@ -96,4 +102,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

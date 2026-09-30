@@ -20,17 +20,17 @@ This guide compares tools for the `prototyping` job. Use it as a routing page, t
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+A prototype is a tool for testing a hypothesis cheaply, and the failure is carrying its architecture forward. Grouping by this job makes the reversibility question explicit — which prototype choices are cheap to undo — and separates demo behaviour from quality on your own data, which is the distinction prototypes most often blur.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states what the free or managed path costs at production volume, not just at demo scale.
+- Reversibility is called out per entry, because a prototype dependency carried forward is the expensive mistake.
+- The distinction between demo behaviour and quality on your own data is stated, which is what prototypes most often blur.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the prototype-audience and cost facets on each tool entry. The comparison axis is reversibility: which of these choices is cheap to undo when the prototype becomes a product, which is the question that determines whether the demo cost was real.
 
 ## Getting Started
 
@@ -164,25 +164,27 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | freemium | Yes | No | No | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
-| [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | freemium | Yes | No | Yes | typescript | recommended |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [headroom](../dx-and-tooling/headroom.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | freemium | Yes | Yes | No | typescript, cpp | recommended |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
-| [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Repomix](../dx-and-tooling/repomix.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
+| [rtk](../dx-and-tooling/rtk.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | solid-choice |
@@ -192,23 +194,26 @@ This table is exhaustive for tools tagged with job = prototyping.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `prototyping` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you are validating an idea before committing engineering time and need the fastest path to a working demo.
+2. **Scenario**: you need a component you can swap out later and want to know which prototype choices are cheap to reverse.
+3. **Scenario**: you are comparing managed versus self-hosted options and want the prototype-stage trade-off, which is not the production trade-off.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Optimises for the prototype stage explicitly, including which defaults are wrong for production.
+- Flags the reversibility question, since a prototype dependency carried forward is the expensive mistake.
+- Distinguishes demo-behaviour from quality-on-your-data, which is where prototypes most often mislead.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Prototype tooling optimises for time-to-first-result, which usually means hosted services and permissive defaults; both are wrong for production at scale.
+- The main risk is carrying prototype architecture forward: a client library that is convenient in a notebook can be expensive to remove later.
+- A prototype that skips evaluation is a demo, and demo behaviour is a poor predictor of quality on your own data.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a prototyping tool here from build examples and from any entry marked prototype audience.
+- When a prototype graduates to production, move the entry and update the guidance here so the page reflects current practice.
 
 ## Resources
 

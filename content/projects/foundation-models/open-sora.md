@@ -80,21 +80,21 @@ git clone https://github.com/hpcaitech/Open-Sora
 
 ## Key Use Cases
 
-1. **Scenario**: self-hosted text-to-video generation for content pipelines with data/IP control
-2. **Scenario**: research or fine-tuning of video diffusion on domain-specific footage
-3. **Scenario where this is NOT the right fit**: needing best-in-class output quality now — a closed frontier model leads
+1. **Taking the dependency**: the weights for Open-Sora are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What the Open-Sora scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- Open weights + open training/data pipeline
-- Self-hostable; fine-tunable on custom data
-- Strong community traction and documentation
+- What Open-Sora gives you that reading the feature list does not: open-Sora follows the diffusion-transformer approach to video: a spatiotemporal latent diffusion model denoises video latents conditioned on text (and optionally an initial image), with a VAE encoding/decoding frames. The repo documents the data pipeline, training stages, and inference so the whole system can be reproduced or fine-tuned, not just run, which is the part you have to evaluate against your own workload.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-- Output quality and clip length trail closed frontier models (Sora, Kling, Runway) — this is the open reproduction, not the quality leader
-- Heavy GPU requirements for both inference and fine-tuning; this is not a lightweight model you can run on modest hardware
-- Video generation raises content-provenance concerns, so budget a provenance/watermarking policy before production use
+- Adoption risk for Open-Sora is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Open-Sora is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

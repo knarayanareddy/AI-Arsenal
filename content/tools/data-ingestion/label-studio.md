@@ -41,9 +41,11 @@ status: active
 
 A flexible, open-source labeling tool supporting many data types (text, image, audio, video) for building training and evaluation datasets, designed to be self-hosted.
 
+Treat Label Studio as a service with a schema, not as code you own unlike `argilla`, `prodigy`; on the data-labeling path; under a freemium cost model; with `label-studio`, `name`, `label`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
-Label Studio earns a place in the Arsenal because it directly addresses a recurring decision point: you need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Label Studio is An open-source data labeling platform for ML and AI datasets. Read it beside `argilla`, `prodigy`, `scale-ai`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -55,6 +57,8 @@ Label Studio earns a place in the Arsenal because it directly addresses a recurr
 
 Projects define a labeling interface and task data source; annotators work through a queue of tasks in the UI, with results exportable in standard formats.
 
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. The execution model matters more than the feature surface for Label Studio unlike `argilla`, `prodigy`; on the data-labeling path; under a freemium cost model; with `label-studio`, `name`, `label`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 ```bash
@@ -64,26 +68,29 @@ Projects define a labeling interface and task data source; annotators work throu
 
 ## Use Cases
 
-1. **Scenario**: you need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets
-2. **Scenario**: you want to self-host your annotation tooling for data-control or cost reasons
-3. **Scenario where this is NOT the right fit**: you need fully managed annotation workforce operations rather than just the tool (consider Scale AI) — evaluate an alternative instead
+1. **Where it sits**: on the data-labeling leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Label Studio can be swapped without touching callers.
+2. **Validating the choice**: put Label Studio and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Label Studio's comparison set is `argilla`, `prodigy`, `scale-ai`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets
-- You want to self-host your annotation tooling for data-control or cost reasons
+- The implementation detail worth reading before adopting Label Studio is specific — projects define a labeling interface and task data source; annotators work through a queue of tasks in the UI, with results exportable in standard formats — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Label Studio against `argilla`, `prodigy`, `scale-ai` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Label Studio is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Label Studio's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need fully managed annotation workforce operations rather than just the tool (consider Scale AI)
-- Your annotation task is NLP-specific and would benefit from Prodigy's scripted, model-in-the-loop workflow
+- There is no self-hosted path to Label Studio, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Label Studio describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Label Studio overlaps `argilla`, `prodigy`, `scale-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [Argilla](./argilla.md), [Prodigy](./prodigy.md), [Scale AI](./scale-ai.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `label-studio`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Label Studio as a Python dependency or sidecar service against the `data-labeling` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `argilla`, `prodigy`, `scale-ai` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

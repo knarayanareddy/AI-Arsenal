@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Hamel Husain is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Works on the tooling and process layer of applied AI: dataset curation, evaluation harnesses, and prompt engineering as an engineering discipline rather than an art.
 
 ## Why Follow
 
-Useful for teams trying to build evaluation loops that actually improve products.
+Useful for the argument that most teams' bottleneck is data and error analysis rather than modelling, and for the most pragmatic public treatment of prompt engineering for applications.
 
 ## Notable Work
 
-Practical LLM eval and error-analysis writing.
+Free and Open Source AI (FAAIF); the LLM Engineering and prompt-engineering course material; writing on breaking down and labelling your data, and on building evaluation into the development loop.
 
 ## Channels
 
@@ -39,10 +39,6 @@ Practical LLM eval and error-analysis writing.
 
 ## Resources
 
-- [Primary profile](https://hamel.dev)
-- [website](https://hamel.dev)
-- [github](https://github.com/hamelsmu)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Free and Open Source AI](https://fly.io/blog/)
+- [Prompt Engineering for Applications](https://learn.deeplearning.ai/courses/prompt-engineering-for-chatgpt/)
 

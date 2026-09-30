@@ -89,8 +89,10 @@ The plugin installs via Claude Code's plugin marketplace and shells out to the C
 
 ## Integration Patterns
 
-- Make `/codex:review --background` a pre-PR habit alongside your normal test/lint gate
-- Pairs naturally with skills frameworks like [Superpowers](./superpowers.md): the methodology handles process discipline, Codex provides the independent reviewer its review stage calls for
+- *Wiring*: adopt Codex Plugin for Claude Code as a TypeScript package in the same runtime as your API against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

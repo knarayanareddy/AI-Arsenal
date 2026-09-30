@@ -20,17 +20,17 @@ This guide compares tools for the `orchestration` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+When one call is not enough, the hard part is not the framework but representing failure, state and resumption explicitly. Grouping by this job makes those trade-offs findable alongside the tool choices, and keeps observability visible, since debugging a graph without per-step traces is guesswork.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Entries are grouped by execution model, because sequential, parallel and event-driven graphs fail in different ways.
+- Checkpointing and human-in-the-loop support are listed explicitly, since they decide whether a long workflow can resume.
+- Observability requirements are stated, because debugging a graph without per-step traces is guesswork.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the orchestration and agent-framework facets on each tool entry. The comparison axis is the execution model and how failure is represented, since a graph you cannot resume from a checkpoint is a graph you will debug by hand.
 
 ## Getting Started
 
@@ -116,12 +116,12 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
 | [Composio](../orchestration/composio.md) | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
-| [Dagster](../orchestration/dagster.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
-| [DocETL](../data-ingestion/docetl.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
+| [Dagster](../orchestration/dagster.md) | orchestration | freemium | Yes | Yes | Yes | python | recommended |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | usage-based | Yes | Yes | Yes | python | watching |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
-| [E2B](../orchestration/e2b.md) | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [E2B](../orchestration/e2b.md) | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
@@ -129,38 +129,41 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
-| [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Prefect](../orchestration/prefect.md) | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [SeaTicket](../orchestration/seaticket.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Strands Agents SDK](../orchestration/strands-agents.md) | orchestration | open-source | Yes | Yes | Yes | python | watching |
-| [Temporal](../orchestration/temporal.md) | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
+| [Temporal](../orchestration/temporal.md) | orchestration | self-hostable | Yes | Yes | Yes | go, polyglot | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `orchestration` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have a multi-step workflow with retries and human checkpoints and need a runtime that represents that explicitly.
+2. **Scenario**: a single agent call is not enough for your task and you need to decide how much structure to add before it becomes unmaintainable.
+3. **Scenario**: you are debugging a workflow where a late step failed and you need per-step observability to find where.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups by execution model, because sequential, parallel and event-driven graphs fail in different ways.
+- Includes the checkpointing and human-in-the-loop options that decide whether a long workflow can be resumed.
+- Keeps the observability requirement visible, since debugging a graph without per-step traces is guesswork.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Orchestration frameworks differ mostly in how they represent failure, and the choice matters more than the feature list.
+- Every added node is a place state can be persisted incorrectly, so a simpler graph you understand beats a sophisticated one you do not.
+- The debugging story depends on your tracing stack as much as on the orchestrator.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link an orchestrator here from any agent-framework entry so the comparison is one hop away.
+- When a build example uses a graph, reference the runtime here so the state-handling trade is documented with the code.
 
 ## Resources
 

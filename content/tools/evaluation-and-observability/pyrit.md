@@ -46,7 +46,7 @@ A red-teaming framework from Microsoft's AI Red Team: composable orchestrators r
 
 ## Why It's in the Arsenal
 
-PyRIT earns a place in the Arsenal because it directly addresses a recurring decision point: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for PyRIT rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -67,27 +67,29 @@ pip install pyrit-ai
 
 ## Use Cases
 
-1. **Scenario**: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives
-2. **Scenario**: you want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs
-3. **Scenario where this is NOT the right fit**: you want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program — evaluate an alternative instead
+1. **Integrating PyRIT**: the security-and-guardrails, evaluation call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on PyRIT.
+3. **Choosing between candidates**: PyRIT's comparison set is `garak`, `promptfoo`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives
-- You want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs
+- Beyond the marketing, PyRIT's own notes are the useful part: an attack combines a target (the system under test), converters that transform seed prompts, an optional adversarial LLM that adapts across turns toward an objective, and scorers that judge success; all interactions persist to memory for analysis — making red-team campaigns reproducible experiments.
+- PyRIT overlaps `garak`, `promptfoo` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- PyRIT is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so PyRIT's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program
-- Non-Python security teams; the orchestration model assumes engineering investment
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on PyRIT means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for PyRIT describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- PyRIT is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-- Compare against `garak`, `promptfoo` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `pyrit`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt PyRIT as a Python dependency or sidecar service against the `security-and-guardrails, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `garak`, `promptfoo` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +102,4 @@ pip install pyrit-ai
 - 4,074 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

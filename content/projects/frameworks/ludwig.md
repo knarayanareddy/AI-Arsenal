@@ -85,15 +85,21 @@ Install with `pip install ludwig`, write a `config.yaml` describing input/output
 
 ## Key Use Cases
 
-Config-driven LLM fine-tuning; training tabular and multimodal models without code; reproducible experiment pipelines; enabling data scientists to train models without deep PyTorch expertise.
+1. **Depending on it safely**: the work is the boundary — which calls go through Ludwig, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Ludwig scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-Declarative YAML workflow, broad data-type support, built-in LoRA/QLoRA and quantization for LLMs, reproducibility, hyperparameter search, and an Apache-2.0 license.
+- Beyond the headline description, Ludwig's architecture section is the honest source: ludwig maps a YAML config to a typed pipeline: each input/output feature has an encoder/decoder, a combiner fuses feature representations, and the framework generates preprocessing, a PyTorch model, the training loop, checkpoints, and metrics automatically. For LLMs it supports parameter-efficient fine-tuning (LoRA/QLoRA), prompt templates, and quantization, all declared in configuration rather than code, with hyperparameter search and serving utilities included.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-The declarative model constrains fully custom architectures and training loops, the newest LLM-specific techniques may arrive later than in specialized libraries, and complex needs can outgrow the config abstraction.
+- The cost this entry cannot quantify for you is operational: the Ludwig footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Ludwig is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

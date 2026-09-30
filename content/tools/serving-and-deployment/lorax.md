@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** Multi-LoRA inference server: one base model, one GPU, thousands of hot-swappable fine-tuned adapters with continuous batching across them. Purpose-built for per-customer fine-tune economics.
+> **TL;DR:** the production-serving entry for LoRAX. Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -69,21 +69,22 @@ docker run --gpus all -p 8080:80 ghcr.io/predibase/lorax:main \
 
 ## Use Cases
 
-1. **Scenario**: SaaS with a fine-tuned adapter per customer, served from a shared GPU pool
-2. **Scenario**: task-specialized adapters (extraction, classification, summarization) behind one endpoint selected per request
-3. **Scenario where this is NOT the right fit**: a single fine-tune at high traffic — merge the adapter into the base model and use a mainstream engine
+1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so LoRAX can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since LoRAX is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: LoRAX's comparison set is `bentoml`, `hf-inference-endpoints`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Solves a real cost cliff: thousands of fine-tunes at roughly one model's serving cost
-- Request-level adapter selection makes A/B testing adapters trivial
-- Production affordances inherited from TGI (metrics, token streaming, quantization support)
+- The implementation detail worth reading before adopting LoRAX is specific — the base model stays resident in GPU memory; LoRA weight deltas are small enough to page in on demand. Custom SGMV (segmented gather matrix-vector) kernels apply different adapters to different sequences within the same batched matmul, so throughput approaches single-model serving even with many concurrent adapters — and that is where a capability claim either survives contact with your data or does not.
+- Weighing LoRAX against `bentoml`, `hf-inference-endpoints` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The documented path into LoRAX runs through `huggingface`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure LoRAX's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Development pace trails vLLM; vLLM's own multi-LoRA support now covers many of these scenarios — benchmark both
-- LoRA-only leverage: full fine-tunes and non-adapter architectures gain nothing
-- Adapter cold-loads add tail latency when the working set exceeds GPU/CPU cache tiers
+- There is no self-hosted path to LoRAX, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LoRAX describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where LoRAX overlaps `bentoml`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A tool for packaging, versioning, and distributing reusable agent 'skills' (tool
 
 ## Why It's in the Arsenal
 
-Cloudskill earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute and version reusable agent 'skills' across multiple teams or products. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Cloudskill is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -66,25 +66,29 @@ Skills are defined once and published to a shared registry; agents subscribe to 
 
 ## Use Cases
 
-1. **Scenario**: you need to distribute and version reusable agent 'skills' across multiple teams or products
-2. **Scenario**: your org requires audit trails over which agent has which capability enabled
-3. **Scenario where this is NOT the right fit**: you only run a single agent or a small prototype where ad-hoc tool definitions are simpler — evaluate an alternative instead
+1. **Integrating Cloudskill**: the orchestration, prompt-management call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Cloudskill.
+3. **Deciding at all**: nothing is catalogued against Cloudskill here, so the honest first step is confirming the orchestration, prompt-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need to distribute and version reusable agent 'skills' across multiple teams or products
-- Your org requires audit trails over which agent has which capability enabled
+- Beyond the marketing, Cloudskill's own notes are the useful part: skills are defined once and published to a shared registry; agents subscribe to or are granted specific skills rather than each team reimplementing tool definitions independently.
+- No direct sibling is catalogued for Cloudskill in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Cloudskill means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Cloudskill's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You only run a single agent or a small prototype where ad-hoc tool definitions are simpler
-- You need an open-source or self-hostable skill registry
-
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Cloudskill, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Cloudskill's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Cloudskill is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Cloudskill as a Python dependency or sidecar service against the `orchestration, prompt-management` job.  For an agent or workflow integration, keep the call behind a thin adapter so a provider or model swap is a configuration change rather than a refactor of every call site.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -96,4 +100,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

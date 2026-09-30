@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Shreya Shankar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Works across applied and academic ML, with a strong focus on teaching: prompting as a method, and ML systems as something that breaks in specific ways in production.
 
 ## Why Follow
 
-Useful for understanding reliability and data-centric evaluation for AI systems.
+Useful for the prompt-engineering research done properly rather than anecdotally, and for the full-stack course material on what breaks when a model meets production.
 
 ## Notable Work
 
-Research and writing on AI engineering systems.
+“The Prompt Report”; the Full Stack Deep Learning course and its LLM Bootcamp; “A Recipe for Attention”; the ZeroShot and CS229 lecture material.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Research and writing on AI engineering systems.
 
 ## Resources
 
-- [Primary profile](https://www.sh-reya.com)
-- [website](https://www.sh-reya.com)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Full Stack Deep Learning](https://fullstackdeeplearning.com/)
+- [The Prompt Report](https://arxiv.org/abs/2312.13734)
 

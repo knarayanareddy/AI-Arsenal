@@ -50,25 +50,26 @@ Weekly picks are a triage layer. Canonical paper entries should be created only 
 
 ## Use Cases
 
-1. **Scenario**: You need a fast research reading path for AI engineering decisions
-2. **Scenario**: You want to map papers to practical architecture and evaluation choices
+1. **Scenario**: you want a weekly filter over arXiv volume rather than reading everything matching a keyword query.
+2. **Scenario**: you are building a reading habit and want papers selected for engineering relevance rather than for citation impact.
+3. **Scenario**: you have a specific technique to track and want to know when new work appears that contradicts or extends it.
 
 ## Strengths
 
-- Organizes research by engineering relevance rather than publication date alone
-- Links canonical paper entries where available
-- Keeps benchmark and technique tracking separate from implementation guides
+- Applies an engineering filter to a firehose, which is the only way a weekly list stays worth reading.
+- Keeps picks separate from settled entries, so nothing here is mistaken for an endorsed conclusion.
+- Moves matured work out of the weekly list into a canonical entry, which bounds how much is repeated.
 
 ## Limitations / When NOT to Use
 
-- Does not replace reading the original papers
-- Benchmark leaderboards change frequently and should be verified before claims
+- Selection is necessarily lossy: a paper that matters for your problem and did not make a weekly pick will not appear.
+- Picks reflect one editor's engineering lens and will over-weight the topics currently active in the field.
+- Freshness is the point, which also means nothing here is stable: treat each pick as a starting point to verify, not a settled recommendation.
 
 ## Integration Patterns
 
-- Use paper entries as background context for architecture decisions.
-- Link papers from projects, tools, tips, and reference stacks only when the connection is direct.
-- Convert repeated research takeaways into tips or decision-tree updates.
+- Link a pick from a project or tool entry only when the project actually implements or depends on the paper's contribution.
+- Promote a recurring theme into a tip or a decision-tree node once it recurs, rather than leaving it as a series of weekly links.
 
 ## Resources
 

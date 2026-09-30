@@ -56,7 +56,7 @@ A widely-adopted open-source framework for composing LLM-powered applications, p
 
 ## Why it's in the Arsenal
 
-The most widely-adopted general-purpose framework for composing LLM applications, spanning retrieval, tool use, and agent orchestration. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the broadest possible ecosystem of pre-built integrations (model providers, vector stores, document loaders, tools) for assembling an LLM application quickly. See Strengths / Limitations below before adopting it.
+LangChain appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 _This entry consolidates the former separate langchain-rag.md entry: the same underlying project is documented here with multiple ecosystem_role values rather than as duplicate files, since it is the same codebase/repository._
 
@@ -81,18 +81,21 @@ pip install langchain
 
 ## Key Use Cases
 
-1. **Scenario**: you need the broadest possible ecosystem of pre-built integrations (model providers, vector stores, document loaders, tools) for assembling an LLM application quickly
-2. **Scenario**: your application spans multiple concerns — retrieval, agents, memory, tool use — and you want one consistent set of abstractions across all of them rather than separate libraries
+1. **Adopting the abstraction**: for LangChain, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `broadest`, `possible`, `ecosystem`, `pre-built` are the variables that actually move the outcome for LangChain in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need the broadest possible ecosystem of pre-built integrations (model providers, vector stores, document loaders, tools) for assembling an LLM application quickly
-- Your application spans multiple concerns — retrieval, agents, memory, tool use — and you want one consistent set of abstractions across all of them rather than separate libraries
+- What LangChain gives you that reading the feature list does not: built around composable 'chains' (sequences of calls) and, more recently, the LangChain Expression Language (LCEL) for declaratively composing components; retrieval-specific pieces (document loaders, text splitters, retrievers, vector store integrations) form a cohesive RAG-building toolkit within the broader framework, usable independently of the agent-orchestration pieces, which is the part you have to evaluate against your own workload.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need explicit, durable multi-agent orchestration with fine-grained state control — LangGraph (built by the same team) is the more purpose-built choice for that specific need
-- You want a minimal dependency footprint — LangChain's breadth comes with a correspondingly large and sometimes criticized abstraction surface; a narrower library may be simpler for a single well-defined task
+- Adoption risk for LangChain is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for LangChain at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside LangChain here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

@@ -53,9 +53,11 @@ status: active
 
 An open-source evaluation framework for testing LLM applications, designed to integrate with standard testing tools (pytest) and CI pipelines so LLM output quality can be checked automatically like conventional unit tests.
 
+The engineering question with DeepEval is not whether it works but what it commits you to in the benchmark-and-eval phase; under a open-source cost model; with `deepeval`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Why it's in the Arsenal
 
-General-purpose open-source LLM evaluation framework designed to run in CI like a unit-test suite. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want LLM evaluation to feel like writing unit tests — DeepEval is explicitly designed to integrate with pytest and CI pipelines for automated regression testing. See Strengths / Limitations below before adopting it.
+The case for DeepEval rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -74,22 +76,25 @@ Upstream: model-provider-agnostic. Downstream: none of particular note. Competin
 
 ## Key Use Cases
 
-1. **Scenario**: you want LLM evaluation to feel like writing unit tests — DeepEval is explicitly designed to integrate with pytest and CI pipelines for automated regression testing
-2. **Scenario**: you need broad evaluation metric coverage (not just RAG-specific) spanning hallucination detection, answer relevance, bias, and more, in one framework
+1. **Depending on it safely**: the work is the boundary — which calls go through DeepEval, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What to measure first**: `evaluation`, `feel`, `writing`, `unit` decide whether DeepEval works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want LLM evaluation to feel like writing unit tests — DeepEval is explicitly designed to integrate with pytest and CI pipelines for automated regression testing
-- You need broad evaluation metric coverage (not just RAG-specific) spanning hallucination detection, answer relevance, bias, and more, in one framework
+- What DeepEval gives you that reading the feature list does not: provides a library of evaluation metrics (hallucination, answer relevance, bias, toxicity, RAG-specific metrics, and more) that can be invoked directly in test functions, combining rule-based checks with LLM-as-judge scoring, with results reportable in CI output and an optional hosted platform (Confident AI) for dashboarding, which is the part you have to evaluate against your own workload.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the deepest RAG-specific metric library specifically — Ragas has a narrower but more RAG-focused metric set that some teams prefer for that specific use case
-- You want a fully managed platform with a UI rather than a code-first, CI-integrated testing library — Braintrust or LangSmith's UI-driven evaluation workflows may fit better for less CI-centric teams
+- Adoption risk for DeepEval is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running DeepEval against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside DeepEval here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for DeepEval in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

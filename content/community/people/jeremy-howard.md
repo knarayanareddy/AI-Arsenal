@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Jeremy Howard is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Co-founded fastai, which takes a teaching-first approach to applied deep learning: notebooks that run, with the model internals legible rather than hidden behind a training loop.
 
 ## Why Follow
 
-Excellent starting point for practical deep learning foundations.
+Useful if you want to go from a working notebook to a deployed model without the framework ceremony, and for his unusually candid writing about where the practical difficulties actually are.
 
 ## Notable Work
 
-fast.ai courses and practical deep learning education.
+fastai and the Practical Deep Learning for Coders course; the fastai library and its recipes; “Deep Learning for Coders”; the earlier “Data Science in Python” and Applied Practical Deep Learning material.
 
 ## Channels
 
@@ -36,9 +36,6 @@ fast.ai courses and practical deep learning education.
 
 ## Resources
 
-- [Primary profile](https://www.fast.ai/)
-- [website](https://www.fast.ai/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [fastai library](https://github.com/fastai/fastai)
+- [Practical Deep Learning for Coders](https://course.fast.ai/)
 

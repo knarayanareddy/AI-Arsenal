@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Experiment tracking and model management platform for ML and AI teams. Free and paid hosted plans. Best for experiment tracking and model registry.
+> **TL;DR:** Weights & Biases covers the model-registry, evaluation leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A managed experiment tracking and model management platform known for polished c
 
 ## Why It's in the Arsenal
 
-Weights & Biases earns a place in the Arsenal because it directly addresses a recurring decision point: you need best-in-class experiment tracking visualizations and team collaboration dashboards. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Weights & Biases rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -57,34 +57,43 @@ Weights & Biases earns a place in the Arsenal because it directly addresses a re
 
 Training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams.
 
+A request is transformed into the exact payload the provider expects — messages, parameters, an API key — and returned as a normalised response, which is why the risk is a provider changing its schema or deprecating a model id without a version bump. The execution model matters more than the feature surface for Weights & Biases unlike `dvc`, `hugging-face-hub`; on the model-registry, evaluation path; under a freemium cost model; with `weights-biases`, `name`, `weights`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
+
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Weights & Biases into anything else. The command below calls the hosted service against the `model-registry, evaluation` job and returns a result you can inspect directly.
 
 ```bash
 pip install wandb
 ```
 
+Follow the official documentation at https://docs.wandb.ai/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you need best-in-class experiment tracking visualizations and team collaboration dashboards
-2. **Scenario**: you're running many training runs/sweeps and need hyperparameter search tooling built in
-3. **Scenario where this is NOT the right fit**: budget or data-residency constraints rule out a primarily SaaS, paid platform — evaluate an alternative instead
+1. **Where it sits**: on the model-registry, evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Weights & Biases can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Weights & Biases.
+3. **Choosing between candidates**: Weights & Biases's comparison set is `dvc`, `hugging-face-hub`, `mlflow`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need best-in-class experiment tracking visualizations and team collaboration dashboards
-- You're running many training runs/sweeps and need hyperparameter search tooling built in
+- The implementation detail worth reading before adopting Weights & Biases is specific — training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams — and that is where a capability claim either survives contact with your data or does not.
+- Weights & Biases's honest comparison set is `dvc`, `hugging-face-hub`, `mlflow`; what separates them is rarely capability, it is what you must operate.
+- Weights & Biases is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Weights & Biases's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Budget or data-residency constraints rule out a primarily SaaS, paid platform
-- You only need basic open-source tracking and a registry (MLflow may suffice at lower cost)
+- There is no self-hosted path to Weights & Biases, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Weights & Biases describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Weights & Biases overlaps `dvc`, `hugging-face-hub`, `mlflow`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [DVC](./dvc.md), [Hugging Face Hub](./hugging-face-hub.md), [MLflow](./mlflow.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `weights-biases`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Weights & Biases as a Python dependency or sidecar service against the `model-registry, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `dvc`, `hugging-face-hub`, `mlflow` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

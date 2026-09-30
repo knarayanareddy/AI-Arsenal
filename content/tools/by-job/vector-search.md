@@ -20,17 +20,17 @@ This guide compares tools for the `vector-search` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Retrieval quality is decided by a chain — chunking, embeddings, index, ranking — and when it is poor the instinct is to blame the vector store, which is usually the wrong link. Grouping by this job makes the shortlist available next to the decision, so the store gets sized for the stage it actually sits in rather than chosen by benchmark.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Entries are grouped by deployment model first, because that constrains everything else about the choice.
+- Hybrid versus pure-vector search is called out, since it is a real architecture decision rather than a tuning knob.
+- Every entry states that recall figures are not transferable to your corpus without re-measuring.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the vector-search and retrieval facets on each tool entry. The comparison axis is where the index and the embedding model are split, because that boundary determines what a re-embedding or a model swap actually costs you.
 
 ## Getting Started
 
@@ -193,10 +193,10 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
-| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | self-hostable | Yes | Yes | Yes | java | solid-choice |
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | freemium | Yes | Yes | Yes | java | solid-choice |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
 | [FastEmbed](../model-layer/fastembed.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
-| [Marqo](../data-ingestion/marqo.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Marqo](../data-ingestion/marqo.md) | data ingestion | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | freemium | Yes | Yes | Yes | rust | recommended |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | freemium | Yes | No | No | python, typescript | recommended |
 | [RAGatouille](../data-ingestion/ragatouille.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
@@ -208,23 +208,26 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `vector-search` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to pick a vector store and want the shortlist narrowed by deployment model before you benchmark anything.
+2. **Scenario**: your RAG retrieval quality is poor and you need to know whether the index, the embeddings or the chunking is the actual bottleneck.
+3. **Scenario**: you are deciding whether hybrid keyword-plus-vector search is worth the extra index over pure vector search for your corpus.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups candidates by deployment model first, because that decision constrains everything else about the choice.
+- Makes the self-hosted versus managed distinction explicit rather than leaving it to the individual entries.
+- States plainly that recall figures are not transferable, which removes the most common misuse of the benchmark tables.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Benchmark results here are not transferable: recall depends on your embedding model, dimensionality, chunk size and corpus, so a number from another corpus says little about yours.
+- Most entries here are self-hostable, which means "fast" in a benchmark becomes "fast on the instance you can afford".
+- This page lists candidates, not a decision. Recall and latency on your own data are the only measurements that settle it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a store here from a RAG build example so the retrieval leg has a concrete candidate behind it.
+- When a build example changes its store, update the recommendation here so the two do not disagree.
 
 ## Resources
 

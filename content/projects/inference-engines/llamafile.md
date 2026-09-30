@@ -61,7 +61,7 @@ A Mozilla-backed project (built on top of llama.cpp) that packages a model and t
 
 ## Why it's in the Arsenal
 
-Mozilla-backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step. See Strengths / Limitations below before adopting it.
+Llamafile appears in this catalog as a reference point for the inference-engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practice. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,20 +81,21 @@ chmod +x ./model.llamafile
 
 ## Key Use Cases
 
-1. **Scenario**: you need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step
-2. **Scenario**: you want the simplest possible way to hand someone a working local LLM demo with zero setup
+1. **Depending on it safely**: the work is the boundary — which calls go through Llamafile, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Llamafile scenarios have in common**: they are separated by hardware and concurrency rather than by capability, which is the axis on which runtimes genuinely differ.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step
-- You want the simplest possible way to hand someone a working local LLM demo with zero setup
+- What Llamafile gives you that reading the feature list does not: combines llama.cpp's inference engine with Cosmopolitan Libc (a technology for producing binaries that run natively across multiple operating systems) to package the model weights and runtime into one self-contained executable file, which is the part you have to evaluate against your own workload.
+- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need production-grade serving with high concurrency or GPU cluster support — llamafile targets simplicity and portability for individual use, not production throughput
-- You need frequent model updates or fine-tuning workflows — llamafile's single-executable packaging model is better suited to static distribution than an actively-iterated development loop
-
-_Enrichment status: draft. Llamafile's positioning as a distribution-convenience runtime (rather than a production-serving engine) is drawn from its own description; production evidence is not independently established. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the Llamafile footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Nothing in this entry substitutes for running Llamafile against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Llamafile here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

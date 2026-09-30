@@ -66,6 +66,8 @@ Two practical contributions: (1) the grouping interpolation itself, giving a tun
 
 Query heads are partitioned into G groups, each sharing one KV projection; converted checkpoints initialize each group's KV head as the mean of its constituent MHA heads, followed by brief continued pretraining. Experiments on T5 Large/XXL measure quality (CNN/DM, arXiv, PubMed summarization, WMT, TriviaQA) against inference time per sample, sweeping the number of groups to map the quality/speed frontier.
 
+Read this for what was held constant in the architectures phase; with `ainslie-2023-gqa`, `title`, `training`. The dataset split, the baseline, the tuning budget and the evaluation protocol determine whether a comparison means anything; where the paper reports them you can judge transferability, and where it does not, treat the number as provisional.
+
 ## Practical Applicability
 
 When sizing a serving deployment, KV-cache-per-token = 2 × layers × kv_heads × head_dim × bytes — GQA is why that number is 4-8x smaller than the naive calculation on modern models, which directly sets max batch size and long-context feasibility. When comparing model families or configuring quantized KV caches, `num_key_value_heads` is the field to read; models that skipped GQA (older 7B-class checkpoints) pay proportionally in throughput.
@@ -89,4 +91,4 @@ Refines the attention design of `vaswani-2017-attention` (foundational/). Its KV
 - [Venue](https://aclanthology.org/2023.emnlp-main.298/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

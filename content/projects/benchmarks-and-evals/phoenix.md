@@ -62,7 +62,7 @@ Arize AI's open-source LLM observability and evaluation platform, notable for a 
 
 ## Why it's in the Arsenal
 
-Arize AI's open-source LLM observability and evaluation platform, notebook-first and OpenTelemetry-based. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a notebook-first observability experience for ML/LLM engineers who iterate in Jupyter-style environments during development, extending into production monitoring. See Strengths / Limitations below before adopting it.
+Phoenix is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -71,6 +71,8 @@ Built on OpenTelemetry for tracing instrumentation, with a strong notebook-first
 ## Ecosystem Position
 
 Upstream: built on OpenTelemetry conventions. Downstream: none of particular note. Competing: Langfuse, LangSmith, Opik. Complementary: shares Arize's broader ML observability expertise and can integrate with Arize's commercial platform for teams that outgrow the open-source tool alone.
+
+Read Phoenix beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `phoenix`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
 
 ## Getting Started
 
@@ -81,22 +83,25 @@ Upstream: built on OpenTelemetry conventions. Downstream: none of particular not
 
 ## Key Use Cases
 
-1. **Scenario**: you want a notebook-first observability experience for ML/LLM engineers who iterate in Jupyter-style environments during development, extending into production monitoring
-2. **Scenario**: you want an OpenTelemetry-based, standards-aligned observability tool backed by Arize (an established ML-observability company) rather than a purpose-built proprietary format
+1. **Depending on it safely**: the work is the boundary — which calls go through Phoenix, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Phoenix scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare Phoenix against `langfuse`, `langsmith-platform`, `helicone` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a notebook-first observability experience for ML/LLM engineers who iterate in Jupyter-style environments during development, extending into production monitoring
-- You want an OpenTelemetry-based, standards-aligned observability tool backed by Arize (an established ML-observability company) rather than a purpose-built proprietary format
+- Beyond the headline description, Phoenix's architecture section is the honest source: built on OpenTelemetry for tracing instrumentation, with a strong notebook-first UX for exploring traces and evaluation results during development (via the Arize Phoenix Python package), plus a production deployment mode for ongoing monitoring; evaluation combines heuristic and LLM-graded metrics.
+- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the deepest built-in LLM-specific evaluation metrics out of the box — evaluation-native platforms may require less configuration for common LLM eval scenarios
-- Your team doesn't work in a notebook-first development style — Phoenix's core UX strength is most valuable to teams that do
+- The cost this entry cannot quantify for you is operational: the Phoenix footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Phoenix at your scale need measuring before this informs a production decision.
+- Where Phoenix overlaps `langfuse`, `langsmith-platform`, `helicone`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for Phoenix in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

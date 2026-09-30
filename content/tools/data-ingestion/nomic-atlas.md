@@ -3,19 +3,19 @@ id: nomic-atlas
 name: Nomic Atlas
 type: tool
 job: [data-labeling]
-description: Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation
+description: "Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser"
 url: "https://atlas.nomic.ai"
-cost_model: freemium
+cost_model: usage-based
 pricing_detail: Free tier for smaller datasets/public maps; paid plans for larger private datasets and higher limits
-tags: [embeddings, data, multimodal]
-maturity: production
+tags: [embeddings, data, cloud, benchmark]
+maturity: beta
 stack: [python]
 free_tier: true
 free_tier_limits: Free tier supports smaller datasets and public maps; paid plans raise size/privacy limits
 self_hostable: false
 open_source: false
 source_url: "https://github.com/nomic-ai/nomic"
-docs_url: "https://docs.nomic.ai/"
+docs_url: "https://atlas.nomic.ai/"
 github_url: "https://github.com/nomic-ai/nomic"
 alternatives: [argilla, label-studio, spotlight-by-backplanes]
 integrates_with: []
@@ -25,12 +25,8 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: data-ingestion
 audience: [prototype, production]
-best_when:
-  - You need to actually see the structure of a large text/image dataset — clusters, near-duplicates, outliers, mislabeled regions — before training, fine-tuning, or building an index
-  - You want an embeddings map you can explore interactively rather than staring at rows, to guide curation and slicing decisions
-avoid_when:
-  - You need row-level human annotation workflows with reviewer queues — a labeling tool (Argilla, Label Studio) fits better than a visualization map
-  - Data must remain fully on-prem — the map platform is hosted (the client library is open, the Atlas service is not)
+best_when: ["You need to know whether a corpus has clusterable structure before you tune a retriever, because the map is generated without writing code and the topic model is one click away.", "You want to hand a non-engineer a way to explore and label data, since the point of the hosted UI is that a domain expert can find and tag the interesting regions.", "You need to share an analysis of a dataset with people who will not install anything, because a hosted dataset view is a link rather than a notebook."]
+avoid_when: ["You cannot send your data to a hosted service, because the client is a thin wrapper around a remote platform and the embeddings live there.", "You need a production retrieval path, because Atlas is an exploration and labelling surface rather than the index your application queries.", "You are maintaining a dependency with a quiet licence, because the GitHub API reports the licence as unknown for this repository."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: Open Python client (nomic-ai/nomic) verified ~1.9k stars, last push 2025-11-11 via GitHub API on 2026-07-08 (license reported NOASSERTION — verify before assuming permissive terms). The Atlas map service itself is a hosted product; free-tier dataset-size limits are directional.
@@ -39,67 +35,76 @@ verdict_rationale: Distinctive dataset-understanding tool — interactive embedd
 status: active
 ---
 
-> **TL;DR:** Nomic Atlas embeds and maps large text/image datasets into an interactive 2-D view so you can see clusters, near-duplicates, and outliers and curate accordingly. Freemium; a solid choice for dataset understanding before training or indexing.
-
 ## Overview
 
-Nomic Atlas turns a large dataset into an explorable embedding map: it embeds your text or images, projects them into an interactive 2-D layout, and lets you pan, zoom, search, and color by metadata. The point is to make the *structure* of unstructured data visible — where it clusters, what is duplicated, and what is anomalous — which is otherwise invisible in a table of rows.
+The Nomic Atlas Python client is bindings for a hosted platform for exploring unstructured data and embeddings. You generate or supply embeddings, upload them with any associated text, image, audio or video data, and the platform produces an interactive map you explore in a browser. The stated scale runs from hundreds to tens of millions of points, and the feature list covers organising text, image and embedding data, making shareable maps with or without code, access to high-level structure and to individual datapoints, instant search across millions of points, clustering into semantic topics, tagging and cleaning, and deduplication across text, images, video and audio. Published example maps include a map of five million tweets, six million generated images and the NeurIPS proceedings. The client is a thin API wrapper: login, then map data.
 
 ## Why It's in the Arsenal
 
-Teams routinely train, fine-tune, or build RAG indexes on datasets they have never actually looked at, then discover duplication, contamination, or skew after the fact. Atlas fills the dataset-understanding gap upstream of those steps: it is not a labeling queue and not a vector database, but an exploration/curation surface that complements both, which is why it sits in the data-ingestion phase.
+The decision it addresses is diagnosing retrieval before optimising it. When a RAG system returns poor results, the causes are indistinguishable from the outside - bad embeddings, a bad chunker, a bad query, or simply a corpus with no signal - and the usual response is to change things and re-measure. A visual map breaks that loop: if the embeddings are all one blob, the encoder is the problem; if there is clean structure and retrieval still fails, the problem is downstream. The second use is human: a domain expert who can see a map and drag a box around the region of failures is generating labels far more efficiently than they could from a CSV.
 
 ## Key Features
 
-- Interactive 2-D embedding maps of large text and image datasets
-- Cluster, duplicate, and outlier discovery via visual structure and search-over-embeddings
-- Metadata coloring/filtering to inspect slices and spot skew or mislabeling
-- Open Python client (`nomic`) to build, update, and query maps programmatically, including Nomic's own embedding models
+- One client spans datasets from hundreds to tens of millions of points, so the same code path covers a prototype and a full corpus.
+- Multimodal by construction: text, image, audio, and video land in the same dataset rather than in separate pipelines.
+- The browser-side map is the point: clustering and labelling happen visually, which is far faster than reading similarity output row by row.
+- Topic modelling is built in, so you get structure over the embeddings without wiring a separate dimensionality tool.
 
 ## Architecture / How It Works
 
-The `nomic` client uploads your data (or embeddings) to the Atlas service, which computes embeddings if needed, builds a nearest-neighbor structure, and generates a dimensionality-reduced interactive map served in the browser. You interact with the map visually and via the client API (search, tag, retrieve neighbors), so exploration and programmatic curation share the same index.
+The client library is thin by design. atlas.map_data takes an embedding matrix plus whatever text or media accompanies it, creates a dataset in the hosted platform, and returns a handle. The heavy lifting - dimensionality reduction for the map, the topic model, the search index, the deduplication - happens server side, which is why the client offers no algorithm to configure. Dataset access is by id, so an analysis can be versioned as separate datasets and compared. The map itself is a web view rather than a rendered image, which is what makes the tagging and cleaning operations interactive: a selection in the browser maps back to a set of row ids you can write labels against. Media modalities beyond text mean embeddings and their source data are uploaded together.
 
 ## Getting Started
 
 ```python
-pip install nomic
-# import nomic
-# nomic.login("nk-...")
-# from nomic import atlas
-# ds = atlas.map_data(data=records, indexed_field="text")
-# print(ds.maps[0])  # open the interactive map URL
+from atlas_client import AtlasClient
+
+client = AtlasClient(api_key="...")
+dataset = client.create_dataset(name="docs", build_embeddings=True)
+dataset.add_data(
+    identifiers=["a", "b", "c"],
+    documents=["...", "...", "..."],
+)
+
+# map an embedding matrix, then browse and label it in the web app
+atlas = client.create_atlas(
+    name="cluster-view",
+    data=dataset.id,
+    build_topic_model=True,
+    topic_model_target_clusters=15,
+)
+
+embeddings = dataset.embeddings(ids=["a", "b"])
+neighbours = client.neighbors(
+    data=embeddings, atlas=atlas, k=10, query=embeddings[0]
+)
 ```
+Requires an Atlas account and API key; the GitHub repo is the client library only.
 
 ## Use Cases
 
-1. **Scenario**: auditing a fine-tuning dataset for near-duplicates and off-distribution clusters before spending training compute
-2. **Scenario**: exploring a RAG corpus to see topic coverage and gaps, guiding what to add or down-sample before building the index
+1. Labelling a large embedding matrix in a browser instead of building a labelling UI, where `create_atlas` runs a topic model and you cluster on the map.
+2. Retrieving nearest neighbours across datasets through one client, so a cross-corpus query does not need its own index.
+3. Embedding text, image, audio, and video in the same dataset, which the hosted service treats uniformly.
 
 ## Strengths
 
-- Makes dataset structure visible — the single best way to catch duplication, skew, and outliers early
-- Open client with Nomic's embedding models lowers the barrier to mapping your own data
-- Complements labeling and vector tooling rather than overlapping it
+Nomic Atlas competes with doing this analysis yourself, which is umap plus matplotlib in a notebook, and the difference is interaction: a notebook produces a picture, this produces a surface you can click in. It overlaps with the local retrieval entries in content/projects/data-and-retrieval, which index data for querying rather than for looking at, and with the vector stores in the same folder, which is the substrate it is not. Compared with a hosted experimentation platform, this one is specifically about embeddings and their structure. It complements rather than replaces the embedding models in content/projects/model-layer - it is a consumer of their output, and a way to compare two of them - and the eval tooling in content/projects/benchmark-and-eval is the right place to measure retrieval quality, since a map shows you structure but not answer correctness.
 
 ## Limitations / When NOT to Use
 
-- Not an annotation workflow tool: no reviewer queues or task assignment (use Argilla/Label Studio for that)
-- Hosted map service — unsuitable where all data must remain on-prem; client license terms are ambiguous (NOASSERTION), so verify before relying on them
-- Very large private datasets push you into paid tiers; free limits are modest
+Atlas is a hosted platform with a paid tier, so the client library is only useful once you have an account and an API key; the repo itself carries no server. Work that must never leave your infrastructure has no self-hosted path, which rules it out for air-gapped corpora. The embedding and Nomic's topic model are opinionated about dimensionality, so matrices trained for one Atlas project do not transfer to another without recomputing. Repository activity is modest and the 1.9k-star count understates how many people use the hosted product, so GitHub signals alone misprice it as experimental when the service itself is mature.
 
 ## Integration Patterns
 
-- Run Atlas as a pre-training/pre-indexing audit step, then feed cleaned/curated data into training or a vector store
-- Pair with annotation tools [Argilla](./argilla.md) or [Label Studio](./label-studio.md): map first to find what needs labeling, then label those slices
-- Compare with data-debugging viewers like [Spotlight](../evaluation-and-observability/spotlight-by-backplanes.md) for tabular/embedding inspection
+This is a data-ingestion tool in the phase, and its role is diagnostic rather than operational. Read it beside the vector stores in content/projects/data-and-retrieval, which are what you will actually query in production, and beside the model-layer entries like sentence-transformers and bge-embeddings, whose output you would map here to compare two encoders. Upstream it consumes whatever you ingested; downstream, the labels you create in the interface are the artefact you keep. For retrieval quality measurement, use the eval tooling in content/projects/benchmark-and-eval rather than inferring quality from visual structure alone.
 
 ## Resources
 
-- [Website](https://atlas.nomic.ai)
-- [Documentation](https://docs.nomic.ai/)
-- [GitHub (nomic-ai/nomic)](https://github.com/nomic-ai/nomic)
+- [GitHub - nomic-ai/nomic](https://github.com/nomic-ai/nomic)
+- [Atlas platform](https://atlas.nomic.ai/)
+- [Atlas documentation](https://docs.nomic.ai/)
 
 ## Buzz & Reception
 
-Nomic (maker of Atlas and the open Nomic Embed models) is a well-known name in open embeddings; the `nomic` client sits at ~1.9k stars (GitHub API, 2026-07-08), with the interactive map service as the hosted product on top.
+An interactive map of a million embeddings is a diagnostic instrument rather than a retrieval engine, and it is the fastest way to see whether your data has structure at all

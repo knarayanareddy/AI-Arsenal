@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Eugene Yan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Publishes the Applied ML letter series, a pattern library for how LLM systems are actually built in production: architecture, retrieval, tool use, agents, evaluation, and the failure modes of each.
 
 ## Why Follow
 
-Useful for grounded applied ML and retrieval-system design patterns.
+Useful as the fastest way to build a working mental model of production LLM system design, and for the pattern catalogue to check your own architecture against before you reinvent a bad version of something already written down.
 
 ## Notable Work
 
-Applied ML systems writing and curated papers.
+The Applied ML series covering LLM architecture, embeddings and retrieval, tool use, agents, and evaluation; “Patterns of Building AI Products”; the recurring essay series on designing and operating AI systems.
 
 ## Channels
 
@@ -39,10 +39,6 @@ Applied ML systems writing and curated papers.
 
 ## Resources
 
-- [Primary profile](https://eugeneyan.com)
-- [website](https://eugeneyan.com)
-- [github](https://github.com/eugeneyan)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Applied ML — essays](https://eugeneyan.com/writing/)
+- [Patterns of Building AI Products](https://eugeneyan.com/writing/)
 

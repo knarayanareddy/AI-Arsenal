@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Cpp. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a native C++ build, filtered to runtimes that fit an existing build system. The defining constraint is that every dependency is something you compile and maintain yourself, and a wrong fast path fails silently, so numerical behaviour needs checking against a reference.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Native builds give the smallest binaries and the tightest control, and in exchange every dependency is something you compile and maintain. Grouping by stack keeps that cost attached to the choice, including the fact that a wrong fast path fails silently and needs checking against a reference.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry is a native runtime that fits an existing build system.
+- Build-system and linkage implications are stated per entry, because in C++ that is the integration cost.
+- Numerical behaviour should be checked against a reference implementation, since a wrong fast path fails silently.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its build requirements and linkage implications, because in a C++ build those propagate into the whole dependency graph. The page is generated from the stack facet, with build detail in the tool entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Cpp" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are embedding inference in a C++ system and need a runtime that fits an existing native build.
+2. **Scenario**: you are choosing between a C++ inference runtime and binding to one from another language, and want the build-system trade stated.
+3. **Scenario**: you are porting a Python model implementation to a native service and need to know what the ecosystem gap costs.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to native runtimes that fit an existing build, which is a much shorter list than in Python.
+- Treats each dependency as a build-system commitment, because that is the real integration cost in C++.
+- Emphasises checking numerical behaviour against a reference, since a wrong fast path fails silently.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- C++ gives the smallest binaries and the tightest control, at the cost of every dependency being something you build and maintain yourself.
+- The inference runtimes available here are fewer than in Python, and each one is a build-system commitment that affects your whole dependency graph.
+- Numerical behaviour must be checked against a reference implementation, because a wrong fast path is silent.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a C++ runtime here from the model entries whose reference implementations are native.
+- When a runtime changes its build requirements, the impact reaches every dependent entry, so update those too.
 
 ## Resources
 

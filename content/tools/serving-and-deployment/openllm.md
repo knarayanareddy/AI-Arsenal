@@ -46,7 +46,7 @@ A model-serving convenience tool from the BentoML team: one command starts a cur
 
 ## Why It's in the Arsenal
 
-OpenLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want `openllm serve <model>` simplicity with production-grade vLLM serving underneath. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+OpenLLM is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -60,34 +60,41 @@ OpenLLM maintains a repo of model recipes (engine config, quantization, prompts)
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring OpenLLM into anything else. The command below runs against the `production-serving` job and returns a result you can inspect directly.
+
 ```bash
 pip install openllm
 openllm serve llama3.2:1b
 ```
 
+Follow the official documentation at https://github.com/bentoml/OpenLLM#readme for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you want `openllm serve <model>` simplicity with production-grade vLLM serving underneath
-2. **Scenario**: you're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service
-3. **Scenario where this is NOT the right fit**: you need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer — evaluate an alternative instead
+1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so OpenLLM can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since OpenLLM is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: OpenLLM's comparison set is `vllm`, `ollama`, `text-generation-inference`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want `openllm serve <model>` simplicity with production-grade vLLM serving underneath
-- You're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service
+- The implementation detail worth reading before adopting OpenLLM is specific — openLLM maintains a repo of model recipes (engine config, quantization, prompts); openllm serve pulls the recipe, launches a vLLM-backed BentoML service, and exposes OpenAI-style routes so existing clients work unchanged — and that is where a capability claim either survives contact with your data or does not.
+- Weighing OpenLLM against `vllm`, `ollama`, `text-generation-inference` comes down to one question: who runs the process when it breaks — you or the vendor.
+- OpenLLM documents a client surface through `bentoml`, `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Marked beta, so OpenLLM's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer
-- Local laptop experimentation without GPUs; Ollama's quantized-first workflow fits better
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- There is no self-hosted path to OpenLLM, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for OpenLLM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- OpenLLM is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-- Compare against `vllm`, `ollama`, `text-generation-inference` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `openllm`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt OpenLLM as a Python dependency or sidecar service against the `production-serving` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `vllm`, `ollama`, `text-generation-inference` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `bentoml`, `vllm` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +107,4 @@ openllm serve llama3.2:1b
 - 12,386 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

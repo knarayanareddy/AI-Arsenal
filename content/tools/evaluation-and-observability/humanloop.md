@@ -43,7 +43,7 @@ A managed platform combining prompt management, evaluation, and product feedback
 
 ## Why It's in the Arsenal
 
-Humanloop earns a place in the Arsenal because it directly addresses a recurring decision point: you need prompt management, evaluation, and product feedback loops in one managed platform for a product team. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Humanloop appears here as a reference point for the prompt-management, evaluation job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -64,23 +64,28 @@ Prompts are versioned in Humanloop's platform; evaluation runs and user feedback
 
 ## Use Cases
 
-1. **Scenario**: you need prompt management, evaluation, and product feedback loops in one managed platform for a product team
-2. **Scenario**: you want non-engineers (PMs, domain experts) to be able to edit and test prompts safely
-3. **Scenario where this is NOT the right fit**: you need a fully open-source, self-hostable prompt/eval platform (consider Langfuse instead) — evaluate an alternative instead
+1. **Where it sits**: on the prompt-management, evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Humanloop can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Humanloop is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Humanloop here, so the honest first step is confirming the prompt-management, evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need prompt management, evaluation, and product feedback loops in one managed platform for a product team
-- You want non-engineers (PMs, domain experts) to be able to edit and test prompts safely
+- The implementation detail worth reading before adopting Humanloop is specific — prompts are versioned in Humanloop's platform; evaluation runs and user feedback are tied back to specific prompt versions, giving a closed loop from edit to measured impact — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Humanloop in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Humanloop means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Humanloop's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a fully open-source, self-hostable prompt/eval platform (consider Langfuse instead)
-- Your team is small enough that lightweight, code-based prompt versioning is sufficient
+- There is no self-hosted path to Humanloop, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Humanloop's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
 
 ## Integration Patterns
 
-Link this tool from reference stacks, decision trees, and project entries using its canonical ID `humanloop` rather than duplicating details.
+- *Wiring*: adopt Humanloop over an HTTP endpoint from whichever service owns the call site against the `prompt-management, evaluation` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: This is a paid line item, so the unit economics belong in the same review as latency: check whether a self-hosted or open-source substitute covers the same job.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

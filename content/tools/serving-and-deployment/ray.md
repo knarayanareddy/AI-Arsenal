@@ -60,6 +60,8 @@ Ray earns a place because it is the substrate underneath much of production AI i
 
 A head node coordinates worker nodes; each node runs a raylet scheduler and shares a Plasma-based distributed object store. Tasks and actors are scheduled onto resources (including fractional GPUs and custom resources), with object references passed by handle rather than copied. The AI libraries build on this core, so training, data, and serving workloads can share one cluster.
 
+Weights are loaded once and reused across requests, so the cost is memory and warm-up rather than a per-call fee, and cold-start latency is the first thing to measure after deployment. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `modal`, `bentoml`; on the production-serving, orchestration path; under a open-source cost model; with `name`, `type`, `tool`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash
@@ -87,9 +89,11 @@ ray start --head  # start a local cluster
 
 ## Integration Patterns
 
-- Compare against [Modal](./modal.md) and [BentoML](./bentoml.md) before adopting — they solve overlapping serving/scale jobs with different ops trade-offs.
-- Link this tool from job guides using its canonical ID `ray`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Ray as a Python dependency or sidecar service against the `production-serving, orchestration, fine-tuning` job.  For an agent or workflow integration, keep the call behind a thin adapter so a provider or model swap is a configuration change rather than a refactor of every call site.
+- *Alternatives*: `modal`, `bentoml` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `vllm`, `pytorch` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

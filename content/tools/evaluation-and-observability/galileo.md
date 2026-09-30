@@ -39,7 +39,7 @@ verdict_rationale: A strong enterprise-grade eval + guardrails platform whose la
 status: active
 ---
 
-> **TL;DR:** A commercial LLM evaluation + observability platform built around research-backed, label-free metrics (hallucination/factuality, guardrail scores) plus runtime monitoring and guardrails — aimed at enterprise scale and governance. Freemium; a solid choice when you need automated quality metrics without ground-truth labels.
+> **TL;DR:** the evaluation, monitoring entry for Galileo. Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -72,20 +72,22 @@ pip install galileo
 
 ## Use Cases
 
-1. **Scenario**: measuring hallucination/factuality on a RAG app's answers at scale where labeling every response is infeasible
-2. **Scenario**: running runtime guardrails on production outputs and monitoring metric trends for regressions in an enterprise deployment
+1. **Integrating Galileo**: the evaluation, monitoring call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Galileo is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Galileo's comparison set is `langsmith`, `langwatch`, `humanloop`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Label-free metrics make quality/safety measurable without maintaining ground truth for every case
-- Combines offline evaluation, online monitoring, and runtime guardrails under one metric framework
-- Enterprise governance features suit regulated or large-org deployments
+- Beyond the marketing, Galileo's own notes are the useful part: you send prompts/outputs (and optional context) to Galileo via its SDK; the platform computes its metrics — many using model-based scorers that don't require reference answers — and surfaces them in dashboards for both offline test runs and live traffic. Guardrail metrics can be evaluated at runtime so risky outputs are flagged, tying evaluation and monitoring to the same metric definitions.
+- Galileo's honest comparison set is `langsmith`, `langwatch`, `humanloop`, `trulens`; what separates them is rarely capability, it is what you must operate.
+- Galileo is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Galileo's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Closed, hosted platform — no self-hosting, which rules it out where data must stay on-prem
-- Enterprise-oriented pricing/complexity is overkill for basic offline prompt testing
-- Model-based metrics require calibration/trust — validate scores against spot-checked human judgment on your data before relying on them
+- There is no self-hosted path to Galileo, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Galileo describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Galileo overlaps `langsmith`, `langwatch`, `humanloop`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

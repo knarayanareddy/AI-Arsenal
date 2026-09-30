@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Clément Delangue is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Founded and runs Hugging Face, and argues publicly that training data is a public good whose licensing and accessibility decide who can build competitive models.
 
 ## Why Follow
 
-Useful for open-source AI ecosystem and model-release signals.
+Useful for the open-data position specifically: if your work touches dataset provenance, licensing, or data access rather than model architecture, his is the clearest public argument for why that layer is a strategic decision.
 
 ## Notable Work
 
-Hugging Face platform and open AI advocacy.
+Hugging Face as a company and platform; the Datasets and Transformers libraries; advocacy on open data and on AI's effect on research access.
 
 ## Channels
 
@@ -36,9 +36,7 @@ Hugging Face platform and open AI advocacy.
 
 ## Resources
 
-- [Primary profile](https://huggingface.co/clem)
-- [website](https://huggingface.co/clem)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Datasets library](https://github.com/huggingface/datasets)
+- [Transformers library](https://github.com/huggingface/transformers)
+- [Hugging Face — about](https://huggingface.co/about)
 

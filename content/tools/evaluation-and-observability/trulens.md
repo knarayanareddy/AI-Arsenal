@@ -43,7 +43,7 @@ An open-source toolkit for instrumenting and evaluating LLM and RAG applications
 
 ## Why It's in the Arsenal
 
-TruLens earns a place in the Arsenal because it directly addresses a recurring decision point: you need feedback-function-based evaluation and tracking specifically for LLM and RAG applications. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for TruLens rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -64,23 +64,28 @@ An application is instrumented with TruLens wrappers; each run's inputs/outputs 
 
 ## Use Cases
 
-1. **Scenario**: you need feedback-function-based evaluation and tracking specifically for LLM and RAG applications
-2. **Scenario**: you want an open-source toolkit to instrument an app and score outputs against custom feedback functions
-3. **Scenario where this is NOT the right fit**: you need a fully managed SaaS dashboard with minimal setup (consider LangSmith or Braintrust) — evaluate an alternative instead
+1. **Where it sits**: on the evaluation, tracing leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so TruLens can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since TruLens is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against TruLens here, so the honest first step is confirming the evaluation, tracing job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need feedback-function-based evaluation and tracking specifically for LLM and RAG applications
-- You want an open-source toolkit to instrument an app and score outputs against custom feedback functions
+- The implementation detail worth reading before adopting TruLens is specific — an application is instrumented with TruLens wrappers; each run's inputs/outputs are captured and scored by configured feedback functions, with results stored for comparison across versions — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for TruLens in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- TruLens is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure TruLens's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a fully managed SaaS dashboard with minimal setup (consider LangSmith or Braintrust)
-- Your evaluation needs are simple enough that a lighter library like Promptfoo or OpenAI Evals would suffice
+- Depending on TruLens means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for TruLens describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 
-Link this tool from reference stacks, decision trees, and project entries using its canonical ID `trulens` rather than duplicating details.
+- *Wiring*: adopt TruLens as a Python dependency or sidecar service against the `evaluation, tracing` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Typescript. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a TypeScript or Node codebase, filtered to what runs in the same runtime as your service. The defining constraint is that the calling language is fixed, which rules out Python-native tooling and makes edge and serverless limits part of the decision.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Sharing a runtime with the service is usually worth more than a feature difference, because it removes a process boundary and a deployment artefact. Grouping by stack surfaces the constraint honestly, including the edge and serverless limits that rule out options a normal Node deployment would accept.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry runs in the same runtime as a Node service, so no second language enters the build.
+- Edge and serverless compatibility is stated, since bundle-size and duration limits exclude options a normal deploy accepts.
+- Client-library upgrade behaviour is flagged where an upstream API change can land in your application code unnoticed.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records the runtime it requires and its edge compatibility, because those constraints eliminate options before any feature comparison. The page is generated from the stack and audience frontmatter facets, so a tool that changes runtime support is reflected in its entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Typescript" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are building a TypeScript service and need tooling that shares the runtime rather than crossing a process boundary.
+2. **Scenario**: you are choosing between an npm library and a Python sidecar and want the operational difference for a Node deployment.
+3. **Scenario**: you need streaming in a web or edge runtime and need to know which options are compatible with edge constraints.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to what runs in the same runtime as a Node service, avoiding a sidecar you did not ask for.
+- Makes edge and serverless constraints visible, since bundle-size and duration limits rule out options a normal deploy accepts.
+- Notes that provider type errors only surface at build time if the SDK tracks the change.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- TypeScript tooling runs wherever Node runs, which is the main argument for it and also the main constraint: native addons and CPU-bound work are awkward.
+- Edge and serverless runtimes impose bundle-size and duration limits that quietly rule out options a normal Node deployment would accept.
+- Types are generated at build time, so an API change in an upstream provider surfaces as a type error only if the SDK tracks it; otherwise it surfaces at runtime.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a TypeScript-native option here from any entry where the JS client is the documented path.
+- When an SDK changes its streaming contract, flag it here as well as in the tool entry, because the upgrade lands in application code.
 
 ## Resources
 
@@ -69,7 +72,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | data-labeling, prototyping | open-source | Yes | Yes | Yes | typescript | watching |
 | [BAML](../dx-and-tooling/baml.md) | dx and tooling | structured-output | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | structured-output | paid | No | No | No | typescript | watching |
-| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | web-scraping | freemium | Yes | No | No | typescript | watching |
+| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | web-scraping | open-source | Yes | No | No | typescript | watching |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | structured-output | freemium | Yes | No | No | typescript | watching |
@@ -81,10 +84,10 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Continue](../dx-and-tooling/continue-dev.md) | dx and tooling | prototyping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
-| [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
-| [Flowise](../orchestration/flowise.md) | orchestration | orchestration, prototyping | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | orchestration, prototyping | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | prototyping | freemium | Yes | No | Yes | typescript | recommended |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
@@ -98,8 +101,8 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [LangSmith Hub](../dx-and-tooling/langsmith-hub.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
 | [LangWatch](../evaluation-and-observability/langwatch.md) | evaluation and observability | evaluation, tracing | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | prototyping | freemium | Yes | Yes | No | typescript, cpp | recommended |
-| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
-| [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | orchestration | open-source | Yes | Yes | Yes | typescript | watching |
@@ -119,4 +122,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | memory-management | open-source | Yes | Yes | Yes | typescript | watching |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | deployment, production-serving | freemium | Yes | No | No | typescript | best-in-class |
 | [Windsurf](../dx-and-tooling/windsurf.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript | solid-choice |
-| [Zep](../orchestration/zep.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | memory-management | usage-based | Yes | Yes | Yes | python, typescript | recommended |

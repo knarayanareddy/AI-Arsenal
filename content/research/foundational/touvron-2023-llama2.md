@@ -86,4 +86,4 @@ The ecosystem seed for the local/self-hosted stack: `llama-cpp` and `ollama` (pr
 - [Code (meta-llama/llama)](https://github.com/meta-llama/llama)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

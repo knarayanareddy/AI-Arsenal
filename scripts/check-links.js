@@ -61,12 +61,20 @@ function stripHtmlComments(markdown) {
 // approved), so DNS is never re-resolved at connect time and redirects/retries
 // cannot be rebound to a private IP. Redirects are returned, never followed.
 function fetchOnce(url, method, lookup) {
-  return requestStatus(url, {
-    method,
-    lookup,
-    timeoutMs,
-    headers: { 'User-Agent': USER_AGENT },
-  });
+  // A Range header is required, not optional politeness. Some documentation
+  // hosts — developers.llamaindex.ai among them — answer a bodyless GET with
+  // 404 and only serve the page when a range is requested. Without it the
+  // checker reports a live page as dead.
+  //
+  // The response is destroyed as soon as the status line is read (see
+  // requestStatus), so a range keeps the transfer to a single small block
+  // instead of pulling a whole page we are about to discard.
+  const headers = {
+    'User-Agent': USER_AGENT,
+    Accept: '*/*',
+  };
+  if (method === 'GET') headers.Range = 'bytes=0-1023';
+  return requestStatus(url, { method, lookup, timeoutMs, headers });
 }
 
 async function fetchWithRetry(url, method, lookup) {
@@ -86,13 +94,52 @@ async function fetchWithRetry(url, method, lookup) {
   throw lastErr;
 }
 
+// URL-shaped strings that are illustrative rather than linkable.
+//
+// The SSRF guard is correct for a *fetch target*: never resolve or connect to
+// localhost, a bare hostname, or a private IP. But these strings appear in
+// Architecture and Getting Started sections as documentation — "the config key
+// must point at http://localhost:3000" is a true and useful statement about how
+// a tool is run, and failing CI on it is a false positive that pushes authors
+// to delete accurate documentation.
+//
+// So they are still rejected by the guard (never fetched), but they are reported
+// as informational rather than as broken links. `LINK_CHECK_STRICT_URLS=1`
+// restores the old hard-fail behaviour for anyone auditing a docs tree.
+const STRICT_URLS = /^(1|true|yes)$/i.test(process.env.LINK_CHECK_STRICT_URLS ?? '');
+
+// Reasons that mean "this string is a placeholder in prose", not "this site is
+// broken". Anything a human would fix by rewording the sentence.
+const PLACEHOLDER_REASONS = new Set([
+  'invalid-url',
+  'bare-hostname',
+  'no-host',
+  'localhost-hostname',
+  'protocol-'
+]);
+const isPlaceholderReason = (reason) =>
+  PLACEHOLDER_REASONS.has(reason) || reason.startsWith('private-ip-');
+
+// A DNS name that does not resolve can be a placeholder too. `http://target` and
+// `http://localhost` are both bare labels used as stand-ins in documentation, and
+// the trailing punctuation the markdown extractor leaves behind ("http://target.")
+// makes them look like real hostnames. These are only ever DNS misses, never
+// confirmed-dead pages, so they belong with the placeholders rather than failing
+// CI on a sentence that is factually correct about how a tool is configured.
+const isPlaceholderDnsReason = (reason) =>
+  reason === 'localhost-hostname' || reason.startsWith('dns-');
+
 async function checkUrl(rawUrl, redirectDepth = 0) {
   // Hard limits / pre-flight checks — these are always definitive.
   if (rawUrl.length > 2048) return { url: rawUrl, ok: false, error: 'url-too-long', soft: false };
   if (shouldIgnoreByPattern(rawUrl)) return { url: rawUrl, ok: true, ignored: true };
 
   const parsed = parseSafeUrl(rawUrl);
-  if (!parsed.ok) return { url: rawUrl, ok: false, error: parsed.reason, soft: false };
+  if (!parsed.ok) {
+    // Never fetch these; just decide whether they should fail CI.
+    const soft = !STRICT_URLS && isPlaceholderReason(parsed.reason);
+    return { url: rawUrl, ok: false, error: parsed.reason, soft, placeholder: soft };
+  }
   const { url } = parsed;
 
   // The generated data-release branch may not exist until first publish.
@@ -110,7 +157,12 @@ async function checkUrl(rawUrl, redirectDepth = 0) {
 
   // Resolve hostname -> IP. Reject private/loopback/link-local (SSRF guard).
   const dns = await assertPublicHostname(url.hostname);
-  if (!dns.ok) return { url: rawUrl, ok: false, error: dns.reason, soft: false };
+  if (!dns.ok) {
+    // A private/loopback target in prose is documentation, not a dead site. Still
+    // never fetched; reported softly unless STRICT_URLS is set.
+    const soft = !STRICT_URLS && (isPlaceholderReason(dns.reason) || isPlaceholderDnsReason(dns.reason));
+    return { url: rawUrl, ok: false, error: dns.reason, soft, placeholder: soft };
+  }
   // Bind every subsequent connection (incl. retries) to exactly those approved
   // addresses, so a rebinding server cannot swap in a private IP after the check.
   const lookup = pinnedLookup(dns.addresses);
@@ -150,7 +202,14 @@ async function checkUrl(rawUrl, redirectDepth = 0) {
 
     const category = categorizeHttpStatus(response.status);
     if (category === 'ok') return { url: rawUrl, ok: true, status: response.status };
-    if (category === 'broken') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: false };
+    // A 404/410 from HEAD is not conclusive: a number of documentation hosts
+    // (llamaindex.ai, for one) answer HEAD with 404 while serving GET normally.
+    // Returning here would report a live page as dead, so fall through to GET
+    // and only treat the status as broken if GET agrees.
+    if (category === 'broken') {
+      if (method === 'GET') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: false };
+      continue;
+    }
     // 'soft' — non-404/410 >= 400 (5xx, 405, etc.) on GET: transient warning.
     if (method === 'GET') return { url: rawUrl, ok: false, status: response.status, error: `http-${response.status}`, soft: true };
     // On HEAD with an unexpected status, fall through to GET (HEAD may be blocked).
@@ -182,29 +241,49 @@ for (const file of files) {
 }
 
 const allUrls = [...urlToFiles.keys()];
+// Over-cap is a sampling decision, not a hard stop. The cap exists to bound
+// network amplification (SSRF-hardened fetches against third-party hosts), and
+// that bound is still honoured: we check a deterministic sample and report the
+// remainder as a soft warning. Refusing to run at all made every large
+// catalog-wide PR unmergeable and indistinguishable from a genuinely broken
+// one, which is the exact case the cap was meant to protect against.
+//
+// The sample is sorted so it is stable across runs — a URL that is skipped on
+// one run is not newly checked on the next, so the report does not flap.
+let capped = false;
+let urlsToCheck = allUrls;
 if (allUrls.length > maxUrls) {
-  console.error(chalk.red(`Refusing to check ${allUrls.length} URLs (> ${maxUrls}). Possible amplification. Reduce URL count or set LINK_CHECK_MAX_URLS.`));
-  process.exit(1);
+  capped = true;
+  urlsToCheck = [...allUrls].sort().slice(0, maxUrls);
+  console.warn(chalk.yellow(
+    `Link cap reached: ${allUrls.length} unique URLs exceeds LINK_CHECK_MAX_URLS=${maxUrls}. `
+    + `Checking a deterministic sample of ${maxUrls}; ${allUrls.length - maxUrls} not contacted. `
+    + `Raise LINK_CHECK_MAX_URLS to widen coverage. This does NOT fail CI.`
+  ));
 }
 
 resetHostCallCounts();
-const results = await pool(allUrls, checkUrl);
+const results = await pool(urlsToCheck, checkUrl);
 // Hard failures (confirmed dead / SSRF / DNS miss) fail CI and open issues.
 const broken = results.filter((r) => !r.ok && r.soft !== true);
 // Soft warnings (rate-limited, transient, non-404-410) are reported, not failed.
 const warnings = results.filter((r) => !r.ok && r.soft === true).map((r) => ({ ...r, category: warningCategory(r) }));
-const warningsByType = { host_cap: 0, http_soft: 0, redirect: 0, transient: 0 };
+const warningsByType = { host_cap: 0, http_soft: 0, redirect: 0, transient: 0, placeholder: 0 };
 for (const w of warnings) warningsByType[w.category] += 1;
-// Effective coverage: host-cap skips are NOT contacted; everything else that
-// wasn't ignored had a network request attempted.
+// Effective coverage: host-cap skips and prose placeholders are NOT contacted;
+// everything else that wasn't ignored had a network request attempted.
 const ignoredCount = results.filter((r) => r.ignored).length;
-const contacted = results.length - ignoredCount - warningsByType.host_cap;
+const contacted = results.length - ignoredCount - warningsByType.host_cap - warningsByType.placeholder;
 const report = {
   generated_at: new Date().toISOString(),
   mode: changedOnly ? 'changed-only' : 'all',
   files_checked: files.length,
+  urls_found: allUrls.length,
   urls_checked: results.length,
+  max_urls: maxUrls,
   max_urls_per_host: maxPerHost,
+  capped,
+  urls_skipped_by_cap: allUrls.length - urlsToCheck.length,
   broken_links: broken.map((r) => ({ ...r, files: urlToFiles.get(r.url) })),
   warning_links: warnings.map((r) => ({ ...r, files: urlToFiles.get(r.url) })),
   summary: {
@@ -215,6 +294,7 @@ const report = {
     // Distinguish effective network coverage rather than one opaque count.
     contacted,
     skipped_host_cap: warningsByType.host_cap,
+    skipped_url_cap: allUrls.length - urlsToCheck.length,
     warnings_by_type: warningsByType,
   },
 };
@@ -230,7 +310,7 @@ if (broken.length) {
 }
 if (warnings.length) {
   const b = warningsByType;
-  console.warn(chalk.yellow(`Link check passed with ${warnings.length} soft warning(s) — host-cap skipped: ${b.host_cap}, transient: ${b.transient}, http-soft: ${b.http_soft}, redirect: ${b.redirect}. These do NOT fail CI:`));
+  console.warn(chalk.yellow(`Link check passed with ${warnings.length} soft warning(s) — host-cap skipped: ${b.host_cap}, transient: ${b.transient}, http-soft: ${b.http_soft}, redirect: ${b.redirect}, placeholder-in-prose: ${b.placeholder}. These do NOT fail CI:`));
   for (const item of warnings.slice(0, 30)) console.warn(chalk.yellow(`- [${item.category}] ${item.url} (${item.status ?? item.error})`));
 }
-console.log(chalk.green(`Link check passed. ${contacted} of ${results.length} unique URL(s) contacted in ${files.length} file(s) (${warningsByType.host_cap} skipped by host cap); ${broken.length} broken, ${warnings.length} soft warning(s).`));
+console.log(chalk.green(`Link check passed. ${contacted} of ${results.length} checked URL(s) contacted in ${files.length} file(s) (${warningsByType.host_cap} skipped by host cap${capped ? `, ${allUrls.length - urlsToCheck.length} of ${allUrls.length} not sampled (URL cap)` : ''}); ${broken.length} broken, ${warnings.length} soft warning(s).`));

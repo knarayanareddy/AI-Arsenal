@@ -82,20 +82,21 @@ print(translate("Translate English to French: 'Retrieval-augmented generation gr
 
 ## Key Use Cases
 
-1. **Scenario**: you need an efficient, open-weight machine translation model specifically fine-tuned for 55 languages rather than a general-purpose chat model repurposed for translation
-2. **Scenario**: you want a translation model that inherits Gemma 3's efficient long-context architecture for translating longer documents
+1. **Depending on it safely**: the work is the boundary — which calls go through TranslateGemma, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What to measure first**: `efficient`, `open-weight`, `machine`, `translation` decide whether TranslateGemma works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Choosing between candidates**: compare TranslateGemma against `gemma-3` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You need an efficient, open-weight machine translation model specifically fine-tuned for 55 languages rather than a general-purpose chat model repurposed for translation
-- You want a translation model that inherits Gemma 3's efficient long-context architecture for translating longer documents
+- The implementation detail worth checking before adopting TranslateGemma is specific — architecturally TranslateGemma is a supervised translation fine-tune of the Gemma 3 decoder rather than a new base model, so it reuses Gemma 3's tokenizer, parameter shapes, and efficient long-context attention and loads through the same Hugging Face transformers/Gemma tooling. Its distinguishing layer is translation-specific training spanning 55 languages; per this entry's notes, those fine-tuning details track Google's Gemma 3 lineage but have not been independently verified against a technical report — because that is where the capability claim either survives contact with your data or does not.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need general-purpose chat/reasoning capability alongside translation — this is a narrowly specialized derivative, not a general model; use the base Gemma 3 or Gemma 4 for broader tasks
-- You need enterprise translation quality guarantees or the widest language coverage — compare against Cohere's Command A Translate (23 languages, enterprise-positioned) or dedicated commercial translation APIs depending on your quality/language-coverage requirements
-
-_Enrichment status: draft. TranslateGemma's "built on Gemma 3" lineage and 55-language claim here follow Google's Gemma 3 materials and this entry's frontmatter; the translation-specific fine-tuning has not been independently verified against a technical report. Last reviewed: 2026-07-01._
+- Adoption risk for TranslateGemma is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where TranslateGemma overlaps `gemma-3`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

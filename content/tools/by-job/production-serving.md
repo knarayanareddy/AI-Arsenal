@@ -20,17 +20,17 @@ This guide compares tools for the `production-serving` job. Use it as a routing 
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+The gap between a working model and a working service is where most projects spend their unplanned engineering time, and the choices made there — managed endpoint versus own cluster, packaging format, autoscaling — are the ones that are expensive to reverse. Grouping by this job surfaces them before the commitment rather than after the first incident.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states the deployment model rather than the feature list, since that is the commitment you are making.
+- Cold start and idle capacity are listed as first-class costs, which per-request pricing hides.
+- Packaging tools appear alongside managed endpoints, because a model usually needs one of each.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the serving and deployment facets on each tool entry. The comparison axis is the deployment model, because the operational commitment differs far more between a managed endpoint and your own cluster than the feature lists suggest.
 
 ## Getting Started
 
@@ -194,23 +194,26 @@ This table is exhaustive for tools tagged with job = production-serving.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `production-serving` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have a working model and need to decide between a managed endpoint, a self-hosted server and a packaged container.
+2. **Scenario**: your current serving stack does not hit its latency target under concurrency and you need to know which knob actually moves it.
+3. **Scenario**: you are estimating the infrastructure cost of a serving choice before committing to it, including the parts that are not per-request.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Organises by deployment model rather than by feature, because the operational commitment differs more than the capability does.
+- Surfaces cold start and idle capacity as first-class costs, which per-request pricing hides.
+- Includes the packaging tools alongside the managed endpoints, since a model often passes through both.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Published throughput figures are almost always best-case on dedicated hardware; your load will be bursty and your hardware shared.
+- The dominant cost at low volume is cold start and idle capacity, which inverts the usual assumption that per-token price is what matters.
+- Every option here trades flexibility for speed somewhere specific, and that trade is a code-level commitment once you have built on it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a serving option here from any project entry that claims production readiness, so the claim points at a real deployment path.
+- When a serving choice is documented in a build example, cross-reference it rather than restating the configuration.
 
 ## Resources
 

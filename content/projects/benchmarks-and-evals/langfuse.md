@@ -63,7 +63,7 @@ An open-source LLM observability and evaluation platform offering tracing, promp
 
 ## Why it's in the Arsenal
 
-Open-source LLM observability and evaluation platform, one of the most widely adopted self-hostable options with a fully-open-source product model. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a fully open-source (not open-core) observability and evaluation platform that scales to large event volumes, confirmed by the maintainers to run identically whether self-hosted or on their managed cloud. See Strengths / Limitations below before adopting it.
+Langfuse is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ Upstream: none of particular note. Downstream: Langfuse Prompts (in the tools ve
 
 ## Key Use Cases
 
-1. **Scenario**: you want a fully open-source (not open-core) observability and evaluation platform that scales to large event volumes, confirmed by the maintainers to run identically whether self-hosted or on their managed cloud
-2. **Scenario**: you need prompt management, tracing, and evaluation in one framework-agnostic platform with strong data-residency options (self-hosted, including Azure deployment via Terraform)
+1. **Running it in anger**: the first real evaluation of Langfuse is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the Langfuse scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
+3. **Choosing between candidates**: compare Langfuse against `langsmith-platform`, `phoenix`, `helicone` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You want a fully open-source (not open-core) observability and evaluation platform that scales to large event volumes, confirmed by the maintainers to run identically whether self-hosted or on their managed cloud
-- You need prompt management, tracing, and evaluation in one framework-agnostic platform with strong data-residency options (self-hosted, including Azure deployment via Terraform)
+- What Langfuse gives you that reading the feature list does not: provides SDK-based tracing instrumentation across major LLM frameworks and languages, a prompt registry with versioning tied to trace data, and an evaluation engine supporting both rule-based and LLM-graded scoring, all backed by a self-hostable stack (Postgres-based) that the maintainers confirm scales to billions of events in production, which is the part you have to evaluate against your own workload.
+- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want the deepest first-party integration specifically with LangChain/LangGraph — LangSmith, being built by the same team as those frameworks, has tighter native integration
-- You need a fully managed-only experience with zero self-hosting operational responsibility — Langfuse's strength is precisely its self-hostable flexibility, which is not relevant if you always intend to use the managed cloud
+- Adoption risk for Langfuse is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Langfuse against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- Where Langfuse overlaps `langsmith-platform`, `phoenix`, `helicone`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 

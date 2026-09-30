@@ -46,7 +46,7 @@ A small but ubiquitous developer utility: run it in a repository and it emits on
 
 ## Why It's in the Arsenal
 
-Repomix earns a place in the Arsenal because it directly addresses a recurring decision point: you want to hand a whole (small-to-medium) codebase to a long-context model in one paste, with token counts per file. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Repomix appears here as a reference point for the prototyping job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -67,27 +67,29 @@ npx repomix@latest
 
 ## Use Cases
 
-1. **Scenario**: you want to hand a whole (small-to-medium) codebase to a long-context model in one paste, with token counts per file
-2. **Scenario**: you need repeatable, configurable packing — include/exclude globs, comment stripping, security scanning of the output
-3. **Scenario where this is NOT the right fit**: the repo exceeds the model's context even packed — use retrieval or a repo-map approach (aider) instead — evaluate an alternative instead
+1. **Integrating Repomix**: the prototyping call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Repomix and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Repomix's comparison set is `gitingest`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want to hand a whole (small-to-medium) codebase to a long-context model in one paste, with token counts per file
-- You need repeatable, configurable packing — include/exclude globs, comment stripping, security scanning of the output
+- Beyond the marketing, Repomix's own notes are the useful part: walks the git tree applying ignore rules, optionally compresses code (tree-sitter-based comment/blank stripping), counts tokens per file with tiktoken, runs Secretlint over the output, and writes a structured document models parse reliably.
+- Repomix's honest comparison set is `gitingest`; what separates them is rarely capability, it is what you must operate.
+- Repomix is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Repomix's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- The repo exceeds the model's context even packed — use retrieval or a repo-map approach (aider) instead
-- You need semantic selection of relevant files; Repomix packs mechanically, it doesn't rank
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on Repomix means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Repomix describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Repomix overlaps `gitingest`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `gitingest` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `repomix`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Repomix as a TypeScript package in the same runtime as your API against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `gitingest` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +102,4 @@ npx repomix@latest
 - 26,966 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

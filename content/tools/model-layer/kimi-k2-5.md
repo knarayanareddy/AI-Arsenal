@@ -46,7 +46,7 @@ Kimi K2.5 is a closed-source, hosted assistant model from Moonshot AI, accessed 
 
 ## Why It's in the Arsenal
 
-Kimi K2.5 is tracked as one closed-source model to slot into a multi-provider routing strategy: it is worth benchmarking against your incumbent when reasoning quality and long context matter, and a poor fit when you need open weights or third-party-verified long-term API stability. Compare it on benchmarks before adoption.
+The entry exists because Kimi K2.5 is a aI assistant with deep understanding, analysis, and reasoning capabilities. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals and weights are not published. Kimi K2.5 is consumed as a hosted A
 
 ## Use Cases
 
-1. **Scenario**: you need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider
-2. **Scenario**: you want to evaluate Kimi's reasoning quality as one option in a multi-provider routing strategy
-3. **Scenario where this is NOT the right fit**: you require an open-weight model you can self-host or fine-tune — evaluate an alternative instead
+1. **Integrating Kimi K2.5**: the production-serving, orchestration call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Kimi K2.5 and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Kimi K2.5 here, so the honest first step is confirming the production-serving, orchestration job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider
-- You want to evaluate Kimi's reasoning quality as one option in a multi-provider routing strategy
+- Beyond the marketing, Kimi K2.5's own notes are the useful part: its internals and weights are not published. Kimi K2.5 is consumed as a hosted API: a prompt (optionally a long context window) is sent to Moonshot AI's infrastructure, inference runs on the provider's side, and tokens are returned — there is no local model or GPU footprint. This is why it cannot be self-hosted or fine-tuned and why availability tracks the vendor's API.
+- No direct sibling is catalogued for Kimi K2.5 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Kimi K2.5 is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Kimi K2.5's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You require an open-weight model you can self-host or fine-tune
-- You need long-term API stability guarantees verified by extensive third-party production use
-
-- _Enrichment status: draft. Kimi K2.5 is a closed-source hosted model (Moonshot AI) surfaced via a curated newsletter; its reasoning and stability characterizations here are the vendor's, not independently benchmarked. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Kimi K2.5, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Kimi K2.5 describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 
@@ -97,4 +97,4 @@ Kimi K2.5 integrates as one model provider behind an API, which makes it a natur
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

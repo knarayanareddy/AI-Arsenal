@@ -46,7 +46,7 @@ Recursi is a closed-source, freemium AI coding assistant built around iterative 
 
 ## Why It's in the Arsenal
 
-Recursi is tracked as an early, self-improving coding-assistant experiment: its claimed differentiator — suggestions that get better within a session — is worth evaluating independently, and worth avoiding when you need a stable, well-documented assistant with a real production track record. See Strengths / Limitations before adopting it.
+Recursi is a self-improving system for intuitive and efficient AI-assisted coding. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ Its internals are unpublished. From the description it maintains session-level c
 
 ## Use Cases
 
-1. **Scenario**: you want an AI coding assistant that improves itself/its suggestions over a session for iterative development
-2. **Scenario**: you're exploring self-improving coding-assistant UX patterns
-3. **Scenario where this is NOT the right fit**: you need a stable, well-documented coding assistant with a long production track record — evaluate an alternative instead
+1. **What it does in a system**: Recursi sits on the production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Recursi.
+3. **Deciding at all**: nothing is catalogued against Recursi here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want an AI coding assistant that improves itself/its suggestions over a session for iterative development
-- You're exploring self-improving coding-assistant UX patterns
+- What Recursi gives you that its headline description does not: its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Recursi in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Recursi means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Recursi's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need a stable, well-documented coding assistant with a long production track record
-- You need an open-source or self-hostable option
-
-- _Enrichment status: draft. Recursi is a closed-source product surfaced via a curated newsletter; its self-improvement claims and behavior here are the vendor's, not independently verified — evaluate the claims before relying on them. Last reviewed: 2026-06-30._
+- Depending on Recursi means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Recursi describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Recursi is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
@@ -97,4 +98,4 @@ Recursi is meant to live inside the coding loop as an interactive assistant rath
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

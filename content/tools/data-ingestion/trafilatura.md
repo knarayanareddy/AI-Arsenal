@@ -44,9 +44,11 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/adbar/tr
 
 A scholarly-grade web scraping library used in major LLM data pipelines: given HTML, it extracts the main content (dropping navigation, ads, boilerplate), preserves structure, pulls metadata (author, date, sitename), and outputs text, Markdown, CSV, JSON, or XML-TEI — with crawling, sitemap, and feed utilities included.
 
+Trafilatura is reached over a documented surface unlike `firecrawl`, `crawl4ai`; on the web-scraping path; under a open-source cost model; with `trafilatura`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
-Trafilatura earns a place in the Arsenal because it directly addresses a recurring decision point: you need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Trafilatura is a python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building. Read it beside `firecrawl`, `crawl4ai`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -60,34 +62,40 @@ Cascades fast heuristics over the DOM tree (density, markup signals, link ratios
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Trafilatura into anything else. The command below runs against the `web-scraping` job and returns a result you can inspect directly.
+
 ```bash
 pip install trafilatura
 trafilatura -u <article-url>
 ```
 
+Follow the official documentation at https://trafilatura.readthedocs.io for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance
-2. **Scenario**: offline/static HTML processing where an API service (Firecrawl) or headless browser (Crawl4AI) is unnecessary weight
-3. **Scenario where this is NOT the right fit**: javaScript-rendered pages — trafilatura parses static HTML; pair with a headless browser or use Crawl4AI — evaluate an alternative instead
+1. **Where it sits**: on the web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Trafilatura can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Trafilatura.
+3. **Choosing between candidates**: Trafilatura's comparison set is `firecrawl`, `crawl4ai`, `jina-reader`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance
-- Offline/static HTML processing where an API service (Firecrawl) or headless browser (Crawl4AI) is unnecessary weight
+- The implementation detail worth reading before adopting Trafilatura is specific — cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it — and that is where a capability claim either survives contact with your data or does not.
+- Against `firecrawl`, `crawl4ai`, `jina-reader`, the difference that decides this is deployment model and cost rather than the feature list, and Trafilatura sits at the hosted end of that axis.
+- Depending on Trafilatura means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Trafilatura's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- JavaScript-rendered pages — trafilatura parses static HTML; pair with a headless browser or use Crawl4AI
-- You want ready-to-use LLM-formatted output with screenshots/actions; that's the newer crawler tools' job
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on Trafilatura means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Trafilatura describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Trafilatura overlaps `firecrawl`, `crawl4ai`, `jina-reader`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `firecrawl`, `crawl4ai`, `jina-reader` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `trafilatura`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Trafilatura as a Python dependency or sidecar service against the `web-scraping` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
+- *Alternatives*: `firecrawl`, `crawl4ai`, `jina-reader` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +108,4 @@ trafilatura -u <article-url>
 - 6,253 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -45,7 +45,7 @@ PyTorch Lightning splits training code into a LightningModule (your model, losse
 
 ## Why It's in the Arsenal
 
-Not every model-layer job is an LLM fine-tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long-standing default (31k stars, a decade of production use). It anchors the general-training end of the phase, complementing the LLM-recipe frameworks. See Strengths / Limitations below before adopting it.
+PyTorch Lightning is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so read the sections below as what the project states about itself. What it would cost to adopt — operationally, in spend and on-call — is the question those sections are there to inform.
 
 ## Key Features
 
@@ -90,9 +90,10 @@ trainer.fit(MyLightningModule(), datamodule=dm)
 
 ## Integration Patterns
 
-- Compare against [Accelerate](./accelerate.md) (thinner) and [torchtune](./torchtune.md) (LLM-recipe layer) before adopting — the right choice depends on how custom your training is.
-- Logs to [Weights & Biases](./weights-biases.md) or [MLflow](./mlflow.md) via built-in loggers.
-- Link this tool from job guides using its canonical ID `pytorch-lightning`.
+- *Wiring*: adopt PyTorch Lightning as a Python dependency or sidecar service against the `fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `accelerate`, `torchtune` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

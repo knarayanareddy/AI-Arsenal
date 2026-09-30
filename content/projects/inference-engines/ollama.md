@@ -62,7 +62,7 @@ A developer tool providing a simple, Docker-like command-line interface and Open
 
 ## Why it's in the Arsenal
 
-The dominant local-LLM developer tool, providing a Docker-like CLI/API experience for pulling and running open-weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path from zero to a running local LLM with a simple CLI ("ollama run llama3") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly. See Strengths / Limitations below before adopting it.
+Ollama appears in this catalog as a reference point for the inference-engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practice. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -82,18 +82,21 @@ ollama run llama3
 
 ## Key Use Cases
 
-1. **Scenario**: you want the fastest path from zero to a running local LLM with a simple CLI ("ollama run llama3") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly
-2. **Scenario**: you're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details
+1. **Sizing Ollama**: the decision is hardware and load, not features — measure throughput and time to first token at your concurrency, and size memory for the longest sequence you actually serve rather than the longest the model allows.
+2. **What the Ollama scenarios have in common**: they are separated by hardware and concurrency rather than by capability, which is the axis on which runtimes genuinely differ.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want the fastest path from zero to a running local LLM with a simple CLI ("ollama run llama3") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly
-- You're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details
+- The implementation detail worth checking before adopting Ollama is specific — wraps llama.cpp's GGUF-based inference engine with a model registry/pull mechanism (similar to Docker images), a local REST API compatible with common client libraries, and a Modelfile system for customizing model behavior — prioritizing developer ergonomics over exposing every low-level inference knob — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need maximum inference throughput or fine-grained control over quantization/batching parameters — Ollama trades some of that control for ease of use; llama.cpp directly or vLLM for production serving give you more knobs
-- You need multi-GPU production-scale serving with high concurrency — Ollama is designed primarily for single-machine local/developer use, not production fleet serving
+- Adoption risk for Ollama is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- Nothing in this entry substitutes for running Ollama against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
+- No alternative is catalogued alongside Ollama here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

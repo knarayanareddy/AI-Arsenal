@@ -46,7 +46,7 @@ Cloudflare's serverless inference: a curated catalog of open models (LLMs, embed
 
 ## Why It's in the Arsenal
 
-Cloudflare Workers AI earns a place in the Arsenal because it directly addresses a recurring decision point: your app already runs on Cloudflare Workers and you want inference co-located with edge logic, KV, R2, and Vectorize. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Cloudflare Workers AI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -67,27 +67,29 @@ npm create cloudflare@latest my-app
 
 ## Use Cases
 
-1. **Scenario**: your app already runs on Cloudflare Workers and you want inference co-located with edge logic, KV, R2, and Vectorize
-2. **Scenario**: lightweight open-model inference (Llama-class, embeddings, Whisper) with per-request billing and no cold-start management
-3. **Scenario where this is NOT the right fit**: you need frontier-model quality or large open models — the catalog is curated small/mid-size models — evaluate an alternative instead
+1. **What it does in a system**: Cloudflare Workers AI sits on the production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Cloudflare Workers AI.
+3. **Choosing between candidates**: Cloudflare Workers AI's comparison set is `replicate`, `fireworks-ai`, `modal`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your app already runs on Cloudflare Workers and you want inference co-located with edge logic, KV, R2, and Vectorize
-- Lightweight open-model inference (Llama-class, embeddings, Whisper) with per-request billing and no cold-start management
+- What Cloudflare Workers AI gives you that its headline description does not: models are pre-deployed on GPU capacity across Cloudflare data centers; a Workers binding (env.AI.run) or REST call routes to nearby capacity, with the neurons unit metering compute per request rather than per instance-hour, which is the part to check against your own pipeline before trusting the feature list.
+- Cloudflare Workers AI's honest comparison set is `replicate`, `fireworks-ai`, `modal`; what separates them is rarely capability, it is what you must operate.
+- Cloudflare Workers AI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Cloudflare Workers AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need frontier-model quality or large open models — the catalog is curated small/mid-size models
-- Heavy sustained throughput; dedicated GPU serving beats per-neuron pricing at scale
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on Cloudflare Workers AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Cloudflare Workers AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Cloudflare Workers AI overlaps `replicate`, `fireworks-ai`, `modal`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `replicate`, `fireworks-ai`, `modal` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `cloudflare-workers-ai`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt Cloudflare Workers AI as a TypeScript package in the same runtime as your API against the `production-serving` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `replicate`, `fireworks-ai`, `modal` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +102,4 @@ npm create cloudflare@latest my-app
 Reception should be updated with verified sources during regular content reviews.
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

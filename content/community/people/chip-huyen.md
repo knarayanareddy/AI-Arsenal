@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Chip Huyen is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes and speaks about the operational layer between a trained model and a shipped product: serving, inference cost, latency, and the engineering decisions that determine whether a model is viable in production.
 
 ## Why Follow
 
-Strong systems perspective for teams moving from prototypes to production ML/AI systems.
+Useful for applied ML systems decisions — what to serve, how to structure batch versus online inference, when a model is good enough to ship, and how inference cost changes the architecture you should pick.
 
 ## Notable Work
 
-Designing Machine Learning Systems and production ML essays.
+“Designing Machine Learning Systems” (O’Reilly); “AI Engineering”; long-form essays on inference cost, latency, and evaluation-driven development.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Designing Machine Learning Systems and production ML essays.
 
 ## Resources
 
-- [Primary profile](https://huyenchip.com)
-- [website](https://huyenchip.com)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166302/)
+- [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107954/)
 

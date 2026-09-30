@@ -41,9 +41,11 @@ status: active
 
 An open-source proxy and SDK that exposes a single OpenAI-compatible interface for calling dozens of different LLM providers, with built-in fallback and load-balancing logic.
 
+LiteLLM is reached over a documented surface on the production-serving, prompt-management path; under a open-source cost model; with `litellm`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
-LiteLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because LiteLLM is A proxy and SDK for routing requests across many LLM providers. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,23 +66,28 @@ Requests are made against LiteLLM's unified API; it translates them into the tar
 
 ## Use Cases
 
-1. **Scenario**: you want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing
-2. **Scenario**: you need to swap or route between model providers without rewriting application code
-3. **Scenario where this is NOT the right fit**: you only ever call one provider's API directly and don't need a routing/abstraction layer — evaluate an alternative instead
+1. **What it does in a system**: LiteLLM sits on the production-serving, prompt-management leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put LiteLLM and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against LiteLLM here, so the honest first step is confirming the production-serving, prompt-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing
-- You need to swap or route between model providers without rewriting application code
+- What LiteLLM gives you that its headline description does not: requests are made against LiteLLM's unified API; it translates them into the target provider's native format and can route, retry, or fall back across multiple configured providers, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for LiteLLM in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- LiteLLM is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure LiteLLM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You only ever call one provider's API directly and don't need a routing/abstraction layer
-- You need deep, provider-specific features that an abstraction layer would otherwise mask
+- Depending on LiteLLM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LiteLLM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 
-Link this tool from reference stacks, decision trees, and project entries using its canonical ID `litellm` rather than duplicating details.
+- *Wiring*: adopt LiteLLM as a Python dependency or sidecar service against the `production-serving, prompt-management` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

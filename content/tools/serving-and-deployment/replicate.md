@@ -43,7 +43,7 @@ A hosted platform for running community-published open-source machine learning m
 
 ## Why It's in the Arsenal
 
-Replicate earns a place in the Arsenal because it directly addresses a recurring decision point: you want to call or deploy open-source models via a simple API without managing GPUs yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support. Read it beside `aws-bedrock`, `azure-ai-studio`, `bentoml`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,26 +64,29 @@ Each model is packaged with a standard interface (via Cog); Replicate provisions
 
 ## Use Cases
 
-1. **Scenario**: you want to call or deploy open-source models via a simple API without managing GPUs yourself
-2. **Scenario**: you're prototyping with a variety of community-published models and want pay-per-second billing
-3. **Scenario where this is NOT the right fit**: you need the lowest cost per inference at sustained high volume (self-hosted serving is usually cheaper there) — evaluate an alternative instead
+1. **Where it sits**: on the deployment, production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Replicate can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Replicate is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Replicate's comparison set is `aws-bedrock`, `azure-ai-studio`, `bentoml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want to call or deploy open-source models via a simple API without managing GPUs yourself
-- You're prototyping with a variety of community-published models and want pay-per-second billing
+- The implementation detail worth reading before adopting Replicate is specific — each model is packaged with a standard interface (via Cog); Replicate provisions GPU containers on demand to run inference requests against that packaged model — and that is where a capability claim either survives contact with your data or does not.
+- Replicate's honest comparison set is `aws-bedrock`, `azure-ai-studio`, `bentoml`, `fly-io`; what separates them is rarely capability, it is what you must operate.
+- Depending on Replicate means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Replicate's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need the lowest cost per inference at sustained high volume (self-hosted serving is usually cheaper there)
-- You need fine-grained control over batching, quantization, and serving internals
+- Depending on Replicate means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Replicate's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Replicate overlaps `aws-bedrock`, `azure-ai-studio`, `bentoml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [AWS Bedrock](./aws-bedrock.md), [Azure AI Studio](./azure-ai-studio.md), [BentoML](./bentoml.md), [Fly.io](./fly-io.md), [Google Vertex AI](./google-vertex-ai.md), [Hugging Face Inference Endpoints](./hf-inference-endpoints.md), [Modal](./modal.md), [Railway](./railway.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `replicate`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Replicate over an HTTP endpoint from whichever service owns the call site against the `deployment, production-serving` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `aws-bedrock`, `azure-ai-studio`, `bentoml`, `fly-io` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

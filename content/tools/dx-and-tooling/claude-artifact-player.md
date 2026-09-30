@@ -46,7 +46,7 @@ A dedicated tool for interacting with and managing interactive artifacts generat
 
 ## Why It's in the Arsenal
 
-Claude Artifact Player earns a place in the Arsenal because it directly addresses a recurring decision point: you generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Claude Artifact Player is a interact with and manage AI-generated artifacts from Claude and similar models. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,25 +66,29 @@ Renders and manages a collection of generated artifacts (interactive components/
 
 ## Use Cases
 
-1. **Scenario**: you generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them
-2. **Scenario**: you're building demos or internal tools around AI-generated interactive content
-3. **Scenario where this is NOT the right fit**: you need a general-purpose app hosting platform rather than an artifact-specific player — evaluate an alternative instead
+1. **Where it sits**: on the structured-output leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Claude Artifact Player can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Claude Artifact Player.
+3. **Deciding at all**: nothing is catalogued against Claude Artifact Player here, so the honest first step is confirming the structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them
-- You're building demos or internal tools around AI-generated interactive content
+- The implementation detail worth reading before adopting Claude Artifact Player is specific — renders and manages a collection of generated artifacts (interactive components/apps produced by a model) outside of the original chat interface they were created in — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Claude Artifact Player in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Claude Artifact Player is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so Claude Artifact Player's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need a general-purpose app hosting platform rather than an artifact-specific player
-- You need an open-source or self-hostable option
-
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Claude Artifact Player, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Claude Artifact Player describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Claude Artifact Player is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+- *Wiring*: adopt Claude Artifact Player as a TypeScript package in the same runtime as your API against the `structured-output` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: no direct sibling is catalogued in this phase yet, which makes this entry the reference point for the job. Treat that as a gap to check rather than as evidence of uniqueness: the honest comparison is against whatever your team already runs for this job.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -96,4 +100,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

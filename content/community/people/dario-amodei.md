@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Dario Amodei is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Co-founded Anthropic and writes about capability, safety and compute, including the internal trade-offs a frontier lab actually weighs. The essays are unusually explicit about decisions usually left in internal documents.
 
 ## Why Follow
 
-Useful for following frontier-model safety, deployment, and alignment direction.
+Useful for the frontier-lab perspective: how a lab decides what to build and what to publish, and how interpretability and alignment work are weighed against capability work when the two compete for the same compute.
 
 ## Notable Work
 
-Anthropic research and Claude ecosystem.
+Anthropic's constitutional-AI research direction; the Responsible Scaling Policy and its successive versions; essays on Claude's development and on AI's near-term economic effects.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Anthropic research and Claude ecosystem.
 
 ## Resources
 
-- [Primary profile](https://www.anthropic.com/company)
-- [website](https://www.anthropic.com/company)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Anthropic research](https://www.anthropic.com/research)
+- [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy)
 

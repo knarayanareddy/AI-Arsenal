@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Thomas Wolf is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Co-authored the original Transformer and works on efficient attention and large-scale pretraining, the training-efficiency research that determines what model size is affordable.
 
 ## Why Follow
 
-Useful for tracking open-source model tooling and Hugging Face ecosystem direction.
+Useful for the architecture and efficiency lineage behind long-context work, and for a technical view of why training cost constrains the model sizes that are reachable.
 
 ## Notable Work
 
-Transformers and Hugging Face open-source ecosystem.
+The original Transformer; RoFormer and rotary position embeddings; large-scale pretraining including the Megatron line; research on efficient attention for long context.
 
 ## Channels
 
@@ -39,10 +39,7 @@ Transformers and Hugging Face open-source ecosystem.
 
 ## Resources
 
-- [Primary profile](https://huggingface.co/Thomwolf)
-- [github](https://github.com/ThomWolf)
-- [website](https://huggingface.co/Thomwolf)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [RoFormer](https://arxiv.org/abs/2104.09864)
+- [Megatron-LM](https://arxiv.org/abs/1909.08053)
 

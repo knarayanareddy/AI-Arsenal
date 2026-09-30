@@ -85,15 +85,20 @@ Add the LangChain4j dependency (plus a provider module) to Maven/Gradle, configu
 
 ## Key Use Cases
 
-LLM features in Java/Kotlin enterprise apps; RAG and agents on the JVM; tool-calling and MCP integrations in Spring Boot/Quarkus services; migrating Python prototypes to production Java.
+1. **Where it fits**: "You are building LLM features in Java/Kotlin and want idiomatic APIs plus Quarkus/Spring Boot integration
+2. **Adoption checkpoint**: before building on LangChain4j, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-Idiomatic Java API, broad provider and vector-store coverage, tool calling and MCP, AI Services abstraction, enterprise-framework integration, and active maintenance.
+- What LangChain4j gives you that reading the feature list does not: langChain4j provides abstractions, ChatModel, EmbeddingModel, EmbeddingStore, tools, and AI Services, that wrap concrete providers and vector databases behind Java interfaces. Its AI Services feature lets developers declare a Java interface annotated with prompts and tools and have the library generate an implementation that handles chat memory, tool invocation, structured output, and RAG retrieval, and it ships Quarkus and Spring Boot integrations for dependency injection and configuration, which is the part you have to evaluate against your own workload.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-It trails the Python ecosystem on the newest integrations, is code-first rather than visual, and as an independent project it is inspired by, not an official port of, the Python LangChain.
+- The cost this entry cannot quantify for you is operational: the LangChain4j footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for LangChain4j at your scale need measuring before this informs a production decision.
+- LangChain4j is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

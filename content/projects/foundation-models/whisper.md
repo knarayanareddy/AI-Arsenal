@@ -55,7 +55,7 @@ OpenAI's open-source automatic speech recognition model, trained with weak super
 
 ## Why it's in the Arsenal
 
-The default open speech-to-text model: weakly-supervised training on 680k hours made it robust to accents, noise, and domain shift in a way prior open ASR never was, and it anchors an entire deployment ecosystem (faster-whisper, whisper.cpp, distil-whisper, WhisperX). It earns a place in the Arsenal because it directly addresses a recurring decision point: you need reliable transcription across languages, accents, and noisy real-world audio without per-domain fine-tuning — zero-shot robustness is Whisper's defining property. See Strengths / Limitations below before adopting it.
+Whisper is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -76,18 +76,21 @@ pip install faster-whisper
 
 ## Key Use Cases
 
-1. **Scenario**: you need reliable transcription across languages, accents, and noisy real-world audio without per-domain fine-tuning — zero-shot robustness is Whisper's defining property
-2. **Scenario**: you want deployment-path freedom — the same weights run via the reference repo, CTranslate2 (faster-whisper, ~4x speedup), whisper.cpp (CPU/edge), or hosted APIs
+1. **Taking the dependency**: the weights for Whisper are the small part — the commitment is context behaviour, licensing and hosting, and those three decide whether the checkpoint is usable in your product at all.
+2. **What to measure first**: `reliable`, `transcription`, `across`, `languages` decide whether Whisper works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need reliable transcription across languages, accents, and noisy real-world audio without per-domain fine-tuning — zero-shot robustness is Whisper's defining property
-- You want deployment-path freedom — the same weights run via the reference repo, CTranslate2 (faster-whisper, ~4x speedup), whisper.cpp (CPU/edge), or hosted APIs
+- The implementation detail worth checking before adopting Whisper is specific — an encoder-decoder transformer over 30-second log-Mel spectrogram windows; multitask tokens condition the decoder for transcription, translation-to-English, language ID, and timestamp prediction. Sizes span tiny (39M) to large-v3 (1.5B) plus the distilled large-v3-turbo variant that trades minor accuracy for ~6x decode speed — the practical default for most deployments — because that is where the capability claim either survives contact with your data or does not.
+- Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need true real-time streaming ASR — Whisper is a 30-second-window batch model; streaming wrappers add latency/accuracy compromises versus native streaming architectures
-- You need speaker diarization or word-level timestamps out of the box — those come from ecosystem tools (WhisperX, pyannote), not the base model
+- The cost this entry cannot quantify for you is operational: the Whisper footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Whisper at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Whisper here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

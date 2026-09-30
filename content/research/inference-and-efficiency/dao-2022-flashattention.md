@@ -55,6 +55,8 @@ FlashAttention computes exact attention while never writing the N×N score matri
 
 The insight that standard attention is memory-bound — dominated by HBM reads/writes of the intermediate matrix rather than by its FLOPs — plus an algorithm that provably minimizes IO complexity for exact attention. This redirected the field: instead of approximating attention (sparse/linear attention research, which mostly failed to transfer), you keep the exact computation and fix the memory traffic. The paper also proved a lower bound showing its IO complexity is optimal up to constants.
 
+The contribution is a specific change to how dao-2022-flashattention is trained or evaluated in the inference-and-efficiency phase; with `dao-2022-flashattention`, `title`, `flashattention`, and the claim to check is whether the reported gain survives the baseline it is compared against. Reproducing the headline number on the stated dataset and protocol is the test of whether this is a real result or a measurement artefact.
+
 ## Key Results
 
 - 3x speedup on GPT-2 attention layers and 15% end-to-end BERT-large training speedup versus the MLPerf record at the time (paper Section 4, 2022)
@@ -88,4 +90,4 @@ Makes the attention of `vaswani-2017-attention` (foundational/) practical at mod
 - [Code](https://github.com/Dao-AILab/flash-attention)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -18,11 +18,11 @@ status: "active"
 
 ## Overview
 
-This is a six-month project-first path for software engineers moving into AI engineering. The goal is not to memorize every model paper; the goal is to ship reliable LLM applications with retrieval, agents, evaluation, observability, and deployment.
+An ordering for engineers moving into applied AI: which layers to learn in, what to build at each stage, and which parts of the work belong to other roles. The path is sequenced so each stage depends only on the previous one, and every topic is paired with something you can ship.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+A catalogue of tools is only useful if someone can turn it into skill, and this path is the step that does that: what to learn, in what order, and what to build to prove it. The ordering is the contribution — a list of links does not tell you which dependency to acquire first or which topic to skip until later.
 
 ## Key Features
 
@@ -72,27 +72,29 @@ pnpm run validate:all
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you are a software engineer moving into applied AI and need an order to learn the layers in rather than a link dump.
+2. **Scenario**: you are choosing what to build first to demonstrate applied-AI competence in a hiring loop.
+3. **Scenario**: you have six months and want a month-by-month plan that ends in a portfolio project rather than a certificate.
+4. **Scenario**: you already ship LLM features and need to know which month of this path you have actually skipped.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Orders the layers so each month depends only on the previous one, which is the difference between a path and a link list.
+- Ends every month in something shippable, so progress is visible as software rather than as reading completed.
+- Names the free primary sources first, so the path costs nothing to walk before you decide a paid course is worth it.
+- Marks out-of-scope areas explicitly, which is as useful in a learning plan as what is in scope.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- Does not replace hands-on building and evaluation; a completed month is a prompt to ship, not evidence you can.
+- Assumes you can commit roughly six months. If you have eight weeks, take Month 1 and Month 2 and stop.
+- The external links decay. Treat the ordering as durable and the URLs as a snapshot to re-check at the start of each month.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Use the path as planning context for an LLM that has to sequence your study time, not as a syllabus to paste wholesale.
+- Convert each month into one portfolio artifact so the path produces evidence rather than notes.
+- Pair every conceptual month with one build example and one eval checklist, so a finished month is a thing that runs.
 
 ## Resources
 

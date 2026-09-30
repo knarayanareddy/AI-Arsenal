@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Python. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a Python codebase, filtered to options that install into an existing Python environment. The defining constraint is the dependency tree rather than capability: two packages that are individually good can conflict transitively, and you find out at install time.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+The language of your codebase eliminates most candidates before any feature comparison happens, and what survives has to survive the dependency tree as well. Grouping by stack makes that first elimination visible, and keeps the compiled-extension versus pure-Python distinction from being discovered at deploy time.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry is installable in an existing Python environment, with the install channel named.
+- Dependency-tree risk is stated per entry, since it is the failure mode that surfaces at deploy time.
+- Pure-Python and compiled-extension options are distinguished, because they upgrade differently.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its install channel and whether it ships compiled extensions, because those two facts determine deployment and upgrade behaviour in a Python service. The page is generated from the stack frontmatter facet, so a tool that changes its supported Python versions is reflected once, in its own entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Python" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are picking tooling for a Python service and need the shortlist filtered to packages you can actually depend on.
+2. **Scenario**: you are choosing between a library and a hosted API and want the deployment difference stated for a Python codebase specifically.
+3. **Scenario**: you are consolidating several Python tools and need to know which ones share a dependency tree you can maintain.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to options installable in an existing Python environment, which is the constraint that actually eliminates candidates.
+- Surfaces the dependency-tree risk, since two individually good packages can conflict transitively.
+- Distinguishes pure-Python from compiled-extension options, which have different deployment and upgrade behaviour.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Python's package ecosystem means the dependency tree is the real risk: two tools that are fine alone can conflict transitively, and the conflict surfaces at install time rather than at design time.
+- GIL-bound CPU work in a Python service constrains concurrency architecture, which makes some frameworks a better fit than others for the same job.
+- A library that is pure Python and one that ships compiled extensions have very different deployment and upgrade characteristics.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a stack-specific tool here from a build example in that language so the example's dependencies stay traceable.
+- When a package drops a Python version, update this page and the affected entries together.
 
 ## Resources
 
@@ -76,7 +79,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | orchestration, security-and-guardrails | paid | No | No | No | python | watching |
 | [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | open-source | Yes | Yes | Yes | java, python | solid-choice |
 | [Apache Airflow](../orchestration/airflow.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [any-agent](../orchestration/any-agent.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python | solid-choice |
@@ -96,17 +99,17 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Composio](../orchestration/composio.md) | orchestration | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
 | [Conan](../evaluation-and-observability/conan.md) | evaluation and observability | monitoring, tracing | paid | No | No | No | python | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | python | recommended |
-| [Dagster](../orchestration/dagster.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Dagster](../orchestration/dagster.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | solid-choice |
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [dlt](../data-ingestion/dlt.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
-| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | open-source | Yes | Yes | Yes | python | watching |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | usage-based | Yes | Yes | Yes | python | watching |
 | [DVC](../model-layer/dvc.md) | model layer | model-registry | open-source | Yes | Yes | Yes | python | recommended |
-| [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
 | [EvalScope](../evaluation-and-observability/evalscope.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | recommended |
-| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | usage-based | Yes | No | No | python | recommended |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | prototyping, production-serving | open-source | Yes | Yes | Yes | python | recommended |
 | [FastEmbed](../model-layer/fastembed.md) | model layer | vector-search | open-source | Yes | Yes | Yes | python | recommended |
@@ -123,6 +126,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | security-and-guardrails, structured-output | freemium | Yes | Yes | Yes | python | recommended |
 | [Guidance](../model-layer/guidance.md) | model layer | structured-output | open-source | Yes | Yes | Yes | python | recommended |
+| [headroom](../dx-and-tooling/headroom.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
 | [Honen](../dx-and-tooling/honen.md) | dx and tooling | structured-output | freemium | Yes | No | No | python | watching |
 | [Hugging Face Hub](../model-layer/hugging-face-hub.md) | model layer | model-registry | freemium | Yes | No | No | python | recommended |
@@ -153,10 +157,10 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Manus](../orchestration/manus.md) | orchestration | prototyping, orchestration | paid | No | No | No | python | watching |
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | web-scraping, data-labeling | open-source | Yes | Yes | Yes | python | solid-choice |
-| [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | python | solid-choice |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | production-serving, orchestration, monitoring, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | solid-choice |
-| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
@@ -166,7 +170,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | deployment, production-serving | usage-based | No | No | No | python | recommended |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | monitoring, evaluation | paid | No | No | No | python | watching |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
-| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | freemium | Yes | No | No | python | solid-choice |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | usage-based | Yes | No | No | python | solid-choice |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | production-serving, deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
@@ -181,7 +185,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | vector-search | freemium | Yes | No | No | python, typescript | recommended |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | typescript, python | recommended |
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | prompt-management, monitoring | freemium | Yes | No | No | python, typescript | recommended |
-| [Prefect](../orchestration/prefect.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Prefect](../orchestration/prefect.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | data-labeling | paid | Yes | No | No | python | recommended |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
@@ -226,4 +230,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | tracing, evaluation | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases](../model-layer/weights-biases.md) | model layer | model-registry, evaluation | freemium | Yes | No | No | python | recommended |
-| [Zep](../orchestration/zep.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | memory-management | usage-based | Yes | Yes | Yes | python, typescript | recommended |

@@ -55,7 +55,7 @@ Don't expect frequent new uploads. Evidence found during this review points to a
 
 ## Safety & moderation
 
-No moderation or trust concerns apply -- this is a one-way video publication channel, not an interactive community space.
+No moderation surface applies: a one-way video channel offers nothing to moderate. The substantive caution is that fastai course material spans several framework generations, and a lesson from an earlier version can be actively misleading on current APIs, so treat lesson dates as part of the content rather than as metadata.
 
 ## Relation to the Arsenal
 

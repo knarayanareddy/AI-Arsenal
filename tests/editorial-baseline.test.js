@@ -98,8 +98,13 @@ test('unsupported entry types produce no findings, so the baseline cannot make t
 
 test('the committed baseline file is valid and internally consistent', () => {
   const raw = fs.readFileSync(new URL('../docs/editorial-baseline.json', import.meta.url), 'utf8');
-  const parsed = parseBaseline(raw); // throws on malformed / duplicate / mismatched fingerprint
-  assert.ok(parsed.size > 0);
+  // Throws on malformed / duplicate / mismatched fingerprint, which is the
+  // property under test. An empty baseline is valid and is the expected state
+  // once the catalog's editorial debt has been fixed: the baseline exists to
+  // tolerate accepted debt, so zero accepted debt is zero entries rather than
+  // a broken file.
+  const parsed = parseBaseline(raw);
+  assert.ok(parsed instanceof Map);
 });
 
 test('normalizeFinding collapses whitespace and digits', () => {

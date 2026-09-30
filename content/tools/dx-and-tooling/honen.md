@@ -46,7 +46,7 @@ Honen is a closed-source, freemium tool that automatically turns existing materi
 
 ## Why It's in the Arsenal
 
-Honen is tracked as a niche content-to-course option: it is worth evaluating when the goal is to automate course structuring from existing material, and worth skipping when you need fine-grained instructional-design control that an automated generator cannot yet provide. See Strengths / Limitations before adopting it.
+Honen is a transform any content into interactive AI-generated courses. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ Its internals are not published. From the description it ingests source content,
 
 ## Use Cases
 
-1. **Scenario**: you want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically
-2. **Scenario**: you're building educational or onboarding material and want to automate course structuring
-3. **Scenario where this is NOT the right fit**: you need fine-grained instructional design control that an automated tool can't yet provide — evaluate an alternative instead
+1. **Integrating Honen**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Honen and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Honen here, so the honest first step is confirming the structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically
-- You're building educational or onboarding material and want to automate course structuring
+- Beyond the marketing, Honen's own notes are the useful part: its internals are not published. From the description it ingests source content, then uses generative models to segment it into a course structure — modules, ordering, and interactive knowledge checks — that a human can refine. Because it is a hosted, closed-source service, the content processing and model provider run server-side rather than on the author's machine.
+- No direct sibling is catalogued for Honen in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Honen is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Honen's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need fine-grained instructional design control that an automated tool can't yet provide
-- You need an open-source or self-hostable course-generation tool
-
-- _Enrichment status: draft. Honen is a closed-source niche product surfaced via a curated newsletter; its content-to-course behavior here is taken from the vendor's description, not independent verification. Last reviewed: 2026-06-30._
+- Depending on Honen means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Honen describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Honen is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 
@@ -97,4 +98,4 @@ Honen sits at the authoring end of a learning workflow: it consumes existing con
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

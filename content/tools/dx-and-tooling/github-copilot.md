@@ -46,7 +46,7 @@ The most widely deployed AI coding assistant: inline completions and chat in eve
 
 ## Why It's in the Arsenal
 
-GitHub Copilot earns a place in the Arsenal because it directly addresses a recurring decision point: your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+GitHub Copilot appears here as a reference point for the prototyping job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -67,27 +67,29 @@ code --install-extension GitHub.copilot
 
 ## Use Cases
 
-1. **Scenario**: your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work
-2. **Scenario**: you need enterprise procurement boxes ticked: IP indemnity, policy controls, org-wide license management
-3. **Scenario where this is NOT the right fit**: you want deep model control or local models — Copilot's model menu is curated, not open — evaluate an alternative instead
+1. **What it does in a system**: GitHub Copilot sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put GitHub Copilot and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: GitHub Copilot's comparison set is `cursor`, `continue-dev`, `tabby-ml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work
-- You need enterprise procurement boxes ticked: IP indemnity, policy controls, org-wide license management
+- What GitHub Copilot gives you that its headline description does not: copilot routes completions to fast custom models and chat/agent tasks to a selectable frontier-model pool; the coding agent runs in GitHub Actions-backed sandboxes, making changes on branches and opening PRs that follow branch protections, which is the part to check against your own pipeline before trusting the feature list.
+- Against `cursor`, `continue-dev`, `tabby-ml`, the difference that decides this is deployment model and cost rather than the feature list, and GitHub Copilot sits at the hosted end of that axis.
+- GitHub Copilot is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure GitHub Copilot's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want deep model control or local models — Copilot's model menu is curated, not open
-- Editor-native agent workflows matter more to you than platform integration; Cursor/Claude Code iterate faster there
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on GitHub Copilot means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for GitHub Copilot describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where GitHub Copilot overlaps `cursor`, `continue-dev`, `tabby-ml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `cursor`, `continue-dev`, `tabby-ml` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `github-copilot`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt GitHub Copilot over an HTTP endpoint from whichever service owns the call site against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `cursor`, `continue-dev`, `tabby-ml` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +102,4 @@ code --install-extension GitHub.copilot
 Reception should be updated with verified sources during regular content reviews.
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

@@ -55,7 +55,7 @@ Allen Institute for AI's Open Language Model project: a model family (OLMo, OLMo
 
 ## Why it's in the Arsenal
 
-The only major model family that is open in the full sense — weights, pretraining data (Dolma), training code, intermediate checkpoints, and logs — making it the substrate for research on training dynamics, data attribution, and memorization that closed-weights 'open' models cannot support. It earns a place in the Arsenal because it directly addresses a recurring decision point: you do research that needs the full training story — intermediate checkpoints, exact data ordering, and training code let you study learning dynamics and data attribution rigorously. See Strengths / Limitations below before adopting it.
+OLMo appears in this catalog as a reference point for the foundation-model phase; the useful question is what hosting and licence terms it commits you to beyond the weights themselves. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -77,18 +77,21 @@ tok = AutoTokenizer.from_pretrained('allenai/OLMo-2-1124-7B-Instruct')
 
 ## Key Use Cases
 
-1. **Scenario**: you do research that needs the full training story — intermediate checkpoints, exact data ordering, and training code let you study learning dynamics and data attribution rigorously
-2. **Scenario**: you need a truly-auditable model for provenance-sensitive deployments — every token of training data is inspectable, unlike open-weights-only releases
+1. **Running it in anger**: the first real evaluation of OLMo is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the OLMo scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You do research that needs the full training story — intermediate checkpoints, exact data ordering, and training code let you study learning dynamics and data attribution rigorously
-- You need a truly-auditable model for provenance-sensitive deployments — every token of training data is inspectable, unlike open-weights-only releases
+- The implementation detail worth checking before adopting OLMo is specific — decoder-only transformers with the OLMo 2 generation adopting reordered norm placement, QK-norm for stability, and staged training (long pretraining followed by mid-training on high-quality Dolmino data mixes). The release discipline is the differentiator: every checkpoint ships with its exact data order, enabling counterfactual data-ablation research; Tülu-recipe post-training produces the instruct variants — because that is where the capability claim either survives contact with your data or does not.
+- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You just want the best open-weights model per parameter at inference time — Qwen, Llama, and Gemma families typically lead OLMo on capability benchmarks at matched sizes
-- You need multimodal or very large scale options — the OLMo line focuses on fully-open text models at small-to-mid scales (Molmo covers vision separately)
+- Adoption risk for OLMo is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside OLMo here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

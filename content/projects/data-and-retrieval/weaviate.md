@@ -62,7 +62,7 @@ An open-source vector database offering built-in hybrid search (combining vector
 
 ## Why it's in the Arsenal
 
-Open-source vector database with built-in hybrid search (vector + keyword/BM25) and native module system for embeddings/generation. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want hybrid search (combining vector similarity with traditional keyword/BM25 search) as a first-class, built-in feature rather than something you assemble yourself. See Strengths / Limitations below before adopting it.
+Weaviate appears in this catalog as a reference point for the data-and-retrieval phase; the useful question is what your corpus does to it that its own test data does not. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -81,22 +81,25 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 
 ## Key Use Cases
 
-1. **Scenario**: you want hybrid search (combining vector similarity with traditional keyword/BM25 search) as a first-class, built-in feature rather than something you assemble yourself
-2. **Scenario**: you want a vector database with built-in modules for generating embeddings or calling LLMs directly from within query pipelines, rather than handling that entirely in application code
+1. **Integrating Weaviate**: treat it as a dependency with its own failure modes rather than a library call — decide timeout, retry and degraded-mode behaviour before the first query goes through it, and put it behind an interface so it can be replaced without a rewrite.
+2. **What dominates the decision**: `hybrid`, `search`, `combining`, `vector` are the variables that actually move the outcome for Weaviate in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You want hybrid search (combining vector similarity with traditional keyword/BM25 search) as a first-class, built-in feature rather than something you assemble yourself
-- You want a vector database with built-in modules for generating embeddings or calling LLMs directly from within query pipelines, rather than handling that entirely in application code
+- Beyond the headline description, Weaviate's architecture section is the honest source: combines HNSW-based vector indexing with an inverted-index-based keyword search engine, fusing both in hybrid queries; a module system allows plugging in embedding providers or generative models directly into the query flow (e.g. retrieve-then-generate in a single API call) rather than requiring separate application-layer orchestration.
+- It is a data-and-retrieval entry in this catalog, so the comparison that matters is against the other data-and-retrieval projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want the absolute simplest deployment model — Weaviate's module system and GraphQL-based query interface add conceptual surface area compared to Chroma's or Qdrant's simpler APIs
-- You need the largest-scale distributed deployment with the most mature Kubernetes-native operational tooling — Milvus has a longer track record specifically at billion-scale distributed deployment
+- The cost this entry cannot quantify for you is operational: the Weaviate footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Weaviate at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Weaviate here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This is the data-and-retrieval entry for Weaviate in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

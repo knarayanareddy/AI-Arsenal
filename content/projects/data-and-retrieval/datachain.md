@@ -29,22 +29,16 @@ name: DataChain
 artifact_type: platform
 category: data-pipelines
 subcategory: libraries
-description: Typed and versioned context layer for unstructured data across S3, GCS, and Azure
-github_url: https://github.com/datachain-ai/datachain
+description: "Versioned, typed dataset layer over S3, GCS and Azure with local query and an agent-facing knowledge base"
+github_url: "https://github.com/datachain-ai/datachain"
 license: Apache-2.0
 primary_language: Python
-tags:
-  - data
-  - rag
-  - retrieval
-  - multimodal
-  - self-hosted
-  - embeddings
+tags: [retrieval, agents]
 maturity: beta
-cost_model: open-source
-github_stars: 2794
-last_commit: '2026-07-11'
-docs_url: https://github.com/datachain-ai/datachain
+cost_model: freemium
+github_stars: 2817
+last_commit: "2026-09-28"
+docs_url: "https://docs.datachain.ai"
 phase: data-and-retrieval
 domain:
   - language
@@ -58,54 +52,66 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A typed context/data layer for discovering, versioning, filtering, and processing unstructured datasets in object storage.
-best_for:
-  - You need reproducible dataset jobs over S3, GCS, or Azure objects before embedding, indexing, or multimodal training.
-  - You want dataset lineage and typed transformations without moving every source object into a new storage system.
-avoid_if:
-  - You need a vector database, transactional warehouse, or governed catalog rather than a data-processing layer.
-  - You cannot define object-store permissions, dataset version retention, and job reproducibility requirements.
+best_for: ["You have millions of unstructured files in object storage and want typed, versioned records with filter, join and group_by at warehouse speed.", "You want a knowledge base your coding agent can read, because the skill plus MCP path lets Claude Code, Cursor, Codex or Copilot understand your data.", "You want pipeline runs to deposit artefacts rather than recompute, since each run leaves a typed dataset the next pipeline or agent consumes."]
+avoid_if: ["You need guaranteed durability without a managed tier, because the Studio tier is where hundreds-of-millions-record performance and the MCP path are promised.", "You cannot have bytes processed outside your storage, since the design claim is that raw bytes never leave the object store.", "You want a general-purpose warehouse, because this is a Python library over files rather than a query service you point BI tools at."]
 enrichment_notes: Official repository, Apache-2.0 license, typed/versioned dataset scope, and 2026-07-11 activity were reviewed on 2026-07-11. Production and scale behavior remain draft.
 ---
 
 ## Overview
 
-DataChain is a Python context layer for unstructured data stored across object stores such as S3, GCS, and Azure. It treats listings, datasets, transformations, and versions as typed artifacts so an AI pipeline can discover and process large collections without first flattening the source into one local directory.
+DataChain is a Python library that turns files in S3, GCS and Azure into versioned, typed datasets queryable at warehouse speed. It has three layers: a compute engine running parallel Python over files with async I/O, checkpoint recovery and incremental updates; a dataset database with Pydantic schemas, versioning, file pointers and automatic lineage, giving sub-second filter, join and group_by locally and vector search over the same rows without a separate store; and, for agent workflows, a knowledge base of LLM-enriched markdown summaries plus an agent harness skill that installs into Claude Code, Cursor, Codex, Copilot and Pi, with Studio exposing the same datasets over MCP. Raw bytes stay in storage while every run deposits a typed dataset.
 
 ## Why it's in the Arsenal
 
-RAG and multimodal pipelines often fail before retrieval: the corpus is not reproducible, source versions are unclear, and a preprocessing job cannot be rerun against the same objects. DataChain is included as a data-lineage and processing option, not as a replacement for a vector index or a data-governance system.
+The recurring problem with files in object storage is that they are untyped, unversioned and unharnessable: an agent asked a question about them re-globs and re-reads on every turn. DataChain's move is to make ingestion an artefact-producing step, so a derived dataset is a first-class versioned record with a schema and lineage rather than a side effect. The agent then reads a knowledge base and queries typed rows instead of crawling raw bytes, which is what turns an object store into something an agent can reason over safely.
 
 ## Architecture
 
-The Python layer represents datasets and transformations over object-store listings, with versioned jobs and schema-oriented views. A pipeline can filter or transform metadata and content before producing embeddings, extracted records, or downstream indexes. Recent repository work addresses superseded listing versions and garbage collection, which highlights the operational concern: cleanup must not remove the last complete version referenced by a dataset. Storage credentials, object mutations, and job state remain outside the library’s abstract data model.
+A Pydantic schema describes a dataset's records, and the compute engine maps Python processing functions across files in object storage with async I/O and checkpointing so a failed run resumes rather than restarting. Results are materialised into the dataset database as versioned typed records with file pointers back to storage and lineage linking each version to the code that produced it. Queries filter, join and group over those rows locally, and vector search runs against the same rows rather than a separate index. A markdown knowledge base derived from the dataset and enriched by an LLM is what an agent reads, and the harness skill installs that plus code generation into the agent client.
 
 ## Ecosystem Position
 
-DataChain sits before embedding, RAG indexing, and multimodal training. It overlaps with dataset orchestration and data-lake tools, while its differentiator is typed/versioned context over existing object storage rather than a new vector-serving endpoint. Compare it with a scheduler plus warehouse/catalog stack using the same source-change and replay requirements.
+It competes with dbt and Spark for the transformation layer over object storage, and the axis is type and agent access: dbt targets SQL warehouses, Spark targets batch compute, while DataChain's schema is Pydantic and its consumers include agents. It overlaps with content/tools/data-ingestion entries such as dlt, which moves data into warehouses rather than typing files in place. Compared with a pure vector store, DataChain keeps the structured columns and the embeddings in one queryable dataset, and it complements the frameworks in content/projects/frameworks through its MCP and skill surface.
 
 ## Getting Started
 
-Connect a small object-store prefix, create one versioned dataset, and run a deterministic metadata/content transformation. Record the source revision, credentials, job ID, resulting schema, and cleanup behavior. Test a failed or in-flight listing before enabling garbage collection or allowing downstream indexes to replace their previous version.
+Install the library, then optionally install the agent skill for your client:
+
+```bash
+pip install datachain
+```
+
+```bash
+datachain skill install --target claude
+```
+
+Other targets are cursor, codex, copilot and pi. It works against S3, GCS, Azure and local filesystems.
 
 ## Key Use Cases
 
-- Preparing and versioning unstructured documents, images, and metadata for RAG or multimodal pipelines.
-- Running repeatable filtering, extraction, and dataset jobs over cloud object stores.
+1. Image and media search at scale: filter a dataset by breed and mask availability and find objects similar to a reference image, with the result set versioned.
+2. Agent data Q&A: install the harness skill so a coding agent can query your typed datasets and read the derived knowledge base instead of raw storage.
+3. Incremental pipelines: rerun only what changed thanks to checkpoint recovery, and consume the previous run's typed dataset instead of recomputing it.
+4. Auditable lineage: point at the version that produced a report and read back which code created it.
 
 ## Strengths
 
-- Keeps source data in object storage while adding typed dataset and job semantics around it.
-- Apache-2.0 Python project with active work on version lifecycle and reproducibility.
+- Typed, versioned datasets with lineage, so every artefact is traceable to the code that made it.
+- Local filter, join and group_by over millions of records without standing up a warehouse.
+- Vector search over the same rows as the structured columns, avoiding a second store to keep in sync.
+- Agent-facing by design: a knowledge base plus a harness skill and MCP, so agents work from the dataset rather than raw files.
+- Bytes stay in your object storage while metadata and embeddings live in the dataset database.
 
 ## Limitations
 
-- A context layer does not provide semantic retrieval quality, transactional guarantees, or automatic data-rights enforcement.
-- Object-store consistency, credentials, network cost, and dataset cleanup remain part of the deployment design.
+The performance claims split across tiers: sub-second queries over millions of records are local, while hundreds of millions and the agent-over-MCP path are Studio features, so a self-hosted deployment has a real ceiling. It's a Python library over files, not a query service, so BI tools and SQL clients cannot attach to it. Checkpoint recovery and incremental updates help, but a compute engine mapping Python across object storage is still sensitive to network and to badly partitioned prefixes. And at a much smaller star count than dbt or Spark, the integration surface and community tooling are correspondingly thinner.
 
 ## Relation to the Arsenal
 
-DataChain belongs in data-and-retrieval beneath RAG, training, and evaluation. Pair it with dataset cards, access controls, embedding/version management, and a retrieval benchmark.
+This entry in content/projects/data-and-retrieval is the unstructured-data layer that sits between raw object storage and whatever queries it. Read it with content/tools/data-ingestion entries such as dlt for the warehouse-loading path and with content/projects/data-and-retrieval entries like pgvector for the vector-storage alternative. Its agent harness makes it the natural bridge to the coding agents in content/tools/dx-and-tooling, and its knowledge base is a memory pattern distinct from the conversational memory entries in content/tools/orchestration.
 
 ## Resources
 
-- [Official source](https://github.com/datachain-ai/datachain)
+- [GitHub — datachain-ai/datachain](https://github.com/datachain-ai/datachain)
+- [Docs — docs.datachain.ai](https://docs.datachain.ai)
+- [Agent skill and Studio overview](https://docs.datachain.ai)

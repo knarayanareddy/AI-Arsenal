@@ -56,7 +56,7 @@ An open-source in-page GUI agent from Alibaba: you embed it in your own web appl
 
 ## Why it's in the Arsenal
 
-In-page GUI agent that inverts the usual browser-agent architecture: instead of an external process driving a browser (Stagehand, Browser Use), the agent lives inside the page the site owner ships. It earns a place in the Arsenal because it addresses a distinct decision point — adding conversational control to *your own* product's UI — that external browser agents handle poorly, and because DOM-native perception is a meaningfully cheaper mechanism than vision-based agents for structured UIs. See Strengths / Limitations below before adopting it.
+PageAgent is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so read the sections below as what the project states about itself. What it would cost to adopt — operationally, in spend and on-call — is the question those sections are there to inform.
 
 ## Architecture
 

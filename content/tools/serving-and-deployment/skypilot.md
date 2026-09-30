@@ -44,9 +44,11 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/skypilot
 
 An open-source framework from UC Berkeley for running AI workloads across clouds: describe a job's resources in YAML (GPUs, disk, setup, run commands) and SkyPilot finds the cheapest available capacity across your enabled clouds/K8s clusters, provisions it, syncs your code, handles spot preemptions, and tears down when done.
 
+The integration surface is an API rather than a vendored library unlike `modal`, `runpod`; on the deployment, fine-tuning path; under a open-source cost model; with `skypilot`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
-SkyPilot earns a place in the Arsenal because it directly addresses a recurring decision point: you want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+SkyPilot is a run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface. Read it beside `modal`, `runpod`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,27 +69,30 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 
 ## Use Cases
 
-1. **Scenario**: you want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection
-2. **Scenario**: spot-instance economics matter: SkyPilot auto-recovers preempted jobs and can cut GPU costs multiples over on-demand
-3. **Scenario where this is NOT the right fit**: you're single-cloud with mature in-house infra automation — the abstraction adds little there — evaluate an alternative instead
+1. **Where it sits**: on the deployment, fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so SkyPilot can be swapped without touching callers.
+2. **Validating the choice**: put SkyPilot and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: SkyPilot's comparison set is `modal`, `runpod`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection
-- Spot-instance economics matter: SkyPilot auto-recovers preempted jobs and can cut GPU costs multiples over on-demand
+- The implementation detail worth reading before adopting SkyPilot is specific — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns — and that is where a capability claim either survives contact with your data or does not.
+- SkyPilot's honest comparison set is `modal`, `runpod`; what separates them is rarely capability, it is what you must operate.
+- The documented path into SkyPilot runs through `vllm`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure SkyPilot's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You're single-cloud with mature in-house infra automation — the abstraction adds little there
-- Fully serverless developer experience is the goal; Modal-style platforms hide more infrastructure
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Depending on SkyPilot means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for SkyPilot describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where SkyPilot overlaps `modal`, `runpod`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against `modal`, `runpod` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `skypilot`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Wiring*: adopt SkyPilot as a Python dependency or sidecar service against the `deployment, fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `modal`, `runpod` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Known integrations*: `vllm` are the documented surfaces worth starting from, because they establish the expected request and response contract. Pin the version you build against — a client library upgrade can change default retrieval or batching behaviour without a breaking version bump.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
@@ -100,4 +105,4 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 - 10,264 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

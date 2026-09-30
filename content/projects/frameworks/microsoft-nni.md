@@ -84,15 +84,20 @@ Install with `pip install nni`, annotate your training script's search space, wr
 
 ## Key Use Cases
 
-Hyperparameter optimization across many trials; neural architecture search; model compression via pruning and quantization; managing distributed tuning experiments.
+1. **Where it fits**: "You need systematic hyperparameter tuning or neural architecture search across many trials
+2. **Adoption checkpoint**: before building on NNI (Neural Network Intelligence), reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
 
 ## Strengths
 
-Broad AutoML coverage (HPO, NAS, compression), framework-agnostic trial execution, multiple search algorithms, a visualization dashboard, and an MIT license.
+- Beyond the headline description, NNI (Neural Network Intelligence)'s architecture section is the honest source: nNI separates the experiment manager from trial execution: a tuner (Bayesian, evolutionary, or other search algorithms) proposes hyperparameter or architecture configurations, a training-service abstraction runs the resulting trials on the chosen compute environment, and results feed back to guide the search. Separate modules implement NAS and compression (pruning/quantization) over PyTorch and TensorFlow models, and a web dashboard visualizes trial progress and metrics.
+- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-Upstream development largely paused after 2024 so it may lag newer methods and framework versions, the feature breadth adds a learning curve, and it is a self-hosted toolkit rather than a managed service.
+- The cost this entry cannot quantify for you is operational: the NNI (Neural Network Intelligence) footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- NNI (Neural Network Intelligence) is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

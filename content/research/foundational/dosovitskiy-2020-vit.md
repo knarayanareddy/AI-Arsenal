@@ -56,6 +56,8 @@ CNNs bake in strong image priors (locality, translation equivariance) that were 
 - ViT pretrained on large data matched or exceeded contemporary CNN state of the art on ImageNet and transfer benchmarks at lower pretraining compute (specific numbers should be read from the paper directly)
 - Made explicit the data-scale threshold: below it CNNs win (their inductive bias helps); above it ViT wins (attention + data generalizes better)
 
+The reported gains should be read with their baseline and variance in view in the foundational phase; with `dosovitskiy-2020-vit`, `title`, `image`: a delta inside the run-to-run spread of the baseline is not evidence of an improvement.
+
 ## Methodology
 
 Patchify the image, flatten and linearly project each patch to a token, prepend a learnable [class] token, add position embeddings, run a standard Transformer encoder, and classify from the [class] token representation. Pretrain supervised on a large image dataset, then fine-tune at higher resolution on downstream tasks.

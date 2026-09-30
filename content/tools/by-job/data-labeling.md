@@ -20,17 +20,17 @@ This guide compares tools for the `data-labeling` job. Use it as a routing page,
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Human judgement data is the bottleneck in most applied work, and the tooling is chosen under time pressure against a budget. Grouping by this job keeps the shortlist next to the decision that actually determines cost: what you pay per item, who adjudicates disagreement, and whether the data can leave your network.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states the labelling unit and its price, because per-item and per-hour economics change the budget by an order of magnitude at small volumes.
+- Agreement and adjudication are treated as part of the cost rather than as an optional quality step.
+- Data-handling mode is stated per entry, since a self-hosted interface is often the only compliant option.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the labelling-related frontmatter facets on each tool entry, so a tool that changes its pricing model or hosting mode is reflected here without a separate edit. The comparison axis is the unit you pay in and who bears the data-residency risk, because those two facts eliminate most candidates before feature comparison begins.
 
 ## Getting Started
 
@@ -130,14 +130,14 @@ This table is exhaustive for tools tagged with job = data-labeling.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | open-source | Yes | Yes | Yes | java, python | solid-choice |
 | [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | watching |
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [dlt](../data-ingestion/dlt.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | freemium | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
-| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | freemium | Yes | No | No | python | solid-choice |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | usage-based | Yes | No | No | python | solid-choice |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | Yes | No | No | python | recommended |
 | [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | Yes | No | No | polyglot | recommended |
@@ -145,23 +145,26 @@ This table is exhaustive for tools tagged with job = data-labeling.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `data-labeling` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need human-labelled data and want to know whether an open-source interface, a managed service or an LLM-assisted pipeline fits your budget and privacy constraints.
+2. **Scenario**: labelling quality is your bottleneck and you need to know which agreement and adjudication measures to instrument.
+3. **Scenario**: you are comparing the unit economics of per-item managed labelling against reviewer time you already have.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Splits open-source interfaces from managed services, which also splits who bears the data-residency risk.
+- Treats LLM-assisted pre-labelling as a distinct mode with its own review economics, rather than as cheaper human labelling.
+- Surfaces agreement and adjudication as part of the cost, since a labelling budget without them underestimates by a wide margin.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Labelling platforms price per item and per annotator, so the real cost includes reviewer onboarding, qualification and the adjudication you will need anyway.
+- Agreement metrics are easy to compute and easy to over-read: high inter-annotator agreement can mean the guidelines are too vague to discriminate.
+- Data sensitivity decides this choice more than features do; a self-hosted option is often the only compliant one.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a labelling tool here from a dataset, fine-tuning or evaluation entry that depends on human judgement data.
+- When a project entry claims a data-quality result, point at the labelling and agreement method used to get it.
 
 ## Resources
 

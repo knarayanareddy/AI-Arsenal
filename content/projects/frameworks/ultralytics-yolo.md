@@ -55,7 +55,7 @@ Ultralytics' framework around the YOLO family (YOLOv8 through YOLO11 and success
 
 ## Why it's in the Arsenal
 
-The default production path for real-time vision: Ultralytics packaged the YOLO lineage into a train/validate/deploy toolchain so complete that 'use YOLO' effectively means 'use this repo' for detection, segmentation, pose, and tracking tasks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need real-time detection/segmentation/pose on edge or GPU with minimal ML engineering — pretrained models, a three-line Python API, and exports to ONNX/TensorRT/CoreML/TFLite cover the full path to deployment. See Strengths / Limitations below before adopting it.
+Ultralytics YOLO appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -78,18 +78,21 @@ model.train(data='coco8.yaml', epochs=10)  # fine-tune
 
 ## Key Use Cases
 
-1. **Scenario**: you need real-time detection/segmentation/pose on edge or GPU with minimal ML engineering — pretrained models, a three-line Python API, and exports to ONNX/TensorRT/CoreML/TFLite cover the full path to deployment
-2. **Scenario**: you fine-tune on custom objects — the training loop, augmentation, and dataset tooling are battle-tested across millions of community runs
+1. **Adopting the abstraction**: for Ultralytics YOLO, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
+2. **What dominates the decision**: `real-time`, `detection`, `segmentation`, `pose` are the variables that actually move the outcome for Ultralytics YOLO in this phase, and none of them appear in a feature comparison.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need real-time detection/segmentation/pose on edge or GPU with minimal ML engineering — pretrained models, a three-line Python API, and exports to ONNX/TensorRT/CoreML/TFLite cover the full path to deployment
-- You fine-tune on custom objects — the training loop, augmentation, and dataset tooling are battle-tested across millions of community runs
+- What Ultralytics YOLO gives you that reading the feature list does not: anchor-free single-stage detectors with decoupled heads and task-specific variants sharing a backbone/neck design; the framework layer provides dataset adapters (COCO/YOLO formats), augmentation pipelines, distributed training, quantization-aware export to a dozen formats, and built-in trackers (ByteTrack, BoT-SORT). Model sizes (n/s/m/l/x) ladder from Raspberry-Pi-class edge to server GPUs, which is the part you have to evaluate against your own workload.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- AGPL-3.0 is incompatible with your product and you won't buy the commercial license — deploying it in closed-source products triggers copyleft obligations; consider Apache-licensed alternatives (RT-DETR variants, D-FINE)
-- You need open-vocabulary or promptable detection — grounding-DINO/SAM-class models handle novel-category queries that fixed-class YOLO cannot
+- The cost this entry cannot quantify for you is operational: the Ultralytics YOLO footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- No alternative is catalogued alongside Ultralytics YOLO here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 

@@ -55,7 +55,7 @@ An open-source OCR toolkit providing the model layer for modern document AI: tex
 
 ## Why it's in the Arsenal
 
-The transformer-era open OCR stack: purpose-trained models for detection, recognition, layout, reading order, and tables that benchmark competitively against cloud OCR APIs — and serve as the engine layer that Marker composes into document conversion. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need OCR components (not a full converter) to embed in a custom document pipeline — each capability (detection, recognition, layout, order, tables, LaTeX) is a separately callable model with clean Python APIs. See Strengths / Limitations below before adopting it.
+Surya is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it.
 
 ## Architecture
 
@@ -64,6 +64,8 @@ Each task is a dedicated efficient transformer model: line-level detection feeds
 ## Ecosystem Position
 
 Upstream: PyTorch, Hugging Face model hosting. Downstream: Marker composes Surya models into document conversion; community projects embed the detector/recognizer independently. Competing: PaddleOCR (industrial breadth, permissive license), Tesseract (legacy baseline), docTR. The GPL+commercial-terms licensing mirrors Marker's — fine for internal use, needs review for shipped products.
+
+Compared with unlike `paddleocr`; in the data-and-retrieval phase; under a open-source cost model; with `surya`, `name`, `version`, Surya overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
 
 ## Getting Started
 
@@ -76,22 +78,25 @@ surya_table document.png
 
 ## Key Use Cases
 
-1. **Scenario**: you need OCR components (not a full converter) to embed in a custom document pipeline — each capability (detection, recognition, layout, order, tables, LaTeX) is a separately callable model with clean Python APIs
-2. **Scenario**: you process multilingual scanned documents — 90+ language support with self-reported benchmarks faster and more accurate than Tesseract, competitive with Google Cloud Vision
+1. **Running it in anger**: the first real evaluation of Surya is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What dominates the decision**: `components`, `full`, `converter`, `embed` are the variables that actually move the outcome for Surya in this phase, and none of them appear in a feature comparison.
+3. **Choosing between candidates**: compare Surya against `paddleocr` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
 
 ## Strengths
 
-- You need OCR components (not a full converter) to embed in a custom document pipeline — each capability (detection, recognition, layout, order, tables, LaTeX) is a separately callable model with clean Python APIs
-- You process multilingual scanned documents — 90+ language support with self-reported benchmarks faster and more accurate than Tesseract, competitive with Google Cloud Vision
+- What Surya gives you that reading the feature list does not: each task is a dedicated efficient transformer model: line-level detection feeds recognition; layout and reading-order models classify and sequence regions; table-rec recovers row/column structure. Models are trained for batch GPU throughput (with CPU/MPS fallback), exposed via Python predictor classes and a CLI; benchmarks in the repo compare against Tesseract and Google Cloud Vision with published methodology, which is the part you have to evaluate against your own workload.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You want an end-to-end PDF-to-markdown tool — that is Marker (built on Surya); using Surya directly means assembling the pipeline yourself
-- GPL-3.0 plus revenue-conditional model weights conflict with your commercial embedding plans — PaddleOCR (Apache-2.0) avoids the constraint
+- Adoption risk for Surya is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- Where Surya overlaps `paddleocr`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This is the data-and-retrieval entry for Surya in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -99,4 +104,4 @@ This is a data-and-retrieval entry: it documents a vector database, document-pro
 - [Documentation](https://github.com/datalab-to/surya#readme)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (21,057 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 21057 as of 2026-07-08; last commit 2026-07-08; both verified via the GitHub API.*

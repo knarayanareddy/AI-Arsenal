@@ -66,6 +66,8 @@ The system layers parallelism dimensions: data parallelism replicates, tensor pa
 
 Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. Competing: `deepspeed` (ZeRO-centric) and Megatron-LM (tensor/pipeline parallelism) cover overlapping ground; `accelerate` wraps several backends more thinly. Colossal-AI's pitch is breadth-under-one-API.
 
+Compared with unlike `accelerate`, `deepspeed`; in the training-and-alignment phase; under a open-source cost model; with `colossalai`, `name`, `colossal-ai`, Colossal-AI (HPC-AI Tech) overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash
@@ -87,6 +89,8 @@ Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. Competin
 
 - Overkill and added complexity for standard single/small-multi-GPU LoRA fine-tuning
 - Heavy overlap with DeepSpeed/Megatron; limited reason to switch an already-working stack
+
+Read Colossal-AI (HPC-AI Tech) against the operational facts rather than the feature list unlike `accelerate`, `deepspeed`; in the training-and-alignment phase; under a open-source cost model; with `colossalai`, `name`, `colossal-ai`. What matters is the data path it introduces, the state it keeps, and what a degraded dependency does — the parts a capability claim does not cover.
 
 ## Relation to the Arsenal
 

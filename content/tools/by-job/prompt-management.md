@@ -20,17 +20,17 @@ This guide compares tools for the `prompt-management` job. Use it as a routing p
 
 ## Why It's in the Arsenal
 
-Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
+Prompts drift across services, and the drift is invisible until a regression reaches users. Grouping by this job keeps versioning, templating and A/B testing distinguishable, and makes the dependency on evaluation explicit — a prompt registry without tests is a change log.
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Version control, templating and A/B testing are listed as separate categories, because they have different failure modes.
+- Every entry states its evaluation dependency, since a prompt registry without tests is a change log.
+- Operational concerns are included, which is where most prompt tooling stops.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the prompt-management and evaluation facets on each tool entry. The comparison axis is whether the tool can be evaluated against a real metric, since a registry without a test set records changes without learning anything from them.
 
 ## Getting Started
 
@@ -144,23 +144,26 @@ This table is exhaustive for tools tagged with job = prompt-management.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `prompt-management` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: prompts are duplicated across services and drifting, and you need versioning and rollout rather than another shared constants file.
+2. **Scenario**: you need to A/B a prompt change against a real metric rather than opinion.
+3. **Scenario**: you are debugging why production behaviour differs from the prompt you tested locally.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates version control, templating, and A/B testing, which are usually conflated and have different failure modes.
+- Emphasises the evaluation dependency, since a prompt registry without tests is a change log.
+- Includes the operational concerns, where most prompt tooling stops talking.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Prompt versioning only helps if evaluation runs against the same version, and that is a separate piece of infrastructure most teams have to build.
+- Template and parameterisation tools tend to obscure the final prompt, which makes production debugging harder rather than easier.
+- The tooling here does not make prompts correct; it makes changes to them reviewable and revertible.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a prompt-management tool here from a framework entry's caching or version-control feature so the boundary is explicit.
+- When an entry ships a default prompt, note it here so the pattern and the artefact stay discoverable together.
 
 ## Resources
 

@@ -37,15 +37,17 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** PyTorch-native library for fine-tuning and experimenting with LLMs. Open source or free to start. Best for PyTorch-native fine-tuning.
+> **TL;DR:** torchtune covers the fine-tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
 A native PyTorch fine-tuning library with readable, hackable training recipes, aimed at researchers who want to understand and modify the training loop rather than use a high-abstraction framework.
 
+The integration surface is an API rather than a vendored library unlike `axolotl`, `llamafactory`; on the fine-tuning path; under a open-source cost model; with `torchtune`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
-torchtune earns a place in the Arsenal because it directly addresses a recurring decision point: you want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+torchtune is a pyTorch-native library for fine-tuning and experimenting with LLMs. Read it beside `axolotl`, `llamafactory`, `mlx-lm`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -59,32 +61,39 @@ Recipes are plain PyTorch scripts composed of explicit, swappable components (mo
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring torchtune into anything else. The command below runs against the `fine-tuning` job and returns a result you can inspect directly.
+
 ```bash
 pip install torchtune
 ```
 
+Follow the official documentation at https://github.com/pytorch/torchtune for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+
 ## Use Cases
 
-1. **Scenario**: you want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework
-2. **Scenario**: you need tight control over training internals for research experimentation
-3. **Scenario where this is NOT the right fit**: you want the broadest model-family coverage and a config-only workflow (Axolotl/LLaMA-Factory cover more out of the box) — evaluate an alternative instead
+1. **What it does in a system**: torchtune sits on the fine-tuning leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since torchtune is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: torchtune's comparison set is `axolotl`, `llamafactory`, `mlx-lm`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework
-- You need tight control over training internals for research experimentation
+- What torchtune gives you that its headline description does not: recipes are plain PyTorch scripts composed of explicit, swappable components (model, optimizer, dataset, scheduler), making it straightforward to read and modify training behavior directly, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing torchtune against `axolotl`, `llamafactory`, `mlx-lm`, `peft` comes down to one question: who runs the process when it breaks — you or the vendor.
+- torchtune is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure torchtune's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want the broadest model-family coverage and a config-only workflow (Axolotl/LLaMA-Factory cover more out of the box)
-- Your team prefers not to read and modify PyTorch training code directly
+- There is no self-hosted path to torchtune, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for torchtune describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where torchtune overlaps `axolotl`, `llamafactory`, `mlx-lm`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [Axolotl](./axolotl.md), [LLaMA-Factory](./llamafactory.md), [MLX-LM](./mlx-lm.md), [PEFT](./peft.md), [Unsloth](./unsloth.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `torchtune`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt torchtune as a Python dependency or sidecar service against the `fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `axolotl`, `llamafactory`, `mlx-lm`, `peft` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 

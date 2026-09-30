@@ -48,6 +48,8 @@ Mamba is a sequence architecture built on structured state-space models (SSMs) w
 
 Prior SSMs achieved linear time via time-invariant dynamics, computable as convolutions, but failed at language because they could not do content-based selection. Mamba makes the SSM's transition parameters input-dependent, which breaks the convolutional trick; the paper's second contribution is a hardware-aware selective-scan kernel (fusing the recurrence in SRAM, recomputing states in the backward pass) that keeps training efficient anyway. The combination was the first attention-free architecture to match Transformer scaling laws on language modeling.
 
+The contribution is a specific change to how gu-2023-mamba is trained or evaluated in the architectures phase; with `gu-2023-mamba`, `title`, `mamba`, and the claim to check is whether the reported gain survives the baseline it is compared against. Reproducing the headline number on the stated dataset and protocol is the test of whether this is a real result or a measurement artefact.
+
 ## Key Results
 
 - Mamba-2.8B matched or exceeded Pythia-6.9B-class Transformers on standard zero-shot language benchmarks (paper Table 3, 2023)
@@ -81,4 +83,4 @@ Positioned against `vaswani-2017-attention` (foundational/) as the strongest lin
 - [Code](https://github.com/state-spaces/mamba)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

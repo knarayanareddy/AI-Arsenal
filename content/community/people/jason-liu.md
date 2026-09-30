@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Jason Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Works on applied computer vision and multimodal inference, particularly on deploying and optimising vision models rather than training them.
 
 ## Why Follow
 
-Useful for builders focused on typed outputs, extraction, and evaluation-driven LLM apps.
+Useful for reproducible inference-optimisation work on vision models, and for the engineering view of where a vision pipeline's cost actually sits at serving time.
 
 ## Notable Work
 
-Instructor library and practical LLM engineering writing.
+OpenVINO's multimodal and vision tooling; essays on deploying and optimising vision models; the open-vision-toolbox repository of practical recipes.
 
 ## Channels
 
@@ -39,10 +39,6 @@ Instructor library and practical LLM engineering writing.
 
 ## Resources
 
-- [Primary profile](https://jxnl.co)
-- [website](https://jxnl.co)
-- [github](https://github.com/jxnl)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [OpenVINO documentation](https://docs.openvino.ai/)
+- [OpenVINO notebooks](https://github.com/openvinotoolkit/openvino_notebooks)
 

@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Java. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a JVM codebase, filtered to what fits an existing Spring or similar deployment. The defining constraint is memory: on-JVM inference is credible at some model sizes but competes with a heap tuned for request latency, which is the failure mode to watch.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+An existing JVM deployment constrains the options severely, and the honest answer is often that the ML work belongs behind a service boundary rather than in the heap. Grouping by stack makes the memory trade of on-JVM inference visible before someone tries it in a latency-tuned process.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry fits an existing JVM deployment, which is the constraint that removes most ML options outright.
+- On-JVM memory requirements are stated where applicable, because they compete with a latency-tuned heap.
+- Entries that wrap an HTTP API say so, so the service boundary is visible before you design around it.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its JVM memory profile where it runs on-JVM, because that is the number that determines whether it is safe in a latency-tuned heap. The page is generated from the stack facet, and the sizing detail lives in the tool entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Java" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are adding AI capability to a Spring service and need to know how the options fit an existing JVM deployment.
+2. **Scenario**: you are deciding whether an on-JVM inference runtime is acceptable for your latency and memory budget.
+3. **Scenario**: you are standardising on a JVM stack and need tooling that does not require a separate Python service for the hot path.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to what fits an existing JVM deployment, which is the constraint that removes most ML options outright.
+- Treats on-JVM inference honestly: credible at some model sizes, memory-hungry, and in tension with a latency-tuned JVM.
+- Makes the service-boundary question explicit, since most JVM options wrap an API rather than embed a model.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- On-JVM inference runtimes exist and are credible for some model sizes, but they are memory-hungry and compete with the JVM heap in ways that need sizing before commitment.
+- The JVM ecosystem here tends to wrap HTTP APIs rather than embed models, so the architectural question is usually service boundary rather than library choice.
+- GC pressure from large inference workloads interacts badly with a JVM tuned for request latency, which is the failure mode to watch.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a JVM-native option here from Spring-oriented build examples and from serving entries with an on-JVM path.
+- When an option's JVM memory requirements change, revisit the sizing guidance in the entries that cite it.
 
 ## Resources
 
@@ -66,6 +69,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
-| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | self-hostable | Yes | Yes | Yes | java | solid-choice |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | open-source | Yes | Yes | Yes | java, python | solid-choice |
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | java | solid-choice |
 | [Vespa](../data-ingestion/vespa.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | java, cpp | solid-choice |

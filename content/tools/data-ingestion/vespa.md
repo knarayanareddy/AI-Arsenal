@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** Open-source search platform doing vector + lexical + structured retrieval and multi-phase ML ranking in one engine, with on-node inference. Immensely capable; operationally heavyweight.
+> **TL;DR:** Vespa covers the vector-search leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -68,21 +68,22 @@ vespa clone album-recommendation myapp && cd myapp && vespa deploy
 
 ## Use Cases
 
-1. **Scenario**: RAG retrieval requiring exact-term precision (SKUs, error codes) plus semantic recall plus metadata filters in one ranked result
-2. **Scenario**: e-commerce/feed-style search where business-logic ranking phases matter as much as similarity
-3. **Scenario where this is NOT the right fit**: a prototype needing cosine similarity over 100K chunks — use a lightweight vector store
+1. **What it does in a system**: Vespa sits on the vector-search leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Vespa is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Vespa's comparison set is `qdrant`, `weaviate`, `pinecone`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Eliminates the vector-DB + lexical-engine + reranker integration seam; ranking consistency in one place
-- Tensor model supports late-interaction (ColBERT) and multi-vector patterns most vector DBs can't express
-- Proven at extreme scale for decades of production search at Yahoo
+- What Vespa gives you that its headline description does not: documents are distributed across stateless container nodes (query processing) and stateful content nodes (index + ranking). Queries fan out; first-phase ranking runs over candidates cheaply, second-phase re-ranks the top-k with expression- or ONNX-based models on the node — moving compute to data instead of shipping candidates to a reranker service, which is the part to check against your own pipeline before trusting the feature list.
+- Vespa overlaps `qdrant`, `weaviate`, `pinecone` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: Vespa is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Vespa's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Steep learning curve: application packages, schema definitions, and ranking expressions are a paradigm, not a config file
-- Operating the stateful cluster (or paying for Vespa Cloud) is the cost of its capability
-- Community/ecosystem smaller than the mainstream vector-DB wave; fewer copy-paste examples
+- Depending on Vespa means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Vespa describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Vespa overlaps `qdrant`, `weaviate`, `pinecone`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

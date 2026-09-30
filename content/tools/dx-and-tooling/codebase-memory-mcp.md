@@ -41,7 +41,7 @@ buzz_sources:
   - {"source":"github-trending","url":"https://github.com/trending?since=monthly","date":"2026-07-07","description":"On GitHub weekly and monthly trending; 27.8k stars"}
 ---
 
-> **TL;DR:** MCP server that parses your codebase (tree-sitter) into a persistent knowledge graph so coding agents query structure — definitions, call graphs, references — instead of re-grepping every session. Free, MIT. Best for large repos where context-window archaeology dominates agent time.
+> **TL;DR:** Codebase Memory MCP, for the memory-management job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -71,18 +71,22 @@ An indexing pass parses the repo with tree-sitter grammars and writes symbols, f
 
 ## Use Cases
 
-1. **Scenario**: an agent asked to refactor a widely used function queries the call graph first, getting the full blast radius in one call instead of iterative grepping
-2. **Scenario**: long-running work on a monorepo where each new session starts with instant structural context instead of re-exploration
+1. **Where it sits**: on the memory-management leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Codebase Memory MCP can be swapped without touching callers.
+2. **Validating the choice**: put Codebase Memory MCP and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Codebase Memory MCP here, so the honest first step is confirming the memory-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Attacks a real, mechanical cost: repeated structure re-discovery is one of the largest token sinks for coding agents on big repos
-- Zero-infrastructure (embedded storage) and harness-agnostic via MCP (27.8k stars as of 2026-07-07)
+- The implementation detail worth reading before adopting Codebase Memory MCP is specific — an indexing pass parses the repo with tree-sitter grammars and writes symbols, files, and relationships into an embedded graph store; the MCP server then answers Cypher-style structural queries against it. Because the index persists across sessions, the agent's knowledge of the codebase survives context resets — the graph is the memory, not the context window — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Codebase Memory MCP in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Codebase Memory MCP means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Codebase Memory MCP's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Index staleness: the graph must be kept in sync with fast-moving branches, or the agent reasons over outdated structure
-- Young project; language coverage is bounded by available tree-sitter grammars — verify yours before adopting
+- There is no self-hosted path to Codebase Memory MCP, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Codebase Memory MCP describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Codebase Memory MCP is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

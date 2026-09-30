@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose cost facet is Paid. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist of paid tooling, grouped because per-token and per-call pricing turns your architecture into a cost decision. What matters on this page is not the feature list but the unit economics: which costs are metered, which are committed, and how each behaves as volume changes.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Per-token and per-call pricing makes architecture a financial decision, because caching, batching, routing and context management all show up on the invoice. Grouping by cost model keeps the unit economics in view at the point of tool selection, rather than surfacing them when the first bill arrives.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry states the metering unit, because a per-token price and a per-seat price behave differently as you scale.
+- Committed and metered costs are distinguished, so the shape of the bill is predictable before the first invoice.
+- Contract terms are treated as part of the decision, since they outlive the code written against them.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records the metering unit and whether the cost is committed or metered, because that is what determines the shape of the bill as volume changes. The page is generated from the pricing and cost-model frontmatter facets rather than maintained by hand, so a price change lands in one place.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a cost fit of "Paid" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are building a costed plan and need per-unit prices and what drives them.
+2. **Scenario**: you are deciding whether a paid managed service is cheaper than hosting the equivalent yourself.
+3. **Scenario**: you need to know which costs are metered and which are committed, because the two behave differently as volume changes.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Distinguishes metered from committed cost, which behave very differently as volume changes.
+- Treats the contract as part of the decision, not just the price list.
+- Makes clear that per-token pricing turns caching, batching and routing into engineering requirements.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Published prices cover the common case; enterprise agreements, committed-use discounts and egress charges routinely change the effective unit cost.
+- Paid per-token or per-call pricing makes your architecture a cost decision: caching, batching and model routing become engineering requirements.
+- A paid service is a procurement decision as well as a technical one, and the contract terms outlive the code you write against it.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a paid tool here from any entry whose architecture depends on its pricing, especially agent and long-context workloads where loops multiply cost.
+- When a pricing change lands, check the cost-relevant entries rather than only the tool entry.
 
 ## Resources
 

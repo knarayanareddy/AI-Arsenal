@@ -61,7 +61,7 @@ An open-source library (with an optional managed API) for parsing a wide range o
 
 ## Why it's in the Arsenal
 
-Open-source (with managed API option) library for parsing diverse document formats into structured, LLM-ready elements. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to parse a very wide range of document formats (PDF, DOCX, HTML, emails, images) with one consistent library rather than assembling format-specific parsers. See Strengths / Limitations below before adopting it.
+Unstructured appears in this catalog as a reference point for the data-and-retrieval phase; the useful question is what your corpus does to it that its own test data does not. The sections below state what it claims to do and what adopting it would commit you to.
 
 ## Architecture
 
@@ -70,6 +70,8 @@ Provides format-specific parsing strategies unified under a common element-based
 ## Ecosystem Position
 
 Upstream: none of particular note. Downstream: officially integrated as a document loader in both LangChain and LlamaIndex. Competing: Docling (more specialized layout analysis), LlamaParse (managed-only, LlamaIndex-specific). Complementary: commonly used as the document-ingestion step in a broader RAG pipeline.
+
+Compared with in the data-and-retrieval phase; under a open-source cost model; with `unstructured`, `name`, `version`, Unstructured overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
 
 ## Getting Started
 
@@ -80,24 +82,25 @@ Upstream: none of particular note. Downstream: officially integrated as a docume
 
 ## Key Use Cases
 
-1. **Scenario**: you need to parse a very wide range of document formats (PDF, DOCX, HTML, emails, images) with one consistent library rather than assembling format-specific parsers
-2. **Scenario**: you want both an open-source self-hosted path and a managed API option from the same project, giving flexibility as your scale or operational preferences change
+1. **Depending on it safely**: the work is the boundary — which calls go through Unstructured, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
+2. **What the Unstructured scenarios have in common**: they are separated by corpus shape and query volume rather than by feature, because those two decide whether a Unstructured choice survives real traffic.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-- You need to parse a very wide range of document formats (PDF, DOCX, HTML, emails, images) with one consistent library rather than assembling format-specific parsers
-- You want both an open-source self-hosted path and a managed API option from the same project, giving flexibility as your scale or operational preferences change
+- Beyond the headline description, Unstructured's architecture section is the honest source: provides format-specific parsing strategies unified under a common element-based output model (titles, narrative text, tables, list items, etc.), with both a fast/rule-based parsing path and slower, more accurate model-based parsing (e.g. for scanned documents requiring OCR) selectable based on accuracy/speed tradeoffs.
+- Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
+- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
-- You need the highest-fidelity layout preservation for complex tables/figures specifically — Docling's layout-analysis models are more specialized for that particular challenge
-- Your document format needs are narrow and well-defined — a lighter, format-specific parser may be simpler than Unstructured's broader abstraction layer
-
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+- The cost this entry cannot quantify for you is operational: the Unstructured footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Unstructured at your scale need measuring before this informs a production decision.
+- No alternative is catalogued alongside Unstructured here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This is the data-and-retrieval entry for Unstructured in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

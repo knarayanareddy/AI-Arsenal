@@ -87,15 +87,21 @@ Install PaddlePaddle and `pip install paddlex`, then call a task pipeline (for e
 
 ## Key Use Cases
 
-Ready-to-run OCR and document parsing; image classification, detection, and segmentation; time-series forecasting; multimodal tasks with quick deployment in the PaddlePaddle ecosystem.
+1. **Running it in anger**: the first real evaluation of PaddleX is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
+2. **What the PaddleX scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
+3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
 
 ## Strengths
 
-Broad task coverage via packaged pipelines, low-code API, integrated fine-tuning and multiple deployment targets, access to strong PP-series models, and an Apache-2.0 license.
+- The implementation detail worth checking before adopting PaddleX is specific — paddleX provides a unified pipeline abstraction: each task pipeline chains preprocessing, one or more PaddlePaddle models, and postprocessing, callable from a single Python API or CLI. It supports fine-tuning pipelines on custom data, model selection within a pipeline, and multiple deployment targets (high-performance inference, serving, and edge via Paddle Inference/Lite), unifying training and deployment across the PaddlePaddle model zoo — because that is where the capability claim either survives contact with your data or does not.
+- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
+- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations
 
-It requires the PaddlePaddle framework rather than PyTorch, packaged pipelines constrain fully custom architectures, and documentation and community are largely centered on the PaddlePaddle ecosystem.
+- The cost this entry cannot quantify for you is operational: the PaddleX footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
+- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
+- PaddleX is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
 
 ## Relation to the Arsenal
 

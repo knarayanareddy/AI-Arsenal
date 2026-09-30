@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Jay Alammar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Produces the illustrated explanations of transformer internals that most people in the field first learned from: attention, GPT variants, and modern architecture comparisons.
 
 ## Why Follow
 
-Great for visual intuition before diving into papers or code.
+Useful when you need to understand precisely how attention variants differ rather than approximately, and want code alongside the diagram small enough to verify against.
 
 ## Notable Work
 
-The Illustrated Transformer and related visual explainers.
+“The Illustrated Transformer” and its successors on attention variants, self-attention, and GPT; the illustrated guides to LLM architectures, fine-tuning, and AI agents; the illustrated-transformer repository.
 
 ## Channels
 
@@ -36,9 +36,7 @@ The Illustrated Transformer and related visual explainers.
 
 ## Resources
 
-- [Primary profile](https://jalammar.github.io)
-- [website](https://jalammar.github.io)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/)
+- [The Illustrated Stable Diffusion](https://jalammar.github.io/illustrated-stable-diffusion/)
 

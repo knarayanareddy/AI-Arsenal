@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Andrew Ng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Teaches machine learning as an engineering discipline, organised into courses rather than papers. His influence is largely curricular: the DeepLearning.AI catalogue is the default onboarding path for ML across a lot of companies.
 
 ## Why Follow
 
-Useful for structured courses and accessible explanations for broad engineering audiences.
+Useful for the framing that matters when you are teaching ML to an engineering organisation rather than to researchers, and for the clearest public treatment of structuring an ML project around measured error instead of intuition.
 
 ## Notable Work
 
-DeepLearning.AI courses and AI education.
+DeepLearning.AI and the Coursera machine-learning specialisation; Machine Learning Strategy, on error analysis and the ML project checklist; the AI Agentic Design announcement; “Generative AI for Everyone” as the executive-level entry point.
 
 ## Channels
 
@@ -39,10 +39,7 @@ DeepLearning.AI courses and AI education.
 
 ## Resources
 
-- [Primary profile](https://www.deeplearning.ai/)
-- [website](https://www.deeplearning.ai/)
-- [youtube](https://www.youtube.com/@Deeplearningai)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Machine Learning Strategy](https://www.deeplearning.ai/courses/machine-learning-strategy/)
+- [DeepLearning.AI short courses](https://www.deeplearning.ai/short-courses/)
+- [Generative AI for Everyone](https://www.deeplearning.ai/short-courses/generative-ai-for-everyone/)
 

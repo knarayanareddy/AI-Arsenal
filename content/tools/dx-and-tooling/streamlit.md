@@ -43,7 +43,7 @@ The most widely adopted Python framework for building data and AI app UIs quickl
 
 ## Why It's in the Arsenal
 
-Streamlit earns a place in the Arsenal because it directly addresses a recurring decision point: you want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Streamlit is A Python framework for building data and AI apps with minimal frontend code. Read it beside `chainlit`, `fastapi`, `gradio`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -55,6 +55,8 @@ Streamlit earns a place in the Arsenal because it directly addresses a recurring
 
 The entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily.
 
+The integration happens in the developer's loop rather than at runtime, through a config file, a CLI or an editor extension, so the failure mode is a broken or ambiguous configuration rather than an outage in a request path. The execution model matters more than the feature surface for Streamlit unlike `chainlit`, `fastapi`; on the prototyping path; under a freemium cost model; with `streamlit`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 ```bash
@@ -64,26 +66,29 @@ The entire script reruns top-to-bottom on each user interaction, with Streamlit'
 
 ## Use Cases
 
-1. **Scenario**: you want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools
-2. **Scenario**: you need built-in widgets for displaying dataframes, charts, and AI outputs together
-3. **Scenario where this is NOT the right fit**: you need fine-grained UI control or non-rerun-based interactivity (Streamlit reruns the whole script on each interaction) — evaluate an alternative instead
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Streamlit can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Streamlit.
+3. **Choosing between candidates**: Streamlit's comparison set is `chainlit`, `fastapi`, `gradio`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools
-- You need built-in widgets for displaying dataframes, charts, and AI outputs together
+- The implementation detail worth reading before adopting Streamlit is specific — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily — and that is where a capability claim either survives contact with your data or does not.
+- Streamlit's honest comparison set is `chainlit`, `fastapi`, `gradio`, `mesop`; what separates them is rarely capability, it is what you must operate.
+- Streamlit is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Streamlit's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need fine-grained UI control or non-rerun-based interactivity (Streamlit reruns the whole script on each interaction)
-- You need a production-grade, highly customized public-facing product UI
+- Depending on Streamlit means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Streamlit describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Streamlit overlaps `chainlit`, `fastapi`, `gradio`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
-- Compare against [Chainlit](./chainlit.md), [FastAPI](../serving-and-deployment/fastapi.md), [Gradio](./gradio.md), [Mesop](./mesop.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `streamlit`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+- *Wiring*: adopt Streamlit as a Python dependency or sidecar service against the `prototyping` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
+- *Alternatives*: `chainlit`, `fastapi`, `gradio`, `mesop` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
+- *Deployment and cost*: Confirm which tier you are on before committing: free-tier limits change, and a self-hosted option usually exists if the hosted quota becomes the constraint.
+- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
 
 ## Resources
 
