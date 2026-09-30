@@ -61,12 +61,20 @@ function stripHtmlComments(markdown) {
 // approved), so DNS is never re-resolved at connect time and redirects/retries
 // cannot be rebound to a private IP. Redirects are returned, never followed.
 function fetchOnce(url, method, lookup) {
-  return requestStatus(url, {
-    method,
-    lookup,
-    timeoutMs,
-    headers: { 'User-Agent': USER_AGENT },
-  });
+  // A Range header is required, not optional politeness. Some documentation
+  // hosts — developers.llamaindex.ai among them — answer a bodyless GET with
+  // 404 and only serve the page when a range is requested. Without it the
+  // checker reports a live page as dead.
+  //
+  // The response is destroyed as soon as the status line is read (see
+  // requestStatus), so a range keeps the transfer to a single small block
+  // instead of pulling a whole page we are about to discard.
+  const headers = {
+    'User-Agent': USER_AGENT,
+    Accept: '*/*',
+  };
+  if (method === 'GET') headers.Range = 'bytes=0-1023';
+  return requestStatus(url, { method, lookup, timeoutMs, headers });
 }
 
 async function fetchWithRetry(url, method, lookup) {

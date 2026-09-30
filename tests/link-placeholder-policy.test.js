@@ -79,9 +79,9 @@ test('placeholder handling is reversible via LINK_CHECK_STRICT_URLS', () => {
 
 test('a 404 from HEAD must not be reported as a broken link', () => {
   // Regression guard. Some documentation hosts answer HEAD with 404 while
-  // serving GET normally — developers.llamaindex.ai/python/llama_deploy/cli/
-  // is the observed case. check-links.js returns on the first conclusive status,
-  // so returning "broken" on HEAD reported a live page as dead and failed CI.
+  // serving GET normally — developers.llamaindex.ai is the observed case.
+  // check-links.js returns on the first conclusive status, so returning
+  // "broken" on HEAD reported a live page as dead and failed CI.
   //
   // The fix falls through to GET on a 404/410 from HEAD and only reports
   // broken if GET agrees.
@@ -108,5 +108,29 @@ test('a 404 from HEAD must not be reported as a broken link', () => {
     body,
     /^\s*return \{ url: rawUrl, ok: false, status: response\.status, error: `http-\$\{response\.status\}`, soft: false \};$/m,
     'the broken branch must not return without checking the method'
+  );
+});
+
+test('GET requests carry a Range header', () => {
+  // Second half of the same bug, and the part that actually fixed it.
+  //
+  // developers.llamaindex.ai returns 404 for a bodyless GET and 206 when a
+  // range is requested — measured directly, with and without the header:
+  //   UA only -> 404,  UA + Accept -> 404,  UA + Range -> 206.
+  //
+  // So falling through from HEAD to GET is not sufficient on its own; the GET
+  // also has to ask for a byte range or the host 404s again.
+  const src = readFileSync(new URL('../scripts/check-links.js', import.meta.url), 'utf8');
+  const fetchOnce = src.match(/function fetchOnce\([\s\S]*?\n}\n/);
+  assert.ok(fetchOnce, 'fetchOnce must exist');
+  assert.match(
+    fetchOnce[0],
+    /method === 'GET'\) headers\.Range = /,
+    'GET must request a byte range'
+  );
+  assert.match(
+    fetchOnce[0],
+    /Accept: '\*\/\*'/,
+    'requests must send an Accept header'
   );
 });
