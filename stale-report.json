@@ -1,0 +1,1660 @@
+{
+  "generated_at": "2026-09-30T09:51:54.801Z",
+  "threshold_days": 90,
+  "stale_count": 236,
+  "invalid_dates": [],
+  "stale_entries": [
+    {
+      "id": "agent-browser-shield",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/agent-browser-shield.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "agent-builder",
+      "type": "guide",
+      "path": "content/skills/learning-paths/agent-builder.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "agenta",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/agenta.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "agnt-hub",
+      "type": "tool",
+      "path": "content/tools/orchestration/agnt-hub.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "ai-engineer",
+      "type": "guide",
+      "path": "content/skills/learning-paths/ai-engineer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "airflow",
+      "type": "tool",
+      "path": "content/tools/orchestration/airflow.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "andrej-karpathy",
+      "type": "person",
+      "path": "content/community/people/andrej-karpathy.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "andrew-ng",
+      "type": "person",
+      "path": "content/community/people/andrew-ng.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "argilla",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/argilla.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "arvind-narayanan",
+      "type": "person",
+      "path": "content/community/people/arvind-narayanan.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "astra-autonomous-pentest",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/astra-autonomous-pentest.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "autogen",
+      "type": "project",
+      "path": "content/projects/frameworks/autogen.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "autogpt",
+      "type": "project",
+      "path": "content/projects/frameworks/autogpt.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "aws-bedrock",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/aws-bedrock.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "axolotl",
+      "type": "tool",
+      "path": "content/tools/model-layer/axolotl.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "azure-ai-studio",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/azure-ai-studio.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "bai-2022-constitutional-ai",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/bai-2022-constitutional-ai.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "basedash",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/basedash.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "bentoml",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/bentoml.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "braintrust",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/braintrust.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "brown-2020-gpt3",
+      "type": "paper",
+      "path": "content/research/foundational/brown-2020-gpt3.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "chainlit",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/chainlit.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "chip-huyen",
+      "type": "person",
+      "path": "content/community/people/chip-huyen.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "chroma",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/chroma.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "claude-artifact-player",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/claude-artifact-player.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "clem-delangue",
+      "type": "person",
+      "path": "content/community/people/clem-delangue.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "cloudskill",
+      "type": "tool",
+      "path": "content/tools/orchestration/cloudskill.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "code-arena",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/code-arena.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "command-r-plus",
+      "type": "project",
+      "path": "content/projects/foundation-models/command-r-plus.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "conan",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/conan.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "crawl4ai",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/crawl4ai.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "crawl4ai-tool",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/crawl4ai-tool.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "crewai",
+      "type": "project",
+      "path": "content/projects/frameworks/crewai.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "dagster",
+      "type": "tool",
+      "path": "content/tools/orchestration/dagster.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "dario-amodei",
+      "type": "person",
+      "path": "content/community/people/dario-amodei.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "data-labeling",
+      "type": "guide",
+      "path": "content/tools/by-job/data-labeling.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "deepeval",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/deepeval.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "deepseek-ai-2025-r1",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/deepseek-ai-2025-r1.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "deepseek-v3-r1",
+      "type": "project",
+      "path": "content/projects/foundation-models/deepseek-v3-r1.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "deployment",
+      "type": "guide",
+      "path": "content/tools/by-job/deployment.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "dettmers-2023-qlora",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/dettmers-2023-qlora.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "devlin-2018-bert",
+      "type": "paper",
+      "path": "content/research/foundational/devlin-2018-bert.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "dify",
+      "type": "project",
+      "path": "content/projects/frameworks/dify.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "docling",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/docling.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "dropstone-3",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/dropstone-3.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "dspy",
+      "type": "project",
+      "path": "content/projects/frameworks/dspy.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "dubey-2024-llama3",
+      "type": "paper",
+      "path": "content/research/foundational/dubey-2024-llama3.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "dvc",
+      "type": "tool",
+      "path": "content/tools/model-layer/dvc.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "edge-2024-graphrag",
+      "type": "paper",
+      "path": "content/research/retrieval-and-memory/edge-2024-graphrag.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "embeddings",
+      "type": "guide",
+      "path": "content/skills/core-concepts/embeddings.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "emerging-techniques",
+      "type": "guide",
+      "path": "content/research/emerging-techniques.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "empromptu-ai",
+      "type": "tool",
+      "path": "content/tools/orchestration/empromptu-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "es-2023-ragas",
+      "type": "paper",
+      "path": "content/research/evaluation-and-safety/es-2023-ragas.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "eugene-yan",
+      "type": "person",
+      "path": "content/community/people/eugene-yan.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "evaluation",
+      "type": "guide",
+      "path": "content/tools/by-job/evaluation.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "falcon-3",
+      "type": "project",
+      "path": "content/projects/foundation-models/falcon-3.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "fastapi",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/fastapi.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "fine-tuning",
+      "type": "guide",
+      "path": "content/tools/by-job/fine-tuning.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "firecrawl",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/firecrawl.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "firecrawl-tool",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/firecrawl-tool.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "fireworks-ai",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/fireworks-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "fly-io",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/fly-io.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "francois-chollet",
+      "type": "person",
+      "path": "content/community/people/francois-chollet.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "frantar-2022-gptq",
+      "type": "paper",
+      "path": "content/research/inference-and-efficiency/frantar-2022-gptq.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "fundamentals",
+      "type": "guide",
+      "path": "content/skills/prompt-engineering/fundamentals.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "gao-2022-hyde",
+      "type": "paper",
+      "path": "content/research/retrieval-and-memory/gao-2022-hyde.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "gemma",
+      "type": "project",
+      "path": "content/projects/foundation-models/gemma.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "gemma-3",
+      "type": "project",
+      "path": "content/projects/foundation-models/gemma-3.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "giskard",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/giskard.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "google-adk",
+      "type": "project",
+      "path": "content/projects/frameworks/google-adk.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "google-pomelli-2-0",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "google-vertex-ai",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/google-vertex-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "gradio",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/gradio.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "guardrails-ai",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/guardrails-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "guidance",
+      "type": "tool",
+      "path": "content/tools/model-layer/guidance.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "hamel-husain",
+      "type": "person",
+      "path": "content/community/people/hamel-husain.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "harrison-chase",
+      "type": "person",
+      "path": "content/community/people/harrison-chase.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "haystack",
+      "type": "project",
+      "path": "content/projects/frameworks/haystack.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "helicone",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/helicone.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "hf-inference-endpoints",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/hf-inference-endpoints.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "honen",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/honen.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "hu-2021-lora",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/hu-2021-lora.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "hugging-face-hub",
+      "type": "tool",
+      "path": "content/tools/model-layer/hugging-face-hub.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "humanloop",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/humanloop.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "ideogram",
+      "type": "tool",
+      "path": "content/tools/model-layer/ideogram.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "ideogram-ai",
+      "type": "tool",
+      "path": "content/tools/model-layer/ideogram-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "insforge",
+      "type": "project",
+      "path": "content/projects/agent-systems/insforge.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "instructor",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/instructor.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "jason-liu",
+      "type": "person",
+      "path": "content/community/people/jason-liu.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "jay-alammar",
+      "type": "person",
+      "path": "content/community/people/jay-alammar.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "jeremy-howard",
+      "type": "person",
+      "path": "content/community/people/jeremy-howard.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "jerry-liu",
+      "type": "person",
+      "path": "content/community/people/jerry-liu.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "jina-reader",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/jina-reader.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "kimi-k2-5",
+      "type": "tool",
+      "path": "content/tools/model-layer/kimi-k2-5.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "label-studio",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/label-studio.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "lancedb",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/lancedb.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "langchain",
+      "type": "project",
+      "path": "content/projects/frameworks/langchain.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "langfuse",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/langfuse.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "langfuse-prompts",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/langfuse-prompts.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "langgraph",
+      "type": "project",
+      "path": "content/projects/frameworks/langgraph.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "langsmith",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/langsmith.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "langsmith-hub",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/langsmith-hub.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "langsmith-platform",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/langsmith-platform.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "letta",
+      "type": "tool",
+      "path": "content/tools/orchestration/letta.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "leviathan-2022-speculative-decoding",
+      "type": "paper",
+      "path": "content/research/inference-and-efficiency/leviathan-2022-speculative-decoding.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "lewis-2020-rag",
+      "type": "paper",
+      "path": "content/research/foundational/lewis-2020-rag.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "lilian-weng",
+      "type": "person",
+      "path": "content/community/people/lilian-weng.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "litellm",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/litellm.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "llama-3",
+      "type": "project",
+      "path": "content/projects/foundation-models/llama-3.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "llama-cpp",
+      "type": "project",
+      "path": "content/projects/inference-engines/llama-cpp.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "llamafactory",
+      "type": "tool",
+      "path": "content/tools/model-layer/llamafactory.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "llamafile",
+      "type": "project",
+      "path": "content/projects/inference-engines/llamafile.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "llamaguard",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/llamaguard.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "llamaindex",
+      "type": "project",
+      "path": "content/projects/frameworks/llamaindex.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "llamaparse",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/llamaparse.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "llm-researcher",
+      "type": "guide",
+      "path": "content/skills/learning-paths/llm-researcher.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "lmdeploy",
+      "type": "project",
+      "path": "content/projects/inference-engines/lmdeploy.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "logankilpatrick",
+      "type": "person",
+      "path": "content/community/people/logankilpatrick.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "lunary",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/lunary.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "madaan-2023-self-refine",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/madaan-2023-self-refine.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "manus",
+      "type": "tool",
+      "path": "content/tools/orchestration/manus.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "mastra",
+      "type": "project",
+      "path": "content/projects/frameworks/mastra.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "melanie-mitchell",
+      "type": "person",
+      "path": "content/community/people/melanie-mitchell.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "mem0",
+      "type": "tool",
+      "path": "content/tools/orchestration/mem0.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "memoriq",
+      "type": "tool",
+      "path": "content/tools/orchestration/memoriq.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "memory-management",
+      "type": "guide",
+      "path": "content/tools/by-job/memory-management.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "mesop",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/mesop.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "metagpt",
+      "type": "project",
+      "path": "content/projects/frameworks/metagpt.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "microsoft-agent-framework",
+      "type": "project",
+      "path": "content/projects/frameworks/microsoft-agent-framework.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "milvus",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/milvus.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "mistral-models",
+      "type": "project",
+      "path": "content/projects/foundation-models/mistral-models.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "ml-engineer",
+      "type": "guide",
+      "path": "content/skills/learning-paths/ml-engineer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "mlflow",
+      "type": "tool",
+      "path": "content/tools/model-layer/mlflow.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "mlx-lm",
+      "type": "tool",
+      "path": "content/tools/model-layer/mlx-lm.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "modal",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/modal.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "model-registry",
+      "type": "guide",
+      "path": "content/tools/by-job/model-registry.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "monako-glass",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/monako-glass.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "must-read-papers",
+      "type": "guide",
+      "path": "content/research/must-read-papers.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "nathan-lambert",
+      "type": "person",
+      "path": "content/community/people/nathan-lambert.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "nemo-guardrails",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/nemo-guardrails.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "noam-shazeer",
+      "type": "person",
+      "path": "content/community/people/noam-shazeer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "ollama",
+      "type": "project",
+      "path": "content/projects/inference-engines/ollama.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "openai-agents-sdk",
+      "type": "project",
+      "path": "content/projects/frameworks/openai-agents-sdk.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "openai-evals",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/openai-evals.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "openhands",
+      "type": "project",
+      "path": "content/projects/frameworks/openhands.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "openlit",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/openlit.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "openllmetry",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/openllmetry.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "opik",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/opik.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "orchestraml",
+      "type": "tool",
+      "path": "content/tools/orchestration/orchestraml.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "orchestration",
+      "type": "guide",
+      "path": "content/tools/by-job/orchestration.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "outlines",
+      "type": "tool",
+      "path": "content/tools/model-layer/outlines.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "ouyang-2022-instructgpt",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/ouyang-2022-instructgpt.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "peft",
+      "type": "tool",
+      "path": "content/tools/model-layer/peft.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "pgvector",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/pgvector.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "phi-4",
+      "type": "project",
+      "path": "content/projects/foundation-models/phi-4.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "phi-cookbook",
+      "type": "project",
+      "path": "content/projects/foundation-models/phi-cookbook.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "phoenix",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/phoenix.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "pinecone",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/pinecone.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "pinecone-vector-db",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/pinecone-vector-db.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "playwright",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/playwright.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "portkey",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/portkey.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "prefect",
+      "type": "tool",
+      "path": "content/tools/orchestration/prefect.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "prodigy",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/prodigy.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "production-serving",
+      "type": "guide",
+      "path": "content/tools/by-job/production-serving.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "prompt-management",
+      "type": "guide",
+      "path": "content/tools/by-job/prompt-management.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "prompt-patterns-catalog",
+      "type": "guide",
+      "path": "content/skills/prompt-engineering/prompt-patterns-catalog.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "promptfoo",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/promptfoo.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "promptlayer",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/promptlayer.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "prototyping",
+      "type": "guide",
+      "path": "content/tools/by-job/prototyping.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "puppeteer",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/puppeteer.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "pydantic-ai",
+      "type": "project",
+      "path": "content/projects/frameworks/pydantic-ai.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "pydantic-ai-tool",
+      "type": "tool",
+      "path": "content/tools/orchestration/pydantic-ai-tool.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "qdrant",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/qdrant.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "qursor",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/qursor.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "qwen",
+      "type": "project",
+      "path": "content/projects/foundation-models/qwen.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "qwen-2-5",
+      "type": "project",
+      "path": "content/projects/foundation-models/qwen-2-5.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "qwen-3",
+      "type": "tool",
+      "path": "content/tools/model-layer/qwen-3.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "rafailov-2023-dpo",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/rafailov-2023-dpo.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "ragas-rag-evaluation",
+      "type": "project",
+      "path": "content/projects/benchmarks-and-evals/ragas-rag-evaluation.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "ragflow",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/ragflow.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "railway",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/railway.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "rebuff",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/rebuff.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "recursi",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/recursi.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "redis-memory",
+      "type": "tool",
+      "path": "content/tools/orchestration/redis-memory.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "replicate",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/replicate.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "sarthi-2024-raptor",
+      "type": "paper",
+      "path": "content/research/retrieval-and-memory/sarthi-2024-raptor.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "scale-ai",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/scale-ai.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "schick-2023-toolformer",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/schick-2023-toolformer.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "seaticket",
+      "type": "tool",
+      "path": "content/tools/orchestration/seaticket.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "sebastian-bubeck",
+      "type": "person",
+      "path": "content/community/people/sebastian-bubeck.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "sebastian-raschka",
+      "type": "person",
+      "path": "content/community/people/sebastian-raschka.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "security-and-guardrails",
+      "type": "guide",
+      "path": "content/tools/by-job/security-and-guardrails.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "semantic-kernel",
+      "type": "project",
+      "path": "content/projects/frameworks/semantic-kernel.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "sglang",
+      "type": "project",
+      "path": "content/projects/inference-engines/sglang.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "shellmate",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/shellmate.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "shreya-shankar",
+      "type": "person",
+      "path": "content/community/people/shreya-shankar.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "simon-willison",
+      "type": "person",
+      "path": "content/community/people/simon-willison.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "smolagents",
+      "type": "project",
+      "path": "content/projects/frameworks/smolagents.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "sota-benchmarks",
+      "type": "guide",
+      "path": "content/research/sota-benchmarks.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "spotlight-by-backplanes",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "stagehand",
+      "type": "project",
+      "path": "content/projects/agent-systems/stagehand.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "streamlit",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/streamlit.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "structured-output",
+      "type": "guide",
+      "path": "content/tools/by-job/structured-output.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "superlog",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/superlog.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "surrealdb",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/surrealdb.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "tabstack",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/tabstack.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "taste-lab",
+      "type": "tool",
+      "path": "content/tools/data-ingestion/taste-lab.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "text-generation-inference",
+      "type": "project",
+      "path": "content/projects/inference-engines/text-generation-inference.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "thomas-wolf",
+      "type": "person",
+      "path": "content/community/people/thomas-wolf.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "torchtune",
+      "type": "tool",
+      "path": "content/tools/model-layer/torchtune.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "transformers",
+      "type": "guide",
+      "path": "content/skills/core-concepts/transformers.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "translategemma",
+      "type": "project",
+      "path": "content/projects/foundation-models/translategemma.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "trulens",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/trulens.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "txtai",
+      "type": "project",
+      "path": "content/projects/frameworks/txtai.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "uiverse-design",
+      "type": "project",
+      "path": "content/projects/frameworks/uiverse-design.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "unsloth",
+      "type": "tool",
+      "path": "content/tools/model-layer/unsloth.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "unstructured",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/unstructured.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "vaani",
+      "type": "tool",
+      "path": "content/tools/dx-and-tooling/vaani.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "vaswani-2017-attention",
+      "type": "paper",
+      "path": "content/research/foundational/vaswani-2017-attention.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "vector-search",
+      "type": "guide",
+      "path": "content/tools/by-job/vector-search.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "vercel",
+      "type": "tool",
+      "path": "content/tools/serving-and-deployment/vercel.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "vllm",
+      "type": "project",
+      "path": "content/projects/inference-engines/vllm.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "wandb-weave",
+      "type": "tool",
+      "path": "content/tools/evaluation-and-observability/wandb-weave.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "weaviate",
+      "type": "project",
+      "path": "content/projects/data-and-retrieval/weaviate.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "web-scraping",
+      "type": "guide",
+      "path": "content/tools/by-job/web-scraping.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 109
+    },
+    {
+      "id": "weekly-arxiv-picks",
+      "type": "guide",
+      "path": "content/research/weekly-arxiv-picks.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "wei-2022-chain-of-thought",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/wei-2022-chain-of-thought.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "weights-biases",
+      "type": "tool",
+      "path": "content/tools/model-layer/weights-biases.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "yang-2024-qwen25-math",
+      "type": "paper",
+      "path": "content/research/training-and-alignment/yang-2024-qwen25-math.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "yang-2024-swe-agent",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/yang-2024-swe-agent.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "yann-lecun",
+      "type": "person",
+      "path": "content/community/people/yann-lecun.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 108
+    },
+    {
+      "id": "yao-2022-react",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/yao-2022-react.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "yao-2023-tree-of-thoughts",
+      "type": "paper",
+      "path": "content/research/agents-and-reasoning/yao-2023-tree-of-thoughts.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "yi",
+      "type": "project",
+      "path": "content/projects/foundation-models/yi.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    },
+    {
+      "id": "zep",
+      "type": "tool",
+      "path": "content/tools/orchestration/zep.md",
+      "last_reviewed": "2026-06-30",
+      "age_days": 92
+    },
+    {
+      "id": "zheng-2023-llm-as-a-judge",
+      "type": "paper",
+      "path": "content/research/evaluation-and-safety/zheng-2023-llm-as-a-judge.md",
+      "last_reviewed": "2026-07-01",
+      "age_days": 91
+    }
+  ]
+}

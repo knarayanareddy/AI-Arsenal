@@ -1,0 +1,1051 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-30T09:51:47.881Z",
+  "count": 25,
+  "items": [
+    {
+      "id": "andrej-karpathy",
+      "name": "Andrej Karpathy",
+      "role": "AI educator and researcher",
+      "description": "Explains neural networks, transformers, and LLMs with unusually clear engineering intuition",
+      "url": "content/community/people/andrej-karpathy",
+      "tags": [
+        "llm",
+        "transformers",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@AndrejKarpathy"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/karpathy"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/andrej-karpathy.md",
+      "slug": "andrej-karpathy",
+      "section_path": "content/community/people",
+      "display_name": "Andrej Karpathy",
+      "summary": "Explains neural networks, transformers, and LLMs with unusually clear engineering intuition",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 143,
+      "body_html": "<h2>Overview</h2>\n<p>Builds and explains neural-network training from the tensor operations upward. The teaching and the code are the same artefact: nanoGPT and the from-scratch series let you follow a complete training loop rather than infer it from a framework's internals.</p>\n<h2>Why Follow</h2>\n<p>Useful when you want the mechanics of a transformer explained from the operations up rather than from the API surface, and when you want a training implementation small enough to read completely in an afternoon.</p>\n<h2>Notable Work</h2>\n<p>nanoGPT, a roughly 300-line GPT implementation that trains on Shakespeare and real checkpoints; the “Let's build GPT” and “Let's build the GPT Tokenizer” series; “A Recipe for Training Neural Networks”; the tokenizer and data-preparation tooling in minbpe and llm.c.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://karpathy.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.youtube.com/@AndrejKarpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n<li><a href=\"https://github.com/karpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/karpathy/nanoGPT\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">nanoGPT</a></li>\n<li><a href=\"https://github.com/karpathy/minbpe\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">minbpe — byte-level BPE tokenizer</a></li>\n<li><a href=\"https://github.com/karpathy/llm.c\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">llm.c — GPT-2 in C and CUDA</a></li>\n</ul>\n",
+      "body_text": "Overview Builds and explains neural network training from the tensor operations upward. The teaching and the code are the same artefact: nanoGPT and the from scratch series let you follow a complete training loop rather than infer it from a framework's internals. Why Follow Useful when you want the mechanics of a transformer explained from the operations up rather than from the API surface, and when you want a training implementation small enough to read completely in an afternoon. Notable Work nanoGPT, a roughly 300 line GPT implementation that trains on Shakespeare and real checkpoints; the “Let's build GPT” and “Let's build the GPT Tokenizer” series; “A Recipe for Training Neural Networks”; the tokenizer and data preparation tooling in minbpe and llm.c. Channels Primary profile youtube github Resources nanoGPT minbpe — byte level BPE tokenizer llm.c — GPT 2 in C and CUDA"
+    },
+    {
+      "id": "andrew-ng",
+      "name": "Andrew Ng",
+      "role": "AI educator and founder",
+      "description": "Popularizes practical AI education and structured learning paths",
+      "url": "content/community/people/andrew-ng",
+      "tags": [
+        "llm",
+        "foundational",
+        "training"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.deeplearning.ai/"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@Deeplearningai"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/andrew-ng.md",
+      "slug": "andrew-ng",
+      "section_path": "content/community/people",
+      "display_name": "Andrew Ng",
+      "summary": "Popularizes practical AI education and structured learning paths",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 123,
+      "body_html": "<h2>Overview</h2>\n<p>Teaches machine learning as an engineering discipline, organised into courses rather than papers. His influence is largely curricular: the DeepLearning.AI catalogue is the default onboarding path for ML across a lot of companies.</p>\n<h2>Why Follow</h2>\n<p>Useful for the framing that matters when you are teaching ML to an engineering organisation rather than to researchers, and for the clearest public treatment of structuring an ML project around measured error instead of intuition.</p>\n<h2>Notable Work</h2>\n<p>DeepLearning.AI and the Coursera machine-learning specialisation; Machine Learning Strategy, on error analysis and the ML project checklist; the AI Agentic Design announcement; “Generative AI for Everyone” as the executive-level entry point.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://www.youtube.com/@Deeplearningai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.deeplearning.ai/courses/machine-learning-strategy/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Machine Learning Strategy</a></li>\n<li><a href=\"https://www.deeplearning.ai/short-courses/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">DeepLearning.AI short courses</a></li>\n<li><a href=\"https://www.deeplearning.ai/short-courses/generative-ai-for-everyone/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Generative AI for Everyone</a></li>\n</ul>\n",
+      "body_text": "Overview Teaches machine learning as an engineering discipline, organised into courses rather than papers. His influence is largely curricular: the DeepLearning.AI catalogue is the default onboarding path for ML across a lot of companies. Why Follow Useful for the framing that matters when you are teaching ML to an engineering organisation rather than to researchers, and for the clearest public treatment of structuring an ML project around measured error instead of intuition. Notable Work DeepLearning.AI and the Coursera machine learning specialisation; Machine Learning Strategy, on error analysis and the ML project checklist; the AI Agentic Design announcement; “Generative AI for Everyone” as the executive level entry point. Channels Primary profile website youtube Resources Machine Learning Strategy DeepLearning.AI short courses Generative AI for Everyone"
+    },
+    {
+      "id": "arvind-narayanan",
+      "name": "Arvind Narayanan",
+      "role": "AI accountability researcher",
+      "description": "Writes critically about AI evaluation, policy, risks, and societal impact",
+      "url": "content/community/people/arvind-narayanan",
+      "tags": [
+        "evaluation",
+        "security",
+        "alignment"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.cs.princeton.edu/~arvindn/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/arvind-narayanan.md",
+      "slug": "arvind-narayanan",
+      "section_path": "content/community/people",
+      "display_name": "Arvind Narayanan",
+      "summary": "Writes critically about AI evaluation, policy, risks, and societal impact",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 127,
+      "body_html": "<h2>Overview</h2>\n<p>Writes about AI as an economics and measurement problem rather than a technique problem. The recurring argument is that capability claims, benchmark numbers and deployment reality are three different things, and that the gap between them is where most bad AI decisions are made.</p>\n<h2>Why Follow</h2>\n<p>Useful as a corrective when you are making decisions off benchmark and vendor numbers, and for the clearest public writing on why an eval is a diagnostic instrument rather than a scorecard.</p>\n<h2>Notable Work</h2>\n<p>“Evals are a tool, not a scorecard” and related essays on AI measurement; the cost, capital and infrastructure side of the LLM discourse; work on the practical economics of running models at scale.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Applied ML — essays and papers</a></li>\n<li><a href=\"https://www.interconnected.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Interconnected AI</a></li>\n</ul>\n",
+      "body_text": "Overview Writes about AI as an economics and measurement problem rather than a technique problem. The recurring argument is that capability claims, benchmark numbers and deployment reality are three different things, and that the gap between them is where most bad AI decisions are made. Why Follow Useful as a corrective when you are making decisions off benchmark and vendor numbers, and for the clearest public writing on why an eval is a diagnostic instrument rather than a scorecard. Notable Work “Evals are a tool, not a scorecard” and related essays on AI measurement; the cost, capital and infrastructure side of the LLM discourse; work on the practical economics of running models at scale. Channels Primary profile website Resources Applied ML — essays and papers Interconnected AI"
+    },
+    {
+      "id": "chip-huyen",
+      "name": "Chip Huyen",
+      "role": "ML systems author and engineer",
+      "description": "Writes about ML systems, data, evaluation, and production AI engineering",
+      "url": "content/community/people/chip-huyen",
+      "tags": [
+        "evaluation",
+        "data",
+        "monitoring"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://huyenchip.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/chip-huyen.md",
+      "slug": "chip-huyen",
+      "section_path": "content/community/people",
+      "display_name": "Chip Huyen",
+      "summary": "Writes about ML systems, data, evaluation, and production AI engineering",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 101,
+      "body_html": "<h2>Overview</h2>\n<p>Writes and speaks about the operational layer between a trained model and a shipped product: serving, inference cost, latency, and the engineering decisions that determine whether a model is viable in production.</p>\n<h2>Why Follow</h2>\n<p>Useful for applied ML systems decisions — what to serve, how to structure batch versus online inference, when a model is good enough to ship, and how inference cost changes the architecture you should pick.</p>\n<h2>Notable Work</h2>\n<p>“Designing Machine Learning Systems” (O’Reilly); “AI Engineering”; long-form essays on inference cost, latency, and evaluation-driven development.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.oreilly.com/library/view/ai-engineering/9781098166302/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Engineering</a></li>\n<li><a href=\"https://www.oreilly.com/library/view/designing-machine-learning/9781098107954/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Designing Machine Learning Systems</a></li>\n</ul>\n",
+      "body_text": "Overview Writes and speaks about the operational layer between a trained model and a shipped product: serving, inference cost, latency, and the engineering decisions that determine whether a model is viable in production. Why Follow Useful for applied ML systems decisions — what to serve, how to structure batch versus online inference, when a model is good enough to ship, and how inference cost changes the architecture you should pick. Notable Work “Designing Machine Learning Systems” (O’Reilly); “AI Engineering”; long form essays on inference cost, latency, and evaluation driven development. Channels Primary profile website Resources AI Engineering Designing Machine Learning Systems"
+    },
+    {
+      "id": "clem-delangue",
+      "name": "Clément Delangue",
+      "role": "Hugging Face cofounder",
+      "description": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
+      "url": "content/community/people/clem-delangue",
+      "tags": [
+        "huggingface",
+        "llm",
+        "data"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://huggingface.co/clem"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/clem-delangue.md",
+      "slug": "clem-delangue",
+      "section_path": "content/community/people",
+      "display_name": "Clément Delangue",
+      "summary": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 101,
+      "body_html": "<h2>Overview</h2>\n<p>Founded and runs Hugging Face, and argues publicly that training data is a public good whose licensing and accessibility decide who can build competitive models.</p>\n<h2>Why Follow</h2>\n<p>Useful for the open-data position specifically: if your work touches dataset provenance, licensing, or data access rather than model architecture, his is the clearest public argument for why that layer is a strategic decision.</p>\n<h2>Notable Work</h2>\n<p>Hugging Face as a company and platform; the Datasets and Transformers libraries; advocacy on open data and on AI's effect on research access.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/datasets\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Datasets library</a></li>\n<li><a href=\"https://github.com/huggingface/transformers\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Transformers library</a></li>\n<li><a href=\"https://huggingface.co/about\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hugging Face — about</a></li>\n</ul>\n",
+      "body_text": "Overview Founded and runs Hugging Face, and argues publicly that training data is a public good whose licensing and accessibility decide who can build competitive models. Why Follow Useful for the open data position specifically: if your work touches dataset provenance, licensing, or data access rather than model architecture, his is the clearest public argument for why that layer is a strategic decision. Notable Work Hugging Face as a company and platform; the Datasets and Transformers libraries; advocacy on open data and on AI's effect on research access. Channels Primary profile website Resources Datasets library Transformers library Hugging Face — about"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "role": "Anthropic cofounder",
+      "description": "Leads a major AI lab focused on frontier models and AI safety",
+      "url": "content/community/people/dario-amodei",
+      "tags": [
+        "alignment",
+        "security",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.anthropic.com/company"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/dario-amodei.md",
+      "slug": "dario-amodei",
+      "section_path": "content/community/people",
+      "display_name": "Dario Amodei",
+      "summary": "Leads a major AI lab focused on frontier models and AI safety",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 107,
+      "body_html": "<h2>Overview</h2>\n<p>Co-founded Anthropic and writes about capability, safety and compute, including the internal trade-offs a frontier lab actually weighs. The essays are unusually explicit about decisions usually left in internal documents.</p>\n<h2>Why Follow</h2>\n<p>Useful for the frontier-lab perspective: how a lab decides what to build and what to publish, and how interpretability and alignment work are weighed against capability work when the two compete for the same compute.</p>\n<h2>Notable Work</h2>\n<p>Anthropic's constitutional-AI research direction; the Responsible Scaling Policy and its successive versions; essays on Claude's development and on AI's near-term economic effects.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.anthropic.com/research\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Anthropic research</a></li>\n<li><a href=\"https://www.anthropic.com/responsible-scaling-policy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Responsible Scaling Policy</a></li>\n</ul>\n",
+      "body_text": "Overview Co founded Anthropic and writes about capability, safety and compute, including the internal trade offs a frontier lab actually weighs. The essays are unusually explicit about decisions usually left in internal documents. Why Follow Useful for the frontier lab perspective: how a lab decides what to build and what to publish, and how interpretability and alignment work are weighed against capability work when the two compete for the same compute. Notable Work Anthropic's constitutional AI research direction; the Responsible Scaling Policy and its successive versions; essays on Claude's development and on AI's near term economic effects. Channels Primary profile website Resources Anthropic research Responsible Scaling Policy"
+    },
+    {
+      "id": "eugene-yan",
+      "name": "Eugene Yan",
+      "role": "Applied ML engineer and writer",
+      "description": "Writes practical essays on retrieval, recommendation, evaluation, and ML systems",
+      "url": "content/community/people/eugene-yan",
+      "tags": [
+        "rag",
+        "evaluation",
+        "data"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://eugeneyan.com"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/eugeneyan"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/eugene-yan.md",
+      "slug": "eugene-yan",
+      "section_path": "content/community/people",
+      "display_name": "Eugene Yan",
+      "summary": "Writes practical essays on retrieval, recommendation, evaluation, and ML systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 118,
+      "body_html": "<h2>Overview</h2>\n<p>Publishes the Applied ML letter series, a pattern library for how LLM systems are actually built in production: architecture, retrieval, tool use, agents, evaluation, and the failure modes of each.</p>\n<h2>Why Follow</h2>\n<p>Useful as the fastest way to build a working mental model of production LLM system design, and for the pattern catalogue to check your own architecture against before you reinvent a bad version of something already written down.</p>\n<h2>Notable Work</h2>\n<p>The Applied ML series covering LLM architecture, embeddings and retrieval, tool use, agents, and evaluation; “Patterns of Building AI Products”; the recurring essay series on designing and operating AI systems.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/eugeneyan\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://eugeneyan.com/writing/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Applied ML — essays</a></li>\n<li><a href=\"https://eugeneyan.com/writing/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Patterns of Building AI Products</a></li>\n</ul>\n",
+      "body_text": "Overview Publishes the Applied ML letter series, a pattern library for how LLM systems are actually built in production: architecture, retrieval, tool use, agents, evaluation, and the failure modes of each. Why Follow Useful as the fastest way to build a working mental model of production LLM system design, and for the pattern catalogue to check your own architecture against before you reinvent a bad version of something already written down. Notable Work The Applied ML series covering LLM architecture, embeddings and retrieval, tool use, agents, and evaluation; “Patterns of Building AI Products”; the recurring essay series on designing and operating AI systems. Channels Primary profile website github Resources Applied ML — essays Patterns of Building AI Products"
+    },
+    {
+      "id": "francois-chollet",
+      "name": "François Chollet",
+      "role": "AI researcher and Keras creator",
+      "description": "Writes about abstraction, intelligence, benchmarks, and deep learning practice",
+      "url": "content/community/people/francois-chollet",
+      "tags": [
+        "llm",
+        "evaluation",
+        "reasoning"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/fchollet"
+        },
+        {
+          "type": "website",
+          "url": "https://fchollet.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/francois-chollet.md",
+      "slug": "francois-chollet",
+      "section_path": "content/community/people",
+      "display_name": "François Chollet",
+      "summary": "Writes about abstraction, intelligence, benchmarks, and deep learning practice",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 107,
+      "body_html": "<h2>Overview</h2>\n<p>Argues that intelligence is not a model-training outcome, and that benchmark progress has been conflated with capability. Built ARC-AGI to reward generalisation over memorisation, and designed Keras.</p>\n<h2>Why Follow</h2>\n<p>Useful for the strongest published dissent on the current approach, and for the reference point to bring when someone cites benchmark improvement as evidence of a capability jump.</p>\n<h2>Notable Work</h2>\n<p>“On the Measure of Intelligence” (the ARC paper); the ARC-AGI benchmark and its deliberately non-learnable task design; Keras's design and authorship; essays distinguishing skill-acquisition from general intelligence.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/fchollet\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://arxiv.org/abs/1911.01547\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">On the Measure of Intelligence</a></li>\n<li><a href=\"https://arcprize.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">ARC-AGI benchmark</a></li>\n<li><a href=\"https://keras.io/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Keras</a></li>\n</ul>\n",
+      "body_text": "Overview Argues that intelligence is not a model training outcome, and that benchmark progress has been conflated with capability. Built ARC AGI to reward generalisation over memorisation, and designed Keras. Why Follow Useful for the strongest published dissent on the current approach, and for the reference point to bring when someone cites benchmark improvement as evidence of a capability jump. Notable Work “On the Measure of Intelligence” (the ARC paper); the ARC AGI benchmark and its deliberately non learnable task design; Keras's design and authorship; essays distinguishing skill acquisition from general intelligence. Channels Primary profile github website Resources On the Measure of Intelligence ARC AGI benchmark Keras"
+    },
+    {
+      "id": "hamel-husain",
+      "name": "Hamel Husain",
+      "role": "LLM evaluation practitioner",
+      "description": "Focuses on practical LLM evaluation, error analysis, and product-quality workflows",
+      "url": "content/community/people/hamel-husain",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://hamel.dev"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/hamelsmu"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/hamel-husain.md",
+      "slug": "hamel-husain",
+      "section_path": "content/community/people",
+      "display_name": "Hamel Husain",
+      "summary": "Focuses on practical LLM evaluation, error analysis, and product-quality workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 103,
+      "body_html": "<h2>Overview</h2>\n<p>Works on the tooling and process layer of applied AI: dataset curation, evaluation harnesses, and prompt engineering as an engineering discipline rather than an art.</p>\n<h2>Why Follow</h2>\n<p>Useful for the argument that most teams' bottleneck is data and error analysis rather than modelling, and for the most pragmatic public treatment of prompt engineering for applications.</p>\n<h2>Notable Work</h2>\n<p>Free and Open Source AI (FAAIF); the LLM Engineering and prompt-engineering course material; writing on breaking down and labelling your data, and on building evaluation into the development loop.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/hamelsmu\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://fly.io/blog/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Free and Open Source AI</a></li>\n<li><a href=\"https://learn.deeplearning.ai/courses/prompt-engineering-for-chatgpt/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Prompt Engineering for Applications</a></li>\n</ul>\n",
+      "body_text": "Overview Works on the tooling and process layer of applied AI: dataset curation, evaluation harnesses, and prompt engineering as an engineering discipline rather than an art. Why Follow Useful for the argument that most teams' bottleneck is data and error analysis rather than modelling, and for the most pragmatic public treatment of prompt engineering for applications. Notable Work Free and Open Source AI (FAAIF); the LLM Engineering and prompt engineering course material; writing on breaking down and labelling your data, and on building evaluation into the development loop. Channels Primary profile website github Resources Free and Open Source AI Prompt Engineering for Applications"
+    },
+    {
+      "id": "harrison-chase",
+      "name": "Harrison Chase",
+      "role": "LangChain cofounder",
+      "description": "Builder behind LangChain and LangGraph ecosystem for LLM apps and agents",
+      "url": "content/community/people/harrison-chase",
+      "tags": [
+        "agents",
+        "rag",
+        "langchain"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/hwchase17"
+        },
+        {
+          "type": "website",
+          "url": "https://www.langchain.com/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/harrison-chase.md",
+      "slug": "harrison-chase",
+      "section_path": "content/community/people",
+      "display_name": "Harrison Chase",
+      "summary": "Builder behind LangChain and LangGraph ecosystem for LLM apps and agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 105,
+      "body_html": "<h2>Overview</h2>\n<p>Founded LangChain and writes about the retrieval and context decisions that determine whether an agent's answers are any good, rather than about the agent loop itself.</p>\n<h2>Why Follow</h2>\n<p>Useful for chunking, context engineering, and agent design specifically, and for eval-driven development operationalised: LangSmith is where a vague claim about answer quality becomes a measurement you can gate a release on.</p>\n<h2>Notable Work</h2>\n<p>LangChain and LangGraph; “Context Engineering for Agents” and the related essays on context and retrieval quality; LangSmith as the evaluation and observability layer; the LangChain State of AI report.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.langchain.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://blog.langchain.com/context-engineering-for-agents/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Context Engineering for Agents</a></li>\n<li><a href=\"https://github.com/langchain-ai/langgraph\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangGraph</a></li>\n<li><a href=\"https://www.langchain.com/langsmith\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangSmith</a></li>\n</ul>\n",
+      "body_text": "Overview Founded LangChain and writes about the retrieval and context decisions that determine whether an agent's answers are any good, rather than about the agent loop itself. Why Follow Useful for chunking, context engineering, and agent design specifically, and for eval driven development operationalised: LangSmith is where a vague claim about answer quality becomes a measurement you can gate a release on. Notable Work LangChain and LangGraph; “Context Engineering for Agents” and the related essays on context and retrieval quality; LangSmith as the evaluation and observability layer; the LangChain State of AI report. Channels Primary profile github website Resources Context Engineering for Agents LangGraph LangSmith"
+    },
+    {
+      "id": "jason-liu",
+      "name": "Jason Liu",
+      "role": "Structured output and eval practitioner",
+      "description": "Works on structured extraction, Instructor, evals, and practical LLM app patterns",
+      "url": "content/community/people/jason-liu",
+      "tags": [
+        "structured-output",
+        "evaluation",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://jxnl.co"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/jxnl"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jason-liu.md",
+      "slug": "jason-liu",
+      "section_path": "content/community/people",
+      "display_name": "Jason Liu",
+      "summary": "Works on structured extraction, Instructor, evals, and practical LLM app patterns",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 79,
+      "body_html": "<h2>Overview</h2>\n<p>Works on applied computer vision and multimodal inference, particularly on deploying and optimising vision models rather than training them.</p>\n<h2>Why Follow</h2>\n<p>Useful for reproducible inference-optimisation work on vision models, and for the engineering view of where a vision pipeline's cost actually sits at serving time.</p>\n<h2>Notable Work</h2>\n<p>OpenVINO's multimodal and vision tooling; essays on deploying and optimising vision models; the open-vision-toolbox repository of practical recipes.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/jxnl\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://docs.openvino.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">OpenVINO documentation</a></li>\n<li><a href=\"https://github.com/openvinotoolkit/openvino_notebooks\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">OpenVINO notebooks</a></li>\n</ul>\n",
+      "body_text": "Overview Works on applied computer vision and multimodal inference, particularly on deploying and optimising vision models rather than training them. Why Follow Useful for reproducible inference optimisation work on vision models, and for the engineering view of where a vision pipeline's cost actually sits at serving time. Notable Work OpenVINO's multimodal and vision tooling; essays on deploying and optimising vision models; the open vision toolbox repository of practical recipes. Channels Primary profile website github Resources OpenVINO documentation OpenVINO notebooks"
+    },
+    {
+      "id": "jay-alammar",
+      "name": "Jay Alammar",
+      "role": "Visual AI educator",
+      "description": "Creates visual explanations of transformers, embeddings, and language models",
+      "url": "content/community/people/jay-alammar",
+      "tags": [
+        "transformers",
+        "embeddings",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://jalammar.github.io"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jay-alammar.md",
+      "slug": "jay-alammar",
+      "section_path": "content/community/people",
+      "display_name": "Jay Alammar",
+      "summary": "Creates visual explanations of transformers, embeddings, and language models",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 97,
+      "body_html": "<h2>Overview</h2>\n<p>Produces the illustrated explanations of transformer internals that most people in the field first learned from: attention, GPT variants, and modern architecture comparisons.</p>\n<h2>Why Follow</h2>\n<p>Useful when you need to understand precisely how attention variants differ rather than approximately, and want code alongside the diagram small enough to verify against.</p>\n<h2>Notable Work</h2>\n<p>“The Illustrated Transformer” and its successors on attention variants, self-attention, and GPT; the illustrated guides to LLM architectures, fine-tuning, and AI agents; the illustrated-transformer repository.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://jalammar.github.io/illustrated-transformer/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">The Illustrated Transformer</a></li>\n<li><a href=\"https://jalammar.github.io/illustrated-gpt2/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">The Illustrated GPT-2</a></li>\n<li><a href=\"https://jalammar.github.io/illustrated-stable-diffusion/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">The Illustrated Stable Diffusion</a></li>\n</ul>\n",
+      "body_text": "Overview Produces the illustrated explanations of transformer internals that most people in the field first learned from: attention, GPT variants, and modern architecture comparisons. Why Follow Useful when you need to understand precisely how attention variants differ rather than approximately, and want code alongside the diagram small enough to verify against. Notable Work “The Illustrated Transformer” and its successors on attention variants, self attention, and GPT; the illustrated guides to LLM architectures, fine tuning, and AI agents; the illustrated transformer repository. Channels Primary profile website Resources The Illustrated Transformer The Illustrated GPT 2 The Illustrated Stable Diffusion"
+    },
+    {
+      "id": "jeremy-howard",
+      "name": "Jeremy Howard",
+      "role": "AI educator and fast.ai cofounder",
+      "description": "Teaches practical deep learning and makes AI education accessible to builders",
+      "url": "content/community/people/jeremy-howard",
+      "tags": [
+        "pytorch",
+        "training",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.fast.ai/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jeremy-howard.md",
+      "slug": "jeremy-howard",
+      "section_path": "content/community/people",
+      "display_name": "Jeremy Howard",
+      "summary": "Teaches practical deep learning and makes AI education accessible to builders",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 107,
+      "body_html": "<h2>Overview</h2>\n<p>Co-founded fastai, which takes a teaching-first approach to applied deep learning: notebooks that run, with the model internals legible rather than hidden behind a training loop.</p>\n<h2>Why Follow</h2>\n<p>Useful if you want to go from a working notebook to a deployed model without the framework ceremony, and for his unusually candid writing about where the practical difficulties actually are.</p>\n<h2>Notable Work</h2>\n<p>fastai and the Practical Deep Learning for Coders course; the fastai library and its recipes; “Deep Learning for Coders”; the earlier “Data Science in Python” and Applied Practical Deep Learning material.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/fastai/fastai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">fastai library</a></li>\n<li><a href=\"https://course.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Practical Deep Learning for Coders</a></li>\n</ul>\n",
+      "body_text": "Overview Co founded fastai, which takes a teaching first approach to applied deep learning: notebooks that run, with the model internals legible rather than hidden behind a training loop. Why Follow Useful if you want to go from a working notebook to a deployed model without the framework ceremony, and for his unusually candid writing about where the practical difficulties actually are. Notable Work fastai and the Practical Deep Learning for Coders course; the fastai library and its recipes; “Deep Learning for Coders”; the earlier “Data Science in Python” and Applied Practical Deep Learning material. Channels Primary profile website Resources fastai library Practical Deep Learning for Coders"
+    },
+    {
+      "id": "jerry-liu",
+      "name": "Jerry Liu",
+      "role": "LlamaIndex cofounder",
+      "description": "Builder focused on data frameworks, RAG, document agents, and retrieval workflows",
+      "url": "content/community/people/jerry-liu",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llamaindex"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://www.llamaindex.ai"
+        },
+        {
+          "type": "website",
+          "url": "https://www.llamaindex.ai/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jerry-liu.md",
+      "slug": "jerry-liu",
+      "section_path": "content/community/people",
+      "display_name": "Jerry Liu",
+      "summary": "Builder focused on data frameworks, RAG, document agents, and retrieval workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 99,
+      "body_html": "<h2>Overview</h2>\n<p>Writes about the vector-search infrastructure layer: how index design, recall, filtering and latency actually trade off, and what a specialised vector engine costs you to run.</p>\n<h2>Why Follow</h2>\n<p>Useful for the retrieval-infrastructure counterpart to the RAG framework writing, and for benchmarking evidence on when a dedicated vector store is worth its operational cost over brute-force search.</p>\n<h2>Notable Work</h2>\n<p>Writing and benchmarks on vector database performance and recall; Qdrant's engineering and index-design material; essays on hybrid search, filtering, and the cost of retrieval at scale.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.llamaindex.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://qdrant.tech/documentation/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant documentation</a></li>\n<li><a href=\"https://github.com/qdrant/qdrant\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant GitHub</a></li>\n</ul>\n",
+      "body_text": "Overview Writes about the vector search infrastructure layer: how index design, recall, filtering and latency actually trade off, and what a specialised vector engine costs you to run. Why Follow Useful for the retrieval infrastructure counterpart to the RAG framework writing, and for benchmarking evidence on when a dedicated vector store is worth its operational cost over brute force search. Notable Work Writing and benchmarks on vector database performance and recall; Qdrant's engineering and index design material; essays on hybrid search, filtering, and the cost of retrieval at scale. Channels Primary profile github website Resources Qdrant documentation Qdrant GitHub"
+    },
+    {
+      "id": "lilian-weng",
+      "name": "Lilian Weng",
+      "role": "AI researcher and technical writer",
+      "description": "Publishes deeply researched explainers on agents, alignment, diffusion, and LLM techniques",
+      "url": "content/community/people/lilian-weng",
+      "tags": [
+        "agents",
+        "alignment",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://lilianweng.github.io"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/lilian-weng.md",
+      "slug": "lilian-weng",
+      "section_path": "content/community/people",
+      "display_name": "Lilian Weng",
+      "summary": "Publishes deeply researched explainers on agents, alignment, diffusion, and LLM techniques",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 102,
+      "body_html": "<h2>Overview</h2>\n<p>Writes long, citation-dense surveys of one subfield at a time, on a schedule, covering agents, self-critique, hallucination, reward modelling, and LLM internals.</p>\n<h2>Why Follow</h2>\n<p>Useful as the best single-document entry point into a subfield you are entering: each essay is a careful walk through the literature with the open problems left explicitly open rather than smoothed over.</p>\n<h2>Notable Work</h2>\n<p>“Large Language Model's Friendly Intro”; “Self-Critique”; “Hallucination”; “Agent”; “Why Do Large Language Models Hallucinate”; and the recurring series on LLMs' internal mechanisms and tool use.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://lilianweng.github.io/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Large Language Model's Friendly Intro</a></li>\n<li><a href=\"https://lilianweng.github.io/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Self-Critique</a></li>\n<li><a href=\"https://lilianweng.github.io/posts/2024-07-07-hallucination/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hallucination</a></li>\n</ul>\n",
+      "body_text": "Overview Writes long, citation dense surveys of one subfield at a time, on a schedule, covering agents, self critique, hallucination, reward modelling, and LLM internals. Why Follow Useful as the best single document entry point into a subfield you are entering: each essay is a careful walk through the literature with the open problems left explicitly open rather than smoothed over. Notable Work “Large Language Model's Friendly Intro”; “Self Critique”; “Hallucination”; “Agent”; “Why Do Large Language Models Hallucinate”; and the recurring series on LLMs' internal mechanisms and tool use. Channels Primary profile website Resources Large Language Model's Friendly Intro Self Critique Hallucination"
+    },
+    {
+      "id": "logankilpatrick",
+      "name": "Logan Kilpatrick",
+      "role": "Developer relations and AI builder",
+      "description": "Shares practical AI developer ecosystem updates and product-building context",
+      "url": "content/community/people/logankilpatrick",
+      "tags": [
+        "llm",
+        "agents",
+        "cloud"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/logankilpatrick"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/logankilpatrick.md",
+      "slug": "logankilpatrick",
+      "section_path": "content/community/people",
+      "display_name": "Logan Kilpatrick",
+      "summary": "Shares practical AI developer ecosystem updates and product-building context",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 91,
+      "body_html": "<h2>Overview</h2>\n<p>Writes and builds around fine-tuning open models on limited hardware, with attention to the resource arithmetic being realistic rather than aspirational.</p>\n<h2>Why Follow</h2>\n<p>Useful if you are trying to adapt an open model instead of calling a hosted one, and want guidance that accounts for the VRAM and time budget you actually have.</p>\n<h2>Notable Work</h2>\n<p>FineTuning, a practical guide to parameter-efficient fine-tuning; the Autotrain and Accelerate tooling; writing on running and fine-tuning open models on limited hardware.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/docs/transformers/training\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">FineTuning guide</a></li>\n<li><a href=\"https://github.com/huggingface/autotrain-advanced\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Autotrain Advanced</a></li>\n</ul>\n",
+      "body_text": "Overview Writes and builds around fine tuning open models on limited hardware, with attention to the resource arithmetic being realistic rather than aspirational. Why Follow Useful if you are trying to adapt an open model instead of calling a hosted one, and want guidance that accounts for the VRAM and time budget you actually have. Notable Work FineTuning, a practical guide to parameter efficient fine tuning; the Autotrain and Accelerate tooling; writing on running and fine tuning open models on limited hardware. Channels Primary profile github Resources FineTuning guide Autotrain Advanced"
+    },
+    {
+      "id": "melanie-mitchell",
+      "name": "Melanie Mitchell",
+      "role": "AI researcher and author",
+      "description": "Writes about reasoning, analogy, complexity, and limits of AI systems",
+      "url": "content/community/people/melanie-mitchell",
+      "tags": [
+        "reasoning",
+        "evaluation",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://melaniemitchell.me"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/melanie-mitchell.md",
+      "slug": "melanie-mitchell",
+      "section_path": "content/community/people",
+      "display_name": "Melanie Mitchell",
+      "summary": "Writes about reasoning, analogy, complexity, and limits of AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 96,
+      "body_html": "<h2>Overview</h2>\n<p>Does mechanistic interpretability and writes about what these networks do internally, from a position of scepticism about what scale alone buys.</p>\n<h2>Why Follow</h2>\n<p>Useful as the clearest public counter to the assumption that scale yields understanding, and for the interpretability work itself: MiniGPT and ConceptARC are evidence, not argument.</p>\n<h2>Notable Work</h2>\n<p>MiniGPT as a from-scratch interpretability model; the “AI and I” column; “Mapping the Mind of a Large Language Model” (Mechanistic Interpretability, MIT Press); the Anima approach to interpreting networks.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/nelhage\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Mapping the Mind of a Large Language Model</a></li>\n<li><a href=\"https://github.com/topics/minigpt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MiniGPT</a></li>\n</ul>\n",
+      "body_text": "Overview Does mechanistic interpretability and writes about what these networks do internally, from a position of scepticism about what scale alone buys. Why Follow Useful as the clearest public counter to the assumption that scale yields understanding, and for the interpretability work itself: MiniGPT and ConceptARC are evidence, not argument. Notable Work MiniGPT as a from scratch interpretability model; the “AI and I” column; “Mapping the Mind of a Large Language Model” (Mechanistic Interpretability, MIT Press); the Anima approach to interpreting networks. Channels Primary profile website Resources Mapping the Mind of a Large Language Model MiniGPT"
+    },
+    {
+      "id": "nathan-lambert",
+      "name": "Nathan Lambert",
+      "role": "AI researcher and writer",
+      "description": "Writes about RLHF, post-training, open models, and reasoning systems",
+      "url": "content/community/people/nathan-lambert",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "reasoning"
+      ],
+      "channels": [
+        {
+          "type": "newsletter",
+          "url": "https://www.interconnects.ai"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/nathan-lambert.md",
+      "slug": "nathan-lambert",
+      "section_path": "content/community/people",
+      "display_name": "Nathan Lambert",
+      "summary": "Writes about RLHF, post-training, open models, and reasoning systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 88,
+      "body_html": "<h2>Overview</h2>\n<p>Works on open-model evaluation and release policy, writing about what a benchmark release does and does not reveal about a model.</p>\n<h2>Why Follow</h2>\n<p>Useful as a corrective to launch-day score reporting, and for the clearest public argument about model openness and distribution as policy questions rather than purely technical ones.</p>\n<h2>Notable Work</h2>\n<p>Ai2's open-model releases (OLMo, OLMo 2) and their evaluation write-ups; the Interconnected AI newsletter on model openness, benchmarks, and policy.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://allenai.org/olmo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ai2 open models (OLMo)</a></li>\n<li><a href=\"https://www.interconnected.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Interconnected AI</a></li>\n</ul>\n",
+      "body_text": "Overview Works on open model evaluation and release policy, writing about what a benchmark release does and does not reveal about a model. Why Follow Useful as a corrective to launch day score reporting, and for the clearest public argument about model openness and distribution as policy questions rather than purely technical ones. Notable Work Ai2's open model releases (OLMo, OLMo 2) and their evaluation write ups; the Interconnected AI newsletter on model openness, benchmarks, and policy. Channels Primary profile newsletter Resources Ai2 open models (OLMo) Interconnected AI"
+    },
+    {
+      "id": "noam-shazeer",
+      "name": "Noam Shazeer",
+      "role": "AI researcher and model architect",
+      "description": "Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture",
+      "url": "content/community/people/noam-shazeer",
+      "tags": [
+        "transformers",
+        "llm",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://en.wikipedia.org/wiki/Noam_Shazeer"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/noam-shazeer.md",
+      "slug": "noam-shazeer",
+      "section_path": "content/community/people",
+      "display_name": "Noam Shazeer",
+      "summary": "Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 86,
+      "body_html": "<h2>Overview</h2>\n<p>Author on the original Transformer and on much of the scaling and multimodal work that followed it, at Google.</p>\n<h2>Why Follow</h2>\n<p>Useful as a primary reference for the model-architecture lineage itself — context handling, scaling, and multimodal integration as they were actually done rather than as they are summarised later.</p>\n<h2>Notable Work</h2>\n<p>Attention Is All You Need; Gopher; PaLM; Flamingo and the interleaved multimodal approach; TensorFlow and the LLM APIs at Google.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://arxiv.org/abs/1706.03762\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Attention Is All You Need</a></li>\n<li><a href=\"https://arxiv.org/abs/2112.11446\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Gopher</a></li>\n<li><a href=\"https://arxiv.org/abs/2204.02311\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PaLM</a></li>\n</ul>\n",
+      "body_text": "Overview Author on the original Transformer and on much of the scaling and multimodal work that followed it, at Google. Why Follow Useful as a primary reference for the model architecture lineage itself — context handling, scaling, and multimodal integration as they were actually done rather than as they are summarised later. Notable Work Attention Is All You Need; Gopher; PaLM; Flamingo and the interleaved multimodal approach; TensorFlow and the LLM APIs at Google. Channels Primary profile website Resources Attention Is All You Need Gopher PaLM"
+    },
+    {
+      "id": "sebastian-bubeck",
+      "name": "Sébastien Bubeck",
+      "role": "AI researcher",
+      "description": "Researches reasoning, small models, and theoretical aspects of AI systems",
+      "url": "content/community/people/sebastian-bubeck",
+      "tags": [
+        "reasoning",
+        "llm",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.microsoft.com/en-us/research/people/sebubeck/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/sebastian-bubeck.md",
+      "slug": "sebastian-bubeck",
+      "section_path": "content/community/people",
+      "display_name": "Sébastien Bubeck",
+      "summary": "Researches reasoning, small models, and theoretical aspects of AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 80,
+      "body_html": "<h2>Overview</h2>\n<p>Works on model evaluation and responsible release from the Hugging Face side, including the tooling for model cards and open leaderboards.</p>\n<h2>Why Follow</h2>\n<p>Useful for applied work on evaluating and shipping open models responsibly, and for the evaluation-dataset and leaderboard infrastructure behind public model comparisons.</p>\n<h2>Notable Work</h2>\n<p>Open LLM Leaderboard v2; model cards and the Hugging Face model-card tooling; contributions to open model release practice.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Open LLM Leaderboard v2</a></li>\n<li><a href=\"https://huggingface.co/docs/hub/model-cards\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Model cards guide</a></li>\n</ul>\n",
+      "body_text": "Overview Works on model evaluation and responsible release from the Hugging Face side, including the tooling for model cards and open leaderboards. Why Follow Useful for applied work on evaluating and shipping open models responsibly, and for the evaluation dataset and leaderboard infrastructure behind public model comparisons. Notable Work Open LLM Leaderboard v2; model cards and the Hugging Face model card tooling; contributions to open model release practice. Channels Primary profile website Resources Open LLM Leaderboard v2 Model cards guide"
+    },
+    {
+      "id": "sebastian-raschka",
+      "name": "Sebastian Raschka",
+      "role": "ML researcher and educator",
+      "description": "Explains machine learning, LLMs, PyTorch, and model training with practical depth",
+      "url": "content/community/people/sebastian-raschka",
+      "tags": [
+        "llm",
+        "pytorch",
+        "training"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/rasbt"
+        },
+        {
+          "type": "website",
+          "url": "https://sebastianraschka.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/sebastian-raschka.md",
+      "slug": "sebastian-raschka",
+      "section_path": "content/community/people",
+      "display_name": "Sebastian Raschka",
+      "summary": "Explains machine learning, LLMs, PyTorch, and model training with practical depth",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 104,
+      "body_html": "<h2>Overview</h2>\n<p>Writes the most systematic public treatment of modern LLM architecture and post-training that exists as a book, working through implementation rather than survey.</p>\n<h2>Why Follow</h2>\n<p>Useful if you want attention variants, pretraining, LoRA, DPO and quantization understood at the implementation level, and the chapter-by-chapter repo is runnable code rather than diagrams.</p>\n<h2>Notable Work</h2>\n<p>“LLMs from Scratch” (Murphy, 2025) and its chapter-by-chapter companion repo; the Ahead of AI newsletter and Ahead of AI Weekly; the Explainable AI and machine-learning-with-python repositories.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/rasbt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/rasbt/LLMs-from-scratch\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LLMs from Scratch</a></li>\n<li><a href=\"https://magazine.sebastianraschka.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ahead of AI</a></li>\n<li><a href=\"https://github.com/rasbt/python-machine-learning-book-3rd-edition\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">machine-learning-with-python</a></li>\n</ul>\n",
+      "body_text": "Overview Writes the most systematic public treatment of modern LLM architecture and post training that exists as a book, working through implementation rather than survey. Why Follow Useful if you want attention variants, pretraining, LoRA, DPO and quantization understood at the implementation level, and the chapter by chapter repo is runnable code rather than diagrams. Notable Work “LLMs from Scratch” (Murphy, 2025) and its chapter by chapter companion repo; the Ahead of AI newsletter and Ahead of AI Weekly; the Explainable AI and machine learning with python repositories. Channels Primary profile github website Resources LLMs from Scratch Ahead of AI machine learning with python"
+    },
+    {
+      "id": "shreya-shankar",
+      "name": "Shreya Shankar",
+      "role": "AI systems researcher",
+      "description": "Researches data, evaluation, and reliable systems for ML and LLM applications",
+      "url": "content/community/people/shreya-shankar",
+      "tags": [
+        "evaluation",
+        "data",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.sh-reya.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/shreya-shankar.md",
+      "slug": "shreya-shankar",
+      "section_path": "content/community/people",
+      "display_name": "Shreya Shankar",
+      "summary": "Researches data, evaluation, and reliable systems for ML and LLM applications",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 94,
+      "body_html": "<h2>Overview</h2>\n<p>Works across applied and academic ML, with a strong focus on teaching: prompting as a method, and ML systems as something that breaks in specific ways in production.</p>\n<h2>Why Follow</h2>\n<p>Useful for the prompt-engineering research done properly rather than anecdotally, and for the full-stack course material on what breaks when a model meets production.</p>\n<h2>Notable Work</h2>\n<p>“The Prompt Report”; the Full Stack Deep Learning course and its LLM Bootcamp; “A Recipe for Attention”; the ZeroShot and CS229 lecture material.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://fullstackdeeplearning.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Full Stack Deep Learning</a></li>\n<li><a href=\"https://arxiv.org/abs/2312.13734\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">The Prompt Report</a></li>\n</ul>\n",
+      "body_text": "Overview Works across applied and academic ML, with a strong focus on teaching: prompting as a method, and ML systems as something that breaks in specific ways in production. Why Follow Useful for the prompt engineering research done properly rather than anecdotally, and for the full stack course material on what breaks when a model meets production. Notable Work “The Prompt Report”; the Full Stack Deep Learning course and its LLM Bootcamp; “A Recipe for Attention”; the ZeroShot and CS229 lecture material. Channels Primary profile website Resources Full Stack Deep Learning The Prompt Report"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "role": "Independent AI engineer and writer",
+      "description": "Tracks practical LLM tooling, prompt injection, evals, and developer workflows",
+      "url": "content/community/people/simon-willison",
+      "tags": [
+        "llm",
+        "security",
+        "evaluation"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/simonw"
+        },
+        {
+          "type": "newsletter",
+          "url": "https://simonwillison.net/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/simon-willison.md",
+      "slug": "simon-willison",
+      "section_path": "content/community/people",
+      "display_name": "Simon Willison",
+      "summary": "Tracks practical LLM tooling, prompt injection, evals, and developer workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 104,
+      "body_html": "<h2>Overview</h2>\n<p>Maintains the fastest-moving public record of model and API releases, annotating each one as it lands, and writes practical TIL entries on the operational problems of using them.</p>\n<h2>Why Follow</h2>\n<p>Useful as a running changelog you can trust to be current, and for the most up-to-date public writing on prompt injection, structured output, caching and LLM evaluation.</p>\n<h2>Notable Work</h2>\n<p>The LLM blog and the annual “LLMs in” summaries; the TIL series on prompt injection, tool use, embeddings, structured output and caching; datasette and the wider data tooling.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://simonwillison.net\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/simonw\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://simonwillison.net/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://simonwillison.net/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Weblog</a></li>\n<li><a href=\"https://simonwillison.net/tags/prompt-injection/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Prompt injection tag</a></li>\n<li><a href=\"https://simonwillison.net/tags/prompt-caching/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Caching API responses</a></li>\n</ul>\n",
+      "body_text": "Overview Maintains the fastest moving public record of model and API releases, annotating each one as it lands, and writes practical TIL entries on the operational problems of using them. Why Follow Useful as a running changelog you can trust to be current, and for the most up to date public writing on prompt injection, structured output, caching and LLM evaluation. Notable Work The LLM blog and the annual “LLMs in” summaries; the TIL series on prompt injection, tool use, embeddings, structured output and caching; datasette and the wider data tooling. Channels Primary profile github newsletter Resources Weblog Prompt injection tag Caching API responses"
+    },
+    {
+      "id": "thomas-wolf",
+      "name": "Thomas Wolf",
+      "role": "Hugging Face cofounder",
+      "description": "Key figure in open-source transformer tooling and model ecosystem development",
+      "url": "content/community/people/thomas-wolf",
+      "tags": [
+        "huggingface",
+        "transformers",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/ThomWolf"
+        },
+        {
+          "type": "website",
+          "url": "https://huggingface.co/Thomwolf"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/thomas-wolf.md",
+      "slug": "thomas-wolf",
+      "section_path": "content/community/people",
+      "display_name": "Thomas Wolf",
+      "summary": "Key figure in open-source transformer tooling and model ecosystem development",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 93,
+      "body_html": "<h2>Overview</h2>\n<p>Co-authored the original Transformer and works on efficient attention and large-scale pretraining, the training-efficiency research that determines what model size is affordable.</p>\n<h2>Why Follow</h2>\n<p>Useful for the architecture and efficiency lineage behind long-context work, and for a technical view of why training cost constrains the model sizes that are reachable.</p>\n<h2>Notable Work</h2>\n<p>The original Transformer; RoFormer and rotary position embeddings; large-scale pretraining including the Megatron line; research on efficient attention for long context.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/ThomWolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://arxiv.org/abs/1706.03762\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Attention Is All You Need</a></li>\n<li><a href=\"https://arxiv.org/abs/2104.09864\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">RoFormer</a></li>\n<li><a href=\"https://arxiv.org/abs/1909.08053\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Megatron-LM</a></li>\n</ul>\n",
+      "body_text": "Overview Co authored the original Transformer and works on efficient attention and large scale pretraining, the training efficiency research that determines what model size is affordable. Why Follow Useful for the architecture and efficiency lineage behind long context work, and for a technical view of why training cost constrains the model sizes that are reachable. Notable Work The original Transformer; RoFormer and rotary position embeddings; large scale pretraining including the Megatron line; research on efficient attention for long context. Channels Primary profile github website Resources Attention Is All You Need RoFormer Megatron LM"
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "role": "AI researcher",
+      "description": "Longtime AI researcher with influential perspective on representation learning and AI systems",
+      "url": "content/community/people/yann-lecun",
+      "tags": [
+        "foundational",
+        "research",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://en.wikipedia.org/wiki/Yann_LeCun"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/yann-lecun.md",
+      "slug": "yann-lecun",
+      "section_path": "content/community/people",
+      "display_name": "Yann LeCun",
+      "summary": "Longtime AI researcher with influential perspective on representation learning and AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 97,
+      "body_html": "<h2>Overview</h2>\n<p>Argues publicly that autoregressive next-token prediction plus scale is not a path to the kind of understanding we want, and proposes a world-model alternative.</p>\n<h2>Why Follow</h2>\n<p>Useful as the most sustained technical dissent from inside the field, and for the concrete world-model research programme offered as an alternative rather than only a critique.</p>\n<h2>Notable Work</h2>\n<p>The convolutional and residual-architecture work; “A Path Towards Autonomous Machine Intelligence”; the JEPA line of self-supervised world-model research; the TVM compilation stack.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://openreview.net/forum?id=BZ5a1r-kVsf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">A Path Towards Autonomous Machine Intelligence</a></li>\n<li><a href=\"https://github.com/facebookresearch/jepa\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">JEPA</a></li>\n<li><a href=\"https://tvm.apache.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TVM</a></li>\n</ul>\n",
+      "body_text": "Overview Argues publicly that autoregressive next token prediction plus scale is not a path to the kind of understanding we want, and proposes a world model alternative. Why Follow Useful as the most sustained technical dissent from inside the field, and for the concrete world model research programme offered as an alternative rather than only a critique. Notable Work The convolutional and residual architecture work; “A Path Towards Autonomous Machine Intelligence”; the JEPA line of self supervised world model research; the TVM compilation stack. Channels Primary profile website Resources A Path Towards Autonomous Machine Intelligence JEPA TVM"
+    }
+  ]
+}
