@@ -6,6 +6,7 @@ import {
   Layers, 
   List, 
   LayoutGrid, 
+  PanelRight,
   Sun, 
   Moon,
   Menu
@@ -16,8 +17,8 @@ interface HeaderProps {
   onOpenExplorePreview: () => void;
   onOpenSubmitModal: () => void;
   onToggleMobileMenu: () => void;
-  viewMode: 'list' | 'grid';
-  onToggleViewMode: (mode: 'list' | 'grid') => void;
+  viewMode: 'list' | 'split' | 'grid';
+  onToggleViewMode: (mode: 'list' | 'split' | 'grid') => void;
   isDark: boolean;
   onToggleTheme: () => void;
 }
@@ -88,25 +89,36 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Divider */}
         <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800 mx-0.5" />
 
-        {/* View Mode Toggle: List vs Grid */}
-        <div className="flex items-center gap-1">
+        {/* View Mode Toggle: List vs Split vs Grid */}
+        <div className="flex items-center gap-1 bg-neutral-100/80 dark:bg-neutral-800/80 p-0.5 rounded-lg border border-neutral-200/60 dark:border-neutral-700/60">
           <button
             onClick={() => onToggleViewMode('list')}
-            title="List view"
-            className={`p-1.5 rounded-lg transition-colors ${
+            title="List view (hover preview)"
+            className={`p-1.5 rounded-md transition-all ${
               viewMode === 'list'
-                ? 'text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800'
+                ? 'text-neutral-900 dark:text-white bg-white dark:bg-neutral-700 shadow-2xs'
                 : 'text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300'
             }`}
           >
             <List className="size-4" />
           </button>
           <button
+            onClick={() => onToggleViewMode('split')}
+            title="Auto-preview on scroll (live split pane)"
+            className={`p-1.5 rounded-md transition-all flex items-center gap-1 ${
+              viewMode === 'split'
+                ? 'text-sky-600 dark:text-sky-400 bg-white dark:bg-neutral-700 shadow-2xs font-semibold'
+                : 'text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300'
+            }`}
+          >
+            <PanelRight className="size-4" />
+          </button>
+          <button
             onClick={() => onToggleViewMode('grid')}
             title="Grid view"
-            className={`p-1.5 rounded-lg transition-colors ${
+            className={`p-1.5 rounded-md transition-all ${
               viewMode === 'grid'
-                ? 'text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800'
+                ? 'text-neutral-900 dark:text-white bg-white dark:bg-neutral-700 shadow-2xs'
                 : 'text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300'
             }`}
           >

@@ -95,6 +95,42 @@ export const PreviewModal: React.FC<PreviewModalProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentIndex, allItems]);
 
+  // Scroll wheel / Trackpad gesture navigation (cruise entries automatically)
+  useEffect(() => {
+    let lastWheelTime = 0;
+
+    const handleWheel = (e: WheelEvent) => {
+      // Check if target is inside the terminal log viewport
+      const target = e.target as HTMLElement | null;
+      if (target) {
+        const terminalScroll = target.closest('[data-terminal-scroll]') as HTMLElement | null;
+        if (terminalScroll) {
+          const { scrollTop, scrollHeight, clientHeight } = terminalScroll;
+          const isAtBottom = scrollTop + clientHeight >= scrollHeight - 4;
+          const isAtTop = scrollTop <= 4;
+          if (e.deltaY > 0 && !isAtBottom) return;
+          if (e.deltaY < 0 && !isAtTop) return;
+        }
+      }
+
+      if (Math.abs(e.deltaY) < 20) return;
+
+      const now = Date.now();
+      if (now - lastWheelTime < 280) return; // Responsive 280ms debounce
+
+      if (e.deltaY > 0) {
+        lastWheelTime = now;
+        handleNext();
+      } else if (e.deltaY < 0) {
+        lastWheelTime = now;
+        handlePrev();
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: true });
+    return () => window.removeEventListener('wheel', handleWheel);
+  }, [currentIndex, allItems, hasPrev, hasNext]);
+
   // Reset & prepare terminal logs when item changes
   useEffect(() => {
     setTerminalLogs([
@@ -276,9 +312,13 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
             </button>
           </div>
 
-          {/* Shortcut hint */}
+          {/* Shortcut & Scroll hint */}
           <div className="hidden md:flex items-center gap-2 text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
-            <span>Use ← → to browse</span>
+            <span className="text-sky-600 dark:text-sky-400 font-medium">Scroll wheel ↕ or ← →</span>
+            <span>•</span>
+            <span className="bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-600 dark:text-neutral-300">
+              {currentIndex + 1} / {allItems.length}
+            </span>
             <span>•</span>
             <span>Esc to close</span>
           </div>
@@ -332,8 +372,8 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
               </div>
 
               {/* Live Interactive Terminal Viewport */}
-              <div className="flex-1 min-h-[220px] rounded-xl bg-neutral-950 text-neutral-100 p-4 font-mono text-[12px] overflow-y-auto border border-neutral-800 shadow-inner flex flex-col justify-between">
-                <div className="space-y-1.5 overflow-y-auto max-h-[260px]">
+              <div className="flex-1 min-h-[220px] rounded-xl bg-neutral-950 text-neutral-100 p-4 font-mono text-[12px] border border-neutral-800 shadow-inner flex flex-col justify-between">
+                <div data-terminal-scroll className="space-y-1.5 overflow-y-auto max-h-[260px]">
                   <div className="text-neutral-500 flex items-center justify-between pb-2 border-b border-neutral-900 text-[11px]">
                     <span>● ${name.toLowerCase()}-runtime // interactive tty</span>
                     <span className="text-emerald-400 flex items-center gap-1">

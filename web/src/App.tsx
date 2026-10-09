@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { SpotlightBanner } from './components/SpotlightBanner';
 import { ListView } from './components/ListView';
 import { GridView } from './components/GridView';
+import { SplitPreviewPane } from './components/SplitPreviewPane';
 import { PreviewModal } from './components/PreviewModal';
 import { FloatingAdPill } from './components/FloatingAdPill';
 import { CommandPalette } from './components/CommandPalette';
@@ -26,7 +27,8 @@ const VERTICAL_DATA_FILES: Record<VerticalId, string> = {
 export const App: React.FC = () => {
   const [activeVertical, setActiveVertical] = useState<VerticalId>('projects');
   const [activeSection, setActiveSection] = useState<string>('');
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const [viewMode, setViewMode] = useState<'list' | 'split' | 'grid'>('split');
+  const [activeScrollItem, setActiveScrollItem] = useState<EntryItem | null>(null);
   const [isDark, setIsDark] = useState<boolean>(() => {
     return localStorage.getItem('theme') === 'dark';
   });
@@ -285,12 +287,36 @@ export const App: React.FC = () => {
           {/* Subtle Divider */}
           <div className="h-px bg-neutral-200 dark:bg-neutral-800 mx-6" />
 
-          {/* Main List or Grid Section */}
+          {/* Main List or Split or Grid Section */}
           <div className="flex-1 pb-24">
             {loading ? (
               <div className="py-32 flex flex-col items-center justify-center gap-3 text-neutral-400">
                 <Loader2 className="size-6 animate-spin text-sky-500" />
                 <span className="font-mono text-[13px]">Indexing {activeVertical} dataset...</span>
+              </div>
+            ) : viewMode === 'split' ? (
+              <div className="flex gap-4 items-start">
+                {/* Left column: List view */}
+                <div className="flex-1 min-w-0">
+                  <ListView
+                    items={filteredItems}
+                    vertical={activeVertical}
+                    activeSection={activeSection}
+                    onSelectItem={(it) => setSelectedItem(it)}
+                    activeHoverItem={activeScrollItem}
+                    onHoverItemChange={(it) => {
+                      if (it) setActiveScrollItem(it);
+                    }}
+                  />
+                </div>
+
+                {/* Right column: Sticky live auto-preview pane on scroll */}
+                <div className="hidden xl:block w-[380px] shrink-0 pr-6 pt-3 sticky top-16 self-start">
+                  <SplitPreviewPane
+                    item={activeScrollItem || filteredItems[0] || null}
+                    onOpenFullModal={(it) => setSelectedItem(it)}
+                  />
+                </div>
               </div>
             ) : viewMode === 'list' ? (
               <ListView
@@ -298,6 +324,10 @@ export const App: React.FC = () => {
                 vertical={activeVertical}
                 activeSection={activeSection}
                 onSelectItem={(it) => setSelectedItem(it)}
+                activeHoverItem={activeScrollItem}
+                onHoverItemChange={(it) => {
+                  if (it) setActiveScrollItem(it);
+                }}
               />
             ) : (
               <GridView
