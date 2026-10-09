@@ -308,10 +308,10 @@ export const ListView: React.FC<ListViewProps> = ({
                   onMouseEnter={(e) => handleRowMouseEnter(item, e)}
                   onMouseMove={(e) => handleRowMouseMove(item, e)}
                   onMouseLeave={handleRowMouseLeave}
-                  className={`group cursor-pointer py-2.5 px-2 -mx-2 rounded-lg flex items-center justify-between gap-3 transition-colors ${
+                  className={`group cursor-pointer py-2.5 px-3 -mx-2 rounded-xl flex items-center justify-between gap-3 transition-all duration-200 ease-out ${
                     isHovered 
-                      ? 'bg-neutral-100/80 dark:bg-neutral-800/80' 
-                      : 'hover:bg-neutral-50 dark:hover:bg-neutral-800/50'
+                      ? 'bg-neutral-900/[0.04] dark:bg-white/[0.06] backdrop-blur-xs border border-neutral-900/[0.06] dark:border-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] scale-[1.002]' 
+                      : 'hover:bg-neutral-900/[0.025] dark:hover:bg-white/[0.035] border border-transparent'
                   }`}
                 >
                   {/* Left: Icon, Name, Dot, Description */}
@@ -342,21 +342,21 @@ export const ListView: React.FC<ListViewProps> = ({
                   {/* Right: Meta & Preview Trigger on Hover */}
                   <div className="flex items-center gap-2.5 shrink-0">
                     {stars && stars > 0 && (
-                      <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
-                        <Star className="size-3 text-amber-500 fill-amber-500/20" />
+                      <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-neutral-500 dark:text-neutral-400 glass-pill px-2 py-0.5 rounded-md">
+                        <Star className="size-3 text-amber-500 fill-amber-500/30" />
                         {stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : stars}
                       </span>
                     )}
 
                     {item.primary_language && (
-                      <span className="hidden md:inline-block text-[11px] font-mono text-neutral-400 dark:text-neutral-500 px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800/80">
+                      <span className="hidden md:inline-block text-[11px] font-mono text-neutral-500 dark:text-neutral-400 px-2 py-0.5 rounded-md glass-pill">
                         {item.primary_language}
                       </span>
                     )}
 
                     {/* Preview Badge hint */}
-                    <span className={`transition-opacity flex items-center gap-1 text-[11px] font-mono text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 px-2 py-0.5 rounded ${
-                      isHovered ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    <span className={`transition-all duration-200 flex items-center gap-1.5 text-[11px] font-mono text-sky-600 dark:text-sky-400 glass-pill px-2.5 py-0.5 rounded-full ${
+                      isHovered ? 'opacity-100 scale-100 shadow-2xs' : 'opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                     }`}>
                       <Layers className="size-2.5" />
                       Preview ⌘ E

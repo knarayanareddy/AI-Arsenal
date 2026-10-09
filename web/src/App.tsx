@@ -12,6 +12,7 @@ import { SubmitModal } from './components/SubmitModal';
 import { AgentModal } from './components/AgentModal';
 import { VerticalId, EntryItem } from './types';
 import { Loader2 } from 'lucide-react';
+import Lenis from 'lenis';
 
 const VERTICAL_DATA_FILES: Record<VerticalId, string> = {
   projects: './data/projects.json',
@@ -32,6 +33,28 @@ export const App: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(() => {
     return localStorage.getItem('theme') === 'dark';
   });
+
+  // Initialize Lenis smooth momentum scrolling matching Designeer
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.12,
+      duration: 1.1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    let rafId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
 
   // Data states
   const [verticalData, setVerticalData] = useState<Record<VerticalId, EntryItem[]>>({
@@ -245,7 +268,7 @@ export const App: React.FC = () => {
       )}
 
       {/* Centered Chassis matching Designeer */}
-      <div className="max-w-[1320px] mx-auto min-h-screen bg-white dark:bg-[#0c0d12] border-x border-neutral-200 dark:border-neutral-800 flex shadow-xs relative">
+      <div className="max-w-[1320px] mx-auto min-h-screen bg-white/95 dark:bg-[#0c0d12]/95 border-x border-black/[0.06] dark:border-white/[0.07] flex shadow-xs relative">
         {/* Left Rail Sidebar */}
         <Sidebar
           activeVertical={activeVertical}

@@ -124,12 +124,15 @@ export const SplitPreviewPane: React.FC<SplitPreviewPaneProps> = ({
   };
 
   return (
-    <div className="h-[calc(100vh-5rem)] rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0c0d14] shadow-sm flex flex-col overflow-hidden animate-in fade-in duration-200">
+    <div className="h-[calc(100vh-5.5rem)] glass-card rounded-2xl flex flex-col overflow-hidden relative">
+      {/* Subtle Ambient Radial Glow */}
+      <div className="absolute -top-16 -right-16 size-48 bg-sky-500/10 dark:bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
+
       {/* Top Header of Preview Pane */}
-      <div className="h-12 px-4 border-b border-neutral-100 dark:border-neutral-800 bg-neutral-50/70 dark:bg-neutral-900/40 flex items-center justify-between shrink-0">
+      <div className="h-12 px-4 border-b border-black/[0.06] dark:border-white/[0.08] bg-white/40 dark:bg-white/[0.03] backdrop-blur-md flex items-center justify-between shrink-0 relative z-10">
         <div className="flex items-center gap-2">
-          <div className="size-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold">
+          <div className="size-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+          <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-300 font-semibold">
             Live Preview on Scroll
           </span>
         </div>
@@ -137,15 +140,15 @@ export const SplitPreviewPane: React.FC<SplitPreviewPaneProps> = ({
         <button
           onClick={() => onOpenFullModal(item)}
           title="Expand to Full Playground (⌘ E)"
-          className="flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-mono text-neutral-600 dark:text-neutral-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-white dark:hover:bg-neutral-800 border border-transparent hover:border-neutral-200 dark:hover:border-neutral-700 transition-all shadow-2xs"
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono text-neutral-600 dark:text-neutral-300 hover:text-sky-600 dark:hover:text-sky-400 glass-pill transition-all"
         >
           <Maximize2 className="size-3" />
           <span>Full ⌘ E</span>
         </button>
       </div>
 
-      {/* Pane Content */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      {/* Pane Content with Smooth Cross-Fade on Item Change */}
+      <div key={item.id} className="flex-1 overflow-y-auto p-4 space-y-4 animate-in fade-in slide-in-from-bottom-1 duration-150 relative z-10">
         {/* Title Bar */}
         <div className="flex items-start justify-between gap-2">
           <div className="flex items-center gap-2.5">

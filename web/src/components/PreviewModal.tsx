@@ -259,27 +259,27 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/40 dark:bg-black/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-8 animate-fadeIn">
+    <div className="fixed inset-0 z-50 bg-black/20 dark:bg-black/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-8 animate-fadeIn">
       {/* Floating circular Close button matching Designeer top right */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 sm:top-6 sm:right-6 size-10 rounded-full bg-white dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-700 shadow-lg flex items-center justify-center z-50 hover:scale-105 transition-all"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 size-10 rounded-full glass-pill text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white shadow-lg flex items-center justify-center z-50 hover:scale-105 active:scale-95 transition-all"
         aria-label="Close preview"
       >
         <X className="size-5" />
       </button>
 
       {/* Main Modal Chassis */}
-      <div className="w-full max-w-[1040px] h-[86vh] bg-white dark:bg-[#0c0d14] rounded-2xl shadow-2xl border border-neutral-200 dark:border-neutral-800 flex flex-col overflow-hidden relative animate-preview-modal">
+      <div className="w-full max-w-[1040px] h-[86vh] glass-card rounded-2xl flex flex-col overflow-hidden relative animate-preview-modal">
         {/* Top Control Bar & Tabs inside modal */}
-        <div className="h-12 px-5 border-b border-neutral-100 dark:border-neutral-800/80 bg-neutral-50/70 dark:bg-neutral-900/40 flex items-center justify-between shrink-0">
+        <div className="h-12 px-5 border-b border-black/[0.06] dark:border-white/[0.08] bg-white/40 dark:bg-white/[0.03] backdrop-blur-md flex items-center justify-between shrink-0">
           {/* Tabs */}
           <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => setActiveTab('playground')}
-              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-all ${
                 activeTab === 'playground'
-                  ? 'bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 shadow-2xs border border-neutral-200 dark:border-neutral-700'
+                  ? 'glass-pill text-neutral-900 dark:text-neutral-100 font-semibold shadow-2xs'
                   : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200'
               }`}
             >
@@ -289,9 +289,9 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
 
             <button
               onClick={() => setActiveTab('docs')}
-              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-all ${
                 activeTab === 'docs'
-                  ? 'bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 shadow-2xs border border-neutral-200 dark:border-neutral-700'
+                  ? 'glass-pill text-neutral-900 dark:text-neutral-100 font-semibold shadow-2xs'
                   : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200'
               }`}
             >
@@ -301,9 +301,9 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
 
             <button
               onClick={() => setActiveTab('tradeoffs')}
-              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1.5 transition-all ${
                 activeTab === 'tradeoffs'
-                  ? 'bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 shadow-2xs border border-neutral-200 dark:border-neutral-700'
+                  ? 'glass-pill text-neutral-900 dark:text-neutral-100 font-semibold shadow-2xs'
                   : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200'
               }`}
             >
@@ -660,10 +660,10 @@ ${name.toLowerCase().replace(/\s+/g, '_')} serve mistralai/Mistral-7B-Instruct-v
         </div>
 
         {/* BOTTOM DOCKED ACTION BAR - EXACT DESIGNEER 1:1 REPLICA */}
-        <div className="h-14 px-5 border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0c0d12] flex items-center justify-between shrink-0">
+        <div className="h-14 px-5 border-t border-black/[0.06] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.03] backdrop-blur-md flex items-center justify-between shrink-0">
           {/* Left: Square Icon + Title + Description */}
           <div className="flex items-center gap-3 min-w-0 flex-1 mr-4">
-            <div className="size-6 rounded-md bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 flex items-center justify-center font-mono font-bold text-[10px] shrink-0">
+            <div className="size-6 rounded-md bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 flex items-center justify-center font-mono font-bold text-[10px] shrink-0 shadow-2xs">
               {initial}
             </div>
             <div className="truncate flex items-baseline gap-2">
