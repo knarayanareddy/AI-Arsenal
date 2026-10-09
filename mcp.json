@@ -1,0 +1,64 @@
+{
+  "site": "AI Arsenal",
+  "url": "https://knarayanareddy.github.io/AI-Arsenal",
+  "description": "A schema-first, machine-readable encyclopedia for practical AI engineering.",
+  "catalogue": {
+    "total_entries": 1254,
+    "projects": 500,
+    "tools": 218,
+    "papers": 138,
+    "architectures": 29,
+    "tips": 171,
+    "guides": 59,
+    "benchmarks": 52,
+    "people": 25
+  },
+  "tools": [
+    {
+      "name": "search_arsenal",
+      "description": "Search 1,254 curated AI engineering tools, projects, research papers, and architectures with keyword and facet filters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search keyword or tool name (e.g. 'vLLM', 'agent framework', 'speculative decoding')" },
+          "vertical": { "type": "string", "enum": ["projects", "tools", "papers", "architectures", "tips"], "description": "Filter by vertical" },
+          "phase": { "type": "string", "description": "Lifecycle phase (e.g. 'inference-engine', 'agent-system', 'framework')" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_entry_dossier",
+      "description": "Fetch the complete technical dossier, tradeoffs, installation instructions, and alternatives for an entry by ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "Canonical ID of the entry (e.g. 'accelerate', 'vllm', 'choose-agent-framework')" }
+        },
+        "required": ["id"]
+      }
+    },
+    {
+      "name": "list_architectures",
+      "description": "List all 29 engineering architecture decision trees, tradeoff summaries, and approach matrices.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string", "description": "Filter by decision category (e.g. 'model-selection', 'rag', 'serving')" }
+        }
+      }
+    },
+    {
+      "name": "compare_entries",
+      "description": "Compare two AI engineering tools or frameworks side-by-side across maturity, license, stars, stack, and tradeoffs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id_a": { "type": "string", "description": "First entry ID" },
+          "id_b": { "type": "string", "description": "Second entry ID" }
+        },
+        "required": ["id_a", "id_b"]
+      }
+    }
+  ]
+}
