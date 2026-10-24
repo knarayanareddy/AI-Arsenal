@@ -453,3 +453,16 @@ Not changed here, because each needs an editorial or governance decision: the 43
 | `pnpm run validate:semantic:all` | 0 | skipped (no API key) |
 | `pnpm run validate:changed` | 0 | "Checked 0 content entries" |
 | `cd web && npm run build` | 0 | 1,510 modules, no errors |
+
+## Remediation status (same day, branch `arena/89c86567-ai-arsenal`)
+
+Every gate in the matrix above is now green. What it took, in the order the blockers surfaced:
+
+1. **The 43 flat tool entries** were rewritten as v2 phase entries (21) or deleted as duplicate ids shadowing project entries (14). `ruby` was added to the `stack` enum because a catalogued Ruby agent had no valid value.
+2. **The generators crashed on the shapes those entries used** — `parseISO` on a YAML `Date`, `join` on a string `job`/`stack`. Both now coerce instead of throwing.
+3. **`validate:changed` crashed on deleted files.** The PR diff included removals, so the first migration-shaped PR died with `ENOENT` before validating anything. The changed-file helper now passes `--diff-filter=d`.
+4. **`check-migration-progress` counted a flat file as migrated** when it happened to carry every required field. The phase folder is now part of the predicate, so the 100% it reported is real (247/247) rather than assumed.
+5. **`data/` was a month stale.** With the YAML blocker gone the refresh ran: 1,254 → 1,298 entries. Regenerating also revealed that generation stamped a fresh `generated_at` on every run, leaving the tree dirty after each `ci`; the writer now keeps the timestamp on disk when nothing else changed.
+6. **The link checker caught a real dead link**: `github.com/dust-tt/dust` returns 404 and the repository has left the organisation. The Dust entry had described a self-hostable MIT platform; it now describes the closed hosted product that actually exists.
+
+Verified after remediation: `pnpm run ci` exits 0 (296 tests), `validate:changed`, `validate:links`, `check:stale` and `cd web && npm run build` all pass, and running `generate:all` twice leaves the working tree clean.
