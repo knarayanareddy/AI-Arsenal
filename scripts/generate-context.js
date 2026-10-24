@@ -120,5 +120,21 @@ ${top(papers, 10, (a, b) => String(a.published_date).localeCompare(String(b.publ
 ${top(tips.filter((t) => t.impact === 'high'), 10).map(line).join('\n') || '_No tips yet._'}
 `;
 
-await fs.writeFile('CONTEXT.md', context);
-console.log(chalk.green('Generated CONTEXT.md'));
+// The header carries a generation timestamp, so compare everything else
+// before writing: an unchanged catalogue should leave the file untouched.
+const stripStamp = (text) => text.replace(/^Generated: [^|]*\|/m, 'Generated: <stamp> |');
+
+let output = context;
+try {
+  const previous = await fs.readFile('CONTEXT.md', 'utf8');
+  if (stripStamp(previous) === stripStamp(context)) output = previous;
+} catch {
+  // No previous file: write the freshly generated one.
+}
+
+if (output === context) {
+  await fs.writeFile('CONTEXT.md', output);
+  console.log(chalk.green('Generated CONTEXT.md'));
+} else {
+  console.log(chalk.green('CONTEXT.md already current'));
+}
