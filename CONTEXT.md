@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-24T16:02:43.665Z | Entries: 1298 | Schema version: 1.0.0
+Generated: 2026-10-24T16:16:00.499Z | Entries: 1298 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -218,7 +218,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### vector-search
 - DB-GPT — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
 - DocsGPT — Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI
-- Dust — Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover
+- Dust — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
 - Elasticsearch — Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing
 - FAISS — C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes
 

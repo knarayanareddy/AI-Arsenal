@@ -58,7 +58,7 @@ _No star-tracked entries yet._
 - [Dagster](./dagster.md) — Asset-oriented Python orchestrator where data assets are typed functions with parameter-derived lineage
 - [DB-GPT](./db-gpt.md) — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
 - [DocsGPT](./docsgpt.md) — Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI
-- [Dust](./dust.md) — Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover
+- [Dust](./dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
 - [E2B](./e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents
 - [Empromptu AI](./empromptu-ai.md) — Build, deploy, and manage custom AI applications that improve over time
 - [Flowise](./flowise.md) — Archived Node.js visual builder for LangChain-style agent graphs, now superseded by the Flowise successor

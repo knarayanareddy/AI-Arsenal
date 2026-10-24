@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T16:02:37.875Z",
+    "generated_at": "2026-10-24T16:15:54.045Z",
     "total_projects": 511,
     "total_tools": 247,
     "total_papers": 138,
@@ -6039,21 +6039,20 @@
       "id": "dust",
       "type": "tool",
       "name": "Dust",
-      "description": "Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover",
+      "description": "Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing",
       "tags": [
         "agents",
         "rag",
         "orchestration",
         "retrieval",
-        "self-hosted",
         "cloud"
       ],
       "path": "content/tools/orchestration/dust.md",
       "url": "content/tools/orchestration/dust",
-      "last_updated": "2026-10-21",
+      "last_updated": "2026-10-24",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },

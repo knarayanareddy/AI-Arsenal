@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-24T16:02:37.875Z",
+  "generated_at": "2026-10-24T16:15:54.045Z",
   "tags": [
     {
       "id": "agents",
@@ -3914,10 +3914,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 190,
+      "count": 189,
       "types": {
         "project": 138,
-        "tool": 38,
+        "tool": 37,
         "architecture": 8,
         "paper": 2,
         "tip": 4
@@ -3955,7 +3955,6 @@
         "dia-tts",
         "docsgpt",
         "duckdb",
-        "dust",
         "emotivoice",
         "enricoros-big-agi",
         "espnet",

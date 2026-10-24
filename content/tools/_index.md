@@ -107,7 +107,7 @@ _No star-tracked entries yet._
 - [DocETL](./data-ingestion/docetl.md) — Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema
 - [DocsGPT](./orchestration/docsgpt.md) — Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
-- [Dust](./orchestration/dust.md) — Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover
+- [Dust](./orchestration/dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
 - [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
 - [E2B](./orchestration/e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents
 - [Elasticsearch](./data-ingestion/elasticsearch.md) — Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing

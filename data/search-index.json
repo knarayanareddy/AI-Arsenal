@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-24T16:02:42.105Z",
+  "generated_at": "2026-10-24T16:15:58.763Z",
   "config": {
     "document": {
       "id": "id",
@@ -88,7 +88,7 @@
       "memory": 50,
       "rag": 165,
       "graphs": 8,
-      "self-hosted": 190,
+      "self-hosted": 189,
       "planning": 21,
       "guardrails": 48,
       "retrieval": 159,
@@ -191,9 +191,9 @@
       "experimental": 13
     },
     "cost_model": {
-      "open-source": 608,
+      "open-source": 607,
       "self-hostable": 24,
-      "freemium": 80,
+      "freemium": 81,
       "usage-based": 34,
       "paid": 12
     },
@@ -15796,19 +15796,18 @@
       "type": "tool",
       "name": "Dust",
       "title": "Dust",
-      "description": "Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover",
+      "description": "Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing",
       "tags": [
         "agents",
         "rag",
         "orchestration",
         "retrieval",
-        "self-hosted",
         "cloud"
       ],
       "category": null,
       "subcategory": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "phase": "orchestration",
       "audience": [
@@ -15838,9 +15837,9 @@
       "path": "content/tools/orchestration/dust.md",
       "url": "content/tools/orchestration/dust",
       "boost_title": "Dust",
-      "boost_tags": "agents rag orchestration retrieval self-hosted cloud",
-      "boost_description": "Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover",
-      "body": "Dust Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover agents rag orchestration retrieval self-hosted cloud Overview Dust is an open source platform for building and operating assistants over enterprise data. It is deliberately not a library: the repository contains a Next.js/TypeScript application layer, Rust workers for document parsing and indexing, and the persistence that ties them together — Postgres for relational state, Qdrant for vectors. That shape follows from the problem it solves. Internal assistants fail on permissions far more often than on prompt quality: a user asks a question, retrieval returns passages from documents they cannot open, and the assistant leaks. Dust attaches worksp…"
+      "boost_tags": "agents rag orchestration retrieval cloud",
+      "boost_description": "Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing",
+      "body": "Dust Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing agents rag orchestration retrieval cloud Overview Dust is a hosted platform where a company assembles assistants over its own documents and tools: connect a data source, pick a model, write the instructions and the assistant appears in Slack, the web app or an API call. Connectors handle Drive, Notion, GitHub and about twenty others, and the same connection can expose both content for retrieval and actions for the agent. It competes on the administrative layer rather than on retrieval quality alone. Users, spaces, OAuth linked identities and per document permissions are first class, so an answer in a shared channel is filtered by wh…"
     },
     {
       "id": "dvc",

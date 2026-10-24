@@ -71,7 +71,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 |---|---|---|---|---|---|---|---|---|
 | [AI Engineering From Scratch](../dx-and-tooling/ai-engineering-from-scratch.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, rust, typescript | recommended |
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | deployment, security-and-guardrails | open-source | Yes | Yes | Yes | rust | watching |
-| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | rust | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [llmfit](../model-layer/llmfit.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | rust | recommended |

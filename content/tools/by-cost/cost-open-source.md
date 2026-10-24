@@ -107,7 +107,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [dlt](../data-ingestion/dlt.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
 | [DocsGPT](../orchestration/docsgpt.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
-| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [DVC](../model-layer/dvc.md) | model layer | model-registry | open-source | Yes | Yes | Yes | python | recommended |
 | [EvalScope](../evaluation-and-observability/evalscope.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | cpp, python | best-in-class |

@@ -365,7 +365,7 @@
 - [DSPy](./projects/frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
 - [The Llama 3 Herd of Models](./research/foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [DuckDB](./projects/data-and-retrieval/duckdb.md) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
-- [Dust](./tools/orchestration/dust.md) — Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover
+- [Dust](./tools/orchestration/dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
 - [DVC](./tools/model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
 - [NVIDIA Dynamo](./projects/inference-engines/dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
 - [E2B](./tools/orchestration/e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents

@@ -82,6 +82,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Dagster](../orchestration/dagster.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
+| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | freemium | Yes | No | No | typescript | solid-choice |
 | [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | java | solid-choice |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | recommended |

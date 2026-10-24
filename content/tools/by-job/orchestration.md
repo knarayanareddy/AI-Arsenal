@@ -127,7 +127,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [DocETL](../data-ingestion/docetl.md) | data ingestion | usage-based | Yes | Yes | Yes | python | watching |
 | [DocsGPT](../orchestration/docsgpt.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
-| [Dust](../orchestration/dust.md) | orchestration | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
+| [Dust](../orchestration/dust.md) | orchestration | freemium | Yes | No | No | typescript | solid-choice |
 | [E2B](../orchestration/e2b.md) | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |

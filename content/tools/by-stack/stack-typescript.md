@@ -89,7 +89,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript | recommended |
 | [DocsGPT](../orchestration/docsgpt.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
-| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
+| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | freemium | Yes | No | No | typescript | solid-choice |
 | [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
