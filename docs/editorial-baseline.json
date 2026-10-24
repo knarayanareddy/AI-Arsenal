@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": 1,
-    "description": "Finding-level baseline of PRE-EXISTING full-catalog editorial findings. Each entry suppresses exactly one finding (path + rule + normalized finding). Changed-file validation ignores this file and stays strict.",
+    "description": "Finding-level baseline of PRE-EXISTING editorial findings. Each entry suppresses exactly one finding (path + rule + normalized finding). --all fails on anything not listed; --changed-only fails on anything not listed for that file, so a legacy entry can be edited without re-authoring the debt it already has on record.",
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",

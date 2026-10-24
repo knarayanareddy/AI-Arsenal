@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { extractSections, inspectEntry, tokenOverlap } from '../scripts/validate-editorial-quality.js';
+import { extractSections, inspectEntry, partitionChangedFindings, tokenOverlap } from '../scripts/validate-editorial-quality.js';
+import { findingToBaselineEntry, parseBaseline, serializeBaseline } from '../scripts/utils/editorial-baseline.js';
 
 test('editorial section extraction preserves section boundaries', () => {
   const sections = extractSections('## Overview\nOne.\n\n## Architecture\nTwo.\n');
@@ -91,4 +92,47 @@ test('a hosted-only tool may describe itself as a service', () => {
     content
   });
   assert.equal(issues.filter((issue) => issue.rule === 'hosted-claim-contradicted').length, 0);
+});
+
+test('a changed entry keeps only the debt it already had on record', () => {
+  const known = {
+    file: 'content/tools/model-layer/legacy.md',
+    rule: 'rejected-boilerplate',
+    message: 'contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i'
+  };
+  const added = {
+    file: 'content/tools/model-layer/legacy.md',
+    rule: 'rejected-boilerplate',
+    message: 'contains rejected boilerplate: /either survives contact with your data or does not/i'
+  };
+  const baseline = parseBaseline(serializeBaseline([findingToBaselineEntry(known)]));
+  const { issues, preExisting } = partitionChangedFindings([known, added], baseline);
+  assert.deepEqual(preExisting.map((issue) => issue.message), [known.message]);
+  assert.deepEqual(issues.map((issue) => issue.message), [added.message]);
+});
+
+test('changed-entry suppression never covers a file with no baseline history', () => {
+  const known = {
+    file: 'content/tools/model-layer/legacy.md',
+    rule: 'rejected-boilerplate',
+    message: 'contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i'
+  };
+  const baseline = parseBaseline(serializeBaseline([findingToBaselineEntry(known)]));
+  const copy = { ...known, file: 'content/tools/model-layer/new-entry.md' };
+  const { issues, preExisting } = partitionChangedFindings([copy], baseline);
+  assert.equal(preExisting.length, 0);
+  assert.deepEqual(issues.map((issue) => issue.file), ['content/tools/model-layer/new-entry.md']);
+});
+
+test('an empty or missing baseline leaves changed-entry findings untouched', () => {
+  const known = {
+    file: 'content/tools/model-layer/legacy.md',
+    rule: 'rejected-boilerplate',
+    message: 'contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i'
+  };
+  for (const baseline of [null, new Map()]) {
+    const { issues, preExisting } = partitionChangedFindings([known], baseline);
+    assert.equal(preExisting.length, 0);
+    assert.equal(issues.length, 1);
+  }
 });

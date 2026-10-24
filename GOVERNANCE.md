@@ -41,8 +41,10 @@ verify the claim instead of trusting a bot name.
   matches the sentence frames the bulk-authoring scripts produced, and
   `hosted-claim-contradicted` rejects a "no self-hosted path" claim against an
   entry whose own frontmatter says the artifact is open source or self-hostable.
-  Changed files are always validated strictly; pre-existing findings are listed
-  in `docs/editorial-baseline.json` and reported by
+  A changed file fails on every finding not already on record for it, so fixing
+  one sentence in a legacy entry does not require re-authoring the rest of it,
+  while a new entry inherits nothing and must pass in full. Pre-existing findings
+  are listed in `docs/editorial-baseline.json` and reported by
   `scripts/audit-generated-prose.js` (`pnpm run audit:generated-prose`), which
   writes `docs/generated-prose-audit.md`. The baseline may only shrink.
 - Content generators are barred. A script may scaffold an entry for a human to

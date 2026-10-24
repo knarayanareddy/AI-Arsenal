@@ -8,7 +8,12 @@ import { getChangedMarkdownFiles, isContentEntryCandidate } from './utils/change
 import { applyBaseline, parseBaseline } from './utils/editorial-baseline.js';
 
 // Committed, human-reviewed baseline of pre-existing full-catalog findings.
-// Only consulted in --all mode; changed-file mode stays strict and baseline-free.
+// Consulted in both modes: --all validates the whole catalog against it, and
+// --changed-only suppresses a finding that is already on record for that exact
+// file, rule and sentence, so fixing one sentence in a legacy entry does not
+// require re-authoring the other fifteen. Anything not on record still fails —
+// new entries have no baseline entries at all, and a new boilerplate sentence is
+// a new fingerprint even in an already-baselined file.
 export const BASELINE_PATH = 'docs/editorial-baseline.json';
 
 // Entry kinds that receive bespoke per-section editorial rules. Other content
@@ -523,7 +528,7 @@ export function selectEntries(entries, { mode, date, changed = new Set() } = {})
   return { selected: entries.filter(isSupported), catalogWide: entries.filter((entry) => isInspectable(entry) && !isSupported(entry)), structuralOnly: [] };
 }
 
-export async function validateEditorialQuality({ mode = 'changed', date = null, base = 'origin/main' } = {}) {
+export async function validateEditorialQuality({ mode = 'changed', date = null, base = 'origin/main', baseline = null } = {}) {
   const files = await getEntryFiles();
   const entries = [];
   for (const file of files) {
@@ -566,6 +571,16 @@ export async function validateEditorialQuality({ mode = 'changed', date = null, 
     structuralOnly: structuralOnly.map((entry) => entry.file),
     issues
   };
+}
+
+// Partition changed-file findings against the committed baseline. A changed
+// entry may keep the debt it already had on record; it may not acquire more.
+// The returned `preExisting` findings are printed for visibility (they are the
+// re-authoring worklist for these files) but do not fail the gate.
+export function partitionChangedFindings(issues, baselineMap) {
+  if (!baselineMap || baselineMap.size === 0) return { issues, preExisting: [] };
+  const { newFindings, suppressed } = applyBaseline(issues, baselineMap);
+  return { issues: newFindings, preExisting: suppressed };
 }
 
 export function formatIssue({ file, rule, message }) {
@@ -620,8 +635,15 @@ async function main() {
   // from GITHUB_BASE_SHA in CI (and fail closed if it cannot be established).
   const base = baseIndex >= 0 ? process.argv[baseIndex + 1] : undefined;
 
+  const baseline = await loadBaseline();
   const result = await validateEditorialQuality({ mode: 'changed', date, base });
+  const { issues, preExisting } = partitionChangedFindings(result.issues, baseline);
+  result.issues = issues;
   const scope = result.mode === 'date' ? `entries dated ${result.targetDate}` : `${result.mode} entries`;
+  if (preExisting.length) {
+    console.log(`Note: ${preExisting.length} pre-existing finding(s) in the changed entries are on record in ${BASELINE_PATH} and are not treated as regressions:`);
+    for (const issue of preExisting) console.log(`- ${formatIssue(issue)}`);
+  }
   if (result.structuralOnly.length) {
     console.log(`Note: ${result.structuralOnly.length} changed entr${result.structuralOnly.length === 1 ? 'y receives' : 'ies receive'} structural-only validation (no bespoke editorial rules yet): ${result.structuralOnly.join(', ')}`);
   }
