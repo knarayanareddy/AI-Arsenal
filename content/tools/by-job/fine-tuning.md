@@ -185,6 +185,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [PyTorch Lightning](../model-layer/pytorch-lightning.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [REEF](../orchestration/reef.md) | orchestration | open-source | Yes | Yes | Yes | python | watching |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |

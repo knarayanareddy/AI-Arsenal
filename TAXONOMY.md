@@ -264,7 +264,7 @@ Field: `confidence`. An honest signal of how settled the tradeoffs in this entry
 
 ## Stack / Language
 
-`python` | `typescript` | `rust` | `go` | `java` | `cpp` | `julia` | `polyglot`
+`python` | `typescript` | `rust` | `go` | `java` | `ruby` | `cpp` | `julia` | `polyglot`
 
 ## Primary Languages
 

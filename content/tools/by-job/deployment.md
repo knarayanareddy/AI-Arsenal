@@ -175,6 +175,7 @@ This table is exhaustive for tools tagged with job = deployment.
 | [Envoy AI Gateway](../serving-and-deployment/ai-gateway.md) | serving and deployment | open-source | Yes | Yes | Yes | go | recommended |
 | [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | usage-based | Yes | No | No | python | solid-choice |
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [AxonHub](../serving-and-deployment/axonhub.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Baseten](../serving-and-deployment/baseten.md) | serving and deployment | usage-based | Yes | No | No | python | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
@@ -183,15 +184,18 @@ This table is exhaustive for tools tagged with job = deployment.
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [GPUStack](../serving-and-deployment/gpustack.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | usage-based | Yes | No | No | python, typescript | recommended |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
+| [Mesh-LLM](../serving-and-deployment/mesh-llm.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
+| [RunAnywhere SDKs](../serving-and-deployment/runanywhere-sdks.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp | solid-choice |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | open-source | No | Yes | Yes | go | watching |

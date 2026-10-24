@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Screenpipe](./screenpipe.md)
 - [Hugging Face AI Sheets](./aisheets.md)
 - [Airbyte](./airbyte.md)
 - [dlt](./dlt.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
 - [Great Expectations (GX Core)](./great-expectations.md)
-- [MarkItDown](./markitdown.md)
 
 ### Most Popular
 
@@ -75,6 +75,7 @@ _No star-tracked entries yet._
 - [Reducto](./reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
 - [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
 - [ScrapeGraphAI](./scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
+- [Screenpipe](./screenpipe.md) — Local daemon recording screen OCR and audio transcripts into a queryable store for agents
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
 - [Tavily](./tavily.md) — Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call

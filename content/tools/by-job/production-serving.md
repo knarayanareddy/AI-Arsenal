@@ -169,9 +169,11 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [LMCache](../serving-and-deployment/lmcache.md) | serving and deployment | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
+| [Mooncake](../serving-and-deployment/mooncake.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [OpenLLM](../serving-and-deployment/openllm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |

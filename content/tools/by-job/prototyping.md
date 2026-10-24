@@ -153,8 +153,10 @@ This table is exhaustive for tools tagged with job = prototyping.
 |---|---|---|---|---|---|---|---|
 | [AdalFlow](../dx-and-tooling/adalflow.md) | dx and tooling | open-source | Yes | Yes | Yes | python | watching |
 | [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [AI Engineering From Scratch](../dx-and-tooling/ai-engineering-from-scratch.md) | dx and tooling | open-source | Yes | Yes | Yes | python, rust, typescript | recommended |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | watching |
+| [Awesome-AITools](../dx-and-tooling/awesome-aitools.md) | dx and tooling | open-source | Yes | No | Yes | polyglot | solid-choice |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Claude Code](../dx-and-tooling/claude-code.md) | dx and tooling | usage-based | No | No | No | typescript | best-in-class |
@@ -169,9 +171,11 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
+| [gptme](../dx-and-tooling/gptme.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [headroom](../dx-and-tooling/headroom.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
+| [KiroCrew](../dx-and-tooling/kirocrew.md) | dx and tooling | open-source | Yes | Yes | Yes | python | watching |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | freemium | Yes | Yes | No | typescript, cpp | recommended |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
@@ -181,6 +185,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
+| [OpenUI](../dx-and-tooling/openui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Repomix](../dx-and-tooling/repomix.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |

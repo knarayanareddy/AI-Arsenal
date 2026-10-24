@@ -133,6 +133,7 @@ This table is exhaustive for tools tagged with job = structured-output.
 | [BAML](../dx-and-tooling/baml.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | paid | No | No | No | typescript | watching |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [DB-GPT](../orchestration/db-gpt.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Google Pomelli 2.0](../dx-and-tooling/google-pomelli-2-0.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
 | [Guidance](../model-layer/guidance.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
@@ -140,10 +141,12 @@ This table is exhaustive for tools tagged with job = structured-output.
 | [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [LM Format Enforcer](../model-layer/lm-format-enforcer.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
+| [OpenUI](../dx-and-tooling/openui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Outlines](../model-layer/outlines.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Reducto](../data-ingestion/reducto.md) | data ingestion | usage-based | Yes | No | No | python | solid-choice |
+| [RubyLLM](../orchestration/ruby-llm.md) | orchestration | open-source | Yes | Yes | Yes | ruby | recommended |
 | [Vaani](../dx-and-tooling/vaani.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
