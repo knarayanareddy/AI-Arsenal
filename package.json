@@ -38,7 +38,7 @@
     "generate:tool-facets": "node scripts/generate-tool-facet-guides.js",
     "generate:tools-by-job": "node scripts/generate-tools-by-job-tables.js",
     "prepare:data-release": "node scripts/prepare-data-release.js",
-    "generate:all": "pnpm run generate && pnpm run generate:search && pnpm run generate:toc && pnpm run generate:context && pnpm run generate:stats && pnpm run generate:readme-stats && pnpm run validate:data",
+    "generate:all": "pnpm run generate && pnpm run generate:search && pnpm run generate:toc && pnpm run generate:context && pnpm run generate:stats && pnpm run generate:readme-stats && pnpm run generate:tool-facets && pnpm run generate:tools-by-job && pnpm run validate:data",
     "update:stars": "node scripts/update-star-counts.js",
     "update:trending": "node scripts/calculate-trending.js",
     "check:links": "node scripts/check-links.js --all",

@@ -39,7 +39,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [optuna](./optuna-optuna.md)
 - [Qwen-VL-Series-Finetune](./qwen-vl-series-finetune.md)
 - [s3prl](./s3prl-s3prl.md)
-- [DeepSpec](./deepspec.md)
+- [torchtitan](./torchtitan.md)
 
 ### Most Popular
 
@@ -82,6 +82,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [rLLM](./rllm.md) — Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks
 - [s3prl](./s3prl-s3prl.md) — Research toolkit that wraps dozens of self-supervised speech pretraining methods behind one hidden-state interface, so comparisons run through a single call
 - [SkillOpt](./skillopt.md) — Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen
+- [torchtitan](./torchtitan.md) — PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points
 - [Transformer Lab](./transformerlab.md) — An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters
 - [verl](./verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
 - [VLM-R1](./vlm-r1.md) — Open framework for training vision-language models with reinforcement learning (GRPO/R1-style) to improve visual reasoning and grounded understanding

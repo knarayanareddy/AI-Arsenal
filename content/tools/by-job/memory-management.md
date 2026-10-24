@@ -135,6 +135,7 @@ This table is exhaustive for tools tagged with job = memory-management.
 | [Mem0](../orchestration/mem0.md) | orchestration | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Redis](../orchestration/redis-memory.md) | orchestration | self-hostable | Yes | Yes | Yes | polyglot | recommended |
+| [Screenpipe](../data-ingestion/screenpipe.md) | data ingestion | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [Zep](../orchestration/zep.md) | orchestration | usage-based | Yes | Yes | Yes | python, typescript | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

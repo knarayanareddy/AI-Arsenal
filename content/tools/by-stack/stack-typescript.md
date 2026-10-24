@@ -69,9 +69,12 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
+| [Agents-Anywhere](../orchestration/agents-anywhere.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | typescript | watching |
+| [AI Engineering From Scratch](../dx-and-tooling/ai-engineering-from-scratch.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, rust, typescript | recommended |
 | [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | data-labeling, prototyping | open-source | Yes | Yes | Yes | typescript | watching |
 | [BAML](../dx-and-tooling/baml.md) | dx and tooling | structured-output | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | structured-output | paid | No | No | No | typescript | watching |
+| [BeeAI Framework](../orchestration/beeai-framework.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Browserbase](../data-ingestion/browserbase.md) | data ingestion | web-scraping | open-source | Yes | No | No | typescript | watching |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript | recommended |
@@ -82,14 +85,18 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Codex Plugin for Claude Code](../dx-and-tooling/codex-plugin-cc.md) | dx and tooling | prototyping | freemium | Yes | No | Yes | typescript | recommended |
 | [Composio](../orchestration/composio.md) | orchestration | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
 | [Continue](../dx-and-tooling/continue-dev.md) | dx and tooling | prototyping | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Corsair](../dx-and-tooling/corsair.md) | dx and tooling | orchestration, security-and-guardrails | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript | recommended |
+| [DocsGPT](../orchestration/docsgpt.md) | orchestration | orchestration, vector-search | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
+| [Dust](../orchestration/dust.md) | orchestration | orchestration, vector-search | freemium | Yes | No | No | typescript | solid-choice |
 | [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
 | [Flowise](../orchestration/flowise.md) | orchestration | orchestration, prototyping | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | prototyping | freemium | Yes | No | Yes | typescript | recommended |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
+| [Harness SDK](../orchestration/harness-sdk.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | prompt-management, evaluation | paid | No | No | No | python, typescript | solid-choice |
 | [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | structured-output | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
@@ -104,7 +111,9 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
+| [OpenAgents](../orchestration/openagents.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | typescript | watching |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
+| [OpenUI](../dx-and-tooling/openui.md) | dx and tooling | prototyping, structured-output | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | orchestration | open-source | Yes | Yes | Yes | typescript | watching |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | vector-search | freemium | Yes | No | No | python, typescript | recommended |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | typescript, python | recommended |

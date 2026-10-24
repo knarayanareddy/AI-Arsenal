@@ -70,6 +70,8 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
 | [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Awesome-AITools](../dx-and-tooling/awesome-aitools.md) | dx and tooling | prototyping | open-source | Yes | No | Yes | polyglot | solid-choice |
+| [awesome-opensource-ai](../dx-and-tooling/awesome-opensource-ai.md) | dx and tooling | model-registry | open-source | Yes | No | Yes | polyglot | recommended |
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Cerebras Inference](../model-layer/cerebras-inference.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | watching |

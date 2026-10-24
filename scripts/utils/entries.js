@@ -59,8 +59,59 @@ export function buildIdIndex(entries) {
   return map;
 }
 
+// Timestamps that change on every run would otherwise make a no-op
+// regeneration look like a change, leaving generated files dirty in the
+// working tree after every `generate:all`.
+const GENERATED_STAMP_KEYS = ['generated_at', 'updated_at'];
+
+function withoutStamps(value) {
+  if (Array.isArray(value)) return value.map(withoutStamps);
+  if (value && typeof value === 'object') {
+    const out = {};
+    for (const [key, nested] of Object.entries(value)) {
+      if (GENERATED_STAMP_KEYS.includes(key)) continue;
+      out[key] = withoutStamps(nested);
+    }
+    return out;
+  }
+  return value;
+}
+
+function carryStamps(target, source) {
+  if (!target || typeof target !== 'object' || Array.isArray(target)) return target;
+  if (!source || typeof source !== 'object') return target;
+  for (const key of Object.keys(target)) {
+    if (GENERATED_STAMP_KEYS.includes(key) && typeof source[key] === 'string') {
+      target[key] = source[key];
+    } else if (target[key] && typeof target[key] === 'object') {
+      carryStamps(target[key], source[key]);
+    }
+  }
+  return target;
+}
+
 export async function writeJson(file, object) {
   await fs.mkdir(path.dirname(file), { recursive: true });
+  let existing = null;
+  try {
+    existing = await fs.readFile(file, 'utf8');
+  } catch {
+    existing = null;
+  }
+  if (existing !== null) {
+    try {
+      const current = JSON.parse(existing);
+      if (JSON.stringify(withoutStamps(current)) === JSON.stringify(withoutStamps(object))) {
+        // Nothing but the stamp moved: keep the stamp already on disk.
+        carryStamps(object, current);
+        const stable = `${JSON.stringify(object, null, 2)}\n`;
+        if (stable !== existing) await fs.writeFile(file, stable);
+        return;
+      }
+    } catch {
+      // Not JSON or unreadable: fall through and overwrite.
+    }
+  }
   await fs.writeFile(file, `${JSON.stringify(object, null, 2)}\n`);
 }
 

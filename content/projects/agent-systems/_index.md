@@ -45,16 +45,16 @@ Before selecting an agent system:
 
 ### Most Popular
 
+- [OpenClaw](./openclaw.md) — ⭐ 388702
 - [ECC](./ecc.md) — ⭐ 268797
 - [Hermes Agent](./hermes-agent.md) — ⭐ 249768
 - [opencode](./anomalyco-opencode.md) — ⭐ 210538
+- [opencode](./opencode.md) — ⭐ 203399
 - [Browser Use](./browser-use.md) — ⭐ 116618
 - [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 82874
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
 - [AnythingLLM](./anythingllm.md) — ⭐ 66555
 - [Strix](./strix.md) — ⭐ 65378
-- [OpenMontage](./openmontage.md) — ⭐ 61695
-- [MemPalace](./mempalace.md) — ⭐ 59335
 
 ### Browse All
 
@@ -75,6 +75,7 @@ Before selecting an agent system:
 - [conductor](./conductor-oss-conductor.md) — Apache-2.0 Java workflow engine giving long-running agent and microservice tasks durable retries, timers, and human steps
 - [Continue](./continue.md) — Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release
 - [CowAgent](./cowagent.md) — Python agent harness with three-tier memory, a knowledge wiki, self-evolution loops and multi-agent teams on any major LLM provider
+- [Cua](./cua.md) — Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
 - [dao-code](./dao-code.md) — TypeScript terminal coding agent built around DeepSeek V4's prefix cache, keeping the system prefix and tool table byte-stable
 - [DeepAnalyze](./deepanalyze.md) — Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports
 - [deepcode-cli](./deepcode-cli.md) — TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
@@ -93,6 +94,7 @@ Before selecting an agent system:
 - [InvokeAI](./invoke-ai-invokeai.md) — Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation
 - [kagent](./kagent-dev-kagent.md) — Kubernetes-native platform that runs AI agents as cluster workloads with declared tools, scheduled tasks, and event-driven triggers
 - [Khoj](./khoj.md) — Self-hostable personal AI that searches your documents and the web, answers with citations, and runs scheduled automations from any surface
+- [Kilo Code](./kilocode.md) — IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
 - [Leon](./leon.md) — TypeScript and Python personal assistant with native skills, layered memory and progressive computer use
 - [LibreChat](./librechat.md) — Self-hostable ChatGPT-style web client with multi-user auth, agents, MCP, skills and a sandboxed code interpreter
 - [browser](./lightpanda-io-browser.md) — AGPL-3.0 headless browser written in Zig that speaks CDP for fast agent navigation without a full rendering engine
@@ -103,6 +105,7 @@ Before selecting an agent system:
 - [meetily](./meetily.md) — Tauri desktop app that captures meetings, transcribes locally with Parakeet or Whisper and summarises through Ollama or a hosted provider
 - [MemPalace](./mempalace.md) — Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search
 - [Memvid](./memvid.md) — Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames
+- [mini-swe-agent](./mini-swe-agent.md) — Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution
 - [Mistral Vibe](./mistral-vibe.md) — Mistral's open-source terminal coding agent with subagent delegation, a trust-folder model and MCP support
 - [ml-intern](./ml-intern.md) — Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down
 - [Mobile-Agent](./mobileagent.md) — Alibaba Tongyi Lab's GUI agent family pairing Mobile-Agent orchestration with GUI-Owl vision-language models
@@ -113,6 +116,8 @@ Before selecting an agent system:
 - [Open Code Review](./open-code-review.md) — Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments
 - [open-codex-computer-use](./open-codex-computer-use.md) — MCP server giving Codex, Claude Code and Gemini CLI non-intrusive desktop control through the OS accessibility API
 - [OpenAI Swarm](./openai-swarm.md) — OpenAI's educational Python framework built on two primitives: an Agent and a handoff to another agent
+- [OpenClaw](./openclaw.md) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
+- [opencode](./opencode.md) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
 - [OpenGUI](./opengui.md) — Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces
 - [OpenMontage](./openmontage.md) — AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant
 - [OpenOSINT](./openosint.md) — Python OSINT agent wrapping 20 real investigation tools behind a REPL, CLI, MCP server and web UI, with a statement-layer entity graph
@@ -121,6 +126,7 @@ Before selecting an agent system:
 - [parlor](./parlor.md) — Python FastAPI voice stack giving a browser full-duplex-feel conversation with Gemma 4 via llama.cpp, Kokoro TTS and smart-turn detection
 - [Photo-agents](./photo-agents.md) — Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients
 - [Portkey AI Gateway](./portkey-gateway.md) — Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing
+- [PR-Agent](./pr-agent.md) — Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
 - [Qwen-Agent](./qwen-agent.md) — Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application
 - [QwenPaw](./qwenpaw.md) — AgentScope-based personal assistant with three-layer memory, kernel sandboxing, sub-agents and channels from DingTalk to Discord
 - [RD-Agent](./rd-agent.md) — Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining

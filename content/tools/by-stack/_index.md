@@ -16,6 +16,7 @@
 - [Tools by Stack — Julia](./stack-julia.md)
 - [Tools by Stack — Polyglot](./stack-polyglot.md)
 - [Tools by Stack — Python](./stack-python.md)
+- [Tools by Stack — Ruby](./stack-ruby.md)
 - [Tools by Stack — Rust](./stack-rust.md)
 - [Tools by Stack — Typescript](./stack-typescript.md)
 
@@ -31,5 +32,6 @@ _No star-tracked entries yet._
 - [Tools by Stack — Julia](./stack-julia.md) — Tools in the Arsenal filtered by Stack facet Julia, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Polyglot](./stack-polyglot.md) — Tools in the Arsenal filtered by Stack facet Polyglot, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Python](./stack-python.md) — Tools in the Arsenal filtered by Stack facet Python, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Ruby](./stack-ruby.md) — Tools in the Arsenal filtered by Stack facet Ruby, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Rust](./stack-rust.md) — Tools in the Arsenal filtered by Stack facet Rust, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Typescript](./stack-typescript.md) — Tools in the Arsenal filtered by Stack facet Typescript, with an auto-generated routing table that keeps this page current

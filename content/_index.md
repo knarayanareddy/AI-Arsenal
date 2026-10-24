@@ -6,44 +6,44 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 29 entries | 2026-09-28 |
-| [benchmarks](./benchmarks/) | 52 entries | 2026-09-28 |
-| [build examples](./build-examples/) | 8 entries | 2026-09-28 |
-| [community](./community/) | 58 entries | 2026-09-28 |
-| [digests](./digests/) | 1 entries | 2026-09-28 |
-| [observability](./observability/) | 16 entries | 2026-09-28 |
-| [projects](./projects/) | 500 entries | 2026-09-28 |
-| [research](./research/) | 142 entries | 2026-09-28 |
-| [skills](./skills/) | 28 entries | 2026-09-28 |
-| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-09-28 |
-| [tools](./tools/) | 245 entries | 2026-09-28 |
-| [trending](./trending/) | 4 entries | 2026-09-28 |
+| [architectures](./architectures/) | 29 entries | 2026-10-24 |
+| [benchmarks](./benchmarks/) | 52 entries | 2026-10-24 |
+| [build examples](./build-examples/) | 11 entries | 2026-10-24 |
+| [community](./community/) | 58 entries | 2026-10-24 |
+| [digests](./digests/) | 1 entries | 2026-10-24 |
+| [observability](./observability/) | 16 entries | 2026-10-24 |
+| [projects](./projects/) | 511 entries | 2026-10-24 |
+| [research](./research/) | 142 entries | 2026-10-24 |
+| [skills](./skills/) | 28 entries | 2026-10-24 |
+| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-24 |
+| [tools](./tools/) | 275 entries | 2026-10-24 |
+| [trending](./trending/) | 4 entries | 2026-10-24 |
 
 ## Recently Added
 
-- [agent-squad](./projects/frameworks/2fastlabs-agent-squad.md)
-- [instructor](./projects/frameworks/567-labs-instructor.md)
-- [9router](./projects/inference-engines/9router.md)
-- [goose](./projects/agent-systems/aaif-goose-goose.md)
-- [Agent_Memory_Techniques](./projects/frameworks/agent-memory-techniques.md)
-- [agent-rules-books](./projects/frameworks/agent-rules-books.md)
-- [agenticSeek](./projects/agent-systems/agenticseek.md)
-- [agents-best-practices](./projects/frameworks/agents-best-practices.md)
-- [aim](./projects/frameworks/aimhubio-aim.md)
-- [AionUi](./projects/agent-systems/aionui.md)
+- [GPUStack](./tools/serving-and-deployment/gpustack.md)
+- [ADK for Java (Agent Development Kit)](./tools/orchestration/adk-java.md)
+- [BeeAI Framework](./tools/orchestration/beeai-framework.md)
+- [Dust](./tools/orchestration/dust.md)
+- [LMCache](./tools/serving-and-deployment/lmcache.md)
+- [Mooncake](./tools/serving-and-deployment/mooncake.md)
+- [REEF](./tools/orchestration/reef.md)
+- [Agents-Anywhere](./tools/orchestration/agents-anywhere.md)
+- [OpenAgents](./tools/orchestration/openagents.md)
+- [RubyLLM](./tools/orchestration/ruby-llm.md)
 
 ## Most Popular
 
+- [OpenClaw](./projects/agent-systems/openclaw.md) — ⭐ 388702
 - [ECC](./projects/agent-systems/ecc.md) — ⭐ 268797
 - [Hermes Agent](./projects/agent-systems/hermes-agent.md) — ⭐ 249768
 - [opencode](./projects/agent-systems/anomalyco-opencode.md) — ⭐ 210538
+- [opencode](./projects/agent-systems/opencode.md) — ⭐ 203399
 - [tensorflow](./projects/frameworks/tensorflow-tensorflow.md) — ⭐ 200583
 - [Firecrawl](./projects/data-and-retrieval/firecrawl.md) — ⭐ 185940
 - [AutoGPT](./projects/frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./projects/inference-engines/ollama.md) — ⭐ 174059
 - [transformers](./projects/frameworks/huggingface-transformers.md) — ⭐ 166755
-- [Stable Diffusion WebUI](./projects/frameworks/stable-diffusion-webui.md) — ⭐ 164197
-- [ponytail](./projects/frameworks/ponytail.md) — ⭐ 147381
 
 ## Browse All
 
@@ -62,6 +62,9 @@
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md) — Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents
+- [ADK for Go (Agent Development Kit)](./tools/orchestration/adk-go.md) — Google's code-first Go toolkit for building, evaluating and deploying multi-agent systems
+- [ADK for Java (Agent Development Kit)](./tools/orchestration/adk-java.md) — Google's code-first Java toolkit for multi-agent systems on the JVM, with typed tools and tracing
+- [Google ADK (Agent Development Kit)](./tools/orchestration/adk-python.md) — Google's code-first Python SDK for building, evaluating and deploying multi-agent systems
 - [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md) — A planner/researcher/writer/reviewer LangGraph system with a citation-checked review loop and bounded retries
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -81,6 +84,7 @@
 - [Agentic Security](./tools/evaluation-and-observability/agentic-security.md) — Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites
 - [agenticSeek](./projects/agent-systems/agenticseek.md) — Self-hosted Python agent that routes browsing, coding and planning work to a local Ollama or LM Studio model through a bundled SearXNG instance
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
+- [Agents-Anywhere](./tools/orchestration/agents-anywhere.md) — Cross-device workbench for driving and monitoring agents on remote machines over ACP
 - [agents-best-practices](./projects/frameworks/agents-best-practices.md) — A provider-neutral Agent Skill covering harness design, permission ladders, typed tool contracts, and production-readiness audits
 - [AgentScope](./projects/frameworks/agentscope.md) — Apache-2.0 agent framework pairing composable SDK building blocks with a batteries-included FastAPI agent service, web UI, channels and scheduling
 - [Agno](./tools/orchestration/agno.md) — Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms
@@ -88,6 +92,7 @@
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
+- [AI Engineering From Scratch](./tools/dx-and-tooling/ai-engineering-from-scratch.md) — Dependency-light implementations of transformers, agent loops, RAG and MCP servers written to be read and run
 - [Envoy AI Gateway](./tools/serving-and-deployment/ai-gateway.md) — Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally
 - [AI Infra Guard](./tools/evaluation-and-observability/ai-infra-guard.md) — Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
@@ -150,9 +155,12 @@
 - [autogluon](./projects/frameworks/autogluon-autogluon.md) — AutoML that fits, tunes, and ensembles models behind a few lines and returns a fitted predictor
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AutoRAG](./projects/data-and-retrieval/autorag.md) — AutoRAG 2.0 self-evolving librarian agent that searches across retrieval methods, opens sources to verify, and curates cited answers
+- [Awesome-AITools](./tools/dx-and-tooling/awesome-aitools.md) — Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems
 - [awesome-japanese-llm](./projects/foundation-models/awesome-japanese-llm.md) — Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns
+- [awesome-opensource-ai](./tools/dx-and-tooling/awesome-opensource-ai.md) — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [AxonHub](./tools/serving-and-deployment/axonhub.md) — Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [BAML](./tools/dx-and-tooling/baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
@@ -162,6 +170,7 @@
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md) — 
 - [BIG-Bench Hard (BBH)](./benchmarks/general-llm/bbh.md) — 
 - [AGC-Bench: Measuring Artificial General Creativity](./research/evaluation-and-safety/beaty-2026-agc-bench.md) — An 78-dataset creativity benchmark paired with AGC-Judge, an open-weight judge calibrated to remove leniency bias.
+- [BeeAI Framework](./tools/orchestration/beeai-framework.md) — Agent framework with matching Python and TypeScript SDKs, event-stream telemetry and schema-validated tools
 - [BEIR](./benchmarks/retrieval-rag/beir.md) — 
 - [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./research/retrieval-and-memory/belikova-2026-after.md) — Introduces AFTER, a 382-task benchmark for testing whether procedural skills learned by agents transfer across tasks, roles, and model backbones.
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
@@ -281,6 +290,7 @@
 - [CopilotKit](./projects/frameworks/copilotkit.md) — React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol
 - [Coqui TTS](./projects/frameworks/coqui-tts.md) — A deep-learning toolkit for text-to-speech with dozens of pretrained models, training recipes, and the XTTS multilingual voice-cloning model
 - [Propagate Application Request IDs Into Every LLM Trace](./tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids.md) — 
+- [Corsair](./tools/dx-and-tooling/corsair.md) — Integration gateway handling user OAuth, token refresh and schema normalisation for agent tools
 - [Tools by Cost — Freemium](./tools/by-cost/cost-freemium.md) — Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Open Source](./tools/by-cost/cost-open-source.md) — Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Paid](./tools/by-cost/cost-paid.md) — Tools in the Arsenal filtered by Cost facet Paid, with an auto-generated routing table that keeps this page current
@@ -292,6 +302,7 @@
 - [Crawl4AI](./tools/data-ingestion/crawl4ai-tool.md) — Open-source crawler that returns LLM-ready Markdown from any page, with a paid cloud tier behind the same API
 - [CrewAI](./projects/frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [CRUXEval (Code Reasoning, Understanding, and eXecution)](./benchmarks/code/crux-eval.md) — 
+- [Cua](./projects/agent-systems/cua.md) — Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md) — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - [Cursor](./tools/dx-and-tooling/cursor.md) — AI-native code editor (VS Code fork) with agent mode, codebase-aware chat, and predictive multi-line edits
 - [cvat](./projects/data-and-retrieval/cvat-ai-cvat.md) — Web platform for annotating images, video, and 3D scenes with review workflows, consensus, and AI-assisted labeling
@@ -308,6 +319,7 @@
 - [Data Labeling Tools](./tools/by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
 - [presidio](./projects/frameworks/data-privacy-stack-presidio.md) — PII detection and redaction framework with NLP and pattern recognizers plus context-aware scoring
 - [DataChain](./projects/data-and-retrieval/datachain.md) — Versioned, typed dataset layer over S3, GCS and Azure with local query and an agent-facing knowledge base
+- [DB-GPT](./tools/orchestration/db-gpt.md) — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
 - [dbt](./projects/frameworks/dbt-labs-dbt.md) — SQL-first transformation tool that compiles a project of models into a warehouse DAG with tests and lineage
 - [Deduplicate Near-Duplicate Chunks Before Indexing](./tips-and-tricks/rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md) — 
 - [Deduplicate Training Data Before Fine-Tuning](./tips-and-tricks/fine-tuning/deduplicate-training-data-before-fine-tuning.md) — 
@@ -345,6 +357,7 @@
 - [DocETL](./tools/data-ingestion/docetl.md) — Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema
 - [docext](./projects/data-and-retrieval/docext.md) — On-premises document toolkit using vision-language models for image-to-markdown conversion, key information extraction, and IDP benchmarking
 - [Docling](./projects/data-and-retrieval/docling.md) — IBM-originated document parser producing a unified DoclingDocument with layout, tables, formulas and OCR
+- [DocsGPT](./tools/orchestration/docsgpt.md) — Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](./research/foundational/dosovitskiy-2020-vit.md) — Splits an image into fixed patches, embeds them like tokens, and feeds them to a plain Transformer encoder -- shows that with enough pretraining data a convolution-free model matches or beats CNNs on image classification
 - [Drop Low-Similarity Chunks With a Score Threshold](./tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./tips-and-tricks/cost-and-performance/drop-unused-conversation-history.md) — 
@@ -352,6 +365,7 @@
 - [DSPy](./projects/frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
 - [The Llama 3 Herd of Models](./research/foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [DuckDB](./projects/data-and-retrieval/duckdb.md) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
+- [Dust](./tools/orchestration/dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
 - [DVC](./tools/model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
 - [NVIDIA Dynamo](./projects/inference-engines/dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
 - [E2B](./tools/orchestration/e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents
@@ -462,7 +476,9 @@
 - [GPT Researcher](./projects/agent-systems/gpt-researcher.md) — Autonomous research agent that plans questions, fans out parallel scrapers, and publishes a cited report from web or local sources
 - [GPT-SoVITS](./projects/foundation-models/gpt-sovits.md) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
 - [GPTCache](./projects/inference-engines/gptcache.md) — A semantic cache for LLM applications that stores past query embeddings and responses to serve similar future queries from cache, cutting API cost and latency
+- [gptme](./tools/dx-and-tooling/gptme.md) — Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate
 - [GPU MODE Discord](./community/chat/gpu-mode-discord.md) — 
+- [GPUStack](./tools/serving-and-deployment/gpustack.md) — Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang
 - [Gradient Dissent (Weights & Biases)](./community/creators/gradient-dissent-podcast.md) — 
 - [Gradio](./tools/dx-and-tooling/gradio.md) — A Python library for building and sharing machine learning demos quickly
 - [Graphiti](./projects/data-and-retrieval/graphiti.md) — Framework for temporal knowledge graphs that track how facts change over time with provenance, incremental updates and hybrid retrieval
@@ -482,6 +498,7 @@
 - [Hamel Husain](./community/people/hamel-husain.md) — Focuses on practical LLM evaluation, error analysis, and product-quality workflows
 - [HarmBench](./benchmarks/safety/harmbench.md) — 
 - [harness-anything](./projects/agent-systems/harness-anything.md) — Windows-only Python toolset driving WPS, Microsoft Office, Zotero, Illustrator and Photoshop through 47 CLI commands over COM automation
+- [Harness SDK](./tools/orchestration/harness-sdk.md) — Dual-language SDK for stateful agent harnesses with MCP tooling and multi-cloud model failover
 - [Harrison Chase](./community/people/harrison-chase.md) — Builder behind LangChain and LangGraph ecosystem for LLM apps and agents
 - [Haystack](./projects/frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Deep Residual Learning for Image Recognition](./research/foundational/he-2015-resnet.md) — Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on
@@ -543,8 +560,11 @@
 - [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./observability/cost-usage/instrument-cost-per-feature.md) — 
 - [Interconnects (Nathan Lambert)](./community/newsletters/interconnects.md) — 
 - [Document Q&A Pipeline](./build-examples/data-pipelines/intermediate-document-qa-pipeline.md) — Parse, chunk, and index documents into Postgres via pgvector, with provenance metadata and a citation-backed Q&A query
+- [Multimodal Image Preprocessing: Orientation, Buckets, Normalisation](./build-examples/multimodal/intermediate-image-preprocessing-pipeline.md) — Decode, de-rotate, flatten, aspect-bucket, pad and normalise images for a vision-language ingestion pipeline, deterministically and offline
 - [Multi-Tool Agent](./build-examples/agent-systems/intermediate-multi-tool-agent.md) — A bounded multi-tool agent with validated arguments, Pydantic-typed final answers via Instructor, and Langfuse tracing
 - [Production RAG API](./build-examples/rag-systems/intermediate-production-rag-api.md) — A FastAPI RAG service backed by Qdrant with request-scoped tracing, source citations, and async ingestion
+- [Regression Eval Harness](./build-examples/evaluation-pipelines/intermediate-regression-eval-harness.md) — A golden-dataset eval harness with three deterministic scorers and baseline-diff regression detection, built so the model is injected and the suite runs offline
+- [Fine-Tuning Dataset Prep: Validate, Mask, Dedupe, Split](./build-examples/fine-tuning-workflows/intermediate-sft-dataset-prep.md) — Validate, template, tokenize, label-mask, dedupe and split a conversation dataset for supervised fine-tuning, before a single training step runs
 - [InternLM](./projects/foundation-models/internlm-internlm.md) — Shanghai AI Laboratory's bilingual model family, shipping InternLM, InternLM2, InternLM2.5, and InternLM3 weights alongside training and RLHF code
 - [InternVideo](./projects/foundation-models/internvideo.md) — Open-source family of video foundation models and datasets from OpenGVLab for video understanding, retrieval, and multimodal tasks
 - [InvokeAI](./projects/agent-systems/invoke-ai-invokeai.md) — Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation
@@ -579,8 +599,10 @@
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./research/retrieval-and-memory/khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers
 - [Khoj](./projects/agent-systems/khoj.md) — Self-hostable personal AI that searches your documents and the web, answers with citations, and runs scheduled automations from any surface
 - [Kiln](./projects/frameworks/kiln.md) — A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG
+- [Kilo Code](./projects/agent-systems/kilocode.md) — IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
 - [Kimi K2](./projects/foundation-models/kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kimi K2.5](./tools/model-layer/kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
+- [KiroCrew](./tools/dx-and-tooling/kirocrew.md) — Agent workspace that keeps files, shell history and learned helper scripts across sessions
 - [Large Language Models are Zero-Shot Reasoners](./research/agents-and-reasoning/kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
 - [Kokoro TTS](./projects/foundation-models/kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 - [kornia](./projects/frameworks/kornia-kornia.md) — Differentiable geometric computer-vision library of batched PyTorch operators for warps, homographies, and pose
@@ -603,6 +625,7 @@
 - [Langfuse](./projects/benchmarks-and-evals/langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [Langfuse Prompts](./tools/dx-and-tooling/langfuse-prompts.md) — Prompt management and versioning workflows inside the Langfuse observability platform
 - [LangGraph](./projects/frameworks/langgraph.md) — Graph-based framework for building stateful, durable LLM agents and workflows
+- [Langroid](./tools/orchestration/langroid.md) — Python multi-agent framework built on message passing, with Pydantic-validated tool calls and built-in RAG
 - [LangSmith](./tools/evaluation-and-observability/langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [LangSmith Hub](./tools/dx-and-tooling/langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
 - [LangSmith](./projects/benchmarks-and-evals/langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
@@ -646,6 +669,7 @@
 - [Lost in the Middle: How Language Models Use Long Contexts](./research/retrieval-and-memory/liu-2023-lost-in-the-middle.md) — Documented the U-shaped curve: LLMs use information at the beginning and end of long contexts far better than the middle — sometimes scoring worse with relevant context mid-prompt than with no context at all — the finding that shaped RAG context-ordering practice
 - [From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes](./research/evaluation-and-safety/liu-2026-mcp-execution-control.md) — Argues that MCP-style connection conventions need an explicit execution-control layer with principals, capabilities, data-flow checks, and deny-path audit.
 - [LiveCodeBench](./benchmarks/code/livecodebench.md) — 
+- [LiveKit Agents](./projects/frameworks/livekit-agents.md) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
 - [Llama 3.x](./projects/foundation-models/llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [LLaMA-Factory](./tools/model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
@@ -668,6 +692,7 @@
 - [LM Format Enforcer](./tools/model-layer/lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [LM Studio](./tools/dx-and-tooling/lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
 - [FastChat](./projects/inference-engines/lm-sys-fastchat.md) — Apache-2.0 research platform from LMSYS covering model training, multi-backend serving, and the Chatbot Arena evaluation harness
+- [LMCache](./tools/serving-and-deployment/lmcache.md) — KV cache layer that persists and shares prefix state across vLLM instances and storage tiers
 - [LMDeploy](./projects/inference-engines/lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
 - [lmms-eval](./projects/benchmarks-and-evals/lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 - [LobeChat (LobeHub)](./projects/agent-systems/lobe-chat.md) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
@@ -710,6 +735,7 @@
 - [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./research/evaluation-and-safety/mazaheri-2026-agentatlas.md) — Provides a diagnostic vocabulary for separating agent outcomes, control decisions, trajectory failures, and benchmark coverage instead of relying on one success score.
 - [MBPP](./benchmarks/code/mbpp.md) — 
 - [MCP Context Forge](./tools/serving-and-deployment/mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
+- [MCP Reference Servers](./projects/frameworks/mcp-servers.md) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - [mcpkernel](./projects/benchmarks-and-evals/mcpkernel.md) — An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations
 - [Measure Time-to-First-Token Separately From Total Generation Time](./tips-and-tricks/cost-and-performance/measure-first-token-latency.md) — 
 - [Track KV Cache Hit Rate for Long-Context Serving Economics](./tips-and-tricks/inference-and-serving/measure-kv-cache-hit-rate.md) — 
@@ -727,6 +753,7 @@
 - [MemPalace](./projects/agent-systems/mempalace.md) — Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search
 - [Memvid](./projects/agent-systems/memvid.md) — Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames
 - [SimPO: Simple Preference Optimization with a Reference-Free Reward](./research/training-and-alignment/meng-2024-simpo.md) — A preference-optimization objective that drops DPO's reference model, using the average log-probability of a response as an implicit reward plus a target margin — simpler, cheaper (no reference forward pass), and often stronger than DPO.
+- [Mesh-LLM](./tools/serving-and-deployment/mesh-llm.md) — Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint
 - [Mesop](./tools/dx-and-tooling/mesop.md) — Google Python UI framework for building web apps and AI prototypes
 - [Metaflow](./projects/frameworks/metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
 - [MetaGPT](./projects/frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
@@ -739,6 +766,7 @@
 - [doctr](./projects/inference-engines/mindee-doctr.md) — OCR library for documents that pairs a text-detection backend with a recognizer and reconstructs word-level geometry for downstream extraction
 - [MinerU](./tools/data-ingestion/mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models
 - [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./research/retrieval-and-memory/ming-2026-llm-wiki.md) — Recasts agent retrieval as search, reading, link traversal, and evidence-sufficiency decisions over a compiled, self-evolving wiki rather than flat embedding lookup.
+- [mini-swe-agent](./projects/agent-systems/mini-swe-agent.md) — Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution
 - [MiniCPM-V](./projects/foundation-models/minicpm-v.md) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - [Mirascope](./tools/orchestration/mirascope.md) — Decorator-based LLM interface with typed provider/model strings, Pydantic structured output and resumable tool loops
 - [Mistral / Mixtral](./projects/foundation-models/mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
@@ -769,6 +797,7 @@
 - [Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save](./observability/cost-usage/monitor-cache-hit-rate-and-token-savings.md) — 
 - [Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken](./observability/evaluation-quality/monitor-guardrail-trip-rate-in-production.md) — 
 - [Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks](./observability/evaluation-quality/monitor-retrieval-quality-in-production.md) — 
+- [Mooncake](./tools/serving-and-deployment/mooncake.md) — KVCache-centric serving platform that separates prefill from decode and moves caches over RDMA
 - [Moshi](./projects/foundation-models/moshi.md) — Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
 - [MOSS-TTS](./projects/foundation-models/moss-tts.md) — Open-source speech and sound generation model family for expressive, long-form, multi-speaker, and streaming audio
 - [MOVA](./projects/foundation-models/mova.md) — An OpenMOSS generative model that denoises video and audio jointly through asymmetric towers joined by cross-attention
@@ -822,13 +851,18 @@
 - [mmcv](./projects/frameworks/open-mmlab-mmcv.md) — Vision operator library and config-runner stack that the OpenMMLab detection and segmentation projects are built on
 - [Open R1 (Hugging Face)](./projects/training-and-alignment/open-r1.md) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - [Open-Sora](./projects/foundation-models/open-sora.md) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
+- [Open-SWE](./tools/orchestration/open-swe.md) — Asynchronous software-engineering agent that plans, edits and tests against a repository in an inspectable loop
 - [Open WebUI](./tools/dx-and-tooling/open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
+- [OpenAgents](./tools/orchestration/openagents.md) — TypeScript runtime for peer-to-peer agent networks with capability discovery and task routing
 - [GPT-4 Technical Report](./research/foundational/openai-2023-gpt4.md) — The GPT-4 report: human-professional-level results on real exams (top-10% bar exam), multimodal input, and loss predicted in advance from 1000x-smaller runs — while disclosing no architecture, size, or data details, setting the closed-frontier-report template
 - [OpenAI Agents SDK](./projects/frameworks/openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
 - [OpenAI Codex CLI](./tools/dx-and-tooling/openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [OpenAI Developer Community](./community/forums/openai-developer-forum.md) — 
 - [OpenAI Evals](./tools/evaluation-and-observability/openai-evals.md) — An open-source framework for evaluating language model behavior
 - [OpenAI Swarm](./projects/agent-systems/openai-swarm.md) — OpenAI's educational Python framework built on two primitives: an Agent and a handoff to another agent
+- [OpenClaw](./projects/agent-systems/openclaw.md) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
+- [opencode](./projects/agent-systems/opencode.md) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
+- [OpenCompass](./projects/benchmarks-and-evals/opencompass.md) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
 - [opencv](./projects/frameworks/opencv-opencv.md) — Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference
 - [opendataloader-pdf](./projects/data-and-retrieval/opendataloader-project-opendataloader-pdf.md) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
 - [OpenEnv](./projects/training-and-alignment/openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
@@ -847,9 +881,11 @@
 - [openscience](./projects/frameworks/openscience.md) — A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry
 - [OpenShell](./projects/frameworks/openshell.md) — NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration
 - [opensquilla](./projects/agent-systems/opensquilla.md) — Python microkernel agent whose local SquillaRouter picks the cheapest capable model per turn, with tool compression and one shared runtime
+- [OpenUI](./tools/dx-and-tooling/openui.md) — Open generative-UI stack that turns prompts and screenshots into React and Tailwind components
 - [OpenVINO](./projects/inference-engines/openvino.md) — Intel's open toolkit for optimizing and deploying AI inference across CPUs, integrated GPUs, and NPUs, with model conversion, quantization
 - [OpenVoice](./projects/foundation-models/openvoice.md) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 - [Opik](./projects/benchmarks-and-evals/opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
+- [optillm](./tools/serving-and-deployment/optillm.md) — OpenAI-compatible proxy that applies search, sampling and multi-agent strategies behind a model name
 - [optuna](./projects/training-and-alignment/optuna-optuna.md) — Define-by-run hyperparameter optimization with pruning, distributed trials, and a study-based API
 - [Orama](./projects/data-and-retrieval/orama.md) — A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server
 - [Orca](./tools/dx-and-tooling/orca.md) — Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree
@@ -888,6 +924,7 @@
 - [Pin Model Versions in Prompt Regression Tests](./tips-and-tricks/prompting/pin-model-versions-in-prompt-regression-tests.md) — 
 - [Pinecone](./tools/data-ingestion/pinecone.md) — A managed vector database for production semantic search applications
 - [Pinecone](./projects/data-and-retrieval/pinecone-vector-db.md) — Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API
+- [Pipecat](./projects/frameworks/pipecat.md) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
 - [Pipelock](./projects/benchmarks-and-evals/pipelock.md) — AI-agent firewall for MCP, A2A, HTTP, and WebSocket egress with exfiltration and SSRF controls
 - [Piper](./projects/inference-engines/piper-tts.md) — A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime
 - [Validity of LLMs as Data Annotators: AMALIA on Authority](./research/evaluation-and-safety/pita-2026-amalia-authority.md) — Tests whether agreement between the Portuguese AMALIA model and human authority annotations reflects valid construct reasoning or surface-correlated shortcuts.
@@ -901,6 +938,7 @@
 - [Portkey](./tools/serving-and-deployment/portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
 - [Portkey AI Gateway](./projects/agent-systems/portkey-gateway.md) — Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing
 - [AGI Maze as a Benchmark Framework for World-Modeling Agents](./research/agents-and-reasoning/potapov-2026-agi-maze.md) — A grid-maze benchmark showing LLMs do not build persistent internal world models, even with message history as memory.
+- [PR-Agent](./projects/agent-systems/pr-agent.md) — Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
 - [Practical AI (Changelog)](./community/creators/practical-ai-podcast.md) — 
 - [PraisonAI](./projects/frameworks/praisonai.md) — Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML
 - [Precompute Summaries, Embeddings, and Metadata Offline Instead of at Request Time](./tips-and-tricks/cost-and-performance/precompute-expensive-static-context.md) — 
@@ -979,6 +1017,7 @@
 - [Redact Secrets and Sensitive Data Before Writing to Traces](./tips-and-tricks/debugging-and-observability/redact-secrets-before-tracing.md) — 
 - [Redis](./tools/orchestration/redis-memory.md) — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 - [Reducto](./tools/data-ingestion/reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
+- [REEF](./tools/orchestration/reef.md) — Continual-learning infrastructure that turns live agent trajectories into reinforcement-learning updates
 - [Refact.ai](./projects/agent-systems/refact.md) — Archived Rust coding agent that planned, executed and iterated on engineering tasks inside the IDE
 - [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](./research/retrieval-and-memory/reimers-2019-sentence-bert.md) — Sentence-BERT: fine-tune BERT in a siamese architecture so sentences map to independently comparable embeddings — turning O(n²) cross-encoder comparison into O(n) encoding + vector similarity, and spawning the sentence-transformers library that underpins semantic search and RAG
 - [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](./research/evaluation-and-safety/ren-2026-gatemem.md) — Tests whether shared agent memory can provide useful long-horizon assistance without crossing principal boundaries or retaining explicitly deleted information.
@@ -1002,11 +1041,13 @@
 - [Route Easy Requests to a Smaller Model First](./tips-and-tricks/inference-and-serving/route-easy-requests-to-a-smaller-model-first.md) — 
 - [Classify Task Difficulty and Route Easy Requests to Cheaper Models](./tips-and-tricks/cost-and-performance/route-simple-tasks-to-smaller-models.md) — 
 - [rtk](./tools/dx-and-tooling/rtk.md) — Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it
+- [RubyLLM](./tools/orchestration/ruby-llm.md) — Idiomatic Ruby client for multi-provider chat, tool calling, structured output and embeddings
 - [RULER](./benchmarks/retrieval-rag/ruler.md) — 
 - [Run a Fast Eval Per Commit and a Full Eval Nightly](./tips-and-tricks/evaluation/run-a-fast-eval-per-commit-and-a-full-eval-nightly.md) — 
 - [Run Evals Multiple Times Before Trusting Small Deltas](./tips-and-tricks/evaluation/run-evals-multiple-times-before-trusting-deltas.md) — 
 - [llama_deploy](./projects/inference-engines/run-llama-llama-deploy.md) — Deployment layer that turns a LlamaIndex agentic workflow into running services with API and control-plane surfaces
 - [Run a Prompt-Injection Regression Suite on Every CI Run](./tips-and-tricks/evaluation/run-prompt-injection-regression-tests.md) — 
+- [RunAnywhere SDKs](./tools/serving-and-deployment/runanywhere-sdks.md) — Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core
 - [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./observability/incident-response/runbook-for-agent-and-rag-incidents.md) — 
 - [Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control](./observability/incident-response/runbook-for-model-provider-outage-and-failover.md) — 
 - [RunPod](./tools/serving-and-deployment/runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
@@ -1026,6 +1067,7 @@
 - [scikit-learn](./projects/frameworks/scikit-learn-scikit-learn.md) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
 - [Scope and Rotate LLM API Keys With Least Privilege](./tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md) — 
 - [ScrapeGraphAI](./tools/data-ingestion/scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
+- [Screenpipe](./tools/data-ingestion/screenpipe.md) — Local daemon recording screen OCR and audio transcripts into a queryable store for agents
 - [screenshot-to-code](./projects/agent-systems/screenshot-to-code.md) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
 - [SeaTicket](./tools/orchestration/seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents
 - [Sébastien Bubeck](./community/people/sebastian-bubeck.md) — Researches reasoning, small models, and theoretical aspects of AI systems
@@ -1094,6 +1136,7 @@
 - [Tools by Stack — Julia](./tools/by-stack/stack-julia.md) — Tools in the Arsenal filtered by Stack facet Julia, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Polyglot](./tools/by-stack/stack-polyglot.md) — Tools in the Arsenal filtered by Stack facet Polyglot, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Python](./tools/by-stack/stack-python.md) — Tools in the Arsenal filtered by Stack facet Python, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Ruby](./tools/by-stack/stack-ruby.md) — Tools in the Arsenal filtered by Stack facet Ruby, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Rust](./tools/by-stack/stack-rust.md) — Tools in the Arsenal filtered by Stack facet Rust, with an auto-generated routing table that keeps this page current
 - [Tools by Stack — Typescript](./tools/by-stack/stack-typescript.md) — Tools in the Arsenal filtered by Stack facet Typescript, with an auto-generated routing table that keeps this page current
 - [Stagehand](./projects/agent-systems/stagehand.md) — Browser agent SDK whose observe() returns real CSS selectors so credentials never reach the model
@@ -1171,6 +1214,7 @@
 - [ToolHive](./tools/serving-and-deployment/toolhive.md) — Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers
 - [Source Feed: ToolRadar / Techpresso](./trending/by-source/toolradar-techpresso.md) — 
 - [toon](./projects/frameworks/toon.md) — A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks
+- [torchtitan](./projects/training-and-alignment/torchtitan.md) — PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points
 - [torchtune](./tools/model-layer/torchtune.md) — PyTorch-native library for fine-tuning and experimenting with LLMs
 - [LLaMA: Open and Efficient Foundation Language Models](./research/foundational/touvron-2023-llama.md) — Trained 7B–65B models on public data only, overtraining far past Chinchilla-optimal to optimize inference cost rather than training cost — LLaMA-13B beat GPT-3-175B, and the weights' release ignited the open-model ecosystem
 - [Llama 2: Open Foundation and Fine-Tuned Chat Models](./research/foundational/touvron-2023-llama2.md) — The release that created the open-weight LLM ecosystem: commercially licensed 7B-70B models plus the most detailed public documentation of the RLHF chat-tuning pipeline at the time — the paper that taught the community how aligned chat models are actually made

@@ -111,6 +111,7 @@
           "rust",
           "go",
           "java",
+          "ruby",
           "cpp",
           "julia",
           "polyglot"

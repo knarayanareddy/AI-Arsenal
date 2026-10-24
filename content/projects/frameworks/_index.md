@@ -122,9 +122,11 @@ Before selecting a framework:
 - [learn-claude-code](./learn-claude-code.md) — A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle
 - [LightAgent](./lightagent.md) — A compact Python agent framework with hooks, durable sessions, graph memory, MCP adapters, and SQLite FTS5 retrieval
 - [LightGBM](./lightgbm-org-lightgbm.md) — Histogram-based gradient boosting library with leaf-wise tree growth and GOSS/EFB sampling, written in C++
+- [LiveKit Agents](./livekit-agents.md) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
 - [LlamaIndex](./llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
 - [Ludwig](./ludwig.md) — A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code
 - [Mastra](./mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
+- [MCP Reference Servers](./mcp-servers.md) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - [Metaflow](./metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
 - [MetaGPT](./metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
 - [Microsoft Agent Framework](./microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
@@ -144,6 +146,7 @@ Before selecting a framework:
 - [PaddleNLP](./paddlepaddle-paddlenlp.md) — PaddlePaddle library of pretrained NLP and multimodal models with LLM and SLM training and serving paths
 - [PaddleSpeech](./paddlespeech.md) — An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation
 - [PaddleX](./paddlex.md) — PaddlePaddle's all-in-one, low-code development toolkit offering ready model pipelines for OCR, vision, time series
+- [Pipecat](./pipecat.md) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
 - [PocketFlow](./pocketflow.md) — A hundred-line Python LLM framework whose Node, Flow, and nested-Flow primitives express multi-agent, RAG, and workflow patterns
 - [polyaxon](./polyaxon-polyaxon.md) — Control plane that tracks runs, pipelines, and agents with full lineage from experiment through to deployment and restart
 - [ponytail](./ponytail.md) — An agent skill that pushes agents toward the laziest sufficient solution, with a benchmarked code-volume reduction writeup

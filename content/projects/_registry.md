@@ -87,6 +87,7 @@
 | `cowagent` | [CowAgent](./agent-systems/cowagent.md) | Python agent harness with three-tier memory, a knowledge wiki, self-evolution loops and multi-agent teams on any major LLM provider |
 | `crawl4ai` | [Crawl4AI](./data-and-retrieval/crawl4ai.md) | Open-source crawler that turns any page into LLM-ready Markdown, runnable locally or through a hosted API with MCP |
 | `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
+| `cua` | [Cua](./agent-systems/cua.md) | Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux |
 | `cvat-ai-cvat` | [cvat](./data-and-retrieval/cvat-ai-cvat.md) | Web platform for annotating images, video, and 3D scenes with review workflows, consensus, and AI-assisted labeling |
 | `cve-mcp-server` | [cve-mcp-server](./benchmarks-and-evals/cve-mcp-server.md) | A FastMCP server exposing 28 security tools across 24 APIs behind one triage_cve call that computes a composite risk score |
 | `d4vinci-scrapling` | [Scrapling](./data-and-retrieval/d4vinci-scrapling.md) | BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts |
@@ -213,6 +214,7 @@
 | `kestra-io-kestra` | [kestra](./frameworks/kestra-io-kestra.md) | Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines |
 | `khoj` | [Khoj](./agent-systems/khoj.md) | Self-hostable personal AI that searches your documents and the web, answers with citations, and runs scheduled automations from any surface |
 | `kiln` | [Kiln](./frameworks/kiln.md) | A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG |
+| `kilocode` | [Kilo Code](./agent-systems/kilocode.md) | IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway |
 | `kimi-k2` | [Kimi K2](./foundation-models/kimi-k2.md) | Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters |
 | `kokoro` | [Kokoro TTS](./foundation-models/kokoro.md) | 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX |
 | `kornia-kornia` | [kornia](./frameworks/kornia-kornia.md) | Differentiable geometric computer-vision library of batched PyTorch operators for warps, homographies, and pose |
@@ -239,6 +241,7 @@
 | `liteparse` | [Liteparse](./data-and-retrieval/liteparse.md) | A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output |
 | `litgpt` | [LitGPT](./training-and-alignment/litgpt.md) | Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale |
 | `litserve` | [LitServe](./inference-engines/litserve.md) | Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code |
+| `livekit-agents` | [LiveKit Agents](./frameworks/livekit-agents.md) | Framework for realtime voice and video AI agents that join a LiveKit room as participants |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
 | `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
 | `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
@@ -263,6 +266,7 @@
 | `marker` | [Marker](./data-and-retrieval/marker.md) | Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts |
 | `mastra` | [Mastra](./frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
 | `maxkb` | [MaxKB](./agent-systems/maxkb.md) | Open-source knowledge-base agent platform with built-in RAG chunking, a workflow engine and MCP tool use in one Docker image |
+| `mcp-servers` | [MCP Reference Servers](./frameworks/mcp-servers.md) | Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents |
 | `mcpkernel` | [mcpkernel](./benchmarks-and-evals/mcpkernel.md) | An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations |
 | `medusa` | [medusa](./benchmarks-and-evals/medusa.md) | A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials |
 | `meetily` | [meetily](./agent-systems/meetily.md) | Tauri desktop app that captures meetings, transcribes locally with Parakeet or Whisper and summarises through Ollama or a hosted provider |
@@ -276,6 +280,7 @@
 | `microsoft-nni` | [NNI (Neural Network Intelligence)](./frameworks/microsoft-nni.md) | Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute |
 | `milvus` | [Milvus](./data-and-retrieval/milvus.md) | Distributed vector database in Go and C++ with HNSW and DiskANN indexes plus a single-binary Lite mode |
 | `mindee-doctr` | [doctr](./inference-engines/mindee-doctr.md) | OCR library for documents that pairs a text-detection backend with a recognizer and reconstructs word-level geometry for downstream extraction |
+| `mini-swe-agent` | [mini-swe-agent](./agent-systems/mini-swe-agent.md) | Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution |
 | `minicpm-v` | [MiniCPM-V](./foundation-models/minicpm-v.md) | Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
 | `mistral-rs` | [mistral.rs](./inference-engines/mistral-rs.md) | Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization |
@@ -325,6 +330,9 @@
 | `open-sora` | [Open-Sora](./foundation-models/open-sora.md) | Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openai-swarm` | [OpenAI Swarm](./agent-systems/openai-swarm.md) | OpenAI's educational Python framework built on two primitives: an Agent and a handoff to another agent |
+| `openclaw` | [OpenClaw](./agent-systems/openclaw.md) | Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use |
+| `opencode` | [opencode](./agent-systems/opencode.md) | Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split |
+| `opencompass` | [OpenCompass](./benchmarks-and-evals/opencompass.md) | LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration |
 | `opencv-opencv` | [opencv](./frameworks/opencv-opencv.md) | Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference |
 | `opendataloader-project-opendataloader-pdf` | [opendataloader-pdf](./data-and-retrieval/opendataloader-project-opendataloader-pdf.md) | Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility |
 | `openenv` | [OpenEnv](./training-and-alignment/openenv.md) | Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment |
@@ -360,6 +368,7 @@
 | `phoenix` | [Phoenix](./benchmarks-and-evals/phoenix.md) | Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems |
 | `photo-agents` | [Photo-agents](./agent-systems/photo-agents.md) | Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients |
 | `pinecone-vector-db` | [Pinecone](./data-and-retrieval/pinecone-vector-db.md) | Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API |
+| `pipecat` | [Pipecat](./frameworks/pipecat.md) | Frame-pipeline framework for building realtime voice agents and multimodal conversational applications |
 | `pipelock` | [Pipelock](./benchmarks-and-evals/pipelock.md) | AI-agent firewall for MCP, A2A, HTTP, and WebSocket egress with exfiltration and SSRF controls |
 | `piper-tts` | [Piper](./inference-engines/piper-tts.md) | A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime |
 | `pixelrag` | [PixelRAG](./data-and-retrieval/pixelrag.md) | Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill |
@@ -369,6 +378,7 @@
 | `polyaxon-polyaxon` | [polyaxon](./frameworks/polyaxon-polyaxon.md) | Control plane that tracks runs, pipelines, and agents with full lineage from experiment through to deployment and restart |
 | `ponytail` | [ponytail](./frameworks/ponytail.md) | An agent skill that pushes agents toward the laziest sufficient solution, with a benchmarked code-volume reduction writeup |
 | `portkey-gateway` | [Portkey AI Gateway](./agent-systems/portkey-gateway.md) | Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing |
+| `pr-agent` | [PR-Agent](./agent-systems/pr-agent.md) | Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff |
 | `praisonai` | [PraisonAI](./frameworks/praisonai.md) | Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML |
 | `pyannote-pyannote-audio` | [pyannote-audio](./frameworks/pyannote-pyannote-audio.md) | Neural building blocks for speaker diarization: activity detection, change detection, and speaker embeddings |
 | `pydantic-ai` | [Pydantic AI](./frameworks/pydantic-ai.md) | A Python agent framework built around typed models and structured outputs |
@@ -461,6 +471,7 @@
 | `tiktoken` | [tiktoken](./data-and-retrieval/tiktoken.md) | OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation |
 | `togethercomputer-redpajama-data` | [RedPajama-Data](./data-and-retrieval/togethercomputer-redpajama-data.md) | Preparation pipeline and filter configurations for assembling open web-scale pretraining corpora, released alongside the RedPajama V1 and V2 datasets |
 | `toon` | [toon](./frameworks/toon.md) | A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks |
+| `torchtitan` | [torchtitan](./training-and-alignment/torchtitan.md) | PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points |
 | `transformerlab` | [Transformer Lab](./training-and-alignment/transformerlab.md) | An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |
 | `trellis-2` | [TRELLIS.2](./foundation-models/trellis-2.md) | Microsoft's 4B image-to-3D generative model using a field-free sparse-voxel representation and physically based materials |

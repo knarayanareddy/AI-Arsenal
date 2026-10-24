@@ -193,6 +193,9 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [DB-GPT](../orchestration/db-gpt.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [DocsGPT](../orchestration/docsgpt.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
+| [Dust](../orchestration/dust.md) | orchestration | freemium | Yes | No | No | typescript | solid-choice |
 | [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | freemium | Yes | Yes | Yes | java | solid-choice |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
 | [FastEmbed](../model-layer/fastembed.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |

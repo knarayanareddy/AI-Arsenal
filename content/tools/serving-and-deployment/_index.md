@@ -27,16 +27,16 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [GPUStack](./gpustack.md)
+- [LMCache](./lmcache.md)
+- [Mooncake](./mooncake.md)
+- [RunAnywhere SDKs](./runanywhere-sdks.md)
+- [AxonHub](./axonhub.md)
+- [Mesh-LLM](./mesh-llm.md)
+- [optillm](./optillm.md)
 - [XiuRouter](./xiurouter.md)
 - [Envoy AI Gateway](./ai-gateway.md)
 - [MCP Context Forge](./mcp-context-forge.md)
-- [RamaLama](./ramalama.md)
-- [ToolHive](./toolhive.md)
-- [Anyscale](./anyscale.md)
-- [Baseten](./baseten.md)
-- [Cloudflare Workers AI](./cloudflare-workers-ai.md)
-- [Cog (Replicate)](./cog.md)
-- [CubeSandbox](./cubesandbox.md)
 
 ### Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 - [Envoy AI Gateway](./ai-gateway.md) — Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally
 - [Anyscale](./anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [AWS Bedrock](./aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
+- [AxonHub](./axonhub.md) — Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Baseten](./baseten.md) — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
 - [BentoML](./bentoml.md) — A framework for packaging, deploying, and scaling AI model services
@@ -57,21 +58,27 @@ _No star-tracked entries yet._
 - [Fireworks AI](./fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
 - [Fly.io](./fly-io.md) — Application hosting platform with global machines and GPU options for AI services
 - [Google Vertex AI](./google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
+- [GPUStack](./gpustack.md) — Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang
 - [Hugging Face Inference Endpoints](./hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [KServe](./kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
 - [KubeAI](./kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
 - [LiteLLM](./litellm.md) — A proxy and SDK for routing requests across many LLM providers
+- [LMCache](./lmcache.md) — KV cache layer that persists and shares prefix state across vLLM instances and storage tiers
 - [LoRAX](./lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
 - [MCP Context Forge](./mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
+- [Mesh-LLM](./mesh-llm.md) — Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint
 - [Modal](./modal.md) — A serverless platform for deploying Python apps and GPU workloads
+- [Mooncake](./mooncake.md) — KVCache-centric serving platform that separates prefill from decode and moves caches over RDMA
 - [NVIDIA NIM](./nvidia-nim.md) — Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs
 - [OpenLLM](./openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
+- [optillm](./optillm.md) — OpenAI-compatible proxy that applies search, sampling and multi-agent strategies behind a model name
 - [Portkey](./portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
 - [Railway](./railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
 - [RamaLama](./ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Ray](./ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Ray Serve](./ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python
 - [Replicate](./replicate.md) — A hosted platform for running and deploying machine learning models via API
+- [RunAnywhere SDKs](./runanywhere-sdks.md) — Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core
 - [RunPod](./runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
 - [SkyPilot](./skypilot.md) — Run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface
 - [Text Embeddings Inference (TEI)](./text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models

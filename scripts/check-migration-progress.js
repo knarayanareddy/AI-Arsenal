@@ -38,13 +38,16 @@ for (const entry of entries) {
   });
 
   const folderPhase = entry.file.split('/')[2]; // content/tools/{phase}/{id}.md
-  const phaseFolderMismatch = entry.data.phase && VALID_PHASES.has(folderPhase) && entry.data.phase !== folderPhase;
+  const inPhaseFolder = VALID_PHASES.has(folderPhase);
+  // A flat content/tools/<id>.md file is unmigrated even if it happens to carry
+  // every required field: the phase folder is part of the migration contract.
+  const phaseFolderMismatch = !inPhaseFolder || (entry.data.phase && entry.data.phase !== folderPhase);
 
   const record = {
     id: entry.data.id,
     file: entry.file,
     phase: entry.data.phase ?? null,
-    folder: VALID_PHASES.has(folderPhase) ? folderPhase : 'by-job (unmigrated)',
+    folder: inPhaseFolder ? folderPhase : 'flat-file (unmigrated)',
     missing_fields: missingFields,
     enrichment_status: entry.data.enrichment_status ?? null,
     phase_folder_mismatch: Boolean(phaseFolderMismatch)

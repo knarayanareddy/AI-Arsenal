@@ -135,6 +135,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
 | [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [Corsair](../dx-and-tooling/corsair.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [FuzzyAI](../evaluation-and-observability/fuzzyai.md) | evaluation and observability | open-source | Yes | Yes | Yes | polyglot | use-with-caution |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |

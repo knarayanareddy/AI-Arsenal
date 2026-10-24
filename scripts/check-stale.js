@@ -14,7 +14,7 @@ const invalid = [];
 for (const entry of await loadEntries({ includeContent: false })) {
   const dateString = entry.data.last_reviewed ?? entry.data.added_date ?? entry.data.published_date;
   if (!dateString) continue;
-  const date = parseISO(dateString);
+  const date = dateString instanceof Date ? dateString : parseISO(String(dateString));
   if (!isValid(date)) { invalid.push({ id: entry.data.id, path: entry.file, date: dateString }); continue; }
   const age_days = differenceInDays(now, date);
   if (age_days > threshold) stale.push({ id: entry.data.id, type: entry.type, path: entry.file, last_reviewed: dateString, age_days });

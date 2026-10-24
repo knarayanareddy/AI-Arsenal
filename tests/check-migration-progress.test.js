@@ -23,7 +23,8 @@ function isMigrated(entry) {
     return value === undefined || value === null || value === '';
   });
   const folderPhase = entry.file.split('/')[2];
-  const phaseFolderMismatch = entry.data.phase && VALID_PHASES.has(folderPhase) && entry.data.phase !== folderPhase;
+  const inPhaseFolder = VALID_PHASES.has(folderPhase);
+  const phaseFolderMismatch = !inPhaseFolder || (entry.data.phase && entry.data.phase !== folderPhase);
   return missingFields.length === 0 && !phaseFolderMismatch;
 }
 
@@ -77,10 +78,10 @@ test('migration-progress: a phase/folder mismatch is flagged as pending', () => 
   assert.equal(isMigrated(entry), false);
 });
 
-test('migration-progress: unrecognised folder names do not false-positive a mismatch', () => {
-  // content/tools/by-job/ is not one of the six VALID_PHASES, so an entry
-  // that happens to carry a phase field there should not be penalized twice
-  // for "mismatch" on top of its missing-fields failure.
+test('migration-progress: a tool outside the six phase folders is pending', () => {
+  // content/tools/by-job/ is not a phase folder. An entry that carries every
+  // required field there is still unmigrated: the phase folder is part of the
+  // migration contract, not a cosmetic detail.
   const entry = {
     file: 'content/tools/by-job/some-guide.md',
     data: {
@@ -91,5 +92,19 @@ test('migration-progress: unrecognised folder names do not false-positive a mism
       last_reviewed: '2026-06-30'
     }
   };
-  assert.equal(isMigrated(entry), true);
+  assert.equal(isMigrated(entry), false);
+});
+
+test('migration-progress: a flat content/tools/<id>.md file is pending even when complete', () => {
+  const entry = {
+    file: 'content/tools/airflow.md',
+    data: {
+      phase: 'orchestration',
+      audience: ['production'],
+      best_when: ['You already run batch pipelines'],
+      avoid_when: ['You need streaming-style orchestration'],
+      last_reviewed: '2026-06-30'
+    }
+  };
+  assert.equal(isMigrated(entry), false);
 });

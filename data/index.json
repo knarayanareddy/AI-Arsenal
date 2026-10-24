@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T21:43:51.807Z",
-    "total_projects": 500,
-    "total_tools": 218,
+    "generated_at": "2026-10-24T16:15:54.045Z",
+    "total_projects": 511,
+    "total_tools": 247,
     "total_papers": 138,
     "total_tips": 171,
     "total_people": 25,
     "total_digests": 1,
-    "total_guides": 59,
-    "total_build_examples": 8,
+    "total_guides": 60,
+    "total_build_examples": 11,
     "total_architectures": 29,
     "total_observability": 16,
     "total_community": 33,
@@ -292,6 +292,69 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "adk-go",
+      "type": "tool",
+      "name": "ADK for Go (Agent Development Kit)",
+      "description": "Google's code-first Go toolkit for building, evaluating and deploying multi-agent systems",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "structured-output",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/adk-go.md",
+      "url": "content/tools/orchestration/adk-go",
+      "last_updated": "2026-10-09",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "adk-java",
+      "type": "tool",
+      "name": "ADK for Java (Agent Development Kit)",
+      "description": "Google's code-first Java toolkit for multi-agent systems on the JVM, with typed tools and tracing",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "tracing",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/adk-java.md",
+      "url": "content/tools/orchestration/adk-java",
+      "last_updated": "2026-10-21",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "adk-python",
+      "type": "tool",
+      "name": "Google ADK (Agent Development Kit)",
+      "description": "Google's code-first Python SDK for building, evaluating and deploying multi-agent systems",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "structured-output",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/adk-python.md",
+      "url": "content/tools/orchestration/adk-python",
+      "last_updated": "2026-10-03",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -660,6 +723,27 @@
       "featured": false
     },
     {
+      "id": "agents-anywhere",
+      "type": "tool",
+      "name": "Agents-Anywhere",
+      "description": "Cross-device workbench for driving and monitoring agents on remote machines over ACP",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "security",
+        "local"
+      ],
+      "path": "content/tools/orchestration/agents-anywhere.md",
+      "url": "content/tools/orchestration/agents-anywhere",
+      "last_updated": "2026-10-18",
+      "category": null,
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agents-best-practices",
       "type": "project",
       "name": "agents-best-practices",
@@ -786,6 +870,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ai-engineering-from-scratch",
+      "type": "tool",
+      "name": "AI Engineering From Scratch",
+      "description": "Dependency-light implementations of transformers, agent loops, RAG and MCP servers written to be read and run",
+      "tags": [
+        "transformers",
+        "agents",
+        "rag",
+        "research",
+        "training"
+      ],
+      "path": "content/tools/dx-and-tooling/ai-engineering-from-scratch.md",
+      "url": "content/tools/dx-and-tooling/ai-engineering-from-scratch",
+      "last_updated": "2026-10-04",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -1933,6 +2038,26 @@
       "featured": false
     },
     {
+      "id": "awesome-aitools",
+      "type": "tool",
+      "name": "Awesome-AITools",
+      "description": "Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems",
+      "tags": [
+        "agents",
+        "llm",
+        "multimodal",
+        "local"
+      ],
+      "path": "content/tools/dx-and-tooling/awesome-aitools.md",
+      "url": "content/tools/dx-and-tooling/awesome-aitools",
+      "last_updated": "2026-10-11",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "awesome-japanese-llm",
       "type": "project",
       "name": "awesome-japanese-llm",
@@ -1947,6 +2072,26 @@
       "last_updated": "2026-09-28",
       "category": "llms",
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "awesome-opensource-ai",
+      "type": "tool",
+      "name": "awesome-opensource-ai",
+      "description": "Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "rag",
+        "foundational"
+      ],
+      "path": "content/tools/dx-and-tooling/awesome-opensource-ai.md",
+      "url": "content/tools/dx-and-tooling/awesome-opensource-ai",
+      "last_updated": "2026-10-08",
+      "category": null,
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -1985,6 +2130,26 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "axonhub",
+      "type": "tool",
+      "name": "AxonHub",
+      "description": "Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key",
+      "tags": [
+        "routing",
+        "observability",
+        "monitoring",
+        "llm"
+      ],
+      "path": "content/tools/serving-and-deployment/axonhub.md",
+      "url": "content/tools/serving-and-deployment/axonhub",
+      "last_updated": "2026-10-11",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -2154,6 +2319,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "beeai-framework",
+      "type": "tool",
+      "name": "BeeAI Framework",
+      "description": "Agent framework with matching Python and TypeScript SDKs, event-stream telemetry and schema-validated tools",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "tracing",
+        "local"
+      ],
+      "path": "content/tools/orchestration/beeai-framework.md",
+      "url": "content/tools/orchestration/beeai-framework",
+      "last_updated": "2026-10-21",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -4427,6 +4613,27 @@
       "featured": false
     },
     {
+      "id": "corsair",
+      "type": "tool",
+      "name": "Corsair",
+      "description": "Integration gateway handling user OAuth, token refresh and schema normalisation for agent tools",
+      "tags": [
+        "agents",
+        "tool-use",
+        "security",
+        "structured-output",
+        "self-hosted"
+      ],
+      "path": "content/tools/dx-and-tooling/corsair.md",
+      "url": "content/tools/dx-and-tooling/corsair",
+      "last_updated": "2026-10-03",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cost-freemium",
       "type": "guide",
       "name": "Tools by Cost — Freemium",
@@ -4628,6 +4835,26 @@
       "category": "code",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cua",
+      "type": "project",
+      "name": "Cua",
+      "description": "Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux",
+      "tags": [
+        "agents",
+        "tool-use",
+        "benchmark",
+        "evaluation"
+      ],
+      "path": "content/projects/agent-systems/cua.md",
+      "url": "content/projects/agent-systems/cua",
+      "last_updated": "2026-09-03",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -4925,6 +5152,29 @@
       "category": "data-pipelines",
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "db-gpt",
+      "type": "tool",
+      "name": "DB-GPT",
+      "description": "Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving",
+      "tags": [
+        "agents",
+        "rag",
+        "llm",
+        "self-hosted",
+        "data",
+        "security",
+        "local"
+      ],
+      "path": "content/tools/orchestration/db-gpt.md",
+      "url": "content/tools/orchestration/db-gpt",
+      "last_updated": "2026-10-11",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -5632,6 +5882,27 @@
       "featured": false
     },
     {
+      "id": "docsgpt",
+      "type": "tool",
+      "name": "DocsGPT",
+      "description": "Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents",
+        "self-hosted",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/docsgpt.md",
+      "url": "content/tools/orchestration/docsgpt",
+      "last_updated": "2026-10-02",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dosovitskiy-2020-vit",
       "type": "paper",
       "name": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
@@ -5761,6 +6032,27 @@
       "category": "data-pipelines",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dust",
+      "type": "tool",
+      "name": "Dust",
+      "description": "Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing",
+      "tags": [
+        "agents",
+        "rag",
+        "orchestration",
+        "retrieval",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/dust.md",
+      "url": "content/tools/orchestration/dust",
+      "last_updated": "2026-10-24",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -7858,6 +8150,27 @@
       "featured": false
     },
     {
+      "id": "gptme",
+      "type": "tool",
+      "name": "gptme",
+      "description": "Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate",
+      "tags": [
+        "agents",
+        "code-gen",
+        "tool-use",
+        "local",
+        "self-hosted"
+      ],
+      "path": "content/tools/dx-and-tooling/gptme.md",
+      "url": "content/tools/dx-and-tooling/gptme",
+      "last_updated": "2026-10-10",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gpu-mode-discord",
       "type": "community",
       "name": "GPU MODE Discord",
@@ -7870,6 +8183,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "gpustack",
+      "type": "tool",
+      "name": "GPUStack",
+      "description": "Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang",
+      "tags": [
+        "inference",
+        "kubernetes",
+        "self-hosted",
+        "multimodal",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/gpustack.md",
+      "url": "content/tools/serving-and-deployment/gpustack",
+      "last_updated": "2026-10-24",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8226,6 +8560,27 @@
       "last_updated": "2026-09-28",
       "category": "agents",
       "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "harness-sdk",
+      "type": "tool",
+      "name": "Harness SDK",
+      "description": "Dual-language SDK for stateful agent harnesses with MCP tooling and multi-cloud model failover",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "stateful",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/harness-sdk.md",
+      "url": "content/tools/orchestration/harness-sdk",
+      "last_updated": "2026-10-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -9369,6 +9724,26 @@
       "featured": false
     },
     {
+      "id": "intermediate-image-preprocessing-pipeline",
+      "type": "build-example",
+      "name": "Multimodal Image Preprocessing: Orientation, Buckets, Normalisation",
+      "description": "Decode, de-rotate, flatten, aspect-bucket, pad and normalise images for a vision-language ingestion pipeline, deterministically and offline",
+      "tags": [
+        "data",
+        "inference",
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/build-examples/multimodal/intermediate-image-preprocessing-pipeline.md",
+      "url": "content/build-examples/multimodal/intermediate-image-preprocessing-pipeline",
+      "last_updated": "2026-09-03",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "intermediate-multi-tool-agent",
       "type": "build-example",
       "name": "Multi-Tool Agent",
@@ -9400,6 +9775,44 @@
       "path": "content/build-examples/rag-systems/intermediate-production-rag-api.md",
       "url": "content/build-examples/rag-systems/intermediate-production-rag-api",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "intermediate-regression-eval-harness",
+      "type": "build-example",
+      "name": "Regression Eval Harness",
+      "description": "A golden-dataset eval harness with three deterministic scorers and baseline-diff regression detection, built so the model is injected and the suite runs offline",
+      "tags": [
+        "evaluation",
+        "benchmark"
+      ],
+      "path": "content/build-examples/evaluation-pipelines/intermediate-regression-eval-harness.md",
+      "url": "content/build-examples/evaluation-pipelines/intermediate-regression-eval-harness",
+      "last_updated": "2026-09-03",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "intermediate-sft-dataset-prep",
+      "type": "build-example",
+      "name": "Fine-Tuning Dataset Prep: Validate, Mask, Dedupe, Split",
+      "description": "Validate, template, tokenize, label-mask, dedupe and split a conversation dataset for supervised fine-tuning, before a single training step runs",
+      "tags": [
+        "data",
+        "evaluation",
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/build-examples/fine-tuning-workflows/intermediate-sft-dataset-prep.md",
+      "url": "content/build-examples/fine-tuning-workflows/intermediate-sft-dataset-prep",
+      "last_updated": "2026-09-03",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -10050,6 +10463,26 @@
       "featured": false
     },
     {
+      "id": "kilocode",
+      "type": "project",
+      "name": "Kilo Code",
+      "description": "IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use",
+        "routing"
+      ],
+      "path": "content/projects/agent-systems/kilocode.md",
+      "url": "content/projects/agent-systems/kilocode",
+      "last_updated": "2026-09-03",
+      "category": "code-generation",
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "kimi-k2",
       "type": "project",
       "name": "Kimi K2",
@@ -10083,6 +10516,28 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kirocrew",
+      "type": "tool",
+      "name": "KiroCrew",
+      "description": "Agent workspace that keeps files, shell history and learned helper scripts across sessions",
+      "tags": [
+        "agents",
+        "code-gen",
+        "orchestration",
+        "stateful",
+        "memory",
+        "local"
+      ],
+      "path": "content/tools/dx-and-tooling/kirocrew.md",
+      "url": "content/tools/dx-and-tooling/kirocrew",
+      "last_updated": "2026-10-05",
+      "category": null,
+      "maturity": "alpha",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -10499,6 +10954,27 @@
       "cost_model": "open-source",
       "status": "active",
       "featured": true
+    },
+    {
+      "id": "langroid",
+      "type": "tool",
+      "name": "Langroid",
+      "description": "Python multi-agent framework built on message passing, with Pydantic-validated tool calls and built-in RAG",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "rag",
+        "retrieval"
+      ],
+      "path": "content/tools/orchestration/langroid.md",
+      "url": "content/tools/orchestration/langroid",
+      "last_updated": "2026-10-09",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
     },
     {
       "id": "langsmith",
@@ -11314,6 +11790,26 @@
       "featured": false
     },
     {
+      "id": "livekit-agents",
+      "type": "project",
+      "name": "LiveKit Agents",
+      "description": "Framework for realtime voice and video AI agents that join a LiveKit room as participants",
+      "tags": [
+        "voice",
+        "agents",
+        "streaming",
+        "tool-use"
+      ],
+      "path": "content/projects/frameworks/livekit-agents.md",
+      "url": "content/projects/frameworks/livekit-agents",
+      "last_updated": "2026-09-03",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llama-3",
       "type": "project",
       "name": "Llama 3.x",
@@ -11733,6 +12229,27 @@
       "last_updated": "2026-09-28",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lmcache",
+      "type": "tool",
+      "name": "LMCache",
+      "description": "KV cache layer that persists and shares prefix state across vLLM instances and storage tiers",
+      "tags": [
+        "caching",
+        "inference",
+        "efficiency",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/tools/serving-and-deployment/lmcache.md",
+      "url": "content/tools/serving-and-deployment/lmcache",
+      "last_updated": "2026-10-20",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -12545,6 +13062,26 @@
       "featured": false
     },
     {
+      "id": "mcp-servers",
+      "type": "project",
+      "name": "MCP Reference Servers",
+      "description": "Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents",
+      "tags": [
+        "tool-use",
+        "agents",
+        "structured-output",
+        "security"
+      ],
+      "path": "content/projects/frameworks/mcp-servers.md",
+      "url": "content/projects/frameworks/mcp-servers",
+      "last_updated": "2026-09-03",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mcpkernel",
       "type": "project",
       "name": "mcpkernel",
@@ -12863,6 +13400,27 @@
       "featured": false
     },
     {
+      "id": "mesh-llm",
+      "type": "tool",
+      "name": "Mesh-LLM",
+      "description": "Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint",
+      "tags": [
+        "inference",
+        "routing",
+        "self-hosted",
+        "edge",
+        "local"
+      ],
+      "path": "content/tools/serving-and-deployment/mesh-llm.md",
+      "url": "content/tools/serving-and-deployment/mesh-llm",
+      "last_updated": "2026-10-10",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mesop",
       "type": "tool",
       "name": "Mesop",
@@ -13093,6 +13651,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "mini-swe-agent",
+      "type": "project",
+      "name": "mini-swe-agent",
+      "description": "Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use",
+        "docker"
+      ],
+      "path": "content/projects/agent-systems/mini-swe-agent.md",
+      "url": "content/projects/agent-systems/mini-swe-agent",
+      "last_updated": "2026-09-03",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -13660,6 +14238,26 @@
       "category": "evaluation-quality",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mooncake",
+      "type": "tool",
+      "name": "Mooncake",
+      "description": "KVCache-centric serving platform that separates prefill from decode and moves caches over RDMA",
+      "tags": [
+        "inference",
+        "caching",
+        "efficiency",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/mooncake.md",
+      "url": "content/tools/serving-and-deployment/mooncake",
+      "last_updated": "2026-10-20",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14672,6 +15270,26 @@
       "featured": false
     },
     {
+      "id": "open-swe",
+      "type": "tool",
+      "name": "Open-SWE",
+      "description": "Asynchronous software-engineering agent that plans, edits and tests against a repository in an inspectable loop",
+      "tags": [
+        "agents",
+        "code-gen",
+        "orchestration",
+        "tool-use"
+      ],
+      "path": "content/tools/orchestration/open-swe.md",
+      "url": "content/tools/orchestration/open-swe",
+      "last_updated": "2026-10-04",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "open-webui",
       "type": "tool",
       "name": "Open WebUI",
@@ -14687,6 +15305,27 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openagents",
+      "type": "tool",
+      "name": "OpenAgents",
+      "description": "TypeScript runtime for peer-to-peer agent networks with capability discovery and task routing",
+      "tags": [
+        "agents",
+        "orchestration",
+        "routing",
+        "serverless",
+        "cloud"
+      ],
+      "path": "content/tools/orchestration/openagents.md",
+      "url": "content/tools/orchestration/openagents",
+      "last_updated": "2026-10-18",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -14798,6 +15437,66 @@
       "last_updated": "2026-07-12",
       "category": "agents",
       "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openclaw",
+      "type": "project",
+      "name": "OpenClaw",
+      "description": "Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use",
+      "tags": [
+        "agents",
+        "memory",
+        "tool-use",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/openclaw.md",
+      "url": "content/projects/agent-systems/openclaw",
+      "last_updated": "2026-09-03",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
+      "status": "active",
+      "featured": true
+    },
+    {
+      "id": "opencode",
+      "type": "project",
+      "name": "opencode",
+      "description": "Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use",
+        "streaming"
+      ],
+      "path": "content/projects/agent-systems/opencode.md",
+      "url": "content/projects/agent-systems/opencode",
+      "last_updated": "2026-09-03",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": true
+    },
+    {
+      "id": "opencompass",
+      "type": "project",
+      "name": "OpenCompass",
+      "description": "LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "llm",
+        "batching"
+      ],
+      "path": "content/projects/benchmarks-and-evals/opencompass.md",
+      "url": "content/projects/benchmarks-and-evals/opencompass",
+      "last_updated": "2026-09-03",
+      "category": "evaluation",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15150,6 +15849,27 @@
       "featured": false
     },
     {
+      "id": "openui",
+      "type": "tool",
+      "name": "OpenUI",
+      "description": "Open generative-UI stack that turns prompts and screenshots into React and Tailwind components",
+      "tags": [
+        "code-gen",
+        "llm",
+        "structured-output",
+        "local",
+        "self-hosted"
+      ],
+      "path": "content/tools/dx-and-tooling/openui.md",
+      "url": "content/tools/dx-and-tooling/openui",
+      "last_updated": "2026-10-11",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openvino",
       "type": "project",
       "name": "OpenVINO",
@@ -15204,6 +15924,27 @@
       "last_updated": "2026-07-01",
       "category": "observability",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "optillm",
+      "type": "tool",
+      "name": "optillm",
+      "description": "OpenAI-compatible proxy that applies search, sampling and multi-agent strategies behind a model name",
+      "tags": [
+        "reasoning",
+        "inference",
+        "routing",
+        "llm",
+        "tool-use"
+      ],
+      "path": "content/tools/serving-and-deployment/optillm.md",
+      "url": "content/tools/serving-and-deployment/optillm",
+      "last_updated": "2026-10-10",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15936,6 +16677,26 @@
       "featured": false
     },
     {
+      "id": "pipecat",
+      "type": "project",
+      "name": "Pipecat",
+      "description": "Frame-pipeline framework for building realtime voice agents and multimodal conversational applications",
+      "tags": [
+        "voice",
+        "streaming",
+        "agents",
+        "multimodal"
+      ],
+      "path": "content/projects/frameworks/pipecat.md",
+      "url": "content/projects/frameworks/pipecat",
+      "last_updated": "2026-09-03",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pipelock",
       "type": "project",
       "name": "Pipelock",
@@ -16188,6 +16949,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "pr-agent",
+      "type": "project",
+      "name": "PR-Agent",
+      "description": "Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff",
+      "tags": [
+        "code-gen",
+        "agents",
+        "evaluation",
+        "guardrails"
+      ],
+      "path": "content/projects/agent-systems/pr-agent.md",
+      "url": "content/projects/agent-systems/pr-agent",
+      "last_updated": "2026-09-03",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -17649,6 +18430,27 @@
       "featured": false
     },
     {
+      "id": "reef",
+      "type": "tool",
+      "name": "REEF",
+      "description": "Continual-learning infrastructure that turns live agent trajectories into reinforcement-learning updates",
+      "tags": [
+        "agents",
+        "fine-tuning",
+        "training",
+        "reasoning",
+        "research"
+      ],
+      "path": "content/tools/orchestration/reef.md",
+      "url": "content/tools/orchestration/reef",
+      "last_updated": "2026-10-20",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "refact",
       "type": "project",
       "name": "Refact.ai",
@@ -18094,6 +18896,27 @@
       "featured": false
     },
     {
+      "id": "ruby-llm",
+      "type": "tool",
+      "name": "RubyLLM",
+      "description": "Idiomatic Ruby client for multi-provider chat, tool calling, structured output and embeddings",
+      "tags": [
+        "llm",
+        "orchestration",
+        "tool-use",
+        "structured-output",
+        "embeddings"
+      ],
+      "path": "content/tools/orchestration/ruby-llm.md",
+      "url": "content/tools/orchestration/ruby-llm",
+      "last_updated": "2026-10-18",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ruler",
       "type": "benchmark",
       "name": "RULER",
@@ -18184,6 +19007,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "runanywhere-sdks",
+      "type": "tool",
+      "name": "RunAnywhere SDKs",
+      "description": "Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core",
+      "tags": [
+        "local",
+        "edge",
+        "multimodal",
+        "quantization",
+        "inference"
+      ],
+      "path": "content/tools/serving-and-deployment/runanywhere-sdks.md",
+      "url": "content/tools/serving-and-deployment/runanywhere-sdks",
+      "last_updated": "2026-10-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -18530,6 +19374,28 @@
       "path": "content/tools/data-ingestion/scrapegraphai.md",
       "url": "content/tools/data-ingestion/scrapegraphai",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "screenpipe",
+      "type": "tool",
+      "name": "Screenpipe",
+      "description": "Local daemon recording screen OCR and audio transcripts into a queryable store for agents",
+      "tags": [
+        "local",
+        "memory",
+        "multimodal",
+        "agents",
+        "security",
+        "self-hosted"
+      ],
+      "path": "content/tools/data-ingestion/screenpipe.md",
+      "url": "content/tools/data-ingestion/screenpipe",
+      "last_updated": "2026-10-02",
       "category": null,
       "maturity": "beta",
       "cost_model": "open-source",
@@ -19822,6 +20688,24 @@
       ],
       "path": "content/tools/by-stack/stack-python.md",
       "url": "content/tools/by-stack/stack-python",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-ruby",
+      "type": "guide",
+      "name": "Tools by Stack — Ruby",
+      "description": "Tools in the Arsenal filtered by Stack facet Ruby, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-ruby.md",
+      "url": "content/tools/by-stack/stack-ruby",
       "last_updated": "2026-07-07",
       "category": "tools",
       "maturity": null,
@@ -21268,6 +22152,26 @@
       "path": "content/projects/frameworks/toon.md",
       "url": "content/projects/frameworks/toon",
       "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "torchtitan",
+      "type": "project",
+      "name": "torchtitan",
+      "description": "PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points",
+      "tags": [
+        "training",
+        "pytorch",
+        "fine-tuning",
+        "efficiency"
+      ],
+      "path": "content/projects/training-and-alignment/torchtitan.md",
+      "url": "content/projects/training-and-alignment/torchtitan",
+      "last_updated": "2026-09-03",
       "category": "llms",
       "maturity": "beta",
       "cost_model": "open-source",

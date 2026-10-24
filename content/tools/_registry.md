@@ -7,12 +7,17 @@
 | `accelerate` | [Hugging Face Accelerate](./model-layer/accelerate.md) | Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision |
 | `adalflow` | [AdalFlow](./dx-and-tooling/adalflow.md) | PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted |
 | `addyosmani-agent-skills` | [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) | Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents |
+| `adk-go` | [ADK for Go (Agent Development Kit)](./orchestration/adk-go.md) | Google's code-first Go toolkit for building, evaluating and deploying multi-agent systems |
+| `adk-java` | [ADK for Java (Agent Development Kit)](./orchestration/adk-java.md) | Google's code-first Java toolkit for multi-agent systems on the JVM, with typed tools and tracing |
+| `adk-python` | [Google ADK (Agent Development Kit)](./orchestration/adk-python.md) | Google's code-first Python SDK for building, evaluating and deploying multi-agent systems |
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
 | `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Open-source CLI that gives an agent read and search access to Twitter, Reddit, YouTube, Bilibili, Xiaohongshu and GitHub without paid APIs or per-site |
 | `agentic-security` | [Agentic Security](./evaluation-and-observability/agentic-security.md) | Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites |
 | `agentops` | [AgentOps](./evaluation-and-observability/agentops.md) | Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK |
+| `agents-anywhere` | [Agents-Anywhere](./orchestration/agents-anywhere.md) | Cross-device workbench for driving and monitoring agents on remote machines over ACP |
 | `agno` | [Agno](./orchestration/agno.md) | Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms |
 | `agnt-hub` | [AGNT.Hub](./orchestration/agnt-hub.md) | Build and manage secure, private AI agents with custom skills and policies |
+| `ai-engineering-from-scratch` | [AI Engineering From Scratch](./dx-and-tooling/ai-engineering-from-scratch.md) | Dependency-light implementations of transformers, agent loops, RAG and MCP servers written to be read and run |
 | `ai-gateway` | [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md) | Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally |
 | `ai-infra-guard` | [AI Infra Guard](./evaluation-and-observability/ai-infra-guard.md) | Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product |
 | `aider` | [Aider](./dx-and-tooling/aider.md) | Terminal pair-programming tool that maps your codebase, edits files in place and auto-commits each change so you can diff and undo with git |
@@ -23,12 +28,16 @@
 | `anyscale` | [Anyscale](./serving-and-deployment/anyscale.md) | Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters |
 | `argilla` | [Argilla](./data-ingestion/argilla.md) | Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows |
 | `astra-autonomous-pentest` | [Astra Autonomous Pentest](./evaluation-and-observability/astra-autonomous-pentest.md) | Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure |
+| `awesome-aitools` | [Awesome-AITools](./dx-and-tooling/awesome-aitools.md) | Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems |
+| `awesome-opensource-ai` | [awesome-opensource-ai](./dx-and-tooling/awesome-opensource-ai.md) | Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling |
 | `aws-bedrock` | [AWS Bedrock](./serving-and-deployment/aws-bedrock.md) | AWS managed service for accessing foundation models and building generative AI apps |
 | `axolotl` | [Axolotl](./model-layer/axolotl.md) | Configuration-driven fine-tuning framework for many open-weight LLM families |
+| `axonhub` | [AxonHub](./serving-and-deployment/axonhub.md) | Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key |
 | `azure-ai-studio` | [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) | Microsoft Azure platform for building, evaluating, and deploying AI applications |
 | `baml` | [BAML](./dx-and-tooling/baml.md) | DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output |
 | `basedash` | [Basedash](./dx-and-tooling/basedash.md) | AI-native platform for generating dashboards, reports, and insights from natural-language queries |
 | `baseten` | [Baseten](./serving-and-deployment/baseten.md) | Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero |
+| `beeai-framework` | [BeeAI Framework](./orchestration/beeai-framework.md) | Agent framework with matching Python and TypeScript SDKs, event-stream telemetry and schema-validated tools |
 | `bentoml` | [BentoML](./serving-and-deployment/bentoml.md) | A framework for packaging, deploying, and scaling AI model services |
 | `browserbase` | [Browserbase](./data-ingestion/browserbase.md) | Stagehand browser SDK with observe, act and extract primitives plus CUA models, MIT licensed and multi-language |
 | `cerebras-inference` | [Cerebras Inference](./model-layer/cerebras-inference.md) | Wafer-scale-engine inference API claiming the fastest open-model token rates available |
@@ -48,15 +57,19 @@
 | `composio` | [Composio](./orchestration/composio.md) | Hosted tool layer supplying agents with pre-authenticated OAuth sessions for more than a thousand apps |
 | `conan` | [Conan](./evaluation-and-observability/conan.md) | Live HUD for monitoring and interacting with AI agent sessions on macOS |
 | `continue-dev` | [Continue](./dx-and-tooling/continue-dev.md) | Open-source IDE extension (VS Code/JetBrains) for building custom AI coding assistants with any model |
+| `corsair` | [Corsair](./dx-and-tooling/corsair.md) | Integration gateway handling user OAuth, token refresh and schema normalisation for agent tools |
 | `crawl4ai-tool` | [Crawl4AI](./data-ingestion/crawl4ai-tool.md) | Open-source crawler that returns LLM-ready Markdown from any page, with a paid cloud tier behind the same API |
 | `cubesandbox` | [CubeSandbox](./serving-and-deployment/cubesandbox.md) | Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API |
 | `cursor` | [Cursor](./dx-and-tooling/cursor.md) | AI-native code editor (VS Code fork) with agent mode, codebase-aware chat, and predictive multi-line edits |
 | `dagster` | [Dagster](./orchestration/dagster.md) | Asset-oriented Python orchestrator where data assets are typed functions with parameter-derived lineage |
+| `db-gpt` | [DB-GPT](./orchestration/db-gpt.md) | Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving |
 | `deepchecks` | [Deepchecks](./evaluation-and-observability/deepchecks.md) | Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality |
 | `deepspeed` | [DeepSpeed](./model-layer/deepspeed.md) | Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory |
 | `dlt` | [dlt](./data-ingestion/dlt.md) | Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference |
 | `docetl` | [DocETL](./data-ingestion/docetl.md) | Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema |
+| `docsgpt` | [DocsGPT](./orchestration/docsgpt.md) | Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI |
 | `dropstone-3` | [Dropstone 3](./dx-and-tooling/dropstone-3.md) | Collaborative AI workspace for teams to build, describe, and ship software together |
+| `dust` | [Dust](./orchestration/dust.md) | Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing |
 | `dvc` | [DVC](./model-layer/dvc.md) | Open-source data and model versioning tool for ML projects and pipelines |
 | `e2b` | [E2B](./orchestration/e2b.md) | Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents |
 | `elasticsearch` | [Elasticsearch](./data-ingestion/elasticsearch.md) | Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing |
@@ -82,11 +95,14 @@
 | `google-pomelli-2-0` | [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) | Explore and interact with large datasets through a visual, intuitive interface |
 | `google-vertex-ai` | [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) | Google Cloud platform for model APIs, training, evaluation, and AI application deployment |
 | `goose` | [Goose](./dx-and-tooling/goose.md) | Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions |
+| `gptme` | [gptme](./dx-and-tooling/gptme.md) | Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate |
+| `gpustack` | [GPUStack](./serving-and-deployment/gpustack.md) | Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang |
 | `gradio` | [Gradio](./dx-and-tooling/gradio.md) | A Python library for building and sharing machine learning demos quickly |
 | `great-expectations` | [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) | Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI |
 | `groq` | [Groq](./model-layer/groq.md) | Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second |
 | `guardrails-ai` | [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) | A framework for validating, correcting, and constraining LLM outputs |
 | `guidance` | [Guidance](./model-layer/guidance.md) | Microsoft guidance library for controlling and constraining language model generation |
+| `harness-sdk` | [Harness SDK](./orchestration/harness-sdk.md) | Dual-language SDK for stateful agent harnesses with MCP tooling and multi-cloud model failover |
 | `headroom` | [headroom](./dx-and-tooling/headroom.md) | Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model |
 | `hf-inference-endpoints` | [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) | Managed Hugging Face service for deploying models as production inference endpoints |
 | `honen` | [Honen](./dx-and-tooling/honen.md) | Transform any content into interactive AI-generated courses |
@@ -100,12 +116,14 @@
 | `jan` | [Jan](./dx-and-tooling/jan.md) | Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp |
 | `jina-reader` | [Jina AI Reader](./data-ingestion/jina-reader.md) | Reader endpoint for converting web pages into LLM-friendly text and Markdown |
 | `kimi-k2-5` | [Kimi K2.5](./model-layer/kimi-k2-5.md) | AI assistant with deep understanding, analysis, and reasoning capabilities |
+| `kirocrew` | [KiroCrew](./dx-and-tooling/kirocrew.md) | Agent workspace that keeps files, shell history and learned helper scripts across sessions |
 | `kserve` | [KServe](./serving-and-deployment/kserve.md) | Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol |
 | `kubeai` | [KubeAI](./serving-and-deployment/kubeai.md) | Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends |
 | `label-studio` | [Label Studio](./data-ingestion/label-studio.md) | An open-source data labeling platform for ML and AI datasets |
 | `laminar` | [Laminar](./evaluation-and-observability/laminar.md) | OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications |
 | `langflow` | [Langflow](./orchestration/langflow.md) | Python visual builder for agent and RAG workflows that also serves them as REST endpoints and MCP servers |
 | `langfuse-prompts` | [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) | Prompt management and versioning workflows inside the Langfuse observability platform |
+| `langroid` | [Langroid](./orchestration/langroid.md) | Python multi-agent framework built on message passing, with Pydantic-validated tool calls and built-in RAG |
 | `langsmith` | [LangSmith](./evaluation-and-observability/langsmith.md) | A managed platform for tracing, evaluating, and monitoring LangChain applications |
 | `langsmith-hub` | [LangSmith Hub](./dx-and-tooling/langsmith-hub.md) | LangSmith prompt and dataset workflows for LangChain and LangGraph applications |
 | `langwatch` | [LangWatch](./evaluation-and-observability/langwatch.md) | Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud |
@@ -119,6 +137,7 @@
 | `lm-evaluation-harness` | [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) | The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard |
 | `lm-format-enforcer` | [LM Format Enforcer](./model-layer/lm-format-enforcer.md) | Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM |
 | `lm-studio` | [LM Studio](./dx-and-tooling/lm-studio.md) | Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server |
+| `lmcache` | [LMCache](./serving-and-deployment/lmcache.md) | KV cache layer that persists and shares prefix state across vLLM instances and storage tiers |
 | `lorax` | [LoRAX](./serving-and-deployment/lorax.md) | Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU |
 | `manus` | [Manus](./orchestration/manus.md) | AI-powered platform for building full-stack web applications and automating tasks |
 | `marimo` | [marimo](./dx-and-tooling/marimo.md) | Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps |
@@ -129,6 +148,7 @@
 | `meilisearch` | [Meilisearch](./data-ingestion/meilisearch.md) | Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance |
 | `mem0` | [Mem0](./orchestration/mem0.md) | Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval |
 | `memoriq` | [Memoriq](./orchestration/memoriq.md) | Private AI memory layer that learns from your conversations and documents |
+| `mesh-llm` | [Mesh-LLM](./serving-and-deployment/mesh-llm.md) | Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint |
 | `mesop` | [Mesop](./dx-and-tooling/mesop.md) | Google Python UI framework for building web apps and AI prototypes |
 | `mineru` | [MinerU](./data-ingestion/mineru.md) | OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models |
 | `mirascope` | [Mirascope](./orchestration/mirascope.md) | Decorator-based LLM interface with typed provider/model strings, Pydantic structured output and resumable tool loops |
@@ -136,18 +156,23 @@
 | `mlx-lm` | [MLX-LM](./model-layer/mlx-lm.md) | Apple MLX library for running and fine-tuning LLMs on Apple Silicon |
 | `modal` | [Modal](./serving-and-deployment/modal.md) | A serverless platform for deploying Python apps and GPU workloads |
 | `monako-glass` | [Monako Glass](./evaluation-and-observability/monako-glass.md) | Visualize and understand AI model outputs with dynamic Pulse Rings and overlays |
+| `mooncake` | [Mooncake](./serving-and-deployment/mooncake.md) | KVCache-centric serving platform that separates prefill from decode and moves caches over RDMA |
 | `n8n` | [n8n](./orchestration/n8n.md) | Fair-code workflow automation canvas with AI nodes, custom code steps and 1500+ integrations |
 | `nemo-guardrails` | [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) | NVIDIA framework for adding programmable guardrails to LLM applications |
 | `nomic-atlas` | [Nomic Atlas](./data-ingestion/nomic-atlas.md) | Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser |
 | `nvidia-nim` | [NVIDIA NIM](./serving-and-deployment/nvidia-nim.md) | Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs |
 | `olmocr` | [olmOCR](./data-ingestion/olmocr.md) | Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion |
+| `open-swe` | [Open-SWE](./orchestration/open-swe.md) | Asynchronous software-engineering agent that plans, edits and tests against a repository in an inspectable loop |
 | `open-webui` | [Open WebUI](./dx-and-tooling/open-webui.md) | Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in |
+| `openagents` | [OpenAgents](./orchestration/openagents.md) | TypeScript runtime for peer-to-peer agent networks with capability discovery and task routing |
 | `openai-codex-cli` | [OpenAI Codex CLI](./dx-and-tooling/openai-codex-cli.md) | OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment |
 | `openai-evals` | [OpenAI Evals](./evaluation-and-observability/openai-evals.md) | An open-source framework for evaluating language model behavior |
 | `openjudge` | [OpenJudge](./evaluation-and-observability/openjudge.md) | AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training |
 | `openllm` | [OpenLLM](./serving-and-deployment/openllm.md) | BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command |
 | `openpipe-art` | [OpenPipe ART](./model-layer/openpipe-art.md) | Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps |
 | `openrouter` | [OpenRouter](./model-layer/openrouter.md) | Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing |
+| `openui` | [OpenUI](./dx-and-tooling/openui.md) | Open generative-UI stack that turns prompts and screenshots into React and Tailwind components |
+| `optillm` | [optillm](./serving-and-deployment/optillm.md) | OpenAI-compatible proxy that applies search, sampling and multi-agent strategies behind a model name |
 | `orca` | [Orca](./dx-and-tooling/orca.md) | Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree |
 | `orchestraml` | [OrchestraML](./orchestration/orchestraml.md) | Automate end-to-end ML workflows from data prep to deployment using AI agents |
 | `outlines` | [Outlines](./model-layer/outlines.md) | A library for constrained generation and structured outputs with LLMs |
@@ -177,12 +202,16 @@
 | `recursi` | [Recursi](./dx-and-tooling/recursi.md) | Self-improving system for intuitive and efficient AI-assisted coding |
 | `redis-memory` | [Redis](./orchestration/redis-memory.md) | In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage |
 | `reducto` | [Reducto](./data-ingestion/reducto.md) | Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines |
+| `reef` | [REEF](./orchestration/reef.md) | Continual-learning infrastructure that turns live agent trajectories into reinforcement-learning updates |
 | `replicate` | [Replicate](./serving-and-deployment/replicate.md) | A hosted platform for running and deploying machine learning models via API |
 | `repomix` | [Repomix](./dx-and-tooling/repomix.md) | CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs |
 | `rtk` | [rtk](./dx-and-tooling/rtk.md) | Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it |
+| `ruby-llm` | [RubyLLM](./orchestration/ruby-llm.md) | Idiomatic Ruby client for multi-provider chat, tool calling, structured output and embeddings |
+| `runanywhere-sdks` | [RunAnywhere SDKs](./serving-and-deployment/runanywhere-sdks.md) | Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core |
 | `runpod` | [RunPod](./serving-and-deployment/runpod.md) | GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints |
 | `scale-ai` | [Scale AI](./data-ingestion/scale-ai.md) | Managed data labeling and data engine platform for enterprise AI datasets |
 | `scrapegraphai` | [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) | LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors |
+| `screenpipe` | [Screenpipe](./data-ingestion/screenpipe.md) | Local daemon recording screen OCR and audio transcripts into a queryable store for agents |
 | `seaticket` | [SeaTicket](./orchestration/seaticket.md) | Unify and resolve customer-support issues with autonomous AI agents |
 | `sentence-transformers` | [Sentence Transformers](./model-layer/sentence-transformers.md) | The standard Python library for computing, training, and fine-tuning text embedding and reranker models |
 | `shellmate` | [ShellMate](./dx-and-tooling/shellmate.md) | AI-powered terminal assistant that suggests commands and explains outputs |

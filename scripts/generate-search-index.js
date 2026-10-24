@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
+import { writeJson } from './utils/entries.js';
 import chalk from 'chalk';
 import { truncate } from './utils/markdown-escape.js';
 import { COLLECTIONS } from './utils/collections.js';
@@ -95,7 +96,7 @@ for (const doc of docs) {
   if (doc.safety_level) facets.safety_level[doc.safety_level] = (facets.safety_level[doc.safety_level] ?? 0) + 1;
 }
 
-await fs.writeFile('data/search-index.json', `${JSON.stringify({
+await writeJson('data/search-index.json', {
   version: '1.0.0',
   engine: 'flexsearch',
   generated_at: new Date().toISOString(),
@@ -113,5 +114,5 @@ await fs.writeFile('data/search-index.json', `${JSON.stringify({
   },
   facets,
   documents: docs.sort((a, b) => a.id.localeCompare(b.id))
-}, null, 2)}\n`);
+});
 console.log(chalk.green(`Generated search index with ${docs.length} document(s).`));

@@ -195,6 +195,7 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [LangWatch](../evaluation-and-observability/langwatch.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [Open-SWE](../orchestration/open-swe.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenJudge](../evaluation-and-observability/openjudge.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |

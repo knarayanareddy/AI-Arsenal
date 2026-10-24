@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [Regression Eval Harness](./intermediate-regression-eval-harness.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Regression Eval Harness](./intermediate-regression-eval-harness.md) — A golden-dataset eval harness with three deterministic scorers and baseline-diff regression detection, built so the model is injected and the suite runs offline

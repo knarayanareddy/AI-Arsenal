@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents](./agents/) | 7 entries | 2026-09-28 |
-| [code](./code/) | 7 entries | 2026-09-28 |
-| [evaluation methods](./evaluation-methods/) | 6 entries | 2026-09-28 |
-| [general llm](./general-llm/) | 11 entries | 2026-09-28 |
-| [multimodal](./multimodal/) | 7 entries | 2026-09-28 |
-| [retrieval rag](./retrieval-rag/) | 7 entries | 2026-09-28 |
-| [safety](./safety/) | 7 entries | 2026-09-28 |
+| [agents](./agents/) | 7 entries | 2026-10-24 |
+| [code](./code/) | 7 entries | 2026-10-24 |
+| [evaluation methods](./evaluation-methods/) | 6 entries | 2026-10-24 |
+| [general llm](./general-llm/) | 11 entries | 2026-10-24 |
+| [multimodal](./multimodal/) | 7 entries | 2026-10-24 |
+| [retrieval rag](./retrieval-rag/) | 7 entries | 2026-10-24 |
+| [safety](./safety/) | 7 entries | 2026-10-24 |
 
 ## Recently Added
 

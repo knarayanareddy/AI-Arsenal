@@ -69,13 +69,16 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
+| [AI Engineering From Scratch](../dx-and-tooling/ai-engineering-from-scratch.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, rust, typescript | recommended |
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | deployment, security-and-guardrails | open-source | Yes | Yes | Yes | rust | watching |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | rust | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [llmfit](../model-layer/llmfit.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | rust | recommended |
 | [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | rust | recommended |
+| [Mesh-LLM](../serving-and-deployment/mesh-llm.md) | serving and deployment | deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | prototyping | usage-based | No | No | Yes | rust | recommended |
 | [rtk](../dx-and-tooling/rtk.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | rust | recommended |
+| [Screenpipe](../data-ingestion/screenpipe.md) | data ingestion | memory-management | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | production-serving, vector-search | open-source | Yes | Yes | Yes | rust | recommended |

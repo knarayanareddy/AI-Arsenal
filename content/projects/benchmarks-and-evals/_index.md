@@ -51,11 +51,11 @@ Before selecting an evaluation/observability platform:
 - [DeepEval](./deepeval.md) — ⭐ 16140
 - [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — ⭐ 14355
 - [Phoenix](./phoenix.md) — ⭐ 10124
+- [OpenCompass](./opencompass.md) — ⭐ 7392
 - [OpenLLMetry](./openllmetry.md) — ⭐ 7000
 - [SWE-bench](./swe-bench-swe-bench.md) — ⭐ 5928
 - [Helicone](./helicone.md) — ⭐ 5809
 - [Agenta](./agenta.md) — ⭐ 4787
-- [lmms-eval](./lmms-eval.md) — ⭐ 4300
 
 ### Browse All
 
@@ -79,6 +79,7 @@ Before selecting an evaluation/observability platform:
 - [mcpkernel](./mcpkernel.md) — An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations
 - [medusa](./medusa.md) — A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
+- [OpenCompass](./opencompass.md) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
 - [OpenLIT](./openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards

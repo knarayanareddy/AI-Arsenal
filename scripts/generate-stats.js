@@ -2,6 +2,7 @@
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
 import { COLLECTIONS, collectionStats } from './utils/collections.js';
+import { writeJson } from './utils/entries.js';
 
 const entriesByType = {};
 for (const collection of COLLECTIONS) {
@@ -18,5 +19,5 @@ const stats = {
   generated_at: new Date().toISOString(),
   entries: collectionStats(entriesByType)
 };
-await fs.writeFile('data/stats.json', `${JSON.stringify(stats, null, 2)}\n`);
+await writeJson('data/stats.json', stats);
 console.log(chalk.green('Generated data/stats.json'));

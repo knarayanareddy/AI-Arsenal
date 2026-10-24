@@ -107,20 +107,20 @@ Current generated stats:
 <!-- AUTO-GENERATED STATS TABLE — do not edit; run `pnpm run generate:readme-stats` -->
 | Type | Count |
 |---|---:|
-| Projects | 322 |
-| Tools | 214 |
-| Papers | 128 |
+| Projects | 511 |
+| Tools | 247 |
+| Papers | 138 |
 | Tips | 171 |
-| Guides | 59 |
+| Guides | 60 |
 | Benchmarks | 52 |
 | People | 25 |
-| Community | 32 |
+| Community | 33 |
 | Architectures | 29 |
-| Build examples | 8 |
+| Build examples | 11 |
 | Observability | 16 |
 | Trends | 4 |
 | Digests | 1 |
-| Total content entries | 1061 |
+| Total content entries | 1298 |
 <!-- /AUTO-GENERATED STATS TABLE -->
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json). The table above is regenerated from that file by `pnpm run generate:readme-stats`; do not hand-edit it.
