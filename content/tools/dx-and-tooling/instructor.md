@@ -4,7 +4,7 @@ name: Instructor
 type: tool
 job: [structured-output]
 description: A library for extracting typed structured outputs from language models
-url: "https://github.com/instructor-ai/instructor"
+url: "https://github.com/567-labs/instructor"
 cost_model: open-source
 pricing_detail: Open-source repository
 tags: [structured-output, llm, openai]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: See official pricing page; limits may change
 self_hostable: true
 open_source: true
-source_url: "https://github.com/instructor-ai/instructor"
+source_url: "https://github.com/567-labs/instructor"
 docs_url: null
-github_url: "https://github.com/instructor-ai/instructor"
+github_url: "https://github.com/567-labs/instructor"
 alternatives: [guidance, outlines, pydantic-ai-tool]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
@@ -60,7 +60,7 @@ Wraps a standard LLM API call, asking the model to produce output matching a Pyd
 
 ```bash
 # Visit the official documentation for installation and setup.
-# URL: https://github.com/instructor-ai/instructor
+# URL: https://github.com/567-labs/instructor
 ```
 
 ## Use Cases
@@ -89,7 +89,7 @@ Wraps a standard LLM API call, asking the model to produce output matching a Pyd
 
 ## Resources
 
-- [Official Site](https://github.com/instructor-ai/instructor)
+- [Official Site](https://github.com/567-labs/instructor)
 
 ## Buzz & Reception
 

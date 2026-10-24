@@ -50,8 +50,8 @@ Before selecting an inference engine:
 - [llama.cpp](./llama-cpp.md) — ⭐ 116399
 - [vLLM](./vllm.md) — ⭐ 82772
 - [whisper.cpp](./whisper-cpp.md) — ⭐ 51732
+- [text-generation-webui (oobabooga)](./text-generation-webui.md) — ⭐ 47724
 - [textgen](./oobabooga-textgen.md) — ⭐ 47720
-- [text-generation-webui (oobabooga)](./text-generation-webui.md) — ⭐ 47433
 - [LocalAI](./localai.md) — ⭐ 47415
 - [exo (exo-explore)](./exo.md) — ⭐ 46087
 - [FastChat](./lm-sys-fastchat.md) — ⭐ 39550

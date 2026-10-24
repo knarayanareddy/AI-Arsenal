@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-24T16:15:58.763Z",
+  "generated_at": "2026-10-24T16:42:59.893Z",
   "config": {
     "document": {
       "id": "id",
@@ -198,9 +198,9 @@
       "paid": 12
     },
     "status": {
-      "active": 944,
+      "active": 929,
+      "archived": 17,
       "deprecated": 1,
-      "archived": 2,
       "watching": 4,
       "reviewed": 3,
       "draft": 1
@@ -3282,7 +3282,7 @@
       "subcategory": "advanced-rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -6768,7 +6768,7 @@
       "subcategory": "evaluation",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "benchmark-and-eval",
       "audience": null,
       "domain": [
@@ -8310,7 +8310,7 @@
       "subcategory": null,
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "dx-and-tooling",
       "audience": [
         "prototype"
@@ -11145,7 +11145,7 @@
       "subcategory": "advanced-rag",
       "maturity": "experimental",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -18749,7 +18749,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "orchestration",
       "audience": [
         "prototype"
@@ -20978,7 +20978,7 @@
       "subcategory": "coding-agents",
       "maturity": "experimental",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -31407,7 +31407,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "evaluation-and-observability",
       "audience": [
         "production"
@@ -32618,7 +32618,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "serving-and-deployment",
       "audience": [
         "production"
@@ -34850,7 +34850,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "dx-and-tooling",
       "audience": [
         "prototype"
@@ -35106,7 +35106,7 @@
       "subcategory": "frameworks",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -35949,7 +35949,7 @@
       "subcategory": "autonomous",
       "maturity": "experimental",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -43438,7 +43438,7 @@
       "subcategory": "inference-engines",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "inference-engine",
       "audience": null,
       "domain": [
@@ -47484,7 +47484,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "evaluation-and-observability",
       "audience": [
         "production"
@@ -47907,7 +47907,7 @@
       "subcategory": "coding-agents",
       "maturity": "experimental",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -56297,7 +56297,7 @@
       "subcategory": "platforms",
       "maturity": "beta",
       "cost_model": "self-hostable",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [

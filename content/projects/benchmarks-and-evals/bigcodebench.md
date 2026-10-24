@@ -13,7 +13,7 @@ org_or_maintainer: "BigCode"
 tags: [evaluation, code-gen, llm]
 maturity: production
 cost_model: open-source
-github_stars: 513
+github_stars: 516
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-01-03"
@@ -39,14 +39,14 @@ alternatives: [swe-bench, livecodebench]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (513), primary language, license, and last commit (2026-01-03) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
+enrichment_notes: "Star count (516), primary language, license, and last commit (2026-01-03) verified via the GitHub API on 2026-10-24. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: [{"source": "github-trending", "url": "https://github.com/bigcode-project/bigcodebench", "date": "2026-07-08", "description": "513 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 featured: false
-status: active
+status: archived
 ---
 
 ## Overview
@@ -90,6 +90,7 @@ bigcodebench.evaluate --split complete --subset hard --samples <generated>.jsonl
 - Adoption risk for BigCodeBench is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
 - Nothing in this entry substitutes for running BigCodeBench against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
 - Where BigCodeBench overlaps `swe-bench`, `livecodebench`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
+- The repository is archived, so the dataset and harness are frozen: fine for reproducing a published number, not for tracking a model released after that date.
 
 ## Relation to the Arsenal
 

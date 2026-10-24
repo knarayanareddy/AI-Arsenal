@@ -79,7 +79,9 @@
     "migration:trending:enforce": "node scripts/check-trending-migration-progress.js --enforce",
     "new:benchmark": "node scripts/scaffold.js --type=benchmark",
     "validate:semantic": "node scripts/semantic-editorial-pass.js --changed-only",
-    "validate:semantic:all": "node scripts/semantic-editorial-pass.js --all"
+    "validate:semantic:all": "node scripts/semantic-editorial-pass.js --all",
+    "triage:stale": "node scripts/triage-stale-entries.js",
+    "triage:stale:report": "node scripts/triage-stale-entries.js --out docs/freshness-worklist.md"
   },
   "dependencies": {
     "ajv": "^8.12.0",

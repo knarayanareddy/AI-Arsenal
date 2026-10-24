@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: archived
 id: microsoft-nni
 name: "NNI (Neural Network Intelligence)"
 artifact_type: framework
@@ -39,7 +39,7 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 14357
+github_stars: 14365
 last_commit: "2024-07-03"
 docs_url: https://nni.readthedocs.io/
 phase: framework
@@ -59,7 +59,7 @@ best_for:
 avoid_if:
   - "You need an actively evolving project, since upstream cadence largely stopped after 2024"
   - "You want a fully managed cloud AutoML service rather than a self-hosted toolkit"
-enrichment_notes: "Repository, MIT license, and 2024-07-03 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; treat as a stable-but-quiet toolkit."
+enrichment_notes: "Repository, MIT license, and 2024-07-03 activity verified via the GitHub API on 2026-10-24. Upstream cadence slowed; treat as a stable-but-quiet toolkit."
 ---
 
 ## Overview
@@ -98,6 +98,7 @@ Install with `pip install nni`, annotate your training script's search space, wr
 - The cost this entry cannot quantify for you is operational: the NNI (Neural Network Intelligence) footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
 - The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
 - NNI (Neural Network Intelligence) is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
+- The repository was archived in 2024, which closes the automatic-hyperparameter-search branch of the lineage; the successor ecosystem is Ray Tune and friends.
 
 ## Relation to the Arsenal
 

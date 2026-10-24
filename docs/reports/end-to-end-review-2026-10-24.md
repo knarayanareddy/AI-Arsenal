@@ -466,3 +466,23 @@ Every gate in the matrix above is now green. What it took, in the order the bloc
 6. **The link checker caught a real dead link**: `github.com/dust-tt/dust` returns 404 and the repository has left the organisation. The Dust entry had described a self-hostable MIT platform; it now describes the closed hosted product that actually exists.
 
 Verified after remediation: `pnpm run ci` exits 0 (296 tests), `validate:changed`, `validate:links`, `check:stale` and `cd web && npm run build` all pass, and running `generate:all` twice leaves the working tree clean.
+
+## Freshness backlog (follow-up, same day)
+
+The 1,062-entry stale count was one undifferentiated number: it mixed "old" with "wrong". `scripts/triage-stale-entries.js` (`pnpm run triage:stale`) now checks each stale entry's repository and sorts the backlog by what a reviewer can do about it:
+
+| Bucket | Before | After | Meaning |
+|---|---:|---:|---|
+| deleted | 1 | 0 | Repository returns 404 |
+| archived | 17 | 0 | Upstream is read-only |
+| renamed | 23 | 0 | Repository moved or changed owner |
+| dormant | 22 | 22 | Public, no push in a year — needs a read, not a fix |
+| active | 401 | 401 | Public and recently pushed — metadata re-verification |
+| no-repo | 571 | 571 | No repository to check (papers, tips, people, benchmarks) |
+| generated | 28 | 28 | `by-cost`/`by-job`/`by-stack` routing tables — nothing to review |
+
+The 40 defects are fixed, not queued: renamed entries now carry the current URL (many only resolved through a GitHub redirect), archived projects are marked `status: archived`, the six tools that still recommended an archived project were moved to `use-with-caution` with a rationale naming the archive, and the touched entries had stars, last commit and verification dates re-checked. `last_reviewed` moved only where a human made a decision.
+
+One entry made a claim the evidence contradicted: `deepseek-v3-r1` listed `actively-maintained` in `health_signals` while its weight repository had not been pushed since 2025-08-28. The signal was removed and the reason recorded.
+
+The triage is wired into `monthly.yml` so the backlog is re-sorted every month rather than quoted as a headline, and `docs/freshness-worklist.md` is the artefact a maintainer works from. It intentionally does not bump review dates on its own — a count that goes to zero because a script touched every file is the failure mode this repository has already had.

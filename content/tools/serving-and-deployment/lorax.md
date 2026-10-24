@@ -20,7 +20,7 @@ github_url: "https://github.com/predibase/lorax"
 alternatives: [bentoml, hf-inference-endpoints]
 integrates_with: [huggingface]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: null
 phase: serving-and-deployment
@@ -32,9 +32,9 @@ avoid_when:
   - You serve one model with no adapters — vLLM-class engines are more actively developed for the single-model case
   - Your fine-tunes are full-parameter (not LoRA); adapter multiplexing doesn't apply
 version_tracked: null
-verdict: solid-choice
-verdict_rationale: The purpose-built answer to the many-fine-tunes economics problem; evaluate against vLLM's own multi-LoRA support, which has closed much of the gap
-status: active
+verdict: use-with-caution
+verdict_rationale: "A clear reference for multi-adapter serving, archived in favour of newer engines: read it to understand the technique rather than to deploy it"
+status: archived
 enrichment_status: draft
 ---
 
@@ -85,6 +85,7 @@ docker run --gpus all -p 8080:80 ghcr.io/predibase/lorax:main \
 - There is no self-hosted path to LoRAX, so quota and rate-limit changes are the vendor's to make and yours to absorb.
 - Documentation for LoRAX describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where LoRAX overlaps `bentoml`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- The project is archived, so its multi-adapter serving approach has stopped evolving while vLLM's LoRA support kept moving; the architecture is still worth reading even though the binary is not a safe default.
 
 ## Integration Patterns
 

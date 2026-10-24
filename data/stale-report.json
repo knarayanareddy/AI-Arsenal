@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-24T16:01:57.933Z",
+  "generated_at": "2026-10-24T16:39:39.714Z",
   "threshold_days": 90,
-  "stale_count": 1062,
+  "stale_count": 1022,
   "invalid_dates": [],
   "stale_entries": [
     {
@@ -236,13 +236,6 @@
       "age_days": 110
     },
     {
-      "id": "ai-gateway",
-      "type": "tool",
-      "path": "content/tools/serving-and-deployment/ai-gateway.md",
-      "last_reviewed": "2026-07-19",
-      "age_days": 97
-    },
-    {
       "id": "ai-infra-guard",
       "type": "tool",
       "path": "content/tools/evaluation-and-observability/ai-infra-guard.md",
@@ -297,13 +290,6 @@
       "path": "content/tools/orchestration/airflow.md",
       "last_reviewed": "2026-06-30",
       "age_days": 116
-    },
-    {
-      "id": "airweave",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/airweave.md",
-      "last_reviewed": "2026-07-19",
-      "age_days": 97
     },
     {
       "id": "aisheets",
@@ -663,13 +649,6 @@
       "age_days": 108
     },
     {
-      "id": "bigcodebench",
-      "type": "project",
-      "path": "content/projects/benchmarks-and-evals/bigcodebench.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "bird-sql",
       "type": "benchmark",
       "path": "content/benchmarks/code/bird-sql.md",
@@ -850,13 +829,6 @@
       "path": "content/tools/model-layer/cerebras-inference.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
-    },
-    {
-      "id": "chainlit",
-      "type": "tool",
-      "path": "content/tools/dx-and-tooling/chainlit.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
     },
     {
       "id": "chandra-ocr",
@@ -1223,13 +1195,6 @@
       "age_days": 108
     },
     {
-      "id": "cognita",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/cognita.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
       "id": "cohere",
       "type": "tool",
       "path": "content/tools/model-layer/cohere.md",
@@ -1240,13 +1205,6 @@
       "id": "colossalai",
       "type": "project",
       "path": "content/projects/training-and-alignment/colossalai.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
-      "id": "comfyui",
-      "type": "project",
-      "path": "content/projects/frameworks/comfyui.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
     },
@@ -1382,13 +1340,6 @@
       "path": "content/tools/by-cost/cost-usage-based.md",
       "last_reviewed": "2026-07-07",
       "age_days": 109
-    },
-    {
-      "id": "cosyvoice",
-      "type": "project",
-      "path": "content/projects/foundation-models/cosyvoice.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "crawl4ai",
@@ -1755,13 +1706,6 @@
       "age_days": 104
     },
     {
-      "id": "dvc",
-      "type": "tool",
-      "path": "content/tools/model-layer/dvc.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "dynamo",
       "type": "project",
       "path": "content/projects/inference-engines/dynamo.md",
@@ -2098,13 +2042,6 @@
       "age_days": 97
     },
     {
-      "id": "flowise",
-      "type": "tool",
-      "path": "content/tools/orchestration/flowise.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "flux",
       "type": "project",
       "path": "content/projects/foundation-models/flux.md",
@@ -2252,13 +2189,6 @@
       "age_days": 105
     },
     {
-      "id": "giskard",
-      "type": "tool",
-      "path": "content/tools/evaluation-and-observability/giskard.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "giskard-oss",
       "type": "tool",
       "path": "content/tools/evaluation-and-observability/giskard-oss.md",
@@ -2336,25 +2266,11 @@
       "age_days": 116
     },
     {
-      "id": "goose",
-      "type": "tool",
-      "path": "content/tools/dx-and-tooling/goose.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "gpqa-diamond",
       "type": "benchmark",
       "path": "content/benchmarks/general-llm/gpqa-diamond.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "gpt-engineer",
-      "type": "project",
-      "path": "content/projects/agent-systems/gpt-engineer.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "gpt-neox",
@@ -2423,13 +2339,6 @@
       "id": "graphrag",
       "type": "project",
       "path": "content/projects/data-and-retrieval/graphrag.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
-      "id": "great-expectations",
-      "type": "tool",
-      "path": "content/tools/data-ingestion/great-expectations.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
     },
@@ -2805,13 +2714,6 @@
       "age_days": 108
     },
     {
-      "id": "instructor",
-      "type": "tool",
-      "path": "content/tools/dx-and-tooling/instructor.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "instrument-cost-per-feature",
       "type": "observability",
       "path": "content/observability/cost-usage/instrument-cost-per-feature.md",
@@ -2873,13 +2775,6 @@
       "path": "content/benchmarks/safety/jailbreakbench.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "jan",
-      "type": "tool",
-      "path": "content/tools/dx-and-tooling/jan.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "janus",
@@ -3456,13 +3351,6 @@
       "age_days": 115
     },
     {
-      "id": "llamafactory",
-      "type": "tool",
-      "path": "content/tools/model-layer/llamafactory.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "llamafile",
       "type": "project",
       "path": "content/projects/inference-engines/llamafile.md",
@@ -3517,13 +3405,6 @@
       "path": "content/projects/inference-engines/llm-d.md",
       "last_reviewed": "2026-07-11",
       "age_days": 105
-    },
-    {
-      "id": "llm-guard",
-      "type": "tool",
-      "path": "content/tools/evaluation-and-observability/llm-guard.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "llm-observability",
@@ -3664,13 +3545,6 @@
       "path": "content/projects/training-and-alignment/lora-diffusion.md",
       "last_reviewed": "2026-07-12",
       "age_days": 104
-    },
-    {
-      "id": "lorax",
-      "type": "tool",
-      "path": "content/tools/serving-and-deployment/lorax.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "ltx-2",
@@ -3946,13 +3820,6 @@
       "age_days": 108
     },
     {
-      "id": "mesop",
-      "type": "tool",
-      "path": "content/tools/dx-and-tooling/mesop.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "metaflow",
       "type": "project",
       "path": "content/projects/frameworks/metaflow.md",
@@ -3972,13 +3839,6 @@
       "path": "content/projects/frameworks/microsoft-agent-framework.md",
       "last_reviewed": "2026-07-01",
       "age_days": 115
-    },
-    {
-      "id": "microsoft-nni",
-      "type": "project",
-      "path": "content/projects/frameworks/microsoft-nni.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "mikolov-2013-word2vec",
@@ -4030,13 +3890,6 @@
       "age_days": 108
     },
     {
-      "id": "mistral-models",
-      "type": "project",
-      "path": "content/projects/foundation-models/mistral-models.md",
-      "last_reviewed": "2026-07-01",
-      "age_days": 115
-    },
-    {
       "id": "mistral-rs",
       "type": "project",
       "path": "content/projects/inference-engines/mistral-rs.md",
@@ -4070,13 +3923,6 @@
       "path": "content/skills/by-role/ml-engineer-role.md",
       "last_reviewed": "2026-07-07",
       "age_days": 109
-    },
-    {
-      "id": "ml-intern",
-      "type": "project",
-      "path": "content/projects/agent-systems/ml-intern.md",
-      "last_reviewed": "2026-07-19",
-      "age_days": 97
     },
     {
       "id": "mlc-llm",
@@ -4338,13 +4184,6 @@
       "age_days": 105
     },
     {
-      "id": "nemo-guardrails",
-      "type": "tool",
-      "path": "content/tools/evaluation-and-observability/nemo-guardrails.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "neurips",
       "type": "community",
       "path": "content/community/events/neurips.md",
@@ -4385,20 +4224,6 @@
       "path": "content/projects/agent-systems/nono.md",
       "last_reviewed": "2026-07-11",
       "age_days": 105
-    },
-    {
-      "id": "nunchaku",
-      "type": "project",
-      "path": "content/projects/inference-engines/nunchaku.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
-      "id": "nvidia-nemo",
-      "type": "project",
-      "path": "content/projects/frameworks/nvidia-nemo.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "nvidia-nim",
@@ -4539,13 +4364,6 @@
       "path": "content/projects/agent-systems/openai-swarm.md",
       "last_reviewed": "2026-07-12",
       "age_days": 104
-    },
-    {
-      "id": "openenv",
-      "type": "project",
-      "path": "content/projects/training-and-alignment/openenv.md",
-      "last_reviewed": "2026-07-19",
-      "age_days": 97
     },
     {
       "id": "openhands",
@@ -4758,13 +4576,6 @@
       "age_days": 108
     },
     {
-      "id": "pathway-llm-app",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/pathway-llm-app.md",
-      "last_reviewed": "2026-07-11",
-      "age_days": 105
-    },
-    {
       "id": "patil-2023-gorilla",
       "type": "paper",
       "path": "content/research/agents-and-reasoning/patil-2023-gorilla.md",
@@ -4854,20 +4665,6 @@
       "path": "content/projects/data-and-retrieval/pinecone-vector-db.md",
       "last_reviewed": "2026-07-01",
       "age_days": 115
-    },
-    {
-      "id": "pipelock",
-      "type": "project",
-      "path": "content/projects/benchmarks-and-evals/pipelock.md",
-      "last_reviewed": "2026-07-11",
-      "age_days": 105
-    },
-    {
-      "id": "piper-tts",
-      "type": "project",
-      "path": "content/projects/inference-engines/piper-tts.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "pita-2026-amalia-authority",
@@ -5353,13 +5150,6 @@
       "age_days": 108
     },
     {
-      "id": "rebuff",
-      "type": "tool",
-      "path": "content/tools/evaluation-and-observability/rebuff.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
-    },
-    {
       "id": "record-the-fully-rendered-prompt-sent-to-the-model",
       "type": "tip",
       "path": "content/tips-and-tricks/debugging-and-observability/record-the-fully-rendered-prompt-sent-to-the-model.md",
@@ -5407,13 +5197,6 @@
       "path": "content/tools/data-ingestion/reducto.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
-    },
-    {
-      "id": "refact",
-      "type": "project",
-      "path": "content/projects/agent-systems/refact.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "reimers-2019-sentence-bert",
@@ -5778,20 +5561,6 @@
       "path": "content/projects/data-and-retrieval/semble.md",
       "last_reviewed": "2026-07-19",
       "age_days": 97
-    },
-    {
-      "id": "sensevoice",
-      "type": "project",
-      "path": "content/projects/foundation-models/sensevoice.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
-      "id": "sentence-transformers",
-      "type": "tool",
-      "path": "content/tools/model-layer/sentence-transformers.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "sentencepiece",
@@ -6249,13 +6018,6 @@
       "age_days": 114
     },
     {
-      "id": "strands-agents",
-      "type": "tool",
-      "path": "content/tools/orchestration/strands-agents.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "stream-user-facing-responses",
       "type": "tip",
       "path": "content/tips-and-tricks/inference-and-serving/stream-user-facing-responses.md",
@@ -6480,20 +6242,6 @@
       "age_days": 108
     },
     {
-      "id": "tensorzero",
-      "type": "project",
-      "path": "content/projects/agent-systems/tensorzero.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
-      "id": "terminal-bench",
-      "type": "project",
-      "path": "content/projects/benchmarks-and-evals/terminal-bench.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "tesseract-js",
       "type": "project",
       "path": "content/projects/data-and-retrieval/tesseract-js.md",
@@ -6525,20 +6273,6 @@
       "id": "text-embeddings-inference",
       "type": "tool",
       "path": "content/tools/serving-and-deployment/text-embeddings-inference.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
-      "id": "text-generation-inference",
-      "type": "project",
-      "path": "content/projects/inference-engines/text-generation-inference.md",
-      "last_reviewed": "2026-07-01",
-      "age_days": 115
-    },
-    {
-      "id": "text-generation-webui",
-      "type": "project",
-      "path": "content/projects/inference-engines/text-generation-webui.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
     },
@@ -6604,13 +6338,6 @@
       "path": "content/trending/by-source/toolradar-techpresso.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "torchtune",
-      "type": "tool",
-      "path": "content/tools/model-layer/torchtune.md",
-      "last_reviewed": "2026-06-30",
-      "age_days": 116
     },
     {
       "id": "touvron-2023-llama",
@@ -7129,13 +6856,6 @@
       "path": "content/projects/training-and-alignment/vlm2vec.md",
       "last_reviewed": "2026-07-11",
       "age_days": 105
-    },
-    {
-      "id": "vortex",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/vortex.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "vosk-api",

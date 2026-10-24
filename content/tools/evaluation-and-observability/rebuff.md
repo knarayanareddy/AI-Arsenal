@@ -20,7 +20,7 @@ github_url: "https://github.com/protectai/rebuff"
 alternatives: [guardrails-ai, llamaguard, nemo-guardrails]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: evaluation-and-observability
@@ -32,9 +32,9 @@ avoid_when:
   - You need a broader guardrails framework covering many safety dimensions, not just injection (consider Guardrails AI or NeMo Guardrails)
   - You require active, frequent maintenance guarantees — verify recent commit activity before adopting
 version_tracked: null
-verdict: recommended
-verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
-status: active
+verdict: use-with-caution
+verdict_rationale: "Useful as a worked example of layered injection detection; archived since August 2024, so its pattern list predates everything released since"
+status: archived
 ---
 
 > **TL;DR:** Rebuff covers the security-and-guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
@@ -86,6 +86,7 @@ Follow the official documentation at https://github.com/protectai/rebuff for the
 - There is no self-hosted path to Rebuff, so quota and rate-limit changes are the vendor's to make and yours to absorb.
 - Documentation for Rebuff describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Rebuff overlaps `guardrails-ai`, `llamaguard`, `nemo-guardrails`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- The repository has been archived with no push since August 2024, which for a prompt-injection detector means the attack patterns it encodes are frozen at that date.
 
 ## Integration Patterns
 

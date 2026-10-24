@@ -1,441 +1,601 @@
 {
-  "generated_at": "2026-10-24T16:16:07.365Z",
+  "generated_at": "2026-10-24T16:54:42.242Z",
   "mode": "changed-only",
-  "files_checked": 79,
-  "urls_found": 41,
-  "urls_checked": 41,
-  "max_urls": 2000,
-  "max_urls_per_host": 10,
+  "files_checked": 57,
+  "urls_found": 98,
+  "urls_checked": 98,
+  "max_urls": 2500,
+  "max_urls_per_host": 100,
   "capped": false,
   "urls_skipped_by_cap": 0,
   "broken_links": [],
   "warning_links": [
     {
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/ai-engineering-from-scratch.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ikaijua/Awesome-AITools",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/awesome-aitools.md"
-      ]
-    },
-    {
-      "url": "https://github.com/alvinreal/awesome-opensource-ai",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/awesome-opensource-ai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/screenpipe/screenpipe",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/data-ingestion/screenpipe.md"
-      ]
-    },
-    {
-      "url": "https://github.com/corsairdev/corsair",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/corsair.md"
-      ]
-    },
-    {
-      "url": "https://github.com/gptme/gptme",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/gptme.md"
-      ]
-    },
-    {
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/kirocrew.md"
-      ]
-    },
-    {
-      "url": "https://github.com/thesysdev/openui",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/openui.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-go",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/adk-go.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-go/tree/main/examples",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/adk-go.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-java",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/adk-java.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-python",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/adk-python.md"
-      ]
-    },
-    {
-      "url": "https://github.com/anywhere-labs/Agents-Anywhere",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/agents-anywhere.md"
-      ]
-    },
-    {
-      "url": "https://github.com/i-am-bee/beeai-framework",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/beeai-framework.md"
-      ]
-    },
-    {
-      "url": "https://github.com/eosphoros-ai/DB-GPT",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/db-gpt.md"
-      ]
-    },
-    {
-      "url": "https://github.com/arc53/DocsGPT",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/docsgpt.md"
-      ]
-    },
-    {
-      "url": "https://docs.screenpi.pe/",
+      "url": "https://huggingface.co/chat/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/data-ingestion/screenpipe.md"
+        "content/projects/agent-systems/ml-intern.md"
       ]
     },
     {
-      "url": "https://gptme.org/docs/",
+      "url": "https://refact.ai/blog/2026/refact-cloud-is-shutting-down/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/dx-and-tooling/gptme.md"
+        "content/projects/agent-systems/refact.md"
+      ]
+    },
+    {
+      "url": "https://www.tensorzero.com/docs/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/agent-systems/tensorzero.md"
+      ]
+    },
+    {
+      "url": "https://docs.refact.ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/agent-systems/refact.md"
+      ]
+    },
+    {
+      "url": "https://bigcode-bench.github.io/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/benchmarks-and-evals/bigcodebench.md"
+      ]
+    },
+    {
+      "url": "https://tensorzero.com",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/agent-systems/tensorzero.md"
+      ]
+    },
+    {
+      "url": "https://www.tbench.ai/docs/run-terminal-bench-2-0",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/benchmarks-and-evals/terminal-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2406.15877",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/benchmarks-and-evals/bigcodebench.md"
+      ]
+    },
+    {
+      "url": "https://airweave.ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/data-and-retrieval/airweave.md"
+      ]
+    },
+    {
+      "url": "https://truefoundry.com/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/data-and-retrieval/cognita.md"
+      ]
+    },
+    {
+      "url": "https://vortex.dev",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/data-and-retrieval/vortex.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.10117",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/cosyvoice.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/FunAudioLLM",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/cosyvoice.md"
+      ]
+    },
+    {
+      "url": "https://www.informationweek.com/machine-learning-ai/will-enterprises-adopt-deepseek-",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/deepseek-v3-r1.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/deepseek-v3-r1.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/mistralai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/mistral-models.md"
+      ]
+    },
+    {
+      "url": "https://docs.mistral.ai/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/mistral-models.md"
+      ]
+    },
+    {
+      "url": "https://funaudiollm.github.io/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/sensevoice.md"
+      ]
+    },
+    {
+      "url": "https://docs.comfy.org",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/frameworks/comfyui.md"
+      ]
+    },
+    {
+      "url": "https://nni.readthedocs.io/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/frameworks/microsoft-nni.md"
+      ]
+    },
+    {
+      "url": "https://github.com/treeverse/dvc",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/dvc.md"
+      ]
+    },
+    {
+      "url": "https://github.com/hiyouga/LlamaFactory",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/llamafactory.md"
+      ]
+    },
+    {
+      "url": "https://docs.nvidia.com/nemo/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/frameworks/nvidia-nemo.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/sentence-transformers",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/sentence-transformers.md"
+      ]
+    },
+    {
+      "url": "https://github.com/meta-pytorch/torchtune",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/torchtune.md"
+      ]
+    },
+    {
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://github.com/FlowiseAI/Flowise/discussions/6727",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://nunchaku.tech/docs/nunchaku/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/inference-engines/nunchaku.md"
       ]
     },
     {
       "url": "https://github.com/strands-agents/harness-sdk",
       "ok": false,
-      "error": "net-error",
+      "error": "host-rate-limited",
       "soft": true,
-      "category": "transient",
+      "category": "host_cap",
       "files": [
-        "content/tools/orchestration/harness-sdk.md"
+        "content/tools/orchestration/strands-agents.md"
       ]
     },
     {
-      "url": "https://github.com/langroid/langroid",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/langroid.md"
-      ]
-    },
-    {
-      "url": "https://github.com/langchain-ai/open-swe",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/open-swe.md"
-      ]
-    },
-    {
-      "url": "https://google.github.io/adk-docs/",
+      "url": "https://arxiv.org/abs/2411.05007",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/adk-java.md",
-        "content/tools/orchestration/adk-python.md"
+        "content/projects/inference-engines/nunchaku.md"
       ]
     },
     {
-      "url": "https://framework.beeai.dev/",
+      "url": "https://github.com/theagentrouter/agent-router",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "http://localhost:1975/v1.",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "https://rhasspy.github.io/piper-samples/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/beeai-framework.md"
+        "content/projects/inference-engines/piper-tts.md"
       ]
     },
     {
-      "url": "https://github.com/openagents-org/openagents",
+      "url": "https://github.com/predibase/lorax",
       "ok": false,
-      "error": "net-error",
+      "error": "host-rate-limited",
       "soft": true,
-      "category": "transient",
+      "category": "host_cap",
       "files": [
-        "content/tools/orchestration/openagents.md"
+        "content/tools/serving-and-deployment/lorax.md"
       ]
     },
     {
-      "url": "https://github.com/Human-Agent-Society/reef",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/reef.md"
-      ]
-    },
-    {
-      "url": "https://github.com/crmne/ruby_llm",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/ruby-llm.md"
-      ]
-    },
-    {
-      "url": "https://github.com/looplj/axonhub",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/axonhub.md"
-      ]
-    },
-    {
-      "url": "https://docs.docsgpt.cloud/",
+      "url": "https://huggingface.co/docs/text-generation-inference",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/docsgpt.md"
+        "content/projects/inference-engines/text-generation-inference.md"
       ]
     },
     {
-      "url": "https://dust.tt/",
+      "url": "https://huggingface.co/docs/inference-endpoints/en/engines/tgi",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/dust.md"
+        "content/projects/inference-engines/text-generation-inference.md"
       ]
     },
     {
-      "url": "https://github.com/gpustack/gpustack",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/gpustack.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Mesh-LLM/mesh-llm",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/mesh-llm.md"
-      ]
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/lmcache.md"
-      ]
-    },
-    {
-      "url": "https://agentclientprotocol.com/",
+      "url": "https://huggingface.co/docs/openenv",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/agents-anywhere.md"
+        "content/projects/training-and-alignment/openenv.md"
       ]
     },
     {
-      "url": "https://github.com/kvcache-ai/Mooncake",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/mooncake.md"
-      ]
-    },
-    {
-      "url": "https://github.com/algorithmicsuperintelligence/optillm",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/optillm.md"
-      ]
-    },
-    {
-      "url": "https://github.com/RunanywhereAI/runanywhere-sdks",
-      "ok": false,
-      "error": "net-error",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/serving-and-deployment/runanywhere-sdks.md"
-      ]
-    },
-    {
-      "url": "https://docs.dust.tt/",
+      "url": "https://greatexpectations.io",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/dust.md"
+        "content/tools/data-ingestion/great-expectations.md"
       ]
     },
     {
-      "url": "https://langroid.github.io/langroid/",
+      "url": "https://docs.greatexpectations.io/docs/core/introduction/gx_overview",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/orchestration/langroid.md"
+        "content/tools/data-ingestion/great-expectations.md"
       ]
     },
     {
-      "url": "https://docs.gpustack.ai/",
+      "url": "https://docs.greatexpectations.io/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/serving-and-deployment/gpustack.md"
+        "content/tools/data-ingestion/great-expectations.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2407.00079",
+      "url": "https://chainlit.io",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/serving-and-deployment/mooncake.md"
+        "content/tools/dx-and-tooling/chainlit.md"
       ]
     },
     {
-      "url": "https://docs.runanywhere.ai/",
+      "url": "https://docs.chainlit.io",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/tools/serving-and-deployment/runanywhere-sdks.md"
+        "content/tools/dx-and-tooling/chainlit.md"
+      ]
+    },
+    {
+      "url": "https://block.github.io/goose/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/goose.md"
+      ]
+    },
+    {
+      "url": "https://toolradar.com/featured/techpresso",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/instructor.md"
+      ]
+    },
+    {
+      "url": "https://jan.ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/jan.md"
+      ]
+    },
+    {
+      "url": "https://goose-docs.ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/goose.md"
+      ]
+    },
+    {
+      "url": "https://jan.ai/docs",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/jan.md"
+      ]
+    },
+    {
+      "url": "https://protectai.github.io/llm-guard/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/evaluation-and-observability/llm-guard.md"
+      ]
+    },
+    {
+      "url": "https://sbert.net",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/model-layer/sentence-transformers.md"
+      ]
+    },
+    {
+      "url": "https://flowiseai.com",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://strandsagents.com",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/orchestration/strands-agents.md"
+      ]
+    },
+    {
+      "url": "https://docs.flowiseai.com",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://strandsagents.com/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/orchestration/strands-agents.md"
+      ]
+    },
+    {
+      "url": "https://theagentrouter.ai/docs/getting-started/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "https://theagentrouter.ai/docs/cli/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "https://aigateway.envoyproxy.io",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "https://loraexchange.ai/",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/serving-and-deployment/lorax.md"
       ]
     }
   ],
   "summary": {
-    "ok": 0,
+    "ok": 41,
     "ignored": 0,
     "broken": 0,
-    "warnings": 41,
-    "contacted": 41,
-    "skipped_host_cap": 0,
+    "warnings": 57,
+    "contacted": 88,
+    "skipped_host_cap": 9,
     "skipped_url_cap": 0,
     "warnings_by_type": {
-      "host_cap": 0,
+      "host_cap": 9,
       "http_soft": 0,
       "redirect": 0,
-      "transient": 41,
-      "placeholder": 0
+      "transient": 47,
+      "placeholder": 1
     }
   }
 }

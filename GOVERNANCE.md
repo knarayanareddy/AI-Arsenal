@@ -32,6 +32,11 @@ verify the claim instead of trusting a bot name.
 - Stale entries are flagged and issues are filed — `scripts/check-stale.js`
   (writes `data/stale-report.json`) and `scripts/create-stale-issues.js`
   (`pnpm run file:stale-issues`).
+- Stale entries are triaged by severity — `scripts/triage-stale-entries.js`
+  (`pnpm run triage:stale`) checks each entry's repository and separates
+  defects (gone, archived, moved) from scheduling work, writing
+  `data/freshness-triage.json` and `docs/freshness-worklist.md`. It measures
+  only: bumping `last_reviewed` stays a human decision.
 
 Note: the weekly automation above depends on the repository setting
 "Allow GitHub Actions to create and approve pull requests" being enabled, since

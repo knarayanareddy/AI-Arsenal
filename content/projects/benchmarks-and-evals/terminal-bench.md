@@ -6,17 +6,17 @@ artifact_type: framework
 category: evaluation
 subcategory: evaluation
 description: "Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models"
-github_url: "https://github.com/laude-institute/terminal-bench"
+github_url: "https://github.com/harbor-framework/terminal-bench-1"
 license: "Apache-2.0"
 primary_language: Python
-org_or_maintainer: "Stanford / Laude Institute"
+org_or_maintainer: "harbor-framework"
 tags: [evaluation, agents, llm]
 maturity: beta
 cost_model: open-source
-github_stars: 2427
+github_stars: 2606
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-01-22"
+last_commit: "2026-07-11"
 docs_url: "https://www.tbench.ai/docs/run-terminal-bench-2-0"
 demo_url: null
 paper_url: null
@@ -39,12 +39,12 @@ alternatives: [swe-bench]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (2,427), primary language, license, and last commit (2026-01-22) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
+enrichment_notes: "Star count (2,606), primary language, license, and last commit (2026-07-11) verified via the GitHub API on 2026-10-24. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/laude-institute/terminal-bench", "date": "2026-07-08", "description": "2,427 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/harbor-framework/terminal-bench-1", "date": "2026-07-08", "description": "2,427 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 featured: false
 status: active
 ---
@@ -97,7 +97,7 @@ This is the benchmark-and-eval entry for Terminal-Bench in this phase, and the h
 
 ## Resources
 
-- [GitHub](https://github.com/laude-institute/terminal-bench)
+- [GitHub](https://github.com/harbor-framework/terminal-bench-1)
 - [Documentation](https://www.tbench.ai/docs/run-terminal-bench-2-0)
 
 ---

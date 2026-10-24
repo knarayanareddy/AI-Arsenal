@@ -93,7 +93,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [BeeAI Framework](../orchestration/beeai-framework.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | deployment, production-serving | freemium | Yes | Yes | Yes | python | recommended |
 | [Cerebras Inference](../model-layer/cerebras-inference.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | watching |
-| [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | use-with-caution |
 | [ClearML](../model-layer/clearml.md) | model layer | model-registry, orchestration | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | orchestration, prompt-management | paid | No | No | No | python | watching |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | evaluation | freemium | Yes | No | No | python | watching |
@@ -160,11 +160,11 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | production-serving, prompt-management | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
-| [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | solid-choice |
+| [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | best-in-class |
 | [LM Format Enforcer](../model-layer/lm-format-enforcer.md) | model layer | structured-output | open-source | Yes | Yes | Yes | python | solid-choice |
 | [LMCache](../serving-and-deployment/lmcache.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, cpp | recommended |
-| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | solid-choice |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | use-with-caution |
 | [Manus](../orchestration/manus.md) | orchestration | prototyping, orchestration | paid | No | No | No | python | watching |
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | web-scraping, data-labeling | open-source | Yes | Yes | Yes | python | solid-choice |
@@ -173,7 +173,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
-| [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
+| [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
 | [Mirascope](../orchestration/mirascope.md) | orchestration | orchestration, structured-output | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLflow](../model-layer/mlflow.md) | model layer | model-registry | open-source | Yes | Yes | Yes | python | recommended |
@@ -214,7 +214,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | production-serving, deployment, prototyping | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | production-serving, orchestration, fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | python | recommended |
-| [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python, typescript | use-with-caution |
 | [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | production-serving | freemium | Yes | No | No | python | watching |
 | [Reducto](../data-ingestion/reducto.md) | data ingestion | structured-output | usage-based | Yes | No | No | python | solid-choice |
 | [REEF](../orchestration/reef.md) | orchestration | fine-tuning, orchestration | open-source | Yes | Yes | Yes | python | watching |
