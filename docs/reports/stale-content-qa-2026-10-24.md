@@ -72,7 +72,49 @@ validated strictly and ignore the baseline, so the frames cannot spread; the
 baseline can only shrink, and `pnpm run audit:generated-prose` regenerates the
 worklist.
 
-## 3. The generator behind it
+## 3. Status drift: what freshness cannot see
+
+`check-stale.js` measures how long since an entry was *reviewed*. An entry can be
+re-reviewed on Monday and still claim `status: active` for a repository whose last
+push was two years ago, and no age metric catches it, because the file itself is
+fresh.
+
+`scripts/audit-status-drift.js` (`pnpm run audit:status-drift`) compares each
+entry's `status` and `health_signals` against its own `last_commit`, using the
+windows the candidate rubric already defines (90 days: may claim active and
+`actively-maintained`; 180 days: ceiling before the catalogue only allows
+`watching`), and writes `docs/status-drift-audit.md`.
+
+| Finding | Entries |
+|---|---:|
+| `claims-actively-maintained` with a commit older than 90 days | 181 |
+| `undated` — project/paper with no parseable `last_commit` | 138 |
+| `active-but-stale` — active with a commit older than 180 days | 49 (was 64) |
+| `watching-but-fresh` — resumed, worth re-reading | 0 |
+
+Eighteen were corrected in this pass, because in each case the repository had
+already been verified and the body often said as much while the frontmatter did
+not:
+
+- **`zerox`** — active, last push 2025-05-20, and `docs_url` pointed at
+  `getomni.ai`, which now redirects to `monumint.com`: OmniAI rebranded and sells
+  conversational AI to lenders, so the OCR demo the entry cited no longer exists.
+  Status → `watching`, docs → README, and the limitation now records the 91 issues
+  a reader inherits.
+- **`superagi`** — active against a January 2025 commit, and `research-origin`
+  claimed for a startup product. Status → `watching`.
+- **`lora-diffusion`** — superseded by Diffusers' built-in LoRA support, so
+  `deprecated` with the notice the governance deprecation policy requires.
+- **15 more from the dormant pass** (bark, kokoro, coqui-tts, flux, deepseek-vl,
+  deepseek-v3-r1, janus, jina-serve, latex-ocr, mmagic, mmdetection, openvoice,
+  segment-anything, styletts2, grounding-dino) — 400–900 days without a push,
+  each body already describing the slowdown.
+
+The remaining 368 findings are a worklist, not a bulk edit: flipping `status`
+from a date alone would leave each body's claims unchecked, which is how the
+entry got out of step in the first place.
+
+## 4. The generator behind it
 
 `scripts/populate-from-toolradar.js` wrote the affected batch. It hardcoded
 `last_commit` to its own run date, estimated `github_stars`, and emitted the
@@ -81,7 +123,7 @@ a stale entry look current and hides it from `check:stale`. The script is retire
 to `quarantine/2026-10-24/scripts/` and `GOVERNANCE.md` now bars any script from
 writing prose or metrics into `content/`.
 
-## 4. New entries
+## 5. New entries
 
 Each was checked against the live repository and added with sourced frontmatter,
 two or more workload-specific `best_when`/`avoid_if` scenarios, and a full body:
@@ -99,10 +141,22 @@ two or more workload-specific `best_when`/`avoid_if` scenarios, and a full body:
   frequently updated embedding sets that must stay in-process, with the linear
   scan and lossy recall stated as the boundaries.
 
+## What the link check found
+
+The changed-link job failed on two URLs in the new `deepseek-harness` entry: both
+pointed at `blob/main/...` while the repository's default branch is `master`. The
+contents API resolves either branch, so only a real request catches it. Fixed.
+
+The job ran fourteen minutes and reported failure with no URL, because its
+findings live only in the step log. `scripts/annotate-broken-links.js` now reprints
+the checker's own report as check-run annotations carrying the URL, status and
+file — that is how the two URLs above were identified.
+
 ## Verification
 
 ```
-pnpm run ci                      # exit 0, 310 tests, 1,300 entries
+pnpm run ci                      # exit 0, 325 tests, 1,300 entries
 pnpm run check:stale             # 1,000 stale (was 1,022; 22 reviewed, 3 added, 1 quarantined)
+pnpm run audit:status-drift      # 383 findings, 368 entries (worklist in docs/status-drift-audit.md)
 pnpm run validate:editorial:all  # 0 new findings (454 baselined)
 ```
