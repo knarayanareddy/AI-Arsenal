@@ -6,17 +6,17 @@ artifact_type: platform
 category: multimodal
 subcategory: frameworks
 description: "Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines"
-github_url: "https://github.com/comfyanonymous/ComfyUI"
+github_url: "https://github.com/Comfy-Org/ComfyUI"
 license: "GPL-3.0"
 primary_language: Python
 org_or_maintainer: "Comfy Org"
 tags: [multimodal, orchestration, self-hosted]
 maturity: production
 cost_model: open-source
-github_stars: 119901
+github_stars: 142561
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-07-08"
+last_commit: "2026-10-24"
 docs_url: "https://docs.comfy.org"
 demo_url: null
 paper_url: null
@@ -39,12 +39,12 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (119,901), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
+enrichment_notes: "Star count (142,561), primary language, license, and last commit (2026-10-24) verified via the GitHub API on 2026-10-24. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/comfyanonymous/ComfyUI", "date": "2026-07-08", "description": "119,901 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/Comfy-Org/ComfyUI", "date": "2026-07-08", "description": "119,901 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 featured: false
 status: active
 ---
@@ -68,7 +68,7 @@ Upstream: PyTorch, model releases from Stability/BFL/Alibaba/Tencent et al. Down
 ## Getting Started
 
 ```bash
-git clone https://github.com/comfyanonymous/ComfyUI && cd ComfyUI
+git clone https://github.com/Comfy-Org/ComfyUI && cd ComfyUI
 pip install -r requirements.txt
 python main.py
 # open localhost:8188, load a template workflow, drop model weights into models/checkpoints/
@@ -98,7 +98,7 @@ ComfyUI is the node-graph engine that has become the de facto interface for open
 
 ## Resources
 
-- [GitHub](https://github.com/comfyanonymous/ComfyUI)
+- [GitHub](https://github.com/Comfy-Org/ComfyUI)
 - [Documentation](https://docs.comfy.org)
 
 ---

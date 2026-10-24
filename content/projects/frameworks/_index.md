@@ -52,9 +52,9 @@ Before selecting a framework:
 - [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164197
 - [ponytail](./ponytail.md) — ⭐ 147381
 - [Dify](./dify.md) — ⭐ 145081
+- [ComfyUI](./comfyui.md) — ⭐ 142561
 - [LangChain](./langchain.md) — ⭐ 139206
 - [ComfyUI](./comfy-org-comfyui.md) — ⭐ 135314
-- [ComfyUI](./comfyui.md) — ⭐ 119901
 - [caveman](./caveman.md) — ⭐ 108165
 
 ### Browse All

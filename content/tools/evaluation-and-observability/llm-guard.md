@@ -20,7 +20,7 @@ github_url: "https://github.com/protectai/llm-guard"
 alternatives: [nemo-guardrails, guardrails-ai, rebuff]
 integrates_with: [langchain]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: null
 phase: evaluation-and-observability
@@ -32,9 +32,9 @@ avoid_when:
   - You need dialogue-flow-level policy control (what the bot may talk about, tool-use rules) — that's NeMo Guardrails' territory, not per-message scanning
   - Latency budgets are tight and you enable many ML-based scanners; each adds inference time to every request
 version_tracked: null
-verdict: solid-choice
-verdict_rationale: The most complete open-source scanner toolkit for LLM I/O security, best used with a curated scanner subset rather than everything enabled
-status: active
+verdict: use-with-caution
+verdict_rationale: "A well-structured scanner library whose catalogue is now frozen; keep it for the architecture, and do not rely on it alone against current injection patterns"
+status: archived
 enrichment_status: draft
 ---
 
@@ -87,6 +87,7 @@ Follow the official documentation at https://protectai.github.io/llm-guard/ for 
 - Depending on LLM Guard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
 - Documentation for LLM Guard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- Archived upstream: the scanner catalogue and its heuristics will not gain coverage, which matters most for a guardrail whose value is keeping up with new injection patterns.
 
 ## Integration Patterns
 

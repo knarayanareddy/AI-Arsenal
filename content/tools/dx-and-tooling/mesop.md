@@ -4,7 +4,7 @@ name: Mesop
 type: tool
 job: [prototyping]
 description: Google Python UI framework for building web apps and AI prototypes
-url: "https://github.com/google/mesop"
+url: "https://github.com/mesop-dev/mesop"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [llm, cloud, data]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/google/mesop"
-docs_url: "https://github.com/google/mesop"
-github_url: "https://github.com/google/mesop"
+source_url: "https://github.com/mesop-dev/mesop"
+docs_url: "https://github.com/mesop-dev/mesop"
+github_url: "https://github.com/mesop-dev/mesop"
 alternatives: [chainlit, fastapi, gradio, streamlit]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
@@ -32,9 +32,9 @@ avoid_when:
   - You need the largest community, plugin ecosystem, and Stack Overflow coverage (Streamlit/Gradio are more mature)
   - You need a fully customizable production frontend rather than an internal tool
 version_tracked: null
-verdict: recommended
-verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
-status: active
+verdict: use-with-caution
+verdict_rationale: "A readable example of a Python-defined UI layer, now archived after moving to the mesop-dev organisation, so adopt it only with the intent to maintain your own fork"
+status: archived
 ---
 
 > **TL;DR:** Mesop, for the prototyping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
@@ -65,7 +65,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install mesop
 ```
 
-Follow the official documentation at https://github.com/google/mesop for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/mesop-dev/mesop for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -85,6 +85,7 @@ Follow the official documentation at https://github.com/google/mesop for the aut
 - There is no self-hosted path to Mesop, so quota and rate-limit changes are the vendor's to make and yours to absorb.
 - Documentation for Mesop describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Mesop overlaps `chainlit`, `fastapi`, `gradio`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- Upstream has been archived and the code moved to the mesop-dev organisation, so any fork you maintain is now the only place a fix will land.
 
 ## Integration Patterns
 
@@ -95,9 +96,9 @@ Follow the official documentation at https://github.com/google/mesop for the aut
 
 ## Resources
 
-- [Primary site](https://github.com/google/mesop)
-- [Documentation](https://github.com/google/mesop)
-- [Source](https://github.com/google/mesop)
+- [Primary site](https://github.com/mesop-dev/mesop)
+- [Documentation](https://github.com/mesop-dev/mesop)
+- [Source](https://github.com/mesop-dev/mesop)
 
 ## Buzz & Reception
 

@@ -6,18 +6,18 @@ artifact_type: model
 category: voice-audio
 subcategory: models
 description: Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
-github_url: "https://github.com/FunAudioLLM/CosyVoice"
+github_url: "https://github.com/QwenAudio/CosyVoice"
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Alibaba (FunAudioLLM)"
+org_or_maintainer: "QwenAudio"
 tags: [multimodal, voice, inference, self-hosted]
 maturity: beta
 cost_model: open-source
-github_stars: 22044
+github_stars: 24112
 github_stars_last_30d: 0
 trending_score: 40
 last_commit: "2026-05-25"
-docs_url: "https://github.com/FunAudioLLM/CosyVoice"
+docs_url: "https://github.com/QwenAudio/CosyVoice"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2412.10117"
 paper_id: null
@@ -45,12 +45,12 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (22,044), Apache-2.0 license, and last commit (2026-05-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here."
+enrichment_notes: "Star count (24,112), Apache-2.0 license, and last commit (2026-05-25) verified via the GitHub API on 2026-10-24. Capability claims from the paper/README; not hands-on verified here."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/FunAudioLLM/CosyVoice", "date": "2026-07-08", "description": "22,044 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/QwenAudio/CosyVoice", "date": "2026-07-08", "description": "22,044 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 featured: false
 status: active
 ---
@@ -74,7 +74,7 @@ It competes with other open TTS models (e.g. GPT-SoVITS, Fish-Speech, Parler-TTS
 ## Getting Started
 
 ```bash
-git clone https://github.com/FunAudioLLM/CosyVoice
+git clone https://github.com/QwenAudio/CosyVoice
 # install deps, download weights from Hugging Face, then run zero-shot / cross-lingual inference
 ```
 
@@ -104,5 +104,5 @@ git clone https://github.com/FunAudioLLM/CosyVoice
 
 ## Resources
 
-- [GitHub Repository](https://github.com/FunAudioLLM/CosyVoice)
+- [GitHub Repository](https://github.com/QwenAudio/CosyVoice)
 - [Paper (arXiv)](https://arxiv.org/abs/2412.10117)

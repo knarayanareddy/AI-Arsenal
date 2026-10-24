@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: archived
 id: piper-tts
 name: "Piper"
 artifact_type: library
@@ -40,7 +40,7 @@ tags:
   - "streaming"
 maturity: production
 cost_model: open-source
-github_stars: 11214
+github_stars: 11307
 last_commit: "2025-08-26"
 docs_url: https://rhasspy.github.io/piper-samples/
 phase: inference-engine
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You need zero-shot voice cloning or highly expressive prosody, which larger models provide"
   - "You want to train new voices without an ML pipeline; Piper focuses on running exported voices"
-enrichment_notes: "Repository, MIT license, and 2025-08-26 activity verified via the GitHub API on 2026-07-12. Widely used in the Home Assistant/Rhasspy ecosystem."
+enrichment_notes: "Repository, MIT license, and 2025-08-26 activity verified via the GitHub API on 2026-10-24. Widely used in the Home Assistant/Rhasspy ecosystem."
 ---
 
 ## Overview
@@ -93,7 +93,7 @@ Very fast on CPUs and ARM boards, fully offline, large multilingual voice librar
 
 ## Limitations
 
-Voices are fixed VITS checkpoints, so there is no zero-shot cloning and limited prosody control; expressiveness trails large generative models; training new voices requires a separate pipeline; and upstream cadence is community-paced.
+Voices are fixed VITS checkpoints, so there is no zero-shot cloning and limited prosody control; expressiveness trails large generative models; training new voices requires a separate pipeline; and upstream cadence is community-paced. Archived upstream: the voice models still generate speech on a CPU, but nothing will fix a bug in the phonemiser or add a new language.
 
 ## Relation to the Arsenal
 

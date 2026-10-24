@@ -59,14 +59,24 @@ The monthly workflow opens a PR with:
 
 - monthly digest draft
 - stale report
+- freshness triage (`data/freshness-triage.json`, `docs/freshness-worklist.md`)
 - updated stats
 
 Maintainer checklist:
 
-- Review stale entries in `data/stale-report.json`.
-- Update high-impact stale entries first.
+- Work `docs/freshness-worklist.md` top-down, not `data/stale-report.json`
+  alphabetically: the worklist sorts by what is actionable.
+- Fix the `deleted` / `archived` / `renamed` rows first — those are wrong
+  entries, not old ones. A renamed repository only resolves by redirect, and
+  an archived one invalidates the verdict the entry recommends.
+- Then `dormant`, then `active` (re-verify metadata and read the prose against
+  the current README).
 - Edit the monthly digest before publishing.
 - Confirm generated stats look reasonable.
+
+`pnpm run triage:stale` measures and sorts only. It never edits content and
+never bumps `last_reviewed`: a review date means a human read the entry, so
+only the person making the fix sets it.
 
 ## Generated Data Policy
 
@@ -165,7 +175,8 @@ pnpm run check:links
 ### Check stale entries
 
 ```bash
-pnpm run check:stale
+pnpm run check:stale      # what is past its review date
+pnpm run triage:stale     # which of those are actually wrong, sorted by severity
 ```
 
 ### Create a monthly digest manually

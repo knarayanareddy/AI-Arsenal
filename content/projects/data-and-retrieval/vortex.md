@@ -22,7 +22,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: vortex
@@ -31,7 +31,7 @@ artifact_type: framework
 category: data-pipelines
 subcategory: libraries
 description: "Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets"
-github_url: https://github.com/spiraldb/vortex
+github_url: https://github.com/vortex-data/vortex
 license: "Apache-2.0"
 primary_language: "Rust"
 tags:
@@ -42,8 +42,8 @@ tags:
   - "foundational"
 maturity: beta
 cost_model: open-source
-github_stars: 3085
-last_commit: "2026-07-12"
+github_stars: 3285
+last_commit: "2026-10-24"
 docs_url: https://vortex.dev
 phase: data-and-retrieval
 domain:
@@ -64,7 +64,7 @@ best_for:
 avoid_if:
   - "You already have a stable Parquet/Arrow pipeline and do not need new compression or random-access characteristics."
   - "You need a mature, universally supported format with broad tool ecosystem guarantees today."
-enrichment_notes: "Official repository (now an LF AI & Data incubation project), Apache-2.0 license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Format stability remains draft."
+enrichment_notes: "Official repository (now an LF AI & Data incubation project), Apache-2.0 license, and same-day 2026-10-24 activity were reviewed on 2026-10-24. Format stability remains draft."
 ---
 
 ## Overview
@@ -111,5 +111,5 @@ Vortex is a storage-layer counterpart to the data-pipeline and retrieval tooling
 
 ## Resources
 
-- [Official source](https://github.com/spiraldb/vortex)
+- [Official source](https://github.com/vortex-data/vortex)
 - [Project site](https://vortex.dev)

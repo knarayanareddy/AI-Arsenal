@@ -4,7 +4,7 @@ name: DVC
 type: tool
 job: [model-registry]
 description: Open-source data and model versioning tool for ML projects and pipelines
-url: "https://github.com/iterative/dvc"
+url: "https://github.com/treeverse/dvc"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [data, monitoring]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/iterative/dvc"
-docs_url: "https://github.com/iterative/dvc"
-github_url: "https://github.com/iterative/dvc"
+source_url: "https://github.com/treeverse/dvc"
+docs_url: "https://github.com/treeverse/dvc"
+github_url: "https://github.com/treeverse/dvc"
 alternatives: [hugging-face-hub, mlflow, weights-biases]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -65,7 +65,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install dvc
 ```
 
-Follow the official documentation at https://github.com/iterative/dvc for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/treeverse/dvc for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -95,9 +95,9 @@ Follow the official documentation at https://github.com/iterative/dvc for the au
 
 ## Resources
 
-- [Primary site](https://github.com/iterative/dvc)
-- [Documentation](https://github.com/iterative/dvc)
-- [Source](https://github.com/iterative/dvc)
+- [Primary site](https://github.com/treeverse/dvc)
+- [Documentation](https://github.com/treeverse/dvc)
+- [Source](https://github.com/treeverse/dvc)
 
 ## Buzz & Reception
 

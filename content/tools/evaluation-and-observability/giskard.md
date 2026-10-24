@@ -4,7 +4,7 @@ name: Giskard
 type: tool
 job: [evaluation, security-and-guardrails]
 description: Testing platform for evaluating and scanning ML and LLM applications
-url: "https://github.com/Giskard-AI/giskard"
+url: "https://github.com/Giskard-AI/giskard-oss"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [evaluation, security, guardrails]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/Giskard-AI/giskard"
-docs_url: "https://github.com/Giskard-AI/giskard"
-github_url: "https://github.com/Giskard-AI/giskard"
+source_url: "https://github.com/Giskard-AI/giskard-oss"
+docs_url: "https://github.com/Giskard-AI/giskard-oss"
+github_url: "https://github.com/Giskard-AI/giskard-oss"
 alternatives: []
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: evaluation-and-observability
@@ -67,7 +67,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install giskard
 ```
 
-Follow the official documentation at https://github.com/Giskard-AI/giskard for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/Giskard-AI/giskard-oss for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -96,9 +96,9 @@ Follow the official documentation at https://github.com/Giskard-AI/giskard for t
 
 ## Resources
 
-- [Primary site](https://github.com/Giskard-AI/giskard)
-- [Documentation](https://github.com/Giskard-AI/giskard)
-- [Source](https://github.com/Giskard-AI/giskard)
+- [Primary site](https://github.com/Giskard-AI/giskard-oss)
+- [Documentation](https://github.com/Giskard-AI/giskard-oss)
+- [Source](https://github.com/Giskard-AI/giskard-oss)
 
 ## Buzz & Reception
 

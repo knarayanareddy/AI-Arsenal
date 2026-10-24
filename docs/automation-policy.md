@@ -46,5 +46,5 @@ Parsing helpers use bounded concurrency via `AI_ARSENAL_PARSE_CONCURRENCY` to av
 | `on-merge.yml` | full verification + artifact upload | confirm main can generate cleanly |
 | `data-refresh.yml` | scheduled/manual data-release publish | publish generated JSON API to orphan branch |
 | `weekly.yml` | scheduled PR | metrics, links, trending |
-| `monthly.yml` | scheduled PR | digest, stale report, stats |
+| `monthly.yml` | scheduled PR | digest, stale report, freshness triage, stats |
 

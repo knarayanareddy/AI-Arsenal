@@ -30,7 +30,7 @@ api_compatible: null
 phase: foundation-model
 domain: [language, reasoning]
 relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [org-backed, actively-maintained, production-proven]
+health_signals: [org-backed, production-proven]
 ecosystem_role:
   - Open-weight frontier-class reasoning and general-purpose model family, MIT-licensed
 best_for:
@@ -45,7 +45,7 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: Architecture figures (671B total/37B active, MLA, DeepSeekMoE 256 experts, MTP, FP8 training) are from DeepSeek's own technical report, corroborated by NVIDIA Megatron-Bridge docs and DeepSeek's architecture deepwiki. GitHub org shows ongoing 2026 tooling commits; core weight repos are stable, typical for released weights.
+enrichment_notes: Architecture figures (671B total/37B active, MLA, DeepSeekMoE 256 experts, MTP, FP8 training) are from DeepSeek's own technical report, corroborated by NVIDIA Megatron-Bridge docs and DeepSeek's architecture deepwiki. The weight repository itself has not been pushed since 2025-08-28, which is normal for released weights, so actively-maintained was removed from health_signals on 2026-10-24.
 added_date: "2026-06-13"
 last_reviewed: "2026-07-01"
 added_by: maintainer

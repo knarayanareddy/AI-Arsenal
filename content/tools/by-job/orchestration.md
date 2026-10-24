@@ -130,7 +130,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Dust](../orchestration/dust.md) | orchestration | freemium | Yes | No | No | typescript | solid-choice |
 | [E2B](../orchestration/e2b.md) | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | use-with-caution |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [gptme](../dx-and-tooling/gptme.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |

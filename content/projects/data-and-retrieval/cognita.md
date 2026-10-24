@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: archived
 id: cognita
 name: "Cognita"
 artifact_type: framework
@@ -36,7 +36,7 @@ primary_language: Python
 tags: [rag, langchain]
 maturity: experimental
 cost_model: open-source
-github_stars: 4419
+github_stars: 4410
 last_commit: "2026-03-13"
 docs_url: "https://github.com/truefoundry/cognita#readme"
 phase: data-and-retrieval
@@ -52,7 +52,7 @@ ecosystem_role:
   - "A structured RAG framework that turns notebook-style pipelines into modular, deployable, API-driven services."
 best_for: ["You are moving a LangChain or LlamaIndex RAG prototype into production and want each component modular, API-driven and separately extendable.", "You want a no-code UI over a RAG pipeline so a non-developer can create collections and data sources without editing a metadata YAML file.", "You are studying how a retrieval platform was structured around LangChain and LlamaIndex and need a readable reference rather than a maintained dependency."]
 avoid_if: ["You need a maintained product, because the README opens with a notice that the project is no longer actively maintained.", "You want new features or bug fixes, because the repository is archived and the GitHub API confirms the archived flag.", "You are starting a new production retrieval system, because adopting an unmaintained platform's structure means you own every future dependency upgrade yourself."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-07-12. Production framing; expect to operate backing services."
+enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-10-24. Production framing; expect to operate backing services."
 ---
 
 ## Overview
@@ -99,7 +99,7 @@ The frontend has its own README, and a hosted instance was available at cognita.
 
 ## Limitations
 
-The README's first line is a notice that the project is no longer actively maintained, and the repository is archived, so the last real feature work is from 2024 and dependency drift is now on you. A RAG platform built on LangChain and LlamaIndex inherits both frameworks' breaking changes, and with no maintainer those breakages have no upstream fix path. The no-code UI and multi-component service are real operational surface for what is fundamentally a retrieval pipeline, and the Postgres-backed metadatastore is a second datastore to run and back up. The hosted evaluation instance has gone with the project's maintenance status, which means there is no longer a zero-setup path. For anything new, the maintained retrieval builders and frameworks cover the same ground with current dependency support.
+The README's first line is a notice that the project is no longer actively maintained, and the repository is archived, so the last real feature work is from 2024 and dependency drift is now on you. A RAG platform built on LangChain and LlamaIndex inherits both frameworks' breaking changes, and with no maintainer those breakages have no upstream fix path. The no-code UI and multi-component service are real operational surface for what is fundamentally a retrieval pipeline, and the Postgres-backed metadatastore is a second datastore to run and back up. The hosted evaluation instance has gone with the project's maintenance status, which means there is no longer a zero-setup path. For anything new, the maintained retrieval builders and frameworks cover the same ground with current dependency support. The project is archived, so the connector and retrieval modules will not track upstream API changes; expect to patch any SaaS integration yourself.
 
 ## Relation to the Arsenal
 

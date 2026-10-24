@@ -4,7 +4,7 @@ name: torchtune
 type: tool
 job: [fine-tuning]
 description: PyTorch-native library for fine-tuning and experimenting with LLMs
-url: "https://github.com/pytorch/torchtune"
+url: "https://github.com/meta-pytorch/torchtune"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [fine-tuning, llm, pytorch]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/pytorch/torchtune"
-docs_url: "https://github.com/pytorch/torchtune"
-github_url: "https://github.com/pytorch/torchtune"
+source_url: "https://github.com/meta-pytorch/torchtune"
+docs_url: "https://github.com/meta-pytorch/torchtune"
+github_url: "https://github.com/meta-pytorch/torchtune"
 alternatives: [axolotl, llamafactory, mlx-lm, peft, unsloth]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -67,7 +67,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install torchtune
 ```
 
-Follow the official documentation at https://github.com/pytorch/torchtune for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/meta-pytorch/torchtune for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -97,9 +97,9 @@ Follow the official documentation at https://github.com/pytorch/torchtune for th
 
 ## Resources
 
-- [Primary site](https://github.com/pytorch/torchtune)
-- [Documentation](https://github.com/pytorch/torchtune)
-- [Source](https://github.com/pytorch/torchtune)
+- [Primary site](https://github.com/meta-pytorch/torchtune)
+- [Documentation](https://github.com/meta-pytorch/torchtune)
+- [Source](https://github.com/meta-pytorch/torchtune)
 
 ## Buzz & Reception
 

@@ -6,18 +6,18 @@ artifact_type: tool
 category: llms
 subcategory: inference-engines
 description: The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
-github_url: "https://github.com/oobabooga/text-generation-webui"
+github_url: "https://github.com/oobabooga/textgen"
 license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: oobabooga
 tags: [llm, self-hosted, inference]
 maturity: production
 cost_model: open-source
-github_stars: 47433
+github_stars: 47724
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-06-02"
-docs_url: "https://github.com/oobabooga/text-generation-webui/wiki"
+last_commit: "2026-08-17"
+docs_url: "https://github.com/oobabooga/textgen/wiki"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -41,11 +41,11 @@ corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (47.4k), AGPL-3.0, and maintenance state (last push 2026-06-02 — slower cadence than its 2023-24 peak but still active) verified via the GitHub API on 2026-07-08. Positioning claims are community-consensus characterization.
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/oobabooga/text-generation-webui","date":"2026-07-08","description":"47.4k stars; the long-standing community local-LLM workbench"}
+  - {"source":"github-trending","url":"https://github.com/oobabooga/textgen","date":"2026-07-08","description":"47.4k stars; the long-standing community local-LLM workbench"}
 featured: false
 status: active
 ---
@@ -69,7 +69,7 @@ Upstream: llama.cpp, ExLlama-family, and Transformers as loaders. It competes wi
 ## Getting Started
 
 ```bash
-git clone https://github.com/oobabooga/text-generation-webui
+git clone https://github.com/oobabooga/textgen
 cd text-generation-webui
 ./start_linux.sh   # or start_windows.bat / start_macos.sh
 # UI on localhost port 7860
@@ -96,5 +96,5 @@ The experimentation counterpart to `ollama` (appliance) and `vllm` (server) amon
 
 ## Resources
 
-- [GitHub](https://github.com/oobabooga/text-generation-webui)
-- [Wiki](https://github.com/oobabooga/text-generation-webui/wiki)
+- [GitHub](https://github.com/oobabooga/textgen)
+- [Wiki](https://github.com/oobabooga/textgen/wiki)

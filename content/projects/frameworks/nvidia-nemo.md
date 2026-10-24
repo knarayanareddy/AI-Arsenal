@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "NVIDIA"
+org_or_maintainer: "NVIDIA-NeMo"
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: nvidia-nemo
@@ -30,7 +30,7 @@ artifact_type: framework
 category: voice-audio
 subcategory: frameworks
 description: "NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines"
-github_url: https://github.com/NVIDIA/NeMo
+github_url: https://github.com/NVIDIA-NeMo/Speech
 license: "Apache-2.0"
 primary_language: "Python"
 tags:
@@ -41,8 +41,8 @@ tags:
   - "self-hosted"
 maturity: production
 cost_model: open-source
-github_stars: 17762
-last_commit: "2026-07-11"
+github_stars: 18611
+last_commit: "2026-10-24"
 docs_url: https://docs.nvidia.com/nemo/
 phase: framework
 domain:
@@ -62,7 +62,7 @@ best_for:
 avoid_if:
   - "You are not on NVIDIA hardware or want a vendor-neutral, lightweight toolkit"
   - "You only need inference of a single model, where a smaller runtime avoids the framework's weight"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12 (canonical URL redirects to the NeMo org). GPU-centric; benefits are largest on NVIDIA hardware."
+enrichment_notes: "Repository, Apache-2.0 license, and 2026-10-24 activity verified via the GitHub API on 2026-10-24 (canonical URL redirects to the NeMo org). GPU-centric; benefits are largest on NVIDIA hardware."
 ---
 
 ## Overview
@@ -103,5 +103,5 @@ It bridges the voice-audio and training-and-alignment areas and cross-links to i
 
 ## Resources
 
-- [GitHub repository](https://github.com/NVIDIA/NeMo)
+- [GitHub repository](https://github.com/NVIDIA-NeMo/Speech)
 - [Documentation](https://docs.nvidia.com/nemo/)

@@ -170,7 +170,7 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [LMCache](../serving-and-deployment/lmcache.md) | serving and deployment | open-source | Yes | Yes | Yes | python, cpp | recommended |
-| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | use-with-caution |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [Mooncake](../serving-and-deployment/mooncake.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |

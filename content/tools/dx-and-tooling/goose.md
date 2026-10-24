@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
-source_url: "https://github.com/block/goose"
+source_url: "https://github.com/aaif-goose/goose"
 docs_url: "https://goose-docs.ai"
-github_url: "https://github.com/block/goose"
+github_url: "https://github.com/aaif-goose/goose"
 alternatives: [claude-code, aider, openai-codex-cli]
 integrates_with: []
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
@@ -33,11 +33,11 @@ avoid_when:
   - "Environments where running an agent with broad local permissions is unacceptable without extra sandboxing"
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (50,838), license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
+enrichment_notes: "Star count (50,838), license, and last push (2026-07-08) verified via the GitHub API on 2026-10-24. Feature claims are from official docs; not yet hands-on verified here."
 verdict: recommended
 verdict_rationale: "The most MCP-native open agent, backed by Block's production usage; general-purpose rather than coding-only"
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/block/goose", "date": "2026-07-08", "description": "50,838 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/aaif-goose/goose", "date": "2026-07-08", "description": "50,838 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
 ## Overview
@@ -61,7 +61,7 @@ A Rust agent core maintains the task loop and tool registry; extensions are MCP 
 ## Getting Started
 
 ```bash
-curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
+curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash
 goose configure && goose session
 ```
 
@@ -95,7 +95,7 @@ goose configure && goose session
 
 - [Official Site](https://block.github.io/goose/)
 - [Documentation](https://goose-docs.ai)
-- [GitHub](https://github.com/block/goose)
+- [GitHub](https://github.com/aaif-goose/goose)
 
 ## Buzz & Reception
 

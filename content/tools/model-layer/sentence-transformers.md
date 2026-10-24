@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
-source_url: "https://github.com/UKPLab/sentence-transformers"
+source_url: "https://github.com/huggingface/sentence-transformers"
 docs_url: "https://sbert.net"
-github_url: "https://github.com/UKPLab/sentence-transformers"
+github_url: "https://github.com/huggingface/sentence-transformers"
 alternatives: [voyage-ai, cohere]
 integrates_with: [langchain, llamaindex, qdrant, weaviate]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -33,11 +33,11 @@ avoid_when:
   - "You've standardized on managed embedding APIs and never run models locally"
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (18,887), license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
+enrichment_notes: "Star count (18,887), license, and last push (2026-07-08) verified via the GitHub API on 2026-10-24. Feature claims are from official docs; not yet hands-on verified here."
 verdict: best-in-class
 verdict_rationale: "The foundational library of the open embedding ecosystem; virtually every open embedding model ships SBERT-compatible"
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/UKPLab/sentence-transformers", "date": "2026-07-08", "description": "18,887 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/sentence-transformers", "date": "2026-07-08", "description": "18,887 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
 ## Overview
@@ -94,7 +94,7 @@ pip install sentence-transformers
 
 - [Official Site](https://sbert.net)
 - [Documentation](https://sbert.net)
-- [GitHub](https://github.com/UKPLab/sentence-transformers)
+- [GitHub](https://github.com/huggingface/sentence-transformers)
 
 ## Buzz & Reception
 
