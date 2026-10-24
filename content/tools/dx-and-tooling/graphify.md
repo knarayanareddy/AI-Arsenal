@@ -4,7 +4,7 @@ name: "Graphify"
 type: tool
 job: [memory-management]
 description: "Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index"
-url: "https://graphify.com"
+url: "https://www.graphify.com"
 cost_model: open-source
 pricing_detail: "Apache-2.0 CLI and skill; optional Graphify Cloud subscription with a 14-day trial"
 tags: [retrieval, code-gen, agents]
@@ -109,7 +109,7 @@ Python 3.10+ and `uv` (or `pipx`) are the prerequisites; the CLI writes the grap
 
 - [GitHub repository](https://github.com/Graphify-Labs/graphify)
 - [Documentation](https://docs.graphify.com)
-- [Website](https://graphify.com)
+- [Website](https://www.graphify.com)
 - [PyPI package](https://pypi.org/project/graphifyy/)
 
 ## Buzz & Reception
