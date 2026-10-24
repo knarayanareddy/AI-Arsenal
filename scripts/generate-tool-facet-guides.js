@@ -8,7 +8,7 @@ import { escapeMarkdownCell } from './utils/markdown-escape.js';
 export const MARKER = '<!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->';
 
 const COST_FACETS = ['open-source', 'freemium', 'paid', 'self-hostable', 'usage-based'];
-const STACK_FACETS = ['python', 'typescript', 'rust', 'go', 'java', 'cpp', 'julia', 'polyglot'];
+const STACK_FACETS = ['python', 'typescript', 'rust', 'go', 'java', 'ruby', 'cpp', 'julia', 'polyglot'];
 
 const COST_DIR = 'content/tools/by-cost';
 const STACK_DIR = 'content/tools/by-stack';
@@ -41,8 +41,14 @@ function matchTools(tools, facetType, facet) {
   return tools.filter((t) =>
     facetType === 'cost'
       ? t.data.cost_model === facet
-      : (t.data.stack ?? []).includes(facet)
+      : asArray(t.data.stack).map((s) => String(s).toLowerCase()).includes(facet)
   );
+}
+
+function asArray(value) {
+  if (Array.isArray(value)) return value;
+  if (value === undefined || value === null || value === '') return [];
+  return [value];
 }
 
 function cell(value) {
@@ -57,12 +63,12 @@ function tableBlock(tools, facetType, facet, facetPagePath) {
       const d = t.data;
       const link = `[${cell(d.name ?? d.id)}](${rel(facetPagePath, t.file)})`;
       const phase = cell((d.phase ?? '').replace(/-/g, ' '));
-      const jobs = cell((d.job ?? []).join(', '));
+      const jobs = cell(asArray(d.job).join(', '));
       const cost = cell(d.cost_model ?? '');
       const free = d.free_tier ? 'Yes' : 'No';
       const self = d.self_hostable ? 'Yes' : 'No';
       const oss = d.open_source ? 'Yes' : 'No';
-      const stack = cell((d.stack ?? []).join(', '));
+      const stack = cell(asArray(d.stack).join(', '));
       const verdict = cell(d.verdict ?? '');
       return `| ${link} | ${phase} | ${jobs} | ${cost} | ${free} | ${self} | ${oss} | ${stack} | ${verdict} |`;
     });

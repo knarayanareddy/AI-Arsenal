@@ -51,6 +51,16 @@ function editorialFindings() {
   } catch (error) {
     out = `${error.stdout ?? ''}${error.stderr ?? ''}`;
   }
+  // A crash in the validator produces output that contains no finding lines,
+  // which previously made every "expect no finding" assertion pass for the
+  // wrong reason (a whole-catalogue YAML parse failure looked like clean
+  // prose). Require the run summary the validator always prints before it
+  // reports findings, so a broken gate fails loudly instead.
+  assert.match(
+    out,
+    /Full-catalog editorial validation: \d+ findings/,
+    `the editorial validator did not complete; captured output:\n${out.slice(0, 4000)}`
+  );
   return out
     .split('\n')
     .filter((line) => line.includes(TARGET))
