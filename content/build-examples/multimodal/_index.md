@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [Multimodal Image Preprocessing: Orientation, Buckets, Normalisation](./intermediate-image-preprocessing-pipeline.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Multimodal Image Preprocessing: Orientation, Buckets, Normalisation](./intermediate-image-preprocessing-pipeline.md) — Decode, de-rotate, flatten, aspect-bucket, pad and normalise images for a vision-language ingestion pipeline, deterministically and offline

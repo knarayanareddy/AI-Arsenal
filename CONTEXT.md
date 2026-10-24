@@ -1,19 +1,19 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-09-28T21:43:55.012Z | Entries: 1254 | Schema version: 1.0.0
+Generated: 2026-10-24T16:02:43.665Z | Entries: 1298 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 500
-- Tools: 218
+- Projects: 511
+- Tools: 247
 - Papers: 138
 - Tips: 171
 - People: 25
 - Digests: 1
-- Guides: 59
-- Build examples: 8
+- Guides: 60
+- Build examples: 11
 - Architectures: 29
 - Observability: 16
 - Community: 33
@@ -39,18 +39,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
+- OpenClaw (⭐388702, score:97) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
 - Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
-- PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-- Skyvern (⭐23090, score:60) — Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder
+- Cua (⭐22143, score:68) — Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
 
 ### code-generation
+- opencode (⭐203399, score:92) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
+- Kilo Code (⭐27155, score:71) — IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
 - screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
 - Continue (⭐36053, score:60) — Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release
-- Tabby (⭐33890, score:55) — Self-hosted coding assistant that runs completion and chat on your own GPU with no DBMS or cloud dependency
-- GPT Engineer (⭐55073, score:0) — Archived Python CLI that specified software in natural language and let a model write and execute it
-- Open Code Review (⭐42251, score:0) — Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments
+- PR-Agent (⭐12832, score:58) — Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
@@ -67,11 +67,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - datasets (⭐22014, score:35) — Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
 
 ### evaluation
+- OpenCompass (⭐7392, score:52) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
-- xgboost (⭐28801, score:36) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
 
 ### llms
 - LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
@@ -102,18 +102,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
 
 ### tooling
+- MCP Reference Servers (⭐90043, score:84) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Cherry Studio (⭐52215, score:46) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
-- spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 
 ### voice-audio
+- Pipecat (⭐15163, score:62) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
 - AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
+- LiveKit Agents (⭐13979, score:60) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - Chatterbox (Resemble AI) (⭐26600, score:55) — Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3
-- faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
-- WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
 
 ## Top Tools by Job
 
@@ -127,9 +127,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### deployment
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - AWS Bedrock — AWS managed service for accessing foundation models and building generative AI apps
+- AxonHub — Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key
 - Azure AI Studio — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - Baseten — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
-- BentoML — A framework for packaging, deploying, and scaling AI model services
 
 ### evaluation
 - Agentic Security — Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites
@@ -153,11 +153,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Redis — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 
 ### model-registry
+- awesome-opensource-ai — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - DVC — Open-source data and model versioning tool for ML projects and pipelines
 - Hugging Face Hub — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
 - MLflow — Open-source platform for experiment tracking, model registry, and ML lifecycle management
-- Weights & Biases — Experiment tracking and model management platform for ML and AI teams
 
 ### monitoring
 - AgentOps — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
@@ -167,11 +167,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Galileo — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 
 ### orchestration
+- ADK for Go (Agent Development Kit) — Google's code-first Go toolkit for building, evaluating and deploying multi-agent systems
+- ADK for Java (Agent Development Kit) — Google's code-first Java toolkit for multi-agent systems on the JVM, with typed tools and tracing
+- Agents-Anywhere — Cross-device workbench for driving and monitoring agents on remote machines over ACP
 - Agno — Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
-- any-agent — Mozilla AI's thin adapter layer that runs one agent interface across six different agent frameworks
-- Apache Airflow — Batch DAG orchestrator that schedules Python workflows, retries failed tasks and records lineage across data platforms
-- ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 
 ### production-serving
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
@@ -190,9 +190,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### prototyping
 - AdalFlow — PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted
 - Agent Skills (Addy Osmani) — Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents
+- AI Engineering From Scratch — Dependency-light implementations of transformers, agent loops, RAG and MCP servers written to be read and run
 - Aider — Terminal pair-programming tool that maps your codebase, edits files in place and auto-commits each change so you can diff and undo with git
-- Chainlit — Python framework for building chat and agent front ends, with decorators for steps, tool calls and message handlers over a bundled React UI
-- Chrome DevTools MCP — Google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input
+- Awesome-AITools — Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -205,8 +205,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - BAML — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - Basedash — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - Claude Artifact Player — Interact with and manage AI-generated artifacts from Claude and similar models
+- DB-GPT — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
 - Google Pomelli 2.0 — Explore and interact with large datasets through a visual, intuitive interface
-- Guardrails AI — A framework for validating, correcting, and constraining LLM outputs
 
 ### tracing
 - AgentOps — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
@@ -216,11 +216,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - LangWatch — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
 
 ### vector-search
+- DB-GPT — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
+- DocsGPT — Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI
+- Dust — Self-hostable enterprise agent platform with typed connectors, hybrid retrieval and model failover
 - Elasticsearch — Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing
 - FAISS — C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes
-- FastEmbed — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
-- Marqo — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
-- Meilisearch — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs

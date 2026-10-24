@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [Fine-Tuning Dataset Prep: Validate, Mask, Dedupe, Split](./intermediate-sft-dataset-prep.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Fine-Tuning Dataset Prep: Validate, Mask, Dedupe, Split](./intermediate-sft-dataset-prep.md) — Validate, template, tokenize, label-mask, dedupe and split a conversation dataset for supervised fine-tuning, before a single training step runs
