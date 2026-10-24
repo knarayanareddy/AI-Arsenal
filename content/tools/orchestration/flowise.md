@@ -88,7 +88,7 @@ This entry sits in content/tools/orchestration next to langflow, which is the li
 
 - [GitHub — FlowiseAI/Flowise (archived)](https://github.com/FlowiseAI/Flowise)
 - [Docs — docs.flowiseai.com](https://docs.flowiseai.com)
-- [Future of Flowise announcement](https://github.com/FlowiseAI/Flowise/blob/main/docs/Future%20of%20Flowise.md)
+- [Future of Flowise discussion](https://github.com/FlowiseAI/Flowise/discussions/6727)
 
 ## Buzz & Reception
 
