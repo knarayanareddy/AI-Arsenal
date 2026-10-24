@@ -47,7 +47,7 @@ reviewed_by: maintainer
 buzz_sources:
   - {"source":"github-trending","url":"https://github.com/hexgrad/kokoro","date":"2026-07-08","description":"7.9k stars; top HF-downloads open TTS at 82M parameters"}
 featured: false
-status: active
+status: watching
 ---
 
 ## Overview

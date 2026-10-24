@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-24T21:29:20.138Z",
+  "generated_at": "2026-10-24T22:16:54.684Z",
   "config": {
     "document": {
       "id": "id",
@@ -198,10 +198,10 @@
       "paid": 12
     },
     "status": {
-      "active": 932,
+      "active": 914,
       "archived": 17,
-      "deprecated": 1,
-      "watching": 3,
+      "deprecated": 2,
+      "watching": 20,
       "reviewed": 3,
       "draft": 1
     },
@@ -6061,7 +6061,7 @@
       "subcategory": "open-source-models",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -12039,7 +12039,7 @@
       "subcategory": "frameworks",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -14341,7 +14341,7 @@
       "subcategory": "open-source-models",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -14394,7 +14394,7 @@
       "subcategory": "open-source-models",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -18900,7 +18900,7 @@
       "subcategory": "open-source-models",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -21836,7 +21836,7 @@
       "subcategory": "open-source-models",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -26067,7 +26067,7 @@
       "subcategory": "open-source-models",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -26541,7 +26541,7 @@
       "subcategory": "platforms",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -27612,7 +27612,7 @@
       "subcategory": "open-source-models",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -29057,7 +29057,7 @@
       "subcategory": "document-processing",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -32667,7 +32667,7 @@
       "subcategory": "fine-tuning",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "deprecated",
       "phase": "training-and-alignment",
       "audience": null,
       "domain": [
@@ -32701,7 +32701,7 @@
       "boost_title": "LoRA for Diffusion (cloneofsimo)",
       "boost_tags": "fine-tuning multimodal self-hosted",
       "boost_description": "An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters",
-      "body": "LoRA for Diffusion (cloneofsimo) An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters fine-tuning multimodal self-hosted multimodal fine-tuning Overview This repository is an early and influential implementation of Low Rank Adaptation (LoRA) for Stable Diffusion. It showed that diffusion models could be fine tuned by training small low rank adapter matrices instead of full weights, producing tiny, shareable, composable adapter files and helping launch the enormous ecosystem of downloadable diffusion LoRAs. Why it's in the Arsenal It is a pivotal reference for how LoRA is applied to generative vision models, and understanding this canonical implementation clarifies a technique now built into most training stacks, making it a valuable…"
+      "body": "LoRA for Diffusion (cloneofsimo) An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters fine-tuning multimodal self-hosted multimodal fine-tuning Deprecated: superseded, not withdrawn. Upstream last pushed 2024 03 22, and LoRA for diffusion models is now built into Diffusers (pipe.load lora weights), which is the entry to use for training or inference today. This file stays as the canonical reference for how the technique works. See diffusers in the same phase. Overview This repository is an early and influential implementation of Low Rank Adaptation (LoRA) for Stable Diffusion. It showed that diffusion models could be fine tuned by training small low rank adapter matrices instead of full weights, producing tiny, shareable, composable…"
     },
     {
       "id": "lorax",
@@ -36419,7 +36419,7 @@
       "subcategory": "frameworks",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -36518,7 +36518,7 @@
       "subcategory": "frameworks",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -41413,7 +41413,7 @@
       "subcategory": "open-source-models",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -50745,7 +50745,7 @@
       "subcategory": "open-source-models",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -54922,7 +54922,7 @@
       "subcategory": "open-source-models",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "foundation-model",
       "audience": null,
       "domain": [
@@ -55259,7 +55259,7 @@
       "subcategory": "autonomous",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -63563,7 +63563,7 @@
       "subcategory": "document-processing",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -63598,7 +63598,7 @@
       "boost_title": "Zerox OCR",
       "boost_tags": "multimodal llm self-hosted data",
       "boost_description": "A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically",
-      "body": "Zerox OCR A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically multimodal llm self-hosted data computer-vision document-processing Overview Zerox is a document extraction library that takes a different approach to OCR: it renders each page of a PDF or document to an image and sends it to a vision capable large language model with an instruction to return clean Markdown. Because a multimodal LLM does the reading, it copes with tables, columns, and mixed layouts that trip classic OCR engines. Why it's in the Arsenal It exemplifies the shift from dedicated OCR engines to vision LLM extraction, and its model agnostic, Markdown first design is a pragmatic pattern for feeding documents into RAG systems, making it a current and…"
+      "body": "Zerox OCR A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically multimodal llm self-hosted data computer-vision document-processing Overview Zerox is a document extraction library that takes a different approach to OCR: it renders each page of a PDF or document to an image and sends it to a vision capable large language model with an instruction to return clean Markdown. Because a multimodal LLM does the reading, it copes with tables, columns, and mixed layouts that trip classic OCR engines. Why it's in the Arsenal It exemplifies the shift from dedicated OCR engines to vision LLM extraction, and its model agnostic, Markdown first design is a pragmatic pattern for feeding documents into RAG systems. It is catalogued as a p…"
     },
     {
       "id": "zheng-2023-llm-as-a-judge",

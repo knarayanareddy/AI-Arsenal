@@ -23,7 +23,7 @@ trending_score: 0
 added_date: "2026-07-12"
 last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: grounding-dino
 name: "Grounding DINO"
 artifact_type: model

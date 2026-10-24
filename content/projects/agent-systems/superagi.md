@@ -23,7 +23,7 @@ trending_score: 0
 added_date: "2026-07-12"
 last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: superagi
 name: "SuperAGI"
 artifact_type: framework
@@ -46,13 +46,13 @@ relation_to_stack:
   - "study-and-reference"
   - "deploy-as-is"
 health_signals:
+  - "org-backed"
   - "community-driven"
-  - "research-origin"
 ecosystem_role:
   - "An early autonomous-agent platform pairing a GUI and tool marketplace with concurrent, memory-backed agents."
 best_for: ["You are piloting autonomous agents with non-engineers in the loop and need a graphical interface plus an action console where a human grants permissions per run.", "You want a toolkit marketplace instead of hand-written connectors, because packages for Twitter, Instagram, email, Jira, file management and knowledge search install into an agent's workflow.", "You are evaluating token spend per agent, because the platform exposes performance telemetry and an optimised-token-usage control rather than leaving cost to guesswork."]
 avoid_if: ["You are starting a new project, because the last commit on record is from January 2025 and the surrounding agent frameworks have moved on substantially since.", "You need a library rather than a platform, since the unit of deployment is a Docker Compose stack with Postgres, Redis, Celery and nginx rather than a pip package.", "You want hosted support or an SLA, because the community routes in the README run to a Discord, a subreddit and a maintainer's social account rather than a support contract."]
-enrichment_notes: "Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform. Dormancy re-checked 2026-10-24, when the GitHub API reported 17712 stars and last push 2025-01-22; claims in the entry re-read against the repository."
+enrichment_notes: "Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform. Dormancy re-checked 2026-10-24, when the GitHub API reported 17712 stars, 263 open issues and last push 2025-01-22; claims re-read against the repository and status set to watching."
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T21:29:14.144Z",
+    "generated_at": "2026-10-24T22:16:49.003Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -2228,7 +2228,7 @@
       "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -4591,7 +4591,7 @@
       "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -5476,7 +5476,7 @@
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -5496,7 +5496,7 @@
       "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -7241,7 +7241,7 @@
       "category": "multimodal",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -8370,7 +8370,7 @@
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -10008,7 +10008,7 @@
       "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -10199,7 +10199,7 @@
       "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -10614,7 +10614,7 @@
       "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -11153,7 +11153,7 @@
       "category": "computer-vision",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -12577,7 +12577,7 @@
       "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "deprecated",
       "featured": false
     },
     {
@@ -14041,7 +14041,7 @@
       "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -14081,7 +14081,7 @@
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -15943,7 +15943,7 @@
       "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -19589,7 +19589,7 @@
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -21233,7 +21233,7 @@
       "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -21371,7 +21371,7 @@
       "category": "agents",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {
@@ -24615,7 +24615,7 @@
       "category": "computer-vision",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {

@@ -53,7 +53,7 @@ reviewed_by: maintainer
 buzz_sources:
   - {"source":"conference","url":"https://www.informationweek.com/machine-learning-ai/will-enterprises-adopt-deepseek-","date":"2025-02-25","description":"InformationWeek reporting on enterprise adoption patterns: mature enterprises deploying private DeepSeek instances for data control while fine-tuning and running inference"}
 featured: false
-status: active
+status: watching
 ---
 
 ## Overview

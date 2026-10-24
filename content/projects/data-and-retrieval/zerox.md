@@ -23,7 +23,7 @@ trending_score: 0
 added_date: "2026-07-12"
 last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: zerox
 name: "Zerox OCR"
 artifact_type: library
@@ -42,7 +42,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 12249
 last_commit: "2025-05-20"
-docs_url: https://getomni.ai/
+docs_url: https://github.com/getomni-ai/zerox
 phase: data-and-retrieval
 domain:
   - "vision"
@@ -52,7 +52,6 @@ relation_to_stack:
   - "deploy-as-is"
 health_signals:
   - "community-driven"
-  - "research-origin"
 ecosystem_role:
   - "A vision-LLM OCR pipeline that turns arbitrary document pages into structured Markdown regardless of layout complexity."
 best_for:
@@ -61,7 +60,7 @@ best_for:
 avoid_if:
   - "You need cheap, offline, high-volume OCR, since per-page vision-LLM calls cost tokens and add latency"
   - "You require deterministic output, as generative extraction can vary run to run"
-enrichment_notes: "Repository, MIT license, and 2025-05-20 activity verified via the GitHub API on 2026-07-12. Cost and accuracy depend on the chosen vision LLM. Dormancy re-checked 2026-10-24, when the GitHub API reported 12249 stars and last push 2025-05-20; claims in the entry re-read against the repository."
+enrichment_notes: "Repository, MIT license and activity checked via the GitHub API on 2026-10-24: 12249 stars, 91 open issues, not archived, last push 2025-05-20. docs_url moved off getomni.ai, which now redirects to monumint.com; status set to watching and the vendor link replaced with the README."
 ---
 
 ## Overview
@@ -70,7 +69,7 @@ Zerox is a document-extraction library that takes a different approach to OCR: i
 
 ## Why it's in the Arsenal
 
-It exemplifies the shift from dedicated OCR engines to vision-LLM extraction, and its model-agnostic, Markdown-first design is a pragmatic pattern for feeding documents into RAG systems, making it a current and instructive entry.
+It exemplifies the shift from dedicated OCR engines to vision-LLM extraction, and its model-agnostic, Markdown-first design is a pragmatic pattern for feeding documents into RAG systems. It is catalogued as a pattern rather than a dependency: the upstream repository has not been pushed to since 2025-05-20, and OmniAI, the company that built it, now trades as Monumint and sells a conversational-AI product for lenders — so the OCR demo and platform links the library promoted no longer lead anywhere relevant to it.
 
 ## Architecture
 
@@ -94,7 +93,7 @@ Handles complex layouts and tables well, model-agnostic across vision providers,
 
 ## Limitations
 
-Per-page vision-LLM calls incur token cost and latency, output is nondeterministic and can hallucinate, quality tracks the chosen model, and it is unsuitable for very high-volume or strictly offline workloads without a local model.
+Per-page vision-LLM calls incur token cost and latency, output is nondeterministic and can hallucinate, quality tracks the chosen model, and it is unsuitable for very high-volume or strictly offline workloads without a local model. Maintenance is the larger constraint: 91 issues are open and the last push was 2025-05-20, so provider API changes after that date are unhandled upstream and you would carry the fixes yourself.
 
 ## Relation to the Arsenal
 
@@ -103,4 +102,4 @@ It represents the vision-LLM OCR pattern in the document-processing area and con
 ## Resources
 
 - [GitHub repository](https://github.com/getomni-ai/zerox)
-- [OmniAI platform](https://getomni.ai/)
+- [README](https://github.com/getomni-ai/zerox#readme) — the only documentation that still describes this library; the vendor site now serves a different product.

@@ -47,6 +47,13 @@ verify the claim instead of trusting a bot name.
   are listed in `docs/editorial-baseline.json` and reported by
   `scripts/audit-generated-prose.js` (`pnpm run audit:generated-prose`), which
   writes `docs/generated-prose-audit.md`. The baseline may only shrink.
+- Status drift is measured separately from freshness — `scripts/audit-status-drift.js`
+  (`pnpm run audit:status-drift`) compares each entry's `status` and
+  `health_signals` against its own `last_commit`, using the candidate rubric's
+  90-day and 180-day windows, and writes `docs/status-drift-audit.md`. A freshly
+  reviewed entry can still describe a project that stopped moving a year ago;
+  `check-stale.js` cannot see that, because it measures the review date. The
+  worklist is a list of claims to re-check, not a bulk edit.
 - Content generators are barred. A script may scaffold an entry for a human to
   write, but nothing may write prose or estimate `github_stars`, `last_commit`
   or `last_reviewed` into `content/`. The last generator to do so

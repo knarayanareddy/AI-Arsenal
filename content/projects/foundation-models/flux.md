@@ -47,7 +47,7 @@ reviewed_by: maintainer
 buzz_sources:
   - {"source":"github-trending","url":"https://github.com/black-forest-labs/flux","date":"2026-07-08","description":"25.7k stars; the open image-generation reference since 2024"}
 featured: false
-status: active
+status: watching
 ---
 
 ## Overview

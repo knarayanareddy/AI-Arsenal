@@ -112,7 +112,7 @@ The harness layer above the model entries: pair it with a DeepSeek-family model 
 
 - [GitHub repository](https://github.com/deepseek-ai/deepseek-harness)
 - [Documentation](https://deepseek-harness.github.io/deepseek-harness/)
-- [Architecture guide](https://github.com/deepseek-ai/deepseek-harness/blob/main/docs/architecture.md)
-- [Safety notice](https://github.com/deepseek-ai/deepseek-harness/blob/main/SAFETY.md)
+- [Architecture guide](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md)
+- [Safety notice](https://github.com/deepseek-ai/deepseek-harness/blob/master/SAFETY.md)
 - [Cordis framework](https://github.com/cordiverse/cordis)
 - [Paper: A Programming Paradigm for Spatiotemporal Composability](https://arxiv.org/abs/2608.25512)
