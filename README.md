@@ -108,7 +108,7 @@ Current generated stats:
 | Type | Count |
 |---|---:|
 | Projects | 511 |
-| Tools | 247 |
+| Tools | 249 |
 | Papers | 138 |
 | Tips | 171 |
 | Guides | 60 |
@@ -120,7 +120,7 @@ Current generated stats:
 | Observability | 16 |
 | Trends | 4 |
 | Digests | 1 |
-| Total content entries | 1298 |
+| Total content entries | 1300 |
 <!-- /AUTO-GENERATED STATS TABLE -->
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json). The table above is regenerated from that file by `pnpm run generate:readme-stats`; do not hand-edit it.

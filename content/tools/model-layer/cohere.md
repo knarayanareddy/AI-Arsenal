@@ -17,7 +17,7 @@ open_source: false
 source_url: null
 docs_url: "https://docs.cohere.com"
 github_url: null
-alternatives: [voyage-ai, cohere]
+alternatives: [voyage-ai]
 integrates_with: [langchain, llamaindex]
 added_date: "2026-07-08"
 last_reviewed: "2026-07-08"
@@ -74,7 +74,7 @@ pip install cohere
 ## Strengths
 
 - Beyond the marketing, Cohere's own notes are the useful part: embed produces dense vectors for indexing; Rerank scores query-document pairs with a cross-encoder to reorder candidate sets from any retriever; Command models add RAG-grounded generation with citations. All are available behind private deployments for data-sensitive enterprises.
-- Against `voyage-ai`, `cohere`, the difference that decides this is deployment model and cost rather than the feature list, and Cohere sits at the hosted end of that axis.
+- Against `voyage-ai`, the decision is quality on your corpus and price per token — both are hosted embedding APIs, so there is no deployment difference to weigh.
 - Pin the client library rather than the API: Cohere is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure Cohere's latency and its error rate under a degraded upstream before it carries production traffic.
 

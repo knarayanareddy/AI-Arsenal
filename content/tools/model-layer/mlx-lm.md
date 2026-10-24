@@ -82,7 +82,7 @@ Follow the official documentation at https://github.com/ml-explore/mlx-lm for th
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to MLX-LM, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- MLX-LM runs on Apple silicon only; that is both the point and the limitation, with no CUDA path and no Linux server deployment.
 - Documentation for MLX-LM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where MLX-LM overlaps `axolotl`, `llamafactory`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

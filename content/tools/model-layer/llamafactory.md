@@ -76,13 +76,13 @@ Follow the official documentation at https://github.com/hiyouga/LlamaFactory for
 ## Strengths
 
 - Beyond the marketing, LLaMA-Factory's own notes are the useful part: training jobs are configured through the UI or CLI and dispatched to underlying Transformers/PEFT/DeepSpeed training loops, with results exportable as merged or adapter checkpoints.
-- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the difference that decides this is deployment model and cost rather than the feature list, and LLaMA-Factory sits at the hosted end of that axis.
+- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the difference is surface: one CLI and web UI cover SFT, DPO and PPO across 100+ model templates, where the others expose a narrower training API.
 - LLaMA-Factory is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure LLaMA-Factory's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LLaMA-Factory, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It is a training tool you run on your own hardware, so VRAM sets the model size, and the web UI hides configuration that still has to be understood for multi-GPU runs.
 - Documentation for LLaMA-Factory describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where LLaMA-Factory overlaps `axolotl`, `mlx-lm`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

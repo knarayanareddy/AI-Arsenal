@@ -98,6 +98,7 @@
 | `gptme` | [gptme](./dx-and-tooling/gptme.md) | Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate |
 | `gpustack` | [GPUStack](./serving-and-deployment/gpustack.md) | Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang |
 | `gradio` | [Gradio](./dx-and-tooling/gradio.md) | A Python library for building and sharing machine learning demos quickly |
+| `graphify` | [Graphify](./dx-and-tooling/graphify.md) | Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index |
 | `great-expectations` | [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) | Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI |
 | `groq` | [Groq](./model-layer/groq.md) | Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second |
 | `guardrails-ai` | [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) | A framework for validating, correcting, and constraining LLM outputs |
@@ -236,6 +237,7 @@
 | `triton-inference-server` | [NVIDIA Triton Inference Server](./serving-and-deployment/triton-inference-server.md) | NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles |
 | `trl` | [TRL](./model-layer/trl.md) | Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers |
 | `trulens` | [TruLens](./evaluation-and-observability/trulens.md) | An evaluation and tracking toolkit for LLM and RAG applications |
+| `turbovec` | [turbovec](./data-ingestion/turbovec.md) | In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory |
 | `typesense` | [Typesense](./data-ingestion/typesense.md) | Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in |
 | `ultraeval-audio` | [UltraEval-Audio](./evaluation-and-observability/ultraeval-audio.md) | OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models |
 | `unsloth` | [Unsloth](./model-layer/unsloth.md) | Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models |

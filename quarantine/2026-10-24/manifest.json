@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-24",
+  "reason": "Entries and tooling that do not meet the editorial bar: fabricated metadata and mechanically generated prose",
+  "count": 2,
+  "entries": [
+    {
+      "kind": "content-entry",
+      "id": "uiverse-design",
+      "name": "Uiverse Design",
+      "original_path": "content/projects/frameworks/uiverse-design.md",
+      "quarantine_path": "quarantine/2026-10-24/content/projects/frameworks/uiverse-design.md",
+      "reason": "Out of scope: a general-purpose CSS/Tailwind component library with no AI functionality, admitted by a newsletter sweep. Its own enrichment note recommended a keep/recategorize/remove review, and its last_commit (2026-06-13) did not match the repository's actual last push (2024-09-02).",
+      "evidence": {
+        "repo": "uiverse-io/galaxy",
+        "pushed_at": "2024-09-02T14:32:05Z",
+        "stars": 13665,
+        "declared_last_commit": "2026-06-13",
+        "declared_stars": 11000
+      }
+    },
+    {
+      "kind": "script",
+      "path": "scripts/populate-from-toolradar.js",
+      "quarantine_path": "quarantine/2026-10-24/scripts/populate-from-toolradar.js",
+      "reason": "Bulk generator that wrote invented metadata (hardcoded last_commit, estimated github_stars) and template prose into content/. Retired so it cannot be re-run: freshness and editorial rules both depend on those fields being measured, not guessed."
+    }
+  ]
+}

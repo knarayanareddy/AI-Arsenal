@@ -129,6 +129,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [gptme](../dx-and-tooling/gptme.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [GPUStack](../serving-and-deployment/gpustack.md) | serving and deployment | deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
+| [Graphify](../dx-and-tooling/graphify.md) | dx and tooling | memory-management | open-source | Yes | Yes | Yes | python | watching |
 | [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | security-and-guardrails, structured-output | freemium | Yes | Yes | Yes | python | recommended |
@@ -237,6 +238,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [TRL](../model-layer/trl.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | best-in-class |
 | [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | evaluation, tracing | open-source | Yes | Yes | Yes | python | recommended |
+| [turbovec](../data-ingestion/turbovec.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | rust, python | solid-choice |
 | [UltraEval-Audio](../evaluation-and-observability/ultraeval-audio.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Unsloth](../model-layer/unsloth.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [UpTrain](../evaluation-and-observability/uptrain.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | use-with-caution |

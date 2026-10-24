@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-24T16:15:54.045Z",
+  "generated_at": "2026-10-24T21:29:14.144Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 298,
+      "count": 299,
       "types": {
         "project": 137,
         "tip": 23,
-        "tool": 73,
+        "tool": 74,
         "build-example": 3,
         "guide": 7,
         "benchmark": 11,
@@ -105,6 +105,7 @@
         "db-gpt",
         "deep-searcher",
         "deepcode-cli",
+        "deepseek-harness",
         "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
@@ -132,6 +133,7 @@
         "goose",
         "gpt-researcher",
         "gptme",
+        "graphify",
         "graphiti",
         "harness-sdk",
         "harrison-chase",
@@ -295,7 +297,6 @@
         "toolhive",
         "trpc-agent-go",
         "ui-tars-desktop",
-        "uiverse-design",
         "ultrarag",
         "upsonic",
         "validate-tool-arguments-before-execution",
@@ -678,11 +679,11 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 71,
+      "count": 73,
       "types": {
-        "project": 33,
+        "project": 34,
         "guide": 2,
-        "tool": 21,
+        "tool": 22,
         "benchmark": 7,
         "paper": 8
       },
@@ -711,6 +712,7 @@
         "cursor",
         "dao-code",
         "deepcode-cli",
+        "deepseek-harness",
         "deepseek-reasonix",
         "ecc",
         "gemini-cli",
@@ -720,6 +722,7 @@
         "goose",
         "gpt-engineer",
         "gptme",
+        "graphify",
         "gunasekar-2023-phi-1",
         "huang-2026-regression-accumulation",
         "humaneval",
@@ -985,13 +988,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 104,
+      "count": 105,
       "types": {
         "project": 38,
         "paper": 20,
         "guide": 4,
         "tip": 22,
-        "tool": 17,
+        "tool": 18,
         "architecture": 3
       },
       "entries": [
@@ -1088,6 +1091,7 @@
         "torchtitan",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
+        "turbovec",
         "ultralytics-yolo",
         "unsloth",
         "uqlm",
@@ -3217,9 +3221,9 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 165,
+      "count": 166,
       "types": {
-        "tool": 26,
+        "tool": 27,
         "tip": 26,
         "build-example": 5,
         "project": 61,
@@ -3381,6 +3385,7 @@
         "tavily",
         "treat-retrieved-text-as-untrusted",
         "trulens",
+        "turbovec",
         "txtai",
         "typesense",
         "ultrarag",
@@ -3555,11 +3560,11 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 159,
+      "count": 161,
       "types": {
         "tip": 24,
         "build-example": 4,
-        "tool": 27,
+        "tool": 29,
         "project": 63,
         "paper": 22,
         "benchmark": 7,
@@ -3624,6 +3629,7 @@
         "gao-2022-hyde",
         "gao-2023-rag-survey",
         "gpt-researcher",
+        "graphify",
         "graphiti",
         "graphrag",
         "guu-2020-realm",
@@ -3714,6 +3720,7 @@
         "tavily",
         "trafilatura",
         "trpc-agent-go",
+        "turbovec",
         "txtai",
         "typesense",
         "ultrarag",
@@ -4295,9 +4302,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 138,
+      "count": 139,
       "types": {
-        "project": 67,
+        "project": 68,
         "tip": 22,
         "tool": 29,
         "guide": 6,
@@ -4358,6 +4365,7 @@
         "cua",
         "cve-mcp-server",
         "danielmiessler-fabric",
+        "deepseek-harness",
         "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",

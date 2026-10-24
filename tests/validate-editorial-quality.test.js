@@ -43,3 +43,52 @@ test('editorial inspection rejects known boilerplate in a new project', () => {
   // Every finding carries a stable rule ID (used for finding-level baselines).
   assert.ok(issues.every((issue) => typeof issue.rule === 'string' && issue.rule.length > 0));
 });
+
+test('editorial inspection rejects the 2026 bulk-authoring template sentences', () => {
+  const content = [
+    '## Overview',
+    'A library for fine-grained control over model generation, expressed as a program of literal text and sampled spans.',
+    '## Why It\'s in the Arsenal',
+    'Example is a library for controlled generation. Read it beside `instructor`, `outlines`: the choice between them is a deployment and cost decision before it is a capability one.',
+    '## Architecture / How It Works',
+    'Generation runs as a program mixing literal text, control flow, and model-generated spans, driven step by step by the library.'
+  ].join('\n\n');
+  const issues = inspectEntry({
+    file: 'content/tools/model-layer/example.md',
+    data: { added_date: '2026-06-13', self_hostable: true, open_source: true },
+    content
+  });
+  assert.ok(issues.some((issue) => issue.rule === 'rejected-boilerplate'), 'template sentence should be rejected');
+});
+
+test('editorial inspection rejects a hosted-only claim contradicted by frontmatter', () => {
+  const content = [
+    '## Overview',
+    'An Apache-2.0 library with a docker image for local inference.',
+    '## Strengths',
+    'It is installed with pip and runs in your own process.',
+    '## Limitations / When NOT to Use',
+    'There is no self-hosted path to Example, so quota and rate-limit changes are the vendor\'s to make and yours to absorb.'
+  ].join('\n\n');
+  const issues = inspectEntry({
+    file: 'content/tools/model-layer/example.md',
+    data: { added_date: '2026-06-13', self_hostable: true, open_source: true },
+    content
+  });
+  assert.ok(issues.some((issue) => issue.rule === 'hosted-claim-contradicted'));
+});
+
+test('a hosted-only tool may describe itself as a service', () => {
+  const content = [
+    '## Overview',
+    'A hosted inference API with no local deployment option.',
+    '## Limitations / When NOT to Use',
+    'There is no self-hosted path to Example, so quota and rate-limit changes are the vendor\'s to make and yours to absorb.'
+  ].join('\n\n');
+  const issues = inspectEntry({
+    file: 'content/tools/model-layer/example-hosted.md',
+    data: { added_date: '2026-06-13', self_hostable: false, open_source: false },
+    content
+  });
+  assert.equal(issues.filter((issue) => issue.rule === 'hosted-claim-contradicted').length, 0);
+});

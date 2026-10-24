@@ -16,26 +16,27 @@
 | [research](./research/) | 142 entries | 2026-10-24 |
 | [skills](./skills/) | 28 entries | 2026-10-24 |
 | [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-24 |
-| [tools](./tools/) | 275 entries | 2026-10-24 |
+| [tools](./tools/) | 277 entries | 2026-10-24 |
 | [trending](./trending/) | 4 entries | 2026-10-24 |
 
 ## Recently Added
 
+- [DeepSeek Harness](./projects/agent-systems/deepseek-harness.md)
 - [GPUStack](./tools/serving-and-deployment/gpustack.md)
+- [Graphify](./tools/dx-and-tooling/graphify.md)
+- [turbovec](./tools/data-ingestion/turbovec.md)
 - [ADK for Java (Agent Development Kit)](./tools/orchestration/adk-java.md)
 - [BeeAI Framework](./tools/orchestration/beeai-framework.md)
 - [Dust](./tools/orchestration/dust.md)
 - [LMCache](./tools/serving-and-deployment/lmcache.md)
 - [Mooncake](./tools/serving-and-deployment/mooncake.md)
 - [REEF](./tools/orchestration/reef.md)
-- [Agents-Anywhere](./tools/orchestration/agents-anywhere.md)
-- [OpenAgents](./tools/orchestration/openagents.md)
-- [RubyLLM](./tools/orchestration/ruby-llm.md)
 
 ## Most Popular
 
 - [OpenClaw](./projects/agent-systems/openclaw.md) — ⭐ 388702
 - [ECC](./projects/agent-systems/ecc.md) — ⭐ 268797
+- [DeepSeek Harness](./projects/agent-systems/deepseek-harness.md) — ⭐ 260425
 - [Hermes Agent](./projects/agent-systems/hermes-agent.md) — ⭐ 249768
 - [opencode](./projects/agent-systems/anomalyco-opencode.md) — ⭐ 210538
 - [opencode](./projects/agent-systems/opencode.md) — ⭐ 203399
@@ -43,7 +44,6 @@
 - [Firecrawl](./projects/data-and-retrieval/firecrawl.md) — ⭐ 185940
 - [AutoGPT](./projects/frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./projects/inference-engines/ollama.md) — ⭐ 174059
-- [transformers](./projects/frameworks/huggingface-transformers.md) — ⭐ 166755
 
 ## Browse All
 
@@ -332,6 +332,7 @@
 - [DeepLearning.AI (YouTube)](./community/creators/deeplearningai-youtube.md) — 
 - [DeepSeek-V3 Technical Report](./research/architectures/deepseek-ai-2024-deepseek-v3.md) — DeepSeek-V3: a 671B-parameter MoE (37B active) trained for a reported ~$5.6M of GPU time that matched frontier closed models — proof that systems co-design (MLA, FP8 training, aux-loss-free MoE routing, MTP) collapses the frontier cost curve
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./research/training-and-alignment/deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
+- [DeepSeek Harness](./projects/agent-systems/deepseek-harness.md) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
 - [DeepSeek-OCR](./projects/foundation-models/deepseek-ocr.md) — DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens
 - [DeepSeek-Reasonix](./projects/agent-systems/deepseek-reasonix.md) — Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
@@ -481,6 +482,7 @@
 - [GPUStack](./tools/serving-and-deployment/gpustack.md) — Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang
 - [Gradient Dissent (Weights & Biases)](./community/creators/gradient-dissent-podcast.md) — 
 - [Gradio](./tools/dx-and-tooling/gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Graphify](./tools/dx-and-tooling/graphify.md) — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - [Graphiti](./projects/data-and-retrieval/graphiti.md) — Framework for temporal knowledge graphs that track how facts change over time with provenance, incremental updates and hybrid retrieval
 - [GraphRAG](./projects/data-and-retrieval/graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [Great Expectations (GX Core)](./tools/data-ingestion/great-expectations.md) — Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI
@@ -1236,11 +1238,11 @@
 - [TruLens](./tools/evaluation-and-observability/trulens.md) — An evaluation and tracking toolkit for LLM and RAG applications
 - [TruthfulQA](./benchmarks/general-llm/truthfulqa.md) — 
 - [Increase Batch Size Only Until Tail Latency Becomes Unacceptable](./tips-and-tricks/inference-and-serving/tune-batch-size-against-tail-latency.md) — 
+- [turbovec](./tools/data-ingestion/turbovec.md) — In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory
 - [The TWIML AI Podcast](./community/creators/twiml-ai-podcast.md) — 
 - [txtai](./projects/frameworks/txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Typesense](./tools/data-ingestion/typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [UI-TARS Desktop](./projects/agent-systems/ui-tars-desktop.md) — ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control
-- [Uiverse Design](./projects/frameworks/uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - [UltraEval-Audio](./tools/evaluation-and-observability/ultraeval-audio.md) — OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models
 - [Ultralytics YOLO](./projects/frameworks/ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - [Ultralytics YOLO](./projects/frameworks/ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API

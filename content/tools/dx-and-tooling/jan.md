@@ -83,7 +83,7 @@ Follow the official documentation at https://jan.ai/docs for the authentication 
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Jan, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Jan is a desktop application with no server mode, so it is a workstation tool rather than something you deploy for a team, and throughput is bounded by the machine it runs on.
 - Documentation for Jan describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Jan overlaps `lm-studio`, `open-webui`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

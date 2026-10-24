@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: mmdetection
@@ -40,7 +40,7 @@ tags:
   - "inference"
 maturity: production
 cost_model: open-source
-github_stars: 32809
+github_stars: 33005
 last_commit: "2024-08-21"
 docs_url: https://mmdetection.readthedocs.io
 phase: framework
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You need open-vocabulary or promptable detection, where Grounding DINO and SAM fit better"
   - "You want a lightweight single-model dependency rather than a large framework"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-21 activity verified via the GitHub API on 2026-07-12. A canonical detection framework; upstream cadence slowed after 2024."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-21 activity verified via the GitHub API on 2026-07-12. A canonical detection framework; upstream cadence slowed after 2024. Dormancy re-checked 2026-10-24, when the GitHub API reported 33005 stars and last push 2024-08-21; claims in the entry re-read against the repository."
 ---
 
 ## Overview

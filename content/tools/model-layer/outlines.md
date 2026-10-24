@@ -71,13 +71,13 @@ Outlines builds a finite-state machine (or equivalent) from the target schema/gr
 ## Strengths
 
 - What Outlines gives you that its headline description does not: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled, which is the part to check against your own pipeline before trusting the feature list.
-- Against `guidance`, `instructor`, `pydantic-ai-tool`, the difference that decides this is deployment model and cost rather than the feature list, and Outlines sits at the hosted end of that axis.
+- Against `guidance`, `instructor`, `pydantic-ai-tool`, Outlines compiles a schema into a finite-state machine over the tokenizer vocabulary, which is why it can guarantee structure instead of validating it after the fact.
 - Outlines is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Outlines's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Outlines, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The guarantee holds only where the backend exposes logits; over a hosted chat API, Outlines falls back to prompt-and-retry with no structural guarantee.
 - Documentation for Outlines describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Outlines overlaps `guidance`, `instructor`, `pydantic-ai-tool`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

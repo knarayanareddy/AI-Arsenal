@@ -79,7 +79,7 @@ curl -L https://install.meilisearch.com | sh && ./meilisearch
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Meilisearch, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The index is memory-mapped and has to fit comfortably in RAM, and the open-source server does not shard: a corpus larger than one machine means several instances with application-level routing.
 - Documentation for Meilisearch describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns

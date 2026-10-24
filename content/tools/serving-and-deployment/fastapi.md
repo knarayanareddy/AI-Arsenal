@@ -77,12 +77,12 @@ Follow the official documentation at https://github.com/fastapi/fastapi for the 
 
 - The implementation detail worth reading before adopting FastAPI is specific — endpoints are defined as typed Python functions; FastAPI generates request validation, serialization, and interactive API docs automatically from those type annotations — and that is where a capability claim either survives contact with your data or does not.
 - Weighing FastAPI against `chainlit`, `gradio`, `mesop`, `streamlit` comes down to one question: who runs the process when it breaks — you or the vendor.
-- Depending on FastAPI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- FastAPI is a library in your own process; what it does not provide is the worker model, process management or inference batching, so a model server still needs those around it.
 - What this entry cannot give you is measured behaviour: measure FastAPI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to FastAPI, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It is a web framework, not a model server: queueing, batching and GPU scheduling are left to the runtime you put behind it.
 - Documentation for FastAPI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where FastAPI overlaps `chainlit`, `gradio`, `mesop`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

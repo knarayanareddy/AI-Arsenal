@@ -6,16 +6,17 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 93 entries | 2026-10-24 |
+| [agent systems](./agent-systems/) | 94 entries | 2026-10-24 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 32 entries | 2026-10-24 |
 | [data and retrieval](./data-and-retrieval/) | 90 entries | 2026-10-24 |
 | [foundation models](./foundation-models/) | 79 entries | 2026-10-24 |
-| [frameworks](./frameworks/) | 123 entries | 2026-10-24 |
+| [frameworks](./frameworks/) | 122 entries | 2026-10-24 |
 | [inference engines](./inference-engines/) | 62 entries | 2026-10-24 |
 | [training and alignment](./training-and-alignment/) | 32 entries | 2026-10-24 |
 
 ## Recently Added
 
+- [DeepSeek Harness](./agent-systems/deepseek-harness.md)
 - [agent-squad](./frameworks/2fastlabs-agent-squad.md)
 - [instructor](./frameworks/567-labs-instructor.md)
 - [9router](./inference-engines/9router.md)
@@ -25,12 +26,12 @@
 - [agenticSeek](./agent-systems/agenticseek.md)
 - [agents-best-practices](./frameworks/agents-best-practices.md)
 - [aim](./frameworks/aimhubio-aim.md)
-- [AionUi](./agent-systems/aionui.md)
 
 ## Most Popular
 
 - [OpenClaw](./agent-systems/openclaw.md) — ⭐ 388702
 - [ECC](./agent-systems/ecc.md) — ⭐ 268797
+- [DeepSeek Harness](./agent-systems/deepseek-harness.md) — ⭐ 260425
 - [Hermes Agent](./agent-systems/hermes-agent.md) — ⭐ 249768
 - [opencode](./agent-systems/anomalyco-opencode.md) — ⭐ 210538
 - [opencode](./agent-systems/opencode.md) — ⭐ 203399
@@ -38,7 +39,6 @@
 - [Firecrawl](./data-and-retrieval/firecrawl.md) — ⭐ 185940
 - [AutoGPT](./frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./inference-engines/ollama.md) — ⭐ 174059
-- [transformers](./frameworks/huggingface-transformers.md) — ⭐ 166755
 
 ## Browse All
 
@@ -141,6 +141,7 @@
 - [deepcode-cli](./agent-systems/deepcode-cli.md) — TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [Deep Lake](./data-and-retrieval/deeplake.md) — Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage
+- [DeepSeek Harness](./agent-systems/deepseek-harness.md) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
 - [DeepSeek-OCR](./foundation-models/deepseek-ocr.md) — DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens
 - [DeepSeek-Reasonix](./agent-systems/deepseek-reasonix.md) — Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways
 - [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
@@ -517,7 +518,6 @@
 - [trpc-agent-go](./agent-systems/trpc-agent-go.md) — Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in
 - [txtai](./frameworks/txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [UI-TARS Desktop](./agent-systems/ui-tars-desktop.md) — ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control
-- [Uiverse Design](./frameworks/uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - [Ultralytics YOLO](./frameworks/ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - [Ultralytics YOLO](./frameworks/ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
 - [UltraRAG](./data-and-retrieval/ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines

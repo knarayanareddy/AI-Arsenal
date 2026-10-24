@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Graphify](./graphify.md)
 - [Awesome-AITools](./awesome-aitools.md)
 - [OpenUI](./openui.md)
 - [gptme](./gptme.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Corsair](./corsair.md)
 - [headroom](./headroom.md)
 - [rtk](./rtk.md)
-- [Prompty](./prompty.md)
 
 ### Most Popular
 
@@ -69,6 +69,7 @@ _No star-tracked entries yet._
 - [Goose](./goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
 - [gptme](./gptme.md) — Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate
 - [Gradio](./gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Graphify](./graphify.md) — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - [headroom](./headroom.md) — Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model
 - [Honen](./honen.md) — Transform any content into interactive AI-generated courses
 - [Instructor](./instructor.md) — A library for extracting typed structured outputs from language models

@@ -79,7 +79,7 @@ Evaluations are defined as Python code specifying inputs, expected behavior, and
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to OpenAI Evals, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It is a framework you run against your own endpoints, and its registry and graders assume OpenAI-style request shapes — evaluating other providers means writing an adapter.
 - Documentation for OpenAI Evals describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns

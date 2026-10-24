@@ -81,7 +81,8 @@
     "validate:semantic": "node scripts/semantic-editorial-pass.js --changed-only",
     "validate:semantic:all": "node scripts/semantic-editorial-pass.js --all",
     "triage:stale": "node scripts/triage-stale-entries.js",
-    "triage:stale:report": "node scripts/triage-stale-entries.js --out docs/freshness-worklist.md"
+    "triage:stale:report": "node scripts/triage-stale-entries.js --out docs/freshness-worklist.md",
+    "audit:generated-prose": "node scripts/audit-generated-prose.js"
   },
   "dependencies": {
     "ajv": "^8.12.0",

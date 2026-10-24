@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: zerox
@@ -40,7 +40,7 @@ tags:
   - "data"
 maturity: beta
 cost_model: open-source
-github_stars: 12240
+github_stars: 12249
 last_commit: "2025-05-20"
 docs_url: https://getomni.ai/
 phase: data-and-retrieval
@@ -61,7 +61,7 @@ best_for:
 avoid_if:
   - "You need cheap, offline, high-volume OCR, since per-page vision-LLM calls cost tokens and add latency"
   - "You require deterministic output, as generative extraction can vary run to run"
-enrichment_notes: "Repository, MIT license, and 2025-05-20 activity verified via the GitHub API on 2026-07-12. Cost and accuracy depend on the chosen vision LLM."
+enrichment_notes: "Repository, MIT license, and 2025-05-20 activity verified via the GitHub API on 2026-07-12. Cost and accuracy depend on the chosen vision LLM. Dormancy re-checked 2026-10-24, when the GitHub API reported 12249 stars and last push 2025-05-20; claims in the entry re-read against the repository."
 ---
 
 ## Overview

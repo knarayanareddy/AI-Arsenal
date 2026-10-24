@@ -9,8 +9,8 @@
 | [by cost](./by-cost/) | 5 entries | 2026-10-24 |
 | [by job](./by-job/) | 14 entries | 2026-10-24 |
 | [by stack](./by-stack/) | 9 entries | 2026-10-24 |
-| [data ingestion](./data-ingestion/) | 38 entries | 2026-10-24 |
-| [dx and tooling](./dx-and-tooling/) | 53 entries | 2026-10-24 |
+| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-24 |
+| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-24 |
 | [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-24 |
 | [model layer](./model-layer/) | 34 entries | 2026-10-24 |
 | [orchestration](./orchestration/) | 40 entries | 2026-10-24 |
@@ -19,6 +19,8 @@
 ## Recently Added
 
 - [GPUStack](./serving-and-deployment/gpustack.md)
+- [Graphify](./dx-and-tooling/graphify.md)
+- [turbovec](./data-ingestion/turbovec.md)
 - [ADK for Java (Agent Development Kit)](./orchestration/adk-java.md)
 - [BeeAI Framework](./orchestration/beeai-framework.md)
 - [Dust](./orchestration/dust.md)
@@ -26,8 +28,6 @@
 - [Mooncake](./serving-and-deployment/mooncake.md)
 - [REEF](./orchestration/reef.md)
 - [Agents-Anywhere](./orchestration/agents-anywhere.md)
-- [OpenAgents](./orchestration/openagents.md)
-- [RubyLLM](./orchestration/ruby-llm.md)
 
 ## Most Popular
 
@@ -138,6 +138,7 @@ _No star-tracked entries yet._
 - [gptme](./dx-and-tooling/gptme.md) — Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate
 - [GPUStack](./serving-and-deployment/gpustack.md) — Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang
 - [Gradio](./dx-and-tooling/gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Graphify](./dx-and-tooling/graphify.md) — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) — Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI
 - [Groq](./model-layer/groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
 - [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
@@ -293,6 +294,7 @@ _No star-tracked entries yet._
 - [NVIDIA Triton Inference Server](./serving-and-deployment/triton-inference-server.md) — NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles
 - [TRL](./model-layer/trl.md) — Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers
 - [TruLens](./evaluation-and-observability/trulens.md) — An evaluation and tracking toolkit for LLM and RAG applications
+- [turbovec](./data-ingestion/turbovec.md) — In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory
 - [Typesense](./data-ingestion/typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [UltraEval-Audio](./evaluation-and-observability/ultraeval-audio.md) — OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models
 - [Unsloth](./model-layer/unsloth.md) — Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models

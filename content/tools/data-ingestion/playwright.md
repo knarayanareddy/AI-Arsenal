@@ -83,7 +83,7 @@ Follow the official documentation at https://github.com/microsoft/playwright for
 
 - What Playwright gives you that its headline description does not: drives real browser instances via each browser's native automation protocol, executing scripted actions (navigation, clicks, form fills) and exposing the resulting DOM/network state to the caller, which is the part to check against your own pipeline before trusting the feature list.
 - Weighing Playwright against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `puppeteer` comes down to one question: who runs the process when it breaks — you or the vendor.
-- Depending on Playwright means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Playwright pins its browser binaries to the library version, so an upgrade can require re-downloading Chromium and re-baselining the selectors and timing assumptions in your suite.
 - What this entry cannot give you is measured behaviour: measure Playwright's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use

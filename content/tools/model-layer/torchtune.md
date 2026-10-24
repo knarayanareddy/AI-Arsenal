@@ -84,7 +84,7 @@ Follow the official documentation at https://github.com/meta-pytorch/torchtune f
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to torchtune, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- torchtune is a PyTorch-native library you run yourself, and it deliberately ships no serving or orchestration layer — distributed launch and checkpoint export stay yours.
 - Documentation for torchtune describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where torchtune overlaps `axolotl`, `llamafactory`, `mlx-lm`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: janus
@@ -40,7 +40,7 @@ tags:
   - "inference"
 maturity: beta
 cost_model: open-source
-github_stars: 17753
+github_stars: 17762
 last_commit: "2025-02-01"
 docs_url: https://github.com/deepseek-ai/Janus
 phase: foundation-model
@@ -62,7 +62,7 @@ best_for:
 avoid_if:
   - "You need best-in-class quality on either understanding or generation alone, where specialized models lead"
   - "You need production stability rather than a research release"
-enrichment_notes: "Repository, MIT license, and 2025-02-01 activity verified via the GitHub API on 2026-07-12. Research release; quality varies by task."
+enrichment_notes: "Repository, MIT license, and 2025-02-01 activity verified via the GitHub API on 2026-07-12. Research release; quality varies by task. Dormancy re-checked 2026-10-24, when the GitHub API reported 17762 stars and last push 2025-02-01; claims in the entry re-read against the repository."
 ---
 
 ## Overview

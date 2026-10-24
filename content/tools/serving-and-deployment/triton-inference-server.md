@@ -73,13 +73,13 @@ docker run --gpus=all --rm -p 8000:8000 -v $PWD/models:/models nvcr.io/nvidia/tr
 ## Strengths
 
 - Beyond the marketing, NVIDIA Triton Inference Server's own notes are the useful part: models live in a repository with config declaring backend, batching, and instance groups; Triton schedules requests across model instances with dynamic batching queues, and ensembles chain models server-side to avoid client round-trips.
-- Against `bentoml`, `ray-serve`, `kserve`, the difference that decides this is deployment model and cost rather than the feature list, and NVIDIA Triton Inference Server sits at the hosted end of that axis.
+- Against `bentoml`, `ray-serve`, `kserve`, Triton is the lowest-level of the four: it serves a compiled model repository, where the others add Python packaging or Kubernetes orchestration.
 - Pin the client library rather than the API: NVIDIA Triton Inference Server is reachable through `vllm`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure NVIDIA Triton Inference Server's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to NVIDIA Triton Inference Server, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Triton is a C++ server you deploy; the cost is the model-repository layout and backend configuration, plus a driver and toolkit matrix to keep aligned.
 - Documentation for NVIDIA Triton Inference Server describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where NVIDIA Triton Inference Server overlaps `bentoml`, `ray-serve`, `kserve`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

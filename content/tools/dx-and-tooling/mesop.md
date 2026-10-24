@@ -82,7 +82,7 @@ Follow the official documentation at https://github.com/mesop-dev/mesop for the 
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Mesop, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Mesop is a Python UI framework you run yourself, aimed at internal tools and prototypes: it has no built-in authentication, tenancy or static export, so a public surface needs those added.
 - Documentation for Mesop describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Mesop overlaps `chainlit`, `fastapi`, `gradio`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 - Upstream has been archived and the code moved to the mesop-dev organisation, so any fork you maintain is now the only place a fix will land.

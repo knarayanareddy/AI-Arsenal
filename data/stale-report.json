@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-24T16:39:39.714Z",
+  "generated_at": "2026-10-24T21:30:54.120Z",
   "threshold_days": 90,
-  "stale_count": 1022,
+  "stale_count": 1000,
   "invalid_dates": [],
   "stale_entries": [
     {
@@ -556,13 +556,6 @@
       "path": "content/tools/dx-and-tooling/baml.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
-    },
-    {
-      "id": "bark",
-      "type": "project",
-      "path": "content/projects/foundation-models/bark.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "basedash",
@@ -1293,13 +1286,6 @@
       "age_days": 104
     },
     {
-      "id": "coqui-tts",
-      "type": "project",
-      "path": "content/projects/frameworks/coqui-tts.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
       "id": "correlate-llm-traces-with-request-ids",
       "type": "tip",
       "path": "content/tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids.md",
@@ -1508,20 +1494,6 @@
       "path": "content/projects/foundation-models/deepseek-ocr.md",
       "last_reviewed": "2026-07-19",
       "age_days": 97
-    },
-    {
-      "id": "deepseek-v3-r1",
-      "type": "project",
-      "path": "content/projects/foundation-models/deepseek-v3-r1.md",
-      "last_reviewed": "2026-07-01",
-      "age_days": 115
-    },
-    {
-      "id": "deepseek-vl",
-      "type": "project",
-      "path": "content/projects/foundation-models/deepseek-vl.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "deepspec",
@@ -2042,13 +2014,6 @@
       "age_days": 97
     },
     {
-      "id": "flux",
-      "type": "project",
-      "path": "content/projects/foundation-models/flux.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "fly-io",
       "type": "tool",
       "path": "content/tools/serving-and-deployment/fly-io.md",
@@ -2348,13 +2313,6 @@
       "path": "content/tools/model-layer/groq.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
-    },
-    {
-      "id": "grounding-dino",
-      "type": "project",
-      "path": "content/projects/foundation-models/grounding-dino.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "gsm8k",
@@ -2777,13 +2735,6 @@
       "age_days": 110
     },
     {
-      "id": "janus",
-      "type": "project",
-      "path": "content/projects/foundation-models/janus.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
       "id": "jason-liu",
       "type": "person",
       "path": "content/community/people/jason-liu.md",
@@ -2838,13 +2789,6 @@
       "path": "content/tools/data-ingestion/jina-reader.md",
       "last_reviewed": "2026-06-30",
       "age_days": 116
-    },
-    {
-      "id": "jina-serve",
-      "type": "project",
-      "path": "content/projects/frameworks/jina-serve.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "johnson-2017-faiss",
@@ -2941,13 +2885,6 @@
       "id": "kojima-2022-zero-shot-cot",
       "type": "paper",
       "path": "content/research/agents-and-reasoning/kojima-2022-zero-shot-cot.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
-      "id": "kokoro",
-      "type": "project",
-      "path": "content/projects/foundation-models/kokoro.md",
       "last_reviewed": "2026-07-08",
       "age_days": 108
     },
@@ -3118,13 +3055,6 @@
       "path": "content/community/creators/latent-space-podcast.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "latex-ocr",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/latex-ocr.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "lean-mvp",
@@ -3538,13 +3468,6 @@
       "path": "content/community/people/logankilpatrick.md",
       "last_reviewed": "2026-06-14",
       "age_days": 132
-    },
-    {
-      "id": "lora-diffusion",
-      "type": "project",
-      "path": "content/projects/training-and-alignment/lora-diffusion.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "ltx-2",
@@ -3967,25 +3890,11 @@
       "age_days": 97
     },
     {
-      "id": "mmagic",
-      "type": "project",
-      "path": "content/projects/frameworks/mmagic.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
       "id": "mmbench",
       "type": "benchmark",
       "path": "content/benchmarks/multimodal/mmbench.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "mmdetection",
-      "type": "project",
-      "path": "content/projects/frameworks/mmdetection.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "mmlu",
@@ -4432,13 +4341,6 @@
       "id": "openvino",
       "type": "project",
       "path": "content/projects/inference-engines/openvino.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
-      "id": "openvoice",
-      "type": "project",
-      "path": "content/projects/foundation-models/openvoice.md",
       "last_reviewed": "2026-07-12",
       "age_days": 104
     },
@@ -5066,13 +4968,6 @@
       "age_days": 115
     },
     {
-      "id": "ragatouille",
-      "type": "tool",
-      "path": "content/tools/data-ingestion/ragatouille.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
-    },
-    {
       "id": "ragflow",
       "type": "project",
       "path": "content/projects/data-and-retrieval/ragflow.md",
@@ -5526,13 +5421,6 @@
       "path": "content/benchmarks/multimodal/seed-bench.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "segment-anything",
-      "type": "project",
-      "path": "content/projects/foundation-models/segment-anything.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "self-host-vs-hosted-api",
@@ -6060,13 +5948,6 @@
       "age_days": 109
     },
     {
-      "id": "styletts2",
-      "type": "project",
-      "path": "content/projects/foundation-models/styletts2.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
-    },
-    {
       "id": "su-2021-rope",
       "type": "paper",
       "path": "content/research/architectures/su-2021-rope.md",
@@ -6100,13 +5981,6 @@
       "path": "content/projects/data-and-retrieval/supabase.md",
       "last_reviewed": "2026-07-06",
       "age_days": 110
-    },
-    {
-      "id": "superagi",
-      "type": "project",
-      "path": "content/projects/agent-systems/superagi.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "superlog",
@@ -6501,13 +6375,6 @@
       "age_days": 104
     },
     {
-      "id": "uiverse-design",
-      "type": "project",
-      "path": "content/projects/frameworks/uiverse-design.md",
-      "last_reviewed": "2026-07-01",
-      "age_days": 115
-    },
-    {
       "id": "ultraeval-audio",
       "type": "tool",
       "path": "content/tools/evaluation-and-observability/ultraeval-audio.md",
@@ -6562,13 +6429,6 @@
       "path": "content/projects/agent-systems/upsonic.md",
       "last_reviewed": "2026-07-12",
       "age_days": 104
-    },
-    {
-      "id": "uptrain",
-      "type": "tool",
-      "path": "content/tools/evaluation-and-observability/uptrain.md",
-      "last_reviewed": "2026-07-08",
-      "age_days": 108
     },
     {
       "id": "uqlm",
@@ -7110,13 +6970,6 @@
       "age_days": 115
     },
     {
-      "id": "yi",
-      "type": "project",
-      "path": "content/projects/foundation-models/yi.md",
-      "last_reviewed": "2026-07-01",
-      "age_days": 115
-    },
-    {
       "id": "yuan-2024-self-rewarding",
       "type": "paper",
       "path": "content/research/training-and-alignment/yuan-2024-self-rewarding.md",
@@ -7129,13 +6982,6 @@
       "path": "content/tools/orchestration/zep.md",
       "last_reviewed": "2026-06-30",
       "age_days": 116
-    },
-    {
-      "id": "zerox",
-      "type": "project",
-      "path": "content/projects/data-and-retrieval/zerox.md",
-      "last_reviewed": "2026-07-12",
-      "age_days": 104
     },
     {
       "id": "zheng-2023-llm-as-a-judge",

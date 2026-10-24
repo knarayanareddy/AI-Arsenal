@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-24T16:43:01.977Z | Entries: 1298 | Schema version: 1.0.0
+Generated: 2026-10-24T21:29:22.304Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 511
-- Tools: 247
+- Tools: 249
 - Papers: 138
 - Tips: 171
 - People: 25
@@ -40,10 +40,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### agents
 - OpenClaw (⭐388702, score:97) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
+- DeepSeek Harness (⭐260425, score:95) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
 - Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
-- Cua (⭐22143, score:68) — Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
 
 ### code-generation
 - opencode (⭐203399, score:92) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
@@ -83,7 +83,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
 - ComfyUI (⭐142561, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
-- FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
+- FLUX (Black Forest Labs) (⭐26035, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
 
@@ -105,8 +105,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - MCP Reference Servers (⭐90043, score:84) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Cherry Studio (⭐52215, score:46) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
-- Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
+- spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 
 ### voice-audio
 - Pipecat (⭐15163, score:62) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
@@ -147,10 +147,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
+- Graphify — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - Letta — Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK
 - Mem0 — Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval
 - Memoriq — Private AI memory layer that learns from your conversations and documents
-- Redis — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 
 ### model-registry
 - awesome-opensource-ai — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling

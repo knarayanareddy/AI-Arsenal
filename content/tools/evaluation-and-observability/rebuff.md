@@ -83,7 +83,7 @@ Follow the official documentation at https://github.com/protectai/rebuff for the
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Rebuff, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Rebuff is a Python library you host, and detection quality depends on the detectors you configure; the heuristic layer adds latency to every prompt it screens.
 - Documentation for Rebuff describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Rebuff overlaps `guardrails-ai`, `llamaguard`, `nemo-guardrails`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 - The repository has been archived with no push since August 2024, which for a prompt-injection detector means the attack patterns it encodes are frozen at that date.

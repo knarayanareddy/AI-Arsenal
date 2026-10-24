@@ -176,7 +176,6 @@ Before selecting a framework:
 - [tensorflow](./tensorflow-tensorflow.md) — Apache-2.0 tensor and autodiff framework with graph execution, distributed strategies, and the broadest export surface of any DL stack
 - [toon](./toon.md) — A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
-- [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - [Ultralytics YOLO](./ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
 - [Vercel AI SDK](./vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI

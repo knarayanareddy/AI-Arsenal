@@ -13,7 +13,7 @@ org_or_maintainer: null
 tags: [llm, reasoning, inference, efficiency]
 maturity: production
 cost_model: open-source
-github_stars: 103749
+github_stars: 104597
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: "2025-08-28"
@@ -47,7 +47,7 @@ corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture figures (671B total/37B active, MLA, DeepSeekMoE 256 experts, MTP, FP8 training) are from DeepSeek's own technical report, corroborated by NVIDIA Megatron-Bridge docs and DeepSeek's architecture deepwiki. The weight repository itself has not been pushed since 2025-08-28, which is normal for released weights, so actively-maintained was removed from health_signals on 2026-10-24.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
@@ -62,7 +62,7 @@ An open-weight Mixture-of-Experts language model family from DeepSeek AI: V3 is 
 
 ## Why it's in the Arsenal
 
-The case for DeepSeek-V3 / R1 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+The reason to keep this family in the catalogue is economic rather than architectural: R1 was the first open-weight reasoning model to reach o1-class benchmark scores — 79.8% pass@1 on AIME 2024 and 96.3% on MATH-500 in the paper's own evaluation — while publishing the training recipe and the 671B/37B MoE weights under MIT. That combination made "reason about it locally, with a model you can inspect" a real option instead of a hosted-API-only one, and it is why the family is the baseline later open reasoning models are compared against.
 
 ## Architecture
 
@@ -88,21 +88,23 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Key Use Cases
 
-1. **Running it in anger**: the first real evaluation of DeepSeek-V3 / R1 is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
-2. **What the DeepSeek-V3 / R1 scenarios have in common**: each turns on licence, context behaviour or hosting — the constraints a set of weights does not negotiate away.
-3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
+1. **Self-hosted reasoning over sensitive text**: the full R1 weights behind vLLM or SGLang when prompts cannot leave your network and the workload benefits from explicit chain-of-thought (log analysis, contract review, internal search synthesis).
+2. **Distillation into a smaller model you already run**: `DeepSeek-R1-Distill-Qwen-7B`/`32B` and the Llama-8B distill are dense checkpoints fine-tuned on R1 trajectories, so a 7B model fits a single 24GB GPU while keeping part of the reasoning behaviour — the usual path when the 671B model is out of reach.
+3. **A published baseline for reasoning comparisons**: MIT weights plus a paper that reports AIME, MATH-500, GPQA and LiveCodeBench numbers make it the reference point against which newer open reasoning models are measured.
 
 ## Strengths
 
-- Beyond the headline description, DeepSeek-V3 / R1's architecture section is the honest source: 671 billion total parameters with only 37 billion activated per token via a sparse Mixture-of-Experts design (256 routed experts, DeepSeekMoE). Uses Multi-head Latent Attention (MLA) to compress the KV cache and reduce memory pressure at inference, an auxiliary-loss-free load-balancing strategy across experts, a Multi-Token Prediction (MTP) module for speculative-decoding-style training/inference speedups, and native FP8 mixed-precision training — trained on 14.8 trillion tokens for roughly 2.788M H800 GPU-hours.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- Sparse activation is the whole design: 37B of 671B parameters fire per token, so serving throughput tracks the active path while quality tracks the full model — the reason vLLM and SGLang both ship dedicated DeepSeek MoE kernels.
+- MLA compresses the KV cache rather than quantizing it, which is what makes long-context serving of a 671B model practical on a single node of H800s.
+- R1's reasoning is trained, not prompted: GRPO reinforcement learning on verifiable tasks produced the long chain-of-thought behaviour, and the 7B/32B distills transfer part of it to dense models.
+- MIT licence on weights and code, with the training and evaluation methodology published — rare among frontier-scale releases and the basis for independent reproduction.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the DeepSeek-V3 / R1 footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running DeepSeek-V3 / R1 against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- No alternative is catalogued alongside DeepSeek-V3 / R1 here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- The 671B checkpoint needs roughly 350GB+ of weights before KV cache, so it is a multi-GPU (or multi-node) deployment; the distills exist precisely because most teams cannot serve the full model.
+- Reasoning traces are long by construction: output tokens dominate cost on R1-class models, and the latency profile is unsuitable for interactive chat without a smaller model in front.
+- Safety filtering is lighter than on comparable Western releases, and the model is a text-only LLM — no image or audio input.
+- Upstream is a released-weights repository rather than an evolving codebase: the last push was 2025-08-28, so improvements arrive as new model generations (V3.x, R1-0528) rather than as commits here.
 
 ## Relation to the Arsenal
 

@@ -76,13 +76,13 @@ Follow the official documentation at https://github.com/treeverse/dvc for the au
 ## Strengths
 
 - The implementation detail worth reading before adopting DVC is specific — large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable — and that is where a capability claim either survives contact with your data or does not.
-- Against `hugging-face-hub`, `mlflow`, `weights-biases`, the difference that decides this is deployment model and cost rather than the feature list, and DVC sits at the hosted end of that axis.
-- Depending on DVC means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Against `hugging-face-hub`, `mlflow`, `weights-biases`, the difference is what is tracked: DVC versions data and pipeline stages against a git-adjacent remote you own, while the others store models or runs.
+- DVC is a CLI you run locally, and the dependency you own is the remote storage — S3, GCS or SSH — plus the discipline of committing `.dvc` files.
 - What this entry cannot give you is measured behaviour: measure DVC's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to DVC, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The remote is yours to operate, and on large datasets push and pull become the slowest part of every pipeline run.
 - Documentation for DVC describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where DVC overlaps `hugging-face-hub`, `mlflow`, `weights-biases`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

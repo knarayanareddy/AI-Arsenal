@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [turbovec](./turbovec.md)
 - [Screenpipe](./screenpipe.md)
 - [Hugging Face AI Sheets](./aisheets.md)
 - [Airbyte](./airbyte.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Exa](./exa.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
-- [Great Expectations (GX Core)](./great-expectations.md)
 
 ### Most Popular
 
@@ -80,5 +80,6 @@ _No star-tracked entries yet._
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
 - [Tavily](./tavily.md) — Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call
 - [Trafilatura](./trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building
+- [turbovec](./turbovec.md) — In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory
 - [Typesense](./typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [Vespa](./vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference

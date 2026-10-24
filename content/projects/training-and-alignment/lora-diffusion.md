@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: lora-diffusion
@@ -39,7 +39,7 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 7548
+github_stars: 7557
 last_commit: "2024-03-22"
 docs_url: https://arxiv.org/abs/2106.09685
 phase: training-and-alignment
@@ -59,7 +59,7 @@ best_for:
 avoid_if:
   - "You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current"
   - "You need general-purpose LLM LoRA tooling rather than diffusion-focused code"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries. Dormancy re-checked 2026-10-24, when the GitHub API reported 7557 stars and last push 2024-03-22; claims in the entry re-read against the repository."
 ---
 
 ## Overview

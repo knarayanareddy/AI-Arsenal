@@ -103,6 +103,7 @@
 | `deepcode-cli` | [deepcode-cli](./agent-systems/deepcode-cli.md) | TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills |
 | `deepeval` | [DeepEval](./benchmarks-and-evals/deepeval.md) | An open-source evaluation framework for testing LLM applications in CI |
 | `deeplake` | [Deep Lake](./data-and-retrieval/deeplake.md) | Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage |
+| `deepseek-harness` | [DeepSeek Harness](./agent-systems/deepseek-harness.md) | DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework |
 | `deepseek-ocr` | [DeepSeek-OCR](./foundation-models/deepseek-ocr.md) | DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens |
 | `deepseek-reasonix` | [DeepSeek-Reasonix](./agent-systems/deepseek-reasonix.md) | Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways |
 | `deepseek-v3-r1` | [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) | DeepSeek open-weight MoE and reasoning model family known for strong cost-performance |
@@ -479,7 +480,6 @@
 | `trpc-agent-go` | [trpc-agent-go](./agent-systems/trpc-agent-go.md) | Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in |
 | `txtai` | [txtai](./frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
 | `ui-tars-desktop` | [UI-TARS Desktop](./agent-systems/ui-tars-desktop.md) | ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control |
-| `uiverse-design` | [Uiverse Design](./frameworks/uiverse-design.md) | Open-source library of community-made CSS/Tailwind UI elements for faster front-end development |
 | `ultralytics` | [Ultralytics YOLO](./frameworks/ultralytics.md) | The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API |
 | `ultralytics-yolo` | [Ultralytics YOLO](./frameworks/ultralytics-yolo.md) | The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API |
 | `ultrarag` | [UltraRAG](./data-and-retrieval/ultrarag.md) | Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines |

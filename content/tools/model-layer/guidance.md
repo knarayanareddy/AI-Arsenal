@@ -76,13 +76,13 @@ Follow the official documentation at https://github.com/guidance-ai/guidance for
 ## Strengths
 
 - Beyond the marketing, Guidance's own notes are the useful part: generation is expressed as a program mixing literal text, control flow, and model-generated spans; the library drives the underlying model step by step according to that program.
-- Against `instructor`, `outlines`, `pydantic-ai-tool`, the difference that decides this is deployment model and cost rather than the feature list, and Guidance sits at the hosted end of that axis.
-- Depending on Guidance means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Against `instructor`, `outlines`, `pydantic-ai-tool`, the difference is where the constraint lives: Guidance constrains decoding token by token, while Instructor parses and validates after the call.
+- Guidance is a Python library driving a model you already have access to; it adds no service, but the full benefit needs a backend that supports grammar-constrained decoding.
 - What this entry cannot give you is measured behaviour: measure Guidance's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Guidance, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Grammar constraints are only as strong as the backend honours them — against a provider that ignores the constraint, Guidance degrades to prompt-level control.
 - Documentation for Guidance describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Guidance overlaps `instructor`, `outlines`, `pydantic-ai-tool`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

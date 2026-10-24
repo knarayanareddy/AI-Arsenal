@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: mmagic
@@ -40,7 +40,7 @@ tags:
   - "inference"
 maturity: beta
 cost_model: open-source
-github_stars: 7438
+github_stars: 7476
 last_commit: "2024-08-06"
 docs_url: https://mmagic.readthedocs.io/en/latest/
 phase: framework
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You only need mainstream diffusion inference, where the Diffusers library is more current and convenient"
   - "You want an actively evolving project, since upstream cadence slowed after 2024"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-06 activity verified via the GitHub API on 2026-07-12. Broad but upstream cadence slowed; treat as a reference toolbox."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-06 activity verified via the GitHub API on 2026-07-12. Broad but upstream cadence slowed; treat as a reference toolbox. Dormancy re-checked 2026-10-24, when the GitHub API reported 7476 stars and last push 2024-08-06; claims in the entry re-read against the repository."
 ---
 
 ## Overview
@@ -85,20 +85,21 @@ Install MMEngine/MMCV and MMagic, pick a task config from the model zoo, and run
 
 ## Key Use Cases
 
-1. **Where it fits**: "You want one framework covering diffusion generation plus super-resolution, inpainting, matting, and restoration
-2. **Adoption checkpoint**: before building on MMagic, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
+1. **Restoration work with a published baseline**: super-resolution (Real-ESRGAN, SwinIR), denoising, deblurring and inpainting each ship with a config and pretrained weights, so a comparison run is a config edit rather than a reimplementation.
+2. **Matting and video restoration**: tasks Diffusers does not cover — video super-resolution (BasicVSR++), video interpolation (FILM), and portrait matting — with the same training loop.
+3. **A reproducible research base**: the config records every component and seed, which is what makes an MMagic result citable when you need to reproduce a paper's numbers.
 
 ## Strengths
 
-- Beyond the headline description, MMagic's architecture section is the honest source: built on MMEngine/MMCV, MMagic composes each model from registry components declared in Python config files, so datasets, backbones, generators, discriminators, and losses are swappable. It implements diffusion and GAN generators alongside super-resolution and restoration networks, and its unified runner handles training, evaluation with task-specific metrics, and inference through a common MMagicInferencer interface.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
+- Task breadth in one API: generation, super-resolution, matting, inpainting, denoising and video restoration share the runner, the registry and the config format, so one skill covers a dozen low-level vision jobs.
+- Evaluation is built in rather than bolted on: PSNR/SSIM/LPIPS and task-specific metrics run from the same config that trains the model, which is what makes the model zoo's numbers comparable.
+- OpenMMLab interoperability: backbones and components come from the same registry as MMDetection and MMPose, so a detector and a restoration pipeline can share upstream code.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the MMagic footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for MMagic at your scale need measuring before this informs a production decision.
-- MMagic is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
+- The MMCV/MMEngine pin is the practical cost: version mismatches between the three packages are the most common failure when installing, and CUDA/torch builds must line up with the MMCV wheel.
+- Upstream development stopped in 2024 (last push 2024-08-06): newer diffusion architectures — SDXL, FLUX, video DiTs — are not here, and the newest models in the zoo predate them.
+- Config-driven code is harder to debug than a plain PyTorch script; for a single model in production, Diffusers or a direct implementation is usually the smaller dependency.
 
 ## Relation to the Arsenal
 

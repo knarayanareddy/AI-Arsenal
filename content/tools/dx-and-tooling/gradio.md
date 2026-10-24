@@ -77,7 +77,7 @@ A Python function is wrapped with declared input/output component types; Gradio 
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Gradio, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- A Gradio app is a Python process you host, and its auth stops at basic or provider-based login: there is no tenant isolation, so it suits internal tools and demos rather than a public product surface.
 - Documentation for Gradio describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Gradio overlaps `chainlit`, `fastapi`, `mesop`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

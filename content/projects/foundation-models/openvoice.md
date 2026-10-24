@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: openvoice
@@ -40,7 +40,7 @@ tags:
   - "llm"
 maturity: beta
 cost_model: open-source
-github_stars: 36917
+github_stars: 38060
 last_commit: "2025-04-19"
 docs_url: https://research.myshell.ai/open-voice
 phase: foundation-model
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You need a fully end-to-end single model; OpenVoice pairs a base TTS with a tone-color converter and expects that two-stage setup"
   - "You require the highest raw naturalness of the newest large TTS models, where quality may edge ahead"
-enrichment_notes: "Repository, MIT license, and 2025-04-19 activity verified via the GitHub API on 2026-07-12. V2 weights and some MyShell components may carry separate terms; verify before commercial use."
+enrichment_notes: "Repository, MIT license, and 2025-04-19 activity verified via the GitHub API on 2026-07-12. V2 weights and some MyShell components may carry separate terms; verify before commercial use. Dormancy re-checked 2026-10-24, when the GitHub API reported 38060 stars and last push 2025-04-19; claims in the entry re-read against the repository."
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-24T16:42:59.893Z",
+  "generated_at": "2026-10-24T21:29:20.138Z",
   "config": {
     "document": {
       "id": "id",
@@ -61,7 +61,7 @@
   "facets": {
     "types": {
       "project": 511,
-      "tool": 247,
+      "tool": 249,
       "paper": 138,
       "tip": 171,
       "person": 25,
@@ -75,23 +75,23 @@
       "trend": 4
     },
     "tags": {
-      "agents": 298,
+      "agents": 299,
       "routing": 26,
       "orchestration": 77,
       "structured-output": 63,
       "llm": 413,
-      "tool-use": 138,
-      "efficiency": 104,
-      "code-gen": 71,
+      "tool-use": 139,
+      "efficiency": 105,
+      "code-gen": 73,
       "pytorch": 38,
       "local": 73,
       "memory": 50,
-      "rag": 165,
+      "rag": 166,
       "graphs": 8,
       "self-hosted": 189,
       "planning": 21,
       "guardrails": 48,
-      "retrieval": 159,
+      "retrieval": 161,
       "kubernetes": 14,
       "monitoring": 44,
       "evaluation": 247,
@@ -140,10 +140,10 @@
       "new-arrival": 1
     },
     "categories": {
-      "agents": 115,
+      "agents": 116,
       "llms": 104,
       "observability": 15,
-      "tooling": 40,
+      "tooling": 39,
       "evaluation": 28,
       "rag": 63,
       "data-pipelines": 28,
@@ -185,38 +185,38 @@
       "retrieval-rag": 7
     },
     "maturity": {
-      "beta": 284,
-      "production": 434,
+      "beta": 287,
+      "production": 433,
       "alpha": 27,
       "experimental": 13
     },
     "cost_model": {
-      "open-source": 607,
+      "open-source": 609,
       "self-hostable": 24,
       "freemium": 81,
       "usage-based": 34,
       "paid": 12
     },
     "status": {
-      "active": 929,
+      "active": 932,
       "archived": 17,
       "deprecated": 1,
-      "watching": 4,
+      "watching": 3,
       "reviewed": 3,
       "draft": 1
     },
     "phase": {
-      "framework": 123,
+      "framework": 122,
       "inference-engine": 62,
-      "agent-system": 93,
+      "agent-system": 94,
       "training-and-alignment": 51,
       "benchmark-and-eval": 32,
       "data-and-retrieval": 90,
       "foundation-model": 79,
       "model-layer": 34,
-      "dx-and-tooling": 53,
+      "dx-and-tooling": 54,
       "orchestration": 40,
-      "data-ingestion": 38,
+      "data-ingestion": 39,
       "evaluation-and-observability": 40,
       "serving-and-deployment": 42,
       "architectures": 16,
@@ -244,8 +244,8 @@
     },
     "audience": {
       "research": 69,
-      "production": 188,
-      "prototype": 144,
+      "production": 190,
+      "prototype": 146,
       "practitioner": 33,
       "founder": 9,
       "enterprise": 5,
@@ -254,7 +254,7 @@
     },
     "domain": {
       "general-purpose": 196,
-      "language": 261,
+      "language": 262,
       "reasoning": 46,
       "multimodal": 64,
       "safety-and-alignment": 2,
@@ -264,7 +264,7 @@
     },
     "relation_to_stack": {
       "build-on-top": 412,
-      "deploy-as-is": 287,
+      "deploy-as-is": 288,
       "study-and-reference": 113,
       "fork-and-adapt": 53,
       "contribute-to": 25
@@ -14171,6 +14171,58 @@
       "body": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment training reasoning rlhf Overview This paper showed that large scale reinforcement learning using automated, verifiable rewards — correct or incorrect answers on math and coding tasks, not human preference labels — can directly incentivize strong reasoning behavior in a language model, and that this capability distills effectively into much smaller dense models. This remains current, active practice: RL from verifiable rewards is now a standard technique for training reasoning focused models, independently reproduced by Hugging Face's Open R1 project and reflected in this catalog's own deepseek v3 r1 project entry's…"
     },
     {
+      "id": "deepseek-harness",
+      "type": "project",
+      "name": "DeepSeek Harness",
+      "title": "DeepSeek Harness",
+      "description": "DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "category": "agents",
+      "subcategory": "coding-agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "agent-system",
+      "audience": null,
+      "domain": [
+        "general-purpose",
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/agent-systems/deepseek-harness.md",
+      "url": "content/projects/agent-systems/deepseek-harness",
+      "boost_title": "DeepSeek Harness",
+      "boost_tags": "agents tool-use code-gen",
+      "boost_description": "DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework",
+      "body": "DeepSeek Harness DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework agents tool-use code-gen agents coding-agents Overview DeepSeek Harness (dsh) is an open source agent harness from DeepSeek AI, written in TypeScript under MIT. Its organising idea is that nothing in the product is privileged: the model adapter, the tool registry, the session log and the agent loop itself are Cordis plugins that contribute services and typed events to a shared context, and each can be replaced from configuration. A running dsh is a plugin tree composed at boot from ordered layers, so \"customising the agent\" and \"patching the boot configuration\" are the same operation. Why it's in the Arsenal Most coding agents here ask y…"
+    },
+    {
       "id": "deepseek-ocr",
       "type": "project",
       "name": "DeepSeek-OCR",
@@ -14324,7 +14376,7 @@
       "boost_title": "DeepSeek-V3 / R1",
       "boost_tags": "llm reasoning inference efficiency",
       "boost_description": "DeepSeek open-weight MoE and reasoning model family known for strong cost-performance",
-      "body": "DeepSeek-V3 / R1 DeepSeek open-weight MoE and reasoning model family known for strong cost-performance llm reasoning inference efficiency llms open-source-models Overview An open weight Mixture of Experts language model family from DeepSeek AI: V3 is the general purpose base/chat model, and R1 is a reasoning focused variant post trained on top of it, both released under the MIT license. Why it's in the Arsenal The case for DeepSeek V3 / R1 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture 671 billion total parameters with only 37 billion activated per token via a sparse Mixture of Experts design (256 route…"
+      "body": "DeepSeek-V3 / R1 DeepSeek open-weight MoE and reasoning model family known for strong cost-performance llm reasoning inference efficiency llms open-source-models Overview An open weight Mixture of Experts language model family from DeepSeek AI: V3 is the general purpose base/chat model, and R1 is a reasoning focused variant post trained on top of it, both released under the MIT license. Why it's in the Arsenal The reason to keep this family in the catalogue is economic rather than architectural: R1 was the first open weight reasoning model to reach o1 class benchmark scores — 79.8% pass@1 on AIME 2024 and 96.3% on MATH 500 in the paper's own evaluation — while publishing the training recipe and the 671B/37B MoE weights under MIT. That combination made…"
     },
     {
       "id": "deepseek-vl",
@@ -21519,6 +21571,55 @@
       "boost_tags": "llm local cloud",
       "boost_description": "A Python library for building and sharing machine learning demos quickly",
       "body": "Gradio A Python library for building and sharing machine learning demos quickly llm local cloud Overview A Python library for turning a model or function into a shareable web demo in minutes, widely used for quick stakeholder facing prototypes rather than production UIs. Why It's in the Arsenal The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Read it beside chainlit, fastapi, mesop: the choice between them is a deployment and cost decision before it is a capability one. Key Features Fast demo UI generation from a Python function Shareable public links for quick feedback Large library of pre built input/output components Archite…"
+    },
+    {
+      "id": "graphify",
+      "type": "tool",
+      "name": "Graphify",
+      "title": "Graphify",
+      "description": "Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index",
+      "tags": [
+        "retrieval",
+        "code-gen",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "domain": null,
+      "relation_to_stack": null,
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/tools/dx-and-tooling/graphify.md",
+      "url": "content/tools/dx-and-tooling/graphify",
+      "boost_title": "Graphify",
+      "boost_tags": "retrieval code-gen agents",
+      "boost_description": "Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index",
+      "body": "Graphify Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index retrieval code-gen agents Overview Graphify maps a repository — code, docs, SQL schemas, configuration, PDFs and images — into a knowledge graph that an agent queries instead of grepping through files. It ships as a Python CLI and an assistant skill: run /graphify . in a coding assistant and it registers the skill, parses the codebase, and writes an interactive graph.html plus the graph artifact the assistant traverses afterwards. The design point is that code maps deterministically and locally, while non code material gets an optional semantic pass through a model. Why It's in the Arsenal The catalogue's code context…"
     },
     {
       "id": "graphiti",
@@ -46881,7 +46982,7 @@
       "boost_title": "RAGatouille",
       "boost_tags": "retrieval rag research",
       "boost_description": "Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines",
-      "body": "RAGatouille Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines retrieval rag research Overview A usability layer over ColBERT from Answer.AI (Benjamin Clavié): index, search, and train late interaction retrievers — which embed every token and compute MaxSim interactions, generalizing better than single vector embeddings on many domains — without wrestling with the research codebase. Why It's in the Arsenal RAGatouille is a library that makes ColBERT late interaction retrieval usable in any RAG pipeline in a few lines. Read it beside sentence transformers, cohere: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin…"
+      "body": "RAGatouille Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines retrieval rag research Overview A usability layer over ColBERT from Answer.AI (Benjamin Clavié): index, search, and train late interaction retrievers — which embed every token and compute MaxSim interactions, generalizing better than single vector embeddings on many domains — without wrestling with the research codebase. Why It's in the Arsenal The job here is evaluating whether late interaction is worth its storage bill. ColBERT keeps a vector per token instead of one per chunk, which is why it generalizes better out of domain, and RAGatouille is the shortest path to that comparison: index an existing corpus with…"
     },
     {
       "id": "ragflow",
@@ -58419,6 +58520,55 @@
       "body": "Increase Batch Size Only Until Tail Latency Becomes Unacceptable inference batching inference-optimization What & Why Increase serving batch size to improve throughput, but stop increasing it once p95 or p99 latency (or time to first token) crosses your acceptable threshold, not once average latency does. Larger batches improve GPU utilization and aggregate throughput, but individual requests wait longer for their turn in the batch, and this cost shows up in the tail of the latency distribution well before it shows up in the average. Before / After Before: batch size tuned by checking that mean latency stays low, then set as high as throughput benchmarks suggest. After: batch size increased increm…"
     },
     {
+      "id": "turbovec",
+      "type": "tool",
+      "name": "turbovec",
+      "title": "turbovec",
+      "description": "In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory",
+      "tags": [
+        "retrieval",
+        "rag",
+        "efficiency"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "domain": null,
+      "relation_to_stack": null,
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/tools/data-ingestion/turbovec.md",
+      "url": "content/tools/data-ingestion/turbovec",
+      "boost_title": "turbovec",
+      "boost_tags": "retrieval rag efficiency",
+      "boost_description": "In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory",
+      "body": "turbovec In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory retrieval rag efficiency Overview turbovec is an in process vector index for Python and Rust that implements TurboQuant, the online quantization method published at ICLR 2026. It stores every vector at 2 or 4 bits per dimension and searches that compressed representation directly with SIMD kernels. The headline trade is memory for speed: ten million 768 dimensional float32 embeddings occupy about 31GB, the 4 bit index holds them in roughly 4GB, and the author's benchmarks report 4.4x FAISS FastScan throughput at 4 bit with recall at or near FAISS's at the same bit rate. Why It's in the Arsenal The retrieval entries h…"
+    },
+    {
       "id": "twiml-ai-podcast",
       "type": "community",
       "name": "The TWIML AI Podcast",
@@ -58619,54 +58769,6 @@
       "boost_tags": "agents vision tool-use",
       "boost_description": "ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control",
       "body": "UI-TARS Desktop ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control agents vision tool-use tooling platforms Overview TARS is a multimodal agent stack that ships two projects. Agent TARS is the general stack: a CLI and a Web UI that bring GUI agent capability and vision into a terminal, a computer, a browser or a product, with both headful Web UI and headless server execution. UI TARS Desktop is the native desktop application, driven by the UI TARS model and the Seed 1.5 VL/1.6 series, shipping local and remote computer operators plus a browser operator. The architecture detail worth knowing is the hybrid browser agent, which can control a browser using visual grounding, the DOM, or a hybrid strateg…"
-    },
-    {
-      "id": "uiverse-design",
-      "type": "project",
-      "name": "Uiverse Design",
-      "title": "Uiverse Design",
-      "description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
-      "tags": [
-        "agents"
-      ],
-      "category": "tooling",
-      "subcategory": "platforms",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "watching",
-      "phase": "framework",
-      "audience": null,
-      "domain": [
-        "general-purpose"
-      ],
-      "relation_to_stack": [
-        "build-on-top"
-      ],
-      "practical_applicability": null,
-      "result_status": null,
-      "reproduction_status": null,
-      "effort": null,
-      "verification_status": null,
-      "impact": null,
-      "difficulty": null,
-      "decision_type": null,
-      "confidence": null,
-      "build_status": null,
-      "outcome": null,
-      "scope": null,
-      "signal_types": null,
-      "data_sensitivity": null,
-      "kind": null,
-      "topics": null,
-      "access": null,
-      "activity_level": null,
-      "safety_level": null,
-      "path": "content/projects/frameworks/uiverse-design.md",
-      "url": "content/projects/frameworks/uiverse-design",
-      "boost_title": "Uiverse Design",
-      "boost_tags": "agents",
-      "boost_description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
-      "body": "Uiverse Design Open-source library of community-made CSS/Tailwind UI elements for faster front-end development agents tooling platforms Overview An open source, community sourced library of CSS and Tailwind UI components (buttons, loaders, form elements, and similar building blocks), included in this catalog's front end tooling coverage rather than because it has any AI specific functionality. Read Uiverse Design against the operational facts rather than the feature list in the framework phase; under a open source cost model; with uiverse design, name, uiverse. What matters is the data path it introduces, the state it keeps, and what a degraded dependency does — the parts a capability claim does not cover. Why it's in the Ars…"
     },
     {
       "id": "ultraeval-audio",
@@ -59127,7 +59229,7 @@
       "boost_title": "UpTrain",
       "boost_tags": "evaluation rag observability",
       "boost_description": "Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics",
-      "body": "UpTrain Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics evaluation rag observability Overview An open source evaluation framework offering prebuilt operators for the common LLM quality dimensions — RAG metrics (context relevance, groundedness), response quality (completeness, conciseness), safety (jailbreak detection), and conversation satisfaction — runnable locally with a dashboard, or via its API client. Why It's in the Arsenal UpTrain is catalogued as a open source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics, which is the specific claim the rest of the entry has to support. Read it beside ragas rag evaluation, deepeval…"
+      "body": "UpTrain Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics evaluation rag observability Overview An open source evaluation framework offering prebuilt operators for the common LLM quality dimensions — RAG metrics (context relevance, groundedness), response quality (completeness, conciseness), safety (jailbreak detection), and conversation satisfaction — runnable locally with a dashboard, or via its API client. Why It's in the Arsenal UpTrain's distinctive claim is breadth without writing judges: around forty named checks covering context relevance, groundedness, response completeness, jailbreak attempts and conversation satisfaction, runnable against a local Ollama judge so eval…"
     },
     {
       "id": "uqlm",

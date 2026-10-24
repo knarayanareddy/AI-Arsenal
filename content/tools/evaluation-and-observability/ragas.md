@@ -84,7 +84,7 @@ Follow the official documentation at https://docs.ragas.io/ for the authenticati
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Ragas, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Ragas scores with an LLM judge, so every run is a batch of model calls whose cost and variance sit on top of the retrieval system being measured.
 - Documentation for Ragas describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Ragas overlaps `deepeval`, `promptfoo`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

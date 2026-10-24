@@ -82,7 +82,7 @@ pip install 'ray[serve]'
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Ray Serve, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Ray Serve is a library on top of a Ray cluster, so operating Ray — head node, autoscaler, dashboard, object store — is a cluster-management job before it is a serving one.
 - Documentation for Ray Serve describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Ray Serve overlaps `triton-inference-server`, `bentoml`, `kserve`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: grounding-dino
@@ -39,7 +39,7 @@ tags:
   - "inference"
 maturity: production
 cost_model: open-source
-github_stars: 10388
+github_stars: 10700
 last_commit: "2024-08-12"
 docs_url: https://arxiv.org/abs/2303.05499
 phase: foundation-model
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You have a fixed, known class set and abundant data, where a specialized closed-set detector is faster and cheaper"
   - "You need real-time detection on edge devices, since the model is comparatively heavy"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-12 activity verified via the GitHub API on 2026-07-12. Widely combined with SAM as Grounded-SAM."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-12 activity verified via the GitHub API on 2026-07-12. Widely combined with SAM as Grounded-SAM. Dormancy re-checked 2026-10-24, when the GitHub API reported 10700 stars and last push 2024-08-12; claims in the entry re-read against the repository."
 ---
 
 ## Overview

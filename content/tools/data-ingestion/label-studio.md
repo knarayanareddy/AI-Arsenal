@@ -81,7 +81,7 @@ The pipeline is fetch to parse to normalise, and each stage drops information; t
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Label Studio, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The open-source edition is a Docker/Compose deployment you operate, and the split that matters is in the paid tier: multi-tenant SSO, audit trails and the enterprise workflow features are not in the community image.
 - Documentation for Label Studio describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Label Studio overlaps `argilla`, `prodigy`, `scale-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
