@@ -42,7 +42,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 9578
 last_commit: "2026-09-30"
-docs_url: https://funaudiollm.github.io/
+docs_url: https://fun-audio-llm.github.io/
 phase: foundation-model
 domain:
   - "audio"
@@ -102,4 +102,4 @@ It adds speech understanding to the voice-audio category and cross-links to FunA
 ## Resources
 
 - [GitHub repository](https://github.com/QwenAudio/SenseVoice)
-- [Project page](https://funaudiollm.github.io/)
+- [Project page](https://fun-audio-llm.github.io/)

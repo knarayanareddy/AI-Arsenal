@@ -1,25 +1,15 @@
 {
-  "generated_at": "2026-10-24T16:51:50.379Z",
+  "generated_at": "2026-10-24T16:54:42.242Z",
   "mode": "changed-only",
   "files_checked": 57,
   "urls_found": 98,
   "urls_checked": 98,
-  "max_urls": 2000,
-  "max_urls_per_host": 10,
+  "max_urls": 2500,
+  "max_urls_per_host": 100,
   "capped": false,
   "urls_skipped_by_cap": 0,
   "broken_links": [],
   "warning_links": [
-    {
-      "url": "https://docs.refact.ai",
-      "ok": false,
-      "error": "net-ECONNRESET",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/projects/agent-systems/refact.md"
-      ]
-    },
     {
       "url": "https://huggingface.co/chat/",
       "ok": false,
@@ -51,13 +41,13 @@
       ]
     },
     {
-      "url": "https://tensorzero.com",
+      "url": "https://docs.refact.ai",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/projects/agent-systems/tensorzero.md"
+        "content/projects/agent-systems/refact.md"
       ]
     },
     {
@@ -71,13 +61,13 @@
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2406.15877",
+      "url": "https://tensorzero.com",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
       "category": "transient",
       "files": [
-        "content/projects/benchmarks-and-evals/bigcodebench.md"
+        "content/projects/agent-systems/tensorzero.md"
       ]
     },
     {
@@ -88,6 +78,16 @@
       "category": "transient",
       "files": [
         "content/projects/benchmarks-and-evals/terminal-bench.md"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2406.15877",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/benchmarks-and-evals/bigcodebench.md"
       ]
     },
     {
@@ -141,16 +141,6 @@
       ]
     },
     {
-      "url": "https://huggingface.co/deepseek-ai",
-      "ok": false,
-      "error": "net-ECONNRESET",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/projects/foundation-models/deepseek-v3-r1.md"
-      ]
-    },
-    {
       "url": "https://www.informationweek.com/machine-learning-ai/will-enterprises-adopt-deepseek-",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -161,7 +151,17 @@
       ]
     },
     {
-      "url": "https://docs.mistral.ai/",
+      "url": "https://huggingface.co/deepseek-ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/deepseek-v3-r1.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/mistralai",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "url": "https://huggingface.co/mistralai",
+      "url": "https://docs.mistral.ai/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
@@ -211,6 +211,26 @@
       ]
     },
     {
+      "url": "https://github.com/treeverse/dvc",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/dvc.md"
+      ]
+    },
+    {
+      "url": "https://github.com/hiyouga/LlamaFactory",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/llamafactory.md"
+      ]
+    },
+    {
       "url": "https://docs.nvidia.com/nemo/",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -218,6 +238,46 @@
       "category": "transient",
       "files": [
         "content/projects/frameworks/nvidia-nemo.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/sentence-transformers",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/sentence-transformers.md"
+      ]
+    },
+    {
+      "url": "https://github.com/meta-pytorch/torchtune",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/model-layer/torchtune.md"
+      ]
+    },
+    {
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://github.com/FlowiseAI/Flowise/discussions/6727",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/orchestration/flowise.md"
       ]
     },
     {
@@ -231,6 +291,16 @@
       ]
     },
     {
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/orchestration/strands-agents.md"
+      ]
+    },
+    {
       "url": "https://arxiv.org/abs/2411.05007",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -241,6 +311,27 @@
       ]
     },
     {
+      "url": "https://github.com/theagentrouter/agent-router",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
+      "url": "http://localhost:1975/v1.",
+      "ok": false,
+      "error": "localhost-hostname",
+      "soft": true,
+      "placeholder": true,
+      "category": "placeholder",
+      "files": [
+        "content/tools/serving-and-deployment/ai-gateway.md"
+      ]
+    },
+    {
       "url": "https://rhasspy.github.io/piper-samples/",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -248,6 +339,16 @@
       "category": "transient",
       "files": [
         "content/projects/inference-engines/piper-tts.md"
+      ]
+    },
+    {
+      "url": "https://github.com/predibase/lorax",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "category": "host_cap",
+      "files": [
+        "content/tools/serving-and-deployment/lorax.md"
       ]
     },
     {
@@ -281,7 +382,7 @@
       ]
     },
     {
-      "url": "https://docs.greatexpectations.io/docs/core/introduction/gx_overview",
+      "url": "https://greatexpectations.io",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
@@ -291,7 +392,7 @@
       ]
     },
     {
-      "url": "https://greatexpectations.io",
+      "url": "https://docs.greatexpectations.io/docs/core/introduction/gx_overview",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
@@ -341,76 +442,6 @@
       ]
     },
     {
-      "url": "https://github.com/treeverse/dvc",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/model-layer/dvc.md"
-      ]
-    },
-    {
-      "url": "https://github.com/hiyouga/LlamaFactory",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/model-layer/llamafactory.md"
-      ]
-    },
-    {
-      "url": "https://github.com/huggingface/sentence-transformers",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/model-layer/sentence-transformers.md"
-      ]
-    },
-    {
-      "url": "https://github.com/meta-pytorch/torchtune",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/model-layer/torchtune.md"
-      ]
-    },
-    {
-      "url": "https://goose-docs.ai",
-      "ok": false,
-      "error": "net-ECONNRESET",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/dx-and-tooling/goose.md"
-      ]
-    },
-    {
-      "url": "https://github.com/FlowiseAI/Flowise",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/orchestration/flowise.md"
-      ]
-    },
-    {
-      "url": "https://github.com/FlowiseAI/Flowise/discussions/6727",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/orchestration/flowise.md"
-      ]
-    },
-    {
       "url": "https://toolradar.com/featured/techpresso",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -418,16 +449,6 @@
       "category": "transient",
       "files": [
         "content/tools/dx-and-tooling/instructor.md"
-      ]
-    },
-    {
-      "url": "https://github.com/strands-agents/harness-sdk",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/orchestration/strands-agents.md"
       ]
     },
     {
@@ -441,6 +462,16 @@
       ]
     },
     {
+      "url": "https://goose-docs.ai",
+      "ok": false,
+      "error": "net-ECONNRESET",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/tools/dx-and-tooling/goose.md"
+      ]
+    },
+    {
       "url": "https://jan.ai/docs",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -451,16 +482,6 @@
       ]
     },
     {
-      "url": "https://github.com/theagentrouter/agent-router",
-      "ok": false,
-      "error": "host-rate-limited",
-      "soft": true,
-      "category": "host_cap",
-      "files": [
-        "content/tools/serving-and-deployment/ai-gateway.md"
-      ]
-    },
-    {
       "url": "https://protectai.github.io/llm-guard/",
       "ok": false,
       "error": "net-ECONNRESET",
@@ -468,17 +489,6 @@
       "category": "transient",
       "files": [
         "content/tools/evaluation-and-observability/llm-guard.md"
-      ]
-    },
-    {
-      "url": "http://localhost:1975/v1.",
-      "ok": false,
-      "error": "localhost-hostname",
-      "soft": true,
-      "placeholder": true,
-      "category": "placeholder",
-      "files": [
-        "content/tools/serving-and-deployment/ai-gateway.md"
       ]
     },
     {
@@ -502,13 +512,13 @@
       ]
     },
     {
-      "url": "https://github.com/predibase/lorax",
+      "url": "https://strandsagents.com",
       "ok": false,
-      "error": "host-rate-limited",
+      "error": "net-ECONNRESET",
       "soft": true,
-      "category": "host_cap",
+      "category": "transient",
       "files": [
-        "content/tools/serving-and-deployment/lorax.md"
+        "content/tools/orchestration/strands-agents.md"
       ]
     },
     {
@@ -519,16 +529,6 @@
       "category": "transient",
       "files": [
         "content/tools/orchestration/flowise.md"
-      ]
-    },
-    {
-      "url": "https://strandsagents.com",
-      "ok": false,
-      "error": "net-ECONNRESET",
-      "soft": true,
-      "category": "transient",
-      "files": [
-        "content/tools/orchestration/strands-agents.md"
       ]
     },
     {
@@ -552,7 +552,7 @@
       ]
     },
     {
-      "url": "https://aigateway.envoyproxy.io",
+      "url": "https://theagentrouter.ai/docs/cli/",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
@@ -562,7 +562,7 @@
       ]
     },
     {
-      "url": "https://theagentrouter.ai/docs/cli/",
+      "url": "https://aigateway.envoyproxy.io",
       "ok": false,
       "error": "net-ECONNRESET",
       "soft": true,
