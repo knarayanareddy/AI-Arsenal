@@ -19,6 +19,11 @@ function runDiff(args) {
     .filter(Boolean);
 }
 
+// Deleted paths are excluded from the diff (`--diff-filter=d`). A changed-file
+// validator can only inspect files that still exist; passing a deleted entry
+// through made `validate:changed` crash with ENOENT on the first PR that
+// removed a file, which is the normal shape of every migration.
+//
 // Compute the list of files changed between `base` and `head`.
 //
 // In CI we FAIL CLOSED: if the merge-base diff cannot be computed we throw,
@@ -28,7 +33,7 @@ function runDiff(args) {
 // working-tree diff).
 export function getChangedFiles({ base, head = 'HEAD', strict = inCI(), run = runDiff } = {}) {
   const resolvedBase = resolveBase(base);
-  const primary = ['diff', '--name-only', `${resolvedBase}...${head}`];
+  const primary = ['diff', '--name-only', '--diff-filter=d', `${resolvedBase}...${head}`];
 
   if (strict) {
     try {
@@ -42,7 +47,7 @@ export function getChangedFiles({ base, head = 'HEAD', strict = inCI(), run = ru
     }
   }
 
-  for (const args of [primary, ['diff', '--name-only', 'HEAD~1...HEAD'], ['diff', '--name-only']]) {
+  for (const args of [primary, ['diff', '--name-only', '--diff-filter=d', 'HEAD~1...HEAD'], ['diff', '--name-only', '--diff-filter=d']]) {
     try {
       return run(args);
     } catch {}

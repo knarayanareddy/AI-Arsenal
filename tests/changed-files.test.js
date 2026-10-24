@@ -49,7 +49,7 @@ test('strict mode returns the diff when the base resolves', () => {
     const { run, calls } = fakeRun({ output: ['content/a.md', 'scripts/x.js'] });
     const files = getChangedFiles({ base: 'origin/main', strict: true, run });
     assert.deepEqual(files, ['content/a.md', 'scripts/x.js']);
-    assert.deepEqual(calls[0], ['diff', '--name-only', 'origin/main...HEAD']);
+    assert.deepEqual(calls[0], ['diff', '--name-only', '--diff-filter=d', 'origin/main...HEAD']);
   } finally {
     restoreEnv();
   }
@@ -74,7 +74,7 @@ test('base resolution prefers GITHUB_BASE_SHA when no explicit base is given', (
   try {
     const { run, calls } = fakeRun({ output: [] });
     getChangedFiles({ strict: true, run });
-    assert.deepEqual(calls[0], ['diff', '--name-only', 'deadbeef...HEAD']);
+    assert.deepEqual(calls[0], ['diff', '--name-only', '--diff-filter=d', 'deadbeef...HEAD']);
   } finally {
     restoreEnv();
   }
@@ -86,7 +86,7 @@ test('an explicit base overrides GITHUB_BASE_SHA', () => {
   try {
     const { run, calls } = fakeRun({ output: [] });
     getChangedFiles({ base: 'abc123', strict: true, run });
-    assert.deepEqual(calls[0], ['diff', '--name-only', 'abc123...HEAD']);
+    assert.deepEqual(calls[0], ['diff', '--name-only', '--diff-filter=d', 'abc123...HEAD']);
   } finally {
     restoreEnv();
   }
