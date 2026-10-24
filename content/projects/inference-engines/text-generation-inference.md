@@ -13,7 +13,7 @@ org_or_maintainer: null
 tags: [llm, inference, streaming, batching]
 maturity: production
 cost_model: open-source
-github_stars: 10863
+github_stars: 10882
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: "2026-03-21"
@@ -47,7 +47,7 @@ corresponding_tool_entry: null
 enrichment_status: verified
 enrichment_notes: "Directly confirmed via Hugging Face's own official documentation (huggingface.co/docs/inference-endpoints/en/engines/tgi): 'Text Generation Inference is in maintenance mode as of 12/11/2025... only pull requests for minor bug fixes, documentation improvements, and lightweight maintenance tasks will be accepted.' This is a primary-source status confirmation, not third-party inference."
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
@@ -97,6 +97,7 @@ docker run --gpus all -p 8080:80 ghcr.io/huggingface/text-generation-inference \
 - Adoption risk for Text Generation Inference is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
 - The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
 - No alternative is catalogued alongside Text Generation Inference here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- Archived upstream, which makes the engine a historical reference rather than a deployment target; the serving ideas it popularised now live on in the successors it inspired.
 
 ## Relation to the Arsenal
 

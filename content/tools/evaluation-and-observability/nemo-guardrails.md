@@ -4,7 +4,7 @@ name: NeMo Guardrails
 type: tool
 job: [security-and-guardrails]
 description: NVIDIA framework for adding programmable guardrails to LLM applications
-url: "https://github.com/NVIDIA/NeMo-Guardrails"
+url: "https://github.com/NVIDIA-NeMo/Guardrails"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [security, guardrails, llm]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/NVIDIA/NeMo-Guardrails"
-docs_url: "https://github.com/NVIDIA/NeMo-Guardrails"
-github_url: "https://github.com/NVIDIA/NeMo-Guardrails"
+source_url: "https://github.com/NVIDIA-NeMo/Guardrails"
+docs_url: "https://github.com/NVIDIA-NeMo/Guardrails"
+github_url: "https://github.com/NVIDIA-NeMo/Guardrails"
 alternatives: [guardrails-ai, llamaguard, rebuff]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: evaluation-and-observability
@@ -69,7 +69,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install nemoguardrails
 ```
 
-Follow the official documentation at https://github.com/NVIDIA/NeMo-Guardrails for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/NVIDIA-NeMo/Guardrails for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -99,9 +99,9 @@ Follow the official documentation at https://github.com/NVIDIA/NeMo-Guardrails f
 
 ## Resources
 
-- [Primary site](https://github.com/NVIDIA/NeMo-Guardrails)
-- [Documentation](https://github.com/NVIDIA/NeMo-Guardrails)
-- [Source](https://github.com/NVIDIA/NeMo-Guardrails)
+- [Primary site](https://github.com/NVIDIA-NeMo/Guardrails)
+- [Documentation](https://github.com/NVIDIA-NeMo/Guardrails)
+- [Source](https://github.com/NVIDIA-NeMo/Guardrails)
 
 ## Buzz & Reception
 

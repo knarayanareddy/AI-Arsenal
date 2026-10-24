@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
-source_url: "https://github.com/menloresearch/jan"
+source_url: "https://github.com/janhq/jan"
 docs_url: "https://jan.ai/docs"
-github_url: "https://github.com/menloresearch/jan"
+github_url: "https://github.com/janhq/jan"
 alternatives: [lm-studio, open-webui]
 integrates_with: []
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
@@ -33,11 +33,11 @@ avoid_when:
   - "Team/multi-user deployments — use Open WebUI on a server instead"
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (43,449), license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
+enrichment_notes: "Star count (43,449), license, and last push (2026-07-08) verified via the GitHub API on 2026-10-24. Feature claims are from official docs; not yet hands-on verified here."
 verdict: solid-choice
 verdict_rationale: "The best fully-open desktop chat app; choose it when open source outweighs LM Studio's polish"
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/menloresearch/jan", "date": "2026-07-08", "description": "43,449 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/janhq/jan", "date": "2026-07-08", "description": "43,449 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
 ## Overview
@@ -98,7 +98,7 @@ Follow the official documentation at https://jan.ai/docs for the authentication 
 
 - [Official Site](https://jan.ai)
 - [Documentation](https://jan.ai/docs)
-- [GitHub](https://github.com/menloresearch/jan)
+- [GitHub](https://github.com/janhq/jan)
 
 ## Buzz & Reception
 

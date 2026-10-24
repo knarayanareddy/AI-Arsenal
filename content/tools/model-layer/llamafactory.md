@@ -4,7 +4,7 @@ name: LLaMA-Factory
 type: tool
 job: [fine-tuning]
 description: Unified fine-tuning framework and UI for many LLMs and training methods
-url: "https://github.com/hiyouga/LLaMA-Factory"
+url: "https://github.com/hiyouga/LlamaFactory"
 cost_model: open-source
 pricing_detail: Open source or free to start
 tags: [fine-tuning, llm, pytorch]
@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/hiyouga/LLaMA-Factory"
-docs_url: "https://github.com/hiyouga/LLaMA-Factory"
-github_url: "https://github.com/hiyouga/LLaMA-Factory"
+source_url: "https://github.com/hiyouga/LlamaFactory"
+docs_url: "https://github.com/hiyouga/LlamaFactory"
+github_url: "https://github.com/hiyouga/LlamaFactory"
 alternatives: [axolotl, mlx-lm, peft, torchtune, unsloth]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -65,7 +65,7 @@ Install the Python package and its runtime dependencies first, then make one cal
 pip install llamafactory
 ```
 
-Follow the official documentation at https://github.com/hiyouga/LLaMA-Factory for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+Follow the official documentation at https://github.com/hiyouga/LlamaFactory for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
@@ -95,9 +95,9 @@ Follow the official documentation at https://github.com/hiyouga/LLaMA-Factory fo
 
 ## Resources
 
-- [Primary site](https://github.com/hiyouga/LLaMA-Factory)
-- [Documentation](https://github.com/hiyouga/LLaMA-Factory)
-- [Source](https://github.com/hiyouga/LLaMA-Factory)
+- [Primary site](https://github.com/hiyouga/LlamaFactory)
+- [Documentation](https://github.com/hiyouga/LlamaFactory)
+- [Source](https://github.com/hiyouga/LlamaFactory)
 
 ## Buzz & Reception
 

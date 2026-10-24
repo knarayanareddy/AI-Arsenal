@@ -20,7 +20,7 @@ github_url: "https://github.com/FlowiseAI/Flowise"
 alternatives: [langflow, n8n, dify]
 integrates_with: [langchain]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: orchestration
@@ -29,10 +29,10 @@ best_when: ["You are maintaining an existing Flowise installation and need the d
 avoid_when: ["You are starting something new, because the README opens with a notice that Flowise has been archived and points to a separate Future of Flowise destination.", "You need ongoing features or upstream LangChain compatibility, because an archived repo means no new releases and no node updates for breaking library changes.", "You want a typed, testable definition of your agent graph, because a canvas-authored JSON flow gives you no unit-test surface and no static typing on the node contracts."]
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (54,424), license, and last push (2026-07-06) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
-verdict: solid-choice
-verdict_rationale: "The JS-ecosystem counterpart to Langflow; the fastest path from idea to embeddable chatbot for Node teams"
-status: active
+enrichment_notes: "Star count (54,424), license, and last push (2026-07-06) verified via the GitHub API on 2026-10-24. Feature claims are from official docs; not yet hands-on verified here."
+verdict: use-with-caution
+verdict_rationale: "Still the widest visual agent builder, but the open repository is archived: budget for the fact that the code you run will not receive upstream fixes"
+status: archived
 buzz_sources: [{"source": "github-trending", "url": "https://github.com/FlowiseAI/Flowise", "date": "2026-07-08", "description": "54,424 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
@@ -78,7 +78,7 @@ It competed with Langflow and Dify in the visual LLM-app builder category, and w
 
 ## Limitations / When NOT to Use
 
-The repository is archived, which is the defining constraint: no new features, no security cadence you can rely on, and no node updates when LangChain.js makes breaking changes. The GitHub license field reports NOASSERTION, so redistribution terms need to be confirmed from the repository's own LICENSE text before any commercial embedding. Node 20.0.0 is the floor, and building from source in the monorepo needs an explicit heap-size bump, which is an early signal of how heavy the build is. A JSON graph authored in a GUI also gives you no diffs, no tests, and no compile-time checking on node contracts.
+The repository is archived, which is the defining constraint: no new features, no security cadence you can rely on, and no node updates when LangChain.js makes breaking changes. The GitHub license field reports NOASSERTION, so redistribution terms need to be confirmed from the repository's own LICENSE text before any commercial embedding. Node 20.0.0 is the floor, and building from source in the monorepo needs an explicit heap-size bump, which is an early signal of how heavy the build is. A JSON graph authored in a GUI also gives you no diffs, no tests, and no compile-time checking on node contracts. The open repository is archived, so the star count reflects past popularity rather than a shipping cadence; treat the hosted product and the archived code as two different things with the same name.
 
 ## Integration Patterns
 

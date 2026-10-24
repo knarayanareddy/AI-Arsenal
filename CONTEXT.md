@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-24T16:16:00.499Z | Entries: 1298 | Schema version: 1.0.0
+Generated: 2026-10-24T16:43:01.977Z | Entries: 1298 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -69,8 +69,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### evaluation
 - OpenCompass (⭐7392, score:52) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
-- Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
-- BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
+- Terminal-Bench (⭐2606, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+- BigCodeBench (⭐516, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
 
 ### llms
@@ -82,7 +82,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
-- ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
+- ComfyUI (⭐142561, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay

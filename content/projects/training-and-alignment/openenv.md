@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: "openenv"
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: openenv
@@ -30,7 +30,7 @@ artifact_type: framework
 category: agents
 subcategory: libraries
 description: "Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment"
-github_url: https://github.com/huggingface/OpenEnv
+github_url: https://github.com/openenv/OpenEnv
 license: "BSD-3-Clause"
 primary_language: "Python"
 tags:
@@ -41,8 +41,8 @@ tags:
   - "huggingface"
 maturity: beta
 cost_model: open-source
-github_stars: 2431
-last_commit: "2026-07-15"
+github_stars: 2766
+last_commit: "2026-10-24"
 docs_url: https://huggingface.co/docs/openenv
 phase: training-and-alignment
 domain:
@@ -103,5 +103,5 @@ OpenEnv complements Gymnasium, RL trainers, SkillOpt, and benchmark harnesses, w
 
 ## Resources
 
-- [GitHub](https://github.com/huggingface/OpenEnv)
+- [GitHub](https://github.com/openenv/OpenEnv)
 - [Documentation](https://huggingface.co/docs/openenv)

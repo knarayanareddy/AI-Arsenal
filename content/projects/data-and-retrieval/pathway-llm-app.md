@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: '2026-07-11'
-last_reviewed: '2026-07-11'
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: pathway-llm-app
@@ -30,7 +30,7 @@ artifact_type: platform
 category: rag
 subcategory: platforms
 description: Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources
-github_url: https://github.com/pathwaycom/llm-app
+github_url: https://github.com/pathwaycom/serviette
 license: MIT
 primary_language: Other
 tags:
@@ -42,9 +42,9 @@ tags:
   - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 59063
-last_commit: '2026-07-05'
-docs_url: https://github.com/pathwaycom/llm-app
+github_stars: 58769
+last_commit: "2026-10-16"
+docs_url: https://github.com/pathwaycom/serviette
 phase: data-and-retrieval
 domain:
   - language
@@ -111,4 +111,4 @@ Pathway LLM App belongs in data-and-retrieval as an application/template project
 
 ## Resources
 
-- [Official source](https://github.com/pathwaycom/llm-app)
+- [Official source](https://github.com/pathwaycom/serviette)

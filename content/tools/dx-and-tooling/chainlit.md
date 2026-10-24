@@ -20,7 +20,7 @@ github_url: "https://github.com/Chainlit/chainlit"
 alternatives: [fastapi, gradio, mesop, streamlit]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
@@ -28,9 +28,9 @@ audience: [prototype]
 best_when: ["You have a working retrieval or agent backend in Python and you need a usable interface in front of it before you invest in product design.", "You are debugging a multi-step chain and you want each tool call, intermediate message and latency rendered as a distinct step rather than folded into one blob of text.", "You are handing a prototype to non-engineers for evaluation and you want step-level feedback elements, user confirmation prompts and a stop button without writing front-end code."]
 avoid_when: ["You need a company-backed release cadence with a support contract, because the README states plainly that the original team stepped back on 1 May 2025 and that Chainlit SAS provides no warranties on future updates.", "You are building a chat interface with pixel-level design requirements, because the built-in UI is a framework convention you style around rather than a component library you compose.", "You need a mobile-native front end, because this is a web UI served by a Python process and there is no native client surface in the project."]
 version_tracked: null
-verdict: recommended
-verdict_rationale: Useful option for prototyping workflows when it matches your stack and cost constraints
-status: active
+verdict: use-with-caution
+verdict_rationale: "Worth using for a prototype because the decorator model is still the fastest path to a chat front end, but the repository is archived: no security fixes will land in the bundled React UI"
+status: archived
 enrichment_status: draft
 ---
 
@@ -78,7 +78,7 @@ Chainlit competes with Streamlit, Gradio and Dify for the same slot, and the dis
 
 ## Limitations / When NOT to Use
 
-The maintenance notice is the headline: the original team stepped back on 1 May 2025, the project is now run by a maintainer group under a formal Maintainer Agreement, and the company explicitly disclaims warranties on future updates. Security is now the maintainers' responsibility rather than a company's, which is worth weighing for anything internet-facing. The bundled React UI is a convention, not a component library, so heavy branding work means forking `frontend/`. Contributing to the front end requires Node and pnpm on top of Python, which is friction for a Python-only team. Conversation persistence and user management are deliberately not the product, so production auth and multi-tenancy are yours to build.
+The maintenance notice is the headline: the original team stepped back on 1 May 2025, the project is now run by a maintainer group under a formal Maintainer Agreement, and the company explicitly disclaims warranties on future updates. Security is now the maintainers' responsibility rather than a company's, which is worth weighing for anything internet-facing. The bundled React UI is a convention, not a component library, so heavy branding work means forking `frontend/`. Contributing to the front end requires Node and pnpm on top of Python, which is friction for a Python-only team. Conversation persistence and user management are deliberately not the product, so production auth and multi-tenancy are yours to build. The repository itself is now archived, so the maintainer group's fixes have stopped as well: read this as a snapshot of a framework the ecosystem still runs, not as a project that will absorb a CVE in its bundled front end.
 
 ## Integration Patterns
 

@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: archived
 id: airweave
 name: "Airweave"
 artifact_type: platform
@@ -36,7 +36,7 @@ primary_language: Python
 tags: [rag, retrieval]
 maturity: beta
 cost_model: open-source
-github_stars: 6561
+github_stars: 6554
 last_commit: "2026-06-05"
 docs_url: "https://airweave.ai"
 phase: data-and-retrieval
@@ -96,7 +96,7 @@ Self-hosted deployment runs the API plus its database, then you point connectors
 
 ## Limitations
 
-The repository is archived, which is the headline fact: no new connectors, no fixes and no adaptation when a provider changes its API, so an archived connector is a connector that will eventually break silently. Synced data is a snapshot, so any workflow where read-after-write consistency matters is a poor fit. Operational cost is real, because you now run a sync service and an index in addition to the systems you were reading from. And the value is entirely proportional to how many sources you connect, so a single-source deployment is a lot of architecture for little return.
+The repository is archived, which is the headline fact: no new connectors, no fixes and no adaptation when a provider changes its API, so an archived connector is a connector that will eventually break silently. Synced data is a snapshot, so any workflow where read-after-write consistency matters is a poor fit. Operational cost is real, because you now run a sync service and an index in addition to the systems you were reading from. And the value is entirely proportional to how many sources you connect, so a single-source deployment is a lot of architecture for little return. The project is archived, which strands the connector layer it was built around: SaaS schemas move and nothing here will follow them.
 
 ## Relation to the Arsenal
 

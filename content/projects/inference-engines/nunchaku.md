@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "nunchaku-ai"
+org_or_maintainer: "nunchux-ai"
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 status: active
 id: nunchaku
@@ -30,7 +30,7 @@ artifact_type: library
 category: multimodal
 subcategory: inference-engines
 description: "An inference engine implementing SVDQuant 4-bit quantization for diffusion transformers, absorbing outliers via low-rank components to run big image models on"
-github_url: https://github.com/nunchaku-ai/nunchaku
+github_url: https://github.com/nunchux-ai/nunchaku
 license: "Apache-2.0"
 primary_language: "Python"
 tags:
@@ -39,8 +39,8 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 3905
-last_commit: "2026-03-07"
+github_stars: 3961
+last_commit: "2026-09-06"
 docs_url: https://nunchaku.tech/docs/nunchaku/
 phase: inference-engine
 domain:
@@ -59,7 +59,7 @@ best_for:
 avoid_if:
   - "You need broad model coverage rather than diffusion-transformer-specific kernels"
   - "You require lossless full-precision fidelity, since 4-bit quantization introduces small quality trade-offs"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-07 activity verified via the GitHub API on 2026-07-12. ICLR 2025 Spotlight (SVDQuant). Quality/speed depend on model and hardware."
+enrichment_notes: "Repository, Apache-2.0 license, and 2026-09-06 activity verified via the GitHub API on 2026-10-24. ICLR 2025 Spotlight (SVDQuant). Quality/speed depend on model and hardware."
 ---
 
 ## Overview
@@ -100,5 +100,5 @@ It is the efficient-inference companion to the diffusion model and library entri
 
 ## Resources
 
-- [GitHub repository](https://github.com/nunchaku-ai/nunchaku)
+- [GitHub repository](https://github.com/nunchux-ai/nunchaku)
 - [SVDQuant paper](https://arxiv.org/abs/2411.05007)

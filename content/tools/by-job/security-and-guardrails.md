@@ -144,11 +144,11 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
 | [Inspect Petri](../evaluation-and-observability/inspect-petri.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
-| [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
+| [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [PyRIT](../evaluation-and-observability/pyrit.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
-| [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | use-with-caution |
 | [SkillSpector](../evaluation-and-observability/skillspector.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
 | [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | open-source | No | Yes | Yes | go | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

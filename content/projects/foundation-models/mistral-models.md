@@ -13,10 +13,10 @@ org_or_maintainer: null
 tags: [llm, inference, local, efficiency]
 maturity: production
 cost_model: open-source
-github_stars: 10816
+github_stars: 10820
 github_stars_last_30d: 0
 trending_score: 30
-last_commit: "2026-04-20"
+last_commit: "2026-06-16"
 docs_url: "https://docs.mistral.ai/"
 demo_url: null
 paper_url: null
@@ -47,7 +47,7 @@ corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Mistral's 2025-2026 release cadence (Mistral Large 3 in Dec 2025, Ministral 3 and Devstral 2 in Dec 2025, Mistral Small 4 in March 2026, per Wikipedia's Mistral AI page) confirms the 7B/Mixtral generation catalogued here is now a legacy tier relative to Mistral's current lineup, though it remains widely deployed and referenced as the influential early MoE release.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
@@ -102,6 +102,7 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 - The cost this entry cannot quantify for you is operational: the Mistral / Mixtral footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
 - The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
 - No alternative is catalogued alongside Mistral / Mixtral here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- That reference implementation is archived, so the weights it documents remain usable while the code that loads them no longer receives fixes from the vendor.
 
 ## Relation to the Arsenal
 

@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: "SDK is free; model inference billed by your chosen provider"
 self_hostable: true
 open_source: true
-source_url: "https://github.com/strands-agents/sdk-python"
+source_url: "https://github.com/strands-agents/harness-sdk"
 docs_url: "https://strandsagents.com/"
-github_url: "https://github.com/strands-agents/sdk-python"
+github_url: "https://github.com/strands-agents/harness-sdk"
 alternatives: [openai-agents-sdk, pydantic-ai-tool, crewai]
 integrates_with: [composio, litellm]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: orchestration
@@ -29,11 +29,11 @@ best_when: ["You would otherwise write your own agent loop and want turn limits,
 avoid_when: ["You want a hosted control plane with a managed runtime, because the README is explicit that the agent runs in your process with no hosted control plane.", "You need a single-language SDK and want the smallest possible dependency, because this monorepo ships Python, TypeScript, a CLI, a harness and a documentation site.", "You are choosing between agent architectures on quality grounds alone, because the SDK is a harness not a model, so output quality still depends on the model you wire in."]
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (6,483), Apache-2.0 license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08 (repo resolves from strands-agents/sdk-python). Feature claims from official docs; not hands-on verified here."
+enrichment_notes: "Star count (6,483), Apache-2.0 license, and last push (2026-07-08) verified via the GitHub API on 2026-10-24 (repo resolves from strands-agents/sdk-python). Feature claims from official docs; not hands-on verified here."
 verdict: watching
 verdict_rationale: "Clean model-driven agent SDK with strong MCP/provider support and AWS backing; the model-driven-loop category is still consolidating against graph-based frameworks"
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/strands-agents/sdk-python", "date": "2026-07-08", "description": "6,483 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/strands-agents/harness-sdk", "date": "2026-07-08", "description": "6,483 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
 ## Overview

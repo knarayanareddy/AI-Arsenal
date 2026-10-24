@@ -14,13 +14,13 @@ free_tier: true
 free_tier_limits: The gateway is open source; managed providers and model endpoints have their own charges
 self_hostable: true
 open_source: true
-source_url: "https://github.com/envoyproxy/ai-gateway"
+source_url: "https://github.com/theagentrouter/agent-router"
 docs_url: "https://theagentrouter.ai/docs/getting-started/"
-github_url: "https://github.com/envoyproxy/ai-gateway"
+github_url: "https://github.com/theagentrouter/agent-router"
 alternatives: [litellm]
 integrates_with: []
 added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 verdict: recommended

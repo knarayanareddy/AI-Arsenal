@@ -23,6 +23,7 @@ data/*.json
 !data/build-examples.json
 !data/community.json
 !data/digests.json
+!data/freshness-triage.json
 !data/guides.json
 !data/index.json
 !data/link-check-report.json

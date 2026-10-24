@@ -74,7 +74,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | rust | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [llmfit](../model-layer/llmfit.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | rust | recommended |
-| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | solid-choice |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | use-with-caution |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | rust | recommended |
 | [Mesh-LLM](../serving-and-deployment/mesh-llm.md) | serving and deployment | deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | prototyping | usage-based | No | No | Yes | rust | recommended |

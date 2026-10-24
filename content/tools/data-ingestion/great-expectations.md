@@ -12,15 +12,15 @@ maturity: production
 stack: [python]
 free_tier: true
 free_tier_limits: GX Core fully open source; GX Cloud has separate pricing
-source_url: "https://github.com/great-expectations/great_expectations"
+source_url: "https://github.com/fivetran/great_expectations"
 docs_url: "https://docs.greatexpectations.io/docs/core/introduction/gx_overview"
-github_url: "https://github.com/great-expectations/great_expectations"
+github_url: "https://github.com/fivetran/great_expectations"
 self_hostable: true
 open_source: true
 alternatives: [dvc]
 integrates_with: [airflow, dagster, prefect]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: data-ingestion

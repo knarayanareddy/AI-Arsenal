@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: archived
 id: ml-intern
 name: "ml-intern"
 artifact_type: tool
@@ -36,8 +36,8 @@ primary_language: Python
 tags: [huggingface, agents]
 maturity: experimental
 cost_model: open-source
-github_stars: 10816
-last_commit: "2026-09-14"
+github_stars: 10800
+last_commit: "2026-10-22"
 docs_url: "https://huggingface.co/chat/"
 phase: agent-system
 domain:
@@ -101,7 +101,7 @@ The README explicitly directs current users to HuggingChat at huggingface.co/cha
 
 ## Limitations
 
-The repository is archived and the README states the hosted web application and the CLI are both retired, with no support, no bug fixes and no security updates promised. Anyone adopting it today is depending on code nobody maintains, and the local-model path and sandbox-tools behaviour described in the retained docs are frozen in whatever state they were left. The documented successor, HuggingChat, is a chat product, so the migration loses the autonomous code-shipping behaviour entirely. The archived docs are preserved for reference and the README is explicit that they are unsupported, which makes every example a starting point for reading rather than for running.
+The repository is archived and the README states the hosted web application and the CLI are both retired, with no support, no bug fixes and no security updates promised. Anyone adopting it today is depending on code nobody maintains, and the local-model path and sandbox-tools behaviour described in the retained docs are frozen in whatever state they were left. The documented successor, HuggingChat, is a chat product, so the migration loses the autonomous code-shipping behaviour entirely. The archived docs are preserved for reference and the README is explicit that they are unsupported, which makes every example a starting point for reading rather than for running. Archived just as it was gaining attention, so the research it demonstrates is intact while the harness is read-only; treat commits after the archive date as forks, not upstream.
 
 ## Relation to the Arsenal
 
