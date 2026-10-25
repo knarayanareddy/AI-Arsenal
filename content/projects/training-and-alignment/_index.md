@@ -44,13 +44,13 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 ### Most Popular
 
 - [LlamaFactory](./hiyouga-llamafactory.md) — ⭐ 75142
+- [nanoGPT](./nanogpt.md) — ⭐ 64069
 - [minimind](./jingyaogong-minimind.md) — ⭐ 62810
-- [nanoGPT](./nanogpt.md) — ⭐ 60962
 - [nanochat](./karpathy-nanochat.md) — ⭐ 58303
 - [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41407
 - [lerobot](./huggingface-lerobot.md) — ⭐ 27825
 - [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26399
-- [verl](./verl.md) — ⭐ 22377
+- [verl](./verl.md) — ⭐ 24007
 - [Agent Lightning](./agent-lightning.md) — ⭐ 18521
 - [Speech](./nvidia-nemo-speech.md) — ⭐ 18518
 
@@ -71,7 +71,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [maestro](./maestro.md) — Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL
 - [mlx-tune](./mlx-tune.md) — Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows
 - [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
-- [nanoGPT](./nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+- [nanoGPT](./nanogpt.md) — Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat
 - [Speech](./nvidia-nemo-speech.md) — NVIDIA NeMo speech stack for training and serving ASR, TTS, diarization, and translation models
 - [Open R1 (Hugging Face)](./open-r1.md) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - [OpenEnv](./openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
@@ -84,7 +84,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [SkillOpt](./skillopt.md) — Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen
 - [torchtitan](./torchtitan.md) — PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points
 - [Transformer Lab](./transformerlab.md) — An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters
-- [verl](./verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
+- [verl](./verl.md) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
 - [VLM-R1](./vlm-r1.md) — Open framework for training vision-language models with reinforcement learning (GRPO/R1-style) to improve visual reasoning and grounded understanding
 - [VLM2Vec](./vlm2vec.md) — Multimodal embedding and training framework covering VLM2Vec, MMEB, and later multimodal embedding benchmarks
 - [XTuner](./xtuner.md) — Training engine and toolkit for efficient fine-tuning and large-scale MoE model training

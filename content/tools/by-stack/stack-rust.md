@@ -82,3 +82,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Screenpipe](../data-ingestion/screenpipe.md) | data ingestion | memory-management | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | production-serving, vector-search | open-source | Yes | Yes | Yes | rust | recommended |
+| [turbovec](../data-ingestion/turbovec.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | rust, python | solid-choice |

@@ -24,6 +24,7 @@
     "editorial:baseline:prune": "node scripts/update-editorial-baseline.js --prune",
     "validate:data": "node scripts/validate-data-contract.js",
     "validate:links": "node scripts/check-links.js --changed-only",
+    "annotate:broken-links": "node scripts/annotate-broken-links.js",
     "validate:changed": "node scripts/validate-schema.js --changed-only && node scripts/validate-taxonomy.js --changed-only && node scripts/validate-structure.js --changed-only && node scripts/validate-internal-links.js --changed-only && node scripts/validate-editorial-quality.js --changed-only",
     "fix": "node scripts/fix-format.js",
     "fix:changed": "node scripts/validate-structure.js --changed-only --fix",
@@ -81,7 +82,9 @@
     "validate:semantic": "node scripts/semantic-editorial-pass.js --changed-only",
     "validate:semantic:all": "node scripts/semantic-editorial-pass.js --all",
     "triage:stale": "node scripts/triage-stale-entries.js",
-    "triage:stale:report": "node scripts/triage-stale-entries.js --out docs/freshness-worklist.md"
+    "triage:stale:report": "node scripts/triage-stale-entries.js --out docs/freshness-worklist.md",
+    "audit:generated-prose": "node scripts/audit-generated-prose.js",
+    "audit:status-drift": "node scripts/audit-status-drift.js --out docs/status-drift-audit.md --json data/status-drift.json"
   },
   "dependencies": {
     "ajv": "^8.12.0",

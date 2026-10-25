@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: latex-ocr
 name: "LaTeX-OCR (pix2tex)"
 artifact_type: model
@@ -39,7 +39,7 @@ tags:
   - "inference"
 maturity: beta
 cost_model: open-source
-github_stars: 16481
+github_stars: 16601
 last_commit: "2025-01-18"
 docs_url: https://lukas-blecher.github.io/LaTeX-OCR/
 phase: data-and-retrieval
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You need general document or prose OCR, where full-text engines and layout models fit better"
   - "You require guaranteed correctness on very complex multi-line derivations without human review"
-enrichment_notes: "Repository, MIT license, and 2025-01-18 activity verified via the GitHub API on 2026-07-12. Specialized to math; verify transcriptions for complex expressions."
+enrichment_notes: "Repository, MIT license, and 2025-01-18 activity verified via the GitHub API on 2026-07-12. Specialized to math; verify transcriptions for complex expressions. Dormancy re-checked 2026-10-24, when the GitHub API reported 16601 stars and last push 2025-01-18; claims in the entry re-read against the repository."
 ---
 
 ## Overview

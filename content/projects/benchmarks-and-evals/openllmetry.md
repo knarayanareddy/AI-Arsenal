@@ -13,10 +13,10 @@ org_or_maintainer: null
 tags: [observability, tracing, monitoring, self-hosted]
 maturity: production
 cost_model: open-source
-github_stars: 7000
+github_stars: 7506
 github_stars_last_30d: 0
 trending_score: 30
-last_commit: "2026-04-08"
+last_commit: "2026-10-19"
 docs_url: "https://www.traceloop.com/docs/openllmetry"
 demo_url: null
 paper_url: null
@@ -48,7 +48,7 @@ corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Backed by Traceloop (a named company with a commercial hosted product built on the same open-source instrumentation), giving credible org-backing signal distinct from a purely community project.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
@@ -89,20 +89,25 @@ Read OpenLLMetry beside the entries it overlaps in this phase rather than alone:
 
 ## Strengths
 
-- The implementation detail worth checking before adopting OpenLLMetry is specific — provides auto-instrumentation packages following OpenTelemetry semantic conventions for GenAI, automatically capturing spans for LLM calls, embedding operations, and vector database queries across supported providers/frameworks without requiring manual instrumentation of each call site — because that is where the capability claim either survives contact with your data or does not.
-- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
-
+- Instrumentation is the product, so nothing is decided about where the data goes: the same spans can be sent to Datadog, Grafana/Tempo, Jaeger, Honeycomb or an LLM-specific backend, and switching is a collector configuration change.
+- Package-per-provider design means you install only the instrumentor for the libraries you actually call — `opentelemetry-instrumentation-openai`, `-anthropic`, `-langchain`, `-vectorstore` — rather than a monolith that patches everything.
+- It emits OpenTelemetry spans following the GenAI semantic conventions, so LLM calls sit in the same trace as your HTTP and database spans instead of in a parallel silo.
+- The wrapper SDK (`traceloop-sdk`) is thin enough to be removable — it configures exporters and adds workflow decorators, and dropping back to raw OTel is not a rewrite.
+- Apache-2.0, 7,506 stars, and active development with a push in October 2026; the instrumentation packages track upstream SDK releases closely, which is the maintenance work that matters.
+- Zero-cost adoption for a team that already runs an OTel collector: the change is a package install and a provider registration, not a new vendor.
 ## Limitations
 
-- Adoption risk for OpenLLMetry is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
-- Nothing in this entry substitutes for running OpenLLMetry against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Where OpenLLMetry overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
-
+- **It is not an observability platform.** There is no UI, no dataset, no evaluator and no prompt registry in this repository — you get spans and you own the backend, which is either the point or a disappointment depending on what you expected.
+- **The vendor's own product is a separate thing.** Traceloop's hosted platform is the commercial surface, so "add the platform later" is a purchase, and the open-source path stays a library.
+- **809 open issues against 7,506 stars.** A large fraction are integration-specific breakages after an upstream SDK release, and the volume tells you how much of the maintenance is version-chasing.
+- **Semantic conventions are still moving.** Attribute names for GenAI spans have changed during the standard's development; a dashboard or alert built on attribute names needs re-checking across upgrades.
+- **Auto-instrumentation has a coverage ceiling.** It captures calls that go through instrumented libraries; bespoke HTTP calls to a provider, hand-rolled streaming, or a framework without an instrumentor are invisible until you add manual spans.
+- **Patching at import time is order-sensitive.** An instrumentor registered after the library has already been imported can silently capture nothing, and the symptom is an empty dashboard rather than an error.
 ## Relation to the Arsenal
 
-This is the benchmark-and-eval entry for OpenLLMetry in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
+This is the instrumentation half of the observability cluster: `openlit` bundles a platform around the same OTel approach, `langfuse` and `opik` provide the backend and evaluation layer, and `phoenix` shares the OTel foundation with a notebook-centric workflow. Choose OpenLLMetry when an OTel backend already exists and you want LLM spans to join it; choose a platform when you have nowhere to put the spans yet.
 
+For the standard the spans follow, the GenAI semantic conventions in OpenTelemetry are the reference, and `openlit` documents the practical consequences of adopting them.
 ## Resources
 
 - [GitHub](https://github.com/traceloop/openllmetry)

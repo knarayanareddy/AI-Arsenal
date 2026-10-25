@@ -79,7 +79,7 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Typesense, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Memory sets the ceiling: Typesense keeps the whole collection in RAM, so corpus size is bounded by the machine, and a large catalog means a cluster rather than a bigger instance.
 - Documentation for Typesense describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Typesense overlaps `meilisearch`, `qdrant`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

@@ -50,11 +50,11 @@ _No star-tracked entries yet._
 - [ClearML](./clearml.md) — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
-- [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
+- [DVC](./dvc.md) — Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
 - [FastEmbed](./fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [Groq](./groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
 - [Guidance](./guidance.md) — Microsoft guidance library for controlling and constraining language model generation
-- [Hugging Face Hub](./hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
+- [Hugging Face Hub](./hugging-face-hub.md) — The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client
 - [Ideogram](./ideogram.md) — AI image generation with reliable text rendering in outputs
 - [Ideogram AI](./ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
@@ -73,7 +73,7 @@ _No star-tracked entries yet._
 - [Qwen 3](./qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
 - [Sentence Transformers](./sentence-transformers.md) — The standard Python library for computing, training, and fine-tuning text embedding and reranker models
 - [Together AI](./together-ai.md) — Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints
-- [torchtune](./torchtune.md) — PyTorch-native library for fine-tuning and experimenting with LLMs
+- [torchtune](./torchtune.md) — PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code
 - [TRL](./trl.md) — Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers
 - [Unsloth](./unsloth.md) — Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models
 - [Voyage AI](./voyage-ai.md) — Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB

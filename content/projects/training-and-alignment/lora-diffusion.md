@@ -11,7 +11,7 @@ api_compatible: null
 org_or_maintainer: "cloneofsimo"
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: []
+alternatives: [stable-diffusion-webui, peft]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: deprecated
 id: lora-diffusion
 name: "LoRA for Diffusion (cloneofsimo)"
 artifact_type: library
@@ -39,7 +39,7 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 7548
+github_stars: 7557
 last_commit: "2024-03-22"
 docs_url: https://arxiv.org/abs/2106.09685
 phase: training-and-alignment
@@ -59,8 +59,10 @@ best_for:
 avoid_if:
   - "You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current"
   - "You need general-purpose LLM LoRA tooling rather than diffusion-focused code"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries. Dormancy re-checked 2026-10-24, when the GitHub API reported 7557 stars and last push 2024-03-22; claims re-read against the repository and status set to deprecated, superseded by Diffusers' built-in LoRA support."
 ---
+
+> **Deprecated:** superseded, not withdrawn. Upstream last pushed 2024-03-22, and LoRA for diffusion models is now built into Diffusers (`pipe.load_lora_weights`), which is the entry to use for training or inference today. This file stays as the canonical reference for how the technique works. See `diffusers` in the same phase.
 
 ## Overview
 

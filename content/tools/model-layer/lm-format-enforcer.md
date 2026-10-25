@@ -80,7 +80,7 @@ pip install lm-format-enforcer
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LM Format Enforcer, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It constrains decoding inside your process, so it needs a backend that lets the library touch the logits — provider APIs that do not expose them cannot use it at all.
 - Documentation for LM Format Enforcer describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - LM Format Enforcer is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 

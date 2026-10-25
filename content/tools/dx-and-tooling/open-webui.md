@@ -79,7 +79,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data ghcr.io/open-webui/op
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Open WebUI, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Beyond a small team the single-container default is not enough: it needs Postgres, Redis for websockets, an external vector store for RAG and a reverse proxy, and its role model is coarse.
 - Documentation for Open WebUI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Open WebUI overlaps `lm-studio`, `jan`, `chainlit`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

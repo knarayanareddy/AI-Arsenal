@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: coqui-tts
 name: "Coqui TTS"
 artifact_type: framework
@@ -41,7 +41,7 @@ tags:
   - "llm"
 maturity: beta
 cost_model: open-source
-github_stars: 45745
+github_stars: 46136
 last_commit: "2024-08-16"
 docs_url: https://tts.readthedocs.io
 phase: framework
@@ -61,7 +61,7 @@ best_for:
 avoid_if:
   - "You need an actively maintained upstream; the original company wound down and pushes here effectively stopped in 2024, so treat it as community-maintained"
   - "You only need simple one-off synthesis and would be better served by a smaller single-model package or a hosted API"
-enrichment_notes: "Repository, MPL-2.0 license, and last-commit date of 2024-08-16 verified via the GitHub API on 2026-07-12. The upstream company ceased operations; community forks continue. Included with an explicit maintenance caveat."
+enrichment_notes: "Repository, MPL-2.0 license, and last-commit date of 2024-08-16 verified via the GitHub API on 2026-07-12. The upstream company ceased operations; community forks continue. Included with an explicit maintenance caveat. Dormancy re-checked 2026-10-24, when the GitHub API reported 46136 stars and last push 2024-08-16; claims in the entry re-read against the repository."
 ---
 
 ## Overview

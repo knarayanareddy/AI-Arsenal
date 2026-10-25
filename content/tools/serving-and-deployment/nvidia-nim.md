@@ -74,7 +74,7 @@ docker run --gpus all -p 8000:8000 -e NGC_API_KEY nvcr.io/nim/meta/llama-3.1-8b-
 
 - The implementation detail worth reading before adopting NVIDIA NIM is specific — on startup a NIM detects the GPU and selects a matching optimized engine profile (TensorRT-LLM builds where available, falling back to vLLM), then serves the bundled model behind standard APIs; the catalog spans LLMs, embeddings, rerankers, and domain models — and that is where a capability claim either survives contact with your data or does not.
 - NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
-- Depending on NVIDIA NIM means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- NIM containers run on your GPUs but are licensed through NVIDIA AI Enterprise, so the container, model profile and driver stack are constraints you inherit rather than choices you make.
 - What this entry cannot give you is measured behaviour: measure NVIDIA NIM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use

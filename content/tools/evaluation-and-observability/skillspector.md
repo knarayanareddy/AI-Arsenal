@@ -86,7 +86,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to SkillSpector, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- SkillSpector is a local scanner over skill definitions, so it sees declared capabilities and patterns rather than runtime behaviour — a skill that acts differently from its metadata is outside what a static pass can prove.
 - Documentation for SkillSpector describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - SkillSpector is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 

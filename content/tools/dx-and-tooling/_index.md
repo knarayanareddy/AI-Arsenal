@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Graphify](./graphify.md)
 - [Awesome-AITools](./awesome-aitools.md)
 - [OpenUI](./openui.md)
 - [gptme](./gptme.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Corsair](./corsair.md)
 - [headroom](./headroom.md)
 - [rtk](./rtk.md)
-- [Prompty](./prompty.md)
 
 ### Most Popular
 
@@ -69,6 +69,7 @@ _No star-tracked entries yet._
 - [Goose](./goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
 - [gptme](./gptme.md) — Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate
 - [Gradio](./gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Graphify](./graphify.md) — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - [headroom](./headroom.md) — Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model
 - [Honen](./honen.md) — Transform any content into interactive AI-generated courses
 - [Instructor](./instructor.md) — A library for extracting typed structured outputs from language models
@@ -78,12 +79,12 @@ _No star-tracked entries yet._
 - [LangSmith Hub](./langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
 - [LM Studio](./lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
 - [marimo](./marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
-- [Mesop](./mesop.md) — Google Python UI framework for building web apps and AI prototypes
+- [Mesop](./mesop.md) — Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency
 - [Open WebUI](./open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
 - [OpenAI Codex CLI](./openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [OpenUI](./openui.md) — Open generative-UI stack that turns prompts and screenshots into React and Tailwind components
 - [Orca](./orca.md) — Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree
-- [PromptLayer](./promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [PromptLayer](./promptlayer.md) — Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals
 - [Prompty](./prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Qursor](./qursor.md) — AI-powered UI context for faster front-end development with agents
 - [Recursi](./recursi.md) — Self-improving system for intuitive and efficient AI-assisted coding

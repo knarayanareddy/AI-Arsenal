@@ -82,7 +82,7 @@ docker run --gpus all -p 8080:80 ghcr.io/predibase/lorax:main \
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LoRAX, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- LoRAX is a Rust/CUDA server you deploy on your own GPUs; the hardware floor is Ampere or newer, and the kernels are compiled for the target architecture.
 - Documentation for LoRAX describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where LoRAX overlaps `bentoml`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 - The project is archived, so its multi-adapter serving approach has stopped evolving while vLLM's LoRA support kept moving; the architecture is still worth reading even though the binary is not a safe default.

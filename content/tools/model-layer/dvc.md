@@ -3,106 +3,172 @@ id: dvc
 name: DVC
 type: tool
 job: [model-registry]
-description: Open-source data and model versioning tool for ML projects and pipelines
+description: Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
 url: "https://github.com/treeverse/dvc"
 cost_model: open-source
-pricing_detail: Open source or free to start
+pricing_detail: Apache-2.0 and free; storage costs are whatever your remote (S3, GCS, Azure, SSH) charges
 tags: [data, monitoring]
 maturity: production
 stack: [python]
 free_tier: true
-free_tier_limits: Free/open-source use or free tier; verify current limits before production
+free_tier_limits: Unlimited; you pay your object store, and DVC Studio's hosted UI has its own free tier
 self_hostable: true
 open_source: true
 source_url: "https://github.com/treeverse/dvc"
-docs_url: "https://github.com/treeverse/dvc"
+docs_url: "https://dvc.org/doc"
 github_url: "https://github.com/treeverse/dvc"
 alternatives: [hugging-face-hub, mlflow, weights-biases]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
 audience: [production, research]
 best_when:
-  - You want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself
-  - You need reproducible ML pipelines tied to your existing Git workflow
+  - Datasets or checkpoints are too large for Git but the branch, review and history workflow around them should stay the same
+  - A pipeline has expensive stages (feature extraction, training, evaluation) and re-running everything to change one parameter is wasteful
+  - You need reproducibility that a colleague can check out — a commit pins the data hashes, the pipeline definition and the parameters together
 avoid_when:
-  - You need a full model registry with stage promotion (staging/production) and serving integration (use MLflow or Hugging Face Hub for that)
-  - Your team wants a managed UI-first experience rather than a CLI/Git-centric workflow
-version_tracked: null
+  - You want a registry with stage promotion, approvals and a serving integration — DVC tracks artifacts, it does not manage model lifecycle
+  - The team refuses to work from a terminal — the value is in the Git-adjacent CLI flow, and a UI-first product will fit better
+  - Your data lives in a warehouse and never lands as files — DVC versions files, and a table-level tool (or the warehouse's own snapshots) is the right layer
 verdict: recommended
-verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
+verdict_rationale: The best answer to "version the data without putting it in Git"; it stops short of a model registry by design, which is the main thing to plan around
 status: active
+enrichment_status: verified
+enrichment_notes: "Re-verified 2026-10-25: repo is treeverse/dvc (15,942 stars, 226 open issues, Apache-2.0, last push 2026-10-19). Behaviour claims — .dvc pointer files, dvc.yaml/dvc.lock pipeline graph, dvc repro, exp run, metrics/plots, import/update registry pattern — are from the DVC documentation."
 ---
 
-> **TL;DR:** the model-registry entry for DVC. Open-source data and model versioning tool for ML projects and pipelines — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** Git for data, minus the pain: small pointer files in the repository, content in a cache and an object store, and a pipeline graph that tells you what to re-run.
 
 ## Overview
 
-An open-source tool that brings Git-like version control to datasets and model artifacts, keeping large binary files out of Git itself while preserving full lineage and reproducibility.
+DVC solves one problem well and builds a workflow around it. Git cannot hold multi-gigabyte datasets or model weights, but the history, branching and review around those artifacts is exactly what Git is good at. DVC splits the two: `dvc add data/raw` writes a small `data.dvc` file containing content hashes, adds the directory to `.gitignore`, and stores the actual bytes in a local cache that `dvc push` copies to a remote — S3, GCS, Azure Blob, SSH, HDFS or a filesystem path.
+
+Around that core sit three more capabilities. Pipelines describe stages in `dvc.yaml` with dependencies, outputs and commands; `dvc.lock` records the hashes each run produced, so `dvc repro` re-executes only the stages whose inputs or parameters changed. Experiments (`dvc exp run`) capture a run's parameters, metrics and artifacts on a throwaway branch without polluting history. And metrics/plots commands diff numbers across commits or experiments, which is what makes comparisons reviewable rather than remembered.
+
+`dvc import` and `dvc update` add a registry pattern: consume a dataset or model from another DVC repository at a pinned version and pull updates deliberately.
 
 ## Why It's in the Arsenal
 
-The entry exists because DVC is a open-source data and model versioning tool for ML projects and pipelines. Read it beside `hugging-face-hub`, `mlflow`, `weights-biases`: the choice between them is a deployment and cost decision before it is a capability one.
+The catalog is full of tools that train and serve. Almost none address the question that determines whether any of it is reproducible: which exact data, in which exact preprocessing, produced which checkpoint.
+
+DVC's answer is structural rather than procedural. Because the pointer file lives in Git, a commit determines the dataset hash; because `dvc.lock` records stage hashes, a commit also determines the pipeline that ran. Checking out a commit and running `dvc repro` reproduces the artifact or fails because the remote no longer has the content — and a failure is more useful than a silent mismatch. Most teams that "version their data" with a folder named `data-v2-final` are one rename away from an unreproducible result.
+
+The pipeline half deserves equal credit. `dvc repro` on a graph with expensive stages turns "change a parameter and rerun the world" into "rerun the two stages downstream of the change", which is a real compute saving on any project with feature extraction or evaluation in the loop.
+
+The boundary is worth stating as clearly as the strength: DVC is not a model registry. There is no stage promotion, no approval workflow, no serving endpoint. It versions artifacts; MLflow and Hub-style registries manage lifecycle.
 
 ## Key Features
 
-- Git-compatible versioning for large data/model files
-- Reproducible, declarative ML pipelines
-- Works with many remote storage backends (S3, GCS, etc.)
+- **Pointer files instead of blobs**: `.dvc` files carry md5 hashes and metadata, so the repository stays small and diffs stay readable.
+- **Remote storage abstraction**: `dvc remote add` against S3, GCS, Azure, SSH, HDFS, HTTP or a local path, with `push`/`pull`/`status` and per-remote configuration.
+- **Pipeline definition in `dvc.yaml`**: stages with `cmd`, `deps`, `outs` and `params`, plus `dvc.lock` pinning what each run produced.
+- **Incremental reproduction**: `dvc repro` walks the DAG and re-runs only stale stages; `dvc dag` shows the graph and where the change propagates.
+- **Experiments**: `dvc exp run` executes a variant on a temporary branch, `dvc exp show` compares metrics and parameters in a table, `dvc exp push` shares the result.
+- **Metrics and plots**: `dvc metrics diff` and `dvc plots diff` compare numbers and charts across commits and experiments as reviewable text or HTML.
+- **Data registry pattern**: `dvc import` a dataset or model from another repository, `dvc update` to move the pin deliberately.
+- **Granular cache operations**: `dvc gc` to prune, shared cache across clones via `dvc cache dir`, and `--relink` to deduplicate working trees.
+- **Python API**: `dvc.api.open`, `dvc.api.params_show` and `dvc.api.get_url` let notebooks read versioned data without checking it out.
+- **CI integration**: `dvc pull` and `dvc repro` in a workflow, with `--force`-free comparisons failing when the lock file is stale.
 
 ## Architecture / How It Works
 
-Large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable.
+Content addressing is the foundation. Every file and directory added becomes one or more hashed objects in `.dvc/cache`, stored under a two-character fan-out directory. The `.dvc` file records the hash and size; Git tracks the `.dvc` file. `dvc push` transfers only cache objects the remote lacks, and `dvc pull` fetches only those the working tree is missing, so the network cost tracks the delta rather than the corpus.
+
+Pipelines are a hash graph. Each stage hashes its command, dependencies, parameters and dependencies' hashes; `dvc.lock` stores the result. When anything upstream changes, the hash changes and `dvc repro` re-runs that stage and its descendants. That is why a parameter change in a training config triggers retraining but not re-extraction, and why the lock file is the object to review in a pull request.
+
+Experiments use Git refs rather than commits: `dvc exp run` writes the workspace state to a ref, executes, and stores metrics and parameters in a separate cache. `dvc exp show` reads those refs to build a comparison table, which is why experiments do not appear in your branch history and why `dvc exp push` is needed to share them.
+
+The failure modes follow from the design. A cache and a remote can disagree; a `.dvc` file can point at content the remote no longer holds; `dvc.lock` merges are painful when two people change the same stage; and a corpus of millions of tiny files makes hashing and pushes slow, which is why batching into archives is a common adaptation.
 
 ## Getting Started
 
-Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring DVC into anything else. The command below runs against the `model-registry` job and returns a result you can inspect directly.
-
 ```bash
-pip install dvc
+pip install dvc dvc-s3          # add the extra for your remote
+git init myproject && cd myproject && git init && dvc init
 ```
 
-Follow the official documentation at https://github.com/treeverse/dvc for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
+```bash
+dvc add data/raw                     # writes data/raw.dvc, ignores the directory
+dvc remote add -d storage s3://my-bucket/dvc-store
+dvc push                             # upload cache objects to the remote
+git add data/raw.dvc .gitignore .dvc/config && git commit -m "track raw data"
+```
+
+```yaml
+# dvc.yaml
+stages:
+  prepare:
+    cmd: python src/prepare.py --in data/raw --out data/prepared
+    deps: [src/prepare.py, data/raw]
+    outs: [data/prepared]
+  train:
+    cmd: python src/train.py --data data/prepared --out models/model.pt
+    deps: [src/train.py, data/prepared, params.yaml]
+    params: [train.lr, train.epochs]
+    outs: [models/model.pt]
+    metrics: [metrics.json]
+```
+
+```bash
+dvc repro            # runs only what is stale
+dvc exp run -S train.lr=3e-4 && dvc exp show --include-params train
+```
+
+Commit `dvc.lock` after every reproduction — it is the record that makes a later checkout reproducible, and reviewing it is how a data or config change gets caught in code review.
 
 ## Use Cases
 
-1. **Where it sits**: on the model-registry leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so DVC can be swapped without touching callers.
-2. **Validating the choice**: put DVC and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
-3. **Choosing between candidates**: DVC's comparison set is `hugging-face-hub`, `mlflow`, `weights-biases`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Reproducible training runs**: a commit pins data hashes, parameters and the pipeline; a colleague checks out, runs `dvc pull && dvc repro`, and gets the same artifact or a loud failure.
+2. **Dataset evolution without repository bloat**: a new snapshot of a growing corpus is a new pointer file and a cache delta, not a second copy in Git LFS.
+3. **Expensive preprocessing**: cache the feature-extraction stage and iterate only on the training stage, which is often the difference between a ten-minute and a two-hour loop.
+4. **Parameter sweeps with reviewable results**: `dvc exp run` over a grid, then `dvc exp show` to compare metrics and parameters in one table instead of a spreadsheet.
+5. **Data registry across teams**: one repository imports another's curated dataset at a pinned hash and updates deliberately, giving lineage without a platform.
+6. **Model artifact handoff**: `dvc get` fetches a specific model version into a build step or a CI job without the consumer cloning the whole repository.
+7. **Auditing an old result**: check out the commit, confirm the data hashes, reproduce the metric — the answer to "where did this number come from".
 
 ## Strengths
 
-- The implementation detail worth reading before adopting DVC is specific — large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable — and that is where a capability claim either survives contact with your data or does not.
-- Against `hugging-face-hub`, `mlflow`, `weights-biases`, the difference that decides this is deployment model and cost rather than the feature list, and DVC sits at the hosted end of that axis.
-- Depending on DVC means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
-- What this entry cannot give you is measured behaviour: measure DVC's latency and its error rate under a degraded upstream before it carries production traffic.
+- The pointer-file design is the right split: Git keeps the history and review, the object store keeps the bytes, and neither is compromised.
+- `dvc repro` with hash-based staleness is genuinely useful engineering, not just bookkeeping — it saves compute on every iteration.
+- Remote support is broad enough that the tool outlives your current cloud, and the cache can be shared across clones or CI runners.
+- Experiments as refs compare parameter sets without polluting history, and `exp show` is a better comparison surface than a notebook of printed tables.
+- The Python API means notebooks and scripts read versioned data without a checkout, which keeps exploration inside the discipline.
+- Apache-2.0 with a long-lived maintainer and a stable data format — the `.dvc` files you commit today will still be readable.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to DVC, so quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for DVC describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- Where DVC overlaps `hugging-face-hub`, `mlflow`, `weights-biases`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- **Not a model registry.** No stages, no approvals, no serving integration, no lineage UI beyond the pipeline graph; MLflow or a Hub-style registry covers that half.
+- **Operational sharp edges.** Cache/remote mismatch, lock-file merge conflicts and stale pointers are routine and require understanding the model, not just the commands.
+- **Many small files are slow.** Hashing, pushing and pulling a corpus of millions of tiny files is painful; archiving into bundles is the usual workaround, and it is a design decision made late by most teams.
+- **The CLI is the product.** There is a hosted Studio UI, but the workflow is terminal-and-Git, and a team that lives in a browser will find it foreign.
+- **No storage of its own.** You still choose and operate an object store, with its lifecycle rules, versioning, access control and egress costs.
+- **Large file counts inflate the cache.** Local cache growth is easy to miss until a CI runner runs out of disk; `dvc gc` and shared caches are the answer and need to be planned.
+- **Does not solve data quality.** A perfectly versioned dataset can be perfectly wrong, and nothing here validates content.
 
 ## Integration Patterns
 
-- *Wiring*: adopt DVC as a Python dependency or sidecar service against the `model-registry` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
-- *Alternatives*: `hugging-face-hub`, `mlflow`, `weights-biases` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
-- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
-- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
+- *Wiring*: one remote per environment, a shared cache for CI, and `dvc pull` as an explicit pipeline step rather than an implicit one — a job that silently runs without data is worse than one that fails.
+- *Review discipline*: treat `dvc.lock` and `params.yaml` as code under review; a pull request that changes a data pointer without a lock change, or the reverse, is a mistake worth catching.
+- *Storage layout*: archive many-small-file corpora into shards before `dvc add`, keep raw immutable inputs in a versioned bucket, and let the cache be disposable.
+- *Alternative split*: `hugging-face-hub` when the artifacts are models or datasets with an ecosystem attached, `mlflow` when you need experiment tracking plus registry stages, `weights-biases` when the team wants hosted dashboards and sweeps.
+- *Before production*: decide the remote, the cache retention policy and who may push to the default remote; those three decisions prevent most of the confusion teams hit at scale.
+- *CI*: fail the build when `dvc status` reports staleness, not when a test fails — staleness is the cheap signal that a lock file was forgotten.
 
 ## Resources
 
-- [Primary site](https://github.com/treeverse/dvc)
-- [Documentation](https://github.com/treeverse/dvc)
-- [Source](https://github.com/treeverse/dvc)
+- [Documentation](https://dvc.org/doc)
+- [GitHub](https://github.com/treeverse/dvc)
+- [Pipeline reference](https://dvc.org/doc/user-guide/pipelines/defining-pipelines)
+- [Experiments](https://dvc.org/doc/user-guide/experiment-management)
+- [Data registry pattern](https://dvc.org/doc/use-cases/data-registries)
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for model-registry.
+- Long-standing default in MLOps toolchains, usually adopted for exactly one capability — data versioning — and kept because the pointer files make the rest of Git work as before.
+- The recurring criticism is that it stops short of registry semantics, which is fair and is a scope decision rather than a defect.
 
 ---
-*Last reviewed: 2026-06-30 by @maintainer*
-
+*Last reviewed: 2026-10-25 by @maintainer*

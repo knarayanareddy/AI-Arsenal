@@ -77,7 +77,7 @@ A Bento bundles model weights, a Python service definition, and dependencies int
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to BentoML, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- BentoML is a serving framework you deploy, so the Kubernetes or cloud plumbing is yours; its model store is local unless you wire a remote one.
 - Documentation for BentoML describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where BentoML overlaps `fly-io`, `modal`, `railway`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

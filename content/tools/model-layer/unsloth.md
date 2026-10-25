@@ -78,7 +78,7 @@ Follow the official documentation at https://github.com/unslothai/unsloth for th
 ## Strengths
 
 - Beyond the marketing, Unsloth's own notes are the useful part: replaces parts of the standard training path with optimized, hand-written kernels and memory-management tricks, reducing both step time and peak memory without changing the training math.
-- Against `axolotl`, `llamafactory`, `mlx-lm`, `peft`, the difference that decides this is deployment model and cost rather than the feature list, and Unsloth sits at the hosted end of that axis.
+- Against `axolotl`, `llamafactory`, `mlx-lm`, `peft`, the difference is kernel work: Unsloth patches attention and MLP layers for roughly 2x faster training and about half the VRAM, at the cost of supporting fewer architectures.
 - Unsloth is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Unsloth's latency and its error rate under a degraded upstream before it carries production traffic.
 

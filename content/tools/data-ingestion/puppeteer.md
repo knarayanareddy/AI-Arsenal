@@ -75,7 +75,7 @@ Follow the official documentation at https://github.com/puppeteer/puppeteer for 
 ## Strengths
 
 - Beyond the marketing, Puppeteer's own notes are the useful part: communicates with a Chrome/Chromium instance via the DevTools Protocol, letting scripts navigate pages, execute JavaScript in-page, and extract rendered content.
-- Against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `playwright`, the difference that decides this is deployment model and cost rather than the feature list, and Puppeteer sits at the hosted end of that axis.
+- Against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `playwright`, the difference is scope: Puppeteer drives Chrome only, Crawl4AI and Firecrawl add extraction on top, and Jina Reader is a hosted endpoint that needs no browser.
 - Puppeteer is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Puppeteer's latency and its error rate under a degraded upstream before it carries production traffic.
 

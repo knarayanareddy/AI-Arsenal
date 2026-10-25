@@ -13,10 +13,10 @@ org_or_maintainer: null
 tags: [observability, tracing, evaluation, self-hosted]
 maturity: production
 cost_model: freemium
-github_stars: 29021
+github_stars: 36439
 github_stars_last_30d: 0
 trending_score: 30
-last_commit: "2026-06-13"
+last_commit: "2026-10-25"
 docs_url: "https://langfuse.com/docs"
 demo_url: null
 paper_url: null
@@ -48,7 +48,7 @@ corresponding_tool_entry: langfuse-prompts
 enrichment_status: reviewed
 enrichment_notes: Langfuse's co-founder/CEO confirmed via a public July 2025 Reddit response that OSS Langfuse 'scales to billions of events' and runs the same backend as their largest self-hosted enterprise deployments -- primary-source confirmation, not marketing. A separate 'case study' found elsewhere was explicitly an anonymised composite, not used as evidence.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
@@ -88,16 +88,20 @@ Upstream: none of particular note. Downstream: Langfuse Prompts (in the tools ve
 
 ## Strengths
 
-- What Langfuse gives you that reading the feature list does not: provides SDK-based tracing instrumentation across major LLM frameworks and languages, a prompt registry with versioning tied to trace data, and an evaluation engine supporting both rule-based and LLM-graded scoring, all backed by a self-hostable stack (Postgres-based) that the maintainers confirm scales to billions of events in production, which is the part you have to evaluate against your own workload.
-- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
-
+- The self-hosted stack is the same product as the cloud, not a reduced edition: docker compose brings up the web app, Postgres, ClickHouse, Redis and an S3-compatible store, and the traces you see locally are the traces the managed version would show.
+- Trace-to-prompt-to-dataset linkage is the real design win: a prompt version is attached to the traces it produced, those traces can be promoted into a dataset, and an experiment can score the candidate version against them — one chain rather than three tools joined by IDs.
+- ClickHouse behind the analytics is what makes it viable at volume; the dashboards stay responsive on millions of observations in a way a Postgres-only store does not manage.
+- Ingestion is OTel-compatible alongside the native SDKs, so instrumentation can be shared with an existing observability estate instead of duplicated.
+- Cost tracking uses model definitions you can correct, which matters because provider pricing changes and a cost dashboard that silently uses stale prices is worse than none.
+- MIT core with 36,000 stars and commits on the day of review: the community edition is genuinely developed, not a funnel left to rot.
 ## Limitations
 
-- Adoption risk for Langfuse is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
-- Nothing in this entry substitutes for running Langfuse against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Where Langfuse overlaps `langsmith-platform`, `phoenix`, `helicone`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
-
+- **Self-hosting is a real stack, not a container.** Postgres, ClickHouse, Redis and object storage all need operating, backing up and upgrading together; the ClickHouse disk is the one that grows without warning and the one whose migration is least forgiving.
+- **Enterprise features are licensed.** SSO, RBAC, audit logs and several governance controls sit behind the commercial edition, and a security review that expects them will find the community edition short.
+- **Volume is a cost line in both directions.** Units-based pricing means the bill tracks traces, observations and scores, so instrumenting everything is expensive on cloud and disk-hungry when self-hosted — sampling is a decision, not an option.
+- **1,134 open issues against a fast-moving codebase.** SDK and server versions must move together; a pinned Python client against a newer server is a routine source of silent ingestion gaps.
+- **Evaluation depth is workflow, not statistics.** LLM-as-a-judge, datasets and experiments are well covered; judge calibration, confidence intervals and inter-rater agreement are not, and for claims that need rigour a dedicated eval tool is still required.
+- **It records what you instrument.** Framework integrations cover the popular paths, but a bespoke agent loop needs manual span structure, and a trace with the wrong nesting is harder to read than no trace.
 ## Relation to the Arsenal
 
 This project entry documents Langfuse's architecture and ecosystem position as an open-source observability platform. For usage-oriented guidance on Langfuse's prompt-management surface specifically, see [Langfuse Prompts](../../tools/dx-and-tooling/langfuse-prompts.md) in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about what Langfuse IS as a platform, the tool entry is about WHEN you'd reach for its prompt-management feature specifically.

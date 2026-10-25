@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: bark
 name: "Bark"
 artifact_type: model
@@ -40,7 +40,7 @@ tags:
   - "llm"
 maturity: beta
 cost_model: open-source
-github_stars: 39191
+github_stars: 39277
 last_commit: "2024-08-19"
 docs_url: https://github.com/suno-ai/bark
 phase: foundation-model
@@ -60,7 +60,7 @@ best_for:
 avoid_if:
   - "You need reliable, controllable, word-accurate narration; Bark is generative and can hallucinate or drift from the text"
   - "You need active upstream maintenance, since development effectively paused in 2024"
-enrichment_notes: "Repository, MIT license, and last commit 2024-08-19 verified via the GitHub API on 2026-07-12. Maintenance has stalled; included as a canonical study reference with that caveat."
+enrichment_notes: "Repository, MIT license, and last commit 2024-08-19 verified via the GitHub API on 2026-07-12. Maintenance has stalled; included as a canonical study reference with that caveat. Dormancy re-checked 2026-10-24, when the GitHub API reported 39277 stars and last push 2024-08-19; claims in the entry re-read against the repository."
 ---
 
 ## Overview

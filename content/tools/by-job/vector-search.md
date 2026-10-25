@@ -205,6 +205,7 @@ This table is exhaustive for tools tagged with job = vector-search.
 | [RAGatouille](../data-ingestion/ragatouille.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
 | [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | recommended |
+| [turbovec](../data-ingestion/turbovec.md) | data ingestion | open-source | Yes | Yes | Yes | rust, python | solid-choice |
 | [Typesense](../data-ingestion/typesense.md) | data ingestion | freemium | Yes | Yes | Yes | cpp | solid-choice |
 | [Vespa](../data-ingestion/vespa.md) | data ingestion | open-source | Yes | Yes | Yes | java, cpp | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

@@ -77,12 +77,12 @@ Follow the official documentation at https://www.llama.com/docs/model-cards-and-
 
 - Beyond the marketing, Llama Guard's own notes are the useful part: runs as a separate classifier model alongside the primary LLM; inputs and/or outputs are passed through Llama Guard before being accepted, flagging or blocking unsafe content.
 - Llama Guard's honest comparison set is `guardrails-ai`, `nemo-guardrails`, `rebuff`; what separates them is rarely capability, it is what you must operate.
-- Depending on Llama Guard means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Llama Guard is a model you host and call, so its latency, GPU memory and prompt template become part of every guarded request.
 - What this entry cannot give you is measured behaviour: measure Llama Guard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Llama Guard, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It is a classifier, not a policy engine: the hazard categories are fixed by the model version, custom rules need prompting or fine-tuning, and each check is an extra model call.
 - Documentation for Llama Guard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Llama Guard overlaps `guardrails-ai`, `nemo-guardrails`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

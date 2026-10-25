@@ -13,7 +13,7 @@ org_or_maintainer: null
 tags: [llm, inference, local, multimodal]
 maturity: production
 cost_model: open-source
-github_stars: 7820
+github_stars: 7834
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: "2024-11-27"
@@ -41,13 +41,13 @@ avoid_if:
   - You want a model with strong current-generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023-2024 release
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: []
+alternatives: [qwen, llama-3, gemma]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: Could not confirm official maintenance status beyond sparse, community-authored 2026 issue activity on 01-ai/Yi with no visible maintainer responses; 01.AI's recent GitHub activity is on unrelated newer projects (01-ai/langcrew), suggesting Yi may be in de facto maintenance mode.
+enrichment_notes: "01.AI shows no maintainer activity on 01-ai/Yi since 2024-11-27, so the family is frozen; newer work moved to other 01.AI projects. Re-checked 2026-10-24 against the GitHub API: 7,834 stars, last push 2024-11-27, no archived flag."
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
@@ -65,7 +65,7 @@ Yi is worth keeping as a fixed comparison point: it was one of the stronger bili
 
 ## Architecture
 
-Yi ships as dense, decoder-only Transformer checkpoints in 6B, 9B, and 34B sizes that load through the standard Hugging Face `transformers` stack, so no bespoke runtime is required. The models are trained for bilingual English/Chinese coverage and were released with long-context variants. The published checkpoints are unquantized (`supports_quantization: false` in this entry's frontmatter), so serving the 34B size for low-latency inference generally means sizing GPU memory accordingly or adding an external quantization/serving layer.
+Yi ships as dense, decoder-only Transformer checkpoints in 6B, 9B, and 34B sizes that load through the standard Hugging Face `transformers` stack, so no bespoke runtime is required. The models are trained for bilingual English/Chinese coverage and were released with long-context variants. The released checkpoints are unquantized — there is no official AWQ/GPTQ/GGUF build — so serving the 34B size means either fitting roughly 68GB of bf16 weights or quantizing it yourself with bitsandbytes or llama.cpp, which works because the architecture is a stock Llama-style decoder.
 
 ## Ecosystem Position
 
@@ -87,20 +87,21 @@ print(generate("用一句话解释检索增强生成（RAG）。", max_new_token
 
 ## Key Use Cases
 
-1. **Where it fits**: You're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point
-2. **Adoption checkpoint**: before building on Yi, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
+1. **A frozen bilingual baseline**: reproducing a 2023-2024 English/Chinese result where Yi is the original checkpoint and changing the model would change the comparison.
+2. **Cheap Chinese-language prototyping on one GPU**: Yi-6B or Yi-9B in bf16 fits a 24GB card and runs through stock `transformers`, which is enough for prompt iteration before committing to a current-generation model.
+3. **Long-context experiments (200K variants)**: the `Yi-6B-200K`/`Yi-34B-200K` checkpoints are a documented long-context baseline, useful when you need a second model to sanity-check a context-extension result against.
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Yi is specific — yi ships as dense, decoder-only Transformer checkpoints in 6B, 9B, and 34B sizes that load through the standard Hugging Face transformers stack, so no bespoke runtime is required. The models are trained for bilingual English/Chinese coverage and were released with long-context variants. The published checkpoints are unquantized (supports_quantization: false in this entry's frontmatter), so serving the 34B size for low-latency inference generally means sizing GPU memory accordingly or adding an external quantization/serving layer — because that is where the capability claim either survives contact with your data or does not.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- Bilingual coverage was the differentiator at release: Yi was trained on a roughly 3:1 English-to-Chinese corpus and reports Chinese benchmark results that were competitive with much larger models of its generation.
+- Three sizes plus 200K-context variants, all as stock Hugging Face checkpoints — no custom runtime, and quantizable with the usual tooling.
+- Apache-2.0 weights, which is why it spread into Chinese-language fine-tunes and derivative models even after upstream development slowed.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the Yi footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for Yi at your scale need measuring before this informs a production decision.
-- No alternative is catalogued alongside Yi here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- The family is frozen: the last commit is 2024-11-27 and 01.AI's public effort moved to newer lines, so there are no fixes, no safety updates, and no new sizes coming.
+- Its benchmark position has decayed. Qwen2.5/3, Llama 3/4 and Gemma 2/3 all outperform Yi at comparable or smaller sizes, so choosing it for quality today is a mistake.
+- The 200K variants degrade on long-context retrieval well before their advertised window, and the tokenizer's Chinese-heavy vocabulary makes English-only workloads pay extra tokens.
 
 ## Relation to the Arsenal
 

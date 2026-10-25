@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [turbovec](./turbovec.md)
 - [Screenpipe](./screenpipe.md)
 - [Hugging Face AI Sheets](./aisheets.md)
 - [Airbyte](./airbyte.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Exa](./exa.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
-- [Great Expectations (GX Core)](./great-expectations.md)
 
 ### Most Popular
 
@@ -59,8 +59,8 @@ _No star-tracked entries yet._
 - [Firecrawl](./firecrawl-tool.md) — Web data API and open-source scraper returning clean markdown, structured JSON, screenshots, and interaction actions for agent use
 - [Gitingest](./gitingest.md) — Turns a Git repository into a prompt-friendly text digest with file tree, size and token count
 - [Great Expectations (GX Core)](./great-expectations.md) — Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI
-- [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
-- [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
+- [Jina AI Reader](./jina-reader.md) — URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination
+- [Label Studio](./label-studio.md) — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
 - [MarkItDown](./markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 - [Marqo](./marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [Meilisearch](./meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
@@ -68,17 +68,18 @@ _No star-tracked entries yet._
 - [Nomic Atlas](./nomic-atlas.md) — Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
 - [Pinecone](./pinecone.md) — A managed vector database for production semantic search applications
-- [Playwright](./playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows
+- [Playwright](./playwright.md) — Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse
 - [Prodigy](./prodigy.md) — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
 - [Puppeteer](./puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [RAGatouille](./ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [Reducto](./reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
-- [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [Scale AI](./scale-ai.md) — Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects
 - [ScrapeGraphAI](./scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
 - [Screenpipe](./screenpipe.md) — Local daemon recording screen OCR and audio transcripts into a queryable store for agents
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
 - [Tavily](./tavily.md) — Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call
 - [Trafilatura](./trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building
+- [turbovec](./turbovec.md) — In-process vector index that searches 2- or 4-bit TurboQuant codes directly, at a fraction of float32 memory
 - [Typesense](./typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [Vespa](./vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference

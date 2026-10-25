@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-24T16:15:54.045Z",
+  "generated_at": "2026-10-25T13:15:30.976Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 298,
+      "count": 299,
       "types": {
         "project": 137,
         "tip": 23,
-        "tool": 73,
+        "tool": 74,
         "build-example": 3,
         "guide": 7,
         "benchmark": 11,
@@ -105,6 +105,7 @@
         "db-gpt",
         "deep-searcher",
         "deepcode-cli",
+        "deepseek-harness",
         "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
@@ -132,6 +133,7 @@
         "goose",
         "gpt-researcher",
         "gptme",
+        "graphify",
         "graphiti",
         "harness-sdk",
         "harrison-chase",
@@ -295,7 +297,6 @@
         "toolhive",
         "trpc-agent-go",
         "ui-tars-desktop",
-        "uiverse-design",
         "ultrarag",
         "upsonic",
         "validate-tool-arguments-before-execution",
@@ -678,11 +679,11 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 71,
+      "count": 73,
       "types": {
-        "project": 33,
+        "project": 34,
         "guide": 2,
-        "tool": 21,
+        "tool": 22,
         "benchmark": 7,
         "paper": 8
       },
@@ -711,6 +712,7 @@
         "cursor",
         "dao-code",
         "deepcode-cli",
+        "deepseek-harness",
         "deepseek-reasonix",
         "ecc",
         "gemini-cli",
@@ -720,6 +722,7 @@
         "goose",
         "gpt-engineer",
         "gptme",
+        "graphify",
         "gunasekar-2023-phi-1",
         "huang-2026-regression-accumulation",
         "humaneval",
@@ -956,9 +959,9 @@
     {
       "id": "edge",
       "label": "Edge",
-      "count": 18,
+      "count": 19,
       "types": {
-        "project": 12,
+        "project": 13,
         "tool": 6
       },
       "entries": [
@@ -975,6 +978,7 @@
         "mllm",
         "mlx-audio",
         "opengui",
+        "phi-cookbook",
         "ramalama",
         "repoprompt-ce",
         "runanywhere-sdks",
@@ -985,13 +989,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 104,
+      "count": 105,
       "types": {
         "project": 38,
         "paper": 20,
         "guide": 4,
         "tip": 22,
-        "tool": 17,
+        "tool": 18,
         "architecture": 3
       },
       "entries": [
@@ -1088,6 +1092,7 @@
         "torchtitan",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
+        "turbovec",
         "ultralytics-yolo",
         "unsloth",
         "uqlm",
@@ -1197,7 +1202,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 247,
+      "count": 246,
       "types": {
         "digest": 1,
         "tip": 36,
@@ -1205,7 +1210,7 @@
         "guide": 10,
         "benchmark": 52,
         "project": 50,
-        "tool": 43,
+        "tool": 42,
         "person": 9,
         "paper": 36,
         "architecture": 7
@@ -1381,7 +1386,6 @@
         "pr-agent",
         "prefer-pairwise-comparison-when-scoring-is-noisy",
         "prefer-reranking-before-rechunking",
-        "prodigy",
         "production-rag",
         "promptflow",
         "promptfoo",
@@ -1480,10 +1484,10 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 91,
+      "count": 92,
       "types": {
         "project": 48,
-        "tool": 15,
+        "tool": 16,
         "tip": 14,
         "paper": 11,
         "guide": 2,
@@ -1555,6 +1559,7 @@
         "patil-2023-gorilla",
         "peft",
         "prefer-data-quality-over-quantity",
+        "prodigy",
         "pytorch-lightning",
         "qwen-vl-series-finetune",
         "rag-vs-fine-tuning",
@@ -1661,12 +1666,12 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 48,
+      "count": 49,
       "types": {
         "project": 12,
         "tip": 11,
         "architecture": 1,
-        "tool": 14,
+        "tool": 15,
         "benchmark": 5,
         "paper": 4,
         "guide": 1
@@ -1709,6 +1714,7 @@
         "redact-pii-before-sending-to-third-party-apis",
         "salad-bench",
         "sandbox-model-generated-code-execution",
+        "scale-ai",
         "scope-and-rotate-api-keys-with-least-privilege",
         "secure-code-game",
         "separate-user-content-from-system-instructions",
@@ -3183,9 +3189,9 @@
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 20,
+      "count": 21,
       "types": {
-        "project": 9,
+        "project": 10,
         "tip": 3,
         "paper": 4,
         "tool": 2,
@@ -3207,6 +3213,7 @@
         "ml-engineer-role",
         "nvidia-tensorrt",
         "oobabooga-textgen",
+        "phi-cookbook",
         "quantization",
         "runanywhere-sdks",
         "start-with-a-smaller-quantized-model",
@@ -3217,9 +3224,9 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 165,
+      "count": 166,
       "types": {
-        "tool": 26,
+        "tool": 27,
         "tip": 26,
         "build-example": 5,
         "project": 61,
@@ -3381,6 +3388,7 @@
         "tavily",
         "treat-retrieved-text-as-untrusted",
         "trulens",
+        "turbovec",
         "txtai",
         "typesense",
         "ultrarag",
@@ -3446,9 +3454,9 @@
         "optillm",
         "pageindex",
         "phi-4",
-        "phi-cookbook",
         "pita-2026-amalia-authority",
         "prompt-patterns-catalog",
+        "qwen",
         "qwen-2-5",
         "reef",
         "rllm",
@@ -3555,11 +3563,11 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 159,
+      "count": 161,
       "types": {
         "tip": 24,
         "build-example": 4,
-        "tool": 27,
+        "tool": 29,
         "project": 63,
         "paper": 22,
         "benchmark": 7,
@@ -3624,6 +3632,7 @@
         "gao-2022-hyde",
         "gao-2023-rag-survey",
         "gpt-researcher",
+        "graphify",
         "graphiti",
         "graphrag",
         "guu-2020-realm",
@@ -3714,6 +3723,7 @@
         "tavily",
         "trafilatura",
         "trpc-agent-go",
+        "turbovec",
         "txtai",
         "typesense",
         "ultrarag",
@@ -3732,13 +3742,13 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 26,
+      "count": 27,
       "types": {
         "guide": 1,
         "project": 10,
         "paper": 11,
         "person": 1,
-        "tool": 2,
+        "tool": 3,
         "benchmark": 1
       },
       "entries": [
@@ -3761,6 +3771,7 @@
         "rafailov-2023-dpo",
         "rewardbench",
         "rllm",
+        "scale-ai",
         "schulman-2017-ppo",
         "shao-2024-deepseekmath",
         "touvron-2023-llama2",
@@ -4295,9 +4306,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 138,
+      "count": 139,
       "types": {
-        "project": 67,
+        "project": 68,
         "tip": 22,
         "tool": 29,
         "guide": 6,
@@ -4358,6 +4369,7 @@
         "cua",
         "cve-mcp-server",
         "danielmiessler-fabric",
+        "deepseek-harness",
         "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
@@ -4589,9 +4601,9 @@
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 24,
+      "count": 25,
       "types": {
-        "tool": 2,
+        "tool": 3,
         "paper": 14,
         "person": 4,
         "guide": 2,
@@ -4616,6 +4628,7 @@
         "noam-shazeer",
         "nvidia-transformerengine",
         "peng-2023-rwkv",
+        "prodigy",
         "radford-2022-whisper",
         "shazeer-2019-mqa",
         "su-2021-rope",

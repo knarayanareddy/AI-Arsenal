@@ -20,7 +20,7 @@ github_url: "https://github.com/AnswerDotAI/RAGatouille"
 alternatives: [sentence-transformers, cohere]
 integrates_with: [llamaindex, langchain]
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 phase: data-ingestion
@@ -33,11 +33,11 @@ avoid_when:
   - "You need an actively-released library; RAGatouille's cadence is research-project-like (sparse releases)"
 version_tracked: null
 enrichment_status: draft
-enrichment_notes: "Star count (3,938), license, and last push (2025-05-17) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
+enrichment_notes: "Star count (3,972), license, and last push (2025-05-17) verified via the GitHub API on 2026-10-24. Feature claims are from official docs; not yet hands-on verified here."
 verdict: watching
 verdict_rationale: "The accessible gateway to late-interaction retrieval; production paths now run through vector DBs' native multi-vector support"
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/AnswerDotAI/RAGatouille", "date": "2026-07-08", "description": "3,938 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/AnswerDotAI/RAGatouille", "date": "2026-07-08", "description": "3,972 stars on GitHub as of 2026-10-24 (GitHub API)"}]
 ---
 
 ## Overview
@@ -46,7 +46,7 @@ A usability layer over ColBERT from Answer.AI (Benjamin Clavié): index, search,
 
 ## Why It's in the Arsenal
 
-RAGatouille is a library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines. Read it beside `sentence-transformers`, `cohere`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
+The job here is evaluating whether late interaction is worth its storage bill. ColBERT keeps a vector per token instead of one per chunk, which is why it generalizes better out of domain, and RAGatouille is the shortest path to that comparison: index an existing corpus with `colbert-ir/colbertv2.0` and measure recall against the dense retriever already in place. If late interaction wins, the decision moves to a vector database with native multi-vector support (Qdrant, Vespa) rather than to scaling this library — RAGatouille is the experiment, not the serving layer.
 
 ## Key Features
 
@@ -67,22 +67,23 @@ pip install ragatouille
 
 ## Use Cases
 
-1. **Integrating RAGatouille**: the vector-search call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
-2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since RAGatouille is most likely to be slow or rate-limited in production rather than simply gone.
-3. **Choosing between candidates**: RAGatouille's comparison set is `sentence-transformers`, `cohere`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **A late-interaction bake-off on your own corpus**: index a few thousand chunks with ColBERTv2 and compare nDCG against the dense retriever you run today before committing to the storage cost.
+2. **Domain fine-tuning of a retriever**: `RAGTrainer` turns query-document pairs into a ColBERT checkpoint without assembling the original ColBERT training pipeline.
+3. **A ColBERT retriever inside LangChain or LlamaIndex**: both adapters wrap `RAGPretrainedModel` as a retriever, which is enough for evaluation harnesses and offline analysis.
 
 ## Strengths
 
-- Beyond the marketing, RAGatouille's own notes are the useful part: documents encode into per-token vector matrices stored in a compressed PLAID index; queries encode likewise and score via MaxSim (sum of per-query-token max similarities), preserving token-level matching that single-vector cosine loses — RAGatouille wraps indexing, search, and training loops around this.
-- Weighing RAGatouille against `sentence-transformers`, `cohere` comes down to one question: who runs the process when it breaks — you or the vendor.
-- RAGatouille documents a client surface through `llamaindex`, `langchain`, which fixes the expected request and response contract so you are not inferring it from examples.
-- Marked beta, so RAGatouille's interface may still move; pin the version you build against rather than tracking latest.
+- The PLAID index is the engineering: per-token embeddings are clustered and pruned so a MaxSim query touches a fraction of them, which is what keeps late interaction from being an order of magnitude slower than dense retrieval.
+- Three lines from install to a working index: `RAGPretrainedModel.from_pretrained("colbert-ir/colbertv2.0")`, `.index(...)`, `.search(...)`.
+- Training is included, not assumed: `RAGTrainer` handles hard-negative mining and ColBERT fine-tuning on your own pairs.
+- It is a plain Python library: no service, no API key, and the index is a local directory you can copy between machines.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to RAGatouille, so quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for RAGatouille describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- RAGatouille is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
+- Storage is the deal-breaker at scale: one vector per token means roughly two orders of magnitude more index bytes than single-vector embeddings, so a corpus that fits in a small Qdrant collection needs a much larger ColBERT index.
+- Upstream cadence is research-project-like — the repository's last push was 2025-05-17 and releases are sparse — so pin the version and expect to own fixes.
+- The local index is not a concurrent multi-tenant store: no replication, no live updates, and rebuilds are a batch job.
+- It is a Python-only path; serving late interaction to another stack means exporting the index into a vector database that speaks multi-vector queries.
 
 ## Integration Patterns
 
@@ -100,7 +101,7 @@ pip install ragatouille
 
 ## Buzz & Reception
 
-- 3,938 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
+- 3,972 stars on GitHub as of 2026-10-24 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*
+*Last reviewed: 2026-10-24 by @maintainer.*

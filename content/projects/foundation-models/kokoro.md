@@ -13,7 +13,7 @@ org_or_maintainer: hexgrad
 tags: [self-hosted, inference, efficiency]
 maturity: production
 cost_model: open-source
-github_stars: 7888
+github_stars: 9641
 github_stars_last_30d: 0
 trending_score: 45
 last_commit: "2025-08-06"
@@ -39,15 +39,15 @@ alternatives: [f5-tts, chatterbox]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: Stars (7.9k repo; the model's reach is better measured by its HF download volume, consistently among the top TTS models), Apache-2.0, last push 2025-08-06 verified via the GitHub API on 2026-07-08 — checkpoint-release cadence. Arena-ranking claim reflects TTS-Arena community results at release; below the usual star bar, admitted as the efficiency anchor of open TTS.
+enrichment_notes: "Stars (9,641) and last push 2025-08-06 verified via the GitHub API on 2026-10-24; checkpoint-release cadence, reach better measured by HF download volume. Arena-ranking claim reflects TTS-Arena community results at release; admitted below the usual star bar as the efficiency anchor of open TTS."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
   - {"source":"github-trending","url":"https://github.com/hexgrad/kokoro","date":"2026-07-08","description":"7.9k stars; top HF-downloads open TTS at 82M parameters"}
 featured: false
-status: active
+status: watching
 ---
 
 ## Overview

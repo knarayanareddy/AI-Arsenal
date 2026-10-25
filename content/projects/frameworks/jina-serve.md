@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: jina-serve
 name: "Jina-serve"
 artifact_type: framework
@@ -39,7 +39,7 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 21858
+github_stars: 21852
 last_commit: "2025-03-24"
 docs_url: https://jina.ai/serve
 phase: framework
@@ -58,7 +58,7 @@ best_for:
 avoid_if:
   - "You want a very actively maintained framework, since upstream cadence has slowed since 2025"
   - "You only need to serve a single model, where a lighter server is simpler"
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-03-24 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; evaluate maintenance for new production use."
+enrichment_notes: "Repository, Apache-2.0 license, and 2025-03-24 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; evaluate maintenance for new production use. Dormancy re-checked 2026-10-24, when the GitHub API reported 21852 stars and last push 2025-03-24; claims in the entry re-read against the repository."
 ---
 
 ## Overview

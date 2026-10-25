@@ -181,3 +181,11 @@ jobs:
           LINK_CHECK_RATE_LIMIT_CAP: '40'
           GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: pnpm run validate:links
+      # The failure above is only visible in the step log, which needs repo
+      # access to read; a contributor sees a red X and no URL. Reprint the
+      # checker's own report as annotations so the offending URL and file show
+      # up in the PR's checks view. Always exits 0 — the step above owns the
+      # job status.
+      - name: Annotate broken links
+        if: failure()
+        run: node scripts/annotate-broken-links.js

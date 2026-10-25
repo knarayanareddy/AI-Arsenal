@@ -81,7 +81,7 @@ Follow the official documentation at https://github.com/NVIDIA-NeMo/Guardrails f
 
 - Beyond the marketing, NeMo Guardrails's own notes are the useful part: conversation flow is defined as a set of Colang rules describing allowed/disallowed topics and responses; the runtime intercepts the conversation and enforces these rails alongside the underlying LLM.
 - Weighing NeMo Guardrails against `guardrails-ai`, `llamaguard`, `rebuff` comes down to one question: who runs the process when it breaks — you or the vendor.
-- Depending on NeMo Guardrails means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Guardrails wraps your LLM call, so the runtime cost is the extra prompt tokens for the rail definitions plus the Colang flows you maintain as policy changes.
 - What this entry cannot give you is measured behaviour: measure NeMo Guardrails's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use

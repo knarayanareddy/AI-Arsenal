@@ -13,7 +13,7 @@ org_or_maintainer: black-forest-labs
 tags: [multimodal, inference, self-hosted]
 maturity: production
 cost_model: open-source
-github_stars: 25700
+github_stars: 26035
 github_stars_last_30d: 0
 trending_score: 45
 last_commit: "2025-07-31"
@@ -39,15 +39,15 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: Stars (25.7k), Apache-2.0 code license, last push 2025-07-31 verified via the GitHub API on 2026-07-08 — release-hub cadence; family activity continues via weight releases (Kontext etc.) on the Hub. Weight-license split documented from official model cards.
+enrichment_notes: "Stars (26,035), Apache-2.0 code licence, last push 2025-07-31 verified via the GitHub API on 2026-10-24; release-hub cadence, with family activity arriving as Hugging Face weight releases (Kontext and later) rather than commits. Weight-licence split from the official model cards."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-24"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
   - {"source":"github-trending","url":"https://github.com/black-forest-labs/flux","date":"2026-07-08","description":"25.7k stars; the open image-generation reference since 2024"}
 featured: false
-status: active
+status: watching
 ---
 
 ## Overview

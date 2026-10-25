@@ -74,13 +74,13 @@ pip install evidently
 ## Strengths
 
 - The implementation detail worth reading before adopting Evidently is specific — metrics compute over pandas-friendly datasets (reference vs current for drift); LLM descriptors run per-row evaluators including judge prompts; results serialize as JSON/HTML reports or pass/fail test suites, making evaluation a pipeline artifact rather than a dashboard-only activity — and that is where a capability claim either survives contact with your data or does not.
-- Against `deepchecks`, `phoenix`, `ragas-rag-evaluation`, the difference that decides this is deployment model and cost rather than the feature list, and Evidently sits at the hosted end of that axis.
-- Depending on Evidently means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Against `deepchecks`, `phoenix`, `ragas-rag-evaluation`, the difference is scope: Evidently monitors drift and data quality over time, Ragas scores retrieval quality, and Phoenix traces requests.
+- The open-source library produces reports and test suites but ships no scheduler or alerting, so wiring drift checks into a pipeline is work you own.
 - What this entry cannot give you is measured behaviour: measure Evidently's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Evidently, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The hosted Evidently Cloud product is optional; the library itself is a dependency in your own pipeline, and its dashboards are static reports unless you add serving.
 - Documentation for Evidently describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Evidently overlaps `deepchecks`, `phoenix`, `ragas-rag-evaluation`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

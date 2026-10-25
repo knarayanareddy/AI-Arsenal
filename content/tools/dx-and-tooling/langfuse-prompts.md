@@ -77,13 +77,13 @@ Follow the official documentation at https://langfuse.com/docs/prompts for the a
 ## Strengths
 
 - Beyond the marketing, Langfuse Prompts's own notes are the useful part: prompts are stored as versioned records inside Langfuse; when a prompt version is used in production, the resulting traces and eval scores are linked back to that specific version.
-- Against `langsmith-hub`, `promptlayer`, the difference that decides this is deployment model and cost rather than the feature list, and Langfuse Prompts sits at the hosted end of that axis.
-- Depending on Langfuse Prompts means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Against `langsmith-hub`, `promptlayer`, the difference is deployment: Langfuse is self-hostable under MIT, while LangSmith and PromptLayer are hosted services.
+- Prompt management is coupled to a Langfuse deployment — Postgres, ClickHouse, Redis and object storage — so adopting the registry means adopting that stack.
 - What this entry cannot give you is measured behaviour: measure Langfuse Prompts's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Langfuse Prompts, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Self-hosting Langfuse means operating four stateful dependencies, a heavier lift than the prompt registry itself suggests.
 - Documentation for Langfuse Prompts describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Langfuse Prompts overlaps `langsmith-hub`, `promptlayer`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

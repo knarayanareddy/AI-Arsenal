@@ -77,7 +77,7 @@ pip install deepchecks
 
 - What Deepchecks gives you that its headline description does not: each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration, which is the part to check against your own pipeline before trusting the feature list.
 - Deepchecks overlaps `evidently`, `ragas-rag-evaluation`, `deepeval` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
-- Depending on Deepchecks means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Deepchecks runs in-process on dataframes you pass it, and its LLM checks are thinner than its tabular and vision suites — that gap is what to verify before adopting it for RAG evaluation.
 - What this entry cannot give you is measured behaviour: measure Deepchecks's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use

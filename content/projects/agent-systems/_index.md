@@ -32,6 +32,7 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [DeepSeek Harness](./deepseek-harness.md)
 - [goose](./aaif-goose-goose.md)
 - [agenticSeek](./agenticseek.md)
 - [AionUi](./aionui.md)
@@ -41,12 +42,12 @@ Before selecting an agent system:
 - [atomic-agent](./atomic-agent.md)
 - [browser-harness](./browser-harness.md)
 - [claude-video-vision](./claude-video-vision.md)
-- [Codewhale](./codewhale.md)
 
 ### Most Popular
 
 - [OpenClaw](./openclaw.md) — ⭐ 388702
 - [ECC](./ecc.md) — ⭐ 268797
+- [DeepSeek Harness](./deepseek-harness.md) — ⭐ 260425
 - [Hermes Agent](./hermes-agent.md) — ⭐ 249768
 - [opencode](./anomalyco-opencode.md) — ⭐ 210538
 - [opencode](./opencode.md) — ⭐ 203399
@@ -54,7 +55,6 @@ Before selecting an agent system:
 - [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 82874
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
 - [AnythingLLM](./anythingllm.md) — ⭐ 66555
-- [Strix](./strix.md) — ⭐ 65378
 
 ### Browse All
 
@@ -79,6 +79,7 @@ Before selecting an agent system:
 - [dao-code](./dao-code.md) — TypeScript terminal coding agent built around DeepSeek V4's prefix cache, keeping the system prefix and tool table byte-stable
 - [DeepAnalyze](./deepanalyze.md) — Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports
 - [deepcode-cli](./deepcode-cli.md) — TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
+- [DeepSeek Harness](./deepseek-harness.md) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
 - [DeepSeek-Reasonix](./deepseek-reasonix.md) — Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways
 - [ECC](./ecc.md) — MIT-licensed harness layer installing 68 agents, 286 skills, hooks, memory and AgentShield scanning into Claude Code, Codex and others
 - [big-AGI](./enricoros-big-agi.md) — Browser-and-server AI workbench bundling multi-provider chat, personas, image generation, voice, and sandboxed code execution behind one local interface

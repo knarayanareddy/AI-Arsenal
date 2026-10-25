@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: segment-anything
 name: "Segment Anything (SAM)"
 artifact_type: model
@@ -39,7 +39,7 @@ tags:
   - "inference"
 maturity: production
 cost_model: open-source
-github_stars: 54527
+github_stars: 55055
 last_commit: "2024-09-18"
 docs_url: https://ai.meta.com/research/publications/segment-anything/
 phase: foundation-model
@@ -59,7 +59,7 @@ best_for:
 avoid_if:
   - "You need real-time segmentation on constrained hardware, where distilled variants like MobileSAM/FastSAM fit better"
   - "You need semantic class labels; SAM segments regions but does not name them"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-09-18 activity verified via the GitHub API on 2026-07-12. SAM 2 exists for video; this entry covers the original image model."
+enrichment_notes: "Repository, Apache-2.0 license, and 2024-09-18 activity verified via the GitHub API on 2026-07-12. SAM 2 exists for video; this entry covers the original image model. Dormancy re-checked 2026-10-24, when the GitHub API reported 55055 stars and last push 2024-09-18; claims in the entry re-read against the repository."
 ---
 
 ## Overview

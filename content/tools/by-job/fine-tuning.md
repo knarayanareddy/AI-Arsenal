@@ -190,7 +190,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Together AI](../model-layer/together-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
-| [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | deprecated |
 | [TRL](../model-layer/trl.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Unsloth](../model-layer/unsloth.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

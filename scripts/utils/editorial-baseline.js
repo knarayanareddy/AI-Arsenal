@@ -8,8 +8,11 @@ import crypto from 'node:crypto';
 // be tolerated while still failing on newly introduced findings and while a
 // file that was allowlisted for one finding stays fully exposed to any other.
 //
-// Changed-file mode does NOT consult the baseline: added/modified entries must
-// fail on every finding regardless of history.
+// Changed-file mode consults the baseline for the same reason: a maintainer
+// fixing one sentence in a legacy entry would otherwise have to re-author every
+// other sentence in it first. It still fails on any finding not already on
+// record for that exact file — including every finding in a newly added entry,
+// which has no history to inherit.
 
 export const BASELINE_VERSION = 1;
 
@@ -117,7 +120,7 @@ export function serializeBaseline(entries) {
       _meta: {
         version: BASELINE_VERSION,
         description:
-          'Finding-level baseline of PRE-EXISTING full-catalog editorial findings. Each entry suppresses exactly one finding (path + rule + normalized finding). Changed-file validation ignores this file and stays strict.',
+          'Finding-level baseline of PRE-EXISTING editorial findings. Each entry suppresses exactly one finding (path + rule + normalized finding). --all fails on anything not listed; --changed-only fails on anything not listed for that file, so a legacy entry can be edited without re-authoring the debt it already has on record.',
         generate: 'pnpm run editorial:baseline',
         prune: 'pnpm run editorial:baseline:prune',
         warning: 'Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.',

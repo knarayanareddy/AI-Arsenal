@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-24T16:43:01.977Z | Entries: 1298 | Schema version: 1.0.0
+Generated: 2026-10-25T13:48:42.773Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 511
-- Tools: 247
+- Tools: 249
 - Papers: 138
 - Tips: 171
 - People: 25
@@ -40,10 +40,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### agents
 - OpenClaw (⭐388702, score:97) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
+- DeepSeek Harness (⭐260425, score:95) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
+- LangChain (⭐148417, score:80) — The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
 - Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
-- Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
-- Cua (⭐22143, score:68) — Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
 
 ### code-generation
 - opencode (⭐203399, score:92) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
@@ -54,10 +54,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
+- Ultralytics YOLO (⭐62824, score:60) — Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence
 - Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
-- PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
 
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
@@ -76,37 +76,37 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### llms
 - LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
-- Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-- Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
-- Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
+- Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
+- Colossal-AI (HPC-AI Tech) (⭐41407, score:66) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
+- verl (⭐24007, score:60) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
 - ComfyUI (⭐142561, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
-- FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
+- FLUX (Black Forest Labs) (⭐26035, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
 
 ### observability
-- DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
-- Langfuse (⭐29021, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-- Opik (⭐19609, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
+- DeepEval (⭐19090, score:70) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
+- LangSmith (⭐17, score:40) — LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
+- Langfuse (⭐36439, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
+- Opik (⭐22902, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
-- OpenLLMetry (⭐7000, score:30) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 
 ### rag
-- LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
 - AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
 - GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
+- SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
 
 ### tooling
 - MCP Reference Servers (⭐90043, score:84) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Cherry Studio (⭐52215, score:46) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
-- Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
+- spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 
 ### voice-audio
 - Pipecat (⭐15163, score:62) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
@@ -122,7 +122,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
 - dlt — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
 - Hugging Face AI Sheets — Spreadsheet-style web app for building, enriching and transforming datasets with LLM columns, deployable from Docker or pnpm against Hub or local models
-- Label Studio — An open-source data labeling platform for ML and AI datasets
+- Label Studio — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
 
 ### deployment
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
@@ -147,16 +147,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
+- Graphify — Agent skill and CLI that maps a codebase into a queryable knowledge graph instead of a vector index
 - Letta — Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK
 - Mem0 — Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval
 - Memoriq — Private AI memory layer that learns from your conversations and documents
-- Redis — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 
 ### model-registry
 - awesome-opensource-ai — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
-- DVC — Open-source data and model versioning tool for ML projects and pipelines
-- Hugging Face Hub — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
+- DVC — Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
+- Hugging Face Hub — The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client
 - MLflow — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 
 ### monitoring

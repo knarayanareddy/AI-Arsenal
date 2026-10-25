@@ -85,7 +85,7 @@ Follow the official documentation at https://github.com/axolotl-ai-cloud/axolotl
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Axolotl, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Axolotl is a training framework you run on your own GPUs, which means you own the environment: CUDA, flash-attention and DeepSpeed versions, plus multi-node launch.
 - Documentation for Axolotl describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Axolotl overlaps `llamafactory`, `mlx-lm`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 

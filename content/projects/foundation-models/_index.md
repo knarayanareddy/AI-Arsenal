@@ -46,13 +46,13 @@ Before selecting a foundation model:
 
 ### Most Popular
 
+- [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 104597
 - [Whisper](./whisper.md) — ⭐ 104543
-- [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
 - [GPT-SoVITS](./gpt-sovits.md) — ⭐ 59564
-- [Segment Anything (SAM)](./segment-anything.md) — ⭐ 54527
+- [Segment Anything (SAM)](./segment-anything.md) — ⭐ 55055
 - [ChatTTS](./chattts.md) — ⭐ 39874
-- [Bark](./bark.md) — ⭐ 39191
-- [OpenVoice](./openvoice.md) — ⭐ 36917
+- [Bark](./bark.md) — ⭐ 39277
+- [OpenVoice](./openvoice.md) — ⭐ 38060
 - [CLIP (OpenAI)](./clip.md) — ⭐ 34382
 - [VoxCPM](./voxcpm.md) — ⭐ 33194
 - [Fish Speech](./fish-speech.md) — ⭐ 31234
@@ -81,7 +81,7 @@ Before selecting a foundation model:
 - [Fara](./fara.md) — Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 - [Fish Speech](./fish-speech.md) — An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast
 - [FLUX (Black Forest Labs)](./flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-- [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
+- [Gemma](./gemma.md) — The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
 - [GLM-5](./glm-5.md) — Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare
@@ -116,8 +116,8 @@ Before selecting a foundation model:
 - [OpenPhone](./openphone.md) — HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents
 - [OpenVoice](./openvoice.md) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-- [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
-- [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
+- [Phi Cookbook](./phi-cookbook.md) — Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile
+- [Qwen](./qwen.md) — Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [Qwen3-Omni](./qwen3-omni.md) — Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech
 - [Qwen3-TTS](./qwen3-tts.md) — Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages

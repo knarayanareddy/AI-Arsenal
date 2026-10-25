@@ -21,9 +21,9 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-24"
 added_by: maintainer
-status: active
+status: watching
 id: deepseek-vl
 name: "DeepSeek-VL"
 artifact_type: model
@@ -40,7 +40,7 @@ tags:
   - "inference"
 maturity: beta
 cost_model: open-source
-github_stars: 4132
+github_stars: 4188
 last_commit: "2024-04-24"
 docs_url: https://github.com/deepseek-ai/DeepSeek-VL
 phase: foundation-model
@@ -62,7 +62,7 @@ best_for:
 avoid_if:
   - "You need the newest state of the art, where later VL models (including DeepSeek's own successors) surpass it"
   - "You need lightweight edge inference, since VLMs require significant GPU memory"
-enrichment_notes: "Repository, MIT license, and 2024-04-24 activity verified via the GitHub API on 2026-07-12. Superseded by newer DeepSeek VL releases; included as an MIT-licensed reference model."
+enrichment_notes: "Repository, MIT license, and 2024-04-24 activity verified via the GitHub API on 2026-07-12. Superseded by newer DeepSeek VL releases; included as an MIT-licensed reference model. Dormancy re-checked 2026-10-24, when the GitHub API reported 4188 stars and last push 2024-04-24; claims in the entry re-read against the repository."
 ---
 
 ## Overview

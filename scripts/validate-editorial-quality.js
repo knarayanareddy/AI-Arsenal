@@ -8,7 +8,12 @@ import { getChangedMarkdownFiles, isContentEntryCandidate } from './utils/change
 import { applyBaseline, parseBaseline } from './utils/editorial-baseline.js';
 
 // Committed, human-reviewed baseline of pre-existing full-catalog findings.
-// Only consulted in --all mode; changed-file mode stays strict and baseline-free.
+// Consulted in both modes: --all validates the whole catalog against it, and
+// --changed-only suppresses a finding that is already on record for that exact
+// file, rule and sentence, so fixing one sentence in a legacy entry does not
+// require re-authoring the other fifteen. Anything not on record still fails —
+// new entries have no baseline entries at all, and a new boilerplate sentence is
+// a new fingerprint even in an already-baselined file.
 export const BASELINE_PATH = 'docs/editorial-baseline.json';
 
 // Entry kinds that receive bespoke per-section editorial rules. Other content
@@ -109,8 +114,37 @@ const GENERIC_BODY_PATTERNS = [
   /independent production evidence is not established in this first pass/i,
   /a fresh evaluation or research contribution for AI engineering/i,
   /a focused engineering use case aligned with the repository description/i,
-  /this entry keeps the architecture summary deliberately high-level until independent reproduction/i
+  /this entry keeps the architecture summary deliberately high-level until independent reproduction/i,
+  // The 2026-06/07 bulk-authoring batches produced a second generation of
+  // template prose that the earlier patterns did not name. Each of these
+  // sentences is produced by filling a fixed frame with the entry's own
+  // description and alternative ids, so it states no fact about the subject.
+  // They are matched as one family rather than one-by-one so a new frame
+  // variant is a deliberate addition to this list, not an accident.
+  /the choice between them is a deployment and cost decision before it is a capability one/i,
+  /rests on its documentation and observed adoption rather than on a controlled comparison here/i,
+  /which is the specific claim the rest of the entry has to support/i,
+  /the engineering question with .{0,120} is not whether it works but what it commits you to/i,
+  /which is the part you have to evaluate against your own workload/i,
+  /which is the part to check against your own pipeline before trusting the feature list/i,
+  /that reading the feature list does not/i,
+  /rather than against projects in adjacent phases/i,
+  /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i,
+  /either survives contact with your data or does not/i,
+  /comes down to one question: who runs the process when it breaks/i,
+  /as a service with a schema, not as code you own/i,
+  /included because this tool appears in current ai engineering tool comparisons/i,
+  /the deciding factor is operational cost and what you have to run, not the feature list/i,
+  /the mechanism named in this entry's architecture is what to check against your own pipeline/i
 ];
+
+// Claims that the subject is a hosted service. They are plausible for an API
+// product and false for a library, so they are checked against the entry's own
+// frontmatter rather than against prose style: a self-hostable or open-source
+// tool cannot simultaneously have "no self-hosted path". This caught 62
+// entries that described an Apache/MIT library as a vendor service while the
+// same file documented its docker image.
+const HOSTED_ONLY_CLAIMS = /there is no self-hosted path to|sits at the hosted end of that axis|depending on .{0,80} means depending on a service rather than a package/i;
 
 const GENERIC_FRONTMATTER_PATTERNS = [
   /problem space covered by an open-source component/i,
@@ -243,6 +277,7 @@ export const EDITORIAL_RULES = {
   TOOL_SECTION_TECH: 'tool-section-missing-technical-content',
   REPEATED_PARAGRAPH: 'repeated-paragraph',
   BODY_ECHOES_FRONTMATTER: 'body-section-echoes-frontmatter',
+  HOSTED_CLAIM_CONTRADICTED: 'hosted-claim-contradicted',
   GENERATOR_VERDICT_SENTENCE: 'generator-verdict-sentence',
   TLDR_ECHOES_FRONTMATTER: 'tldr-echoes-frontmatter'
 };
@@ -306,6 +341,23 @@ export function inspectEntry({ file, data, content }) {
     if (pattern.test(frontmatterText)) addIssue(issues, file, EDITORIAL_RULES.GENERIC_FRONTMATTER, `contains generic frontmatter judgment: ${pattern}`);
   }
   if (BAD_INTERPOLATION.test(bodyText)) addIssue(issues, file, EDITORIAL_RULES.BAD_INTERPOLATION, 'contains a likely grammatical interpolation error around "about"');
+
+  // A hosted-only claim against an entry that documents a self-hostable or
+  // open-source artifact is a contradiction inside one file, not a matter of
+  // taste: the reader is told both that there is a docker command and that
+  // there is no self-hosted path. Checked for tools and projects because both
+  // carry the fields that make the claim verifiable.
+  // `self_hostable` is the field that actually settles it. An open-source SDK
+  // for a hosted product (Galileo, Weights & Biases) sets source_url? and
+  // open_source: true while the product itself is hosted-only, so neither of
+  // those may be read as "you can run this". For project entries the
+  // artifact_type separates a model/library/framework from a platform/service.
+  const selfHostable = data.self_hostable === true;
+  const codeArtifact = kind === 'project'
+    && ['model', 'library', 'framework', 'tool', 'dataset'].includes(data.artifact_type);
+  if (HOSTED_ONLY_CLAIMS.test(bodyText) && (selfHostable || codeArtifact)) {
+    addIssue(issues, file, EDITORIAL_RULES.HOSTED_CLAIM_CONTRADICTED, 'claims the subject is a hosted-only service while its own frontmatter documents a self-hostable or open-source artifact');
+  }
 
   // Vibes-only prose, checked per section across every entry kind. Two praise
   // adjectives close together with no concrete signal between them is the
@@ -476,7 +528,7 @@ export function selectEntries(entries, { mode, date, changed = new Set() } = {})
   return { selected: entries.filter(isSupported), catalogWide: entries.filter((entry) => isInspectable(entry) && !isSupported(entry)), structuralOnly: [] };
 }
 
-export async function validateEditorialQuality({ mode = 'changed', date = null, base = 'origin/main' } = {}) {
+export async function validateEditorialQuality({ mode = 'changed', date = null, base = 'origin/main', baseline = null } = {}) {
   const files = await getEntryFiles();
   const entries = [];
   for (const file of files) {
@@ -519,6 +571,16 @@ export async function validateEditorialQuality({ mode = 'changed', date = null, 
     structuralOnly: structuralOnly.map((entry) => entry.file),
     issues
   };
+}
+
+// Partition changed-file findings against the committed baseline. A changed
+// entry may keep the debt it already had on record; it may not acquire more.
+// The returned `preExisting` findings are printed for visibility (they are the
+// re-authoring worklist for these files) but do not fail the gate.
+export function partitionChangedFindings(issues, baselineMap) {
+  if (!baselineMap || baselineMap.size === 0) return { issues, preExisting: [] };
+  const { newFindings, suppressed } = applyBaseline(issues, baselineMap);
+  return { issues: newFindings, preExisting: suppressed };
 }
 
 export function formatIssue({ file, rule, message }) {
@@ -573,8 +635,15 @@ async function main() {
   // from GITHUB_BASE_SHA in CI (and fail closed if it cannot be established).
   const base = baseIndex >= 0 ? process.argv[baseIndex + 1] : undefined;
 
+  const baseline = await loadBaseline();
   const result = await validateEditorialQuality({ mode: 'changed', date, base });
+  const { issues, preExisting } = partitionChangedFindings(result.issues, baseline);
+  result.issues = issues;
   const scope = result.mode === 'date' ? `entries dated ${result.targetDate}` : `${result.mode} entries`;
+  if (preExisting.length) {
+    console.log(`Note: ${preExisting.length} pre-existing finding(s) in the changed entries are on record in ${BASELINE_PATH} and are not treated as regressions:`);
+    for (const issue of preExisting) console.log(`- ${formatIssue(issue)}`);
+  }
   if (result.structuralOnly.length) {
     console.log(`Note: ${result.structuralOnly.length} changed entr${result.structuralOnly.length === 1 ? 'y receives' : 'ies receive'} structural-only validation (no bespoke editorial rules yet): ${result.structuralOnly.join(', ')}`);
   }

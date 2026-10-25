@@ -79,7 +79,7 @@ Follow the official documentation at https://github.com/Giskard-AI/giskard-oss f
 
 - What Giskard gives you that its headline description does not: giskard wraps a target model/application with a suite of adversarial and statistical test cases, producing a vulnerability report that can gate deployment in CI, which is the part to check against your own pipeline before trusting the feature list.
 - No direct sibling is catalogued for Giskard in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Depending on Giskard means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Giskard scans models and datasets in-process; the continuous-scanning dashboards are the hosted product, so the open-source path is a scripted test run you wire into CI.
 - What this entry cannot give you is measured behaviour: measure Giskard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use

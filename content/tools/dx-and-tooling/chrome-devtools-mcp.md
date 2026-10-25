@@ -88,7 +88,7 @@ Run the server through npx, or use the bundled CLI directly for scripted inspect
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Chrome DevTools MCP, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- It is a local MCP server driving a Chrome instance over the DevTools protocol, so the browser version, its profile and its process lifetime are part of your deployment rather than the vendor's.
 - Documentation for Chrome DevTools MCP describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns

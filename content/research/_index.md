@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 20 entries | 2026-10-24 |
-| [architectures](./architectures/) | 16 entries | 2026-10-24 |
-| [evaluation and safety](./evaluation-and-safety/) | 28 entries | 2026-10-24 |
-| [foundational](./foundational/) | 18 entries | 2026-10-24 |
-| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-10-24 |
-| [retrieval and memory](./retrieval-and-memory/) | 22 entries | 2026-10-24 |
-| [surveys](./surveys/) | 3 entries | 2026-10-24 |
-| [training and alignment](./training-and-alignment/) | 19 entries | 2026-10-24 |
+| [agents and reasoning](./agents-and-reasoning/) | 20 entries | 2026-10-25 |
+| [architectures](./architectures/) | 16 entries | 2026-10-25 |
+| [evaluation and safety](./evaluation-and-safety/) | 28 entries | 2026-10-25 |
+| [foundational](./foundational/) | 18 entries | 2026-10-25 |
+| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-10-25 |
+| [retrieval and memory](./retrieval-and-memory/) | 22 entries | 2026-10-25 |
+| [surveys](./surveys/) | 3 entries | 2026-10-25 |
+| [training and alignment](./training-and-alignment/) | 19 entries | 2026-10-25 |
 
 ## Recently Added
 

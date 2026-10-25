@@ -84,7 +84,7 @@ Follow the official documentation at https://github.com/bentoml/OpenLLM#readme f
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to OpenLLM, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- OpenLLM is a serving layer you run yourself, and its supported-model and adapter coverage lags vLLM and SGLang, so the newest architectures arrive later.
 - Documentation for OpenLLM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - OpenLLM is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 

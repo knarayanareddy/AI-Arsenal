@@ -73,13 +73,13 @@ docker run -it --gpus all -p 8080:8080 -v $HOME/.tabby:/data tabbyml/tabby serve
 ## Strengths
 
 - What Tabby gives you that its headline description does not: a single binary/container runs model serving (llama.cpp-based), a code-index pipeline over your repos, and the API that IDE plugins consume; teams administer models, users, and analytics from a web console, which is the part to check against your own pipeline before trusting the feature list.
-- Against `continue-dev`, `github-copilot`, the difference that decides this is deployment model and cost rather than the feature list, and Tabby sits at the hosted end of that axis.
-- Depending on Tabby means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Against `continue-dev`, `github-copilot`, the split is where the model runs: Tabby is a self-hosted server with its own GPU, Continue is a client that points at any provider, and Copilot is hosted.
+- Operating Tabby means owning the inference GPU, the repository index and the upgrade path for its IDE plugins.
 - What this entry cannot give you is measured behaviour: measure Tabby's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Tabby, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- The GPU is the real cost: completion latency depends on a model that fits your card, and the retrieval index grows with every repository you connect.
 - Documentation for Tabby describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 - Where Tabby overlaps `continue-dev`, `github-copilot`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
