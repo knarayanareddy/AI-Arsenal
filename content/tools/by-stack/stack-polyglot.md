@@ -86,7 +86,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
 | [Redis](../orchestration/redis-memory.md) | orchestration | memory-management | self-hostable | Yes | Yes | Yes | polyglot | recommended |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | production-serving, deployment, fine-tuning | usage-based | No | No | No | python, polyglot | solid-choice |
-| [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | data-labeling | paid | Yes | No | No | polyglot | recommended |
+| [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | data-labeling | paid | No | No | No | polyglot | solid-choice |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Temporal](../orchestration/temporal.md) | orchestration | orchestration | self-hostable | Yes | Yes | Yes | go, polyglot | recommended |
 | [Together AI](../model-layer/together-ai.md) | model layer | production-serving, fine-tuning | usage-based | Yes | No | No | python, polyglot | recommended |

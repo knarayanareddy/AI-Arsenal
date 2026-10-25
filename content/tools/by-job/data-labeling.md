@@ -139,8 +139,8 @@ This table is exhaustive for tools tagged with job = data-labeling.
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | usage-based | Yes | No | No | python | solid-choice |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
-| [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | Yes | No | No | python | recommended |
-| [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | Yes | No | No | polyglot | recommended |
+| [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | No | Yes | No | python | recommended |
+| [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | No | No | No | polyglot | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

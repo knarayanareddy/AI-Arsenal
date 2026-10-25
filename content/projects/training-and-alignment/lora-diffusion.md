@@ -11,7 +11,7 @@ api_compatible: null
 org_or_maintainer: "cloneofsimo"
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: []
+alternatives: [stable-diffusion-webui, peft]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft

@@ -210,7 +210,7 @@
 | `ruby-llm` | [RubyLLM](./orchestration/ruby-llm.md) | Idiomatic Ruby client for multi-provider chat, tool calling, structured output and embeddings |
 | `runanywhere-sdks` | [RunAnywhere SDKs](./serving-and-deployment/runanywhere-sdks.md) | Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core |
 | `runpod` | [RunPod](./serving-and-deployment/runpod.md) | GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints |
-| `scale-ai` | [Scale AI](./data-ingestion/scale-ai.md) | Managed data labeling and data engine platform for enterprise AI datasets |
+| `scale-ai` | [Scale AI](./data-ingestion/scale-ai.md) | Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects |
 | `scrapegraphai` | [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) | LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors |
 | `screenpipe` | [Screenpipe](./data-ingestion/screenpipe.md) | Local daemon recording screen OCR and audio transcripts into a queryable store for agents |
 | `seaticket` | [SeaTicket](./orchestration/seaticket.md) | Unify and resolve customer-support issues with autonomous AI agents |

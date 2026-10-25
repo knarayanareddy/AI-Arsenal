@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 94 entries | 2026-10-24 |
-| [benchmarks and evals](./benchmarks-and-evals/) | 32 entries | 2026-10-24 |
-| [data and retrieval](./data-and-retrieval/) | 90 entries | 2026-10-24 |
-| [foundation models](./foundation-models/) | 79 entries | 2026-10-24 |
-| [frameworks](./frameworks/) | 122 entries | 2026-10-24 |
-| [inference engines](./inference-engines/) | 62 entries | 2026-10-24 |
-| [training and alignment](./training-and-alignment/) | 32 entries | 2026-10-24 |
+| [agent systems](./agent-systems/) | 94 entries | 2026-10-25 |
+| [benchmarks and evals](./benchmarks-and-evals/) | 32 entries | 2026-10-25 |
+| [data and retrieval](./data-and-retrieval/) | 90 entries | 2026-10-25 |
+| [foundation models](./foundation-models/) | 79 entries | 2026-10-25 |
+| [frameworks](./frameworks/) | 122 entries | 2026-10-25 |
+| [inference engines](./inference-engines/) | 62 entries | 2026-10-25 |
+| [training and alignment](./training-and-alignment/) | 32 entries | 2026-10-25 |
 
 ## Recently Added
 
@@ -139,7 +139,7 @@
 - [DeepSearcher](./data-and-retrieval/deep-searcher.md) — Deep research agent that searches a private corpus in Milvus and writes a cited report from the retrieved evidence
 - [DeepAnalyze](./agent-systems/deepanalyze.md) — Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports
 - [deepcode-cli](./agent-systems/deepcode-cli.md) — TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
-- [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
+- [DeepEval](./benchmarks-and-evals/deepeval.md) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
 - [Deep Lake](./data-and-retrieval/deeplake.md) — Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage
 - [DeepSeek Harness](./agent-systems/deepseek-harness.md) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
 - [DeepSeek-OCR](./foundation-models/deepseek-ocr.md) — DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens
@@ -187,7 +187,7 @@
 - [FLUX (Black Forest Labs)](./foundation-models/flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - [Flyte](./frameworks/flyte.md) — A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned
 - [FunASR](./frameworks/funasr.md) — An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
-- [Gemma](./foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
+- [Gemma](./foundation-models/gemma.md) — The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
 - [Gemma 3](./foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GenAI Processors](./frameworks/genai-processors.md) — Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
 - [Genkit](./frameworks/genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
@@ -216,7 +216,7 @@
 - [h2o-3](./frameworks/h2oai-h2o-3.md) — Distributed ML platform spanning AutoML, GLM, GBM, and model serving across data frames and Spark
 - [harness-anything](./agent-systems/harness-anything.md) — Windows-only Python toolset driving WPS, Microsoft Office, Zotero, Illustrator and Photoshop through 47 CLI commands over COM automation
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
-- [Helicone](./benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
+- [Helicone](./benchmarks-and-evals/helicone.md) — Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions
 - [Hermes Agent](./agent-systems/hermes-agent.md) — Nous Research's self-improving personal agent with a TUI, messaging gateway, skill authoring and seven terminal backends
 - [Hugging Face Diffusers](./frameworks/hf-diffusers.md) — The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch
 - [Hugging Face Optimum](./inference-engines/hf-optimum.md) — Hugging Face's extension of Transformers that accelerates training and inference on specialized hardware via ONNX Runtime, TensorRT, OpenVINO

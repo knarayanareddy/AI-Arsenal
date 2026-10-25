@@ -48,13 +48,13 @@ Before selecting an evaluation/observability platform:
 
 - [Langfuse](./langfuse.md) — ⭐ 29021
 - [Opik](./opik.md) — ⭐ 19609
-- [DeepEval](./deepeval.md) — ⭐ 16140
+- [DeepEval](./deepeval.md) — ⭐ 19090
 - [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — ⭐ 14355
 - [Phoenix](./phoenix.md) — ⭐ 10124
 - [OpenCompass](./opencompass.md) — ⭐ 7392
 - [OpenLLMetry](./openllmetry.md) — ⭐ 7000
+- [Helicone](./helicone.md) — ⭐ 6238
 - [SWE-bench](./swe-bench-swe-bench.md) — ⭐ 5928
-- [Helicone](./helicone.md) — ⭐ 5809
 - [Agenta](./agenta.md) — ⭐ 4787
 
 ### Browse All
@@ -67,9 +67,9 @@ Before selecting an evaluation/observability platform:
 - [BigCodeBench](./bigcodebench.md) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - [Braintrust](./braintrust.md) — TypeScript SDK that emits traces, runs scored evals and wraps OpenAI, LangChain, OpenTelemetry and Temporal code for the Braintrust platform
 - [cve-mcp-server](./cve-mcp-server.md) — A FastMCP server exposing 28 security tools across 24 APIs behind one triage_cve call that computes a composite risk score
-- [DeepEval](./deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
+- [DeepEval](./deepeval.md) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
 - [evalplus](./evalplus-evalplus.md) — Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests
-- [Helicone](./helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
+- [Helicone](./helicone.md) — Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions
 - [evaluate](./huggingface-evaluate.md) — A metrics registry where each metric declares the columns it needs, so a score is computed the same way in every project that uses it
 - [Langfuse](./langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [LangSmith](./langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback

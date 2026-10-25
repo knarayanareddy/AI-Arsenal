@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-24T22:16:54.684Z",
+  "generated_at": "2026-10-25T11:34:14.405Z",
   "config": {
     "document": {
       "id": "id",
@@ -90,18 +90,18 @@
       "graphs": 8,
       "self-hosted": 189,
       "planning": 21,
-      "guardrails": 48,
+      "guardrails": 49,
       "retrieval": 161,
       "kubernetes": 14,
       "monitoring": 44,
-      "evaluation": 247,
+      "evaluation": 246,
       "community-favorite": 10,
       "inference": 212,
       "training": 75,
       "multimodal": 160,
       "security": 87,
-      "fine-tuning": 91,
-      "rlhf": 26,
+      "fine-tuning": 92,
+      "rlhf": 27,
       "data": 137,
       "voice": 59,
       "research": 68,
@@ -127,7 +127,7 @@
       "stateful": 9,
       "jax": 3,
       "onnx": 4,
-      "transformers": 24,
+      "transformers": 25,
       "llamaindex": 3,
       "featured": 4,
       "docker": 6,
@@ -244,7 +244,7 @@
     },
     "audience": {
       "research": 69,
-      "production": 190,
+      "production": 191,
       "prototype": 146,
       "practitioner": 33,
       "founder": 9,
@@ -13930,7 +13930,7 @@
       "type": "project",
       "name": "DeepEval",
       "title": "DeepEval",
-      "description": "An open-source evaluation framework for testing LLM applications in CI",
+      "description": "A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library",
       "tags": [
         "evaluation",
         "llm",
@@ -13973,8 +13973,8 @@
       "url": "content/projects/benchmarks-and-evals/deepeval",
       "boost_title": "DeepEval",
       "boost_tags": "evaluation llm observability monitoring",
-      "boost_description": "An open-source evaluation framework for testing LLM applications in CI",
-      "body": "DeepEval An open-source evaluation framework for testing LLM applications in CI evaluation llm observability monitoring observability evaluation Overview An open source evaluation framework for testing LLM applications, designed to integrate with standard testing tools (pytest) and CI pipelines so LLM output quality can be checked automatically like conventional unit tests. The engineering question with DeepEval is not whether it works but what it commits you to in the benchmark and eval phase; under a open source cost model; with deepeval, name, version: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production. Why it's in the Arsenal The case…"
+      "boost_description": "A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library",
+      "body": "DeepEval A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library evaluation llm observability monitoring observability evaluation Overview DeepEval is an Apache 2.0 Python library that treats LLM output quality as a test suite: you construct LLMTestCase objects, attach metrics to them, and assert inside pytest, so a quality regression fails a build the same way a broken unit test does. The metric surface is wider than most single frameworks attempt — RAG faithfulness and contextual precision, agent trajectory metrics (task completion, tool correctness, step efficiency, plan adherence), multi turn conversation metrics, voice agent metrics, MCP server usage, multimodal image metrics, and the older hallucination/bias/toxic…"
     },
     {
       "id": "deeplake",
@@ -19660,7 +19660,7 @@
       "type": "project",
       "name": "Gemma",
       "title": "Gemma",
-      "description": "Google open model family designed for efficient language and multimodal applications",
+      "description": "The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4",
       "tags": [
         "llm",
         "inference",
@@ -19706,8 +19706,8 @@
       "url": "content/projects/foundation-models/gemma",
       "boost_title": "Gemma",
       "boost_tags": "llm inference multimodal local",
-      "boost_description": "Google open model family designed for efficient language and multimodal applications",
-      "body": "Gemma Google open model family designed for efficient language and multimodal applications llm inference multimodal local llms open-source-models Overview The first generation of Google DeepMind's open weight small language model family (Gemma 1/2), released in 2024 as dense decoder only transformer checkpoints and positioned as a lighter weight, locally deployable counterpart to the closed Gemini models. It shipped in 2B/7B (Gemma 1) and 2B/9B/27B (Gemma 2) sizes under a custom license. Why it's in the Arsenal The case for Gemma rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture A dense dec…"
+      "boost_description": "The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4",
+      "body": "Gemma The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4 llm inference multimodal local llms open-source-models Overview The first generation of Google DeepMind's open weight small language model family (Gemma 1/2), released in 2024 as dense decoder only transformer checkpoints and positioned as a lighter weight, locally deployable counterpart to the closed Gemini models. It shipped in 2B/7B (Gemma 1) and 2B/9B/27B (Gemma 2) sizes under a custom license. Why it's in the Arsenal This entry exists for the weights, not the generation: a large share of the quantised GGUF releases, LoRA fine tunes and evaluation numbers circulating in 2026 were produced against gemma 2 9b it and gemma 2 27b it, and reproduc…"
     },
     {
       "id": "gemma-3",
@@ -22693,7 +22693,7 @@
       "type": "project",
       "name": "Helicone",
       "title": "Helicone",
-      "description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
+      "description": "Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions",
       "tags": [
         "observability",
         "monitoring",
@@ -22737,8 +22737,8 @@
       "url": "content/projects/benchmarks-and-evals/helicone",
       "boost_title": "Helicone",
       "boost_tags": "observability monitoring cloud self-hosted",
-      "boost_description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
-      "body": "Helicone Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics observability monitoring cloud self-hosted observability tracing Overview An open source LLM observability platform using a proxy based integration model, providing tracing, cost tracking, and caching for LLM applications with minimal code changes required. Why it's in the Arsenal Helicone appears in this catalog as a reference point for the benchmark and eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to. Architecture Operates primarily as a proxy that sits between an application and its LLM provider (requi…"
+      "boost_description": "Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions",
+      "body": "Helicone Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions observability monitoring cloud self-hosted observability tracing Overview Helicone is a Y Combinator backed (W23), Apache 2.0 platform whose integration surface is a URL. You point your OpenAI compatible client at https://ai gateway.helicone.ai with a Helicone key, and the gateway does two jobs at once: it routes the request to one of 100+ providers (OpenAI, Anthropic, Gemini, Bedrock, Groq, Together, Fireworks, Ollama and the rest) with automatic fallbacks, and it records the request, the response, the token cost and the timing as a trace. Nothing in the application imports a Helicone library to get the observability; the async logging SDK exists for team…"
     },
     {
       "id": "helm",
@@ -30500,7 +30500,7 @@
       "boost_title": "LitGPT",
       "boost_tags": "fine-tuning training llm",
       "boost_description": "Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale",
-      "body": "LitGPT Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale fine-tuning training llm llms frameworks Overview A library of 20+ LLM architectures reimplemented from scratch in readable PyTorch, with command line recipes for pretraining, LoRA/QLoRA fine tuning, continued pretraining, and deployment. The design bet is transparency: no framework indirection between you and the model code, while Lightning Fabric supplies distributed training (FSDP, DDP, TPU) when you scale. Why it's in the Arsenal The case for LitGPT rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you t…"
+      "body": "LitGPT Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale fine-tuning training llm llms frameworks Overview A library of 20+ LLM architectures reimplemented from scratch in readable PyTorch, with command line recipes for pretraining, LoRA/QLoRA fine tuning, continued pretraining, and deployment. The design bet is transparency: no framework indirection between you and the model code, while Lightning Fabric supplies distributed training (FSDP, DDP, TPU) when you scale. Why it's in the Arsenal Most fine tuning tooling hides the model behind a configuration schema, which is the right trade until the thing you need to change is in the model. LitGPT takes the opposite position: every architectur…"
     },
     {
       "id": "litserve",
@@ -44700,7 +44700,8 @@
       "description": "Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows",
       "tags": [
         "data",
-        "evaluation"
+        "fine-tuning",
+        "transformers"
       ],
       "category": null,
       "subcategory": null,
@@ -44709,7 +44710,8 @@
       "status": "active",
       "phase": "data-ingestion",
       "audience": [
-        "research"
+        "research",
+        "production"
       ],
       "domain": null,
       "relation_to_stack": null,
@@ -44735,9 +44737,9 @@
       "path": "content/tools/data-ingestion/prodigy.md",
       "url": "content/tools/data-ingestion/prodigy",
       "boost_title": "Prodigy",
-      "boost_tags": "data evaluation",
+      "boost_tags": "data fine-tuning transformers",
       "boost_description": "Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows",
-      "body": "Prodigy Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows data evaluation TL;DR: the data labeling entry for Prodigy. Scriptable annotation tool for NLP, data labeling, and model in the loop workflows — the deciding factor is operational cost and what you have to run, not the feature list. Overview A scriptable, model in the loop annotation tool for NLP tasks, where small Python 'recipes' can actively select the most useful examples to label next, improving annotation efficiency. Why It's in the Arsenal Prodigy is catalogued as a scriptable annotation tool for NLP, data labeling, and model in the loop workflows, which is the specific claim the rest of the entry has…"
+      "body": "Prodigy Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows data fine-tuning transformers TL;DR: Prodigy is a Python package with a bundled web app that runs entirely on your own machines no cloud, air gap capable, lifetime licence. Its distinguishing idea is that a recipe script decides what the annotator sees next, so a model's uncertainty picks the examples and each pass retrains. It is a developer tool for a small expert team, not a managed platform for a crowd of annotators. Overview Prodigy is a downloadable Python package that ships with a local web application. You install it on a machine you control, start a \"recipe\" a Python function that declares where examples come fro…"
     },
     {
       "id": "production-rag",
@@ -50066,9 +50068,11 @@
       "type": "tool",
       "name": "Scale AI",
       "title": "Scale AI",
-      "description": "Managed data labeling and data engine platform for enterprise AI datasets",
+      "description": "Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects",
       "tags": [
         "data",
+        "rlhf",
+        "guardrails",
         "cloud"
       ],
       "category": null,
@@ -50104,9 +50108,9 @@
       "path": "content/tools/data-ingestion/scale-ai.md",
       "url": "content/tools/data-ingestion/scale-ai",
       "boost_title": "Scale AI",
-      "boost_tags": "data cloud",
-      "boost_description": "Managed data labeling and data engine platform for enterprise AI datasets",
-      "body": "Scale AI Managed data labeling and data engine platform for enterprise AI datasets data cloud TL;DR: Scale AI covers the data labeling leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview A managed enterprise data labeling and data engine platform providing outsourced annotation workforce and pipeline operations for large scale AI training datasets. Treat Scale AI as a service with a schema, not as code you own unlike argilla, label studio; on the data labeling path; under a paid cost model; with scale ai, name, scale. The cache, the retry policy and an explicit timeout are your respon…"
+      "boost_tags": "data rlhf guardrails cloud",
+      "boost_description": "Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects",
+      "body": "Scale AI Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects data rlhf guardrails cloud TL;DR: Scale AI sells annotation capacity and a data engine as enterprise projects — collection, labeling, RLHF, red teaming and evaluation across text, image, video and LiDAR. It is the right buy when the constraint is specialist human labour you do not want to employ. It is the wrong buy when the constraint is confidentiality: nothing here is self hostable, and since Meta took 49% in 2025 the supplier neutrality argument no longer holds. Overview Scale AI is a managed labelling and training data business rather than a tool you install. You hand over raw data and an annotation specification;…"
     },
     {
       "id": "schick-2023-toolformer",

@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 454
+    "count": 423
   },
   "entries": [
     {
@@ -19,66 +19,6 @@
       "file": "content/projects/benchmarks-and-evals/bigcodebench.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::2e885ead3e3f14e6",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::800e048f6ced5b16",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::9969f75e74eadf56",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::9b08c9da232c4a56",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::e1b473d510740d72",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/deepeval.md::rejected-boilerplate::e54cb9e51a8f9662",
-      "file": "content/projects/benchmarks-and-evals/deepeval.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the engineering question with .{#,#} is not whether it works but what it commits you to/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/helicone.md::rejected-boilerplate::03e550a33b1567e7",
-      "file": "content/projects/benchmarks-and-evals/helicone.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/helicone.md::rejected-boilerplate::2f32b390c03fbdc8",
-      "file": "content/projects/benchmarks-and-evals/helicone.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/helicone.md::rejected-boilerplate::37e6e2da164721f0",
-      "file": "content/projects/benchmarks-and-evals/helicone.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/helicone.md::rejected-boilerplate::9c531d29f54a611c",
-      "file": "content/projects/benchmarks-and-evals/helicone.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
     },
     {
       "fingerprint": "content/projects/benchmarks-and-evals/langfuse.md::rejected-boilerplate::1bae2ee3c2451366",
@@ -433,36 +373,6 @@
       "file": "content/projects/foundation-models/gemma-3.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma.md::rejected-boilerplate::1d5c7e0f3ce592a4",
-      "file": "content/projects/foundation-models/gemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma.md::rejected-boilerplate::93160fc7258c3b68",
-      "file": "content/projects/foundation-models/gemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma.md::rejected-boilerplate::dd38ac7801fb18e6",
-      "file": "content/projects/foundation-models/gemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma.md::rejected-boilerplate::dd41169cae82ac43",
-      "file": "content/projects/foundation-models/gemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma.md::rejected-boilerplate::ff2d2d258d2685e8",
-      "file": "content/projects/foundation-models/gemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
     },
     {
       "fingerprint": "content/projects/foundation-models/glm-4.md::rejected-boilerplate::20c92cd6a109dbfc",
@@ -1263,36 +1173,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/training-and-alignment/litgpt.md::rejected-boilerplate::4a21f9eef0586334",
-      "file": "content/projects/training-and-alignment/litgpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/litgpt.md::rejected-boilerplate::730da272e3035833",
-      "file": "content/projects/training-and-alignment/litgpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/litgpt.md::rejected-boilerplate::78dc32d6db3949cc",
-      "file": "content/projects/training-and-alignment/litgpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/litgpt.md::rejected-boilerplate::801d86dad0202995",
-      "file": "content/projects/training-and-alignment/litgpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/litgpt.md::rejected-boilerplate::f131f22a9fccc8fb",
-      "file": "content/projects/training-and-alignment/litgpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
       "fingerprint": "content/projects/training-and-alignment/ms-swift.md::rejected-boilerplate::7c4170221f67da2c",
       "file": "content/projects/training-and-alignment/ms-swift.md",
       "rule": "rejected-boilerplate",
@@ -1497,36 +1377,6 @@
       "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/prodigy.md::rejected-boilerplate::32b054e0ed3526c1",
-      "file": "content/tools/data-ingestion/prodigy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/prodigy.md::rejected-boilerplate::58a5f14ccb735fca",
-      "file": "content/tools/data-ingestion/prodigy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/prodigy.md::rejected-boilerplate::bf74981925aa0e42",
-      "file": "content/tools/data-ingestion/prodigy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the specific claim the rest of the entry has to support/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/prodigy.md::rejected-boilerplate::ecda3f180e82bbaa",
-      "file": "content/tools/data-ingestion/prodigy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/prodigy.md::rejected-boilerplate::f4d6fbab2a9918b5",
-      "file": "content/tools/data-ingestion/prodigy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/puppeteer.md::rejected-boilerplate::755d1d08f7f82081",
       "file": "content/tools/data-ingestion/puppeteer.md",
       "rule": "rejected-boilerplate",
@@ -1537,42 +1387,6 @@
       "file": "content/tools/data-ingestion/puppeteer.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::152f4a4ea7da39d8",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::73ebaa02b707bfcf",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::879e5702d0969461",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::97802a97571b40c9",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /as a service with a schema, not as code you own/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::c77db5f430fe5f1f",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the specific claim the rest of the entry has to support/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/scale-ai.md::rejected-boilerplate::e24abe501bd8097d",
-      "file": "content/tools/data-ingestion/scale-ai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
     },
     {
       "fingerprint": "content/tools/data-ingestion/tabstack.md::rejected-boilerplate::d2a5e4348540e823",

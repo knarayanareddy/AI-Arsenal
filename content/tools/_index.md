@@ -6,15 +6,15 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-10-24 |
-| [by job](./by-job/) | 14 entries | 2026-10-24 |
-| [by stack](./by-stack/) | 9 entries | 2026-10-24 |
-| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-24 |
-| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-24 |
-| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-24 |
-| [model layer](./model-layer/) | 34 entries | 2026-10-24 |
-| [orchestration](./orchestration/) | 40 entries | 2026-10-24 |
-| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-24 |
+| [by cost](./by-cost/) | 5 entries | 2026-10-25 |
+| [by job](./by-job/) | 14 entries | 2026-10-25 |
+| [by stack](./by-stack/) | 9 entries | 2026-10-25 |
+| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-25 |
+| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-25 |
+| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-25 |
+| [model layer](./model-layer/) | 34 entries | 2026-10-25 |
+| [orchestration](./orchestration/) | 40 entries | 2026-10-25 |
+| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-25 |
 
 ## Recently Added
 
@@ -256,7 +256,7 @@ _No star-tracked entries yet._
 - [RubyLLM](./orchestration/ruby-llm.md) — Idiomatic Ruby client for multi-provider chat, tool calling, structured output and embeddings
 - [RunAnywhere SDKs](./serving-and-deployment/runanywhere-sdks.md) — Cross-platform SDKs running LLMs, vision and speech models on device through one C++ core
 - [RunPod](./serving-and-deployment/runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
-- [Scale AI](./data-ingestion/scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [Scale AI](./data-ingestion/scale-ai.md) — Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects
 - [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
 - [Screenpipe](./data-ingestion/screenpipe.md) — Local daemon recording screen OCR and audio transcripts into a queryable store for agents
 - [SeaTicket](./orchestration/seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents

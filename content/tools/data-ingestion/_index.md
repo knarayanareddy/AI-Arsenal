@@ -73,7 +73,7 @@ _No star-tracked entries yet._
 - [Puppeteer](./puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [RAGatouille](./ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [Reducto](./reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
-- [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [Scale AI](./scale-ai.md) — Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects
 - [ScrapeGraphAI](./scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
 - [Screenpipe](./screenpipe.md) — Local daemon recording screen OCR and audio transcripts into a queryable store for agents
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API

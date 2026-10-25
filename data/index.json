@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T22:16:49.003Z",
+    "generated_at": "2026-10-25T11:34:09.555Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -5313,7 +5313,7 @@
       "id": "deepeval",
       "type": "project",
       "name": "DeepEval",
-      "description": "An open-source evaluation framework for testing LLM applications in CI",
+      "description": "A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library",
       "tags": [
         "evaluation",
         "llm",
@@ -5322,7 +5322,7 @@
       ],
       "path": "content/projects/benchmarks-and-evals/deepeval.md",
       "url": "content/projects/benchmarks-and-evals/deepeval",
-      "last_updated": "2026-07-01",
+      "last_updated": "2026-10-25",
       "category": "observability",
       "maturity": "production",
       "cost_model": "open-source",
@@ -7532,7 +7532,7 @@
       "id": "gemma",
       "type": "project",
       "name": "Gemma",
-      "description": "Google open model family designed for efficient language and multimodal applications",
+      "description": "The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4",
       "tags": [
         "llm",
         "inference",
@@ -8704,7 +8704,7 @@
       "id": "helicone",
       "type": "project",
       "name": "Helicone",
-      "description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
+      "description": "Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions",
       "tags": [
         "observability",
         "monitoring",
@@ -8713,7 +8713,7 @@
       ],
       "path": "content/projects/benchmarks-and-evals/helicone.md",
       "url": "content/projects/benchmarks-and-evals/helicone",
-      "last_updated": "2026-07-01",
+      "last_updated": "2026-10-25",
       "category": "observability",
       "maturity": "production",
       "cost_model": "freemium",
@@ -11704,7 +11704,7 @@
       ],
       "path": "content/projects/training-and-alignment/litgpt.md",
       "url": "content/projects/training-and-alignment/litgpt",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-25",
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
@@ -17219,11 +17219,12 @@
       "description": "Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows",
       "tags": [
         "data",
-        "evaluation"
+        "fine-tuning",
+        "transformers"
       ],
       "path": "content/tools/data-ingestion/prodigy.md",
       "url": "content/tools/data-ingestion/prodigy",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
@@ -19310,14 +19311,16 @@
       "id": "scale-ai",
       "type": "tool",
       "name": "Scale AI",
-      "description": "Managed data labeling and data engine platform for enterprise AI datasets",
+      "description": "Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects",
       "tags": [
         "data",
+        "rlhf",
+        "guardrails",
         "cloud"
       ],
       "path": "content/tools/data-ingestion/scale-ai.md",
       "url": "content/tools/data-ingestion/scale-ai",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "paid",

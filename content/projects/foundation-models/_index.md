@@ -81,7 +81,7 @@ Before selecting a foundation model:
 - [Fara](./fara.md) — Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 - [Fish Speech](./fish-speech.md) — An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast
 - [FLUX (Black Forest Labs)](./flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-- [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
+- [Gemma](./gemma.md) — The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
 - [GLM-5](./glm-5.md) — Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare

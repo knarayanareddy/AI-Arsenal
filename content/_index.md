@@ -6,18 +6,18 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 29 entries | 2026-10-24 |
-| [benchmarks](./benchmarks/) | 52 entries | 2026-10-24 |
-| [build examples](./build-examples/) | 11 entries | 2026-10-24 |
-| [community](./community/) | 58 entries | 2026-10-24 |
-| [digests](./digests/) | 1 entries | 2026-10-24 |
-| [observability](./observability/) | 16 entries | 2026-10-24 |
-| [projects](./projects/) | 511 entries | 2026-10-24 |
-| [research](./research/) | 142 entries | 2026-10-24 |
-| [skills](./skills/) | 28 entries | 2026-10-24 |
-| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-24 |
-| [tools](./tools/) | 277 entries | 2026-10-24 |
-| [trending](./trending/) | 4 entries | 2026-10-24 |
+| [architectures](./architectures/) | 29 entries | 2026-10-25 |
+| [benchmarks](./benchmarks/) | 52 entries | 2026-10-25 |
+| [build examples](./build-examples/) | 11 entries | 2026-10-25 |
+| [community](./community/) | 58 entries | 2026-10-25 |
+| [digests](./digests/) | 1 entries | 2026-10-25 |
+| [observability](./observability/) | 16 entries | 2026-10-25 |
+| [projects](./projects/) | 511 entries | 2026-10-25 |
+| [research](./research/) | 142 entries | 2026-10-25 |
+| [skills](./skills/) | 28 entries | 2026-10-25 |
+| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-25 |
+| [tools](./tools/) | 277 entries | 2026-10-25 |
+| [trending](./trending/) | 4 entries | 2026-10-25 |
 
 ## Recently Added
 
@@ -327,7 +327,7 @@
 - [DeepAnalyze](./projects/agent-systems/deepanalyze.md) — Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports
 - [Deepchecks](./tools/evaluation-and-observability/deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 - [deepcode-cli](./projects/agent-systems/deepcode-cli.md) — TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
-- [DeepEval](./projects/benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
+- [DeepEval](./projects/benchmarks-and-evals/deepeval.md) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
 - [Deep Lake](./projects/data-and-retrieval/deeplake.md) — Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage
 - [DeepLearning.AI (YouTube)](./community/creators/deeplearningai-youtube.md) — 
 - [DeepSeek-V3 Technical Report](./research/architectures/deepseek-ai-2024-deepseek-v3.md) — DeepSeek-V3: a 671B-parameter MoE (37B active) trained for a reported ~$5.6M of GPU time that matched frontier closed models — proof that systems co-design (MLA, FP8 training, aux-loss-free MoE routing, MTP) collapses the frontier cost curve
@@ -444,7 +444,7 @@
 - [garak (NVIDIA)](./tools/evaluation-and-observability/garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md) — 
 - [Gemini CLI](./tools/dx-and-tooling/gemini-cli.md) — Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier
-- [Gemma](./projects/foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
+- [Gemma](./projects/foundation-models/gemma.md) — The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
 - [Gemma 3](./projects/foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
 - [GenAI Processors](./projects/frameworks/genai-processors.md) — Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
@@ -505,7 +505,7 @@
 - [Haystack](./projects/frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Deep Residual Learning for Image Recognition](./research/foundational/he-2015-resnet.md) — Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on
 - [headroom](./tools/dx-and-tooling/headroom.md) — Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model
-- [Helicone](./projects/benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
+- [Helicone](./projects/benchmarks-and-evals/helicone.md) — Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions
 - [Holistic Evaluation of Language Models](./research/evaluation-and-safety/helm.md) — HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.
 - [Measuring Massive Multitask Language Understanding](./research/evaluation-and-safety/hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
 - [Hermes Agent](./projects/agent-systems/hermes-agent.md) — Nous Research's self-improving personal agent with a TUI, messaging gateway, skill authoring and seven terminal backends
@@ -1063,7 +1063,7 @@
 - [Add Resource and Network Limits to Sandboxed Code Execution Calls](./tips-and-tricks/agents-and-orchestration/sandbox-code-execution-tools.md) — 
 - [Sandbox Model-Generated Code Execution](./tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution.md) — 
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./research/retrieval-and-memory/sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup
-- [Scale AI](./tools/data-ingestion/scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [Scale AI](./tools/data-ingestion/scale-ai.md) — Managed annotation and RLHF workforce plus a data engine covering generation, red teaming and model evaluation, sold as enterprise projects
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./research/agents-and-reasoning/schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
 - [Proximal Policy Optimization Algorithms](./research/training-and-alignment/schulman-2017-ppo.md) — PPO: a clipped surrogate objective that keeps policy updates safely small using only first-order optimization — the RL algorithm that, five years later, became the engine of RLHF and thus of ChatGPT-style alignment
 - [scikit-learn](./projects/frameworks/scikit-learn-scikit-learn.md) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use

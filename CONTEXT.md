@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-24T21:29:22.304Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-25T11:34:16.250Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -77,8 +77,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-- Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
+- Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
@@ -88,7 +88,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
 
 ### observability
-- DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
+- DeepEval (⭐19090, score:70) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
 - Langfuse (⭐29021, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - Opik (⭐19609, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
