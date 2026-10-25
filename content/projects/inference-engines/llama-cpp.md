@@ -5,19 +5,19 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
+description: C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server
 github_url: "https://github.com/ggml-org/llama.cpp"
 license: MIT
 primary_language: C++
-org_or_maintainer: null
+org_or_maintainer: "ggml-org"
 tags: [llm, inference, quantization, local]
 maturity: production
 cost_model: open-source
-github_stars: 116399
+github_stars: 132303
 github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://github.com/ggml-org/llama.cpp"
+trending_score: 40
+last_commit: "2026-10-25"
+docs_url: "https://llama.app"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,80 +28,125 @@ supports_quantization: true
 supported_formats: [GGUF]
 api_compatible: openai
 phase: inference-engine
-domain: [language]
+domain: [language, vision]
 relation_to_stack: [deploy-as-is, build-on-top, fork-and-adapt]
-health_signals: [community-driven, actively-maintained, production-proven]
+health_signals: [community-driven, actively-maintained]
 ecosystem_role:
-  - Pure C/C++ CPU/GPU inference engine underlying much of the local-LLM ecosystem (Ollama, LM Studio, and others build on it)
+  - "The substrate of the local-AI ecosystem: ggml's kernels plus a GGUF format that became the interchange standard, with Ollama, LM Studio, llamafile and most desktop apps running this code underneath"
 best_for:
-  - You need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies
-  - You're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server
+  - You need a model running on hardware nobody else targets — a CPU-only box, Apple silicon, an AMD or Intel GPU through Vulkan, a RISC-V SBC — and cannot afford a Python/CUDA dependency chain
+  - "You want the whole model in memory with a quantisation level you choose: 1.5- to 8-bit integer formats let a 30B model fit where a 70B would not, and CPU+GPU offload covers the gap when VRAM is short"
+  - You are embedding inference inside a product and need a C library with no runtime to ship, rather than a Python server to operate
 avoid_if:
-  - You need maximum multi-GPU server-side throughput for high-concurrency production serving — vLLM or SGLang's batching and scheduling are purpose-built for that, while llama.cpp targets single-node/edge efficiency first
-  - You want a Python-native development experience — llama.cpp's core is C/C++, and while Python bindings exist, they're a secondary interface, not the primary one
-upstream_dependencies: []
-downstream_consumers: []
-alternatives: []
-integrates_with: []
+  - You are serving many concurrent users on datacentre GPUs — llama.cpp schedules one request stream well and batches modestly; vLLM and SGLang exist for the throughput case
+  - Your team will only ever touch Python — the bindings are real but secondary, and a Python-first server will be less friction
+  - You need every new architecture on release day with vendor-grade support — the community adds architectures fast, but occasionally late, and nothing is contracted
+upstream_dependencies: [ggml-org-ggml]
+downstream_consumers: [ollama, llamafile, localai]
+alternatives: [vllm, sglang, ollama, llamafile, mlc-llm, exllamav2]
+integrates_with: [hugging-face-hub, llama-cpp]
 corresponding_tool_entry: null
-enrichment_status: reviewed
-enrichment_notes: "llama.cpp is the most widely-embedded inference engine in the local-LLM ecosystem: Ollama, LM Studio, GPT4All, and many other downstream tools build directly on it, which is strong production/adoption evidence beyond star count alone."
+enrichment_status: verified
+enrichment_notes: "Re-verified 2026-10-25: 132,303 stars, 2,581 open issues, MIT, last push 2026-10-25. README documents the 2026 `llama` unified CLI (`llama cli -hf …`, `llama serve -hf …`, install scripts at llama.app), 1.5- to 8-bit quantisation, CUDA/HIP/MUSA/Vulkan/SYCL/Metal backends, CPU+GPU hybrid inference, and the built-in web UI."
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources:
-  - {"source":"hackernews","url":"https://www.xda-developers.com/ditched-lm-studio-for-llama-cpp-and-local-llm-doesnt-feel-like-downgrade-anymore/","date":"2026-05-23","description":"Independent reporting confirms llama.cpp is the core backend engine underlying LM Studio, Ollama, and most other local-LLM applications in production use"}
+buzz_sources: []
 featured: false
 status: active
 ---
 
 ## Overview
 
-A pure C/C++ inference engine for running LLaMA-family and other GGUF-format quantized models, originally created to make LLM inference feasible on consumer CPU hardware and now the foundation underlying much of the local-LLM tooling ecosystem.
+llama.cpp is the C/C++ engine that made running a language model on ordinary hardware normal. It runs GGUF-quantised weights on CPUs and consumer GPUs, treats Apple silicon as a first-class target through ARM NEON, Accelerate and Metal, and covers NVIDIA through custom CUDA kernels, AMD through HIP, Intel and other GPUs through Vulkan and SYCL, and Moore Threads through MUSA.
+
+The 2026 shape of the project is more product than the historical build-it-yourself repo. There is a unified `llama` binary installed by a shell or PowerShell script from llama.app, with `llama cli -hf ggml-org/Qwen3.5-0.8B-GGUF` for a chat session and `llama serve -hf …` for an OpenAI-compatible API with a built-in web UI. Docker images, winget packages and pre-built release binaries exist for every platform, so the compile step is now optional.
+
+Underneath it all is ggml, the tensor library that supplies the kernels, and GGUF, the file format that became the de facto interchange standard for quantised models.
 
 ## Why it's in the Arsenal
 
-The case for llama.cpp rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+Two contributions outlive any single benchmark comparison.
+
+The first is GGUF. Quantised weights needed a container that could describe architecture, tokeniser, chat template and per-tensor quantisation in one file, and GGUF became it. Every download named `*-Q4_K_M.gguf` is evidence that a C++ project won a format war against well-funded alternatives, and that decision is why a model can move between llama.cpp, llamafile, Ollama, LM Studio and a phone app without conversion.
+
+The second is hardware reach. A model that runs on an AMD iGPU through Vulkan, an Apple M-series laptop, an AVX-512 server and a RISC-V board from the same source tree is a different kind of artifact from a CUDA-only serving stack. When the constraint is "this must run on the hardware we already own", llama.cpp is usually the only answer that does not require replacing the hardware.
+
+The trade is throughput. One request stream at low latency is its design centre; many concurrent users are not.
 
 ## Architecture
 
-Implements transformer inference directly in C/C++ with extensive support for quantization formats (from 2-bit through 8-bit and beyond) via the GGUF file format, with backend support spanning pure CPU, Apple Metal, CUDA, and Vulkan — prioritizing minimal dependencies and portability over Python-ecosystem integration.
+ggml provides the backend abstraction: tensors, graph execution, and per-device kernels selected at build time and runtime. llama.cpp layers the model graph, the KV cache, tokeniser and sampling on top, with a `llama` frontend that dispatches to the CLI, the server, or benchmark and quantisation tools.
+
+Quantisation is the technical heart. Integer formats from 1.5-bit to 8-bit, with k-quants (`Q4_K_M` and friends) packing groups of weights into mixed-precision blocks so the sensitive tensors keep more bits. The practical consequence: a 30B model at Q4_K_M fits in about 18GB and runs at usable speed on a single consumer card, where the BF16 original would not fit at all.
+
+CPU+GPU hybrid inference is the other structural feature. Layers that fit in VRAM go to the GPU, the rest stay in system memory and are computed on the CPU, so a model larger than available VRAM still runs — slowly, but it runs. That is the difference between a workload starting today and a hardware purchase.
+
+The server exposes an OpenAI-compatible HTTP surface with streaming, tool-call parsing for the model families that need it, and a web UI for testing, so an application written against the OpenAI schema needs only a base-URL change.
 
 ## Ecosystem Position
 
-Upstream: none of particular note — deliberately minimal external dependencies. Downstream: Ollama, LM Studio, GPT4All, and llamafile all build directly on llama.cpp as their inference core, making it one of the most widely depended-upon projects in the local-LLM ecosystem. Competing: vLLM and SGLang for server-side high-throughput serving; MLX for Apple-Silicon-native workflows. Complementary: works with any GGUF-quantized model, including quantized versions of Llama, Qwen, Gemma, and Mistral.
+The catalog is largely downstream of this entry. `ollama` wraps llama.cpp in a daemon and model registry; `llamafile` welds it to Cosmopolitan Libc for single-file distribution; `localai` adds a multi-backend API layer. Those are packaging and product decisions on top of the same kernels, and knowing that changes how you debug them — a slow generation in Ollama is usually a llama.cpp offload decision.
+
+Against `mlc-llm` the boundary is design philosophy: hand-written kernels per backend versus a compiler that generates them. llama.cpp lands faster on new hardware and new model quirks; MLC reaches WebGPU, iOS and Android with one model definition and pays in lag on novel architectures.
+
+Against `vllm` and `sglang` the split is workload, not quality. Continuous batching, PagedAttention and prefix caching exist to keep datacentre GPUs saturated with concurrent requests. llama.cpp's modest batching is fine for a handful of streams and wasteful at fifty. Attempting to serve a team from one llama.cpp instance is the most common misuse of a very good tool.
+
+Against `exllamav2` the overlap is single-user GPU speed: ExLlamaV2 is faster on NVIDIA cards with mixed-bit quantisation, but it is NVIDIA-only with a smaller model catalogue.
 
 ## Getting Started
 
 ```bash
-# Run a GGUF model and serve an OpenAI-compatible endpoint (see Resources):
-llama-server -hf ggml-org/Llama-3.2-1B-Instruct-GGUF   # API on http://localhost:8080
+curl -LsSf https://llama.app/install.sh | sh     # or: irm https://llama.app/install.ps1 | iex
 ```
+
+```bash
+llama cli -hf ggml-org/Qwen3.5-0.8B-GGUF         # interactive session, downloads the GGUF
+llama serve -hf ggml-org/Qwen3.5-0.8B-GGUF       # OpenAI-compatible API + web UI on :8080
+```
+
+With a model you already have, `llama serve -m ./model-Q4_K_M.gguf -c 8192 -ngl 99` gives an 8K context with all layers offloaded to the GPU; drop `-ngl` when VRAM is short and let the hybrid path spill to RAM. To produce a quantisation from full-precision weights, `llama-quantize` takes the source GGUF and a target type, and the choice of type is the single largest quality decision in a local deployment.
+
+If you build from source instead, the CMake flags decide which backends exist at all: `-DGGML_CUDA=ON`, `-DGGML_VULKAN=ON`, `-DGGML_METAL=ON`. A binary compiled without the flag for your GPU runs on CPU and looks mysteriously slow rather than broken.
 
 ## Key Use Cases
 
-1. **Sizing llama.cpp**: the decision is hardware and load, not features — measure throughput and time to first token at your concurrency, and size memory for the longest sequence you actually serve rather than the longest the model allows.
-2. **What dominates the decision**: `quantized`, `llms`, `efficiently`, `cpu-only` are the variables that actually move the outcome for llama.cpp in this phase, and none of them appear in a feature comparison.
-3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
+1. **Laptop and desktop assistants**: a quantised 8B or 30B model on consumer hardware, with Metal on Apple silicon and CUDA or Vulkan on Windows and Linux, inside an app that never calls a cloud API.
+2. **Air-gapped and regulated deployments**: weights and engine on the same machine, no outbound network, and a licence (MIT) that a legal review will not block.
+3. **Edge and embedded products**: a C library with no runtime, cross-compiled for ARM boards, phones or appliances, with the model and engine shipped as two files.
+4. **Batch processing on CPU fleets**: converting documents, transcripts or logs at scale where GPU capacity is unavailable and throughput per hour matters more than tokens per second.
+5. **Quantisation research and QA**: the toolchain for producing and comparing GGUF variants is part of the same repo, so quality-versus-size experiments do not need a second framework.
+6. **A reference OpenAI-compatible endpoint for development**: `llama serve` gives a local API with tool-call support, which is the cheapest way to test application code before pointing it at a paid provider.
 
 ## Strengths
 
-- The implementation detail worth checking before adopting llama.cpp is specific — implements transformer inference directly in C/C++ with extensive support for quantization formats (from 2-bit through 8-bit and beyond) via the GGUF file format, with backend support spanning pure CPU, Apple Metal, CUDA, and Vulkan — prioritizing minimal dependencies and portability over Python-ecosystem integration — because that is where the capability claim either survives contact with your data or does not.
-- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- Hardware coverage is unmatched: CUDA, HIP, MUSA, Vulkan, SYCL, Metal, CPU with AVX/AVX2/AVX-512/AMX and RISC-V vector extensions, from one codebase.
+- GGUF is the interchange standard for quantised models, so weights move between this and almost every other local runtime without conversion.
+- The quantisation range — 1.5-bit to 8-bit with k-quants — lets you trade quality for fit deliberately rather than picking from two options.
+- CPU+GPU hybrid inference runs models larger than VRAM, which saves a hardware purchase in the common case where the model is slightly too big.
+- MIT licence, no telemetry, no account, no network requirement after the weights are on disk.
+- 132,000 stars and a daily merge cadence mean any bug you hit on mainstream hardware has likely been reported and fixed.
 
 ## Limitations
 
-- Adoption risk for llama.cpp is mostly operational rather than technical — resource cost at your scale, dependency failure behaviour, and the upgrade path when interfaces move.
-- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for llama.cpp at your scale need measuring before this informs a production decision.
-- No alternative is catalogued alongside llama.cpp here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- **Concurrency is the wrong shape for serving.** Batching is limited and there is no paged KV cache or prefix sharing, so request latency degrades quickly as concurrent users rise.
+- **Two thousand five hundred open issues.** The project moves fast and the tracker is enormous; a niche backend bug can sit indefinitely, and the maintainers' priorities follow the hardware vendors who contribute.
+- **Quantisation quality needs measuring.** 4-bit k-quants are good, but degradation is workload-dependent and shows up in structured output and long-context recall rather than in perplexity — the metric people check.
+- **The build matrix is the hard part.** Backend flags, CUDA toolkit versions, ROCm quirks and per-architecture compile options are where most first attempts fail, and the error messages are compiler errors rather than guidance.
+- **CLI churn.** The unified `llama` binary replaced the older `llama-cli`/`llama-server` invocations; tutorials, scripts and LLM-generated commands still reference the old names and will fail.
+- **No supported contract.** For a product on the critical path, the absence of a vendor, an SLA or a security-response process is a governance decision, not a technical one.
 
 ## Relation to the Arsenal
 
-llama.cpp is the C/C++ engine most of the local-LLM ecosystem is built on (Ollama, LM Studio, llamafile). This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+Read it as the engine under `ollama`, `llamafile` and `localai`, and as the single-machine counterweight to `vllm`, `sglang` and `tensorrt-llm` in [Inference Engines](../inference-engines/_index.md). `mlc-llm` is the compiler-based alternative for mobile and browser targets, `exllamav2` the NVIDIA-only speed alternative.
+
+For weights to quantise, see [Foundation Models](../foundation-models/_index.md). For the ggml tensor library the kernels live in, see `ggml-org-ggml`.
 
 ## Resources
 
 - [GitHub](https://github.com/ggml-org/llama.cpp)
-- [Documentation](https://github.com/ggml-org/llama.cpp)
+- [Install and docs](https://llama.app)
+- [Docker guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md)
+- [Build guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md)
+- [Releases](https://github.com/ggml-org/llama.cpp/releases)

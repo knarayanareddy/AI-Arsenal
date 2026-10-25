@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 383
+    "count": 359
   },
   "entries": [
     {
@@ -825,58 +825,10 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/inference-engines/llama-cpp.md::rejected-boilerplate::0b0e6ff8e945d16a",
-      "file": "content/projects/inference-engines/llama-cpp.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llama-cpp.md::rejected-boilerplate::391cd22655cd8705",
-      "file": "content/projects/inference-engines/llama-cpp.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llama-cpp.md::rejected-boilerplate::603eb03ac3fa8952",
-      "file": "content/projects/inference-engines/llama-cpp.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llama-cpp.md::rejected-boilerplate::8ce5bc75a492c0fb",
-      "file": "content/projects/inference-engines/llama-cpp.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
       "fingerprint": "content/projects/inference-engines/lmdeploy.md::rejected-boilerplate::9fda806187cded23",
       "file": "content/projects/inference-engines/lmdeploy.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::rejected-boilerplate::418b8066c623068f",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::rejected-boilerplate::4882bdc4fa2049c8",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::rejected-boilerplate::71674599bf47af1e",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::rejected-boilerplate::d31c9b714536f0e0",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
     },
     {
       "fingerprint": "content/projects/inference-engines/ollama.md::rejected-boilerplate::0159de80f0dc7981",
@@ -951,30 +903,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/projects/training-and-alignment/nanogpt.md::rejected-boilerplate::0fbb850d97460ddd",
-      "file": "content/projects/training-and-alignment/nanogpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/nanogpt.md::rejected-boilerplate::25a73c5c965910f4",
-      "file": "content/projects/training-and-alignment/nanogpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/nanogpt.md::rejected-boilerplate::5ba16d357a86a1ef",
-      "file": "content/projects/training-and-alignment/nanogpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/nanogpt.md::rejected-boilerplate::8976ee84efdc90ad",
-      "file": "content/projects/training-and-alignment/nanogpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
       "fingerprint": "content/projects/training-and-alignment/open-r1.md::rejected-boilerplate::2cb6cce70a078ae2",
       "file": "content/projects/training-and-alignment/open-r1.md",
       "rule": "rejected-boilerplate",
@@ -999,82 +927,10 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/training-and-alignment/verl.md::rejected-boilerplate::1a4ac649d5b2d12f",
-      "file": "content/projects/training-and-alignment/verl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/verl.md::rejected-boilerplate::776b31593f14b009",
-      "file": "content/projects/training-and-alignment/verl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/verl.md::rejected-boilerplate::7d0c1cd2627de23a",
-      "file": "content/projects/training-and-alignment/verl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/training-and-alignment/verl.md::rejected-boilerplate::b8a657281bafe468",
-      "file": "content/projects/training-and-alignment/verl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/agent-browser-shield.md::rejected-boilerplate::756c7946eccc137c",
       "file": "content/tools/data-ingestion/agent-browser-shield.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/jina-reader.md::rejected-boilerplate::0786938c4953a403",
-      "file": "content/tools/data-ingestion/jina-reader.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/jina-reader.md::rejected-boilerplate::090322fbedad929d",
-      "file": "content/tools/data-ingestion/jina-reader.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/jina-reader.md::rejected-boilerplate::a448c5d3c6502e84",
-      "file": "content/tools/data-ingestion/jina-reader.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/jina-reader.md::rejected-boilerplate::b9cbd1ff5c891c92",
-      "file": "content/tools/data-ingestion/jina-reader.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/label-studio.md::rejected-boilerplate::14bc0fd8ee6b0367",
-      "file": "content/tools/data-ingestion/label-studio.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /as a service with a schema, not as code you own/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/label-studio.md::rejected-boilerplate::7cbfc40dcef35d17",
-      "file": "content/tools/data-ingestion/label-studio.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/label-studio.md::rejected-boilerplate::de1183425dded868",
-      "file": "content/tools/data-ingestion/label-studio.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/label-studio.md::rejected-boilerplate::f4524ad422255189",
-      "file": "content/tools/data-ingestion/label-studio.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
     },
     {
       "fingerprint": "content/tools/data-ingestion/markitdown.md::rejected-boilerplate::65fd7e54b93513ed",

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:18:31.503Z",
+  "generated_at": "2026-10-25T13:38:58.240Z",
   "config": {
     "document": {
       "id": "id",
@@ -198,10 +198,10 @@
       "paid": 12
     },
     "status": {
-      "active": 914,
+      "active": 913,
       "archived": 17,
       "deprecated": 2,
-      "watching": 20,
+      "watching": 21,
       "reviewed": 3,
       "draft": 1
     },
@@ -244,7 +244,7 @@
     },
     "audience": {
       "research": 69,
-      "production": 191,
+      "production": 192,
       "prototype": 146,
       "practitioner": 33,
       "founder": 9,
@@ -259,7 +259,7 @@
       "multimodal": 64,
       "safety-and-alignment": 2,
       "audio": 58,
-      "vision": 102,
+      "vision": 103,
       "reinforcement-learning": 10
     },
     "relation_to_stack": {
@@ -26483,7 +26483,7 @@
       "type": "tool",
       "name": "Jina AI Reader",
       "title": "Jina AI Reader",
-      "description": "Reader endpoint for converting web pages into LLM-friendly text and Markdown",
+      "description": "URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination",
       "tags": [
         "data",
         "rag",
@@ -26496,7 +26496,8 @@
       "status": "active",
       "phase": "data-ingestion",
       "audience": [
-        "prototype"
+        "prototype",
+        "production"
       ],
       "domain": null,
       "relation_to_stack": null,
@@ -26523,8 +26524,8 @@
       "url": "content/tools/data-ingestion/jina-reader",
       "boost_title": "Jina AI Reader",
       "boost_tags": "data rag cloud",
-      "boost_description": "Reader endpoint for converting web pages into LLM-friendly text and Markdown",
-      "body": "Jina AI Reader Reader endpoint for converting web pages into LLM-friendly text and Markdown data rag cloud TL;DR: Jina AI Reader, for the web scraping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview A lightweight reader API that converts a single URL into LLM friendly text by prefixing the target URL with Jina's reader endpoint, with no setup required. Jina AI Reader is reached over a documented surface unlike crawl4ai tool, firecrawl tool; on the web scraping path; under a freemium cost model; with jina reader, name, jina, which means the things to measure are end to end latency at your real request…"
+      "boost_description": "URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination",
+      "body": "Jina AI Reader URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination data rag cloud TL;DR: Prepend r.jina.ai/ to a URL and get Markdown back — the value is not the one liner, it is that extraction, caching, proxying and pagination are all per request headers you can change without deploying code. Overview Jina AI Reader is a hosted fetch and extract service. A request to r.jina.ai/<url has a browser load the page, waits for it to render, strips navigation and boilerplate, and returns the main content as Markdown (or plain text, HTML, or a screenshot). The delivery mechanism is unusual even for an API: the URL itself is the request, so it works from a shell, a notebook, an ag…"
     },
     {
       "id": "jina-serve",
@@ -27992,7 +27993,7 @@
       "type": "tool",
       "name": "Label Studio",
       "title": "Label Studio",
-      "description": "An open-source data labeling platform for ML and AI datasets",
+      "description": "Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling",
       "tags": [
         "data",
         "cloud",
@@ -28033,8 +28034,8 @@
       "url": "content/tools/data-ingestion/label-studio",
       "boost_title": "Label Studio",
       "boost_tags": "data cloud self-hosted",
-      "boost_description": "An open-source data labeling platform for ML and AI datasets",
-      "body": "Label Studio An open-source data labeling platform for ML and AI datasets data cloud self-hosted Overview A flexible, open source labeling tool supporting many data types (text, image, audio, video) for building training and evaluation datasets, designed to be self hosted. Treat Label Studio as a service with a schema, not as code you own unlike argilla, prodigy; on the data labeling path; under a freemium cost model; with label studio, name, label. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one. Why It's in the Arsenal The entry exists because Label Studio is An…"
+      "boost_description": "Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling",
+      "body": "Label Studio Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling data cloud self-hosted TL;DR: A self hosted annotation web app where the labelling interface is a configuration file, not code — flexible enough to cover text, image, audio, video and time series, and deliberately not a workforce. Overview Label Studio is an open source application for turning raw data into labelled datasets. It runs as a web service — a Docker container on port 8080 with SQLite by default, or a compose stack with Nginx and PostgreSQL for production — and presents each project as a task queue with a labelling interface you define. The interface is the interesting design choice. Instead of shipping…"
     },
     {
       "id": "laion",
@@ -30900,7 +30901,7 @@
       "type": "project",
       "name": "llama.cpp",
       "title": "llama.cpp",
-      "description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
+      "description": "C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server",
       "tags": [
         "llm",
         "inference",
@@ -30915,7 +30916,8 @@
       "phase": "inference-engine",
       "audience": null,
       "domain": [
-        "language"
+        "language",
+        "vision"
       ],
       "relation_to_stack": [
         "deploy-as-is",
@@ -30945,8 +30947,8 @@
       "url": "content/projects/inference-engines/llama-cpp",
       "boost_title": "llama.cpp",
       "boost_tags": "llm inference quantization local",
-      "boost_description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
-      "body": "llama.cpp C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices llm inference quantization local llms inference-engines Overview A pure C/C++ inference engine for running LLaMA family and other GGUF format quantized models, originally created to make LLM inference feasible on consumer CPU hardware and now the foundation underlying much of the local LLM tooling ecosystem. Why it's in the Arsenal The case for llama.cpp rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Implements transformer inference directly in C/C++ with extensive support for quantization formats (…"
+      "boost_description": "C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server",
+      "body": "llama.cpp C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server llm inference quantization local llms inference-engines Overview llama.cpp is the C/C++ engine that made running a language model on ordinary hardware normal. It runs GGUF quantised weights on CPUs and consumer GPUs, treats Apple silicon as a first class target through ARM NEON, Accelerate and Metal, and covers NVIDIA through custom CUDA kernels, AMD through HIP, Intel and other GPUs through Vulkan and SYCL, and Moore Threads through MUSA. The 2026 shape of the project is more product than the historical build it yourself repo. There is a unified llama binary installed by a shell or PowerShell script from llama.app, with llama cli hf ggml org/Qwen…"
     },
     {
       "id": "llamafactory",
@@ -36093,7 +36095,7 @@
       "type": "project",
       "name": "MLC LLM",
       "title": "MLC LLM",
-      "description": "Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase",
+      "description": "ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops",
       "tags": [
         "inference",
         "edge",
@@ -36137,8 +36139,8 @@
       "url": "content/projects/inference-engines/mlc-llm",
       "boost_title": "MLC LLM",
       "boost_tags": "inference edge llm",
-      "boost_description": "Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase",
-      "body": "MLC LLM Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase inference edge llm llms inference-engines Overview A universal LLM deployment engine built on machine learning compilation (Apache TVM): model architectures are compiled to optimized kernels for whatever backend the device offers — Metal on Apple hardware, Vulkan on Android, WebGPU in browsers, CUDA/ROCm on desktops. The project's WebLLM spinoff runs quantized Llama class models entirely client side in Chrome. Why it's in the Arsenal MLC LLM is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run i…"
+      "boost_description": "ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops",
+      "body": "MLC LLM ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops inference edge llm llms inference-engines Overview MLC LLM is what you get if you treat language model inference as a compilation problem rather than a kernel writing problem. A model is described once, lowered through TVM into target specific code, and deployed to whatever accelerator the device has — Metal on an iPhone, OpenCL on an Android Adreno GPU, WebGPU in a browser, Vulkan or ROCm or CUDA on a desktop. The runtime half is MLCEngine, which presents an OpenAI compatible API over REST, Python, JavaScript, iOS and Android, all backed by the same compiled engine. The browser story is the one most people have met: WebLLM, the sibl…"
     },
     {
       "id": "mlflow",
@@ -37813,7 +37815,7 @@
       "type": "project",
       "name": "nanoGPT",
       "title": "nanoGPT",
-      "description": "Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining",
+      "description": "Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat",
       "tags": [
         "training",
         "llm",
@@ -37823,7 +37825,7 @@
       "subcategory": "frameworks",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "training-and-alignment",
       "audience": null,
       "domain": [
@@ -37856,8 +37858,8 @@
       "url": "content/projects/training-and-alignment/nanogpt",
       "boost_title": "nanoGPT",
       "boost_tags": "training llm foundational",
-      "boost_description": "Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining",
-      "body": "nanoGPT Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining training llm foundational llms frameworks Overview A deliberately minimal repository for training GPT 2 class models: plain PyTorch, no framework, a single model file and a single training script that reproduce GPT 2 124M on OpenWebText in about four days on one 8xA100 node. Its value is pedagogical and experimental — it is the reference codebase people fork when they want to change something fundamental about training. Why it's in the Arsenal nanoGPT appears in this catalog as a reference point for the training and alignment phase; the useful question is whether the method fits your data scale and hardware budget. The sections below…"
+      "boost_description": "Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat",
+      "body": "nanoGPT Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat training llm foundational llms frameworks Overview nanoGPT is two files. model.py defines a GPT with the GPT 2 architecture — token and learned position embeddings, pre LayerNorm transformer blocks, causal self attention — in roughly three hundred lines. train.py is the training loop: memory mapped data shards, gradient accumulation, cosine learning rate decay with warmup, mixed precision, and optional DDP across GPUs, in about the same length. Everything else in the repository is configuration. config/train shakespeare char.py trains a character level model on a laptop; config/train gpt2.py reproduces GPT 2 124M on OpenWebText, whic…"
     },
     {
       "id": "nathan-lambert",
@@ -60580,7 +60582,7 @@
       "type": "project",
       "name": "verl",
       "title": "verl",
-      "description": "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs",
+      "description": "ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO",
       "tags": [
         "alignment",
         "fine-tuning",
@@ -60625,8 +60627,8 @@
       "url": "content/projects/training-and-alignment/verl",
       "boost_title": "verl",
       "boost_tags": "alignment fine-tuning llm",
-      "boost_description": "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs",
-      "body": "verl ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs alignment fine-tuning llm llms frameworks Overview An open source RL training library for LLMs from ByteDance's Volcengine team, implementing the HybridFlow architecture: RL algorithms are written as high level dataflow programs while a hybrid controller maps them onto distributed training (FSDP, Megatron LM) and inference (vLLM, SGLang) backends. It became the de facto substrate for open reasoning model training after the GRPO/R1 wave. Why it's in the Arsenal The case for verl rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopti…"
+      "boost_description": "ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO",
+      "body": "verl ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO alignment fine-tuning llm llms frameworks Overview verl is the open implementation of HybridFlow, a EuroSys paper about how to structure RLHF training when generation and optimisation want different parallelism. It was started by ByteDance's Seed team, migrated to its own verl project organisation in January 2026, and is now maintained by a community that has spun out an ecosystem around it. The library trains language models with reinforcement learning — GRPO and PPO being the two everyone uses — by composing a controller graph: a rollout stage that generates with vLLM or SGLang, a reward stage, an advantage computation, and a train…"
     },
     {
       "id": "version-datasets-and-adapters-together",

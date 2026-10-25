@@ -5,18 +5,18 @@ version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs"
+description: "ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO"
 github_url: "https://github.com/verl-project/verl"
 license: "Apache-2.0"
 primary_language: Python
-org_or_maintainer: "Volcengine (ByteDance)"
+org_or_maintainer: "verl-project (initiated by ByteDance Seed)"
 tags: [alignment, fine-tuning, llm]
 maturity: production
 cost_model: open-source
-github_stars: 22377
+github_stars: 24007
 github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
+trending_score: 60
+last_commit: "2026-10-23"
 docs_url: "https://verl.readthedocs.io/en/latest/"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2409.19256v2"
@@ -26,82 +26,123 @@ domain: [language, reinforcement-learning, reasoning]
 relation_to_stack: [build-on-top, study-and-reference]
 health_signals: [org-backed, actively-maintained, research-origin]
 ecosystem_role:
-  - "The RL library behind much of the open reasoning-model wave: verl's HybridFlow design decouples the RL dataflow definition from execution backends, and most open GRPO reasoning reproductions built on it."
+  - "The RL post-training stack behind much of the open reasoning-model work: HybridFlow splits dataflow definition from execution, and the ecosystem built around it (recipes, VLA, omni-modal, observability) now spans more code than the library itself"
 best_for:
-  - "You are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts"
-  - "You need to express non-standard RL dataflows (multi-turn, tool-calling rewards, agentic rollouts) — the hybrid-controller programming model makes custom pipelines first-class rather than forks"
+  - You are running GRPO or PPO on reasoning tasks and need real throughput — vLLM or SGLang rollouts feeding FSDP or Megatron updates, with 3D-HybridEngine resharding to cut the actor-swap cost
+  - Your RL dataflow is not a textbook one — multi-turn tool use, agentic rollouts, custom rewards — and you need to express it as a controller graph rather than fork a monolithic trainer
+  - "You want the community's reference implementation: most open o1-style reproductions and several published RL results were produced on this code"
 avoid_if:
-  - "You want a small-scale alignment run with minimal infrastructure — TRL on a single node covers DPO/PPO without Megatron/FSDP operational overhead"
-  - "Your team cannot invest in understanding the hybrid-controller abstraction — the flexibility comes with a steeper learning curve than recipe-style trainers"
+  - You want DPO or a small single-node alignment run — `trl` needs a day of setup, not a cluster and a device-mapping plan
+  - Your team will not invest in the hybrid-controller abstraction — the flexibility is real and so is the learning curve, and a recipe-style trainer will get to a baseline sooner
+  - You need a stable API across quarters — this is a fast-moving research-derived project with a large issue count, and internals move between releases
 upstream_dependencies: [vllm]
 downstream_consumers: []
-alternatives: [openrlhf, trl]
-integrates_with: [vllm, sglang]
+alternatives: [openrlhf, trl, deepspeed]
+integrates_with: [vllm, sglang, megatron-lm]
 corresponding_tool_entry: null
-enrichment_status: draft
-enrichment_notes: "Star count (22,377), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
+enrichment_status: verified
+enrichment_notes: "Re-verified 2026-10-25: 24,007 stars, 1,394 open issues, Apache-2.0, last push 2026-10-23, repo now under verl-project (migrated from volcengine in 2026-01). README documents the HybridFlow model, FSDP/Megatron and vLLM/SGLang integration, 3D-HybridEngine resharding, and the extracted verl-recipe plus verl-vla/omni/SpeCo/RL-Insight ecosystem."
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/verl-project/verl", "date": "2026-07-08", "description": "22,377 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: []
 featured: false
 status: active
 ---
 
 ## Overview
 
-An open-source RL training library for LLMs from ByteDance's Volcengine team, implementing the HybridFlow architecture: RL algorithms are written as high-level dataflow programs while a hybrid controller maps them onto distributed training (FSDP, Megatron-LM) and inference (vLLM, SGLang) backends. It became the de facto substrate for open reasoning-model training after the GRPO/R1 wave.
+verl is the open implementation of HybridFlow, a EuroSys paper about how to structure RLHF training when generation and optimisation want different parallelism. It was started by ByteDance's Seed team, migrated to its own `verl-project` organisation in January 2026, and is now maintained by a community that has spun out an ecosystem around it.
+
+The library trains language models with reinforcement learning — GRPO and PPO being the two everyone uses — by composing a controller graph: a rollout stage that generates with vLLM or SGLang, a reward stage, an advantage computation, and a training stage that updates with FSDP or Megatron-LM. The controller decides *what* happens; the workers decide *where* it runs, across an arbitrary device mapping.
+
+It is not a small library. It is the thing you reach for when a single-GPU alignment script is no longer the constraint.
 
 ## Why it's in the Arsenal
 
-The case for verl rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+RL post-training is where the reasoning-model wave actually happened, and verl is the infra that made it reproducible outside a handful of labs. When an open GRPO recipe reproduces an o1-style result on a 7B model, the odds are good that the training loop came from here.
+
+The technical reason is 3D-HybridEngine. RL training oscillates between two modes with incompatible memory layouts: generation wants paged KV caches and many parallel sequences; training wants model-parallel shards and activation buffers. Naively, each switch means re-sharding the actor, and at scale that resharding is a large fraction of wall-clock. verl's contribution is to reshard efficiently between the two layouts, eliminating memory redundancy and communication that otherwise dominates.
+
+The second reason is the field's direction. verl's ecosystem now includes `verl-vla` for robot policies, `verl-omni` for diffusion and omni-modal RL, `verl-SpeCo` for speculative decoding co-training, `uni-agent` for agent training, and `RL-Insight` for observability. RL post-training is broadening past text reasoning, and this is where that work is landing.
 
 ## Architecture
 
-The hybrid-controller model splits RL into a single-controller dataflow (the algorithm: rollout, reward, advantage, update) and multi-controller execution (each model's parallelism strategy). 3D-HybridEngine resharding switches the actor between training and generation layouts without full weight copies, which is the main throughput win over naive PPO implementations. Supports PPO, GRPO, DAPO, and multi-turn/agentic RL recipes.
+The hybrid controller is a single-process program that drives distributed workers through a Ray-based or single-controller backend. Writing a new algorithm means writing a controller: call `generate`, compute rewards, call `update_actor`. The dataflow is Python control flow, which is why custom multi-turn or tool-use RL is expressible rather than a fork.
+
+Workers are role-based: actor, reference, critic, reward model. Each role can be placed on its own GPU group with its own parallel strategy, so an actor trained with Megatron tensor parallelism can generate through vLLM with a different sharding — `fsdp_workers` and `megatron_workers` are separate implementations of the same interface.
+
+Data flows through a transfer queue between stages, which is what allows asynchronous and partially off-policy variants to be built without rewriting the algorithm. The `experimental` tree holds fully-async and one-step-off-policy implementations, plus a transfer-queue module that is being folded into the core.
+
+The recipes moved out in January 2026: `recipe/` is now a `verl-recipe` submodule, with GRPO, DAPO, GSPO and multi-turn examples living there. Initialise it with `git submodule update --init --recursive recipe` or the examples you expect will be missing.
 
 ## Ecosystem Position
 
-Upstream: vLLM and SGLang for rollouts; FSDP and Megatron-LM for training parallelism. Competing: OpenRLHF (Ray-centric design) and TRL (single-node simplicity). Downstream: many published open reasoning models and RL recipes (DAPO, multi-turn agent RL) ship as verl configs, making it a reference implementation as much as a tool.
+Against `openrlhf` the difference is architecture: OpenRLHF is a Ray-based, more monolithic trainer that is easier to stand up for standard PPO and harder to bend into a novel dataflow. verl's controller model is more work to learn and more capable once learned.
 
-Compared with unlike `openrlhf`, `trl`; in the training-and-alignment phase; under a open-source cost model; with `verl`, `name`, `version`, verl overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+Against `trl` the boundary is scale. TRL is the right answer for DPO on one node or a first RLHF experiment, with a clean API and Hugging Face integration. It does not offer device mapping across heterogeneous GPU groups or Megatron-scale actor training, and it is not trying to.
+
+`deepspeed` and `megatron-lm` are infrastructure rather than alternatives: verl uses them as training backends and `vllm`/`sglang` as rollout backends, which is why an existing investment in any of those is preserved rather than replaced.
+
+Within this catalog, `open-r1`-style reproductions and `torchtune`/`litgpt` occupy adjacent ground — those cover SFT and fine-tuning, verl covers the RL stage that follows. The honest framing: if your plan stops at SFT or DPO, you do not need this; if it includes verifiable-reward RL, you probably do.
 
 ## Getting Started
 
 ```bash
 git clone https://github.com/verl-project/verl && cd verl
+git submodule update --init --recursive recipe
 pip install -e .
-# Run the PPO quickstart against a small model (see docs/quickstart):
-bash examples/ppo_trainer/run_qwen2-7b_seq_balance.sh
 ```
+
+```bash
+# GRPO on a small model with vLLM rollouts, 8 GPUs
+python3 -m verl.trainer.main_ppo \
+  algorithm.adv_estimator=grpo \
+  data.train_files=$HOME/data/gsm8k/train.parquet \
+  actor_rollout_ref.model.path=Qwen/Qwen3.5-4B \
+  actor_rollout_ref.rollout.name=vllm \
+  actor_rollout_ref.rollout.n=5 \
+  trainer.n_gpus_per_node=8
+```
+
+Two things to get right before a long run: the rollout engine's GPU memory fraction (a vLLM instance that grabs too much leaves the trainer no room, which surfaces as an OOM during the first update rather than at startup), and the number of samples per prompt, since GRPO's advantage estimate depends on it and a value of 1 silently degrades to REINFORCE-like behaviour.
 
 ## Key Use Cases
 
-1. **Depending on it safely**: the work is the boundary — which calls go through verl, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
-2. **What the verl scenarios have in common**: they are separated by data scale and hardware budget, which rule most methods out before any quality claim is tested.
-3. **Choosing between candidates**: compare verl against `openrlhf`, `trl` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
+1. **Verifiable-reward RL on reasoning tasks**: maths and code problems with programmatic rewards, GRPO across a node of GPUs, which is the workload that made this library popular.
+2. **Agentic RL with tools**: multi-turn rollouts where the reward depends on environment state — the controller graph expresses the loop, and the rollout engine handles the generation.
+3. **Custom algorithm research**: implementing a new advantage estimator or a variant of PPO is a controller edit rather than a patch to a trainer.
+4. **Scale-out from the start**: Megatron backends for trillion-parameter-scale actor training with LoRA and router replay, per the project's own conference material.
+5. **Post-training multimodal and diffusion models**: `verl-omni` extends the same controller model to diffusion RL and omni-modal training.
+6. **Robot policy post-training**: `verl-vla` applies the stack to vision-language-action models across simulators and real hardware.
 
 ## Strengths
 
-- What verl gives you that reading the feature list does not: the hybrid-controller model splits RL into a single-controller dataflow (the algorithm: rollout, reward, advantage, update) and multi-controller execution (each model's parallelism strategy). 3D-HybridEngine resharding switches the actor between training and generation layouts without full weight copies, which is the main throughput win over naive PPO implementations. Supports PPO, GRPO, DAPO, and multi-turn/agentic RL recipes, which is the part you have to evaluate against your own workload.
-- Sits in the training-and-alignment phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- The hybrid-controller model genuinely delivers: a new RL dataflow is a Python function, not a fork of a training loop.
+- 3D-HybridEngine resharding attacks the real cost of RL training — the repeated transition between generation and optimisation layouts.
+- Backend coverage means no lock-in: FSDP or Megatron for training, vLLM or SGLang for rollouts, chosen per role.
+- Device mapping across separate GPU groups lets a rollout fleet and a training fleet share a cluster with different parallelisms.
+- The paper is public and the code matches it, which is rare among RL frameworks and makes the design auditable.
+- A large, active ecosystem — recipes, observability, VLA, omni-modal and speculative decoding — signals that the abstraction is being reused rather than merely cited.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the verl footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
-- Where verl overlaps `openrlhf`, `trl`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
+- **The abstraction has a cost.** Understanding the controller/worker split, device mapping and transfer queue takes real time; teams expecting `trainer.train()` will be lost for a week.
+- **1,394 open issues.** Velocity is high and so is the ratio of open questions to answers; expect to debug against source rather than documentation.
+- **Internals move.** The recipe extraction to a submodule and the org migration both changed workflows in 2026, and experimental modules are explicitly unstable.
+- **Cluster assumptions are baked in.** A single-GPU run is possible but pointless — the value is in multi-node scheduling, and the setup burden reflects that.
+- **Rollout/training mismatch is a silent quality risk.** Numerical differences between the inference and training implementations of the same weights distort the policy gradient, which is what the separate `vexact` project exists to address.
+- **Reward design is yours.** The framework makes RL runnable; it does not tell you whether your reward is gameable, and reward hacking will show up as improving curves with degrading outputs.
 
 ## Relation to the Arsenal
 
-This is the training-and-alignment entry for verl in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
+Pair it with `vllm` or `sglang` for rollouts and `megatron-lm`, `deepspeed` or FSDP for updates. Compare with `openrlhf` (simpler, more monolithic) and `trl` (single-node, recipe-style). For the SFT stage that precedes RL, see `torchtune`, `litgpt` and `axolotl`; for the evaluation that must catch reward hacking, see [Benchmarks and Evals](../benchmarks-and-evals/_index.md).
 
 ## Resources
 
 - [GitHub](https://github.com/verl-project/verl)
 - [Documentation](https://verl.readthedocs.io/en/latest/)
-
----
-*Last reviewed: 2026-07-08 by @maintainer; github_stars 22377 as of 2026-07-08; last commit 2026-07-08; both verified via the GitHub API.*
+- [HybridFlow paper](https://arxiv.org/abs/2409.19256v2)
+- [Recipes](https://github.com/verl-project/verl-recipe)
+- [RL-Insight (observability)](https://github.com/verl-project/rl-insight)

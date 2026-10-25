@@ -583,7 +583,7 @@
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
 - [Mixtral of Experts](./research/architectures/jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./research/evaluation-and-safety/jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era
-- [Jina AI Reader](./tools/data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
+- [Jina AI Reader](./tools/data-ingestion/jina-reader.md) — URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination
 - [Jina-serve](./projects/frameworks/jina-serve.md) — A cloud-native framework for building and serving multimodal AI services and pipelines as scalable microservices with gRPC/HTTP/WebSocket APIs and Kubernetes
 - [minimind](./projects/training-and-alignment/jingyaogong-minimind.md) — Apache-2.0 minimal LLM codebase that pretrains and instruction-tunes a 64M-parameter model on one consumer GPU in roughly two hours
 - [Billion-scale similarity search with GPUs](./research/retrieval-and-memory/johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
@@ -614,7 +614,7 @@
 - [ktx](./projects/data-and-retrieval/ktx.md) — An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents
 - [KubeAI](./tools/serving-and-deployment/kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./research/inference-and-efficiency/kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
-- [Label Studio](./tools/data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
+- [Label Studio](./tools/data-ingestion/label-studio.md) — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
 - [LAION (Large-scale Artificial Intelligence Open Network)](./community/datasets/laion.md) — 
 - [Laminar](./tools/evaluation-and-observability/laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [LanceDB](./projects/data-and-retrieval/lancedb.md) — Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine
@@ -673,7 +673,7 @@
 - [LiveCodeBench](./benchmarks/code/livecodebench.md) — 
 - [LiveKit Agents](./projects/frameworks/livekit-agents.md) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
 - [Llama 3.x](./projects/foundation-models/llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
-- [llama.cpp](./projects/inference-engines/llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
+- [llama.cpp](./projects/inference-engines/llama-cpp.md) — C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server
 - [LLaMA-Factory](./tools/model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
 - [Llamafile](./projects/inference-engines/llamafile.md) — Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD
 - [Llama Guard](./tools/evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
@@ -779,7 +779,7 @@
 - [ML Engineer — Role Overview](./skills/by-role/ml-engineer-role.md) — Role overview mapping the ML Engineer job to the Arsenal's training, serving, and efficiency content
 - [mlx](./projects/frameworks/ml-explore-mlx.md) — MIT-licensed array framework with a NumPy-like API and lazy evaluation built on Apple silicon's unified memory
 - [ml-intern](./projects/agent-systems/ml-intern.md) — Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down
-- [MLC LLM](./projects/inference-engines/mlc-llm.md) — Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase
+- [MLC LLM](./projects/inference-engines/mlc-llm.md) — ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops
 - [MLflow](./tools/model-layer/mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - [mllm](./projects/inference-engines/mllm.md) — C++ multimodal LLM runtime for mobile and edge devices with vision and inference benchmarks
 - [MLX Audio](./projects/foundation-models/mlx-audio.md) — Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use
@@ -814,7 +814,7 @@
 - [WebGPT: Browser-assisted question-answering with human feedback](./research/agents-and-reasoning/nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers
 - [Name the Audience Explicitly in the Prompt](./tips-and-tricks/prompting/name-the-audience-in-the-prompt.md) — 
 - [nanobot](./projects/agent-systems/nanobot.md) — Lightweight self-hosted Python agent runtime with WebUI, chat channels, MCP tools, memory and an OpenAI-compatible API in one small core
-- [nanoGPT](./projects/training-and-alignment/nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+- [nanoGPT](./projects/training-and-alignment/nanogpt.md) — Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat
 - [Nathan Lambert](./community/people/nathan-lambert.md) — Writes about RLHF, post-training, open models, and reasoning systems
 - [Natural Questions](./benchmarks/retrieval-rag/natural-questions.md) — 
 - [NeMo Data Designer](./projects/data-and-retrieval/nemo-data-designer.md) — Toolkit for generating synthetic data from scratch or seed data with configurable schemas, constraints, and model providers
@@ -1281,7 +1281,7 @@
 - [Vercel](./tools/serving-and-deployment/vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions
 - [Vercel AI SDK](./projects/frameworks/vercel-ai-sdk.md) — TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte
 - [Verify Tool Side Effects Instead of Trusting the Tool's Response](./tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response.md) — 
-- [verl](./projects/training-and-alignment/verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
+- [verl](./projects/training-and-alignment/verl.md) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
 - [Version Datasets and Adapters Together as One Artifact Pair](./tips-and-tricks/fine-tuning/version-datasets-and-adapters-together.md) — 
 - [Version System Prompts With the Same Discipline as Application Code](./tips-and-tricks/prompting/version-system-prompts-like-code.md) — 
 - [Version Eval Datasets the Same Way You Version Code](./tips-and-tricks/evaluation/version-your-eval-datasets.md) — 

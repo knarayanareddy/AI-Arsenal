@@ -244,7 +244,7 @@
 | `litserve` | [LitServe](./inference-engines/litserve.md) | Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code |
 | `livekit-agents` | [LiveKit Agents](./frameworks/livekit-agents.md) | Framework for realtime voice and video AI agents that join a LiveKit room as participants |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
-| `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
+| `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server |
 | `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD |
 | `llamaindex` | [LlamaIndex](./frameworks/llamaindex.md) | Data framework for building document agents, retrieval pipelines, and production RAG systems |
 | `llamaparse` | [LlamaParse](./data-and-retrieval/llamaparse.md) | Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service |
@@ -288,7 +288,7 @@
 | `mistral-vibe` | [Mistral Vibe](./agent-systems/mistral-vibe.md) | Mistral's open-source terminal coding agent with subagent delegation, a trust-folder model and MCP support |
 | `ml-explore-mlx` | [mlx](./frameworks/ml-explore-mlx.md) | MIT-licensed array framework with a NumPy-like API and lazy evaluation built on Apple silicon's unified memory |
 | `ml-intern` | [ml-intern](./agent-systems/ml-intern.md) | Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down |
-| `mlc-llm` | [MLC LLM](./inference-engines/mlc-llm.md) | Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase |
+| `mlc-llm` | [MLC LLM](./inference-engines/mlc-llm.md) | ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops |
 | `mllm` | [mllm](./inference-engines/mllm.md) | C++ multimodal LLM runtime for mobile and edge devices with vision and inference benchmarks |
 | `mlx-audio` | [MLX Audio](./foundation-models/mlx-audio.md) | Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use |
 | `mlx-tune` | [mlx-tune](./training-and-alignment/mlx-tune.md) | Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows |
@@ -301,7 +301,7 @@
 | `ms-swift` | [ms-swift](./training-and-alignment/ms-swift.md) | ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends |
 | `mteb` | [MTEB](./benchmarks-and-evals/mteb.md) | The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks |
 | `nanobot` | [nanobot](./agent-systems/nanobot.md) | Lightweight self-hosted Python agent runtime with WebUI, chat channels, MCP tools, memory and an OpenAI-compatible API in one small core |
-| `nanogpt` | [nanoGPT](./training-and-alignment/nanogpt.md) | Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining |
+| `nanogpt` | [nanoGPT](./training-and-alignment/nanogpt.md) | Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat |
 | `nemo-data-designer` | [NeMo Data Designer](./data-and-retrieval/nemo-data-designer.md) | Toolkit for generating synthetic data from scratch or seed data with configurable schemas, constraints, and model providers |
 | `nmslib-hnswlib` | [hnswlib](./data-and-retrieval/nmslib-hnswlib.md) | Header-only C++ HNSW implementation with Python bindings, tunable memory versus recall, and no server or daemon |
 | `nono` | [nono](./agent-systems/nono.md) | Rust sandbox from the Sigstore team that confines coding agents with least-privilege policy and no daemon or container |
@@ -487,7 +487,7 @@
 | `unstructured` | [Unstructured](./data-and-retrieval/unstructured.md) | Open-source document ETL for converting complex files into structured data for LLM pipelines |
 | `upsonic` | [Upsonic](./agent-systems/upsonic.md) | Python framework for autonomous and traditional agents with workspace-confined file and shell access plus a layered OCR interface |
 | `vercel-ai-sdk` | [Vercel AI SDK](./frameworks/vercel-ai-sdk.md) | TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte |
-| `verl` | [verl](./training-and-alignment/verl.md) | ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs |
+| `verl` | [verl](./training-and-alignment/verl.md) | ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO |
 | `visual-autoregressive` | [VAR (Visual Autoregressive)](./foundation-models/visual-autoregressive.md) | A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale |
 | `vllm` | [vLLM](./inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |
 | `vllm-mlx` | [vLLM-MLX](./inference-engines/vllm-mlx.md) | MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling |

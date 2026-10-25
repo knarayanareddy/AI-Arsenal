@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T13:18:33.834Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-25T13:39:00.401Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -78,7 +78,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - Colossal-AI (HPC-AI Tech) (⭐41407, score:66) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
-- KTransformers (⭐17384, score:60) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
+- verl (⭐24007, score:60) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
@@ -122,7 +122,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
 - dlt — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
 - Hugging Face AI Sheets — Spreadsheet-style web app for building, enriching and transforming datasets with LLM columns, deployable from Docker or pnpm against Hub or local models
-- Label Studio — An open-source data labeling platform for ML and AI datasets
+- Label Studio — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
 
 ### deployment
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters

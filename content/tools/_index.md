@@ -155,12 +155,12 @@ _No star-tracked entries yet._
 - [Inspect Petri](./evaluation-and-observability/inspect-petri.md) — An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior
 - [Instructor](./dx-and-tooling/instructor.md) — A library for extracting typed structured outputs from language models
 - [Jan](./dx-and-tooling/jan.md) — Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp
-- [Jina AI Reader](./data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
+- [Jina AI Reader](./data-ingestion/jina-reader.md) — URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination
 - [Kimi K2.5](./model-layer/kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [KiroCrew](./dx-and-tooling/kirocrew.md) — Agent workspace that keeps files, shell history and learned helper scripts across sessions
 - [KServe](./serving-and-deployment/kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
 - [KubeAI](./serving-and-deployment/kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
-- [Label Studio](./data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
+- [Label Studio](./data-ingestion/label-studio.md) — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
 - [Laminar](./evaluation-and-observability/laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [Langflow](./orchestration/langflow.md) — Python visual builder for agent and RAG workflows that also serves them as REST endpoints and MCP servers
 - [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) — Prompt management and versioning workflows inside the Langfuse observability platform
