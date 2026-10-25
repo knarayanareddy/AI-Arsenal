@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 419
+    "count": 415
   },
   "entries": [
     {
@@ -233,30 +233,6 @@
     {
       "fingerprint": "content/projects/data-and-retrieval/pgvector.md::rejected-boilerplate::f8b0d7ce8a1eea65",
       "file": "content/projects/data-and-retrieval/pgvector.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/qdrant.md::rejected-boilerplate::4c679b725d4110c4",
-      "file": "content/projects/data-and-retrieval/qdrant.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/qdrant.md::rejected-boilerplate::76a4c9219e108007",
-      "file": "content/projects/data-and-retrieval/qdrant.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/qdrant.md::rejected-boilerplate::7c7f1dfa48358e17",
-      "file": "content/projects/data-and-retrieval/qdrant.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/qdrant.md::rejected-boilerplate::bc44341e661bc6b8",
-      "file": "content/projects/data-and-retrieval/qdrant.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },

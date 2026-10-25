@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T11:41:27.787Z",
+    "generated_at": "2026-10-25T11:43:16.462Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -17651,7 +17651,7 @@
       ],
       "path": "content/projects/data-and-retrieval/qdrant.md",
       "url": "content/projects/data-and-retrieval/qdrant",
-      "last_updated": "2026-07-01",
+      "last_updated": "2026-10-25",
       "category": "rag",
       "maturity": "production",
       "cost_model": "open-source",

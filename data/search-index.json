@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T11:41:33.620Z",
+  "generated_at": "2026-10-25T11:43:21.479Z",
   "config": {
     "document": {
       "id": "id",
@@ -45855,7 +45855,7 @@
       "boost_title": "Qdrant",
       "boost_tags": "rag embeddings retrieval self-hosted",
       "boost_description": "Rust vector database for high-performance similarity search with filtering and hybrid search",
-      "body": "Qdrant Rust vector database for high-performance similarity search with filtering and hybrid search rag embeddings retrieval self-hosted rag vector-databases Overview An open source vector database written in Rust, offering both self hosted and managed cloud deployment options, with a particular emphasis on performance and rich payload/metadata filtering alongside vector similarity search. Why it's in the Arsenal The case for Qdrant rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Implemented in Rust for performance, using HNSW based approximate nearest neighbor indexing combined with a payload filter…"
+      "body": "Qdrant Rust vector database for high-performance similarity search with filtering and hybrid search rag embeddings retrieval self-hosted rag vector-databases Overview Qdrant is an Apache 2.0 vector database written in Rust, distributed as a single binary and offered as a managed cloud. Its differentiating claim is not raw speed on unfiltered nearest neighbour search — several engines are competitive there — but how it handles the query shape production actually produces: a vector similarity constraint combined with payload conditions that may be highly selective, over a collection that has to be sharded, replicated and kept in memory at a size that fits the budget. The second half of the story is what you do when it does not fit: quantization, whi…"
     },
     {
       "id": "quantization",
