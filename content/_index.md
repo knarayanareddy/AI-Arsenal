@@ -630,7 +630,7 @@
 - [Langroid](./tools/orchestration/langroid.md) — Python multi-agent framework built on message passing, with Pydantic-validated tool calls and built-in RAG
 - [LangSmith](./tools/evaluation-and-observability/langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [LangSmith Hub](./tools/dx-and-tooling/langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
-- [LangSmith](./projects/benchmarks-and-evals/langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
+- [LangSmith](./projects/benchmarks-and-evals/langsmith-platform.md) — LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
 - [LangWatch](./tools/evaluation-and-observability/langwatch.md) — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
 - [Last Week in AI](./community/newsletters/last-week-in-ai.md) — 
 - [Latent Space (Newsletter)](./community/newsletters/latent-space-newsletter.md) — 

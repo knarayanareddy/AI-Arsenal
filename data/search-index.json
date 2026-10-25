@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T11:34:14.405Z",
+  "generated_at": "2026-10-25T11:41:33.620Z",
   "config": {
     "document": {
       "id": "id",
@@ -263,7 +263,7 @@
       "reinforcement-learning": 10
     },
     "relation_to_stack": {
-      "build-on-top": 412,
+      "build-on-top": 413,
       "deploy-as-is": 288,
       "study-and-reference": 113,
       "fork-and-adapt": 53,
@@ -28799,7 +28799,7 @@
       "type": "project",
       "name": "LangSmith",
       "title": "LangSmith",
-      "description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
+      "description": "LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan",
       "tags": [
         "observability",
         "tracing",
@@ -28817,7 +28817,8 @@
         "language"
       ],
       "relation_to_stack": [
-        "deploy-as-is"
+        "deploy-as-is",
+        "build-on-top"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -28842,8 +28843,8 @@
       "url": "content/projects/benchmarks-and-evals/langsmith-platform",
       "boost_title": "LangSmith",
       "boost_tags": "observability tracing evaluation langchain",
-      "boost_description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
-      "body": "LangSmith Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback observability tracing evaluation langchain observability tracing Overview LangChain's managed platform for tracing, evaluating, and monitoring applications, with first party integration for LangChain and LangGraph specifically, requiring minimal setup for applications already built on those frameworks. The engineering question with LangSmith is not whether it works but what it commits you to unlike langfuse, phoenix; in the benchmark and eval phase; under a freemium cost model; with langsmith platform, name, langsmith: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in p…"
+      "boost_description": "LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan",
+      "body": "LangSmith LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan observability tracing evaluation langchain observability tracing Overview LangSmith is LangChain's commercial platform, and it has grown well past tracing. The current product covers observability (traces, threads, dashboards, alerts, online evaluators, automation rules), evaluation (datasets, experiments, evaluators, pairwise comparison, annotation queues), prompt engineering (the prompt hub, versioned and deployed through the platform) and LangSmith Deployment, which hosts and scales agent servers. A newer \"Engine\" feature scans traces for recurring failures and proposes the root cause, which is the same job a human does by hand after an incident. Deploy…"
     },
     {
       "id": "langwatch",

@@ -227,7 +227,7 @@
 | `langextract` | [LangExtract](./data-and-retrieval/langextract.md) | Python library for grounded structured extraction from unstructured text with source spans and visualization |
 | `langfuse` | [Langfuse](./benchmarks-and-evals/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
 | `langgraph` | [LangGraph](./frameworks/langgraph.md) | Graph-based framework for building stateful, durable LLM agents and workflows |
-| `langsmith-platform` | [LangSmith](./benchmarks-and-evals/langsmith-platform.md) | Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback |
+| `langsmith-platform` | [LangSmith](./benchmarks-and-evals/langsmith-platform.md) | LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan |
 | `latex-ocr` | [LaTeX-OCR (pix2tex)](./data-and-retrieval/latex-ocr.md) | A vision-transformer model that converts images of mathematical equations into LaTeX code, with CLI, GUI, and API interfaces |
 | `leann` | [LEANN](./data-and-retrieval/leann.md) | Vector index that recomputes embeddings on demand, claiming 97 percent storage savings without accuracy loss |
 | `learn-claude-code` | [learn-claude-code](./frameworks/learn-claude-code.md) | A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle |

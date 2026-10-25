@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 423
+    "count": 419
   },
   "entries": [
     {
@@ -37,30 +37,6 @@
       "file": "content/projects/benchmarks-and-evals/langfuse.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langsmith-platform.md::rejected-boilerplate::19593b57dcf844d4",
-      "file": "content/projects/benchmarks-and-evals/langsmith-platform.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langsmith-platform.md::rejected-boilerplate::5a7c636a37ae5a11",
-      "file": "content/projects/benchmarks-and-evals/langsmith-platform.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langsmith-platform.md::rejected-boilerplate::636c20172482a582",
-      "file": "content/projects/benchmarks-and-evals/langsmith-platform.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the engineering question with .{#,#} is not whether it works but what it commits you to/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langsmith-platform.md::rejected-boilerplate::b946461a0759ab70",
-      "file": "content/projects/benchmarks-and-evals/langsmith-platform.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
     },
     {
       "fingerprint": "content/projects/benchmarks-and-evals/lunary.md::rejected-boilerplate::2575611e2a567692",

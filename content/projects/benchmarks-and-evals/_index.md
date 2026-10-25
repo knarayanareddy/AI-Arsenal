@@ -72,7 +72,7 @@ Before selecting an evaluation/observability platform:
 - [Helicone](./helicone.md) — Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions
 - [evaluate](./huggingface-evaluate.md) — A metrics registry where each metric declares the columns it needs, so a score is computed the same way in every project that uses it
 - [Langfuse](./langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-- [LangSmith](./langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
+- [LangSmith](./langsmith-platform.md) — LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
 - [LightEval](./lighteval.md) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 - [lmms-eval](./lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 - [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts

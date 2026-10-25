@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T11:34:09.555Z",
+    "generated_at": "2026-10-25T11:41:27.787Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -11057,7 +11057,7 @@
       "id": "langsmith-platform",
       "type": "project",
       "name": "LangSmith",
-      "description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
+      "description": "LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan",
       "tags": [
         "observability",
         "tracing",
@@ -11066,7 +11066,7 @@
       ],
       "path": "content/projects/benchmarks-and-evals/langsmith-platform.md",
       "url": "content/projects/benchmarks-and-evals/langsmith-platform",
-      "last_updated": "2026-07-01",
+      "last_updated": "2026-10-25",
       "category": "observability",
       "maturity": "production",
       "cost_model": "freemium",
