@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:43:37.232Z",
+  "generated_at": "2026-10-25T13:46:17.121Z",
   "config": {
     "document": {
       "id": "id",
@@ -17947,7 +17947,7 @@
       "type": "tool",
       "name": "FastAPI",
       "title": "FastAPI",
-      "description": "Python web framework for building APIs around AI services and model workflows",
+      "description": "Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints",
       "tags": [
         "llm",
         "cloud",
@@ -17988,8 +17988,8 @@
       "url": "content/tools/serving-and-deployment/fastapi",
       "boost_title": "FastAPI",
       "boost_tags": "llm cloud serverless",
-      "boost_description": "Python web framework for building APIs around AI services and model workflows",
-      "body": "FastAPI Python web framework for building APIs around AI services and model workflows llm cloud serverless TL;DR: the prototyping, production serving entry for FastAPI. Python web framework for building APIs around AI services and model workflows — the deciding factor is operational cost and what you have to run, not the feature list. Overview A modern Python web framework for building APIs, widely used to wrap AI/ML models and pipelines behind an HTTP interface with automatic request/response validation and docs. Why It's in the Arsenal The case for FastAPI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what d…"
+      "boost_description": "Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints",
+      "body": "FastAPI Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints llm cloud serverless TL;DR: An HTTP framework, not an inference server — it gives a model endpoint validation, docs and token streaming, and leaves scheduling and GPU memory to the thing behind it. Overview FastAPI is a web framework built on two libraries: Starlette for the ASGI plumbing and Pydantic for data validation. A route handler is a plain Python function with type annotations; the annotations become request parsing, response serialisation, validation errors and an OpenAPI schema, which is then rendered as interactive documentation. For model serving that combination hits an unusually good seam. A genera…"
     },
     {
       "id": "fastembed",
@@ -20877,7 +20877,7 @@
       "type": "tool",
       "name": "Google Vertex AI",
       "title": "Google Vertex AI",
-      "description": "Google Cloud platform for model APIs, training, evaluation, and AI application deployment",
+      "description": "Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction",
       "tags": [
         "cloud",
         "llm",
@@ -20917,8 +20917,8 @@
       "url": "content/tools/serving-and-deployment/google-vertex-ai",
       "boost_title": "Google Vertex AI",
       "boost_tags": "cloud llm evaluation",
-      "boost_description": "Google Cloud platform for model APIs, training, evaluation, and AI application deployment",
-      "body": "Google Vertex AI Google Cloud platform for model APIs, training, evaluation, and AI application deployment cloud llm evaluation TL;DR: Google Vertex AI, for the deployment job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview Google Cloud's platform for training, evaluating, and deploying AI models, tightly integrated with BigQuery and other GCP data services. The integration surface is an API rather than a vendored library unlike aws bedrock, azure ai studio; on the deployment path; under a usage based cost model; with google vertex ai, name, google. What you actually depend on is the request and response schema and the authe…"
+      "boost_description": "Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction",
+      "body": "Google Vertex AI Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction cloud llm evaluation TL;DR: Google's managed AI platform — excellent if your estate is already GCP and your requirements include governance; a large amount of platform to adopt if all you wanted was an endpoint. Overview Vertex AI is where Google Cloud puts managed model access and managed model operations in one place. On the access side there is Gemini through the Vertex API and Model Garden, which lists first party and third party models with deployable or API served variants. On the operations side there is custom training on managed containers and accelerators, a Model Registry, Endpoints for online predicti…"
     },
     {
       "id": "goose",

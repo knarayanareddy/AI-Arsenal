@@ -409,7 +409,7 @@
 - [Fara](./projects/foundation-models/fara.md) — Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 - [Gymnasium](./projects/frameworks/farama-foundation-gymnasium.md) — Standard API for reinforcement-learning environments with spaces, vectorisation, and a curated env registry
 - [fast.ai](./community/creators/fastai-youtube.md) — 
-- [FastAPI](./tools/serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
+- [FastAPI](./tools/serving-and-deployment/fastapi.md) — Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints
 - [FastEmbed](./tools/model-layer/fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [faster-whisper](./projects/inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [FastGPT](./projects/data-and-retrieval/fastgpt.md) — Knowledge-base and visual workflow platform for LLM apps with RAG retrieval, data processing and Flow orchestration
@@ -468,7 +468,7 @@
 - [flax](./projects/frameworks/google-flax.md) — JAX neural network library whose Linen and nnx module systems keep parameters as explicit pytrees for jit-compatible training
 - [Google Pomelli 2.0](./tools/dx-and-tooling/google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
 - [scenic](./projects/frameworks/google-research-scenic.md) — JAX vision research library that expresses data loading, model, loss, and metrics as whole composable functions rather than mutable modules
-- [Google Vertex AI](./tools/serving-and-deployment/google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
+- [Google Vertex AI](./tools/serving-and-deployment/google-vertex-ai.md) — Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction
 - [Goose](./tools/dx-and-tooling/goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
 - [GPQA Diamond](./benchmarks/general-llm/gpqa-diamond.md) — 
 - [GPT Engineer](./projects/agent-systems/gpt-engineer.md) — Archived Python CLI that specified software in natural language and let a model write and execute it

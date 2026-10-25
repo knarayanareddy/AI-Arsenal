@@ -117,7 +117,7 @@ _No star-tracked entries yet._
 - [Evidently](./evaluation-and-observability/evidently.md) — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
 - [Exa](./data-ingestion/exa.md) — Hosted MCP server exposing Exa web search and page fetch as two default tools for any MCP client
 - [FAISS](./data-ingestion/faiss.md) — C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes
-- [FastAPI](./serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
+- [FastAPI](./serving-and-deployment/fastapi.md) — Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints
 - [FastEmbed](./model-layer/fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [Fine Tuning Tools](./by-job/fine-tuning.md) — Curated tools for fine tuning workflows in AI engineering
 - [Firecrawl](./data-ingestion/firecrawl-tool.md) — Web data API and open-source scraper returning clean markdown, structured JSON, screenshots, and interaction actions for agent use
@@ -133,7 +133,7 @@ _No star-tracked entries yet._
 - [GitHub Copilot](./dx-and-tooling/github-copilot.md) — GitHub's AI pair programmer: completions, chat, and an autonomous coding agent woven through GitHub and major IDEs
 - [Gitingest](./data-ingestion/gitingest.md) — Turns a Git repository into a prompt-friendly text digest with file tree, size and token count
 - [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
-- [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
+- [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) — Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction
 - [Goose](./dx-and-tooling/goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
 - [gptme](./dx-and-tooling/gptme.md) — Local-first CLI agent that runs shell, Python, patches and a browser, with an explicit approval gate
 - [GPUStack](./serving-and-deployment/gpustack.md) — Cluster manager that pools NVIDIA, AMD and Ascend GPUs and serves models through vLLM or SGLang

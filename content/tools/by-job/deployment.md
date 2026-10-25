@@ -183,7 +183,7 @@ This table is exhaustive for tools tagged with job = deployment.
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
-| [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | usage-based | Yes | No | No | polyglot | solid-choice |
 | [GPUStack](../serving-and-deployment/gpustack.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | usage-based | Yes | No | No | python, typescript | recommended |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |

@@ -79,7 +79,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
 | [FuzzyAI](../evaluation-and-observability/fuzzyai.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | polyglot | use-with-caution |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
-| [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | solid-choice |
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | web-scraping | freemium | Yes | No | No | polyglot | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T13:43:31.473Z",
+    "generated_at": "2026-10-25T13:46:11.067Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -6867,7 +6867,7 @@
       "id": "fastapi",
       "type": "tool",
       "name": "FastAPI",
-      "description": "Python web framework for building APIs around AI services and model workflows",
+      "description": "Async Python API framework over Starlette and Pydantic — typed request models, generated OpenAPI docs and streaming responses for LLM endpoints",
       "tags": [
         "llm",
         "cloud",
@@ -6875,7 +6875,7 @@
       ],
       "path": "content/tools/serving-and-deployment/fastapi.md",
       "url": "content/tools/serving-and-deployment/fastapi",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
@@ -7998,7 +7998,7 @@
       "id": "google-vertex-ai",
       "type": "tool",
       "name": "Google Vertex AI",
-      "description": "Google Cloud platform for model APIs, training, evaluation, and AI application deployment",
+      "description": "Google Cloud's managed AI platform — Gemini and Model Garden endpoints, custom training, Model Registry, pipelines, Vector Search and batch prediction",
       "tags": [
         "cloud",
         "llm",
@@ -8006,7 +8006,7 @@
       ],
       "path": "content/tools/serving-and-deployment/google-vertex-ai.md",
       "url": "content/tools/serving-and-deployment/google-vertex-ai",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
