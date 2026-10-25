@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 359
+    "count": 335
   },
   "entries": [
     {
@@ -969,30 +969,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/playwright.md::rejected-boilerplate::09157031a8b14c43",
-      "file": "content/tools/data-ingestion/playwright.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/playwright.md::rejected-boilerplate::0d69641b1864027f",
-      "file": "content/tools/data-ingestion/playwright.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/playwright.md::rejected-boilerplate::70bd124b4fea0ed5",
-      "file": "content/tools/data-ingestion/playwright.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /as a service with a schema, not as code you own/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/playwright.md::rejected-boilerplate::bd7a72e0951fc896",
-      "file": "content/tools/data-ingestion/playwright.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/puppeteer.md::rejected-boilerplate::755d1d08f7f82081",
       "file": "content/tools/data-ingestion/puppeteer.md",
       "rule": "rejected-boilerplate",
@@ -1197,30 +1173,6 @@
       "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/mesop.md::rejected-boilerplate::1977e34507531ab2",
-      "file": "content/tools/dx-and-tooling/mesop.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/mesop.md::rejected-boilerplate::56736f78d23fff94",
-      "file": "content/tools/dx-and-tooling/mesop.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/mesop.md::rejected-boilerplate::6cc2e7b8b6c2ed71",
-      "file": "content/tools/dx-and-tooling/mesop.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/mesop.md::rejected-boilerplate::b4dc693612d0a638",
-      "file": "content/tools/dx-and-tooling/mesop.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/open-webui.md::rejected-boilerplate::85b89ea9f732c4c4",
       "file": "content/tools/dx-and-tooling/open-webui.md",
       "rule": "rejected-boilerplate",
@@ -1237,30 +1189,6 @@
       "file": "content/tools/dx-and-tooling/openai-codex-cli.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/promptlayer.md::rejected-boilerplate::16f11f3280296a77",
-      "file": "content/tools/dx-and-tooling/promptlayer.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/promptlayer.md::rejected-boilerplate::1e60ed869dcf21ea",
-      "file": "content/tools/dx-and-tooling/promptlayer.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/promptlayer.md::rejected-boilerplate::ba2d04e919d949a7",
-      "file": "content/tools/dx-and-tooling/promptlayer.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/promptlayer.md::rejected-boilerplate::dde5723913021108",
-      "file": "content/tools/dx-and-tooling/promptlayer.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/qursor.md::rejected-boilerplate::75e2d26605026fd9",
@@ -1575,30 +1503,6 @@
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
     },
     {
-      "fingerprint": "content/tools/model-layer/dvc.md::rejected-boilerplate::21503426ba3bb454",
-      "file": "content/tools/model-layer/dvc.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/dvc.md::rejected-boilerplate::53e4bca5d16ef49e",
-      "file": "content/tools/model-layer/dvc.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/dvc.md::rejected-boilerplate::5cddf2fbe3316014",
-      "file": "content/tools/model-layer/dvc.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/dvc.md::rejected-boilerplate::7d8edf1f166186dc",
-      "file": "content/tools/model-layer/dvc.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
       "fingerprint": "content/tools/model-layer/groq.md::rejected-boilerplate::6b11975ff078189f",
       "file": "content/tools/model-layer/groq.md",
       "rule": "rejected-boilerplate",
@@ -1621,30 +1525,6 @@
       "file": "content/tools/model-layer/guidance.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/hugging-face-hub.md::rejected-boilerplate::1cf886d77161d3f8",
-      "file": "content/tools/model-layer/hugging-face-hub.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/hugging-face-hub.md::rejected-boilerplate::366082c1aef622e8",
-      "file": "content/tools/model-layer/hugging-face-hub.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/hugging-face-hub.md::rejected-boilerplate::a2d287c0a9faeef7",
-      "file": "content/tools/model-layer/hugging-face-hub.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/hugging-face-hub.md::rejected-boilerplate::f39116c00ff5eaad",
-      "file": "content/tools/model-layer/hugging-face-hub.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
     },
     {
       "fingerprint": "content/tools/model-layer/ideogram.md::rejected-boilerplate::e4404e44de935286",
@@ -1801,30 +1681,6 @@
       "file": "content/tools/model-layer/together-ai.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/torchtune.md::rejected-boilerplate::2ca2ee83ca0bc6d1",
-      "file": "content/tools/model-layer/torchtune.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/torchtune.md::rejected-boilerplate::3162cbdb12f3f5f3",
-      "file": "content/tools/model-layer/torchtune.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/torchtune.md::rejected-boilerplate::cfc38eccd6b3ff71",
-      "file": "content/tools/model-layer/torchtune.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/torchtune.md::rejected-boilerplate::fafb98263398ca20",
-      "file": "content/tools/model-layer/torchtune.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
     },
     {
       "fingerprint": "content/tools/model-layer/trl.md::rejected-boilerplate::060c27d53a6f0032",

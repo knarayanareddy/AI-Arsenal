@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T13:39:00.401Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-25T13:43:39.383Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -155,8 +155,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### model-registry
 - awesome-opensource-ai — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
-- DVC — Open-source data and model versioning tool for ML projects and pipelines
-- Hugging Face Hub — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
+- DVC — Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
+- Hugging Face Hub — The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client
 - MLflow — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 
 ### monitoring

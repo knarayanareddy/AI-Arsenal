@@ -367,7 +367,7 @@
 - [The Llama 3 Herd of Models](./research/foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [DuckDB](./projects/data-and-retrieval/duckdb.md) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
 - [Dust](./tools/orchestration/dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
-- [DVC](./tools/model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
+- [DVC](./tools/model-layer/dvc.md) — Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
 - [NVIDIA Dynamo](./projects/inference-engines/dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
 - [E2B](./tools/orchestration/e2b.md) — Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents
 - [EasyOCR](./projects/data-and-retrieval/easyocr.md) — Ready-to-use Python OCR package with 80-plus supported languages, a Gradio web demo, and a simple reader API
@@ -528,7 +528,7 @@
 - [Meta-Benchmarks for Financial-Services LLM Evaluation](./research/evaluation-and-safety/hudson-2026-financial-llm-metabench.md) — A weighting scheme that scores 288 models on banking work activities by Elo, down-weighting benchmarks that no longer separate leaders.
 - [Hugging Face Discord](./community/chat/hugging-face-discord.md) — 
 - [Hugging Face Forums](./community/forums/hugging-face-forums.md) — 
-- [Hugging Face Hub](./tools/model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
+- [Hugging Face Hub](./tools/model-layer/hugging-face-hub.md) — The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client
 - [datasets](./projects/data-and-retrieval/huggingface-datasets.md) — Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
 - [evaluate](./projects/benchmarks-and-evals/huggingface-evaluate.md) — A metrics registry where each metric declares the columns it needs, so a score is computed the same way in every project that uses it
 - [huggingface_hub](./projects/data-and-retrieval/huggingface-huggingface-hub.md) — Official Python client and CLI for the Hugging Face Hub, covering download, upload, cache management, and repo operations
@@ -756,7 +756,7 @@
 - [Memvid](./projects/agent-systems/memvid.md) — Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames
 - [SimPO: Simple Preference Optimization with a Reference-Free Reward](./research/training-and-alignment/meng-2024-simpo.md) — A preference-optimization objective that drops DPO's reference model, using the average log-probability of a response as an implicit reward plus a target margin — simpler, cheaper (no reference forward pass), and often stronger than DPO.
 - [Mesh-LLM](./tools/serving-and-deployment/mesh-llm.md) — Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint
-- [Mesop](./tools/dx-and-tooling/mesop.md) — Google Python UI framework for building web apps and AI prototypes
+- [Mesop](./tools/dx-and-tooling/mesop.md) — Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency
 - [Metaflow](./projects/frameworks/metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
 - [MetaGPT](./projects/frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
 - [Microsoft Agent Framework](./projects/frameworks/microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
@@ -932,7 +932,7 @@
 - [Validity of LLMs as Data Annotators: AMALIA on Authority](./research/evaluation-and-safety/pita-2026-amalia-authority.md) — Tests whether agreement between the Portuguese AMALIA model and human authority annotations reflects valid construct reasoning or surface-correlated shortcuts.
 - [PixelRAG](./projects/data-and-retrieval/pixelrag.md) — Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill
 - [Pixeltable](./projects/data-and-retrieval/pixeltable.md) — Unified multimodal backend for AI data apps with tables, computed columns, media, and model functions
-- [Playwright](./tools/data-ingestion/playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows
+- [Playwright](./tools/data-ingestion/playwright.md) — Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse
 - [PocketFlow](./projects/frameworks/pocketflow.md) — A hundred-line Python LLM framework whose Node, Flow, and nested-Flow primitives express multi-agent, RAG, and workflow patterns
 - [Polars](./projects/data-and-retrieval/polars.md) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
 - [polyaxon](./projects/frameworks/polyaxon-polyaxon.md) — Control plane that tracks runs, pipelines, and agents with full lineage from experiment through to deployment and restart
@@ -959,7 +959,7 @@
 - [Prompt Patterns Catalog](./skills/prompt-engineering/prompt-patterns-catalog.md) — Catalog of practical prompt patterns for structured LLM application behavior
 - [Prompt flow (Microsoft)](./tools/orchestration/promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
 - [promptfoo](./tools/evaluation-and-observability/promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
-- [PromptLayer](./tools/dx-and-tooling/promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [PromptLayer](./tools/dx-and-tooling/promptlayer.md) — Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals
 - [Prompty](./tools/dx-and-tooling/prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace](./observability/tracing/propagate-trace-context-across-services-and-streaming.md) — 
 - [Prototyping Tools](./tools/by-job/prototyping.md) — Curated tools for prototyping workflows in AI engineering
@@ -1217,7 +1217,7 @@
 - [Source Feed: ToolRadar / Techpresso](./trending/by-source/toolradar-techpresso.md) — 
 - [toon](./projects/frameworks/toon.md) — A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks
 - [torchtitan](./projects/training-and-alignment/torchtitan.md) — PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points
-- [torchtune](./tools/model-layer/torchtune.md) — PyTorch-native library for fine-tuning and experimenting with LLMs
+- [torchtune](./tools/model-layer/torchtune.md) — PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code
 - [LLaMA: Open and Efficient Foundation Language Models](./research/foundational/touvron-2023-llama.md) — Trained 7B–65B models on public data only, overtraining far past Chinchilla-optimal to optimize inference cost rather than training cost — LLaMA-13B beat GPT-3-175B, and the weights' release ignited the open-model ecosystem
 - [Llama 2: Open Foundation and Fine-Tuned Chat Models](./research/foundational/touvron-2023-llama2.md) — The release that created the open-weight LLM ecosystem: commercially licensed 7B-70B models plus the most detailed public documentation of the RLHF chat-tuning pipeline at the time — the paper that taught the community how aligned chat models are actually made
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md) — 

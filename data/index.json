@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T13:38:52.473Z",
+    "generated_at": "2026-10-25T13:43:31.473Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -6079,14 +6079,14 @@
       "id": "dvc",
       "type": "tool",
       "name": "DVC",
-      "description": "Open-source data and model versioning tool for ML projects and pipelines",
+      "description": "Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed",
       "tags": [
         "data",
         "monitoring"
       ],
       "path": "content/tools/model-layer/dvc.md",
       "url": "content/tools/model-layer/dvc",
-      "last_updated": "2026-10-24",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
@@ -9137,7 +9137,7 @@
       "id": "hugging-face-hub",
       "type": "tool",
       "name": "Hugging Face Hub",
-      "description": "Model, dataset, and Space hosting platform for sharing and versioning AI artifacts",
+      "description": "The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client",
       "tags": [
         "huggingface",
         "llm",
@@ -9145,7 +9145,7 @@
       ],
       "path": "content/tools/model-layer/hugging-face-hub.md",
       "url": "content/tools/model-layer/hugging-face-hub",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
@@ -13462,7 +13462,7 @@
       "id": "mesop",
       "type": "tool",
       "name": "Mesop",
-      "description": "Google Python UI framework for building web apps and AI prototypes",
+      "description": "Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency",
       "tags": [
         "llm",
         "cloud",
@@ -13470,7 +13470,7 @@
       ],
       "path": "content/tools/dx-and-tooling/mesop.md",
       "url": "content/tools/dx-and-tooling/mesop",
-      "last_updated": "2026-10-24",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
@@ -16843,14 +16843,14 @@
       "id": "playwright",
       "type": "tool",
       "name": "Playwright",
-      "description": "Browser automation framework for reliable end-to-end tests and web scraping workflows",
+      "description": "Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse",
       "tags": [
         "data",
         "cloud"
       ],
       "path": "content/tools/data-ingestion/playwright.md",
       "url": "content/tools/data-ingestion/playwright",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
@@ -17349,7 +17349,7 @@
       "id": "promptlayer",
       "type": "tool",
       "name": "PromptLayer",
-      "description": "Prompt management and logging platform for versioning, collaboration, and observability",
+      "description": "Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals",
       "tags": [
         "llm",
         "observability",
@@ -17357,7 +17357,7 @@
       ],
       "path": "content/tools/dx-and-tooling/promptlayer.md",
       "url": "content/tools/dx-and-tooling/promptlayer",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
@@ -22225,7 +22225,7 @@
       "id": "torchtune",
       "type": "tool",
       "name": "torchtune",
-      "description": "PyTorch-native library for fine-tuning and experimenting with LLMs",
+      "description": "PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code",
       "tags": [
         "fine-tuning",
         "llm",
@@ -22233,11 +22233,11 @@
       ],
       "path": "content/tools/model-layer/torchtune.md",
       "url": "content/tools/model-layer/torchtune",
-      "last_updated": "2026-10-24",
+      "last_updated": "2026-10-25",
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "featured": false
     },
     {

@@ -70,7 +70,7 @@
 | `docsgpt` | [DocsGPT](./orchestration/docsgpt.md) | Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI |
 | `dropstone-3` | [Dropstone 3](./dx-and-tooling/dropstone-3.md) | Collaborative AI workspace for teams to build, describe, and ship software together |
 | `dust` | [Dust](./orchestration/dust.md) | Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing |
-| `dvc` | [DVC](./model-layer/dvc.md) | Open-source data and model versioning tool for ML projects and pipelines |
+| `dvc` | [DVC](./model-layer/dvc.md) | Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed |
 | `e2b` | [E2B](./orchestration/e2b.md) | Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents |
 | `elasticsearch` | [Elasticsearch](./data-ingestion/elasticsearch.md) | Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing |
 | `empromptu-ai` | [Empromptu AI](./orchestration/empromptu-ai.md) | Build, deploy, and manage custom AI applications that improve over time |
@@ -107,7 +107,7 @@
 | `headroom` | [headroom](./dx-and-tooling/headroom.md) | Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model |
 | `hf-inference-endpoints` | [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) | Managed Hugging Face service for deploying models as production inference endpoints |
 | `honen` | [Honen](./dx-and-tooling/honen.md) | Transform any content into interactive AI-generated courses |
-| `hugging-face-hub` | [Hugging Face Hub](./model-layer/hugging-face-hub.md) | Model, dataset, and Space hosting platform for sharing and versioning AI artifacts |
+| `hugging-face-hub` | [Hugging Face Hub](./model-layer/hugging-face-hub.md) | The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client |
 | `humanloop` | [Humanloop](./evaluation-and-observability/humanloop.md) | A platform for prompt management, evaluation, and product feedback workflows |
 | `ideogram` | [Ideogram](./model-layer/ideogram.md) | AI image generation with reliable text rendering in outputs |
 | `ideogram-ai` | [Ideogram AI](./model-layer/ideogram-ai.md) | AI image generation platform with reliable text rendering and broad style coverage |
@@ -150,7 +150,7 @@
 | `mem0` | [Mem0](./orchestration/mem0.md) | Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval |
 | `memoriq` | [Memoriq](./orchestration/memoriq.md) | Private AI memory layer that learns from your conversations and documents |
 | `mesh-llm` | [Mesh-LLM](./serving-and-deployment/mesh-llm.md) | Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint |
-| `mesop` | [Mesop](./dx-and-tooling/mesop.md) | Google Python UI framework for building web apps and AI prototypes |
+| `mesop` | [Mesop](./dx-and-tooling/mesop.md) | Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency |
 | `mineru` | [MinerU](./data-ingestion/mineru.md) | OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models |
 | `mirascope` | [Mirascope](./orchestration/mirascope.md) | Decorator-based LLM interface with typed provider/model strings, Pydantic structured output and resumable tool loops |
 | `mlflow` | [MLflow](./model-layer/mlflow.md) | Open-source platform for experiment tracking, model registry, and ML lifecycle management |
@@ -179,13 +179,13 @@
 | `outlines` | [Outlines](./model-layer/outlines.md) | A library for constrained generation and structured outputs with LLMs |
 | `peft` | [PEFT](./model-layer/peft.md) | Hugging Face library for parameter-efficient fine-tuning methods |
 | `pinecone` | [Pinecone](./data-ingestion/pinecone.md) | A managed vector database for production semantic search applications |
-| `playwright` | [Playwright](./data-ingestion/playwright.md) | Browser automation framework for reliable end-to-end tests and web scraping workflows |
+| `playwright` | [Playwright](./data-ingestion/playwright.md) | Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse |
 | `portkey` | [Portkey](./serving-and-deployment/portkey.md) | An AI gateway for routing, observability, guardrails, and prompt management |
 | `prefect` | [Prefect](./orchestration/prefect.md) | Python workflow framework where @flow and @task decorators add scheduling, caching and retries to plain scripts |
 | `prodigy` | [Prodigy](./data-ingestion/prodigy.md) | Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows |
 | `promptflow` | [Prompt flow (Microsoft)](./orchestration/promptflow.md) | Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML |
 | `promptfoo` | [promptfoo](./evaluation-and-observability/promptfoo.md) | An open-source CLI and platform for prompt and LLM regression testing |
-| `promptlayer` | [PromptLayer](./dx-and-tooling/promptlayer.md) | Prompt management and logging platform for versioning, collaboration, and observability |
+| `promptlayer` | [PromptLayer](./dx-and-tooling/promptlayer.md) | Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals |
 | `prompty` | [Prompty](./dx-and-tooling/prompty.md) | Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts |
 | `puppeteer` | [Puppeteer](./data-ingestion/puppeteer.md) | Node.js browser automation library for Chrome and Chromium workflows |
 | `pydantic-ai-tool` | [Pydantic AI](./orchestration/pydantic-ai-tool.md) | Typed Python AI SDK with an agent loop, dependency injection, model swapping by string id, and a harness for long-running work |
@@ -232,7 +232,7 @@
 | `text-embeddings-inference` | [Text Embeddings Inference (TEI)](./serving-and-deployment/text-embeddings-inference.md) | Hugging Face's Rust-based high-throughput inference server for embedding and reranker models |
 | `together-ai` | [Together AI](./model-layer/together-ai.md) | Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints |
 | `toolhive` | [ToolHive](./serving-and-deployment/toolhive.md) | Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers |
-| `torchtune` | [torchtune](./model-layer/torchtune.md) | PyTorch-native library for fine-tuning and experimenting with LLMs |
+| `torchtune` | [torchtune](./model-layer/torchtune.md) | PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code |
 | `trafilatura` | [Trafilatura](./data-ingestion/trafilatura.md) | Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building |
 | `triton-inference-server` | [NVIDIA Triton Inference Server](./serving-and-deployment/triton-inference-server.md) | NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles |
 | `trl` | [TRL](./model-layer/trl.md) | Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers |

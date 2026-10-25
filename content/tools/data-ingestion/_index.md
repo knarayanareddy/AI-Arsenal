@@ -68,7 +68,7 @@ _No star-tracked entries yet._
 - [Nomic Atlas](./nomic-atlas.md) — Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
 - [Pinecone](./pinecone.md) — A managed vector database for production semantic search applications
-- [Playwright](./playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows
+- [Playwright](./playwright.md) — Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse
 - [Prodigy](./prodigy.md) — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
 - [Puppeteer](./puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [RAGatouille](./ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines

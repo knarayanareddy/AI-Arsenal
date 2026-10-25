@@ -79,12 +79,12 @@ _No star-tracked entries yet._
 - [LangSmith Hub](./langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
 - [LM Studio](./lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
 - [marimo](./marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
-- [Mesop](./mesop.md) — Google Python UI framework for building web apps and AI prototypes
+- [Mesop](./mesop.md) — Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency
 - [Open WebUI](./open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
 - [OpenAI Codex CLI](./openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [OpenUI](./openui.md) — Open generative-UI stack that turns prompts and screenshots into React and Tailwind components
 - [Orca](./orca.md) — Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree
-- [PromptLayer](./promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [PromptLayer](./promptlayer.md) — Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals
 - [Prompty](./prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Qursor](./qursor.md) — AI-powered UI context for faster front-end development with agents
 - [Recursi](./recursi.md) — Self-improving system for intuitive and efficient AI-assisted coding

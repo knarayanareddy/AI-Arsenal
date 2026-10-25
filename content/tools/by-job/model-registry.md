@@ -133,7 +133,7 @@ This table is exhaustive for tools tagged with job = model-registry.
 | [awesome-opensource-ai](../dx-and-tooling/awesome-opensource-ai.md) | dx and tooling | open-source | Yes | No | Yes | polyglot | recommended |
 | [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [DVC](../model-layer/dvc.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
-| [Hugging Face Hub](../model-layer/hugging-face-hub.md) | model layer | freemium | Yes | No | No | python | recommended |
+| [Hugging Face Hub](../model-layer/hugging-face-hub.md) | model layer | freemium | Yes | No | No | python | best-in-class |
 | [MLflow](../model-layer/mlflow.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Weights & Biases](../model-layer/weights-biases.md) | model layer | freemium | Yes | No | No | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

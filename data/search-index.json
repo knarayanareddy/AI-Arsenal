@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:38:58.240Z",
+  "generated_at": "2026-10-25T13:43:37.232Z",
   "config": {
     "document": {
       "id": "id",
@@ -198,10 +198,10 @@
       "paid": 12
     },
     "status": {
-      "active": 913,
+      "active": 912,
       "archived": 17,
       "deprecated": 2,
-      "watching": 21,
+      "watching": 22,
       "reviewed": 3,
       "draft": 1
     },
@@ -15898,7 +15898,7 @@
       "type": "tool",
       "name": "DVC",
       "title": "DVC",
-      "description": "Open-source data and model versioning tool for ML projects and pipelines",
+      "description": "Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed",
       "tags": [
         "data",
         "monitoring"
@@ -15938,8 +15938,8 @@
       "url": "content/tools/model-layer/dvc",
       "boost_title": "DVC",
       "boost_tags": "data monitoring",
-      "boost_description": "Open-source data and model versioning tool for ML projects and pipelines",
-      "body": "DVC Open-source data and model versioning tool for ML projects and pipelines data monitoring TL;DR: the model registry entry for DVC. Open source data and model versioning tool for ML projects and pipelines — the deciding factor is operational cost and what you have to run, not the feature list. Overview An open source tool that brings Git like version control to datasets and model artifacts, keeping large binary files out of Git itself while preserving full lineage and reproducibility. Why It's in the Arsenal The entry exists because DVC is a open source data and model versioning tool for ML projects and pipelines. Read it beside hugging face hub, mlflow, weights biases: the choice…"
+      "boost_description": "Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed",
+      "body": "DVC Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed data monitoring TL;DR: Git for data, minus the pain: small pointer files in the repository, content in a cache and an object store, and a pipeline graph that tells you what to re run. Overview DVC solves one problem well and builds a workflow around it. Git cannot hold multi gigabyte datasets or model weights, but the history, branching and review around those artifacts is exactly what Git is good at. DVC splits the two: dvc add data/raw writes a small data.dvc file containing content hashes, adds the directory to .gitignore, and stores the actual bytes in a local cache that dvc push copies to a remote — S3,…"
     },
     {
       "id": "dynamo",
@@ -23810,7 +23810,7 @@
       "type": "tool",
       "name": "Hugging Face Hub",
       "title": "Hugging Face Hub",
-      "description": "Model, dataset, and Space hosting platform for sharing and versioning AI artifacts",
+      "description": "The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client",
       "tags": [
         "huggingface",
         "llm",
@@ -23852,8 +23852,8 @@
       "url": "content/tools/model-layer/hugging-face-hub",
       "boost_title": "Hugging Face Hub",
       "boost_tags": "huggingface llm data",
-      "boost_description": "Model, dataset, and Space hosting platform for sharing and versioning AI artifacts",
-      "body": "Hugging Face Hub Model, dataset, and Space hosting platform for sharing and versioning AI artifacts huggingface llm data TL;DR: Hugging Face Hub, for the model registry job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview The largest community platform for hosting, discovering, and versioning open models, datasets, and interactive demo Spaces, serving as the de facto model registry for the open source AI ecosystem. Why It's in the Arsenal The entry exists because Hugging Face Hub is a model, dataset, and Space hosting platform for sharing and versioning AI artifacts. Read it beside dvc, mlflow, weights biases: the choi…"
+      "boost_description": "The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client",
+      "body": "Hugging Face Hub The default distribution platform for open models, datasets and demo Spaces — Git-backed repositories with LFS/Xet storage and a first-class Python client huggingface llm data TL;DR: The distribution layer the open model ecosystem agreed on. Its value is not storage — it is that Qwen/Qwen3.8 27B resolves everywhere, and that a commit hash makes it reproducible. Overview Hugging Face Hub is where open models, datasets and demos live. Each is a Git repository — a model repo holds weights and config, a dataset repo holds data and its loader script, a Space repo holds a runnable app — with Git history, branches, tags and issues attached to each. The important detail is that it is not a database with a download endpoint. It is Git, adapted: large files go through LFS or…"
     },
     {
       "id": "huggingface-datasets",
@@ -34945,7 +34945,7 @@
       "type": "tool",
       "name": "Mesop",
       "title": "Mesop",
-      "description": "Google Python UI framework for building web apps and AI prototypes",
+      "description": "Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency",
       "tags": [
         "llm",
         "cloud",
@@ -34985,8 +34985,8 @@
       "url": "content/tools/dx-and-tooling/mesop",
       "boost_title": "Mesop",
       "boost_tags": "llm cloud data",
-      "boost_description": "Google Python UI framework for building web apps and AI prototypes",
-      "body": "Mesop Google Python UI framework for building web apps and AI prototypes llm cloud data TL;DR: Mesop, for the prototyping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview Google's Python UI framework for building internal tools and AI prototypes with a component model closer to a conventional web framework than Gradio or Streamlit's script rerun model. Why It's in the Arsenal Mesop is a google Python UI framework for building web apps and AI prototypes. Read it beside chainlit, fastapi, gradio: the choice between them is a deployment and cost decision before it is a capability one.…"
+      "boost_description": "Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency",
+      "body": "Mesop Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency llm cloud data TL;DR: A well designed Python UI framework that stopped being maintained on 30 September 2026 — useful to read, and the wrong thing to build on. Overview Mesop let you write a web UI in Python: page functions decorated with @me.page, a component tree assembled from me.text, me.button, me.input and layout primitives, state held in me.state, and navigation by path. It rendered to a real frontend over a websocket, and unlike Gradio or Streamlit it did not rerun your whole script on every interaction — a state change re rendered the components that depended on it. It was built and used at Google…"
     },
     {
       "id": "metaflow",
@@ -43740,7 +43740,7 @@
       "type": "tool",
       "name": "Playwright",
       "title": "Playwright",
-      "description": "Browser automation framework for reliable end-to-end tests and web scraping workflows",
+      "description": "Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse",
       "tags": [
         "data",
         "cloud"
@@ -43780,8 +43780,8 @@
       "url": "content/tools/data-ingestion/playwright",
       "boost_title": "Playwright",
       "boost_tags": "data cloud",
-      "boost_description": "Browser automation framework for reliable end-to-end tests and web scraping workflows",
-      "body": "Playwright Browser automation framework for reliable end-to-end tests and web scraping workflows data cloud TL;DR: Playwright covers the web scraping leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview A cross browser automation framework (Chromium, Firefox, WebKit) used both for reliable end to end testing and for scraping/interacting with JavaScript heavy websites that simple HTTP scraping can't handle. Treat Playwright as a service with a schema, not as code you own unlike crawl4ai tool, firecrawl tool; on the web scraping path; under a open source cost model; with playwright, name, type. The ca…"
+      "boost_description": "Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse",
+      "body": "Playwright Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse data cloud TL;DR: When the content you need only exists after a browser has run, Playwright is the most reliable way to drive one — and its trace viewer is the reason debugging that script is a five minute job instead of an afternoon. Overview Playwright is a browser automation framework from Microsoft, shipped as libraries for TypeScript/JavaScript, Python, Java and .NET, driving three engines: Chromium, Firefox and WebKit. The same script runs against all three, which matters because \"it works in Chrome\" is not a property production web applications have. Three design choices distinguish it from older…"
     },
     {
       "id": "pocketflow",
@@ -45033,7 +45033,7 @@
       "type": "tool",
       "name": "PromptLayer",
       "title": "PromptLayer",
-      "description": "Prompt management and logging platform for versioning, collaboration, and observability",
+      "description": "Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals",
       "tags": [
         "llm",
         "observability",
@@ -45073,8 +45073,8 @@
       "url": "content/tools/dx-and-tooling/promptlayer",
       "boost_title": "PromptLayer",
       "boost_tags": "llm observability cloud",
-      "boost_description": "Prompt management and logging platform for versioning, collaboration, and observability",
-      "body": "PromptLayer Prompt management and logging platform for versioning, collaboration, and observability llm observability cloud TL;DR: the prompt management entry for PromptLayer. Prompt management and logging platform for versioning, collaboration, and observability — the deciding factor is operational cost and what you have to run, not the feature list. Overview A framework agnostic platform for prompt versioning, logging, and team collaboration, used as a dedicated layer independent of any specific orchestration framework. Why It's in the Arsenal The case for PromptLayer rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depend…"
+      "boost_description": "Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals",
+      "body": "PromptLayer Closed-source platform pairing production tracing with a prompt registry — versions, release labels and review, plus Tables for datasets and evals llm observability cloud TL;DR: A hosted prompt registry with a review workflow, attached to production tracing — the differentiator is the approval trail, not the logging. Overview PromptLayer sits where prompt engineering gets messy: a prompt changes weekly, several people have opinions about it, and nobody can say afterwards which wording produced the output a customer complained about. The product is organised as three surfaces. Observability captures requests, responses, metadata, cost, latency and feedback in a timeline, either through its own SDKs or by ingesting OpenTelemetry. Tables turns that traffic into d…"
     },
     {
       "id": "prompty",
@@ -57530,7 +57530,7 @@
       "type": "tool",
       "name": "torchtune",
       "title": "torchtune",
-      "description": "PyTorch-native library for fine-tuning and experimenting with LLMs",
+      "description": "PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code",
       "tags": [
         "fine-tuning",
         "llm",
@@ -57540,7 +57540,7 @@
       "subcategory": null,
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "watching",
       "phase": "model-layer",
       "audience": [
         "research"
@@ -57570,8 +57570,8 @@
       "url": "content/tools/model-layer/torchtune",
       "boost_title": "torchtune",
       "boost_tags": "fine-tuning llm pytorch",
-      "boost_description": "PyTorch-native library for fine-tuning and experimenting with LLMs",
-      "body": "torchtune PyTorch-native library for fine-tuning and experimenting with LLMs fine-tuning llm pytorch TL;DR: torchtune covers the fine tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview A native PyTorch fine tuning library with readable, hackable training recipes, aimed at researchers who want to understand and modify the training loop rather than use a high abstraction framework. The integration surface is an API rather than a vendored library unlike axolotl, llamafactory; on the fine tuning path; under a open source cost model; with torchtune, name, type. What you actually depend on…"
+      "boost_description": "PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code",
+      "body": "torchtune PyTorch-native post-training library with readable SFT, KD, DPO, PPO and GRPO recipes — development wound down in 2025, so treat it as reference code fine-tuning llm pytorch TL;DR: The most readable PyTorch post training codebase there is — and no longer maintained, which makes it a template to copy rather than a library to depend on. Overview torchtune implemented LLM post training in plain PyTorch. Instead of a framework with a trainer class, it shipped recipes: one file per technique, each a complete training loop you could read in an hour — lora finetune single device, full finetune distributed, knowledge distillation distributed, plus preference optimisation and RL variants for DPO, PPO and GRPO, and quantisation aware training. Models were native PyTorch im…"
     },
     {
       "id": "touvron-2023-llama",
