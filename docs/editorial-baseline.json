@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 327
+    "count": 319
   },
   "entries": [
     {
@@ -19,24 +19,6 @@
       "file": "content/projects/benchmarks-and-evals/bigcodebench.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langfuse.md::rejected-boilerplate::1bae2ee3c2451366",
-      "file": "content/projects/benchmarks-and-evals/langfuse.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langfuse.md::rejected-boilerplate::3507fa1b23e20ef6",
-      "file": "content/projects/benchmarks-and-evals/langfuse.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/langfuse.md::rejected-boilerplate::af19c60f78c3dd4e",
-      "file": "content/projects/benchmarks-and-evals/langfuse.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
     },
     {
       "fingerprint": "content/projects/benchmarks-and-evals/lunary.md::rejected-boilerplate::2575611e2a567692",
@@ -73,36 +55,6 @@
       "file": "content/projects/benchmarks-and-evals/mteb.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openllmetry.md::rejected-boilerplate::27a4e3131057da42",
-      "file": "content/projects/benchmarks-and-evals/openllmetry.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openllmetry.md::rejected-boilerplate::f132be77e06afeb2",
-      "file": "content/projects/benchmarks-and-evals/openllmetry.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openllmetry.md::rejected-boilerplate::f14b5012205fd4bc",
-      "file": "content/projects/benchmarks-and-evals/openllmetry.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/opik.md::rejected-boilerplate::a0e8c8ac71e8bcc7",
-      "file": "content/projects/benchmarks-and-evals/opik.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/opik.md::rejected-boilerplate::cc34bf7e688bce23",
-      "file": "content/projects/benchmarks-and-evals/opik.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/benchmarks-and-evals/opik.md::rejected-boilerplate::f4a8efd4b158d4e6",

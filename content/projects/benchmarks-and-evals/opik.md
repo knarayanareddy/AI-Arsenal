@@ -13,10 +13,10 @@ org_or_maintainer: null
 tags: [observability, tracing, evaluation, monitoring]
 maturity: production
 cost_model: open-source
-github_stars: 19609
+github_stars: 22902
 github_stars_last_30d: 0
 trending_score: 30
-last_commit: "2026-06-13"
+last_commit: "2026-10-24"
 docs_url: "https://www.comet.com/docs/opik/"
 demo_url: null
 paper_url: null
@@ -48,7 +48,7 @@ corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond Comet's own marketing; org-backing signal (Comet ML, an established experiment-tracking company) is solid, but a genuine named third-party production deployment specifically for Opik was not confirmed.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-25"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
@@ -91,20 +91,25 @@ Compared with unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Opik is specific — provides tracing instrumentation for LLM application calls, an evaluation framework with both heuristic and LLM-graded metrics, and a dashboard shared conceptually with Comet's broader ML experiment-tracking platform, available as both open-source self-hosted and managed cloud offerings — because that is where the capability claim either survives contact with your data or does not.
-- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
-
+- Apache-2.0 across the whole product, not an open core with the useful half licensed — rare among observability platforms and the reason it is usable in a procurement-constrained environment.
+- The evaluation library is the differentiator: heuristic metrics and LLM-graded ones (hallucination, moderation, answer relevance, G-Eval-style rubrics) ship as code, so an experiment is a function call rather than a build.
+- Prompt optimisation is included, which most competitors stop short of — a candidate prompt can be improved against a dataset automatically, then scored on the same set.
+- Guardrails alongside tracing mean a policy decision can reference the traces that motivated it, and the rule runs in the same stack rather than in a second vendor.
+- Comet's experiment-tracking heritage shows in the comparison views: experiments, datasets and prompt versions are first-class objects with dashboards, not an afterthought bolted onto traces.
+- Apache-2.0 with 22,902 stars and a push the day before review; both the self-hosted and cloud paths are actively developed.
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the Opik footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running Opik against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Where Opik overlaps `langfuse`, `langsmith-platform`, `phoenix`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
-
+- **The self-hosted stack is heavier than a single container.** A columnar store, a relational database and a queue all have to run, and the operational burden lands on whoever adopted it for the evaluation features.
+- **Evaluation rigour is still yours.** The metrics are provided; the dataset design, the judge model choice and the calibration that makes a score trustworthy are not, and an uncalibrated judge produces confident nonsense at scale.
+- **Product surface moves quickly.** Guardrails, optimisation and agent features arrived in rapid succession, so documentation, SDKs and server versions drift and a tutorial written a quarter ago may not run.
+- **174 open issues is good for the size, but support is community-first.** A blocker in a specific integration is a GitHub thread, and Comet's commercial priorities set the roadmap.
+- **Framework coverage is broad, not exhaustive.** The popular integrations are first-class; an unusual stack needs manual instrumentation, and a half-instrumented agent trace misleads more than it explains.
+- **Cost at volume is the same trap as every observability platform.** Tracing every call on a busy service produces storage and ingestion costs that nobody budgeted, and sampling changes what you can debug after the fact.
 ## Relation to the Arsenal
 
-This is the benchmark-and-eval entry for Opik in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
+Read it against `langfuse` (the most adopted self-hostable option, with a ClickHouse-backed analytics path), `phoenix` (Arize, OTel-native with a strong notebook workflow) and `langsmith-platform` (managed, deepest if you are already on LangChain). The axis that separates them is what you need after tracing: Opik's advantage is the bundled evaluation and optimisation tooling under a permissive licence; Langfuse's is operational maturity and adoption; Phoenix's is standards-first tracing with evaluation inside a notebook.
 
+For the tracing contract itself, see the OTel discussion in `openlit` and `openllmetry`. For what to evaluate with, see [Benchmarks and Evals](../benchmarks-and-evals/_index.md) and the dataset tools in `label-studio`.
 ## Resources
 
 - [GitHub](https://github.com/comet-ml/opik)
