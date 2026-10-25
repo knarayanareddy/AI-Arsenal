@@ -1,0 +1,39 @@
+# AI Arsenal
+
+> AI Arsenal is a schema-first, machine-readable, community-maintained encyclopedia of the AI engineering field — structured so that a human, an LLM, or an autonomous agent can consume it with equal effectiveness.
+
+## Key Features
+
+- **1,254 Curated Entries**: Production tools, open-source projects, seminal research papers, architecture decision trees, benchmarks, and gotchas.
+- **Strict Content Schema**: Every entry validated against JSON Schema and TAXONOMY.md controlled vocabulary.
+- **Generated Data API**: Full static JSON contracts available at `/data/*.json`.
+- **Dual Human & Agent Interface**: High-density engineering UI alongside machine-readable endpoints and WebMCP tool registration.
+
+## Verticals & Counts
+
+- **Projects (500)**: Autonomous agents, inference engines, fine-tuning frameworks, RAG systems, and open-source models.
+- **Tools (218)**: Model layer, orchestration, data pipelines, monitoring, and evaluation tools.
+- **Research Papers (138)**: Foundational architectures, training & alignment, inference efficiency, and reasoning papers with practical applicability ratings.
+- **Architectures (29)**: Concrete engineering decision trees with tradeoffs (complexity, flexibility, reliability) and when-to-use / when-not-to-use guidelines.
+- **Tips & Gotchas (171)**: Production lessons, edge-case mitigations, and debugging tips across AI stacks.
+- **Guides (59)**: End-to-end technical implementations and architectural recipes.
+- **Benchmarks (52)**: Performance, latency, cost, and throughput benchmarks.
+- **People (25)**: Essential AI researchers, systems engineers, and creators.
+
+## Static Data API
+
+- `/data/stats.json`: Aggregate entry counts and generation timestamps.
+- `/data/search-index.json`: Flexsearch-indexed 1,254 documents with 25 facet dimensions.
+- `/data/projects.json`: Full 500 project records with GitHub stars, license, health signals, and stack roles.
+- `/data/tools.json`: Full 218 tool records with alternatives, stack requirements, and pricing models.
+- `/data/papers.json`: Research papers with venues, authors, summaries, and practical applicability.
+- `/data/architectures.json`: Architectural decision trees and approach tradeoffs.
+- `/data/tips.json`: Production gotchas and actionable solutions.
+
+## Machine & Agent Tools (WebMCP)
+
+Registered in `/mcp.json`:
+- `search_arsenal(query, vertical, phase)`: Fast fuzzy search across the catalog.
+- `get_entry_dossier(id)`: Full technical dossier for a tool, project, or paper.
+- `list_architectures()`: All 29 decision trees.
+- `compare_entries(id_a, id_b)`: Direct side-by-side technical comparison.
