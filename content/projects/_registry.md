@@ -222,7 +222,7 @@
 | `ktransformers` | [KTransformers](./inference-engines/ktransformers.md) | CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops |
 | `ktx` | [ktx](./data-and-retrieval/ktx.md) | An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents |
 | `lancedb` | [LanceDB](./data-and-retrieval/lancedb.md) | Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine |
-| `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
+| `langchain` | [LangChain](./frameworks/langchain.md) | The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph |
 | `langchain4j` | [LangChain4j](./frameworks/langchain4j.md) | An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG |
 | `langextract` | [LangExtract](./data-and-retrieval/langextract.md) | Python library for grounded structured extraction from unstructured text with source spans and visualization |
 | `langfuse` | [Langfuse](./benchmarks-and-evals/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
@@ -481,12 +481,12 @@
 | `txtai` | [txtai](./frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
 | `ui-tars-desktop` | [UI-TARS Desktop](./agent-systems/ui-tars-desktop.md) | ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control |
 | `ultralytics` | [Ultralytics YOLO](./frameworks/ultralytics.md) | The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API |
-| `ultralytics-yolo` | [Ultralytics YOLO](./frameworks/ultralytics-yolo.md) | The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API |
+| `ultralytics-yolo` | [Ultralytics YOLO](./frameworks/ultralytics-yolo.md) | Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence |
 | `ultrarag` | [UltraRAG](./data-and-retrieval/ultrarag.md) | Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines |
 | `unilm` | [UniLM](./foundation-models/unilm.md) | Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR |
 | `unstructured` | [Unstructured](./data-and-retrieval/unstructured.md) | Open-source document ETL for converting complex files into structured data for LLM pipelines |
 | `upsonic` | [Upsonic](./agent-systems/upsonic.md) | Python framework for autonomous and traditional agents with workspace-confined file and shell access plus a layered OCR interface |
-| `vercel-ai-sdk` | [Vercel AI SDK](./frameworks/vercel-ai-sdk.md) | The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI |
+| `vercel-ai-sdk` | [Vercel AI SDK](./frameworks/vercel-ai-sdk.md) | TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte |
 | `verl` | [verl](./training-and-alignment/verl.md) | ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs |
 | `visual-autoregressive` | [VAR (Visual Autoregressive)](./foundation-models/visual-autoregressive.md) | A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale |
 | `vllm` | [vLLM](./inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |

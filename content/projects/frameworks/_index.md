@@ -50,10 +50,10 @@ Before selecting a framework:
 - [AutoGPT](./autogpt.md) — ⭐ 184931
 - [transformers](./huggingface-transformers.md) — ⭐ 166755
 - [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164197
+- [LangChain](./langchain.md) — ⭐ 148417
 - [ponytail](./ponytail.md) — ⭐ 147381
 - [Dify](./dify.md) — ⭐ 145081
 - [ComfyUI](./comfyui.md) — ⭐ 142561
-- [LangChain](./langchain.md) — ⭐ 139206
 - [ComfyUI](./comfy-org-comfyui.md) — ⭐ 135314
 - [caveman](./caveman.md) — ⭐ 108165
 
@@ -116,7 +116,7 @@ Before selecting a framework:
 - [kestra](./kestra-io-kestra.md) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
 - [Kiln](./kiln.md) — A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG
 - [kornia](./kornia-kornia.md) — Differentiable geometric computer-vision library of batched PyTorch operators for warps, homographies, and pose
-- [LangChain](./langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
+- [LangChain](./langchain.md) — The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
 - [LangChain4j](./langchain4j.md) — An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG
 - [LangGraph](./langgraph.md) — Graph-based framework for building stateful, durable LLM agents and workflows
 - [learn-claude-code](./learn-claude-code.md) — A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle
@@ -177,7 +177,7 @@ Before selecting a framework:
 - [toon](./toon.md) — A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
-- [Ultralytics YOLO](./ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
-- [Vercel AI SDK](./vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI
+- [Ultralytics YOLO](./ultralytics-yolo.md) — Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence
+- [Vercel AI SDK](./vercel-ai-sdk.md) — TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte
 - [wav2letter (Flashlight ASR)](./wav2letter.md) — Facebook AI Research's C++ automatic-speech-recognition toolkit built on the Flashlight library, notable for fully convolutional acoustic models and fast
 - [zenml](./zenml-io-zenml.md) — ML pipeline abstraction that keeps pipeline code portable across orchestrators through a stack of swappable integrations

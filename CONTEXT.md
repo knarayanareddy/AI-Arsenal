@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T13:15:38.824Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-25T13:18:33.834Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -41,9 +41,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### agents
 - OpenClaw (⭐388702, score:97) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
 - DeepSeek Harness (⭐260425, score:95) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
+- LangChain (⭐148417, score:80) — The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
 - Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
-- Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
 
 ### code-generation
 - opencode (⭐203399, score:92) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
@@ -54,10 +54,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
+- Ultralytics YOLO (⭐62824, score:60) — Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence
 - Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
-- PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
 
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
@@ -95,11 +95,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 
 ### rag
-- LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
 - AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
 - GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
+- SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
 
 ### tooling
 - MCP Reference Servers (⭐90043, score:84) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents

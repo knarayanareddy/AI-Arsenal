@@ -618,7 +618,7 @@
 - [LAION (Large-scale Artificial Intelligence Open Network)](./community/datasets/laion.md) — 
 - [Laminar](./tools/evaluation-and-observability/laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [LanceDB](./projects/data-and-retrieval/lancedb.md) — Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine
-- [LangChain](./projects/frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
+- [LangChain](./projects/frameworks/langchain.md) — The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
 - [LangChain Forum](./community/forums/langchain-forum.md) — 
 - [LangChain Community Slack](./community/chat/langchain-slack.md) — 
 - [LangChain4j](./projects/frameworks/langchain4j.md) — An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG
@@ -1245,7 +1245,7 @@
 - [UI-TARS Desktop](./projects/agent-systems/ui-tars-desktop.md) — ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control
 - [UltraEval-Audio](./tools/evaluation-and-observability/ultraeval-audio.md) — OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models
 - [Ultralytics YOLO](./projects/frameworks/ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
-- [Ultralytics YOLO](./projects/frameworks/ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
+- [Ultralytics YOLO](./projects/frameworks/ultralytics-yolo.md) — Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence
 - [UltraRAG](./projects/data-and-retrieval/ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines
 - [UniLM](./projects/foundation-models/unilm.md) — Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR
 - [Unsloth](./tools/model-layer/unsloth.md) — Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models
@@ -1279,7 +1279,7 @@
 - [Vector Search Tools](./tools/by-job/vector-search.md) — Curated tools for vector search workflows in AI engineering
 - [Vellum](./tools/dx-and-tooling/vellum.md) — Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK
 - [Vercel](./tools/serving-and-deployment/vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions
-- [Vercel AI SDK](./projects/frameworks/vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI
+- [Vercel AI SDK](./projects/frameworks/vercel-ai-sdk.md) — TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte
 - [Verify Tool Side Effects Instead of Trusting the Tool's Response](./tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response.md) — 
 - [verl](./projects/training-and-alignment/verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
 - [Version Datasets and Adapters Together as One Artifact Pair](./tips-and-tricks/fine-tuning/version-datasets-and-adapters-together.md) — 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T13:15:30.976Z",
+    "generated_at": "2026-10-25T13:18:25.582Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -10829,7 +10829,7 @@
       "id": "langchain",
       "type": "project",
       "name": "LangChain",
-      "description": "A framework for composing LLM applications, retrieval flows, tools, and agents",
+      "description": "The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph",
       "tags": [
         "llm",
         "rag",
@@ -10838,8 +10838,8 @@
       ],
       "path": "content/projects/frameworks/langchain.md",
       "url": "content/projects/frameworks/langchain",
-      "last_updated": "2026-07-01",
-      "category": "rag",
+      "last_updated": "2026-10-25",
+      "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -22752,7 +22752,7 @@
       "id": "ultralytics-yolo",
       "type": "project",
       "name": "Ultralytics YOLO",
-      "description": "The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API",
+      "description": "Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence",
       "tags": [
         "multimodal",
         "efficiency",
@@ -22760,7 +22760,7 @@
       ],
       "path": "content/projects/frameworks/ultralytics-yolo.md",
       "url": "content/projects/frameworks/ultralytics-yolo",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-25",
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",
@@ -23384,7 +23384,7 @@
       "id": "vercel-ai-sdk",
       "type": "project",
       "name": "Vercel AI SDK",
-      "description": "The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI",
+      "description": "TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte",
       "tags": [
         "agents",
         "structured-output",
@@ -23392,7 +23392,7 @@
       ],
       "path": "content/projects/frameworks/vercel-ai-sdk.md",
       "url": "content/projects/frameworks/vercel-ai-sdk",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-25",
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",

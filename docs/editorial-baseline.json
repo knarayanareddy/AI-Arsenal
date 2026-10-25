@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 395
+    "count": 383
   },
   "entries": [
     {
@@ -603,30 +603,6 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/langchain.md::rejected-boilerplate::50696256314e321d",
-      "file": "content/projects/frameworks/langchain.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/langchain.md::rejected-boilerplate::6e8ca4c428c559a6",
-      "file": "content/projects/frameworks/langchain.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/langchain.md::rejected-boilerplate::6fbfe86f54f02a0d",
-      "file": "content/projects/frameworks/langchain.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/langchain.md::rejected-boilerplate::b6555016e1a77f28",
-      "file": "content/projects/frameworks/langchain.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/langchain4j.md::rejected-boilerplate::2011176a974dd807",
       "file": "content/projects/frameworks/langchain4j.md",
       "rule": "rejected-boilerplate",
@@ -821,54 +797,6 @@
     {
       "fingerprint": "content/projects/frameworks/txtai.md::rejected-boilerplate::893102ded978d6d8",
       "file": "content/projects/frameworks/txtai.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/ultralytics-yolo.md::rejected-boilerplate::2b1aa3ba3d1f164f",
-      "file": "content/projects/frameworks/ultralytics-yolo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/ultralytics-yolo.md::rejected-boilerplate::7d4e1b9a9bc96e30",
-      "file": "content/projects/frameworks/ultralytics-yolo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/ultralytics-yolo.md::rejected-boilerplate::9d7c332511dc146b",
-      "file": "content/projects/frameworks/ultralytics-yolo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/ultralytics-yolo.md::rejected-boilerplate::e1cbcfab5cdf6b77",
-      "file": "content/projects/frameworks/ultralytics-yolo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/vercel-ai-sdk.md::rejected-boilerplate::1635ef392cc577ee",
-      "file": "content/projects/frameworks/vercel-ai-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/vercel-ai-sdk.md::rejected-boilerplate::29ee914f6c1718c7",
-      "file": "content/projects/frameworks/vercel-ai-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/vercel-ai-sdk.md::rejected-boilerplate::8863f7305354efa3",
-      "file": "content/projects/frameworks/vercel-ai-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/vercel-ai-sdk.md::rejected-boilerplate::9e563d30546a42e1",
-      "file": "content/projects/frameworks/vercel-ai-sdk.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },

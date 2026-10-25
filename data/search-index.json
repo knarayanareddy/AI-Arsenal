@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:15:36.758Z",
+  "generated_at": "2026-10-25T13:18:31.503Z",
   "config": {
     "document": {
       "id": "id",
@@ -140,12 +140,12 @@
       "new-arrival": 1
     },
     "categories": {
-      "agents": 116,
+      "agents": 117,
       "llms": 104,
       "observability": 15,
       "tooling": 39,
       "evaluation": 28,
-      "rag": 63,
+      "rag": 62,
       "data-pipelines": 28,
       "voice-audio": 49,
       "computer-vision": 32,
@@ -28194,15 +28194,15 @@
       "type": "project",
       "name": "LangChain",
       "title": "LangChain",
-      "description": "A framework for composing LLM applications, retrieval flows, tools, and agents",
+      "description": "The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph",
       "tags": [
         "llm",
         "rag",
         "agents",
         "orchestration"
       ],
-      "category": "rag",
-      "subcategory": "frameworks",
+      "category": "agents",
+      "subcategory": "agent-frameworks",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -28238,8 +28238,8 @@
       "url": "content/projects/frameworks/langchain",
       "boost_title": "LangChain",
       "boost_tags": "llm rag agents orchestration",
-      "boost_description": "A framework for composing LLM applications, retrieval flows, tools, and agents",
-      "body": "LangChain A framework for composing LLM applications, retrieval flows, tools, and agents llm rag agents orchestration rag frameworks Overview A widely adopted open source framework for composing LLM powered applications, providing abstractions for prompts, retrieval, tool use, memory, and agent orchestration across a very large ecosystem of integrations. Why it's in the Arsenal LangChain appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to. This entry consolidates the former separate langchain rag.md entry: the same underlying project is…"
+      "boost_description": "The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph",
+      "body": "LangChain The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph llm rag agents orchestration agents agent-frameworks Overview LangChain's durable contribution is an interface, not an algorithm. Before it, every model provider, embedding service, vector store and document loader had its own calling convention, and swapping one meant rewriting the code around it. LangChain defined a small set of protocols — chat model, embedder, retriever, tool, vector store — and convinced a few hundred providers to implement them, so a retriever is a retriever regardless of who serves it. What sits around that today is an agent framework. The README calls itself \"the agent engineering platform\", the quickstart is two lines…"
     },
     {
       "id": "langchain-forum",
@@ -58889,7 +58889,7 @@
       "type": "project",
       "name": "Ultralytics YOLO",
       "title": "Ultralytics YOLO",
-      "description": "The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API",
+      "description": "Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence",
       "tags": [
         "multimodal",
         "efficiency",
@@ -58932,8 +58932,8 @@
       "url": "content/projects/frameworks/ultralytics-yolo",
       "boost_title": "Ultralytics YOLO",
       "boost_tags": "multimodal efficiency data",
-      "boost_description": "The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API",
-      "body": "Ultralytics YOLO The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API multimodal efficiency data computer-vision frameworks Overview Ultralytics' framework around the YOLO family (YOLOv8 through YOLO11 and successors): single stage real time models for object detection, instance segmentation, pose estimation, oriented boxes, classification, and multi object tracking, wrapped in a uniform API that handles training, validation, export, and deployment. It is the most deployed open computer vision stack in industry edge applications. Why it's in the Arsenal Ultralytics YOLO appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the featu…"
+      "boost_description": "Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence",
+      "body": "Ultralytics YOLO Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence multimodal efficiency data computer-vision frameworks Overview Ultralytics is the company that turned a research lineage into a product. YOLO26 is the current generation, spanning detection, instance segmentation, semantic segmentation, depth estimation, classification, pose estimation and oriented bounding boxes, with tracking that works across the box producing tasks. The pitch is in the numbers: YOLO26n at 640 pixels reports 40.9 mAP on COCO at 1.7 ms per image on a T4 with TensorRT, in 2.4M parameters and 5.5 GFLOPs. Around the models sits the part that actually gets adopted — a uniform API where model.train(), model.val(), model.predict() a…"
     },
     {
       "id": "ultrarag",
@@ -60483,7 +60483,7 @@
       "type": "project",
       "name": "Vercel AI SDK",
       "title": "Vercel AI SDK",
-      "description": "The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI",
+      "description": "TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte",
       "tags": [
         "agents",
         "structured-output",
@@ -60526,8 +60526,8 @@
       "url": "content/projects/frameworks/vercel-ai-sdk",
       "boost_title": "Vercel AI SDK",
       "boost_tags": "agents structured-output tool-use",
-      "boost_description": "The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI",
-      "body": "Vercel AI SDK The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI agents structured-output tool-use agents agent-frameworks Overview Vercel's open source TypeScript toolkit for building AI applications: a provider agnostic core (generateText, streamText, generateObject, tool calling, agents) over 25+ model providers, and UI packages that wire streaming AI state into React, Vue, Svelte, and Angular. It won the TypeScript ecosystem by pairing a clean provider abstraction with first class frontend streaming — the part every chat product must build and most frameworks skip. Why it's in the Arsenal Vercel AI SDK is catalogued here on the strength of its own documentation and public record, not on independent measuremen…"
+      "boost_description": "TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte",
+      "body": "Vercel AI SDK TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte agents structured-output tool-use agents agent-frameworks Overview The AI SDK is the TypeScript answer to a problem Python solved three different ways: making model calls a stable interface rather than a vendor specific one. generateText, streamText, embed, Output.object and ToolLoopAgent sit above a provider layer, so the model is an identifier ('anthropic/claude opus 5.5') that can be resolved through Vercel's AI Gateway or through a direct package such as @ai sdk/anthropic. The second half is the part Python frameworks keep underestimating: the browser. @ai sdk/react exposes useChat, which consumes a streamed response and maintains message parts…"
     },
     {
       "id": "verify-tool-side-effects-instead-of-trusting-the-response",
