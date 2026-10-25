@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-25T11:34:09.555Z",
+  "generated_at": "2026-10-25T13:15:30.976Z",
   "tags": [
     {
       "id": "agents",
@@ -959,9 +959,9 @@
     {
       "id": "edge",
       "label": "Edge",
-      "count": 18,
+      "count": 19,
       "types": {
-        "project": 12,
+        "project": 13,
         "tool": 6
       },
       "entries": [
@@ -978,6 +978,7 @@
         "mllm",
         "mlx-audio",
         "opengui",
+        "phi-cookbook",
         "ramalama",
         "repoprompt-ce",
         "runanywhere-sdks",
@@ -3188,9 +3189,9 @@
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 20,
+      "count": 21,
       "types": {
-        "project": 9,
+        "project": 10,
         "tip": 3,
         "paper": 4,
         "tool": 2,
@@ -3212,6 +3213,7 @@
         "ml-engineer-role",
         "nvidia-tensorrt",
         "oobabooga-textgen",
+        "phi-cookbook",
         "quantization",
         "runanywhere-sdks",
         "start-with-a-smaller-quantized-model",
@@ -3452,9 +3454,9 @@
         "optillm",
         "pageindex",
         "phi-4",
-        "phi-cookbook",
         "pita-2026-amalia-authority",
         "prompt-patterns-catalog",
+        "qwen",
         "qwen-2-5",
         "reef",
         "rllm",

@@ -245,7 +245,7 @@
 | `livekit-agents` | [LiveKit Agents](./frameworks/livekit-agents.md) | Framework for realtime voice and video AI agents that join a LiveKit room as participants |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
 | `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
-| `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
+| `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD |
 | `llamaindex` | [LlamaIndex](./frameworks/llamaindex.md) | Data framework for building document agents, retrieval pipelines, and production RAG systems |
 | `llamaparse` | [LlamaParse](./data-and-retrieval/llamaparse.md) | Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service |
 | `llava-onevision-2` | [LLaVA-OneVision-2](./foundation-models/llava-onevision-2.md) | Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks |
@@ -339,7 +339,7 @@
 | `openenv` | [OpenEnv](./training-and-alignment/openenv.md) | Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment |
 | `opengui` | [OpenGUI](./agent-systems/opengui.md) | Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
-| `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
+| `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring |
 | `openllmetry` | [OpenLLMetry](./benchmarks-and-evals/openllmetry.md) | OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop |
 | `openmontage` | [OpenMontage](./agent-systems/openmontage.md) | AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant |
 | `openosint` | [OpenOSINT](./agent-systems/openosint.md) | Python OSINT agent wrapping 20 real investigation tools behind a REPL, CLI, MCP server and web UI, with a statement-layer entity graph |
@@ -365,7 +365,7 @@
 | `pathway-llm-app` | [Pathway LLM App](./data-and-retrieval/pathway-llm-app.md) | Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources |
 | `pgvector` | [pgvector](./data-and-retrieval/pgvector.md) | PostgreSQL extension for vector similarity search inside an existing relational database |
 | `phi-4` | [Phi-4](./foundation-models/phi-4.md) | Microsoft small language model family optimized for efficient reasoning and local-friendly deployment |
-| `phi-cookbook` | [Phi Cookbook](./foundation-models/phi-cookbook.md) | Microsoft examples and recipes for building with the Phi model family |
+| `phi-cookbook` | [Phi Cookbook](./foundation-models/phi-cookbook.md) | Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile |
 | `phoenix` | [Phoenix](./benchmarks-and-evals/phoenix.md) | Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems |
 | `photo-agents` | [Photo-agents](./agent-systems/photo-agents.md) | Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients |
 | `pinecone-vector-db` | [Pinecone](./data-and-retrieval/pinecone-vector-db.md) | Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API |
@@ -389,7 +389,7 @@
 | `pytorch-audio` | [audio](./frameworks/pytorch-audio.md) | TorchAudio's audio I/O, transforms, and metrics, covering backends, effects, and functional DSP for PyTorch pipelines |
 | `pytorch-vision` | [vision](./frameworks/pytorch-vision.md) | Torchvision's datasets, image transforms, and reference vision models built directly on torch tensors |
 | `qdrant` | [Qdrant](./data-and-retrieval/qdrant.md) | Rust vector database for high-performance similarity search with filtering and hybrid search |
-| `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba open-weight model family covering language, coding, and multimodal use cases |
+| `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth |
 | `qwen-2-5` | [Qwen 2.5 / QwQ](./foundation-models/qwen-2-5.md) | Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models |
 | `qwen-agent` | [Qwen-Agent](./agent-systems/qwen-agent.md) | Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application |
 | `qwen-vl-series-finetune` | [Qwen-VL-Series-Finetune](./training-and-alignment/qwen-vl-series-finetune.md) | Single-repo training scripts for Qwen2-VL, Qwen2.5-VL, Qwen3-VL and Qwen3.5 spanning SFT, DPO, GRPO and classification |
@@ -466,7 +466,7 @@
 | `terminal-bench` | [Terminal-Bench](./benchmarks-and-evals/terminal-bench.md) | Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models |
 | `tesseract-js` | [Tesseract.js](./data-and-retrieval/tesseract-js.md) | A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server |
 | `tesseract-ocr` | [Tesseract OCR](./data-and-retrieval/tesseract-ocr.md) | The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend |
-| `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
+| `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025 |
 | `text-generation-webui` | [text-generation-webui (oobabooga)](./inference-engines/text-generation-webui.md) | The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API |
 | `thclaws` | [thClaws](./agent-systems/thclaws.md) | Rust agent harness whose workspace holds several agents side by side, each isolated in its own folder and supervised process |
 | `tiktoken` | [tiktoken](./data-and-retrieval/tiktoken.md) | OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation |

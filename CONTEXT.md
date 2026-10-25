@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T11:41:35.704Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-25T13:15:38.824Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -76,9 +76,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### llms
 - LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
-- Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-- Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
 - Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
+- Colossal-AI (HPC-AI Tech) (⭐41407, score:66) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
+- KTransformers (⭐17384, score:60) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship

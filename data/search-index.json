@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T11:43:21.479Z",
+  "generated_at": "2026-10-25T13:15:36.758Z",
   "config": {
     "document": {
       "id": "id",
@@ -112,8 +112,8 @@
       "embeddings": 77,
       "attention": 12,
       "huggingface": 12,
-      "edge": 18,
-      "quantization": 20,
+      "edge": 19,
+      "quantization": 21,
       "caching": 21,
       "batching": 18,
       "vision": 55,
@@ -255,17 +255,17 @@
     "domain": {
       "general-purpose": 196,
       "language": 262,
-      "reasoning": 46,
+      "reasoning": 47,
       "multimodal": 64,
       "safety-and-alignment": 2,
-      "audio": 57,
-      "vision": 100,
+      "audio": 58,
+      "vision": 102,
       "reinforcement-learning": 10
     },
     "relation_to_stack": {
       "build-on-top": 413,
       "deploy-as-is": 288,
-      "study-and-reference": 113,
+      "study-and-reference": 114,
       "fork-and-adapt": 53,
       "contribute-to": 25
     },
@@ -31002,7 +31002,7 @@
       "type": "project",
       "name": "Llamafile",
       "title": "Llamafile",
-      "description": "Mozilla project for distributing and running LLMs as a single executable file",
+      "description": "Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD",
       "tags": [
         "llm",
         "inference",
@@ -31017,7 +31017,8 @@
       "phase": "inference-engine",
       "audience": null,
       "domain": [
-        "language"
+        "language",
+        "audio"
       ],
       "relation_to_stack": [
         "deploy-as-is"
@@ -31045,8 +31046,8 @@
       "url": "content/projects/inference-engines/llamafile",
       "boost_title": "Llamafile",
       "boost_tags": "llm inference local edge",
-      "boost_description": "Mozilla project for distributing and running LLMs as a single executable file",
-      "body": "Llamafile Mozilla project for distributing and running LLMs as a single executable file llm inference local edge llms inference-engines Overview A Mozilla backed project (built on top of llama.cpp) that packages a model and the inference engine together into a single, portable, cross platform executable file requiring no installation or dependencies. Why it's in the Arsenal Llamafile appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practice. The sections below state what it claims to do and what adopting it would commit you to. Architecture Combines llama.cpp's inference engine with Cosmopolitan…"
+      "boost_description": "Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD",
+      "body": "Llamafile Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD llm inference local edge llms inference-engines Overview Llamafile is a packaging idea with an inference engine inside it. Take llama.cpp, link it against Cosmopolitan Libc — a libc that emits a single binary addressing several operating systems and CPU architectures — and append the quantised weights. The output is one file that runs on Windows, macOS, Linux and BSD, on x86 64 or ARM64, with no installation step and no runtime dependencies. The project began under Mozilla Builders in 2023 and has since been revamped by Mozilla.ai, which is now the canonical home. The current 0.10 line rebuilt the packaging against a recent llama.cpp commi…"
     },
     {
       "id": "llamaguard",
@@ -40695,7 +40696,7 @@
       "type": "project",
       "name": "OpenLIT",
       "title": "OpenLIT",
-      "description": "OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails",
+      "description": "Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring",
       "tags": [
         "observability",
         "tracing",
@@ -40739,8 +40740,8 @@
       "url": "content/projects/benchmarks-and-evals/openlit",
       "boost_title": "OpenLIT",
       "boost_tags": "observability tracing monitoring self-hosted",
-      "boost_description": "OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails",
-      "body": "OpenLIT OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails observability tracing monitoring self-hosted observability tracing Overview An open source observability toolkit for LLM applications built natively on OpenTelemetry, allowing LLM traces and metrics to integrate directly into existing OTel based observability infrastructure rather than requiring a separate proprietary platform. The engineering question with OpenLIT is not whether it works but what it commits you to unlike langfuse, langsmith platform; in the benchmark and eval phase; under a open source cost model; with openlit, name, version: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documen…"
+      "boost_description": "Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring",
+      "body": "OpenLIT Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring observability tracing monitoring self-hosted observability tracing Overview OpenLIT is an Apache 2.0 observability platform whose design constraint is that the telemetry is not its own. Instrumentation produces standard OpenTelemetry spans and metrics, exported over OTLP, and the platform is a consumer of that stream rather than the definition of it. Point OTEL EXPORTER OTLP ENDPOINT at OpenLIT's collector and its dashboard fills; point the same variable at an existing collector and the identical spans arrive in Grafana, Datadog or Jaeger with no code change. Around that spine it has accumulated the pieces an agent team needs after tracing: evaluations (LLM…"
     },
     {
       "id": "openllm",
@@ -42939,12 +42940,13 @@
       "type": "project",
       "name": "Phi Cookbook",
       "title": "Phi Cookbook",
-      "description": "Microsoft examples and recipes for building with the Phi model family",
+      "description": "Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile",
       "tags": [
         "llm",
         "inference",
-        "local",
-        "reasoning"
+        "quantization",
+        "edge",
+        "local"
       ],
       "category": "llms",
       "subcategory": "open-source-models",
@@ -42954,7 +42956,8 @@
       "phase": "foundation-model",
       "audience": null,
       "domain": [
-        "language"
+        "language",
+        "vision"
       ],
       "relation_to_stack": [
         "study-and-reference",
@@ -42982,9 +42985,9 @@
       "path": "content/projects/foundation-models/phi-cookbook.md",
       "url": "content/projects/foundation-models/phi-cookbook",
       "boost_title": "Phi Cookbook",
-      "boost_tags": "llm inference local reasoning",
-      "boost_description": "Microsoft examples and recipes for building with the Phi model family",
-      "body": "Phi Cookbook Microsoft examples and recipes for building with the Phi model family llm inference local reasoning llms open-source-models Overview Microsoft's official collection of samples, tutorials, and deployment recipes for building applications with the Phi model family, maintained alongside the model releases themselves. Why it's in the Arsenal Phi Cookbook is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Not a model architecture itself — a curated repository of Jupyter notebooks, sample code, and guides covering fine tuning, quantization, and deployment pattern…"
+      "boost_tags": "llm inference quantization edge local",
+      "boost_description": "Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile",
+      "body": "Phi Cookbook Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile llm inference quantization edge local llms open-source-models Overview Phi Cookbook is Microsoft's course shaped sample repository for the Phi family: markdown modules and Jupyter notebooks arranged as Introduction, Application, QuickStart, Fine tuning and Hands On Labs. It is not a library and it ships no weights. What it contains is the answer to \"how does this small model actually get onto that device\" — an inference module per target, a quantization module per toolchain, and application samples that put the result behind a UI. The scope is wider than \"notebooks for a language model\" suggests. The inference section covers Hugging Face Transformers, G…"
     },
     {
       "id": "philipp-2026-medqade",
@@ -45956,12 +45959,13 @@
       "type": "project",
       "name": "Qwen",
       "title": "Qwen",
-      "description": "Alibaba open-weight model family covering language, coding, and multimodal use cases",
+      "description": "Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth",
       "tags": [
         "llm",
         "inference",
-        "multimodal",
-        "code-gen"
+        "reasoning",
+        "code-gen",
+        "multimodal"
       ],
       "category": "llms",
       "subcategory": "open-source-models",
@@ -45971,7 +45975,9 @@
       "phase": "foundation-model",
       "audience": null,
       "domain": [
-        "language"
+        "language",
+        "vision",
+        "reasoning"
       ],
       "relation_to_stack": [
         "deploy-as-is",
@@ -46000,9 +46006,9 @@
       "path": "content/projects/foundation-models/qwen.md",
       "url": "content/projects/foundation-models/qwen",
       "boost_title": "Qwen",
-      "boost_tags": "llm inference multimodal code-gen",
-      "boost_description": "Alibaba open-weight model family covering language, coding, and multimodal use cases",
-      "body": "Qwen Alibaba open-weight model family covering language, coding, and multimodal use cases llm inference multimodal code-gen llms open-source-models Overview Alibaba Cloud's original open weight large language model family — the Qwen/Qwen2 generation — first released in 2023 as dense decoder only transformer checkpoints under Apache 2.0. It covers general language, coding, and early multimodal use, but predates (and is now superseded by) the more widely adopted Qwen 2.5 and Qwen3 lines and lacks their MoE and agentic post training. Why it's in the Arsenal The case for Qwen rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it woul…"
+      "boost_tags": "llm inference reasoning code-gen multimodal",
+      "boost_description": "Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth",
+      "body": "Qwen Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth llm inference reasoning code-gen multimodal llms open-source-models Overview Qwen is Alibaba's open weight model line, and it now moves in small, frequent steps: Qwen3.5 in February 2026, Qwen3.6 in April, Qwen3.8 in August. Each generation ships a dense small model for local deployment and a sparse mixture of experts model for the top end — Qwen3.8 pairs a 27B dense model with a 2.4T parameter, 95B active model that the release notes describe as the first Qwen Max class model to be open weighted. The architecture is the part that changed most. Qwen3.5 replaced the plain transformer stack with a hybrid: Gated DeltaNet linear attention blocks interleaved with…"
     },
     {
       "id": "qwen-2-5",
@@ -56787,7 +56793,7 @@
       "type": "project",
       "name": "Text Generation Inference",
       "title": "Text Generation Inference",
-      "description": "Hugging Face inference server for serving large text-generation models in production",
+      "description": "Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025",
       "tags": [
         "llm",
         "inference",
@@ -56805,7 +56811,8 @@
         "language"
       ],
       "relation_to_stack": [
-        "deploy-as-is"
+        "deploy-as-is",
+        "study-and-reference"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -56830,8 +56837,8 @@
       "url": "content/projects/inference-engines/text-generation-inference",
       "boost_title": "Text Generation Inference",
       "boost_tags": "llm inference streaming batching",
-      "boost_description": "Hugging Face inference server for serving large text-generation models in production",
-      "body": "Text Generation Inference Hugging Face inference server for serving large text-generation models in production llm inference streaming batching llms inference-engines Overview Hugging Face's original toolkit for serving large language models in production, offering continuous batching and tensor parallel serving, now placed in maintenance mode as Hugging Face redirects its inference engine investment elsewhere. Why it's in the Arsenal Text Generation Inference appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practice. The sections below state what it claims to do and what adopting it would commit you to. Architecture A Rust an…"
+      "boost_description": "Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025",
+      "body": "Text Generation Inference Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025 llm inference streaming batching llms inference-engines Overview Text Generation Inference was Hugging Face's production server for large language models: a Rust router in front of Python model shards, speaking HTTP and gRPC, streaming tokens, and batching requests continuously so that a GPU stays busy across users. It powered Hugging Chat, the Inference API and Inference Endpoints, and for a period around 2023–2024 it was the default way to put a Hugging Face model behind an endpoint. Its life ended slowly and then formally. On 11 December 2025 Hugging Face put the project into maintenance mode, accepting only minor bug fixes, documentation chang…"
     },
     {
       "id": "text-generation-webui",

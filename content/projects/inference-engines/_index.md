@@ -84,7 +84,7 @@ Before selecting an inference engine:
 - [LightLLM](./lightllm.md) — A lightweight, pure-Python LLM inference and serving framework emphasizing scalability and high throughput via token-level scheduling and efficient attention
 - [LitServe](./litserve.md) — Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
-- [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
+- [Llamafile](./llamafile.md) — Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD
 - [llm-d](./llm-d.md) — Kubernetes-native distributed LLM inference framework with routing, disaggregation, and batch-serving components
 - [FastChat](./lm-sys-fastchat.md) — Apache-2.0 research platform from LMSYS covering model training, multi-backend serving, and the Chatbot Arena evaluation harness
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
@@ -113,7 +113,7 @@ Before selecting an inference engine:
 - [vLLM Speculators](./speculators.md) — Unified library for building, evaluating, and storing speculative-decoding algorithms for LLM inference
 - [SpeechRecognition (Python)](./speechrecognition.md) — A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk
 - [TensorRT-LLM](./tensorrt-llm.md) — NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput
-- [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
+- [Text Generation Inference](./text-generation-inference.md) — Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025
 - [text-generation-webui (oobabooga)](./text-generation-webui.md) — The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
 - [vLLM-MLX](./vllm-mlx.md) — MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling

@@ -675,7 +675,7 @@
 - [Llama 3.x](./projects/foundation-models/llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [LLaMA-Factory](./tools/model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
-- [Llamafile](./projects/inference-engines/llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
+- [Llamafile](./projects/inference-engines/llamafile.md) — Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD
 - [Llama Guard](./tools/evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
 - [LlamaIndex](./projects/frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
 - [LlamaIndex Discord](./community/chat/llamaindex-discord.md) — 
@@ -871,7 +871,7 @@
 - [OpenGUI](./projects/agent-systems/opengui.md) — Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces
 - [OpenHands](./projects/frameworks/openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
 - [OpenJudge](./tools/evaluation-and-observability/openjudge.md) — AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training
-- [OpenLIT](./projects/benchmarks-and-evals/openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
+- [OpenLIT](./projects/benchmarks-and-evals/openlit.md) — Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring
 - [OpenLLM](./tools/serving-and-deployment/openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
 - [OpenLLMetry](./projects/benchmarks-and-evals/openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [OpenMontage](./projects/agent-systems/openmontage.md) — AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant
@@ -916,7 +916,7 @@
 - [RWKV: Reinventing RNNs for the Transformer Era](./research/architectures/peng-2023-rwkv.md) — A linear-attention RNN that trains in parallel like a Transformer but runs inference like an RNN -- O(1) memory per token and no growing KV cache, trading some expressivity for constant-cost, unbounded-context generation
 - [pgvector](./projects/data-and-retrieval/pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Phi-4](./projects/foundation-models/phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-- [Phi Cookbook](./projects/foundation-models/phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
+- [Phi Cookbook](./projects/foundation-models/phi-cookbook.md) — Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile
 - [Clinician-Level Agreement Without Clinical Caution: LLM Evaluator Limits in Medical AI Benchmarking](./research/evaluation-and-safety/philipp-2026-medqade.md) — A German open-response clinical benchmark showing LLM judges match physician agreement while abstaining far less often.
 - [Phoenix](./projects/benchmarks-and-evals/phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 - [Photo-agents](./projects/agent-systems/photo-agents.md) — Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients
@@ -978,7 +978,7 @@
 - [Qdrant](./projects/data-and-retrieval/qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [Quantization](./skills/core-concepts/quantization.md) — Conceptual guide to model quantization: formats, quality tradeoffs, and when to use int8 vs int4
 - [Qursor](./tools/dx-and-tooling/qursor.md) — AI-powered UI context for faster front-end development with agents
-- [Qwen](./projects/foundation-models/qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
+- [Qwen](./projects/foundation-models/qwen.md) — Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth
 - [Qwen 2.5 / QwQ](./projects/foundation-models/qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [Qwen 3](./tools/model-layer/qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
 - [Qwen-Agent](./projects/agent-systems/qwen-agent.md) — Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application
@@ -1202,7 +1202,7 @@
 - [Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones](./tips-and-tricks/evaluation/test-prompts-with-adversarial-inputs.md) — 
 - [A hierarchical memory architecture overcomes context limits in long-horizon multi-agent computational modeling](./research/agents-and-reasoning/tewari-2026-ensemble-qsp.md) — A multi-agent framework whose capped three-layer memory keeps injected context near 300 tokens over multi-session research work.
 - [Text Embeddings Inference (TEI)](./tools/serving-and-deployment/text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
-- [Text Generation Inference](./projects/inference-engines/text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
+- [Text Generation Inference](./projects/inference-engines/text-generation-inference.md) — Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025
 - [text-generation-webui (oobabooga)](./projects/inference-engines/text-generation-webui.md) — The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
 - [thClaws](./projects/agent-systems/thclaws.md) — Rust agent harness whose workspace holds several agents side by side, each isolated in its own folder and supervised process
 - [The Batch (DeepLearning.AI)](./community/newsletters/the-batch.md) — 

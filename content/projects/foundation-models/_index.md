@@ -116,8 +116,8 @@ Before selecting a foundation model:
 - [OpenPhone](./openphone.md) — HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents
 - [OpenVoice](./openvoice.md) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-- [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
-- [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
+- [Phi Cookbook](./phi-cookbook.md) — Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile
+- [Qwen](./qwen.md) — Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [Qwen3-Omni](./qwen3-omni.md) — Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech
 - [Qwen3-TTS](./qwen3-tts.md) — Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages

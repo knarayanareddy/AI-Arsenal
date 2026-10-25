@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 415
+    "count": 395
   },
   "entries": [
     {
@@ -73,30 +73,6 @@
       "file": "content/projects/benchmarks-and-evals/mteb.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openlit.md::rejected-boilerplate::c5658c497b42f7a3",
-      "file": "content/projects/benchmarks-and-evals/openlit.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openlit.md::rejected-boilerplate::e1d4ebf0fc32052d",
-      "file": "content/projects/benchmarks-and-evals/openlit.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openlit.md::rejected-boilerplate::e46bd8126af90f53",
-      "file": "content/projects/benchmarks-and-evals/openlit.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the engineering question with .{#,#} is not whether it works but what it commits you to/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/openlit.md::rejected-boilerplate::ea10e8ff1bc5e78a",
-      "file": "content/projects/benchmarks-and-evals/openlit.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/benchmarks-and-evals/openllmetry.md::rejected-boilerplate::27a4e3131057da42",
@@ -447,30 +423,6 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/phi-cookbook.md::rejected-boilerplate::116b8f961105af81",
-      "file": "content/projects/foundation-models/phi-cookbook.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/phi-cookbook.md::rejected-boilerplate::5b071022f648b83d",
-      "file": "content/projects/foundation-models/phi-cookbook.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/phi-cookbook.md::rejected-boilerplate::5b1b33d5dbe2ad94",
-      "file": "content/projects/foundation-models/phi-cookbook.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/phi-cookbook.md::rejected-boilerplate::96d5ad948a09a6fb",
-      "file": "content/projects/foundation-models/phi-cookbook.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/qwen-2-5.md::rejected-boilerplate::285f0083397629c1",
       "file": "content/projects/foundation-models/qwen-2-5.md",
       "rule": "rejected-boilerplate",
@@ -481,30 +433,6 @@
       "file": "content/projects/foundation-models/qwen-2-5.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/qwen.md::rejected-boilerplate::1ae9db9a3d7b0c9f",
-      "file": "content/projects/foundation-models/qwen.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/qwen.md::rejected-boilerplate::88f1a0f893565dc7",
-      "file": "content/projects/foundation-models/qwen.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/qwen.md::rejected-boilerplate::ba6ec3d5ca622cb4",
-      "file": "content/projects/foundation-models/qwen.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/qwen.md::rejected-boilerplate::c9ea91c2464de3ac",
-      "file": "content/projects/foundation-models/qwen.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
       "fingerprint": "content/projects/foundation-models/translategemma.md::rejected-boilerplate::0106d49c33bebc00",
@@ -993,30 +921,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::rejected-boilerplate::61092ec0ded03d09",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::rejected-boilerplate::7baf5057424d2dae",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::rejected-boilerplate::86c7052ab95bd3e3",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::rejected-boilerplate::b6fbfc8509084593",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
       "fingerprint": "content/projects/inference-engines/lmdeploy.md::rejected-boilerplate::9fda806187cded23",
       "file": "content/projects/inference-engines/lmdeploy.md",
       "rule": "rejected-boilerplate",
@@ -1087,30 +991,6 @@
       "file": "content/projects/inference-engines/tensorrt-llm.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::rejected-boilerplate::2421999337ec3ac2",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::rejected-boilerplate::6913fcffe13058f2",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::rejected-boilerplate::762058a219c1167b",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::rejected-boilerplate::c07d7f8fada0668a",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
       "fingerprint": "content/projects/inference-engines/vllm.md::rejected-boilerplate::145ad67bc5ca51c9",

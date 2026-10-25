@@ -80,7 +80,7 @@ Before selecting an evaluation/observability platform:
 - [medusa](./medusa.md) — A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - [OpenCompass](./opencompass.md) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
-- [OpenLIT](./openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
+- [OpenLIT](./openlit.md) — Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring
 - [OpenLLMetry](./openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - [Phoenix](./phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
