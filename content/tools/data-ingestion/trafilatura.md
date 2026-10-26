@@ -79,7 +79,7 @@ Follow the official documentation at https://trafilatura.readthedocs.io for the 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Trafilatura is specific — cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Trafilatura is specific — cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it What to measure is recall on your own domains: the heuristic cascade is tuned for news and articles, and forum threads or API documentation can lose exactly the paragraphs you need.
 - Against `firecrawl`, `crawl4ai`, `jina-reader`, the split is who fetches the page: Trafilatura extracts from HTML you already hold, while the others fetch and render it for you.
 - Trafilatura is a pure-Python extractor with no network calls of its own, so it never rate-limits you — and it also cannot render JavaScript, which is the boundary to check before adopting it.
 - What this entry cannot give you is measured behaviour: measure Trafilatura's latency and its error rate under a degraded upstream before it carries production traffic.

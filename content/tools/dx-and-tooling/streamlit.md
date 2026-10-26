@@ -72,7 +72,7 @@ The integration happens in the developer's loop rather than at runtime, through 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Streamlit is specific — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Streamlit is specific — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily The rerun model is the thing to test: every interaction re-executes the script, so any step without a cache decorator becomes a model call per click.
 - Streamlit's honest comparison set is `chainlit`, `fastapi`, `gradio`, `mesop`; what separates them is rarely capability, it is what you must operate.
 - Streamlit is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Streamlit's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-26T15:16:17.815Z",
+  "generated_at": "2026-10-26T15:20:11.022Z",
   "config": {
     "document": {
       "id": "id",
@@ -198,8 +198,8 @@
       "paid": 13
     },
     "status": {
-      "active": 912,
-      "archived": 17,
+      "active": 911,
+      "archived": 18,
       "deprecated": 2,
       "watching": 22,
       "reviewed": 3,
@@ -17389,7 +17389,7 @@
       "type": "project",
       "name": "ExLlamaV2",
       "title": "ExLlamaV2",
-      "description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
+      "description": "Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI",
       "tags": [
         "inference",
         "quantization",
@@ -17399,7 +17399,7 @@
       "subcategory": "inference-engines",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "inference-engine",
       "audience": null,
       "domain": [
@@ -17432,8 +17432,8 @@
       "url": "content/projects/inference-engines/exllamav2",
       "boost_title": "ExLlamaV2",
       "boost_tags": "inference quantization local",
-      "boost_description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
-      "body": "ExLlamaV2 Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM inference quantization local llms inference-engines Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal ExLlamaV2 appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practic…"
+      "boost_description": "Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI",
+      "body": "ExLlamaV2 Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI inference quantization local llms inference-engines Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal ExLlamaV2 appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practic…"
     },
     {
       "id": "exo",
@@ -32712,7 +32712,7 @@
       "type": "tool",
       "name": "LoRAX",
       "title": "LoRAX",
-      "description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
+      "description": "Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead",
       "tags": [
         "inference",
         "fine-tuning",
@@ -32753,8 +32753,8 @@
       "url": "content/tools/serving-and-deployment/lorax",
       "boost_title": "LoRAX",
       "boost_tags": "inference fine-tuning self-hosted efficiency",
-      "boost_description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
-      "body": "LoRAX Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU inference fine-tuning self-hosted efficiency TL;DR: the production serving entry for LoRAX. Multi LoRA inference server that serves thousands of fine tuned adapters on a single base model and GPU — the deciding factor is operational cost and what you have to run, not the feature list. Overview LoRAX (LoRA eXchange), from Predibase, is an inference server (forked from HF text generation inference) designed around adapter multiplexing: it keeps one base model resident and dynamically loads LoRA adapters per request, batching requests for different adapters into the same forward pass via heterogeneous continuous batching and SGMV kernels (…"
+      "boost_description": "Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead",
+      "body": "LoRAX Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead inference fine-tuning self-hosted efficiency TL;DR: the reference design for multi LoRA serving, not a deployment target. The repository is archived: read it to understand adapter multiplexing, then run vLLM or SGLang multi LoRA, which absorbed the technique and are still maintained. Overview LoRAX (LoRA eXchange), from Predibase, is an inference server (forked from HF text generation inference) designed around adapter multiplexing: it keeps one base model resident and dynamically loads LoRA adapters per request, batching requests for different adapters into the same forward pass via heterogeneous continuous batching and SGMV kernels (…"
     },
     {
       "id": "ltx-2",
@@ -47105,7 +47105,7 @@
       "type": "tool",
       "name": "Railway",
       "title": "Railway",
-      "description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
+      "description": "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving",
       "tags": [
         "cloud",
         "serverless"
@@ -47145,8 +47145,8 @@
       "url": "content/tools/serving-and-deployment/railway",
       "boost_title": "Railway",
       "boost_tags": "cloud serverless",
-      "boost_description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
-      "body": "Railway Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes cloud serverless TL;DR: the deployment, production serving entry for Railway. Developer friendly cloud deployment platform for apps, workers, databases, and prototypes — the deciding factor is operational cost and what you have to run, not the feature list. Overview A developer friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience. The integration surface is an API rather than a vendored library unlike bentoml, fly io; on the deployment, production serving path; under a usage based cost model; with…"
+      "boost_description": "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving",
+      "body": "Railway Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving cloud serverless TL;DR: the low ceremony PaaS for the application around your models. Repository to deploy via Railpack, managed Postgres/Redis, and a URL per pull request — proprietary hosting with a genuine exit path, and the wrong layer for GPU inference. Overview A developer friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience. The integration surface is an API rather than a vendored library unlike bentoml, fly io; on the deployment, production serving path; under a usage based cost model; wit…"
     },
     {
       "id": "ramalama",

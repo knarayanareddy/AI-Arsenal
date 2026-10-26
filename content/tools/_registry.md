@@ -139,7 +139,7 @@
 | `lm-format-enforcer` | [LM Format Enforcer](./model-layer/lm-format-enforcer.md) | Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM |
 | `lm-studio` | [LM Studio](./dx-and-tooling/lm-studio.md) | Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server |
 | `lmcache` | [LMCache](./serving-and-deployment/lmcache.md) | KV cache layer that persists and shares prefix state across vLLM instances and storage tiers |
-| `lorax` | [LoRAX](./serving-and-deployment/lorax.md) | Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU |
+| `lorax` | [LoRAX](./serving-and-deployment/lorax.md) | Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead |
 | `manus` | [Manus](./orchestration/manus.md) | AI-powered platform for building full-stack web applications and automating tasks |
 | `marimo` | [marimo](./dx-and-tooling/marimo.md) | Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps |
 | `markitdown` | [MarkItDown](./data-ingestion/markitdown.md) | Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second |
@@ -195,7 +195,7 @@
 | `qwen-3` | [Qwen 3](./model-layer/qwen-3.md) | Alibaba open-weight model family with multimodal and coding variants |
 | `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks |
 | `ragatouille` | [RAGatouille](./data-ingestion/ragatouille.md) | Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines |
-| `railway` | [Railway](./serving-and-deployment/railway.md) | Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes |
+| `railway` | [Railway](./serving-and-deployment/railway.md) | Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving |
 | `ramalama` | [RamaLama](./serving-and-deployment/ramalama.md) | Containers-native CLI for pulling, isolating, and serving AI models on local systems |
 | `ray` | [Ray](./serving-and-deployment/ray.md) | Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving |
 | `ray-serve` | [Ray Serve](./serving-and-deployment/ray-serve.md) | Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python |

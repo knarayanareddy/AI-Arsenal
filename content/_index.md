@@ -398,7 +398,7 @@
 - [Evaluation Methodology](./skills/core-concepts/evaluation-methodology.md) — How to evaluate LLM systems: golden sets, LLM-as-judge, benchmarks vs task evals, and common pitfalls
 - [Evidently](./tools/evaluation-and-observability/evidently.md) — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
 - [Exa](./tools/data-ingestion/exa.md) — Hosted MCP server exposing Exa web search and page fetch as two default tools for any MCP client
-- [ExLlamaV2](./projects/inference-engines/exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [ExLlamaV2](./projects/inference-engines/exllamav2.md) — Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI
 - [exo (exo-explore)](./projects/inference-engines/exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [spaCy](./projects/frameworks/explosion-spacy.md) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 - [F5-TTS](./projects/foundation-models/f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
@@ -710,7 +710,7 @@
 - [Logan Kilpatrick](./community/people/logankilpatrick.md) — Shares practical AI developer ecosystem updates and product-building context
 - [loop-engineering](./projects/agent-systems/loop-engineering.md) — Pattern library and npx CLI for running recurring agent loops around a codebase, with autonomy levels, cost tiers and a Loop Ready score
 - [LoRA for Diffusion (cloneofsimo)](./projects/training-and-alignment/lora-diffusion.md) — An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters
-- [LoRAX](./tools/serving-and-deployment/lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
+- [LoRAX](./tools/serving-and-deployment/lorax.md) — Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead
 - [LTX-2](./projects/foundation-models/ltx-2.md) — Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 - [LTX-Video](./projects/foundation-models/ltx-video.md) — Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
 - [Ludwig](./projects/frameworks/ludwig.md) — A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code
@@ -1001,7 +1001,7 @@
 - [RAGatouille](./tools/data-ingestion/ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [RAGFlow](./projects/data-and-retrieval/ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 - [RAGLite](./projects/data-and-retrieval/raglite.md) — Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters
-- [Railway](./tools/serving-and-deployment/railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [Railway](./tools/serving-and-deployment/railway.md) — Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving
 - [RamaLama](./tools/serving-and-deployment/ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Rank Context Sections by Expected Usefulness, Not Chronology](./tips-and-tricks/prompting/rank-context-by-expected-usefulness.md) — 
 - [Mixture-of-Depths: Dynamically Allocating Compute in Transformer-Based Language Models](./research/inference-and-efficiency/raposo-2024-mixture-of-depths.md) — Lets a Transformer spend different amounts of compute on different tokens by having a per-layer router send only the top-k tokens through the block and the rest skip via residual -- a compute budget set by capacity, not by every token

@@ -93,7 +93,7 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Mistral / Mixtral is specific — mistral 7B is a dense decoder-only transformer using grouped-query and sliding-window attention. Mixtral 8x7B and 8x22B use a sparse Mixture-of-Experts design (8 experts, 2 active per token), one of the first widely-adopted open-weight MoE releases and a significant influence on the open-model ecosystem's subsequent MoE adoption — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Mistral / Mixtral is specific — mistral 7B is a dense decoder-only transformer using grouped-query and sliding-window attention. Mixtral 8x7B and 8x22B use a sparse Mixture-of-Experts design (8 experts, 2 active per token), one of the first widely-adopted open-weight MoE releases and a significant influence on the open-model ecosystem's subsequent MoE adoption What to check is which generation you are actually running: sliding-window attention caps effective context in the 7B line, and Mixtral's routing changes latency shape at batch size one.
 - Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
 - Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 

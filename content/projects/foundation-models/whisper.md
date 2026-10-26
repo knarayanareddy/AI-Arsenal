@@ -82,7 +82,7 @@ pip install faster-whisper
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Whisper is specific — an encoder-decoder transformer over 30-second log-Mel spectrogram windows; multitask tokens condition the decoder for transcription, translation-to-English, language ID, and timestamp prediction. Sizes span tiny (39M) to large-v3 (1.5B) plus the distilled large-v3-turbo variant that trades minor accuracy for ~6x decode speed — the practical default for most deployments — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Whisper is specific — an encoder-decoder transformer over 30-second log-Mel spectrogram windows; multitask tokens condition the decoder for transcription, translation-to-English, language ID, and timestamp prediction. Sizes span tiny (39M) to large-v3 (1.5B) plus the distilled large-v3-turbo variant that trades minor accuracy for ~6x decode speed — the practical default for most deployments The number that decides adoption is word error rate on your own audio at your own chunking strategy — silence, music and overlapping speakers are where the model invents text.
 - Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
 - Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 

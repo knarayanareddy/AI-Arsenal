@@ -87,7 +87,7 @@ Upstream: depends entirely on PostgreSQL as its host database. Downstream: suppo
 
 ## Strengths
 
-- The implementation detail worth checking before adopting pgvector is specific — implemented as a native Postgres extension adding a vector column type and both exact and approximate (IVFFlat, HNSW) nearest-neighbor index types, so vector search queries can be combined with standard SQL joins, filters, and transactions in the same query — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting pgvector is specific — implemented as a native Postgres extension adding a vector column type and both exact and approximate (IVFFlat, HNSW) nearest-neighbor index types, so vector search queries can be combined with standard SQL joins, filters, and transactions in the same query The test is recall and p95 latency at your own filter selectivity: a filtered HNSW scan can quietly stop using the index, and `EXPLAIN` is the only way to know.
 - Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
 - Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 

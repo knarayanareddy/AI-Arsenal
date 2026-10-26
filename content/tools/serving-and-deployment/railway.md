@@ -3,7 +3,7 @@ id: railway
 name: Railway
 type: tool
 job: [deployment, production-serving]
-description: Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+description: "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving"
 url: "https://railway.app"
 cost_model: usage-based
 pricing_detail: Usage-based cloud pricing
@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the deployment, production-serving entry for Railway. Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the low-ceremony PaaS for the application around your models. Repository-to-deploy via Railpack, managed Postgres/Redis, and a URL per pull request — proprietary hosting with a genuine exit path, and the wrong layer for GPU inference.
 
 ## Overview
 
@@ -71,29 +71,36 @@ Follow the official documentation at https://railway.app for the authentication 
 
 ## Use Cases
 
-1. **What it does in a system**: Railway sits on the deployment, production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
-2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Railway.
-3. **Choosing between candidates**: Railway's comparison set is `bentoml`, `fly-io`, `modal`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Shipping a small service next to its database**: a repository, a managed Postgres and a private network in one project removes the Terraform-and-VPC preamble that makes small deployments slow.
+2. **Preview environments per pull request**: ephemeral deployments per branch are the feature that changes review quality for frontend and API work, because someone can click the PR and use the build.
+3. **Workers, cron jobs and prototypes that need to outlive a laptop**: the same project model covers a long-running worker and a scheduled job, which is often the whole requirement.
+4. **Teams without a platform engineer**: the build is inferred from the repository, so a Node or Python service deploys without a Dockerfile — and without anyone owning a build pipeline.
+5. **Deploying a container you already build**: prebuilt images run unchanged, so Railway can host an artifact produced elsewhere without adopting its build system.
 
 ## Strengths
 
-- What Railway gives you that its headline description does not: connects to a Git repository (or Docker image) and builds/deploys it automatically, provisioning any declared databases or services alongside it in the same project, which is the part to check against your own pipeline before trusting the feature list.
-- Against `bentoml`, `fly-io`, `modal`, `replicate`, the difference that decides this is deployment model and cost rather than the feature list, and Railway sits at the hosted end of that axis.
-- Railway is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
-- What this entry cannot give you is measured behaviour: measure Railway's latency and its error rate under a degraded upstream before it carries production traffic.
+- The build inference is genuinely good: Railpack (successor to Nixpacks) detects the language and produces an OCI image, which is the step most small teams get wrong when they write their own Dockerfiles.
+- Project-level primitives — services, managed databases, private networking, variables — map to how a small application is actually shaped, rather than to cloud-provider abstractions.
+- Pull-request environments with a URL per branch are the single most useful feature for review and QA.
+- No YAML surface to learn: configuration lives in the dashboard or a config file, and the CLI covers CI use.
+- Managed Postgres, Redis and MySQL remove the most common reason a prototype never reaches a shared environment.
+- Credible scale for its niche: the tooling around it (Nixpacks, Railpack, the CLI) is public and maintained, which is a better durability signal than a pricing page.
 
 ## Limitations / When NOT to Use
 
-- Depending on Railway means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Railway's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
-- Where Railway overlaps `bentoml`, `fly-io`, `modal`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- **It is a proprietary platform on someone else's infrastructure.** There is no self-hosted edition, so the exit path is a redeploy plus a data migration, and pricing changes are not something you can vote on.
+- **Usage-based billing rewards inattention.** Cost scales with running services, memory and egress; a forgotten preview environment or an oversized worker shows up on the invoice rather than in a quota error.
+- **GPU inference is not the target.** For anything model-serving-shaped, `replicate`, `ray-serve` or a GPU cloud is the right layer; Railway is for the application around it.
+- **Less control than Kubernetes.** Custom scheduling, sidecars, privileged networking and niche runtimes are either impossible or creative workarounds.
+- **Long-running stateful workloads belong elsewhere.** Managed databases here are convenient, and a serious Postgres deployment needs the operational features (replicas, PITR, extensions) that a PaaS abstracts away.
+- **Region and compliance coverage is narrow** compared with the large clouds, which disqualifies it outright for some data-residency requirements.
 
 ## Integration Patterns
 
-- *Wiring*: adopt Railway through its HTTP API, decoupled from your service language against the `deployment, production-serving` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
-- *Alternatives*: `bentoml`, `fly-io`, `modal`, `replicate` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
-- *Deployment and cost*: Usage-based billing makes request volume the cost driver, so model the token or call volume before committing the integration.
-- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
+- *Wiring*: `railway up` or a GitHub connection in CI, with variables managed per environment; keep secrets in the platform's variable store rather than the repository.
+- *Build layer*: Railpack/Nixpacks produce the image; if you already build with Docker, deploy the image and skip the inference.
+- *Alternatives*: `fly-io`-class edge platforms for global placement, `render`-class PaaS for a similar feature set, Kubernetes when you need control, and `aws-bedrock` or `replicate` for the model-serving half of the application.
+- *Boundary*: put the model calls in a separate service with its own scaling profile — the web app and the inference path have different memory and timeout behaviour, and mixing them wastes both.
 
 ## Resources
 

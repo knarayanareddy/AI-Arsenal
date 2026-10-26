@@ -68,7 +68,7 @@ Before selecting an inference engine:
 - [Handy](./cjpais-handy.md) — MIT-licensed Rust desktop app for fully offline Whisper-family speech-to-text, built as a Tauri v2 native client
 - [flash-attention](./dao-ailab-flash-attention.md) — BSD-3-Clause exact-attention kernels that avoid materializing the attention matrix, cutting memory and speeding up sequence length
 - [NVIDIA Dynamo](./dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
-- [ExLlamaV2](./exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [ExLlamaV2](./exllamav2.md) — Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI
 - [exo (exo-explore)](./exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [FastVideo](./fastvideo.md) — A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation

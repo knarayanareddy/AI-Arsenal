@@ -94,7 +94,7 @@ print(generate("用一句话解释检索增强生成（RAG）。", max_new_token
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Qwen 2.5 / QwQ is specific — a dense decoder-only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post-training branches: Qwen2.5-Coder for code generation and QwQ as an early reasoning-focused variant using extended chain-of-thought training, predating the more thoroughly reasoning-optimized Qwen3 generation — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Qwen 2.5 / QwQ is specific — a dense decoder-only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post-training branches: Qwen2.5-Coder for code generation and QwQ as an early reasoning-focused variant using extended chain-of-thought training, predating the more thoroughly reasoning-optimized Qwen3 generation What to check is which branch fits the job: Coder and QwQ diverge sharply from the base model on both quality and token budget, and the 7B/14B/32B sizes hit different VRAM ceilings.
 - Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
 - Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 

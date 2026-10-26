@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 257
+    "count": 231
   },
   "entries": [
     {
@@ -69,12 +69,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/data-and-retrieval/pgvector.md::rejected-boilerplate::f8b0d7ce8a1eea65",
-      "file": "content/projects/data-and-retrieval/pgvector.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/data-and-retrieval/ragflow.md::rejected-boilerplate::8c587fc7fb2699c8",
       "file": "content/projects/data-and-retrieval/ragflow.md",
       "rule": "rejected-boilerplate",
@@ -123,22 +117,10 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/falcon-3.md::rejected-boilerplate::44be418e355d80cc",
-      "file": "content/projects/foundation-models/falcon-3.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/falcon-3.md::rejected-boilerplate::d7cfaf66ec37589a",
       "file": "content/projects/foundation-models/falcon-3.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/gemma-3.md::rejected-boilerplate::18d923f1c21c2127",
-      "file": "content/projects/foundation-models/gemma-3.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/foundation-models/gemma-3.md::rejected-boilerplate::535dd2dc11dac6c8",
@@ -171,12 +153,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/kimi-k2.md::rejected-boilerplate::63912837b1fad58b",
-      "file": "content/projects/foundation-models/kimi-k2.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/kimi-k2.md::rejected-boilerplate::6e9c60d67799e59a",
       "file": "content/projects/foundation-models/kimi-k2.md",
       "rule": "rejected-boilerplate",
@@ -201,28 +177,10 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/mistral-models.md::rejected-boilerplate::b16c48150b63806c",
-      "file": "content/projects/foundation-models/mistral-models.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/mova.md::rejected-boilerplate::cbc1be78a28a79a7",
-      "file": "content/projects/foundation-models/mova.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/olmo.md::rejected-boilerplate::37378b7f35b5f569",
       "file": "content/projects/foundation-models/olmo.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/olmo.md::rejected-boilerplate::650801c94baa6747",
-      "file": "content/projects/foundation-models/olmo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/foundation-models/olmo.md::rejected-boilerplate::671adf64041d1e20",
@@ -267,12 +225,6 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/qwen-2-5.md::rejected-boilerplate::285f0083397629c1",
-      "file": "content/projects/foundation-models/qwen-2-5.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/qwen-2-5.md::rejected-boilerplate::95b2d12082299952",
       "file": "content/projects/foundation-models/qwen-2-5.md",
       "rule": "rejected-boilerplate",
@@ -285,12 +237,6 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::rejected-boilerplate::1a14cadc080af12f",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/translategemma.md::rejected-boilerplate::a5c2f3d3ed2f2915",
       "file": "content/projects/foundation-models/translategemma.md",
       "rule": "rejected-boilerplate",
@@ -301,12 +247,6 @@
       "file": "content/projects/foundation-models/whisper.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/whisper.md::rejected-boilerplate::80e55e471b817006",
-      "file": "content/projects/foundation-models/whisper.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/frameworks/autogen.md::rejected-boilerplate::726ee2464d9d3218",
@@ -525,12 +465,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/inference-engines/ollama.md::rejected-boilerplate::0159de80f0dc7981",
-      "file": "content/projects/inference-engines/ollama.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/inference-engines/ollama.md::rejected-boilerplate::5f3a9465337d47b3",
       "file": "content/projects/inference-engines/ollama.md",
       "rule": "rejected-boilerplate",
@@ -651,12 +585,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/tavily.md::rejected-boilerplate::e3313031753d65c5",
-      "file": "content/tools/data-ingestion/tavily.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/tavily.md::rejected-boilerplate::fcc269e461055c94",
       "file": "content/tools/data-ingestion/tavily.md",
       "rule": "rejected-boilerplate",
@@ -667,12 +595,6 @@
       "file": "content/tools/data-ingestion/trafilatura.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/trafilatura.md::rejected-boilerplate::d65e3e6925f73f91",
-      "file": "content/tools/data-ingestion/trafilatura.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/tools/data-ingestion/typesense.md::rejected-boilerplate::fb773450c3a3c2a5",
@@ -729,12 +651,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/gemini-cli.md::rejected-boilerplate::4f50e43d47ecb3c5",
-      "file": "content/tools/dx-and-tooling/gemini-cli.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/github-copilot.md::rejected-boilerplate::381588e51f1ff349",
       "file": "content/tools/dx-and-tooling/github-copilot.md",
       "rule": "rejected-boilerplate",
@@ -751,12 +667,6 @@
       "file": "content/tools/dx-and-tooling/goose.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/gradio.md::rejected-boilerplate::6c0623ba82269191",
-      "file": "content/tools/dx-and-tooling/gradio.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/gradio.md::rejected-boilerplate::a45c1dd4f8b7476a",
@@ -819,22 +729,10 @@
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/marimo.md::rejected-boilerplate::21c4b1296ab15927",
-      "file": "content/tools/dx-and-tooling/marimo.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/marimo.md::rejected-boilerplate::db1ccbdb039a21ee",
       "file": "content/tools/dx-and-tooling/marimo.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/open-webui.md::rejected-boilerplate::85b89ea9f732c4c4",
-      "file": "content/tools/dx-and-tooling/open-webui.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/open-webui.md::rejected-boilerplate::d29d4f2fc9489c25",
@@ -871,12 +769,6 @@
       "file": "content/tools/dx-and-tooling/shellmate.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /which is the specific claim the rest of the entry has to support/i"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/streamlit.md::rejected-boilerplate::3145cdb199c39f83",
-      "file": "content/tools/dx-and-tooling/streamlit.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/streamlit.md::rejected-boilerplate::867632690710f266",
@@ -1425,24 +1317,6 @@
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/lorax.md::rejected-boilerplate::b1c86771d8346895",
-      "file": "content/tools/serving-and-deployment/lorax.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/lorax.md::rejected-boilerplate::e85f2f41bc8f4be1",
-      "file": "content/tools/serving-and-deployment/lorax.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/lorax.md::rejected-boilerplate::f876a148093b0b69",
-      "file": "content/tools/serving-and-deployment/lorax.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/nvidia-nim.md::rejected-boilerplate::1d3f7bb3833ad5a2",
       "file": "content/tools/serving-and-deployment/nvidia-nim.md",
       "rule": "rejected-boilerplate",
@@ -1473,46 +1347,16 @@
       "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/railway.md::rejected-boilerplate::ce9fac883a10710f",
-      "file": "content/tools/serving-and-deployment/railway.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/railway.md::rejected-boilerplate::f572ec981e244d12",
-      "file": "content/tools/serving-and-deployment/railway.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/ray-serve.md::rejected-boilerplate::4206975979873bef",
       "file": "content/tools/serving-and-deployment/ray-serve.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/ray-serve.md::rejected-boilerplate::841e50834b4e4ffb",
-      "file": "content/tools/serving-and-deployment/ray-serve.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/ray-serve.md::rejected-boilerplate::a6156029cb97dfea",
-      "file": "content/tools/serving-and-deployment/ray-serve.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/replicate.md::rejected-boilerplate::1c4f9b1b0ef94479",
       "file": "content/tools/serving-and-deployment/replicate.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/replicate.md::rejected-boilerplate::3078c9f85a3c5799",
-      "file": "content/tools/serving-and-deployment/replicate.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/tools/serving-and-deployment/replicate.md::rejected-boilerplate::398d77b27c78e5e6",

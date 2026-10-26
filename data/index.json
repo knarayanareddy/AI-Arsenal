@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-26T15:14:26.333Z",
+    "generated_at": "2026-10-26T15:20:05.252Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -6663,7 +6663,7 @@
       "id": "exllamav2",
       "type": "project",
       "name": "ExLlamaV2",
-      "description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
+      "description": "Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI",
       "tags": [
         "inference",
         "quantization",
@@ -6671,11 +6671,11 @@
       ],
       "path": "content/projects/inference-engines/exllamav2.md",
       "url": "content/projects/inference-engines/exllamav2",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-26",
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -12584,7 +12584,7 @@
       "id": "lorax",
       "type": "tool",
       "name": "LoRAX",
-      "description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
+      "description": "Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead",
       "tags": [
         "inference",
         "fine-tuning",
@@ -18140,7 +18140,7 @@
       "id": "railway",
       "type": "tool",
       "name": "Railway",
-      "description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
+      "description": "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving",
       "tags": [
         "cloud",
         "serverless"

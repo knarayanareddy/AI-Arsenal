@@ -165,7 +165,7 @@
 - [DB-GPT](./data-and-retrieval/eosphoros-ai-db-gpt.md) — Agentic data platform connecting LLMs to enterprise databases via text-to-SQL, RAG, and multi-agent roles
 - [ESPnet](./frameworks/espnet.md) — An end-to-end speech-processing toolkit covering ASR, TTS, speech translation, and enhancement, with Kaldi-style data pipelines and PyTorch models
 - [evalplus](./benchmarks-and-evals/evalplus-evalplus.md) — Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests
-- [ExLlamaV2](./inference-engines/exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [ExLlamaV2](./inference-engines/exllamav2.md) — Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI
 - [exo (exo-explore)](./inference-engines/exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [spaCy](./frameworks/explosion-spacy.md) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 - [F5-TTS](./foundation-models/f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
