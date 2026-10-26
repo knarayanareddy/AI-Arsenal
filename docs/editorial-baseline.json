@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 286
+    "count": 270
   },
   "entries": [
     {
@@ -357,54 +357,6 @@
       "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/dify.md::rejected-boilerplate::8514ca3144137f08",
-      "file": "content/projects/frameworks/dify.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/dify.md::rejected-boilerplate::e196706c36ec2046",
-      "file": "content/projects/frameworks/dify.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/dspy.md::rejected-boilerplate::128d0a11f0c3e2c7",
-      "file": "content/projects/frameworks/dspy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/dspy.md::rejected-boilerplate::c3743fb3e9c70ed2",
-      "file": "content/projects/frameworks/dspy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/dspy.md::rejected-boilerplate::e0a039789a25cde6",
-      "file": "content/projects/frameworks/dspy.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/flyte.md::rejected-boilerplate::07ebb078bfe27fc4",
-      "file": "content/projects/frameworks/flyte.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/flyte.md::rejected-boilerplate::99dd0be3fecc3a5d",
-      "file": "content/projects/frameworks/flyte.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/flyte.md::rejected-boilerplate::e052e078f3f7da83",
-      "file": "content/projects/frameworks/flyte.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/h2oai-h2o-3.md::rejected-boilerplate::6d992c72300405bc",
       "file": "content/projects/frameworks/h2oai-h2o-3.md",
       "rule": "rejected-boilerplate",
@@ -429,24 +381,6 @@
       "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/langchain4j.md::rejected-boilerplate::2011176a974dd807",
-      "file": "content/projects/frameworks/langchain4j.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/langchain4j.md::rejected-boilerplate::20e7b955dc15db95",
-      "file": "content/projects/frameworks/langchain4j.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/langchain4j.md::rejected-boilerplate::4bfc87e72b3b37e1",
-      "file": "content/projects/frameworks/langchain4j.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/langgraph.md::rejected-boilerplate::e43fcdd7642fbae0",
       "file": "content/projects/frameworks/langgraph.md",
       "rule": "rejected-boilerplate",
@@ -459,32 +393,8 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/metagpt.md::rejected-boilerplate::a5e5259d73129a4d",
-      "file": "content/projects/frameworks/metagpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/metagpt.md::rejected-boilerplate::c4345bda41d64c26",
-      "file": "content/projects/frameworks/metagpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/metagpt.md::rejected-boilerplate::d21021db7f06bf88",
-      "file": "content/projects/frameworks/metagpt.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/microsoft-agent-framework.md::rejected-boilerplate::0be57b3e23d3cb82",
       "file": "content/projects/frameworks/microsoft-agent-framework.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/openhands.md::rejected-boilerplate::87850d5a41cd7e4c",
-      "file": "content/projects/frameworks/openhands.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
@@ -493,12 +403,6 @@
       "file": "content/projects/frameworks/openhands.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/openhands.md::rejected-boilerplate::b53a8ca90cde3fbd",
-      "file": "content/projects/frameworks/openhands.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
     },
     {
       "fingerprint": "content/projects/frameworks/paddlespeech.md::rejected-boilerplate::231e39e99178865e",

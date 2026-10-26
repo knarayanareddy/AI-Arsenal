@@ -151,11 +151,11 @@
 - [spleeter](./foundation-models/deezer-spleeter.md) — MIT-licensed TensorFlow library with pretrained models that split a music mix into vocals, drums, bass, and accompaniment
 - [Detectron2 (Meta)](./frameworks/detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dia](./foundation-models/dia-tts.md) — A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues
-- [Dify](./frameworks/dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
+- [Dify](./frameworks/dify.md) — Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API
 - [xgboost](./frameworks/dmlc-xgboost.md) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
 - [docext](./data-and-retrieval/docext.md) — On-premises document toolkit using vision-language models for image-to-markdown conversion, key information extraction, and IDP benchmarking
 - [Docling](./data-and-retrieval/docling.md) — IBM-originated document parser producing a unified DoclingDocument with layout, tables, formulas and OCR
-- [DSPy](./frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
+- [DSPy](./frameworks/dspy.md) — Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos
 - [DuckDB](./data-and-retrieval/duckdb.md) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
 - [NVIDIA Dynamo](./inference-engines/dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
 - [EasyOCR](./data-and-retrieval/easyocr.md) — Ready-to-use Python OCR package with 80-plus supported languages, a Gradio web demo, and a simple reader API
@@ -185,7 +185,7 @@
 - [FlashRAG](./data-and-retrieval/flashrag.md) — Python toolkit for modular RAG research with retrievers, rerankers, generators, datasets, and benchmark pipelines
 - [flue](./frameworks/flue.md) — A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability
 - [FLUX (Black Forest Labs)](./foundation-models/flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-- [Flyte](./frameworks/flyte.md) — A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned
+- [Flyte](./frameworks/flyte.md) — Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced
 - [FunASR](./frameworks/funasr.md) — An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
 - [Gemma](./foundation-models/gemma.md) — The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
 - [Gemma 3](./foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
@@ -313,7 +313,7 @@
 - [MemPalace](./agent-systems/mempalace.md) — Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search
 - [Memvid](./agent-systems/memvid.md) — Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames
 - [Metaflow](./frameworks/metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
-- [MetaGPT](./frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
+- [MetaGPT](./frameworks/metagpt.md) — Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026
 - [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 - [DiskANN](./data-and-retrieval/microsoft-diskann.md) — Disk-based approximate-nearest-neighbour index with filtered search, built for vector collections larger than one machine's memory
 - [NNI (Neural Network Intelligence)](./frameworks/microsoft-nni.md) — Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute
@@ -376,7 +376,7 @@
 - [opendataloader-pdf](./data-and-retrieval/opendataloader-project-opendataloader-pdf.md) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
 - [OpenEnv](./training-and-alignment/openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
 - [OpenGUI](./agent-systems/opengui.md) — Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces
-- [OpenHands](./frameworks/openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [OpenHands](./frameworks/openhands.md) — Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations
 - [OpenLIT](./benchmarks-and-evals/openlit.md) — Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring
 - [OpenLLMetry](./benchmarks-and-evals/openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [OpenMontage](./agent-systems/openmontage.md) — AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant

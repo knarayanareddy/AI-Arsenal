@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-26T15:06:46.211Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-26T15:10:22.334Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -95,7 +95,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 
 ### rag
-- DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
+- DSPy (⭐38800, score:70) — Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos
 - AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
 - GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved

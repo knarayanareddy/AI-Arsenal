@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-26T15:06:43.953Z",
+  "generated_at": "2026-10-26T15:10:20.171Z",
   "config": {
     "document": {
       "id": "id",
@@ -15069,7 +15069,7 @@
       "type": "project",
       "name": "Dify",
       "title": "Dify",
-      "description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
+      "description": "Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API",
       "tags": [
         "agents",
         "orchestration",
@@ -15114,8 +15114,8 @@
       "url": "content/projects/frameworks/dify",
       "boost_title": "Dify",
       "boost_tags": "agents orchestration rag cloud",
-      "boost_description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
-      "body": "Dify Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations agents orchestration rag cloud agents agent-frameworks Overview An open source platform for building LLM applications through a visual workflow builder, combining RAG pipeline construction, agent orchestration, and prompt management in a single self hostable product. Why it's in the Arsenal The case for Dify rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Applications are built as node based visual workflows (similar in spirit to a flowchart) connecting LLM calls, retrieval steps, tool calls, and co…"
+      "boost_description": "Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API",
+      "body": "Dify Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API agents orchestration rag cloud agents agent-frameworks Overview An open source platform for building LLM applications through a visual workflow builder, combining RAG pipeline construction, agent orchestration, and prompt management in a single self hostable product. Why it's in the Arsenal The case for Dify rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Applications are built as node based visual workflows (similar in spirit to a flowchart) connecting LLM calls, retrieval steps, tool calls, and co…"
     },
     {
       "id": "dlt",
@@ -15697,7 +15697,7 @@
       "type": "project",
       "name": "DSPy",
       "title": "DSPy",
-      "description": "A framework for programming and optimizing language model pipelines",
+      "description": "Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos",
       "tags": [
         "llm",
         "rag",
@@ -15742,8 +15742,8 @@
       "url": "content/projects/frameworks/dspy",
       "boost_title": "DSPy",
       "boost_tags": "llm rag evaluation reasoning",
-      "boost_description": "A framework for programming and optimizing language model pipelines",
-      "body": "DSPy A framework for programming and optimizing language model pipelines llm rag evaluation reasoning rag frameworks Overview A framework from Stanford NLP for programming and automatically optimizing language model pipelines, treating prompt engineering as a compilable, metric driven optimization problem rather than manual trial and error. Why it's in the Arsenal DSPy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Developers define a pipeline's structure (modules like 'retrieve' and 'generate') and a target metric; DSPy's compiler then automatic…"
+      "boost_description": "Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos",
+      "body": "DSPy Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos llm rag evaluation reasoning rag frameworks Overview A framework from Stanford NLP for programming and automatically optimizing language model pipelines, treating prompt engineering as a compilable, metric driven optimization problem rather than manual trial and error. Why it's in the Arsenal DSPy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Developers define a pipeline's structure (modules like 'retrieve' and 'generate') and a target metric; DSPy's compiler then automatic…"
     },
     {
       "id": "dubey-2024-llama3",
@@ -18990,7 +18990,7 @@
       "type": "project",
       "name": "Flyte",
       "title": "Flyte",
-      "description": "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned",
+      "description": "Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced",
       "tags": [
         "self-hosted",
         "fine-tuning"
@@ -19032,8 +19032,8 @@
       "url": "content/projects/frameworks/flyte",
       "boost_title": "Flyte",
       "boost_tags": "self-hosted fine-tuning",
-      "boost_description": "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned",
-      "body": "Flyte A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned self-hosted fine-tuning data-pipelines platforms Overview Flyte is a Kubernetes native workflow orchestration platform for data and machine learning pipelines. Authored in Python (with a Go control plane) it emphasizes strongly typed, versioned, and reproducible workflows: each task declares typed inputs and outputs, results are cached and versioned, and the platform executes tasks as containers on Kubernetes with scaling, retries, and lineage tracking. Why it's in the Arsenal Reproducibility and scale are central to production ML, and Flyte is a mature, Kubernetes native orchestrator built specifically for typed, versioned data/ML workflow…"
+      "boost_description": "Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced",
+      "body": "Flyte Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced self-hosted fine-tuning data-pipelines platforms Overview Flyte is a Kubernetes native workflow orchestration platform for data and machine learning pipelines. Authored in Python (with a Go control plane) it emphasizes strongly typed, versioned, and reproducible workflows: each task declares typed inputs and outputs, results are cached and versioned, and the platform executes tasks as containers on Kubernetes with scaling, retries, and lineage tracking. Why it's in the Arsenal Reproducibility and scale are central to production ML, and Flyte is a mature, Kubernetes native orchestrator built specifically for typed, versioned data/ML workflow…"
     },
     {
       "id": "frames",
@@ -35043,7 +35043,7 @@
       "type": "project",
       "name": "MetaGPT",
       "title": "MetaGPT",
-      "description": "Multi-agent framework that simulates software-company roles for natural-language programming",
+      "description": "Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026",
       "tags": [
         "agents",
         "orchestration",
@@ -35088,8 +35088,8 @@
       "url": "content/projects/frameworks/metagpt",
       "boost_title": "MetaGPT",
       "boost_tags": "agents orchestration planning code-gen",
-      "boost_description": "Multi-agent framework that simulates software-company roles for natural-language programming",
-      "body": "MetaGPT Multi-agent framework that simulates software-company roles for natural-language programming agents orchestration planning code-gen agents agent-frameworks Overview A multi agent framework that assigns LLM agents distinct software company roles (product manager, architect, engineer, QA) and has them collaborate through a structured 'standard operating procedure' to turn a one line requirement into working software. Why it's in the Arsenal MetaGPT is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Agents are organized into role based pipelines mirroring a software team's division of labor;…"
+      "boost_description": "Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026",
+      "body": "MetaGPT Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026 agents orchestration planning code-gen agents agent-frameworks Overview A multi agent framework that assigns LLM agents distinct software company roles (product manager, architect, engineer, QA) and has them collaborate through a structured 'standard operating procedure' to turn a one line requirement into working software. Why it's in the Arsenal MetaGPT is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Agents are organized into role based pipelines mirroring a software team's division of labor;…"
     },
     {
       "id": "microsoft-agent-framework",
@@ -40593,7 +40593,7 @@
       "type": "project",
       "name": "OpenHands",
       "title": "OpenHands",
-      "description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
+      "description": "Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations",
       "tags": [
         "agents",
         "code-gen",
@@ -40638,8 +40638,8 @@
       "url": "content/projects/frameworks/openhands",
       "boost_title": "OpenHands",
       "boost_tags": "agents code-gen tool-use planning",
-      "boost_description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
-      "body": "OpenHands AI software engineering agent platform for coding, terminal work, browser actions, and automation agents code-gen tool-use planning agents agent-frameworks Overview An open source platform for autonomous AI software engineering agents (formerly named OpenDevin), capable of reading and writing code, executing commands in a sandboxed environment, and browsing the web to complete end to end coding tasks. Why it's in the Arsenal The case for OpenHands rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture An agent loop operates within a sandboxed execution environment (typically a Docker container) with acces…"
+      "boost_description": "Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations",
+      "body": "OpenHands Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations agents code-gen tool-use planning agents agent-frameworks Overview An open source platform for autonomous AI software engineering agents (formerly named OpenDevin), capable of reading and writing code, executing commands in a sandboxed environment, and browsing the web to complete end to end coding tasks. Why it's in the Arsenal The case for OpenHands rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture An agent loop operates within a sandboxed execution environment (typically a Docker container) with acces…"
     },
     {
       "id": "openjudge",

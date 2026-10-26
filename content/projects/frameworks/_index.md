@@ -50,9 +50,9 @@ Before selecting a framework:
 - [AutoGPT](./autogpt.md) — ⭐ 184931
 - [transformers](./huggingface-transformers.md) — ⭐ 166755
 - [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164197
+- [Dify](./dify.md) — ⭐ 159597
 - [LangChain](./langchain.md) — ⭐ 148417
 - [ponytail](./ponytail.md) — ⭐ 147381
-- [Dify](./dify.md) — ⭐ 145081
 - [ComfyUI](./comfyui.md) — ⭐ 142561
 - [ComfyUI](./comfy-org-comfyui.md) — ⭐ 135314
 - [caveman](./caveman.md) — ⭐ 108165
@@ -88,15 +88,15 @@ Before selecting a framework:
 - [dbt](./dbt-labs-dbt.md) — SQL-first transformation tool that compiles a project of models into a warehouse DAG with tests and lineage
 - [DeerFlow](./deer-flow.md) — Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports
 - [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
-- [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
+- [Dify](./dify.md) — Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API
 - [xgboost](./dmlc-xgboost.md) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
-- [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
+- [DSPy](./dspy.md) — Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos
 - [ESPnet](./espnet.md) — An end-to-end speech-processing toolkit covering ASR, TTS, speech translation, and enhancement, with Kaldi-style data pipelines and PyTorch models
 - [spaCy](./explosion-spacy.md) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 - [MMF](./facebook-mmf.md) — Facebook AI Research's modular PyTorch framework for vision-and-language multimodal research, with datasets, pretrained models, and reproducible task pipelines
 - [Gymnasium](./farama-foundation-gymnasium.md) — Standard API for reinforcement-learning environments with spaces, vectorisation, and a curated env registry
 - [flue](./flue.md) — A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability
-- [Flyte](./flyte.md) — A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned
+- [Flyte](./flyte.md) — Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced
 - [FunASR](./funasr.md) — An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
 - [GenAI Processors](./genai-processors.md) — Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
 - [Genkit](./genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
@@ -128,7 +128,7 @@ Before selecting a framework:
 - [Mastra](./mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
 - [MCP Reference Servers](./mcp-servers.md) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
 - [Metaflow](./metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
-- [MetaGPT](./metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
+- [MetaGPT](./metagpt.md) — Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026
 - [Microsoft Agent Framework](./microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 - [NNI (Neural Network Intelligence)](./microsoft-nni.md) — Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute
 - [mlx](./ml-explore-mlx.md) — MIT-licensed array framework with a NumPy-like API and lazy evaluation built on Apple silicon's unified memory
@@ -139,7 +139,7 @@ Before selecting a framework:
 - [mmcv](./open-mmlab-mmcv.md) — Vision operator library and config-runner stack that the OpenMMLab detection and segmentation projects are built on
 - [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text
 - [opencv](./opencv-opencv.md) — Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference
-- [OpenHands](./openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [OpenHands](./openhands.md) — Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations
 - [openscience](./openscience.md) — A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry
 - [OpenShell](./openshell.md) — NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration
 - [PaddleDetection](./paddlepaddle-paddledetection.md) — PaddlePaddle object-detection toolkit covering detection, instance segmentation, tracking, and pose

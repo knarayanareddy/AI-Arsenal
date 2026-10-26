@@ -350,7 +350,7 @@
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./research/training-and-alignment/dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./research/foundational/devlin-2018-bert.md) — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
 - [Dia](./projects/foundation-models/dia-tts.md) — A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues
-- [Dify](./projects/frameworks/dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
+- [Dify](./projects/frameworks/dify.md) — Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API
 - [dlt](./tools/data-ingestion/dlt.md) — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
 - [xgboost](./projects/frameworks/dmlc-xgboost.md) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
 - [Do-Not-Answer](./benchmarks/safety/do-not-answer.md) — 
@@ -363,7 +363,7 @@
 - [Drop Low-Similarity Chunks With a Score Threshold](./tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./tips-and-tricks/cost-and-performance/drop-unused-conversation-history.md) — 
 - [Dropstone 3](./tools/dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
-- [DSPy](./projects/frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
+- [DSPy](./projects/frameworks/dspy.md) — Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos
 - [The Llama 3 Herd of Models](./research/foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [DuckDB](./projects/data-and-retrieval/duckdb.md) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
 - [Dust](./tools/orchestration/dust.md) — Hosted team platform for agents over company data, with connectors, permission-aware retrieval and credit pricing
@@ -430,7 +430,7 @@
 - [flue](./projects/frameworks/flue.md) — A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability
 - [FLUX (Black Forest Labs)](./projects/foundation-models/flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - [Fly.io](./tools/serving-and-deployment/fly-io.md) — Application hosting platform with global machines and GPU options for AI services
-- [Flyte](./projects/frameworks/flyte.md) — A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned
+- [Flyte](./projects/frameworks/flyte.md) — Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced
 - [FRAMES (Factuality, Retrieval, And reasoning MEasurement Set)](./benchmarks/retrieval-rag/frames.md) — 
 - [François Chollet](./community/people/francois-chollet.md) — Writes about abstraction, intelligence, benchmarks, and deep learning practice
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./research/inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
@@ -758,7 +758,7 @@
 - [Mesh-LLM](./tools/serving-and-deployment/mesh-llm.md) — Rust inference fabric that pools heterogeneous machines into one OpenAI-compatible endpoint
 - [Mesop](./tools/dx-and-tooling/mesop.md) — Python UI framework from Google for internal apps and AI demos — archived on 30 September 2026, so it is a design reference rather than a dependency
 - [Metaflow](./projects/frameworks/metaflow.md) — Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
-- [MetaGPT](./projects/frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
+- [MetaGPT](./projects/frameworks/metagpt.md) — Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026
 - [Microsoft Agent Framework](./projects/frameworks/microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 - [DiskANN](./projects/data-and-retrieval/microsoft-diskann.md) — Disk-based approximate-nearest-neighbour index with filtered search, built for vector collections larger than one machine's memory
 - [NNI (Neural Network Intelligence)](./projects/frameworks/microsoft-nni.md) — Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute
@@ -869,7 +869,7 @@
 - [opendataloader-pdf](./projects/data-and-retrieval/opendataloader-project-opendataloader-pdf.md) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
 - [OpenEnv](./projects/training-and-alignment/openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
 - [OpenGUI](./projects/agent-systems/opengui.md) — Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces
-- [OpenHands](./projects/frameworks/openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [OpenHands](./projects/frameworks/openhands.md) — Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations
 - [OpenJudge](./tools/evaluation-and-observability/openjudge.md) — AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training
 - [OpenLIT](./projects/benchmarks-and-evals/openlit.md) — Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring
 - [OpenLLM](./tools/serving-and-deployment/openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command

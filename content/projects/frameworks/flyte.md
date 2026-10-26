@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 status: active
 id: flyte
@@ -29,7 +29,7 @@ name: "Flyte"
 artifact_type: platform
 category: data-pipelines
 subcategory: platforms
-description: "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned"
+description: "Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced"
 github_url: https://github.com/flyteorg/flyte
 license: "Apache-2.0"
 primary_language: "Go"
@@ -38,8 +38,8 @@ tags:
   - "fine-tuning"
 maturity: production
 cost_model: open-source
-github_stars: 7135
-last_commit: "2026-07-12"
+github_stars: 7763
+last_commit: "2026-10-26"
 docs_url: https://docs.flyte.org/
 phase: framework
 domain:
@@ -83,25 +83,37 @@ Author tasks and workflows with the `flytekit` Python SDK, test locally, then re
 
 ## Key Use Cases
 
-1. **Adopting the abstraction**: for Flyte, the question is whether the control-flow model it imposes is one you want in your codebase permanently, since every step written against it is a step you own later.
-2. **What to measure first**: `data`, `pipelines`, `kubernetes`, `typed` decide whether Flyte works for you; measure them on your own data because the published numbers are conditioned on someone else's setup.
-3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
+1. **Pipelines that must resume rather than restart**: durability is the product — a failed step retries from its last successful state instead of re-running an hour of feature engineering.
+2. **Cost control on expensive steps**: content-addressed caching means an unchanged task is not recomputed, which on GPU-heavy pipelines is the difference between a cache hit and a bill.
+3. **Data and ML work that Python developers already own**: tasks are ordinary typed Python functions with an environment attached, so there is no DSL to learn before the first pipeline runs.
+4. **Serving a model next to the pipeline that trained it**: `FastAPIAppEnvironment` deploys a FastAPI app under the same system, so training and serving share an image and a lifecycle.
+5. **Local-to-cluster parity**: `flyte.init()` runs the program locally against a devbox, and the same program runs distributed later — the local loop is the honest test of whether a workflow tool is usable.
+6. **Agent workloads that need retries and state**: Flyte 2 targets agents explicitly, where a long-running, failure-prone loop benefits from the same durable execution the data pipelines get.
+7. **Reproducibility for regulated work**: every execution is versioned with its inputs and image, which is what an audit of "how was this model produced" asks for.
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Flyte is specific — in Flyte, Python @task functions with typed signatures compose into @workflow DAGs; the compiler captures the typed interface and the control plane (Go, on Kubernetes) schedules each task as a container, passing typed artifacts between them. Content-addressed caching skips recomputation when inputs are unchanged, dynamic workflows allow branching decided at runtime, and every execution is versioned with full data lineage for reproducibility — because that is where the capability claim either survives contact with your data or does not.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- Flyte 2 collapsed the old split between SDK and control plane: `TaskEnvironment`, `@env.task` and `flyte.run()` read like Python because they mostly are, and async tasks are first-class.
+- Durable execution with caching and lineage is the strongest technical claim here, and it is the property that distinguishes an orchestrator from a cron job with retries.
+- Serving and pipelines in one system avoids the usual second deployment mechanism for inference.
+- A genuine local path — `flyte.init()`, a devbox, a TUI for development — which Kubernetes-native tools often treat as an afterthought.
+- LF AI & Data graduated project, Apache-2.0, 7.7k stars: governance and licensing are not the risk.
+- Flyte 1 remains maintained on the `master` branch, so an existing deployment is not stranded by the 2.0 rewrite.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the Flyte footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running Flyte against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- No alternative is catalogued alongside Flyte here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- **The open-source backend for Flyte 2 is not released yet.** The README says it is "coming soon" and that a production backend is available through Union.ai — so the open path today is a local devbox or Flyte 1, and that gap is the single most important fact for a self-hosting decision.
+- **Kubernetes is still the assumed substrate.** The promise is "no YAML", not "no cluster": someone owns the control plane, the object store and the image builds.
+- **Flyte 1 to Flyte 2 is a migration, not an upgrade.** Different execution model, different SDK surface, documented separately — budget the port.
+- **Adoption is small relative to the alternatives.** 7.7k stars against Airflow's ecosystem or Dagster's tooling means fewer answers when something breaks, and hiring for it is narrower.
+- **Developer experience is uneven across versions.** The docs moved to Union's site, which mixes open-source and commercial material, and Flyte 1 pages are easy to land on by mistake.
+- **204 open issues** with a small maintainer team: the direction is clear (2.0), and edge cases in the 1.x line are unlikely to be prioritised.
 
 ## Relation to the Arsenal
 
-It is the Kubernetes-native orchestration option alongside the other workflow and training entries.
+Sits in the orchestration layer with `ray-serve` for the serving half and `deepspeed`, `axolotl` and `llamafactory` for the training jobs it would orchestrate. Airflow- and Dagster-class tools are the general alternatives; the differentiator here is durability plus typed data flow rather than scheduling breadth.
+
+Where a project already runs on Kubernetes and needs reproducible multi-step ML, this is the entry to compare against the cloud vendor's pipeline service; where the team is small and the pipeline is short, the operational cost is not repaid.
 
 ## Resources
 

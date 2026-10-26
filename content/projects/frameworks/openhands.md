@@ -5,7 +5,7 @@ version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: AI software engineering agent platform for coding, terminal work, browser actions, and automation
+description: Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations
 github_url: "https://github.com/OpenHands/OpenHands"
 license: MIT + Enterprise
 primary_language: Python
@@ -13,11 +13,11 @@ org_or_maintainer: null
 tags: [agents, code-gen, tool-use, planning]
 maturity: production
 cost_model: open-source
-github_stars: 76854
+github_stars: 91902
 github_stars_last_30d: 0
 trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.all-hands.dev/"
+last_commit: "2026-10-26"
+docs_url: "https://docs.openhands.dev/"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -35,13 +35,13 @@ avoid_if:
   - You're not prepared to operate the sandboxed execution environment autonomous coding agents require — running arbitrary generated code safely needs real infrastructure investment
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives: [metagpt, langgraph]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: OpenHands has a substantial GitHub star count (76K+) and is frequently referenced in coding-agent benchmark comparisons (e.g. SWE-bench leaderboards), which is a stronger signal of real usage than star count alone, though a specific named enterprise production deployment was not independently confirmed.
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
@@ -79,25 +79,37 @@ pip install openhands
 
 ## Key Use Cases
 
-1. **Depending on it safely**: the work is the boundary — which calls go through OpenHands, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
-2. **What the OpenHands scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
-3. **Choosing between candidates**: compare OpenHands against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
+1. **Running a coding agent against your own repositories, self-hosted**: the Agent Canvas runs locally or on a server you own and connects to agents through a backend you control, which is the whole appeal over a hosted coding agent.
+2. **Automations triggered by events rather than typed prompts**: issue decomposition, dependency updates, code review and report generation can run on a schedule or a webhook from Slack, GitHub, Linear or Datadog.
+3. **Mixing agents behind one interface**: OpenHands, Claude Code, Codex, Gemini CLI, Pi, OpenCode or any ACP-compatible agent can be selected per conversation without changing the surrounding tooling.
+4. **An always-on engineering assistant**: running on a server rather than a laptop means an agent keeps working after you close the lid, which changes the class of task it can take on.
+5. **Isolating agent execution**: the backend can be local, Docker, a VM or your infrastructure, and the README is explicit that running without a sandbox gives the agent full filesystem access — the choice of backend is the security boundary.
+6. **Team-shared agent infrastructure**: one Agent Server can serve a team's code-review automation while personal agents run on individual machines, with the same frontend.
+7. **Evaluating which agent is better at your codebase**: switching agents on the same canvas is the cheapest way to compare them on real tasks instead of on a leaderboard.
 
 ## Strengths
 
-- Beyond the headline description, OpenHands's architecture section is the honest source: an agent loop operates within a sandboxed execution environment (typically a Docker container) with access to a shell, code editor, and browser; the agent plans and executes multi-step coding tasks, observing command output and iterating, with the platform providing the surrounding orchestration, sandboxing, and UI.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- OpenHands 1.0's pivot to a control centre is the right shape for the problem: agents are long-running and multi-backend, which is not something a chat UI models well.
+- ACP support makes it agent-agnostic, so the platform does not force OpenHands' own agent on a team that already standardised on Claude Code or Codex.
+- Automation triggers (schedule and webhook) with Slack, GitHub, Linear and Notion integrations turn an agent into infrastructure rather than a toy.
+- Backend flexibility is treated as a first-class concept: local, Docker, VM or cloud, switchable from one frontend.
+- MIT licensed core with a hosted and enterprise tier, so the open path is real and the commercial boundary is documented rather than hidden.
+- 91.9k stars and an active repository (pushed 2026-10-26) — this is one of the few agent platforms with both scale and a regular release cadence.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the OpenHands footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running OpenHands against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Where OpenHands overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
+- **Security is your job.** The README warns that the no-sandbox install gives the agent full filesystem access, and a self-hosted control centre with Slack and GitHub tokens is a privileged system. Hardening guidance exists in `SELF_HOSTING.md`; applying it is a project.
+- **The product moved under the entry.** OpenHands 1.0 re-centred the project on Agent Canvas; documentation, blog posts and third-party guides still describe the earlier single-agent workspace, so instructions found online may not match the current release.
+- **A platform, not a library.** Node.js 24, `uv`, a frontend, agent servers and container backends are all part of the install — the operational surface is much larger than an agent SDK.
+- **1,123 open issues.** Fast-moving and heavily used: expect to encounter rough edges, and expect to diagnose them yourself on the community edition.
+- **Agent quality is inherited.** The canvas orchestrates models and agents; it does not make a weak model good at your codebase, and benchmark results for a coding agent rarely transfer unchanged to your repository.
+- **Enterprise features sit behind the commercial tier.** Some governance and multi-tenant capabilities are OpenHands Enterprise, which matters if the plan assumes the open-core covers them.
 
 ## Relation to the Arsenal
 
-OpenHands (formerly OpenDevin) is an autonomous software-development agent platform. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+The platform layer above the agent frameworks: `langgraph` and `crewai` are how you build an agent, and OpenHands is a self-hosted environment for running agents — its own, or someone else's via ACP — with automations attached.
+
+Compare with `metagpt` (research-oriented multi-agent, unmaintained) and with hosted coding agents, where the trade is control and data residency against someone else's operational burden. The code-execution sandbox question links it to `terminal-bench`-style evaluation, which is how you would check whether a change to the agent actually helped.
 
 ## Resources
 
