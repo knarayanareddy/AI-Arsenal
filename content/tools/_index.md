@@ -6,15 +6,15 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-10-25 |
-| [by job](./by-job/) | 14 entries | 2026-10-25 |
-| [by stack](./by-stack/) | 9 entries | 2026-10-25 |
-| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-25 |
-| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-25 |
-| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-25 |
-| [model layer](./model-layer/) | 34 entries | 2026-10-25 |
-| [orchestration](./orchestration/) | 40 entries | 2026-10-25 |
-| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-25 |
+| [by cost](./by-cost/) | 5 entries | 2026-10-26 |
+| [by job](./by-job/) | 14 entries | 2026-10-26 |
+| [by stack](./by-stack/) | 9 entries | 2026-10-26 |
+| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-26 |
+| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-26 |
+| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-26 |
+| [model layer](./model-layer/) | 34 entries | 2026-10-26 |
+| [orchestration](./orchestration/) | 40 entries | 2026-10-26 |
+| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-26 |
 
 ## Recently Added
 
@@ -220,7 +220,7 @@ _No star-tracked entries yet._
 - [OrchestraML](./orchestration/orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
 - [Orchestration Tools](./by-job/orchestration.md) — Curated tools for orchestration workflows in AI engineering
 - [Outlines](./model-layer/outlines.md) — A library for constrained generation and structured outputs with LLMs
-- [PEFT](./model-layer/peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PEFT](./model-layer/peft.md) — Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference
 - [Pinecone](./data-ingestion/pinecone.md) — A managed vector database for production semantic search applications
 - [Playwright](./data-ingestion/playwright.md) — Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse
 - [Portkey](./serving-and-deployment/portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management

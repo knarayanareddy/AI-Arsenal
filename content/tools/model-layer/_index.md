@@ -68,7 +68,7 @@ _No star-tracked entries yet._
 - [OpenPipe ART](./openpipe-art.md) — Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs
-- [PEFT](./peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PEFT](./peft.md) — Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference
 - [PyTorch Lightning](./pytorch-lightning.md) — The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing
 - [Qwen 3](./qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
 - [Sentence Transformers](./sentence-transformers.md) — The standard Python library for computing, training, and fine-tuning text embedding and reranker models

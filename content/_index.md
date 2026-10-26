@@ -6,18 +6,18 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 29 entries | 2026-10-25 |
-| [benchmarks](./benchmarks/) | 52 entries | 2026-10-25 |
-| [build examples](./build-examples/) | 11 entries | 2026-10-25 |
-| [community](./community/) | 58 entries | 2026-10-25 |
-| [digests](./digests/) | 1 entries | 2026-10-25 |
-| [observability](./observability/) | 16 entries | 2026-10-25 |
-| [projects](./projects/) | 511 entries | 2026-10-25 |
-| [research](./research/) | 142 entries | 2026-10-25 |
-| [skills](./skills/) | 28 entries | 2026-10-25 |
-| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-25 |
-| [tools](./tools/) | 277 entries | 2026-10-25 |
-| [trending](./trending/) | 4 entries | 2026-10-25 |
+| [architectures](./architectures/) | 29 entries | 2026-10-26 |
+| [benchmarks](./benchmarks/) | 52 entries | 2026-10-26 |
+| [build examples](./build-examples/) | 11 entries | 2026-10-26 |
+| [community](./community/) | 58 entries | 2026-10-26 |
+| [digests](./digests/) | 1 entries | 2026-10-26 |
+| [observability](./observability/) | 16 entries | 2026-10-26 |
+| [projects](./projects/) | 511 entries | 2026-10-26 |
+| [research](./research/) | 142 entries | 2026-10-26 |
+| [skills](./skills/) | 28 entries | 2026-10-26 |
+| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-10-26 |
+| [tools](./tools/) | 277 entries | 2026-10-26 |
+| [trending](./trending/) | 4 entries | 2026-10-26 |
 
 ## Recently Added
 
@@ -461,7 +461,7 @@
 - [GLM-4 / GLM-4.5](./projects/foundation-models/glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
 - [GLM-5](./projects/foundation-models/glm-5.md) — Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare
 - [GLM-OCR](./projects/foundation-models/glm-ocr.md) — Compact 0.9B multimodal OCR model from Z.ai (Zhipu) for complex document understanding, built on GLM-V
-- [Google ADK](./projects/frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
+- [Google ADK](./projects/frameworks/google-adk.md) — Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI
 - [mediapipe](./projects/inference-engines/google-ai-edge-mediapipe.md) — Apache-2.0 cross-platform pipeline for live media shipping ready-made face, hand, pose, and segmentation graphs that run on-device
 - [brax](./projects/frameworks/google-brax.md) — Massively parallel rigid-body simulation library where entire environments are vmapped and jitted on TPU or GPU
 - [alphafold3](./projects/inference-engines/google-deepmind-alphafold3.md) — AlphaFold 3 inference pipeline for biomolecular complex structure and interaction prediction
@@ -677,7 +677,7 @@
 - [LLaMA-Factory](./tools/model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
 - [Llamafile](./projects/inference-engines/llamafile.md) — Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD
 - [Llama Guard](./tools/evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
-- [LlamaIndex](./projects/frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
+- [LlamaIndex](./projects/frameworks/llamaindex.md) — Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents
 - [LlamaIndex Discord](./community/chat/llamaindex-discord.md) — 
 - [LlamaParse](./projects/data-and-retrieval/llamaparse.md) — Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service
 - [LLaVA-OneVision-2](./projects/foundation-models/llava-onevision-2.md) — Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks
@@ -857,7 +857,7 @@
 - [Open WebUI](./tools/dx-and-tooling/open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
 - [OpenAgents](./tools/orchestration/openagents.md) — TypeScript runtime for peer-to-peer agent networks with capability discovery and task routing
 - [GPT-4 Technical Report](./research/foundational/openai-2023-gpt4.md) — The GPT-4 report: human-professional-level results on real exams (top-10% bar exam), multimodal input, and loss predicted in advance from 1000x-smaller runs — while disclosing no architecture, size, or data details, setting the closed-frontier-report template
-- [OpenAI Agents SDK](./projects/frameworks/openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
+- [OpenAI Agents SDK](./projects/frameworks/openai-agents-sdk.md) — Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text
 - [OpenAI Codex CLI](./tools/dx-and-tooling/openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [OpenAI Developer Community](./community/forums/openai-developer-forum.md) — 
 - [OpenAI Evals](./tools/evaluation-and-observability/openai-evals.md) — An open-source framework for evaluating language model behavior
@@ -912,7 +912,7 @@
 - [parlor](./projects/agent-systems/parlor.md) — Python FastAPI voice stack giving a browser full-duplex-feel conversation with Gemma 4 via llama.cpp, Kokoro TTS and smart-turn detection
 - [Pathway LLM App](./projects/data-and-retrieval/pathway-llm-app.md) — Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources
 - [Gorilla: Large Language Model Connected with Massive APIs](./research/agents-and-reasoning/patil-2023-gorilla.md) — Fine-tuned an LLM to select and correctly invoke the right API from thousands of options, using retrieval of live documentation to stay current and reduce hallucinated calls — an early rigorous tool/function-calling result
-- [PEFT](./tools/model-layer/peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PEFT](./tools/model-layer/peft.md) — Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference
 - [RWKV: Reinventing RNNs for the Transformer Era](./research/architectures/peng-2023-rwkv.md) — A linear-attention RNN that trains in parallel like a Transformer but runs inference like an RNN -- O(1) memory per token and no growing KV cache, trading some expressivity for constant-cost, unbounded-context generation
 - [pgvector](./projects/data-and-retrieval/pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Phi-4](./projects/foundation-models/phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
@@ -1099,7 +1099,7 @@
 - [Set Temperature to Zero When Reproducing Bugs](./tips-and-tricks/debugging-and-observability/set-temperature-to-zero-when-reproducing-bugs.md) — 
 - [Set a Maximum Input/Output Token Budget Per Feature and Alert on Overruns](./tips-and-tricks/cost-and-performance/set-token-budgets-per-feature.md) — 
 - [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./tips-and-tricks/agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md) — 
-- [SGLang](./projects/inference-engines/sglang.md) — High-performance serving framework for large language and multimodal models
+- [SGLang](./projects/inference-engines/sglang.md) — LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package
 - [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./research/training-and-alignment/shao-2024-deepseekmath.md) — Introduced GRPO: group-relative policy optimization drops PPO's value network by baselining rewards against groups of sampled outputs — the algorithm behind DeepSeek-R1 and the reasoning-RL wave — plus a 120B-token math corpus mined from Common Crawl
 - [shap](./projects/frameworks/shap-shap.md) — MIT-licensed explainability library computing Shapley-value attributions for any model, including black-box scorers and rankers
 - [Fast Transformer Decoding: One Write-Head is All You Need (Multi-Query Attention)](./research/inference-and-efficiency/shazeer-2019-mqa.md) — Multi-query attention: share one key/value head across all query heads, shrinking the KV cache by the head count and making incremental decoding memory-bandwidth-cheap — the idea GQA later refined and every modern serving stack depends on

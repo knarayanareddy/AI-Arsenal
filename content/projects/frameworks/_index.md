@@ -100,7 +100,7 @@ Before selecting a framework:
 - [FunASR](./funasr.md) — An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
 - [GenAI Processors](./genai-processors.md) — Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
 - [Genkit](./genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
-- [Google ADK](./google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
+- [Google ADK](./google-adk.md) — Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI
 - [brax](./google-brax.md) — Massively parallel rigid-body simulation library where entire environments are vmapped and jitted on TPU or GPU
 - [flax](./google-flax.md) — JAX neural network library whose Linen and nnx module systems keep parameters as explicit pytrees for jit-compatible training
 - [scenic](./google-research-scenic.md) — JAX vision research library that expresses data loading, model, loss, and metrics as whole composable functions rather than mutable modules
@@ -123,7 +123,7 @@ Before selecting a framework:
 - [LightAgent](./lightagent.md) — A compact Python agent framework with hooks, durable sessions, graph memory, MCP adapters, and SQLite FTS5 retrieval
 - [LightGBM](./lightgbm-org-lightgbm.md) — Histogram-based gradient boosting library with leaf-wise tree growth and GOSS/EFB sampling, written in C++
 - [LiveKit Agents](./livekit-agents.md) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
-- [LlamaIndex](./llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
+- [LlamaIndex](./llamaindex.md) — Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents
 - [Ludwig](./ludwig.md) — A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code
 - [Mastra](./mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
 - [MCP Reference Servers](./mcp-servers.md) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
@@ -137,7 +137,7 @@ Before selecting a framework:
 - [NVIDIA NeMo](./nvidia-nemo.md) — NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines
 - [NeMo-Agent-Toolkit](./nvidia-nemo-agent-toolkit.md) — NVIDIA's library for connecting LLMs to tools and data, with profiling, guardrails, and evaluation built into the agent workflow
 - [mmcv](./open-mmlab-mmcv.md) — Vision operator library and config-runner stack that the OpenMMLab detection and segmentation projects are built on
-- [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
+- [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text
 - [opencv](./opencv-opencv.md) — Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference
 - [OpenHands](./openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
 - [openscience](./openscience.md) — A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry

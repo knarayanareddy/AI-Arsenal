@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 319
+    "count": 304
   },
   "entries": [
     {
@@ -513,24 +513,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/google-adk.md::rejected-boilerplate::3e3e7c0634dfcb10",
-      "file": "content/projects/frameworks/google-adk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/google-adk.md::rejected-boilerplate::473fed805faa1881",
-      "file": "content/projects/frameworks/google-adk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/google-adk.md::rejected-boilerplate::d6ad78af9a7a57cb",
-      "file": "content/projects/frameworks/google-adk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/h2oai-h2o-3.md::rejected-boilerplate::6d992c72300405bc",
       "file": "content/projects/frameworks/h2oai-h2o-3.md",
       "rule": "rejected-boilerplate",
@@ -579,24 +561,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/frameworks/llamaindex.md::rejected-boilerplate::1ffdb9cba127ee34",
-      "file": "content/projects/frameworks/llamaindex.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/llamaindex.md::rejected-boilerplate::9ad1980a46173f46",
-      "file": "content/projects/frameworks/llamaindex.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/llamaindex.md::rejected-boilerplate::da1073ebea574712",
-      "file": "content/projects/frameworks/llamaindex.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
       "fingerprint": "content/projects/frameworks/mastra.md::rejected-boilerplate::095f7f45fff038fc",
       "file": "content/projects/frameworks/mastra.md",
       "rule": "rejected-boilerplate",
@@ -625,24 +589,6 @@
       "file": "content/projects/frameworks/microsoft-agent-framework.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/openai-agents-sdk.md::rejected-boilerplate::6687ce940ecfb1e6",
-      "file": "content/projects/frameworks/openai-agents-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/openai-agents-sdk.md::rejected-boilerplate::a047b272a785a2e4",
-      "file": "content/projects/frameworks/openai-agents-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/frameworks/openai-agents-sdk.md::rejected-boilerplate::a42caf3a112dc250",
-      "file": "content/projects/frameworks/openai-agents-sdk.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
       "fingerprint": "content/projects/frameworks/openhands.md::rejected-boilerplate::87850d5a41cd7e4c",
@@ -791,24 +737,6 @@
     {
       "fingerprint": "content/projects/inference-engines/ollama.md::rejected-boilerplate::5f3a9465337d47b3",
       "file": "content/projects/inference-engines/ollama.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/sglang.md::rejected-boilerplate::238da1b7ef764bd2",
-      "file": "content/projects/inference-engines/sglang.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/sglang.md::rejected-boilerplate::cb779932851a3462",
-      "file": "content/projects/inference-engines/sglang.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/sglang.md::rejected-boilerplate::d738d8cd00e1e84a",
-      "file": "content/projects/inference-engines/sglang.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
@@ -1591,24 +1519,6 @@
       "file": "content/tools/model-layer/outlines.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/peft.md::rejected-boilerplate::2185a0bebca0f902",
-      "file": "content/tools/model-layer/peft.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/peft.md::rejected-boilerplate::34b43d0098333557",
-      "file": "content/tools/model-layer/peft.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/peft.md::rejected-boilerplate::72af3f2ecad95455",
-      "file": "content/tools/model-layer/peft.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
     },
     {
       "fingerprint": "content/tools/model-layer/qwen-3.md::rejected-boilerplate::b6b52b51123561ae",

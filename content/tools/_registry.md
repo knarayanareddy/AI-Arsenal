@@ -177,7 +177,7 @@
 | `orca` | [Orca](./dx-and-tooling/orca.md) | Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree |
 | `orchestraml` | [OrchestraML](./orchestration/orchestraml.md) | Automate end-to-end ML workflows from data prep to deployment using AI agents |
 | `outlines` | [Outlines](./model-layer/outlines.md) | A library for constrained generation and structured outputs with LLMs |
-| `peft` | [PEFT](./model-layer/peft.md) | Hugging Face library for parameter-efficient fine-tuning methods |
+| `peft` | [PEFT](./model-layer/peft.md) | Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference |
 | `pinecone` | [Pinecone](./data-ingestion/pinecone.md) | A managed vector database for production semantic search applications |
 | `playwright` | [Playwright](./data-ingestion/playwright.md) | Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse |
 | `portkey` | [Portkey](./serving-and-deployment/portkey.md) | An AI gateway for routing, observability, guardrails, and prompt management |

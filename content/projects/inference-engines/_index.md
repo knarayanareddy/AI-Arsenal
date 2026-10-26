@@ -55,7 +55,7 @@ Before selecting an inference engine:
 - [LocalAI](./localai.md) — ⭐ 47415
 - [exo (exo-explore)](./exo.md) — ⭐ 46087
 - [FastChat](./lm-sys-fastchat.md) — ⭐ 39550
-- [mediapipe](./google-ai-edge-mediapipe.md) — ⭐ 37105
+- [SGLang](./sglang.md) — ⭐ 38200
 
 ### Browse All
 
@@ -105,7 +105,7 @@ Before selecting an inference engine:
 - [Piper](./piper-tts.md) — A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime
 - [llama_deploy](./run-llama-llama-deploy.md) — Deployment layer that turns a LlamaIndex agentic workflow into running services with API and control-plane surfaces
 - [Semantic Router (vLLM)](./semantic-router.md) — An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM
-- [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
+- [SGLang](./sglang.md) — LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package
 - [sherpa-onnx](./sherpa-onnx.md) — An offline, on-device speech toolkit (STT, TTS, diarization, VAD, enhancement) built on next-gen Kaldi and onnxruntime with bindings for a dozen languages and
 - [Shimmy](./shimmy.md) — A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies
 - [Superlinked Inference Engine](./sie.md) — Superlinked open-source inference server and production cluster for serving the model mix used by agent applications

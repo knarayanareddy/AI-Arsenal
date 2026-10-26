@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:46:17.121Z",
+  "generated_at": "2026-10-26T14:43:01.166Z",
   "config": {
     "document": {
       "id": "id",
@@ -258,13 +258,13 @@
       "reasoning": 47,
       "multimodal": 64,
       "safety-and-alignment": 2,
-      "audio": 58,
+      "audio": 59,
       "vision": 103,
       "reinforcement-learning": 10
     },
     "relation_to_stack": {
       "build-on-top": 413,
-      "deploy-as-is": 288,
+      "deploy-as-is": 287,
       "study-and-reference": 114,
       "fork-and-adapt": 53,
       "contribute-to": 25
@@ -20522,7 +20522,7 @@
       "type": "project",
       "name": "Google ADK",
       "title": "Google ADK",
-      "description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
+      "description": "Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI",
       "tags": [
         "agents",
         "orchestration",
@@ -20567,8 +20567,8 @@
       "url": "content/projects/frameworks/google-adk",
       "boost_title": "Google ADK",
       "boost_tags": "agents orchestration graphs tool-use",
-      "boost_description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
-      "body": "Google ADK Google code-first Python toolkit for building, evaluating, and deploying AI agents agents orchestration graphs tool-use agents agent-frameworks Overview Google's official open source framework for building, evaluating, and deploying AI agents, designed to integrate closely with Google Cloud and Vertex AI while remaining usable with other model providers. Why it's in the Arsenal Google ADK is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Provides an agent abstraction with built in support for tool use, multi agent composition, and evaluation, plus tooling for deploying agents…"
+      "boost_description": "Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI",
+      "body": "Google ADK Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI agents orchestration graphs tool-use agents agent-frameworks Overview ADK is Google's agent framework, and version 2.0 reorganised it around two classes. Agent is the unit: a model, instructions, tools, and the behaviour you want. Workflow is the structure: a graph declared with edges, where edges=[(\"START\", step a, step b)] means the order is yours rather than the model's discretion. That split is the important design decision. Most frameworks pick a side — either an autonomous loop where the model chooses what happens next, or a graph where you do — and then make the other awkward. ADK treats both as legitimate and lets you put an agent inside a work…"
     },
     {
       "id": "google-ai-edge-mediapipe",
@@ -31104,7 +31104,7 @@
       "type": "project",
       "name": "LlamaIndex",
       "title": "LlamaIndex",
-      "description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
+      "description": "Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents",
       "tags": [
         "rag",
         "retrieval",
@@ -31148,8 +31148,8 @@
       "url": "content/projects/frameworks/llamaindex",
       "boost_title": "LlamaIndex",
       "boost_tags": "rag retrieval embeddings llamaindex",
-      "boost_description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
-      "body": "LlamaIndex Data framework for building document agents, retrieval pipelines, and production RAG systems rag retrieval embeddings llamaindex rag frameworks Overview A data framework purpose built for connecting large language models to external data sources, providing document ingestion, indexing, and retrieval abstractions specifically oriented around building RAG applications and document centric agents. Why it's in the Arsenal LlamaIndex appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to. Architecture Data flows through data connectors (ingestion) into in…"
+      "boost_description": "Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents",
+      "body": "LlamaIndex Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents rag retrieval embeddings llamaindex rag frameworks Overview LlamaIndex is the framework that took the retrieval problem seriously as an architecture rather than a step in a chain. Its vocabulary — readers and connectors for ingestion, node parsers for chunking, indices for structure, retrievers and query engines for the read path, postprocessors for reranking — describes the actual shape of a document pipeline, and it was designed before that shape was obvious. The structure is a composable core plus a large surface of integration packages: llama index core holds the abstractions, and llama index llms openai, llama index embeddings huggingfac…"
     },
     {
       "id": "llamaindex-discord",
@@ -39981,7 +39981,7 @@
       "type": "project",
       "name": "OpenAI Agents SDK",
       "title": "OpenAI Agents SDK",
-      "description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
+      "description": "Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text",
       "tags": [
         "agents",
         "tool-use",
@@ -39997,11 +39997,11 @@
       "audience": null,
       "domain": [
         "language",
-        "reasoning"
+        "reasoning",
+        "audio"
       ],
       "relation_to_stack": [
-        "build-on-top",
-        "deploy-as-is"
+        "build-on-top"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -40026,8 +40026,8 @@
       "url": "content/projects/frameworks/openai-agents-sdk",
       "boost_title": "OpenAI Agents SDK",
       "boost_tags": "agents tool-use guardrails tracing",
-      "boost_description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
-      "body": "OpenAI Agents SDK Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing agents tool-use guardrails tracing agents agent-frameworks Overview OpenAI's official, lightweight Python SDK for building agentic applications, providing simple primitives for agents, tool use, and handoffs between agents, intended as a production ready successor to OpenAI's earlier experimental 'Swarm' framework. Why it's in the Arsenal The case for OpenAI Agents SDK rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Built around a small set of primitives: agents (an LLM with instructions and tools), han…"
+      "boost_description": "Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text",
+      "body": "OpenAI Agents SDK Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text agents tool-use guardrails tracing agents agent-frameworks Overview The Agents SDK is OpenAI's answer to a specific question: what does a minimal agent framework look like if you stop trying to model graphs? An Agent is a configuration object — a name, instructions, a model, tools, guardrails, handoffs. A Runner executes it, looping over tool calls until the model produces a final answer. Everything else in the framework hangs off those two ideas. By late 2026 the framework covers four run modes rather than one. A text agent handles ordinary request response work. A SandboxAgent runs inside a container with a manifest of files, so it can inspect a re…"
     },
     {
       "id": "openai-codex-cli",
@@ -42741,7 +42741,7 @@
       "type": "tool",
       "name": "PEFT",
       "title": "PEFT",
-      "description": "Hugging Face library for parameter-efficient fine-tuning methods",
+      "description": "Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference",
       "tags": [
         "fine-tuning",
         "llm",
@@ -42782,8 +42782,8 @@
       "url": "content/tools/model-layer/peft",
       "boost_title": "PEFT",
       "boost_tags": "fine-tuning llm huggingface",
-      "boost_description": "Hugging Face library for parameter-efficient fine-tuning methods",
-      "body": "PEFT Hugging Face library for parameter-efficient fine-tuning methods fine-tuning llm huggingface TL;DR: PEFT, for the fine tuning job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview Hugging Face's library of parameter efficient fine tuning methods (LoRA, QLoRA, IA3, prefix tuning, and others), used as a low level building block inside custom or higher level training pipelines. The integration surface is an API rather than a vendored library unlike axolotl, llamafactory; on the fine tuning path; under a open source cost model; with peft, name, type. What you actually depend on is the request and…"
+      "boost_description": "Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference",
+      "body": "PEFT Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference fine-tuning llm huggingface TL;DR: The library every other fine tuning tool in this catalog builds on — adapters as a wrapper around a frozen base model, which turns \"which model can I afford to tune\" into \"how many adapters can I store\". Overview PEFT implements parameter efficient fine tuning as a modelling trick rather than a training framework. You load a model exactly as you normally would, wrap it with get peft model(model, config), and train as usual — except only a small number of injected parameters are trainable. model.print trainable parameters() is the reality check, and for a LoRA on a 3B model it reports s…"
     },
     {
       "id": "peng-2023-rwkv",
@@ -51791,7 +51791,7 @@
       "type": "project",
       "name": "SGLang",
       "title": "SGLang",
-      "description": "High-performance serving framework for large language and multimodal models",
+      "description": "LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package",
       "tags": [
         "llm",
         "inference",
@@ -51836,8 +51836,8 @@
       "url": "content/projects/inference-engines/sglang",
       "boost_title": "SGLang",
       "boost_tags": "llm inference batching multimodal",
-      "boost_description": "High-performance serving framework for large language and multimodal models",
-      "body": "SGLang High-performance serving framework for large language and multimodal models llm inference batching multimodal llms inference-engines Overview A high performance serving framework for large language and multimodal models, distinguished by RadixAttention, a token level prefix caching mechanism that automatically discovers and reuses shared context across requests. Why it's in the Arsenal SGLang is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture RadixAttention stores KV cache entries in a radix tree indexed at the token level, automatically identifying shared prefixes…"
+      "boost_description": "LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package",
+      "body": "SGLang LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package llm inference batching multimodal llms inference-engines Overview SGLang is LMSYS's open source serving framework, and its original thesis is still the one to evaluate it on: in real deployments the prompt is what repeats. A fixed system prompt, a retrieved document, a growing conversation history, a tool schema — the same tokens arrive at the front of request after request. RadixAttention keeps the KV cache in a radix tree indexed by token, so a new request matches the longest existing prefix and resumes computation from there instead of re running prefill. Around that core the project has grown well past a chat completions server. The same reposi…"
     },
     {
       "id": "shao-2024-deepseekmath",
