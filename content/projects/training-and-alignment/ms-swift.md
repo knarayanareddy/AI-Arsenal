@@ -81,8 +81,6 @@ swift sft --model Qwen/Qwen3-8B --dataset AI-ModelScope/alpaca-gpt4-data-en --tr
 ## Strengths
 
 - The implementation detail worth checking before adopting ms-swift is specific — a layered CLI (swift sft, swift rlhf, swift infer, swift deploy) over pluggable backends: PEFT-based tuners (LoRA, QLoRA, DoRA, and research tuners), DeepSpeed ZeRO or Megatron parallelism for scale, and vLLM/SGLang/LMDeploy for accelerated rollout and inference. RLHF support includes DPO, GRPO, PPO, KTO and reward-model training across both text and multimodal models The practical constraint is the matrix: tuner, parallelism strategy, rollout engine and modality each narrow the others, and the documentation covers combinations that do not all intersect.
-- It is a training-and-alignment entry in this catalog, so the comparison that matters is against the other training-and-alignment projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

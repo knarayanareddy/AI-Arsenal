@@ -72,7 +72,7 @@ Test cases (prompt + assertions) are defined in config files; the CLI runs them 
 
 ## Strengths
 
-- What promptfoo gives you that its headline description does not: test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating, which is the part to check against your own pipeline before trusting the feature list.
+- What promptfoo gives you that its headline description does not: test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating.
 - No direct sibling is catalogued for promptfoo in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - promptfoo is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure promptfoo's latency and its error rate under a degraded upstream before it carries production traffic.

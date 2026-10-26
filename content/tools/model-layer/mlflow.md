@@ -101,7 +101,7 @@ Follow the official documentation at https://github.com/mlflow/mlflow for the au
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for model-registry.
+- Reception is institutional: MLflow became the default tracker in Databricks-shaped organisations, and the model registry is usually the reason teams keep it after evaluating newer tools.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

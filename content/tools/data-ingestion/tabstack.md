@@ -74,7 +74,7 @@ The pipeline is fetch to parse to normalise, and each stage drops information; t
 
 ## Strengths
 
-- What Tabstack gives you that its headline description does not: an agent issues high-level browsing/search instructions to Tabstack's API, which executes the underlying browser automation and returns extracted results, which is the part to check against your own pipeline before trusting the feature list.
+- What Tabstack gives you that its headline description does not: an agent issues high-level browsing/search instructions to Tabstack's API, which executes the underlying browser automation and returns extracted results.
 - No direct sibling is catalogued for Tabstack in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Tabstack is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Tabstack's latency and its error rate under a degraded upstream before it carries production traffic.

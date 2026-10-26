@@ -45,7 +45,7 @@ A Node.js library for controlling Chrome/Chromium specifically, commonly used fo
 
 ## Why It's in the Arsenal
 
-The entry exists because Puppeteer is a node.js browser automation library for Chrome and Chromium workflows. Read it beside `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Puppeteer is a node.js browser automation library for Chrome and Chromium workflows.
 
 ## Key Features
 
@@ -100,7 +100,7 @@ Follow the official documentation at https://github.com/puppeteer/puppeteer for 
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for web-scraping.
+- Puppeteer remains the reference Chrome DevTools Protocol client: its API shows up as the baseline in Playwright comparisons, and the scraping and testing ecosystem built around it is older and larger than any single alternative.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

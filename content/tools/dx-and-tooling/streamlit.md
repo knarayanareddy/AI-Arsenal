@@ -43,7 +43,7 @@ The most widely adopted Python framework for building data and AI app UIs quickl
 
 ## Why It's in the Arsenal
 
-Streamlit is A Python framework for building data and AI apps with minimal frontend code. Read it beside `chainlit`, `fastapi`, `gradio`: the choice between them is a deployment and cost decision before it is a capability one.
+Streamlit is A Python framework for building data and AI apps with minimal frontend code.
 
 ## Key Features
 

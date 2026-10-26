@@ -94,8 +94,6 @@ pip install haystack
 ## Strengths
 
 - Beyond the headline description, Haystack's architecture section is the honest source: applications are modeled as pipelines of composable components (retrievers, generators, routers, agents) connected in a directed graph; agent workflows are built explicitly from these same components rather than hidden inside a separate conversational abstraction, giving one consistent mental model across RAG and agent use cases.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

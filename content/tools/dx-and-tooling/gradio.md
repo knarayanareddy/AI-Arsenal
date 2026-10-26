@@ -43,7 +43,7 @@ A Python library for turning a model or function into a shareable web demo in mi
 
 ## Why It's in the Arsenal
 
-The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Read it beside `chainlit`, `fastapi`, `mesop`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly.
 
 ## Key Features
 

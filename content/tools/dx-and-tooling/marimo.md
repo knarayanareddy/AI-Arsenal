@@ -78,7 +78,6 @@ Follow the official documentation at https://docs.marimo.io for the authenticati
 ## Strengths
 
 - The implementation detail worth reading before adopting marimo is specific — marimo statically parses each cell's variable definitions/references to build a DAG; edits trigger recomputation of downstream cells only. The file format is Python with cells as decorated functions, which makes imports, testing, and CI natural The check is whether reactive recomputation survives your real notebook — a cell that keeps state outside its variables turns the DAG into a guess.
-- Weighing marimo against `streamlit`, `gradio` comes down to one question: who runs the process when it breaks — you or the vendor.
 - marimo is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure marimo's latency and its error rate under a degraded upstream before it carries production traffic.
 

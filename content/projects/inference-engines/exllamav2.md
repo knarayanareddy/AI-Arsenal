@@ -104,9 +104,8 @@ The serving layer that consumes it belongs to `tools/serving-and-deployment/` â€
 
 ## Strengths
 
-- What ExLlamaV2 gives you that reading the feature list does not: custom CUDA kernels implement fused attention and quantized matmul over EXL2 tensors; quantization allocates bitrate per layer/matrix by optimizing measured KL-divergence against calibration data. Paged attention, LoRA loading, speculative decoding, and Q4/Q6/Q8 quantized KV cache round out the runtime; TabbyAPI provides the OpenAI-compatible serving layer, which is the part you have to evaluate against your own workload.
+- Custom CUDA kernels implement fused attention and quantized matmul over EXL2 tensors; quantization allocates bitrate per layer/matrix by optimizing measured KL-divergence against calibration data. Paged attention, LoRA loading, speculative decoding, and Q4/Q6/Q8 quantized KV cache round out the runtime; TabbyAPI provides the OpenAI-compatible serving layer.
 - Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against â€” which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

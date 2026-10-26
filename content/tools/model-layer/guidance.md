@@ -101,7 +101,7 @@ Follow the official documentation at https://github.com/guidance-ai/guidance for
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for structured-output.
+- Reception centred on the templating grammar — interleaving generation with control flow — which shaped the structured-output features later frameworks added.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

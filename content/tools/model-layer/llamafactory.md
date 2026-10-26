@@ -109,7 +109,7 @@ Follow the official documentation at https://github.com/hiyouga/LlamaFactory for
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is scale-driven: a heavily cited paper and vendor write-ups from SageMaker HyperPod, NVIDIA and Aliyun PAI made it the default recommendation for a team's first fine-tune.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

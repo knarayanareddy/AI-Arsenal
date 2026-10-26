@@ -88,7 +88,6 @@ Upstream: integrates with Infinity, InfiniFlow's own AI-native database, as an a
 
 - Beyond the headline description, RAGFlow's architecture section is the honest source: deployed as a multi-container Docker Compose stack combining Elasticsearch (or the lighter Infinity engine) for document search, MySQL for metadata, MinIO for object storage, and Redis for task queuing, with a Python backend implementing document parsing, chunking, retrieval, and an agent workflow engine, plus an MCP server for agent-driven interaction and a web UI for knowledge-base management.
 - Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

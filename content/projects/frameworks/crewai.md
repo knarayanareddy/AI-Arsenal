@@ -87,7 +87,6 @@ pip install crewai
 
 - Beyond the headline description, CrewAI's architecture section is the honest source: agents are defined with a role, goal, and backstory (shaping their behavior via prompting), then assigned tasks within a Crew that manages turn-taking and delegation. The separate Flows API allows more deterministic, event-driven orchestration when the free-form crew model is too loose for a given workflow.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

@@ -48,7 +48,7 @@ Trafilatura is reached over a documented surface unlike `firecrawl`, `crawl4ai`;
 
 ## Why It's in the Arsenal
 
-The entry exists because Trafilatura is a python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building. Read it beside `firecrawl`, `crawl4ai`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Trafilatura is a python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building.
 
 ## Key Features
 

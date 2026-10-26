@@ -45,7 +45,7 @@ Meta's open-weight safety classifier model family for moderating LLM inputs and 
 
 ## Why It's in the Arsenal
 
-The entry exists because Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs. Read it beside `guardrails-ai`, `nemo-guardrails`, `rebuff`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs.
 
 ## Key Features
 
@@ -101,7 +101,7 @@ Follow the official documentation at https://www.llama.com/docs/model-cards-and-
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for security-and-guardrails.
+- Reception is shaped by provenance: Meta ships a Llama Guard with each Llama generation, so it became the baseline that every other guard model is measured against, including by people who do not run Llama.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

@@ -90,7 +90,6 @@ ollama run llama3
 
 - The implementation detail worth checking before adopting Ollama is specific — wraps llama.cpp's GGUF-based inference engine with a model registry/pull mechanism (similar to Docker images), a local REST API compatible with common client libraries, and a Modelfile system for customizing model behavior — prioritizing developer ergonomics over exposing every low-level inference knob The numbers to gather are tokens per second and queueing behaviour on your own hardware; Ollama is built for one developer at a time, and concurrency changes the answer.
 - Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

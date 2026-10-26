@@ -75,7 +75,6 @@ git clone https://github.com/NVIDIA/Megatron-LM
 ## Strengths
 
 - The implementation detail worth reading before adopting Megatron-LM is specific — model layers are sharded across GPUs (tensor parallelism), layer groups across pipeline stages (pipeline parallelism), and sequence activations across ranks (sequence parallelism), with communication scheduled to overlap compute. Megatron-Core exposes these as composable library primitives that other frameworks embed What to verify is the parallelism plan against your interconnect: tensor parallelism pays on NVLink and stops paying over PCIe, and the 3D split has to match the topology you actually have.
-- Weighing Megatron-LM against `torchtune`, `axolotl` comes down to one question: who runs the process when it breaks — you or the vendor.
 - Pin the client library rather than the API: Megatron-LM is reachable through `pytorch`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure Megatron-LM's latency and its error rate under a degraded upstream before it carries production traffic.
 

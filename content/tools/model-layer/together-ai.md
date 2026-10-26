@@ -46,7 +46,7 @@ One of the leading open-model clouds: serverless per-token inference across 200+
 
 ## Why It's in the Arsenal
 
-Together AI is a inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints. Read it beside `fireworks-ai`, `openrouter`, `replicate`: the choice between them is a deployment and cost decision before it is a capability one.
+Together AI is a inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints.
 
 ## Key Features
 

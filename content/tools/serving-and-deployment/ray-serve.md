@@ -46,7 +46,7 @@ Ray's serving library: define deployments as Python classes, compose them into i
 
 ## Why It's in the Arsenal
 
-The entry exists because Ray Serve is a scalable model-serving library on Ray for composing multi-model inference graphs in pure Python. Read it beside `triton-inference-server`, `bentoml`, `kserve`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Ray Serve is a scalable model-serving library on Ray for composing multi-model inference graphs in pure Python.
 
 ## Key Features
 

@@ -48,7 +48,7 @@ The integration surface is an API rather than a vendored library unlike `modal`,
 
 ## Why It's in the Arsenal
 
-SkyPilot is a run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface. Read it beside `modal`, `runpod`: the choice between them is a deployment and cost decision before it is a capability one.
+SkyPilot is a run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface.
 
 ## Key Features
 

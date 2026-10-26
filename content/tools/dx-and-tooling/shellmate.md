@@ -73,7 +73,7 @@ Its internals are not published. From the description it behaves as a wrapper ar
 
 ## Strengths
 
-- What ShellMate gives you that its headline description does not: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments, which is the part to check against your own pipeline before trusting the feature list.
+- What ShellMate gives you that its headline description does not: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments.
 - No direct sibling is catalogued for ShellMate in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - ShellMate is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so ShellMate's interface may still move; pin the version you build against rather than tracking latest.

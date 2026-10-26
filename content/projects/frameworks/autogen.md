@@ -91,7 +91,6 @@ user.initiate_chat(assistant, message="Draft a 3-step plan.")
 
 - The implementation detail worth checking before adopting AutoGen is specific — agents are modeled as conversational participants that exchange messages in a group-chat-style pattern; a 'conversable agent' abstraction handles message passing, tool invocation, and human-in-the-loop checkpoints, with orchestration driven by conversation flow rather than an explicit graph or state machine The practical consequence is that a conversation is the control flow: replaying a run means replaying messages, and a deterministic graph has to be imposed on top if you need one.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

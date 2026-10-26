@@ -103,7 +103,7 @@ Follow the official documentation at https://docs.wandb.ai/ for the authenticati
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for model-registry, evaluation.
+- Reception is shaped by sweeps: the hyperparameter-search UI is the feature people cite when explaining why they stayed after experiment logging itself became commoditised.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

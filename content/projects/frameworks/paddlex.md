@@ -94,7 +94,6 @@ Install PaddlePaddle and `pip install paddlex`, then call a task pipeline (for e
 ## Strengths
 
 - The implementation detail worth checking before adopting PaddleX is specific — paddleX provides a unified pipeline abstraction: each task pipeline chains preprocessing, one or more PaddlePaddle models, and postprocessing, callable from a single Python API or CLI. It supports fine-tuning pipelines on custom data, model selection within a pipeline, and multiple deployment targets (high-performance inference, serving, and edge via Paddle Inference/Lite), unifying training and deployment across the PaddlePaddle model zoo The check is deployment parity: the pipeline you train and the binary you ship are built by the same toolchain, so a model that works in training and not on the edge is a conversion problem, not a tuning one.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
 - Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations

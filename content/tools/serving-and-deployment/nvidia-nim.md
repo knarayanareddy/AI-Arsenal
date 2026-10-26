@@ -46,7 +46,7 @@ NVIDIA's packaging of optimized inference as microservices: each NIM is a contai
 
 ## Why It's in the Arsenal
 
-The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs. Read it beside `vllm`, `text-generation-inference`, `triton-inference-server`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs.
 
 ## Key Features
 

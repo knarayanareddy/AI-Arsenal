@@ -81,7 +81,6 @@ pip install anyscale
 ## Strengths
 
 - The implementation detail worth reading before adopting Anyscale is specific — you write Ray applications (or use Ray libraries), and Anyscale provisions and autoscales the underlying Ray cluster, schedules the workload across nodes, and exposes dashboards/logs. Serving uses Ray Serve under the hood, so deployments inherit Ray's distributed scheduling. The programming model is Ray's; Anyscale manages the cluster and platform layer around it What to verify is the cost boundary: Ray's programming model is identical on-premise, so the platform earns its place only through managed autoscaling and observability that you would otherwise build.
-- Weighing Anyscale against `ray-serve`, `modal`, `skypilot`, `baseten` comes down to one question: who runs the process when it breaks — you or the vendor.
 - Anyscale documents a client surface through `ray-serve`, which fixes the expected request and response contract so you are not inferring it from examples.
 - What this entry cannot give you is measured behaviour: measure Anyscale's latency and its error rate under a degraded upstream before it carries production traffic.
 

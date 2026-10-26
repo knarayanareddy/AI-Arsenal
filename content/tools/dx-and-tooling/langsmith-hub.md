@@ -47,7 +47,7 @@ Treat LangSmith Hub as a service with a schema, not as code you own unlike `lang
 
 ## Why It's in the Arsenal
 
-The entry exists because LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications. Read it beside `langfuse-prompts`, `promptlayer`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications.
 
 ## Key Features
 
@@ -103,7 +103,7 @@ Follow the official documentation at https://docs.smith.langchain.com/ for the a
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for prompt-management.
+- Reception is tied to LangSmith: teams use the hub because traces already live in the same product, and its public prompt gallery is the main draw for people outside the LangChain stack.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

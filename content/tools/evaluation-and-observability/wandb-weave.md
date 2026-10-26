@@ -74,7 +74,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- What Weights & Biases Weave gives you that its headline description does not: application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards, which is the part to check against your own pipeline before trusting the feature list.
+- What Weights & Biases Weave gives you that its headline description does not: application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards.
 - No direct sibling is catalogued for Weights & Biases Weave in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Weights & Biases Weave is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Weights & Biases Weave's latency and its error rate under a degraded upstream before it carries production traffic.

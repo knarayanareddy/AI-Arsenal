@@ -43,7 +43,7 @@ A hosted platform for running community-published open-source machine learning m
 
 ## Why It's in the Arsenal
 
-Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support. Read it beside `aws-bedrock`, `azure-ai-studio`, `bentoml`: the choice between them is a deployment and cost decision before it is a capability one.
+Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support.
 
 ## Key Features
 

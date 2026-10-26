@@ -100,7 +100,7 @@ Follow the official documentation at https://learn.microsoft.com/en-us/azure/ai-
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment.
+- Reception is entangled with Azure OpenAI: teams arrive for GPT-model access under an enterprise agreement and stay for the evaluation and deployment console built around it.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

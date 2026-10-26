@@ -83,8 +83,6 @@ curl <moonshot-api-endpoint>/v1/chat/completions -H 'Authorization: Bearer $MOON
 ## Strengths
 
 - The implementation detail worth checking before adopting Kimi K2 is specific — a DeepSeek-V3-lineage MoE architecture (384 experts, 8 active plus one shared, MLA attention) at 1T scale; MuonClip's qk-clip mechanism stabilized the Muon optimizer for the full 15.5T-token run with reported zero loss spikes. Post-training combines supervised agentic-trajectory data synthesized across thousands of tools with a joint RL stage using verifiable rewards plus a self-critique rubric reward The practical check is serving economics: a 1T-parameter MoE needs multi-node expert parallelism, so the question is less accuracy than whether your cluster can hold the weights at all.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

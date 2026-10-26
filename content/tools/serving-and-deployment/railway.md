@@ -109,7 +109,7 @@ Follow the official documentation at https://railway.app for the authentication 
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.
+- Reception is developer word-of-mouth rather than benchmark-driven: per-pull-request environments and one-click databases are the two features people name when recommending it.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

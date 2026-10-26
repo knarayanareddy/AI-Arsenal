@@ -46,7 +46,7 @@ A desktop application (macOS/Windows/Linux) that makes local LLMs approachable: 
 
 ## Why It's in the Arsenal
 
-LM Studio is catalogued as a desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server, which is the specific claim the rest of the entry has to support. Read it beside `open-webui`, `jan`, `ollama`: the choice between them is a deployment and cost decision before it is a capability one.
+LM Studio is catalogued as a desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server, which is the specific claim the rest of the entry has to support.
 
 ## Key Features
 
@@ -73,7 +73,6 @@ lms get qwen3-8b && lms server start
 ## Strengths
 
 - Beyond the feature list, LM Studio's own implementation notes give the specifics — bundles llama.cpp and MLX runtimes behind a GUI: models load with configurable quantization and GPU offload, and a local HTTP server mimics the OpenAI API so existing SDKs work by switching the base URL — which is where a capability claim either holds or does not for your workload.
-- Weighing LM Studio against `open-webui`, `jan`, `ollama` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
 - LM Studio is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
 - What this entry does not give you is behaviour under your load: measure LM Studio's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 

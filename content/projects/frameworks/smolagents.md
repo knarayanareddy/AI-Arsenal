@@ -86,8 +86,6 @@ pip install smolagents
 ## Strengths
 
 - Beyond the headline description, Smolagents's architecture section is the honest source: agents reason in a loop and express actions as executable Python code snippets (run in a sandboxed interpreter) rather than JSON function-call payloads, an approach Hugging Face argues reduces the friction and error rate of complex multi-step tool use.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

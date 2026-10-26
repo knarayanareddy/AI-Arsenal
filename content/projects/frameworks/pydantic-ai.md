@@ -85,7 +85,6 @@ pip install pydantic-ai
 ## Strengths
 
 - Beyond the headline description, Pydantic AI's architecture section is the honest source: agents are defined with typed input/output models and tool functions using Pydantic's validation; the framework validates model outputs against declared schemas, using a dependency-injection-style pattern for passing context/state into tools, deliberately lighter-weight than graph-based orchestration frameworks.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
 - Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations

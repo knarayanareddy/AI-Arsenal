@@ -73,7 +73,7 @@ code --install-extension Continue.continue
 
 ## Strengths
 
-- What Continue gives you that its headline description does not: continue routes each mode (autocomplete vs chat vs edit) to independently configured models, assembles context from providers (files, docs, terminal, codebase index), and applies edits as diffs in the editor; a local index powers codebase-wide retrieval, which is the part to check against your own pipeline before trusting the feature list.
+- What Continue gives you that its headline description does not: continue routes each mode (autocomplete vs chat vs edit) to independently configured models, assembles context from providers (files, docs, terminal, codebase index), and applies edits as diffs in the editor; a local index powers codebase-wide retrieval.
 - Continue's honest comparison set is `cline`, `github-copilot`, `tabby-ml`; what separates them is rarely capability, it is what you must operate.
 - Continue is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Continue's latency and its error rate under a degraded upstream before it carries production traffic.

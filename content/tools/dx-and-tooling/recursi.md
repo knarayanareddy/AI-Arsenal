@@ -73,7 +73,7 @@ Its internals are unpublished. From the description it maintains session-level c
 
 ## Strengths
 
-- What Recursi gives you that its headline description does not: its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build, which is the part to check against your own pipeline before trusting the feature list.
+- What Recursi gives you that its headline description does not: its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build.
 - No direct sibling is catalogued for Recursi in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Recursi means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - Marked beta, so Recursi's interface may still move; pin the version you build against rather than tracking latest.

@@ -103,7 +103,7 @@ Follow the official documentation at https://github.com/unslothai/unsloth for th
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is benchmark-led: speed and memory claims are published as reproducible notebooks, and auditable numbers are why it spread faster than most fine-tuning libraries.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

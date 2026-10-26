@@ -83,8 +83,6 @@ curl https://api.z.ai/api/paas/v4/chat/completions -H 'Authorization: Bearer $ZA
 ## Strengths
 
 - Beyond the headline description, GLM-4 / GLM-4.5's architecture section is the honest source: moE transformers with loss-free-balance routing and sigmoid gating, deeper-not-wider layout (more layers, fewer experts than DeepSeek-V3 at similar budgets) which Zhipu reports aids reasoning; QK-Norm stabilizes attention logits and a multi-token-prediction layer enables speculative decoding. Post-training uses expert-model iteration (reasoning, agent, chat experts distilled back) plus RL via the open slime framework.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

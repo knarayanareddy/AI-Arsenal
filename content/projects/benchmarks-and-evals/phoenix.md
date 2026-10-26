@@ -90,8 +90,6 @@ Read Phoenix beside the entries it overlaps in this phase rather than alone: the
 ## Strengths
 
 - Beyond the headline description, Phoenix's architecture section is the honest source: built on OpenTelemetry for tracing instrumentation, with a strong notebook-first UX for exploring traces and evaluation results during development (via the Arize Phoenix Python package), plus a production deployment mode for ongoing monitoring; evaluation combines heuristic and LLM-graded metrics.
-- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

@@ -46,7 +46,7 @@ The library that made sentence embeddings practical: load any of thousands of Hu
 
 ## Why It's in the Arsenal
 
-Sentence Transformers is The standard Python library for computing, training, and fine-tuning text embedding and reranker models. Read it beside `voyage-ai`, `cohere`: the choice between them is a deployment and cost decision before it is a capability one.
+Sentence Transformers is The standard Python library for computing, training, and fine-tuning text embedding and reranker models.
 
 ## Key Features
 

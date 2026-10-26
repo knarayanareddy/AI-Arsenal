@@ -94,8 +94,6 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 ## Strengths
 
 - Beyond the headline description, Command R+'s architecture section is the honest source: command R+ is a dense (non-MoE) decoder-only transformer with a 128K token context window. Its distinguishing design choice versus a generic chat model is post-training specifically shaped around RAG: the model is trained to consume retrieved documents and produce grounded responses with inline citations, and to plan and execute multi-step tool-calling sequences rather than single-shot function calls.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

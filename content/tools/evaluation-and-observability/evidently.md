@@ -46,7 +46,7 @@ A veteran open-source ML-observability framework that expanded into LLM evaluati
 
 ## Why It's in the Arsenal
 
-Evidently is a open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge. Read it beside `deepchecks`, `phoenix`, `ragas-rag-evaluation`: the choice between them is a deployment and cost decision before it is a capability one.
+Evidently is a open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge.
 
 ## Key Features
 

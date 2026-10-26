@@ -46,7 +46,7 @@ A model marketplace/gateway: one OpenAI-compatible API fronts hundreds of models
 
 ## Why It's in the Arsenal
 
-The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing. Read it beside `litellm`, `portkey`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing.
 
 ## Key Features
 

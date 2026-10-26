@@ -112,7 +112,7 @@ Follow the official documentation at https://github.com/axolotl-ai-cloud/axolotl
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is practitioner-driven: configs circulate as starting points for each new open-weight release, and the changelog is read as a status report on which training techniques have reached usable form.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

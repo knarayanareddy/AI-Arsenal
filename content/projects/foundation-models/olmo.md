@@ -84,8 +84,6 @@ tok = AutoTokenizer.from_pretrained('allenai/OLMo-2-1124-7B-Instruct')
 ## Strengths
 
 - The implementation detail worth checking before adopting OLMo is specific — decoder-only transformers with the OLMo 2 generation adopting reordered norm placement, QK-norm for stability, and staged training (long pretraining followed by mid-training on high-quality Dolmino data mixes). The release discipline is the differentiator: every checkpoint ships with its exact data order, enabling counterfactual data-ablation research; Tülu-recipe post-training produces the instruct variants The test is reproducibility against your own data: checkpoints plus published data order mean a training run can be re-derived, which is the property to verify before citing OLMo as an open baseline.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

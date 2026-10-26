@@ -72,7 +72,7 @@ Its internals are not published. From the description it connects to a dataset a
 
 ## Strengths
 
-- In concrete terms, Google Pomelli 2.0 is an explore and interact with large datasets through a visual, intuitive interface — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- In concrete terms, Google Pomelli 2.0 is an explore and interact with large datasets through a visual, intuitive interface.
 - Google Pomelli 2.0 has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
 - Google Pomelli 2.0 is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
 - Maturity here is beta, so treat Google Pomelli 2.0's API surface as something to pin and test rather than something to track.

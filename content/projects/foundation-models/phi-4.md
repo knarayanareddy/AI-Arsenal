@@ -94,8 +94,6 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 ## Strengths
 
 - Beyond the headline description, Phi-4's architecture section is the honest source: a dense decoder-only transformer following the phi-3-medium architecture with modifications: tiktoken tokenizer (100,352 vocabulary) for improved multilingual support, full attention across a 4K context (rather than phi-3-medium's 2K sliding window), later extended to 16K context during a midtraining phase. Trained on approximately 10 trillion tokens with synthetic data constituting the bulk of training data, generated via diverse techniques targeting reasoning-focused tasks, using 1,920 H100 GPUs over 21 days with supervised fine-tuning and direct preference optimization.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
