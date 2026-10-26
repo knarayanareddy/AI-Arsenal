@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-26T14:43:03.389Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-26T15:06:46.211Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -60,7 +60,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 
 ### data-pipelines
-- Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- Marker (⭐40650, score:50) — Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode
 - cleanlab (⭐11682, score:50) — Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions
 - Scrapling (⭐84212, score:39) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
 - ClickHouse (⭐50123, score:38) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
@@ -68,8 +68,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### evaluation
 - OpenCompass (⭐7392, score:52) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
-- MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
-- Terminal-Bench (⭐2606, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+- MTEB (⭐3476, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
+- Terminal-Bench (⭐2610, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐516, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
 

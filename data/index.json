@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-26T14:42:55.195Z",
+    "generated_at": "2026-10-26T15:06:37.907Z",
     "total_projects": 511,
     "total_tools": 249,
     "total_papers": 138,
@@ -12663,7 +12663,7 @@
       "id": "lunary",
       "type": "project",
       "name": "Lunary",
-      "description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
+      "description": "Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC",
       "tags": [
         "observability",
         "tracing",
@@ -12672,10 +12672,10 @@
       ],
       "path": "content/projects/benchmarks-and-evals/lunary.md",
       "url": "content/projects/benchmarks-and-evals/lunary",
-      "last_updated": "2026-07-01",
+      "last_updated": "2026-10-26",
       "category": "observability",
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "paid",
       "status": "active",
       "featured": false
     },
@@ -12832,7 +12832,7 @@
       "id": "marker",
       "type": "project",
       "name": "Marker",
-      "description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
+      "description": "Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode",
       "tags": [
         "data",
         "rag",
@@ -12840,7 +12840,7 @@
       ],
       "path": "content/projects/data-and-retrieval/marker.md",
       "url": "content/projects/data-and-retrieval/marker",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-26",
       "category": "data-pipelines",
       "maturity": "production",
       "cost_model": "open-source",
@@ -16198,7 +16198,7 @@
       "id": "paddleocr",
       "type": "project",
       "name": "PaddleOCR",
-      "description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
+      "description": "Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment",
       "tags": [
         "data",
         "multimodal",
@@ -16206,7 +16206,7 @@
       ],
       "path": "content/projects/data-and-retrieval/paddleocr.md",
       "url": "content/projects/data-and-retrieval/paddleocr",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-26",
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",
@@ -21459,7 +21459,7 @@
       "id": "surya",
       "type": "project",
       "name": "Surya",
-      "description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
+      "description": "650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker",
       "tags": [
         "data",
         "multimodal",
@@ -21467,7 +21467,7 @@
       ],
       "path": "content/projects/data-and-retrieval/surya.md",
       "url": "content/projects/data-and-retrieval/surya",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-10-26",
       "category": "computer-vision",
       "maturity": "production",
       "cost_model": "open-source",

@@ -261,10 +261,10 @@
 | `ltx-2` | [LTX-2](./foundation-models/ltx-2.md) | Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API |
 | `ltx-video` | [LTX-Video](./foundation-models/ltx-video.md) | Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU |
 | `ludwig` | [Ludwig](./frameworks/ludwig.md) | A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code |
-| `lunary` | [Lunary](./benchmarks-and-evals/lunary.md) | Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts |
+| `lunary` | [Lunary](./benchmarks-and-evals/lunary.md) | Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC |
 | `maestro` | [maestro](./training-and-alignment/maestro.md) | Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL |
 | `magenta-realtime` | [Magenta RealTime 2](./foundation-models/magenta-realtime.md) | Google Magenta open-weight model for real-time and offline live-music generation |
-| `marker` | [Marker](./data-and-retrieval/marker.md) | Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts |
+| `marker` | [Marker](./data-and-retrieval/marker.md) | Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode |
 | `mastra` | [Mastra](./frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
 | `maxkb` | [MaxKB](./agent-systems/maxkb.md) | Open-source knowledge-base agent platform with built-in RAG chunking, a workflow engine and MCP tool use in one Docker image |
 | `mcp-servers` | [MCP Reference Servers](./frameworks/mcp-servers.md) | Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents |
@@ -354,7 +354,7 @@
 | `optuna-optuna` | [optuna](./training-and-alignment/optuna-optuna.md) | Define-by-run hyperparameter optimization with pruning, distributed trials, and a study-based API |
 | `orama` | [Orama](./data-and-retrieval/orama.md) | A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server |
 | `oumi` | [Oumi](./training-and-alignment/oumi.md) | An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation |
-| `paddleocr` | [PaddleOCR](./data-and-retrieval/paddleocr.md) | Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge |
+| `paddleocr` | [PaddleOCR](./data-and-retrieval/paddleocr.md) | Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment |
 | `paddlepaddle-paddledetection` | [PaddleDetection](./frameworks/paddlepaddle-paddledetection.md) | PaddlePaddle object-detection toolkit covering detection, instance segmentation, tracking, and pose |
 | `paddlepaddle-paddlenlp` | [PaddleNLP](./frameworks/paddlepaddle-paddlenlp.md) | PaddlePaddle library of pretrained NLP and multimodal models with LLM and SLM training and serving paths |
 | `paddlespeech` | [PaddleSpeech](./frameworks/paddlespeech.md) | An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation |
@@ -453,7 +453,7 @@
 | `superagi` | [SuperAGI](./agent-systems/superagi.md) | Dev-first autonomous agent platform with a GUI, action console, toolkit marketplace and vector-backed memory |
 | `supervision` | [Supervision](./frameworks/supervision.md) | Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools |
 | `surrealdb` | [SurrealDB](./data-and-retrieval/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
-| `surya` | [Surya](./data-and-retrieval/surya.md) | Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker |
+| `surya` | [Surya](./data-and-retrieval/surya.md) | 650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker |
 | `swe-agent-swe-agent` | [SWE-agent](./agent-systems/swe-agent-swe-agent.md) | Agent harness that attempts a real fix for a GitHub issue using a chosen LM inside a shell sandbox |
 | `swe-bench-swe-bench` | [SWE-bench](./benchmarks-and-evals/swe-bench-swe-bench.md) | Real GitHub issues paired with hidden fail-to-pass and pass-to-pass test suites, and the harness that turns a patch into a resolution rate |
 | `symphony` | [Symphony](./agent-systems/symphony.md) | OpenAI engineering preview that monitors a work tracker and spawns isolated agent runs that deliver pull requests with proof of work |

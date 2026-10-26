@@ -714,7 +714,7 @@
 - [LTX-2](./projects/foundation-models/ltx-2.md) — Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 - [LTX-Video](./projects/foundation-models/ltx-video.md) — Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
 - [Ludwig](./projects/frameworks/ludwig.md) — A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code
-- [Lunary](./projects/benchmarks-and-evals/lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
+- [Lunary](./projects/benchmarks-and-evals/lunary.md) — Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC
 - [Self-Refine: Iterative Refinement with Self-Feedback](./research/agents-and-reasoning/madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
 - [maestro](./projects/training-and-alignment/maestro.md) — Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL
 - [Magenta RealTime 2](./projects/foundation-models/magenta-realtime.md) — Google Magenta open-weight model for real-time and offline live-music generation
@@ -723,7 +723,7 @@
 - [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](./research/retrieval-and-memory/malkov-2016-hnsw.md) — Introduced the HNSW graph index for approximate nearest-neighbor search — the algorithm powering most production vector databases and the retrieval step of essentially every RAG system
 - [Manus](./tools/orchestration/manus.md) — AI-powered platform for building full-stack web applications and automating tasks
 - [marimo](./tools/dx-and-tooling/marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
-- [Marker](./projects/data-and-retrieval/marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- [Marker](./projects/data-and-retrieval/marker.md) — Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode
 - [MarkItDown](./tools/data-ingestion/markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 - [Marqo](./tools/data-ingestion/marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [Mask Prompt Tokens So Loss Trains Only on the Completion](./tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss.md) — 
@@ -899,7 +899,7 @@
 - [Outlines](./tools/model-layer/outlines.md) — A library for constrained generation and structured outputs with LLMs
 - [Training Language Models to Follow Instructions with Human Feedback](./research/training-and-alignment/ouyang-2022-instructgpt.md) — Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly
 - [MemGPT: Towards LLMs as Operating Systems](./research/retrieval-and-memory/packer-2023-memgpt.md) — Framed context-window management as an OS problem: the LLM manages its own memory hierarchy via self-editing function calls, paging information between in-context 'main memory' and external storage — the founding pattern of agent memory systems
-- [PaddleOCR](./projects/data-and-retrieval/paddleocr.md) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- [PaddleOCR](./projects/data-and-retrieval/paddleocr.md) — Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment
 - [PaddleDetection](./projects/frameworks/paddlepaddle-paddledetection.md) — PaddlePaddle object-detection toolkit covering detection, instance segmentation, tracking, and pose
 - [PaddleNLP](./projects/frameworks/paddlepaddle-paddlenlp.md) — PaddlePaddle library of pretrained NLP and multimodal models with LLM and SLM training and serving paths
 - [PaddleSpeech](./projects/frameworks/paddlespeech.md) — An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation
@@ -1176,7 +1176,7 @@
 - [Superpowers](./tools/dx-and-tooling/superpowers.md) — Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents
 - [Supervision](./projects/frameworks/supervision.md) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - [SurrealDB](./projects/data-and-retrieval/surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
-- [Surya](./projects/data-and-retrieval/surya.md) — Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker
+- [Surya](./projects/data-and-retrieval/surya.md) — 650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker
 - [Sequence to Sequence Learning with Neural Networks](./research/foundational/sutskever-2014-seq2seq.md) — Framed generation as mapping an input sequence to an output sequence with an encoder-decoder RNN, establishing the seq2seq paradigm that every generative LLM (as prompt-in, text-out) still instantiates
 - [SWE-agent](./projects/agent-systems/swe-agent-swe-agent.md) — Agent harness that attempts a real fix for a GitHub issue using a chosen LM inside a shell sandbox
 - [SWE-bench](./benchmarks/code/swe-bench.md) — 

@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 304
+    "count": 286
   },
   "entries": [
     {
@@ -17,42 +17,6 @@
     {
       "fingerprint": "content/projects/benchmarks-and-evals/bigcodebench.md::rejected-boilerplate::58a9d88530a4699e",
       "file": "content/projects/benchmarks-and-evals/bigcodebench.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/lunary.md::rejected-boilerplate::2575611e2a567692",
-      "file": "content/projects/benchmarks-and-evals/lunary.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/lunary.md::rejected-boilerplate::29a935b74621cfb2",
-      "file": "content/projects/benchmarks-and-evals/lunary.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rests on its documentation and observed adoption rather than on a controlled comparison here/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/lunary.md::rejected-boilerplate::68316ea3e213d3f6",
-      "file": "content/projects/benchmarks-and-evals/lunary.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/mteb.md::rejected-boilerplate::4650f5ce410e51d9",
-      "file": "content/projects/benchmarks-and-evals/mteb.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/mteb.md::rejected-boilerplate::b46568e9bcd02321",
-      "file": "content/projects/benchmarks-and-evals/mteb.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/mteb.md::rejected-boilerplate::e91e5fc528478072",
-      "file": "content/projects/benchmarks-and-evals/mteb.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
@@ -87,24 +51,6 @@
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
     },
     {
-      "fingerprint": "content/projects/benchmarks-and-evals/terminal-bench.md::rejected-boilerplate::18fb48ed38d6779e",
-      "file": "content/projects/benchmarks-and-evals/terminal-bench.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /rather than against projects in adjacent phases/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/terminal-bench.md::rejected-boilerplate::944ce15cc478908b",
-      "file": "content/projects/benchmarks-and-evals/terminal-bench.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/terminal-bench.md::rejected-boilerplate::a438b439cadd929c",
-      "file": "content/projects/benchmarks-and-evals/terminal-bench.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
       "fingerprint": "content/projects/data-and-retrieval/easyocr.md::rejected-boilerplate::871e436f8f5927b9",
       "file": "content/projects/data-and-retrieval/easyocr.md",
       "rule": "rejected-boilerplate",
@@ -115,42 +61,6 @@
       "file": "content/projects/data-and-retrieval/lightrag.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the engineering question with .{#,#} is not whether it works but what it commits you to/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/marker.md::rejected-boilerplate::0cd89c0adc02b965",
-      "file": "content/projects/data-and-retrieval/marker.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/marker.md::rejected-boilerplate::16df409f522a7711",
-      "file": "content/projects/data-and-retrieval/marker.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/marker.md::rejected-boilerplate::adc0b3dcdcc24bd1",
-      "file": "content/projects/data-and-retrieval/marker.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/paddleocr.md::rejected-boilerplate::3245bd3f5c372d17",
-      "file": "content/projects/data-and-retrieval/paddleocr.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/paddleocr.md::rejected-boilerplate::3248bf64376782fe",
-      "file": "content/projects/data-and-retrieval/paddleocr.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/paddleocr.md::rejected-boilerplate::8293c32dc39e75b3",
-      "file": "content/projects/data-and-retrieval/paddleocr.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
     },
     {
       "fingerprint": "content/projects/data-and-retrieval/pgvector.md::rejected-boilerplate::565d7d5aac1ce35a",
@@ -175,24 +85,6 @@
       "file": "content/projects/data-and-retrieval/surrealdb.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/surya.md::rejected-boilerplate::1c4cac1bd1792702",
-      "file": "content/projects/data-and-retrieval/surya.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part you have to evaluate against your own workload/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/surya.md::rejected-boilerplate::56cdba850ea08780",
-      "file": "content/projects/data-and-retrieval/surya.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /maturity is recorded as (?:production|beta|experimental), so the interface is treated as stable enough/i"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/surya.md::rejected-boilerplate::6858e927562721ea",
-      "file": "content/projects/data-and-retrieval/surya.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /that reading the feature list does not/i"
     },
     {
       "fingerprint": "content/projects/data-and-retrieval/unstructured.md::rejected-boilerplate::402d20fa681634ed",

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-26T14:43:01.166Z",
+  "generated_at": "2026-10-26T15:06:43.953Z",
   "config": {
     "document": {
       "id": "id",
@@ -193,9 +193,9 @@
     "cost_model": {
       "open-source": 609,
       "self-hostable": 24,
-      "freemium": 81,
+      "freemium": 80,
       "usage-based": 34,
-      "paid": 12
+      "paid": 13
     },
     "status": {
       "active": 912,
@@ -32919,7 +32919,7 @@
       "type": "project",
       "name": "Lunary",
       "title": "Lunary",
-      "description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
+      "description": "Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC",
       "tags": [
         "observability",
         "tracing",
@@ -32929,7 +32929,7 @@
       "category": "observability",
       "subcategory": "tracing",
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "paid",
       "status": "active",
       "phase": "benchmark-and-eval",
       "audience": null,
@@ -32937,8 +32937,8 @@
         "language"
       ],
       "relation_to_stack": [
-        "deploy-as-is",
-        "build-on-top"
+        "build-on-top",
+        "deploy-as-is"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -32963,8 +32963,8 @@
       "url": "content/projects/benchmarks-and-evals/lunary",
       "boost_title": "Lunary",
       "boost_tags": "observability tracing rag cloud",
-      "boost_description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
-      "body": "Lunary Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts observability tracing rag cloud observability tracing Overview An open source LLM observability platform offering tracing, analytics, and prompt management, occupying a similar niche to Langfuse and Helicone with a smaller public/community footprint. Why it's in the Arsenal The case for Lunary rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Provides SDK based instrumentation for capturing traces and analytics from LLM applications, plus prompt management features, following the general pattern of t…"
+      "boost_description": "Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC",
+      "body": "Lunary Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC observability tracing rag cloud observability tracing Overview Lunary is a commercial observability platform for conversational AI products, and its centre of gravity is different from the tracing first platforms it competes with. The screens are chat replays, user satisfaction, topic classification and cost analytics; agent tracing and prompt templates sit alongside them rather than defining the product. Integration is a monitoring wrapper: lunary.monitor(client) around an OpenAI style client captures requests without restructuring application code, and the SDK family spans Python and JavaScript with connectors for the major providers and frame…"
     },
     {
       "id": "madaan-2023-self-refine",
@@ -33350,7 +33350,7 @@
       "type": "project",
       "name": "Marker",
       "title": "Marker",
-      "description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
+      "description": "Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode",
       "tags": [
         "data",
         "rag",
@@ -33394,8 +33394,8 @@
       "url": "content/projects/data-and-retrieval/marker",
       "boost_title": "Marker",
       "boost_tags": "data rag llm",
-      "boost_description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
-      "body": "Marker Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts data rag llm data-pipelines document-processing Overview A document conversion tool that turns PDFs, images, EPUBs, and office documents into clean Markdown, JSON, or HTML using a pipeline of purpose trained deep learning models: layout detection, OCR, reading order resolution, table structure recovery, and LaTeX equation conversion. An optional use llm mode merges model output with LLM passes for the hardest structures (complex merged cell tables, inline math). Why it's in the Arsenal Marker appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to it that its own test d…"
+      "boost_description": "Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode",
+      "body": "Marker Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode data rag llm data-pipelines document-processing Overview A document conversion tool that turns PDFs, images, EPUBs, and office documents into clean Markdown, JSON, or HTML using a pipeline of purpose trained deep learning models: layout detection, OCR, reading order resolution, table structure recovery, and LaTeX equation conversion. An optional use llm mode merges model output with LLM passes for the hardest structures (complex merged cell tables, inline math). Why it's in the Arsenal Marker appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to it that its own test d…"
     },
     {
       "id": "markitdown",
@@ -42089,7 +42089,7 @@
       "type": "project",
       "name": "PaddleOCR",
       "title": "PaddleOCR",
-      "description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
+      "description": "Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment",
       "tags": [
         "data",
         "multimodal",
@@ -42133,8 +42133,8 @@
       "url": "content/projects/data-and-retrieval/paddleocr",
       "boost_title": "PaddleOCR",
       "boost_tags": "data multimodal llm",
-      "boost_description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
-      "body": "PaddleOCR Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge data multimodal llm computer-vision document-processing Overview Baidu's open source OCR and document AI toolkit built on the PaddlePaddle framework: the PP OCR series provides detection+recognition models spanning ultra lightweight (edge/mobile) to server grade accuracy across 80+ languages, while PP StructureV3 and PP ChatOCR pipelines handle layout analysis, table extraction, and key information extraction for document understanding. Widely deployed in industrial OCR at Chinese scale. Why it's in the Arsenal PaddleOCR appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to i…"
+      "boost_description": "Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment",
+      "body": "PaddleOCR Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment data multimodal llm computer-vision document-processing Overview Baidu's open OCR and document parsing toolkit, built on PaddlePaddle. Two product lines share one repository: the PP OCR series, a detector plus recogniser pipeline that has been the default industrial OCR for years and now ships in 1.5M / 7.7M / 34.5M parameter tiers, and the PaddleOCR VL series, a 0.9B vision language model aimed at page level parsing into Markdown and JSON. PP StructureV3 sits between them, chaining layout detection, table recognition and text extraction while keeping coordinates down to the table cell. Why it's in the Arsenal This is the entry that answers \"how c…"
     },
     {
       "id": "paddlepaddle-paddledetection",
@@ -55513,7 +55513,7 @@
       "type": "project",
       "name": "Surya",
       "title": "Surya",
-      "description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
+      "description": "650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker",
       "tags": [
         "data",
         "multimodal",
@@ -55556,8 +55556,8 @@
       "url": "content/projects/data-and-retrieval/surya",
       "boost_title": "Surya",
       "boost_tags": "data multimodal llm",
-      "boost_description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
-      "body": "Surya Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker data multimodal llm computer-vision document-processing Overview An open source OCR toolkit providing the model layer for modern document AI: text detection, text recognition across 90+ languages, layout analysis (tables, images, headers), reading order detection, table structure recognition, and LaTeX OCR. Built by Datalab as the foundation for Marker, but designed for standalone use in custom document processing pipelines. Why it's in the Arsenal Surya is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it…"
+      "boost_description": "650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker",
+      "body": "Surya 650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker data multimodal llm computer-vision document-processing Overview An OCR stack built around a single 650M parameter vision language model that reads a page, labels its regions, orders them and returns each block as HTML. Layout analysis, reading order and table structure come from the same model; text line detection and OCR error detection remain separate, smaller models. Datalab uses it as the engine inside Marker, and ships it for direct use when you want the blocks rather than a finished Markdown document. Why it's in the Arsenal Surya matters for a different reason than the converter entries: it is the layer you reach for when the output of a c…"
     },
     {
       "id": "sutskever-2014-seq2seq",
