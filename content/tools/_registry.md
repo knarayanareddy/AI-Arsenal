@@ -31,7 +31,7 @@
 | `awesome-aitools` | [Awesome-AITools](./dx-and-tooling/awesome-aitools.md) | Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems |
 | `awesome-opensource-ai` | [awesome-opensource-ai](./dx-and-tooling/awesome-opensource-ai.md) | Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling |
 | `aws-bedrock` | [AWS Bedrock](./serving-and-deployment/aws-bedrock.md) | AWS managed service for accessing foundation models and building generative AI apps |
-| `axolotl` | [Axolotl](./model-layer/axolotl.md) | Configuration-driven fine-tuning framework for many open-weight LLM families |
+| `axolotl` | [Axolotl](./model-layer/axolotl.md) | YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export |
 | `axonhub` | [AxonHub](./serving-and-deployment/axonhub.md) | Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key |
 | `azure-ai-studio` | [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) | Microsoft Azure platform for building, evaluating, and deploying AI applications |
 | `baml` | [BAML](./dx-and-tooling/baml.md) | DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output |
@@ -64,7 +64,7 @@
 | `dagster` | [Dagster](./orchestration/dagster.md) | Asset-oriented Python orchestrator where data assets are typed functions with parameter-derived lineage |
 | `db-gpt` | [DB-GPT](./orchestration/db-gpt.md) | Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving |
 | `deepchecks` | [Deepchecks](./evaluation-and-observability/deepchecks.md) | Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality |
-| `deepspeed` | [DeepSpeed](./model-layer/deepspeed.md) | Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory |
+| `deepspeed` | [DeepSpeed](./model-layer/deepspeed.md) | Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks |
 | `dlt` | [dlt](./data-ingestion/dlt.md) | Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference |
 | `docetl` | [DocETL](./data-ingestion/docetl.md) | Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema |
 | `docsgpt` | [DocsGPT](./orchestration/docsgpt.md) | Self-hostable RAG platform with ingestion workers, an agent builder and a ready-made chat UI |
@@ -131,7 +131,7 @@
 | `letta` | [Letta](./orchestration/letta.md) | Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK |
 | `liger-kernel` | [Liger Kernel](./model-layer/liger-kernel.md) | Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements |
 | `litellm` | [LiteLLM](./serving-and-deployment/litellm.md) | A proxy and SDK for routing requests across many LLM providers |
-| `llamafactory` | [LLaMA-Factory](./model-layer/llamafactory.md) | Unified fine-tuning framework and UI for many LLMs and training methods |
+| `llamafactory` | [LLaMA-Factory](./model-layer/llamafactory.md) | No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment |
 | `llamaguard` | [Llama Guard](./evaluation-and-observability/llamaguard.md) | Meta safety model family for classifying and moderating LLM inputs and outputs |
 | `llm-guard` | [LLM Guard](./evaluation-and-observability/llm-guard.md) | Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more |
 | `llmfit` | [llmfit](./model-layer/llmfit.md) | Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use |
@@ -142,7 +142,7 @@
 | `lorax` | [LoRAX](./serving-and-deployment/lorax.md) | Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU |
 | `manus` | [Manus](./orchestration/manus.md) | AI-powered platform for building full-stack web applications and automating tasks |
 | `marimo` | [marimo](./dx-and-tooling/marimo.md) | Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps |
-| `markitdown` | [MarkItDown](./data-ingestion/markitdown.md) | Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown |
+| `markitdown` | [MarkItDown](./data-ingestion/markitdown.md) | Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second |
 | `marqo` | [Marqo](./data-ingestion/marqo.md) | Deprecated open-source ecommerce search engine; the product now lives at marqo.ai |
 | `mcp-context-forge` | [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md) | IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance |
 | `megatron-lm` | [Megatron-LM](./model-layer/megatron-lm.md) | NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism |
@@ -193,7 +193,7 @@
 | `pytorch-lightning` | [PyTorch Lightning](./model-layer/pytorch-lightning.md) | The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing |
 | `qursor` | [Qursor](./dx-and-tooling/qursor.md) | AI-powered UI context for faster front-end development with agents |
 | `qwen-3` | [Qwen 3](./model-layer/qwen-3.md) | Alibaba open-weight model family with multimodal and coding variants |
-| `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines |
+| `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks |
 | `ragatouille` | [RAGatouille](./data-ingestion/ragatouille.md) | Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines |
 | `railway` | [Railway](./serving-and-deployment/railway.md) | Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes |
 | `ramalama` | [RamaLama](./serving-and-deployment/ramalama.md) | Containers-native CLI for pulling, isolating, and serving AI models on local systems |

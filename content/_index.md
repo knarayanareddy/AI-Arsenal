@@ -159,7 +159,7 @@
 - [awesome-japanese-llm](./projects/foundation-models/awesome-japanese-llm.md) — Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns
 - [awesome-opensource-ai](./tools/dx-and-tooling/awesome-opensource-ai.md) — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
-- [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [Axolotl](./tools/model-layer/axolotl.md) — YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
 - [AxonHub](./tools/serving-and-deployment/axonhub.md) — Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
@@ -338,7 +338,7 @@
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
 - [DeepSeek-VL](./projects/foundation-models/deepseek-vl.md) — DeepSeek's open vision-language model family for real-world multimodal understanding, combining a hybrid vision encoder with an LLM for document, chart
 - [DeepSpec](./projects/training-and-alignment/deepspec.md) — DeepSeek's full-stack codebase for preparing data, training draft models, and evaluating speculative-decoding acceptance rates
-- [DeepSpeed](./tools/model-layer/deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- [DeepSpeed](./tools/model-layer/deepspeed.md) — Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks
 - [DeerFlow](./projects/frameworks/deer-flow.md) — Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports
 - [spleeter](./projects/foundation-models/deezer-spleeter.md) — MIT-licensed TensorFlow library with pretrained models that split a music mix into vocals, drums, bass, and accompaniment
 - [Define Explicit Fallbacks for Tool Failures](./tips-and-tricks/agents-and-orchestration/define-fallbacks-for-tool-failures.md) — 
@@ -674,7 +674,7 @@
 - [LiveKit Agents](./projects/frameworks/livekit-agents.md) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
 - [Llama 3.x](./projects/foundation-models/llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server
-- [LLaMA-Factory](./tools/model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [LLaMA-Factory](./tools/model-layer/llamafactory.md) — No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment
 - [Llamafile](./projects/inference-engines/llamafile.md) — Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD
 - [Llama Guard](./tools/evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
 - [LlamaIndex](./projects/frameworks/llamaindex.md) — Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents
@@ -724,7 +724,7 @@
 - [Manus](./tools/orchestration/manus.md) — AI-powered platform for building full-stack web applications and automating tasks
 - [marimo](./tools/dx-and-tooling/marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
 - [Marker](./projects/data-and-retrieval/marker.md) — Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode
-- [MarkItDown](./tools/data-ingestion/markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
+- [MarkItDown](./tools/data-ingestion/markitdown.md) — Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second
 - [Marqo](./tools/data-ingestion/marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [Mask Prompt Tokens So Loss Trains Only on the Completion](./tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss.md) — 
 - [Mastra](./projects/frameworks/mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
@@ -996,7 +996,7 @@
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](./research/foundational/raffel-2019-t5.md) — The T5 paper: cast every NLP task as text-to-text, ran the field's most systematic ablation of transfer-learning choices (objectives, architectures, data, scale), and released C4 — the dataset that seeded a generation of pretraining corpora
 - [Tune Chunk Overlap Only After Chunk Size Is Set](./tips-and-tricks/rag-and-retrieval/rag-chunk-overlap-tuning.md) — 
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./architectures/system-design/rag-vs-fine-tuning.md) — 
-- [Ragas](./tools/evaluation-and-observability/ragas.md) — Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines
+- [Ragas](./tools/evaluation-and-observability/ragas.md) — Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks
 - [Ragas for RAG Evaluation](./projects/benchmarks-and-evals/ragas-rag-evaluation.md) — Evaluation framework for measuring retrieval-augmented generation quality and regressions
 - [RAGatouille](./tools/data-ingestion/ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [RAGFlow](./projects/data-and-retrieval/ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities

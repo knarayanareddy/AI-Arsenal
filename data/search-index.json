@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-26T15:10:20.171Z",
+  "generated_at": "2026-10-26T15:16:17.815Z",
   "config": {
     "document": {
       "id": "id",
@@ -5808,7 +5808,7 @@
       "type": "tool",
       "name": "Axolotl",
       "title": "Axolotl",
-      "description": "Configuration-driven fine-tuning framework for many open-weight LLM families",
+      "description": "YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export",
       "tags": [
         "fine-tuning",
         "llm",
@@ -5849,8 +5849,8 @@
       "url": "content/tools/model-layer/axolotl",
       "boost_title": "Axolotl",
       "boost_tags": "fine-tuning llm pytorch",
-      "boost_description": "Configuration-driven fine-tuning framework for many open-weight LLM families",
-      "body": "Axolotl Configuration-driven fine-tuning framework for many open-weight LLM families fine-tuning llm pytorch TL;DR: the fine tuning entry for Axolotl. Configuration driven fine tuning framework for many open weight LLM families — the deciding factor is operational cost and what you have to run, not the feature list. Overview An open source, configuration driven fine tuning framework that lets you fine tune a wide range of open weight LLMs by editing a YAML file rather than writing custom training code. Axolotl is reached over a documented surface unlike llamafactory, mlx lm; on the fine tuning path; under a open source cost model; with axolotl, name, type, which means the things to measure are end t…"
+      "boost_description": "YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export",
+      "body": "Axolotl YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export fine-tuning llm pytorch TL;DR: the reference for configuration driven fine tuning. One YAML covers LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, tracks new open weight releases within weeks, and exports GGUF — assuming someone on the team owns the CUDA stack. Overview An open source, configuration driven fine tuning framework that lets you fine tune a wide range of open weight LLMs by editing a YAML file rather than writing custom training code. Axolotl is reached over a documented surface unlike llamafactory, mlx lm; on the fine tuning path; under a open source cost model; with axolotl, name, type, which mean…"
     },
     {
       "id": "axonhub",
@@ -14490,7 +14490,7 @@
       "type": "tool",
       "name": "DeepSpeed",
       "title": "DeepSpeed",
-      "description": "Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory",
+      "description": "Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks",
       "tags": [
         "training",
         "fine-tuning",
@@ -14532,8 +14532,8 @@
       "url": "content/tools/model-layer/deepspeed",
       "boost_title": "DeepSpeed",
       "boost_tags": "training fine-tuning efficiency pytorch",
-      "boost_description": "Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory",
-      "body": "DeepSpeed Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory training fine-tuning efficiency pytorch Overview Microsoft's training optimization library, best known for ZeRO: partitioning optimizer states, gradients, and parameters across data parallel workers (stages 1 3) with optional CPU/NVMe offload, enabling models that would otherwise not fit — exposed as a JSON config consumed by most fine tuning frameworks. Why It's in the Arsenal DeepSpeed is catalogued as a microsoft's distributed training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single GPU memory, which is the specific claim the rest of the entry has to support. Read it beside axolotl: the ch…"
+      "boost_description": "Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks",
+      "body": "DeepSpeed Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks training fine-tuning efficiency pytorch Overview Microsoft's training optimization library, best known for ZeRO: partitioning optimizer states, gradients, and parameters across data parallel workers (stages 1 3) with optional CPU/NVMe offload, enabling models that would otherwise not fit — exposed as a JSON config consumed by most fine tuning frameworks. Why It's in the Arsenal Every memory error in distributed training resolves to the same question: which copy of the model state is on which device, and DeepSpeed is where most of those answers are implemented. It is catalogued because the ZeRO/offload trade off it encodes is the di…"
     },
     {
       "id": "deer-flow",
@@ -30955,7 +30955,7 @@
       "type": "tool",
       "name": "LLaMA-Factory",
       "title": "LLaMA-Factory",
-      "description": "Unified fine-tuning framework and UI for many LLMs and training methods",
+      "description": "No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment",
       "tags": [
         "fine-tuning",
         "llm",
@@ -30996,8 +30996,8 @@
       "url": "content/tools/model-layer/llamafactory",
       "boost_title": "LLaMA-Factory",
       "boost_tags": "fine-tuning llm pytorch",
-      "boost_description": "Unified fine-tuning framework and UI for many LLMs and training methods",
-      "body": "LLaMA-Factory Unified fine-tuning framework and UI for many LLMs and training methods fine-tuning llm pytorch TL;DR: the fine tuning entry for LLaMA Factory. Unified fine tuning framework and UI for many LLMs and training methods — the deciding factor is operational cost and what you have to run, not the feature list. Overview A unified fine tuning framework with both a web UI and CLI, supporting a very broad set of open models and training methods so teams can experiment without building custom training scripts. Why It's in the Arsenal The entry exists because LLaMA Factory is a unified fine tuning framework and UI for many LLMs and training methods. Read it beside axolotl, mlx lm, peft: the choice…"
+      "boost_description": "No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment",
+      "body": "LLaMA-Factory No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment fine-tuning llm pytorch TL;DR: the fastest path from a dataset to a fine tuned checkpoint. A Gradio UI and one CLI cover SFT, DPO and PPO over 100+ model templates, with merge and export built in; the UI is for exploration, not for production runs. Overview A unified fine tuning framework with both a web UI and CLI, supporting a very broad set of open models and training methods so teams can experiment without building custom training scripts. Why It's in the Arsenal The barrier to a first fine tune is rarely the maths; it is the day spent wiring a trainer, a dataset format and an export path. LLaMA Factory is in th…"
     },
     {
       "id": "llamafile",
@@ -33402,7 +33402,7 @@
       "type": "tool",
       "name": "MarkItDown",
       "title": "MarkItDown",
-      "description": "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown",
+      "description": "Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second",
       "tags": [
         "data",
         "rag",
@@ -33443,8 +33443,8 @@
       "url": "content/tools/data-ingestion/markitdown",
       "boost_title": "MarkItDown",
       "boost_tags": "data rag llm",
-      "boost_description": "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown",
-      "body": "MarkItDown Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown data rag llm Overview A lightweight Microsoft utility that became a standard preprocessing tool: convert files (PDF, Word, Excel, PowerPoint, images with EXIF/OCR, audio with transcription, HTML, CSV, ZIP...) to clean Markdown, on the thesis that Markdown is the most token efficient, LLM native document representation. Why It's in the Arsenal The entry exists because MarkItDown is a microsoft's utility for converting Office files, PDFs, images, and audio into LLM friendly Markdown. Read it beside docling, unstructured, llamaparse: the choice between them is a deployment and cost decision before it is a ca…"
+      "boost_description": "Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second",
+      "body": "MarkItDown Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second data rag llm Overview A lightweight Microsoft utility that became a standard preprocessing tool: convert files (PDF, Word, Excel, PowerPoint, images with EXIF/OCR, audio with transcription, HTML, CSV, ZIP...) to clean Markdown, on the thesis that Markdown is the most token efficient, LLM native document representation. Why It's in the Arsenal Most ingestion work is not a layout problem; it is a breadth problem. A corpus is 60% Word files, some PowerPoint, a few spreadsheets, a handful of scans and one audio recording, and MarkItDown is the shortest path from that pile to Markdown. It also documents its ow…"
     },
     {
       "id": "marqo",
@@ -46851,7 +46851,7 @@
       "type": "tool",
       "name": "Ragas",
       "title": "Ragas",
-      "description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
+      "description": "Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks",
       "tags": [
         "evaluation",
         "rag",
@@ -46892,8 +46892,8 @@
       "url": "content/tools/evaluation-and-observability/ragas",
       "boost_title": "Ragas",
       "boost_tags": "evaluation rag llm",
-      "boost_description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
-      "body": "Ragas Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines evaluation rag llm TL;DR: the evaluation entry for Ragas. Open source evaluation framework for LLM applications with reference free metrics for RAG pipelines — the deciding factor is operational cost and what you have to run, not the feature list. Overview Ragas is an open source framework for evaluating LLM applications, best known for its RAG metric suite: faithfulness (is the answer grounded in retrieved context), answer relevancy, context precision, and context recall — computed reference free by an LLM judge. It also generates synthetic evaluation datasets from a document corpus, addressing the cold start…"
+      "boost_description": "Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks",
+      "body": "Ragas Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks evaluation rag llm TL;DR: the default offline eval harness for RAG. Reference free metrics (faithfulness, context precision and recall) plus synthetic test set generation, at the cost of an LLM judge on every run — check repository activity before standardising, since releases slowed in 2026. Overview Ragas is an open source framework for evaluating LLM applications, best known for its RAG metric suite: faithfulness (is the answer grounded in retrieved context), answer relevancy, context precision, and context recall — computed reference free by an LLM judge. It also generates synthetic evaluation datasets from…"
     },
     {
       "id": "ragas-rag-evaluation",

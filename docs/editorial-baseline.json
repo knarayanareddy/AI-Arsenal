@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 270
+    "count": 257
   },
   "entries": [
     {
@@ -609,24 +609,6 @@
       "finding": "contains rejected boilerplate: /either survives contact with your data or does not/i"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/markitdown.md::rejected-boilerplate::65fd7e54b93513ed",
-      "file": "content/tools/data-ingestion/markitdown.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/markitdown.md::rejected-boilerplate::8a90c047e6719efe",
-      "file": "content/tools/data-ingestion/markitdown.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/markitdown.md::rejected-boilerplate::a1634241e91f1eb4",
-      "file": "content/tools/data-ingestion/markitdown.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/meilisearch.md::rejected-boilerplate::415e965749297897",
       "file": "content/tools/data-ingestion/meilisearch.md",
       "rule": "rejected-boilerplate",
@@ -1077,24 +1059,6 @@
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/ragas.md::rejected-boilerplate::99f11f77b7855398",
-      "file": "content/tools/evaluation-and-observability/ragas.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/ragas.md::rejected-boilerplate::e4cd46ec76df64b3",
-      "file": "content/tools/evaluation-and-observability/ragas.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/ragas.md::rejected-boilerplate::fa732d675bc06185",
-      "file": "content/tools/evaluation-and-observability/ragas.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/rebuff.md::rejected-boilerplate::c2b671cea29e4433",
       "file": "content/tools/evaluation-and-observability/rebuff.md",
       "rule": "rejected-boilerplate",
@@ -1137,18 +1101,6 @@
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
     },
     {
-      "fingerprint": "content/tools/model-layer/axolotl.md::rejected-boilerplate::40dcc67e3e343efb",
-      "file": "content/tools/model-layer/axolotl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/axolotl.md::rejected-boilerplate::c7904c088171bb44",
-      "file": "content/tools/model-layer/axolotl.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /comes down to one question: who runs the process when it breaks/i"
-    },
-    {
       "fingerprint": "content/tools/model-layer/axolotl.md::rejected-boilerplate::d033d2efa2021bd7",
       "file": "content/tools/model-layer/axolotl.md",
       "rule": "rejected-boilerplate",
@@ -1157,24 +1109,6 @@
     {
       "fingerprint": "content/tools/model-layer/cerebras-inference.md::rejected-boilerplate::9f8312146d44933b",
       "file": "content/tools/model-layer/cerebras-inference.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/deepspeed.md::rejected-boilerplate::17943b939cdec3a5",
-      "file": "content/tools/model-layer/deepspeed.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/deepspeed.md::rejected-boilerplate::6b3f8ed8736b997e",
-      "file": "content/tools/model-layer/deepspeed.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /which is the specific claim the rest of the entry has to support/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/deepspeed.md::rejected-boilerplate::e9f5724d86b7f7f2",
-      "file": "content/tools/model-layer/deepspeed.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
     },
@@ -1209,22 +1143,10 @@
       "finding": "contains rejected boilerplate: /which is the part to check against your own pipeline before trusting the feature list/i"
     },
     {
-      "fingerprint": "content/tools/model-layer/llamafactory.md::rejected-boilerplate::26d5176c5e29387d",
-      "file": "content/tools/model-layer/llamafactory.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the choice between them is a deployment and cost decision before it is a capability one/i"
-    },
-    {
       "fingerprint": "content/tools/model-layer/llamafactory.md::rejected-boilerplate::9c9ed3d6b956861d",
       "file": "content/tools/model-layer/llamafactory.md",
       "rule": "rejected-boilerplate",
       "finding": "contains rejected boilerplate: /included because this tool appears in current ai engineering tool comparisons/i"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/llamafactory.md::rejected-boilerplate::d8a80a541e73aff0",
-      "file": "content/tools/model-layer/llamafactory.md",
-      "rule": "rejected-boilerplate",
-      "finding": "contains rejected boilerplate: /the deciding factor is operational cost and what you have to run, not the feature list/i"
     },
     {
       "fingerprint": "content/tools/model-layer/lm-format-enforcer.md::rejected-boilerplate::440f4dbb0803a28d",

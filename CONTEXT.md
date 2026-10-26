@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-26T15:10:22.334Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-26T15:14:34.346Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -139,11 +139,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
 
 ### fine-tuning
-- Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
-- DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- Axolotl — YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
+- DeepSpeed — Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks
 - Hugging Face Accelerate — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
 - Liger Kernel — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
-- LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
+- LLaMA-Factory — No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
