@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: Apache-2.0, OpenTelemetry-native platform for agent tracing, evals, guardrails, prompt management and GPU cost monitoring
-github_url: "https://github.com/openlit/openlit"
+github_url: https://github.com/openlit/openlit
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, tracing, monitoring, self-hosted]
+tags:
+  - observability
+  - tracing
+  - monitoring
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 2881
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-10-22"
-docs_url: "https://docs.openlit.io/"
+github_stars: 2885
+github_stars_last_30d: 363
+trending_score: 44
+last_commit: '2026-10-26'
+docs_url: https://docs.openlit.io/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,11 +33,16 @@ supported_formats: []
 api_compatible: null
 approach: otel-native
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "An OpenTelemetry-native tracing and evaluation platform whose telemetry is standard OTLP, so the same traces can land in its own UI or in whatever backend the team already runs"
+  - An OpenTelemetry-native tracing and evaluation platform whose telemetry is standard OTLP, so the same traces can land in its own UI or in whatever backend the team already runs
 best_for:
   - Your organisation already has an OTel collector and a backend (Grafana, Datadog, Jaeger, Tempo) and you want LLM spans to arrive there as ordinary OTel spans rather than as a second proprietary data silo
   - You want to trace coding-agent sessions (Claude Code, Codex, Cursor, OpenCode) and see the tool calls, not just the model completions
@@ -44,13 +53,17 @@ avoid_if:
   - You need a supported commercial product with an SLA, since this is a community-driven project with a large open-issue count and no vendor contract behind it
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [openllmetry, langfuse, phoenix, helicone]
+alternatives:
+  - openllmetry
+  - langfuse
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified 2026-10-25: GitHub API 2881 stars, 170 open issues, last push 2026-10-22, Apache-2.0. Body rewritten from the README, which now positions the project as an agent-harness platform (tracing, evals with CI gates, runtime guardrails, prompt hub, rule engine, vault, GPU monitoring) and documents the coding-agent CLI."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: GitHub API 2881 stars, 170 open issues, last push 2026-10-22, Apache-2.0. Body rewritten from the README, which now positions the project as an agent-harness platform (tracing, evals with CI gates, runtime guardrails, prompt hub, rule engine, vault, GPU monitoring) and documents the coding-agent CLI.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

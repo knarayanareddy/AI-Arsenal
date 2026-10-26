@@ -1,52 +1,61 @@
 ---
 id: data-privacy-stack-presidio
-name: "presidio"
+name: presidio
 version_tracked: null
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "PII detection and redaction framework with NLP and pattern recognizers plus context-aware scoring"
-github_url: "https://github.com/data-privacy-stack/presidio"
-license: "MIT"
+description: PII detection and redaction framework with NLP and pattern recognizers plus context-aware scoring
+github_url: https://github.com/data-privacy-stack/presidio
+license: MIT
 primary_language: Python
-org_or_maintainer: "data-privacy-stack"
-tags: [security, guardrails]
+org_or_maintainer: data-privacy-stack
+tags:
+  - security
+  - guardrails
 maturity: production
 cost_model: open-source
-github_stars: 11074
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-24"
-docs_url: "https://presidio.dataprivacystack.org"
+github_stars: 11519
+github_stars_last_30d: 445
+trending_score: 69
+last_commit: '2026-10-26'
+docs_url: https://presidio.dataprivacystack.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "PII detection, redaction, and anonymization framework with pluggable recognizers and context-aware scoring, used as the scrubbing layer before prompts or logs leave the trust boundary."
+  - PII detection, redaction, and anonymization framework with pluggable recognizers and context-aware scoring, used as the scrubbing layer before prompts or logs leave the trust boundary.
 best_for:
-  - "You are sending user text to an external model API and need a scrubbing layer between the raw text and the request, with an auditable list of what was removed."
-  - "You are building a data-sharing or red-team workflow over logs and documents and need configurable recognizers rather than a fixed list of built-in entities."
-  - "You need GDPR-style anonymisation for a dataset before release and want pseudonymisation with a consistent mapping rather than irreversible masking."
+  - You are sending user text to an external model API and need a scrubbing layer between the raw text and the request, with an auditable list of what was removed.
+  - You are building a data-sharing or red-team workflow over logs and documents and need configurable recognizers rather than a fixed list of built-in entities.
+  - You need GDPR-style anonymisation for a dataset before release and want pseudonymisation with a consistent mapping rather than irreversible masking.
 avoid_if:
-  - "You need a guarantee of zero leakage, since recall on free-form text is a statistical problem and rare identifier formats will be missed."
-  - "Your data is images, where the image redactor exists but the pipeline and entity coverage are much thinner than the text side."
-  - "You want to redact at the storage layer by policy, which is a database or DLP problem rather than a text-processing one."
+  - You need a guarantee of zero leakage, since recall on free-form text is a statistical problem and rare identifier formats will be missed.
+  - Your data is images, where the image redactor exists but the pipeline and entity coverage are much thinner than the text side.
+  - You want to redact at the storage layer by policy, which is a database or DLP problem rather than a text-processing one.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (11074), MIT license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. The AnalyzerEngine and AnonymizerEngine split, PatternRecognizer and ContextAwareEnhancer, operator set, image redactor, and API package come from official docs; recall, performance, and pseudonymisation warnings are engineering judgement about the technique, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (11074), MIT license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. The AnalyzerEngine and AnonymizerEngine split, PatternRecognizer and ContextAwareEnhancer, operator set, image redactor, and API package come from official docs; recall, performance, and pseudonymisation warnings are engineering judgement about the technique, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/data-privacy-stack/presidio", "date": "2026-09-28", "description": "11,074 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/data-privacy-stack/presidio
+    date: '2026-09-28'
+    description: 11,074 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

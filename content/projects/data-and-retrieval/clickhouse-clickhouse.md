@@ -1,52 +1,64 @@
 ---
 id: clickhouse-clickhouse
-name: "ClickHouse"
+name: ClickHouse
 version_tracked: null
 artifact_type: platform
 category: data-pipelines
 subcategory: tools
-description: "Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data"
-github_url: "https://github.com/ClickHouse/ClickHouse"
-license: "Apache-2.0"
+description: Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
+github_url: https://github.com/ClickHouse/ClickHouse
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "ClickHouse"
-tags: [data, observability, embeddings]
+org_or_maintainer: ClickHouse
+tags:
+  - data
+  - observability
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 50123
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-09-28"
-docs_url: "https://clickhouse.com/docs"
+github_stars: 50611
+github_stars_last_30d: 488
+trending_score: 72
+last_commit: '2026-10-26'
+docs_url: https://clickhouse.com/docs
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Columnar OLAP engine that doubles as an LLM workload store: sub-second analytical scans over event logs, embedding tables, and agent trace history."
+  - 'Columnar OLAP engine that doubles as an LLM workload store: sub-second analytical scans over event logs, embedding tables, and agent trace history.'
 best_for:
-  - "You are storing LLM traces, token logs, or embedding metadata and need p50 and p99 latency percentiles per model per hour over months of data, which is a columnar scan problem rather than a row-store index problem."
-  - "You are computing per-model cost and quality rollups over event streams and want sub-second queries with primary-key-ordered MergeTree tables and materialized views instead of a pre-aggregated warehouse."
-  - "You need vector similarity search over an embedding table alongside ordinary analytical columns on the same rows, so one query can filter by tenant and time and rank by distance."
+  - You are storing LLM traces, token logs, or embedding metadata and need p50 and p99 latency percentiles per model per hour over months of data, which is a columnar scan problem rather than a row-store index problem.
+  - You are computing per-model cost and quality rollups over event streams and want sub-second queries with primary-key-ordered MergeTree tables and materialized views instead of a pre-aggregated warehouse.
+  - You need vector similarity search over an embedding table alongside ordinary analytical columns on the same rows, so one query can filter by tenant and time and rank by distance.
 avoid_if:
-  - "You need row-level transactional updates at high frequency, because the storage engine is append-and-merge by design and updates are mutations rather than in-place writes."
-  - "Your dataset is small enough for a single-node embedded database, since ClickHouse's operational weight and configuration surface exceed what a small workload needs."
-  - "Your team has no capacity to tune parts, read replicas, and merge behavior, because misconfigured merges and uneven data distribution produce latency problems that are not obvious from the query alone."
+  - You need row-level transactional updates at high frequency, because the storage engine is append-and-merge by design and updates are mutations rather than in-place writes.
+  - Your dataset is small enough for a single-node embedded database, since ClickHouse's operational weight and configuration surface exceed what a small workload needs.
+  - Your team has no capacity to tune parts, read replicas, and merge behavior, because misconfigured merges and uneven data distribution produce latency problems that are not obvious from the query alone.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 50123 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 16 GitHub topics. Engine names, merge and PREWHERE behavior, and vector HNSW support are drawn from official ClickHouse documentation; no server was run in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 50123 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 16 GitHub topics. Engine names, merge and PREWHERE behavior, and vector HNSW support are drawn from official ClickHouse documentation; no server was run in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/ClickHouse/ClickHouse", "date": "2026-09-28", "description": "50,123 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/ClickHouse/ClickHouse
+    date: '2026-09-28'
+    description: 50,123 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

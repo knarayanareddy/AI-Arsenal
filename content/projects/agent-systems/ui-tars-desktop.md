@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "bytedance"
+org_or_maintainer: bytedance
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,43 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 250
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: ui-tars-desktop
-name: "UI-TARS Desktop"
+name: UI-TARS Desktop
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control"
-github_url: "https://github.com/bytedance/UI-TARS-desktop"
+description: ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control
+github_url: https://github.com/bytedance/UI-TARS-desktop
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, vision, tool-use]
+tags:
+  - agents
+  - vision
+  - tool-use
 maturity: beta
 cost_model: usage-based
-github_stars: 39143
-last_commit: "2026-09-24"
-docs_url: "https://agent-tars.com"
+github_stars: 39393
+last_commit: '2026-10-09'
+docs_url: https://agent-tars.com
 phase: agent-system
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "fork-and-adapt"
+  - deploy-as-is
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A desktop GUI-agent runtime that pairs a vision-language grounding model with screen capture and input control to operate computer and browser interfaces."
-best_for: ["You need a GUI agent that works on a real desktop rather than only a browser, because the local and remote computer operators are the first-class path alongside the browser operator.", "You want the browser control mode to be a choice rather than a fixed approach, since the hybrid agent can drive by GUI grounding, by DOM, or by mixing the two per step.", "You are wiring MCP tools into an agent kernel, because the README states the kernel is built on MCP and supports mounting MCP servers to reach real-world tools."]
-avoid_if: ["You need a stable release with a compatibility promise, because the project is tracked through dated beta and v0.x announcements rather than a semver line.", "You want a text-only, DOM-only automation path, because the whole premise is a vision-language model interpreting screenshots, which is slower and less precise than a selector.", "You cannot run a GUI automation tool with full mouse and keyboard control, because the security posture of granting that to a model is a decision your environment has to permit."]
-enrichment_notes: "Official repository, Apache-2.0 license, and 2026-07-01 activity were reviewed on 2026-07-12. Reliability and safety of autonomous computer-use remain draft and require sandboxing."
+  - A desktop GUI-agent runtime that pairs a vision-language grounding model with screen capture and input control to operate computer and browser interfaces.
+best_for:
+  - You need a GUI agent that works on a real desktop rather than only a browser, because the local and remote computer operators are the first-class path alongside the browser operator.
+  - You want the browser control mode to be a choice rather than a fixed approach, since the hybrid agent can drive by GUI grounding, by DOM, or by mixing the two per step.
+  - You are wiring MCP tools into an agent kernel, because the README states the kernel is built on MCP and supports mounting MCP servers to reach real-world tools.
+avoid_if:
+  - You need a stable release with a compatibility promise, because the project is tracked through dated beta and v0.x announcements rather than a semver line.
+  - You want a text-only, DOM-only automation path, because the whole premise is a vision-language model interpreting screenshots, which is slower and less precise than a selector.
+  - You cannot run a GUI automation tool with full mouse and keyboard control, because the security posture of granting that to a model is a decision your environment has to permit.
+enrichment_notes: Official repository, Apache-2.0 license, and 2026-07-01 activity were reviewed on 2026-07-12. Reliability and safety of autonomous computer-use remain draft and require sandboxing.
 ---
 
 ## Overview

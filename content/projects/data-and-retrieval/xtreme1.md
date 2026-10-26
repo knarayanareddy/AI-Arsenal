@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "An open-source annotation platform for images, 3D LiDAR point clouds, sensor fusion, and LLM preference data with RLHF"
-github_url: "https://github.com/xtreme1-io/xtreme1"
+description: An open-source annotation platform for images, 3D LiDAR point clouds, sensor fusion, and LLM preference data with RLHF
+github_url: https://github.com/xtreme1-io/xtreme1
 license: Apache-2.0
 primary_language: TypeScript
-tags: [vision, rlhf, multimodal]
+tags:
+  - vision
+  - rlhf
+  - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 1322
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://docs.xtreme1.io/"
+github_stars: 1385
+github_stars_last_30d: 63
+trending_score: 28
+last_commit: '2026-09-29'
+docs_url: https://docs.xtreme1.io/
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Covers the labeling modalities self-driving and multimodal teams actually ship on, plus the preference data LLMs now need."
+  - Covers the labeling modalities self-driving and multimodal teams actually ship on, plus the preference data LLMs now need.
 best_for:
-  - "You are labeling LiDAR or camera-LiDAR fusion data and need 3D boxes and tracking in one tool rather than separate scripts."
-  - "You are building preference data for RLHF and need pairwise ranking with a working reward-model training loop."
-  - "You need pre-labeling to cut annotation cost, with built-in models for 2D and 3D object detection running on your own GPU."
+  - You are labeling LiDAR or camera-LiDAR fusion data and need 3D boxes and tracking in one tool rather than separate scripts.
+  - You are building preference data for RLHF and need pairwise ranking with a working reward-model training loop.
+  - You need pre-labeling to cut annotation cost, with built-in models for 2D and 3D object detection running on your own GPU.
 avoid_if:
-  - "You cannot run NVIDIA containers, because the built-in pre-labeling model containers require CUDA and the NVIDIA Container Toolkit."
-  - "You need hosted annotation with a vendor SLA and pay-per-task labor, since this is a self-hosted platform you operate."
-  - "You are labeling text-only classification at small scale, where this is heavier than a spreadsheet or a form tool."
+  - You cannot run NVIDIA containers, because the built-in pre-labeling model containers require CUDA and the NVIDIA Container Toolkit.
+  - You need hosted annotation with a vendor SLA and pay-per-task labor, since this is a self-hosted platform you operate.
+  - You are labeling text-only classification at small scale, where this is heavier than a spreadsheet or a form tool.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1322, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: v0.9.3, YOLOR pre-labeling, OpenPCDet and AB3DMOT, MobileNetV3 and openTSNE curation, Ontology Center, RLHF beta, 2 GB/10 GB floors, Docker requirements, T4-class GPU for model containers. Not confirmed."
+enrichment_notes: 'API-verified: stars 1322, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: v0.9.3, YOLOR pre-labeling, OpenPCDet and AB3DMOT, MobileNetV3 and openTSNE curation, Ontology Center, RLHF beta, 2 GB/10 GB floors, Docker requirements, T4-class GPU for model containers. Not confirmed.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

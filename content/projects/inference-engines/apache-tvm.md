@@ -1,52 +1,62 @@
 ---
 id: apache-tvm
-name: "tvm"
+name: tvm
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: inference-engines
-description: "Compiler stack that lowers deep-learning graphs through tensor IR to code for CPUs, GPUs, and accelerators"
-github_url: "https://github.com/apache/tvm"
-license: "Apache-2.0"
+description: Compiler stack that lowers deep-learning graphs through tensor IR to code for CPUs, GPUs, and accelerators
+github_url: https://github.com/apache/tvm
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "apache"
-tags: [inference]
+org_or_maintainer: apache
+tags:
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 13781
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-28"
-docs_url: "https://tvm.apache.org/"
+github_stars: 13862
+github_stars_last_30d: 81
+trending_score: 39
+last_commit: '2026-10-24'
+docs_url: https://tvm.apache.org/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Compiler stack that lowers deep-learning graphs across CPU, GPU, and custom accelerators, and the reference for the two-level scheduling and codegen design serving engines reuse."
+  - Compiler stack that lowers deep-learning graphs across CPU, GPU, and custom accelerators, and the reference for the two-level scheduling and codegen design serving engines reuse.
 best_for:
-  - "You need inference on a custom or less-common accelerator and want a compiler that generates kernels for it instead of writing device code by hand."
-  - "You are chasing latency on a deployment target and want an automated search over tiling, fusion, and layout rather than manual kernel tuning."
-  - "You are building a framework and want the two-level schedule and code-generation design that later serving engines reuse."
+  - You need inference on a custom or less-common accelerator and want a compiler that generates kernels for it instead of writing device code by hand.
+  - You are chasing latency on a deployment target and want an automated search over tiling, fusion, and layout rather than manual kernel tuning.
+  - You are building a framework and want the two-level schedule and code-generation design that later serving engines reuse.
 avoid_if:
-  - "You just want fast token generation from an existing open-weight model, since a dedicated server such as vllm or sglang already has continuous batching, paged attention, and tuned kernels."
-  - "Your team has no compiler background, because schedule tuning, tensor shapes, and lowering bugs are a steep on-ramp even when the payoff is large."
-  - "You need a stable, release-managed runtime, since TVM releases are irregular and its API has shifted across major versions."
+  - You just want fast token generation from an existing open-weight model, since a dedicated server such as vllm or sglang already has continuous batching, paged attention, and tuned kernels.
+  - Your team has no compiler background, because schedule tuning, tensor shapes, and lowering bugs are a steep on-ramp even when the payoff is large.
+  - You need a stable, release-managed runtime, since TVM releases are irregular and its API has shifted across major versions.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (13781), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Dialect layering, schedule primitives, auto-scheduler, and TVM Runtime structure are from the official architecture docs; the TE snippet follows the documented schedule API but was not compiled for this entry, and XLA and TensorRT positioning is engineering judgement."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (13781), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Dialect layering, schedule primitives, auto-scheduler, and TVM Runtime structure are from the official architecture docs; the TE snippet follows the documented schedule API but was not compiled for this entry, and XLA and TensorRT positioning is engineering judgement.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/apache/tvm", "date": "2026-09-28", "description": "13,781 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/apache/tvm
+    date: '2026-09-28'
+    description: 13,781 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

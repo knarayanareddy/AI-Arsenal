@@ -1,50 +1,68 @@
 ---
 id: openclaw
-name: "OpenClaw"
+name: OpenClaw
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use"
-github_url: "https://github.com/openclaw/openclaw"
-license: "MIT"
+description: Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
+github_url: https://github.com/openclaw/openclaw
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "OpenClaw Foundation"
-tags: [agents, memory, tool-use, self-hosted]
+org_or_maintainer: OpenClaw Foundation
+tags:
+  - agents
+  - memory
+  - tool-use
+  - self-hosted
 maturity: beta
 cost_model: self-hostable
-github_stars: 388702
-github_stars_last_30d: 0
-trending_score: 97
-last_commit: "2026-09-03"
-docs_url: "https://github.com/openclaw/openclaw#readme"
+github_stars: 393130
+github_stars_last_30d: 4428
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/openclaw/openclaw#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The reference shape for a self-hosted always-on personal agent: a long-lived Node process holding conversation state on local disk, fronted by channel adapters, with capabilities added as loadable skills rather than baked-in features."
+  - 'The reference shape for a self-hosted always-on personal agent: a long-lived Node process holding conversation state on local disk, fronted by channel adapters, with capabilities added as loadable skills rather than baked-in features.'
 best_for:
-  - "You want one persistent agent that answers on WhatsApp, Telegram, Slack, Discord, and Signal from a single process on hardware you own, with conversation history and credentials never leaving that machine"
-  - "You are building a personal-assistant product and want a working reference for the channel-adapter plus skill-registry split before committing to your own process model"
+  - You want one persistent agent that answers on WhatsApp, Telegram, Slack, Discord, and Signal from a single process on hardware you own, with conversation history and credentials never leaving that machine
+  - You are building a personal-assistant product and want a working reference for the channel-adapter plus skill-registry split before committing to your own process model
 avoid_if:
-  - "You need per-tenant isolation and an audited permission boundary — a single personal agent holding messaging credentials and shell access is a blast radius, not a multi-tenant service"
-  - "Your workload is bounded request/response automation rather than an open-ended assistant, where a scheduled job or a scoped agent framework costs far less to reason about"
+  - You need per-tenant isolation and an audited permission boundary — a single personal agent holding messaging credentials and shell access is a blast radius, not a multi-tenant service
+  - Your workload is bounded request/response automation rather than an open-ended assistant, where a scheduled job or a scoped agent framework costs far less to reason about
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [anythingllm, librechat, khoj]
-integrates_with: [mem0, ollama]
+alternatives:
+  - anythingllm
+  - librechat
+  - khoj
+integrates_with:
+  - mem0
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (388,702), forks (81,624), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports licence NOASSERTION; the repository's LICENSE file states MIT, copyright OpenClaw Foundation, and that is what is recorded here. Architecture and channel claims are from the README and topic list, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (388,702), forks (81,624), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports licence NOASSERTION; the repository's LICENSE file states MIT, copyright OpenClaw Foundation, and that is what is recorded here. Architecture and channel claims are from the README and topic list, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/openclaw/openclaw", "date": "2026-09-03", "description": "388,702 stars and 81,624 forks on GitHub as of 2026-09-03 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/openclaw/openclaw
+    date: '2026-09-03'
+    description: 388,702 stars and 81,624 forks on GitHub as of 2026-09-03 (GitHub API)
 featured: true
 status: active
 ---

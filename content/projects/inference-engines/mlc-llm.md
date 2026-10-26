@@ -1,32 +1,42 @@
 ---
 id: mlc-llm
-name: "MLC LLM"
+name: MLC LLM
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: inference-engines
-description: "ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops"
-github_url: "https://github.com/mlc-ai/mlc-llm"
-license: "Apache-2.0"
+description: 'ML-compilation deployment engine: one model definition compiled to Metal, Vulkan, CUDA, ROCm, WebGPU, OpenCL and WASM for phones, browsers and desktops'
+github_url: https://github.com/mlc-ai/mlc-llm
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "MLC AI"
-tags: [inference, edge, llm]
+org_or_maintainer: MLC AI
+tags:
+  - inference
+  - edge
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 23272
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-10-25"
-docs_url: "https://llm.mlc.ai/docs/"
+github_stars: 23276
+github_stars_last_30d: 4
+trending_score: 15
+last_commit: '2026-10-25'
+docs_url: https://llm.mlc.ai/docs/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [research-origin, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The compiler-based answer to on-device inference: instead of hand-writing kernels per accelerator, MLC compiles the model through TVM so one definition reaches iPhone GPUs, Android OpenCL, WebGPU browsers and desktop accelerators — the stack behind WebLLM's in-browser demos"
+  - 'The compiler-based answer to on-device inference: instead of hand-writing kernels per accelerator, MLC compiles the model through TVM so one definition reaches iPhone GPUs, Android OpenCL, WebGPU browsers and desktop accelerators — the stack behind WebLLM''s in-browser demos'
 best_for:
   - The same model must run in a browser tab and on a phone — WebGPU plus WASM in the browser, OpenCL on Adreno and Mali, Metal on Apple A-series, all from one compilation pipeline
   - You are shipping inference inside a mobile app and want an engine with an OpenAI-compatible API surface rather than a bespoke C++ integration per platform
@@ -37,17 +47,25 @@ avoid_if:
   - You want a single binary with no build step — the compiled-model workflow assumes you can run the compilation (or fetch prebuilt artifacts) for each target, which is more machinery than `llama-cpp`'s one-file path
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [llama-cpp, ollama, vllm, mllm]
-integrates_with: [apache-tvm]
+alternatives:
+  - llama-cpp
+  - ollama
+  - vllm
+  - mllm
+integrates_with:
+  - apache-tvm
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 23,272 stars, 360 open issues, Apache-2.0, last push 2026-10-25. README documents MLCEngine with an OpenAI-compatible API over REST, Python, JavaScript, iOS and Android, with a support matrix covering Vulkan/ROCm/CUDA/Metal desktop GPUs, WebGPU+WASM in browsers, Metal on iOS/iPadOS and OpenCL on Adreno/Mali Android."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 23,272 stars, 360 open issues, Apache-2.0, last push 2026-10-25. README documents MLCEngine with an OpenAI-compatible API over REST, Python, JavaScript, iOS and Android, with a support matrix covering Vulkan/ROCm/CUDA/Metal desktop GPUs, WebGPU+WASM in browsers, Metal on iOS/iPadOS and OpenCL on Adreno/Mali Android.'
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source": "github-trending", "url": "https://github.com/mlc-ai/mlc-llm", "date": "2026-07-08", "description": "22,917 stars on GitHub as of 2026-07-08 (GitHub API); 23,272 by 2026-10-25"}
+  - source: github-trending
+    url: https://github.com/mlc-ai/mlc-llm
+    date: '2026-07-08'
+    description: 22,917 stars on GitHub as of 2026-07-08 (GitHub API); 23,272 by 2026-10-25
 featured: false
 status: active
 ---

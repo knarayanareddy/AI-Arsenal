@@ -1,52 +1,63 @@
 ---
 id: flashinfer-ai-flashinfer
-name: "flashinfer"
+name: flashinfer
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "JIT-compiled CUDA kernels for attention, sampling, and quantization, dispatched to by high-throughput LLM serving engines"
-github_url: "https://github.com/flashinfer-ai/flashinfer"
-license: "Apache-2.0"
+description: JIT-compiled CUDA kernels for attention, sampling, and quantization, dispatched to by high-throughput LLM serving engines
+github_url: https://github.com/flashinfer-ai/flashinfer
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "flashinfer-ai"
-tags: [pytorch, attention, inference]
+org_or_maintainer: flashinfer-ai
+tags:
+  - pytorch
+  - attention
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 6516
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-28"
-docs_url: "https://flashinfer.ai"
+github_stars: 6791
+github_stars_last_30d: 275
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://flashinfer.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Attention and sampling kernel library for LLM serving, supplying the fused attention, sampling, and quantization primitives that modern high-throughput engines dispatch to."
+  - Attention and sampling kernel library for LLM serving, supplying the fused attention, sampling, and quantization primitives that modern high-throughput engines dispatch to.
 best_for:
-  - "You are maintaining a serving engine and need tuned paged and radix attention kernels plus fused sampling without writing CUDA yourself."
-  - "You serve mixture-of-experts models or multi-head latent attention architectures and need kernels for grouped-query and MLA layouts."
-  - "You want FP8 or INT8 quantized KV cache and quantized sampling paths on Hopper or Blackwell without rebuilding an engine."
+  - You are maintaining a serving engine and need tuned paged and radix attention kernels plus fused sampling without writing CUDA yourself.
+  - You serve mixture-of-experts models or multi-head latent attention architectures and need kernels for grouped-query and MLA layouts.
+  - You want FP8 or INT8 quantized KV cache and quantized sampling paths on Hopper or Blackwell without rebuilding an engine.
 avoid_if:
-  - "You are on AMD, Intel, or Apple Silicon hardware, since the kernels are CUDA-specific and have no portable fallback."
-  - "You need something that works out of the box on a laptop or CPU, because first-use JIT compilation requires nvcc or NVRTC and a compatible toolchain."
-  - "Your bottleneck is network, scheduling, or model loading rather than kernel time, where engine-level features will move the number far more."
+  - You are on AMD, Intel, or Apple Silicon hardware, since the kernels are CUDA-specific and have no portable fallback.
+  - You need something that works out of the box on a laptop or CPU, because first-use JIT compilation requires nvcc or NVRTC and a compatible toolchain.
+  - Your bottleneck is network, scheduling, or model loading rather than kernel time, where engine-level features will move the number far more.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (6516), Apache-2.0 license, last commit 2026-09-28, primary language C++, and all ten topics were read from the GitHub API. Kernel coverage, plan-based API, JIT compilation, and framework integration come from the official README and docs; no kernel was compiled or benchmarked on hardware here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (6516), Apache-2.0 license, last commit 2026-09-28, primary language C++, and all ten topics were read from the GitHub API. Kernel coverage, plan-based API, JIT compilation, and framework integration come from the official README and docs; no kernel was compiled or benchmarked on hardware here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/flashinfer-ai/flashinfer", "date": "2026-09-28", "description": "6,516 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/flashinfer-ai/flashinfer
+    date: '2026-09-28'
+    description: 6,516 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

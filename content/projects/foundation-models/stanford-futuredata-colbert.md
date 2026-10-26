@@ -1,52 +1,63 @@
 ---
 id: stanford-futuredata-colbert
-name: "ColBERT"
+name: ColBERT
 version_tracked: null
 artifact_type: model
 category: rag
 subcategory: advanced-rag
-description: "Late-interaction retrieval model that embeds every token separately and scores query-document pairs with a MaxSim pass at query time"
-github_url: "https://github.com/stanford-futuredata/ColBERT"
-license: "MIT"
+description: Late-interaction retrieval model that embeds every token separately and scores query-document pairs with a MaxSim pass at query time
+github_url: https://github.com/stanford-futuredata/ColBERT
+license: MIT
 primary_language: Python
-org_or_maintainer: "stanford-futuredata"
-tags: [retrieval, rag, embeddings]
+org_or_maintainer: stanford-futuredata
+tags:
+  - retrieval
+  - rag
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 3941
-github_stars_last_30d: 0
-trending_score: 20
-last_commit: "2025-10-14"
-docs_url: "https://github.com/stanford-futuredata/ColBERT"
+github_stars: 3946
+github_stars_last_30d: 5
+trending_score: 33
+last_commit: '2025-10-14'
+docs_url: https://github.com/stanford-futuredata/ColBERT
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Late-interaction retrieval model that encodes every token instead of pooling, which raised first-stage recall and remains the basis of document-level ColBERT-style indexes."
+  - Late-interaction retrieval model that encodes every token instead of pooling, which raised first-stage recall and remains the basis of document-level ColBERT-style indexes.
 best_for:
-  - "You are doing retrieval on long or heterogeneous documents and need a query to match a specific span rather than a whole-page average."
-  - "You want document-level ranking as a first stage ahead of a cross-encoder or LLM reranker, since MaxSim recall beats pooled bi-encoders on the same index."
-  - "You are building an index for ColBERTv2 or PLAID and need the checkpoint plus the compressed residual format those systems expect."
+  - You are doing retrieval on long or heterogeneous documents and need a query to match a specific span rather than a whole-page average.
+  - You want document-level ranking as a first stage ahead of a cross-encoder or LLM reranker, since MaxSim recall beats pooled bi-encoders on the same index.
+  - You are building an index for ColBERTv2 or PLAID and need the checkpoint plus the compressed residual format those systems expect.
 avoid_if:
-  - "Your index budget is tight, because storing per-token vectors costs an order of magnitude more than one vector per passage."
-  - "You need low-latency retrieval at high query volume, since MaxSim touches every stored token vector per candidate document."
-  - "Your corpus is short keyword-like text, where BM25 or a pooled dense model is both cheaper and just as accurate."
+  - Your index budget is tight, because storing per-token vectors costs an order of magnitude more than one vector per passage.
+  - You need low-latency retrieval at high query volume, since MaxSim touches every stored token vector per candidate document.
+  - Your corpus is short keyword-like text, where BM25 or a pooled dense model is both cheaper and just as accurate.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3941), MIT license, last commit 2025-10-14, and primary language Python were read from the GitHub API; the topics array is empty upstream and no homepage is declared. MaxSim scoring, per-token normalization asymmetry, PLAID two-bit residual quantization, and the ColBERTv2 checkpoint come from the official README and papers; no index was built and no retrieval was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3941), MIT license, last commit 2025-10-14, and primary language Python were read from the GitHub API; the topics array is empty upstream and no homepage is declared. MaxSim scoring, per-token normalization asymmetry, PLAID two-bit residual quantization, and the ColBERTv2 checkpoint come from the official README and papers; no index was built and no retrieval was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/stanford-futuredata/ColBERT", "date": "2026-09-28", "description": "3,941 stars and last commit 2025-10-14 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/stanford-futuredata/ColBERT
+    date: '2026-09-28'
+    description: 3,941 stars and last commit 2025-10-14 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

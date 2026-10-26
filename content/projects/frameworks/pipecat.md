@@ -1,50 +1,67 @@
 ---
 id: pipecat
-name: "Pipecat"
+name: Pipecat
 version_tracked: null
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "Frame-pipeline framework for building realtime voice agents and multimodal conversational applications"
-github_url: "https://github.com/pipecat-ai/pipecat"
-license: "BSD-2-Clause"
+description: Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
+github_url: https://github.com/pipecat-ai/pipecat
+license: BSD-2-Clause
 primary_language: Python
-org_or_maintainer: "Daily"
-tags: [voice, streaming, agents, multimodal]
+org_or_maintainer: Daily
+tags:
+  - voice
+  - streaming
+  - agents
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 15163
-github_stars_last_30d: 0
-trending_score: 62
-last_commit: "2026-09-03"
-docs_url: "https://github.com/pipecat-ai/pipecat#readme"
+github_stars: 16832
+github_stars_last_30d: 1669
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/pipecat-ai/pipecat#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [audio, multimodal, language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - audio
+  - multimodal
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The pipeline abstraction for realtime voice: media and inference are modelled as typed frames flowing through composable processors, so transport, speech, and model choices stay independently swappable."
+  - 'The pipeline abstraction for realtime voice: media and inference are modelled as typed frames flowing through composable processors, so transport, speech, and model choices stay independently swappable.'
 best_for:
-  - "You are building a spoken conversational product and need explicit control over interruption handling, turn-taking, and the latency budget between microphone input and speaker output"
-  - "You want to assemble a voice agent from separate speech-to-text, model, and text-to-speech providers rather than adopting one vendor's end-to-end realtime API"
+  - You are building a spoken conversational product and need explicit control over interruption handling, turn-taking, and the latency budget between microphone input and speaker output
+  - You want to assemble a voice agent from separate speech-to-text, model, and text-to-speech providers rather than adopting one vendor's end-to-end realtime API
 avoid_if:
-  - "Your product is a single-turn voice command with no conversational state, where a hosted speech API call is simpler than running a pipeline"
-  - "You cannot operate a service that holds persistent realtime connections, since per-session latency tuning and backpressure are your responsibility, not a vendor's"
+  - Your product is a single-turn voice command with no conversational state, where a hosted speech API call is simpler than running a pipeline
+  - You cannot operate a service that holds persistent realtime connections, since per-session latency tuning and backpressure are your responsibility, not a vendor's
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
-integrates_with: [whisper, ollama]
+integrates_with:
+  - whisper
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (15,163), forks (2,625), licence (BSD-2-Clause), primary language (Python), created 2023-12-27, and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Maintainer attribution to Daily comes from the repository description. Architecture claims derive from the README and repository topics, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (15,163), forks (2,625), licence (BSD-2-Clause), primary language (Python), created 2023-12-27, and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Maintainer attribution to Daily comes from the repository description. Architecture claims derive from the README and repository topics, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/pipecat-ai/pipecat", "date": "2026-09-03", "description": "15,163 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-12-27"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/pipecat-ai/pipecat
+    date: '2026-09-03'
+    description: 15,163 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-12-27
 featured: false
 status: active
 ---

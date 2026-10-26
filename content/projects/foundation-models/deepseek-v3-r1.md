@@ -6,31 +6,48 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
-github_url: "https://github.com/deepseek-ai/DeepSeek-V3"
+github_url: https://github.com/deepseek-ai/DeepSeek-V3
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, reasoning, inference, efficiency]
+tags:
+  - llm
+  - reasoning
+  - inference
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 104597
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2025-08-28"
-docs_url: "https://github.com/deepseek-ai/DeepSeek-V3"
+github_stars: 104613
+github_stars_last_30d: 16
+trending_score: 16
+last_commit: '2025-08-28'
+docs_url: https://github.com/deepseek-ai/DeepSeek-V3
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/deepseek-ai"
-model_sizes: [671B MoE, 1.5B distilled, 7B distilled, 8B distilled, 14B distilled, 32B distilled, 70B distilled]
+hf_url: https://huggingface.co/deepseek-ai
+model_sizes:
+  - 671B MoE
+  - 1.5B distilled
+  - 7B distilled
+  - 8B distilled
+  - 14B distilled
+  - 32B distilled
+  - 70B distilled
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - Open-weight frontier-class reasoning and general-purpose model family, MIT-licensed
 best_for:
@@ -46,12 +63,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture figures (671B total/37B active, MLA, DeepSeekMoE 256 experts, MTP, FP8 training) are from DeepSeek's own technical report, corroborated by NVIDIA Megatron-Bridge docs and DeepSeek's architecture deepwiki. The weight repository itself has not been pushed since 2025-08-28, which is normal for released weights, so actively-maintained was removed from health_signals on 2026-10-24.
-added_date: "2026-06-13"
-last_reviewed: "2026-10-24"
+added_date: '2026-06-13'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.informationweek.com/machine-learning-ai/will-enterprises-adopt-deepseek-","date":"2025-02-25","description":"InformationWeek reporting on enterprise adoption patterns: mature enterprises deploying private DeepSeek instances for data control while fine-tuning and running inference"}
+  - source: conference
+    url: https://www.informationweek.com/machine-learning-ai/will-enterprises-adopt-deepseek-
+    date: '2025-02-25'
+    description: 'InformationWeek reporting on enterprise adoption patterns: mature enterprises deploying private DeepSeek instances for data control while fine-tuning and running inference'
 featured: false
 status: watching
 ---

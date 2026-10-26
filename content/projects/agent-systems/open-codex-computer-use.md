@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "MCP server giving Codex, Claude Code and Gemini CLI non-intrusive desktop control through the OS accessibility API"
-github_url: "https://github.com/iFurySt/open-codex-computer-use"
+description: MCP server giving Codex, Claude Code and Gemini CLI non-intrusive desktop control through the OS accessibility API
+github_url: https://github.com/iFurySt/open-codex-computer-use
 license: MIT
 primary_language: Other
-tags: [tool-use, guardrails]
+tags:
+  - tool-use
+  - guardrails
 maturity: beta
 cost_model: open-source
-github_stars: 2271
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-22"
-docs_url: "https://github.com/iFurySt/open-codex-computer-use#readme"
+github_stars: 2712
+github_stars_last_30d: 441
+trending_score: 58
+last_commit: '2026-10-25'
+docs_url: https://github.com/iFurySt/open-codex-computer-use#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives open-source coding agents the same computer-use capability vendors ship, without screen-scraping the whole desktop."
+  - Gives open-source coding agents the same computer-use capability vendors ship, without screen-scraping the whole desktop.
 best_for:
-  - "You want Codex, Claude Code or Gemini CLI to operate your desktop applications and you are willing to grant Accessibility and Screen Recording permissions."
-  - "You need cross-platform computer use and you want the same MCP server to work on macOS, Linux and Windows rather than maintaining three adapters."
-  - "You want the setup automated into your agent's config, because install-codex-mcp, install-claude-mcp and install-gemini-mcp write the right files for each host."
+  - You want Codex, Claude Code or Gemini CLI to operate your desktop applications and you are willing to grant Accessibility and Screen Recording permissions.
+  - You need cross-platform computer use and you want the same MCP server to work on macOS, Linux and Windows rather than maintaining three adapters.
+  - You want the setup automated into your agent's config, because install-codex-mcp, install-claude-mcp and install-gemini-mcp write the right files for each host.
 avoid_if:
-  - "You cannot grant Accessibility and Screen Recording on macOS, because the macOS runtime requires 14.0 or later and those two permissions, and the agent will not work without them."
-  - "You need a hardened, sandboxed path for untrusted agents, because accessibility-tree control is broad by design and the permission model is delegated to the OS."
-  - "You need proven reliability for unattended overnight GUI automation, because the README's demos are manual sessions rather than a published reliability benchmark."
+  - You cannot grant Accessibility and Screen Recording on macOS, because the macOS runtime requires 14.0 or later and those two permissions, and the agent will not work without them.
+  - You need a hardened, sandboxed path for untrusted agents, because accessibility-tree control is broad by design and the permission model is delegated to the OS.
+  - You need proven reliability for unattended overnight GUI automation, because the README's demos are manual sessions rather than a published reliability benchmark.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language (Swift), topics and issue count came from the GitHub API. Install commands, MCP config shape, macOS permission requirements, host install helpers and skill install are read from the official README; no desktop automation run was performed."
+enrichment_notes: Stars, license, last commit, primary language (Swift), topics and issue count came from the GitHub API. Install commands, MCP config shape, macOS permission requirements, host install helpers and skill install are read from the official README; no desktop automation run was performed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -46,16 +46,16 @@ Before selecting a data/retrieval component:
 
 ### Most Popular
 
-- [Firecrawl](./firecrawl.md) — ⭐ 185940
-- [PaddleOCR](./paddleocr.md) — ⭐ 85010
-- [Crawl4AI](./crawl4ai.md) — ⭐ 84414
-- [Scrapling](./d4vinci-scrapling.md) — ⭐ 84212
-- [RAGFlow](./ragflow.md) — ⭐ 82655
-- [Tesseract OCR](./tesseract-ocr.md) — ⭐ 75262
-- [Supabase](./supabase.md) — ⭐ 74300
-- [Docling](./docling.md) — ⭐ 68132
-- [AnythingLLM](./anything-llm.md) — ⭐ 66555
-- [TrendRadar](./trendradar.md) — ⭐ 62598
+- [Firecrawl](./firecrawl.md) — ⭐ 195566
+- [Supabase](./supabase.md) — ⭐ 113984
+- [RAGFlow](./ragflow.md) — ⭐ 92900
+- [PaddleOCR](./paddleocr.md) — ⭐ 91706
+- [Scrapling](./d4vinci-scrapling.md) — ⭐ 89842
+- [Crawl4AI](./crawl4ai.md) — ⭐ 86303
+- [Tesseract OCR](./tesseract-ocr.md) — ⭐ 77171
+- [Docling](./docling.md) — ⭐ 69618
+- [AnythingLLM](./anything-llm.md) — ⭐ 67584
+- [TrendRadar](./trendradar.md) — ⭐ 63208
 
 ### Browse All
 

@@ -1,52 +1,61 @@
 ---
 id: feast-dev-feast
-name: "feast"
+name: feast
 version_tracked: null
 artifact_type: platform
 category: data-pipelines
 subcategory: tools
-description: "Declarative feature definitions in a registry, materialized offline for training and materialized online for low-latency serving reads"
-github_url: "https://github.com/feast-dev/feast"
-license: "Apache-2.0"
+description: Declarative feature definitions in a registry, materialized offline for training and materialized online for low-latency serving reads
+github_url: https://github.com/feast-dev/feast
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "feast-dev"
-tags: [data]
+org_or_maintainer: feast-dev
+tags:
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 7311
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-28"
-docs_url: "https://docs.feast.dev"
+github_stars: 7347
+github_stars_last_30d: 36
+trending_score: 36
+last_commit: '2026-10-25'
+docs_url: https://docs.feast.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Feature store serving online and offline views of the same feature definitions, the standard answer to training/serving skew for retrieval and ranking models."
+  - Feature store serving online and offline views of the same feature definitions, the standard answer to training/serving skew for retrieval and ranking models.
 best_for:
-  - "You are building a recommendation or ranking model and need point-in-time correct feature joins so training rows cannot leak future values."
-  - "You have an online store such as Redis or DynamoDB and want materialization, TTL expiry, and a push API handled by one library instead of bespoke cron jobs."
-  - "You need on-demand features computed from request-time context without precomputing every possible combination."
+  - You are building a recommendation or ranking model and need point-in-time correct feature joins so training rows cannot leak future values.
+  - You have an online store such as Redis or DynamoDB and want materialization, TTL expiry, and a push API handled by one library instead of bespoke cron jobs.
+  - You need on-demand features computed from request-time context without precomputing every possible combination.
 avoid_if:
-  - "Your model has only a handful of features and the join fits in a single SQL query, since a feature store is pure operational overhead at that size."
-  - "You cannot run or budget for the online store and the materialization worker, because the value only materializes when both exist and stay fresh."
-  - "You need streaming-native sub-second freshness with complex windowed aggregates, where Kafka-side computation and a dedicated stream engine are stronger choices."
+  - Your model has only a handful of features and the join fits in a single SQL query, since a feature store is pure operational overhead at that size.
+  - You cannot run or budget for the online store and the materialization worker, because the value only materializes when both exist and stay fresh.
+  - You need streaming-native sub-second freshness with complex windowed aggregates, where Kafka-side computation and a dedicated stream engine are stronger choices.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7311), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all ten GitHub topics including feature-store were read from the API. Feature views, on-demand transforms, TTL, materialization, and the supported store list come from the official docs; no store was provisioned and no materialization job was run."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7311), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all ten GitHub topics including feature-store were read from the API. Feature views, on-demand transforms, TTL, materialization, and the supported store list come from the official docs; no store was provisioned and no materialization job was run.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/feast-dev/feast", "date": "2026-09-28", "description": "7,311 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/feast-dev/feast
+    date: '2026-09-28'
+    description: 7,311 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

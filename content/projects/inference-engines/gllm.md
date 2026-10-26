@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "Research-grade serving engine combining paged attention, chunked prefill and composable tensor, expert and pipeline parallelism"
-github_url: "https://github.com/gty111/gLLM"
+description: Research-grade serving engine combining paged attention, chunked prefill and composable tensor, expert and pipeline parallelism
+github_url: https://github.com/gty111/gLLM
 license: Apache-2.0
 primary_language: Python
-tags: [inference, training]
+tags:
+  - inference
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 73
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/gty111/gLLM"
+github_stars: 74
+github_stars_last_30d: 1
+trending_score: 17
+last_commit: '2026-10-26'
+docs_url: https://github.com/gty111/gLLM
 demo_url: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives you a small, readable scheduler codebase to instrument when paged-attention defaults stop fitting a MoE or hybrid-attention workload."
+  - Gives you a small, readable scheduler codebase to instrument when paged-attention defaults stop fitting a MoE or hybrid-attention workload.
 best_for:
-  - "You are prototyping a serving-side idea such as token throttling or encoder disaggregation and you need an engine whose scheduler you can actually read and modify."
-  - "You serve mixture-of-experts or hybrid-attention models whose attention and expert routing do not match the assumptions baked into an off-the-shelf runtime, and you need expert parallelism wired end to end."
-  - "You are teaching distributed inference, and you want a codebase small enough to read where pipeline, tensor and expert parallelism can be combined by hand."
+  - You are prototyping a serving-side idea such as token throttling or encoder disaggregation and you need an engine whose scheduler you can actually read and modify.
+  - You serve mixture-of-experts or hybrid-attention models whose attention and expert routing do not match the assumptions baked into an off-the-shelf runtime, and you need expert parallelism wired end to end.
+  - You are teaching distributed inference, and you want a codebase small enough to read where pipeline, tensor and expert parallelism can be combined by hand.
 avoid_if:
-  - "You need a production SLA or an ecosystem of integrations, because with roughly seventy stars the community around it is very small and support is effectively you."
-  - "You need the widest hardware coverage, since the engine targets CUDA and the fused Triton kernels it ships for recent frontier models assume a working Triton toolchain."
-  - "You want multimodal serving that works out of the box, because encoder disaggregation is recent and multimodal support for the newest checkpoints is still being added release by release."
+  - You need a production SLA or an ecosystem of integrations, because with roughly seventy stars the community around it is very small and support is effectively you.
+  - You need the widest hardware coverage, since the engine targets CUDA and the fused Triton kernels it ships for recent frontier models assume a working Triton toolchain.
+  - You want multimodal serving that works out of the box, because encoder disaggregation is recent and multimodal support for the newest checkpoints is still being added release by release.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license string, primary language, topics, last commit, homepage and issue count. Feature claims, model-support dates and install instructions are taken from the README and changelog; throughput and latency were not benchmarked here, and the LICENSE text was not read."
+enrichment_notes: GitHub API verified stars, license string, primary language, topics, last commit, homepage and issue count. Feature claims, model-support dates and install instructions are taken from the README and changelog; throughput and latency were not benchmarked here, and the LICENSE text was not read.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

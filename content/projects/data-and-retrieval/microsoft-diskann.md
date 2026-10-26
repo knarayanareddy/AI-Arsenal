@@ -1,52 +1,64 @@
 ---
 id: microsoft-diskann
-name: "DiskANN"
+name: DiskANN
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "Disk-based approximate-nearest-neighbour index with filtered search, built for vector collections larger than one machine's memory"
-github_url: "https://github.com/microsoft/DiskANN"
-license: "MIT"
+description: Disk-based approximate-nearest-neighbour index with filtered search, built for vector collections larger than one machine's memory
+github_url: https://github.com/microsoft/DiskANN
+license: MIT
 primary_language: Rust
-org_or_maintainer: "microsoft"
-tags: [embeddings, retrieval, rag]
+org_or_maintainer: microsoft
+tags:
+  - embeddings
+  - retrieval
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 1937
-github_stars_last_30d: 0
-trending_score: 26
-last_commit: "2026-09-28"
-docs_url: "https://github.com/microsoft/DiskANN"
+github_stars: 1958
+github_stars_last_30d: 21
+trending_score: 35
+last_commit: '2026-10-26'
+docs_url: https://github.com/microsoft/DiskANN
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Disk-based approximate-nearest-neighbour index with filtered search, designed for vector collections far larger than a single machine can hold in RAM."
+  - Disk-based approximate-nearest-neighbour index with filtered search, designed for vector collections far larger than a single machine can hold in RAM.
 best_for:
-  - "You have more vectors than fit in one machine's memory and need search to stay fast without a large-memory host."
-  - "You need filtered search combined with nearest-neighbour search, where the filter is applied inside the index rather than after retrieval."
-  - "You want a single-node vector index you control, with a small in-process surface rather than a distributed database to operate."
+  - You have more vectors than fit in one machine's memory and need search to stay fast without a large-memory host.
+  - You need filtered search combined with nearest-neighbour search, where the filter is applied inside the index rather than after retrieval.
+  - You want a single-node vector index you control, with a small in-process surface rather than a distributed database to operate.
 avoid_if:
-  - "Your corpus fits comfortably in memory, where an in-process HNSW index is faster and simpler with no disk layer."
-  - "You need durability, replication, and multi-writer concurrency, since a search index is a derived structure rebuilt from source vectors."
-  - "You need a rich filter language across many fields, where a general-purpose vector database with secondary indexes is the better fit."
+  - Your corpus fits comfortably in memory, where an in-process HNSW index is faster and simpler with no disk layer.
+  - You need durability, replication, and multi-writer concurrency, since a search index is a derived structure rebuilt from source vectors.
+  - You need a rich filter language across many fields, where a general-purpose vector database with secondary indexes is the better fit.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (1937), MIT license, last commit 2026-09-28, and primary language Rust were read from the GitHub API; the topics array is empty upstream and no homepage is declared. The disk-first graph layout, cached hot set, filtered search during traversal, and the Rust-over-C++ structure come from the official README and papers; no index was built here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (1937), MIT license, last commit 2026-09-28, and primary language Rust were read from the GitHub API; the topics array is empty upstream and no homepage is declared. The disk-first graph layout, cached hot set, filtered search during traversal, and the Rust-over-C++ structure come from the official README and papers; no index was built here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/microsoft/DiskANN", "date": "2026-09-28", "description": "1,937 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/microsoft/DiskANN
+    date: '2026-09-28'
+    description: 1,937 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -5,41 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle"
-github_url: "https://github.com/shareAI-lab/learn-claude-code"
+description: A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle
+github_url: https://github.com/shareAI-lab/learn-claude-code
 license: MIT
 primary_language: Python
-tags: [community-favorite, agents, pytorch]
+tags:
+  - community-favorite
+  - agents
+  - pytorch
 maturity: experimental
 cost_model: open-source
-github_stars: 77745
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://learn.shareai.run"
+github_stars: 79269
+github_stars_last_30d: 1524
+trending_score: 63
+last_commit: '2026-09-28'
+docs_url: https://learn.shareai.run
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Shows the loop, tools, and context management written out in small pieces instead of assumed behind a framework."
+  - Shows the loop, tools, and context management written out in small pieces instead of assumed behind a framework.
 best_for:
-  - "You are learning how coding agents actually work and want the loop, tool dispatch, and context compaction implemented in viewable steps."
-  - "You are reviewing a harness you inherited and need a reference for what the minimal components are before adding abstractions."
-  - "You are a technical lead who needs to explain to a team why harness engineering differs from model improvement."
+  - You are learning how coding agents actually work and want the loop, tool dispatch, and context compaction implemented in viewable steps.
+  - You are reviewing a harness you inherited and need a reference for what the minimal components are before adding abstractions.
+  - You are a technical lead who needs to explain to a team why harness engineering differs from model improvement.
 avoid_if:
-  - "You need a supported, versioned runtime with releases and compatibility guarantees, because this is teaching material.
-"
-  - "You are shipping anything to users, because nothing here is hardened for untrusted input or production traffic."
-  - "You want to compare agent frameworks, because the point is to build one by hand rather than to choose between them."
+  - 'You need a supported, versioned runtime with releases and compatibility guarantees, because this is teaching material. '
+  - You are shipping anything to users, because nothing here is hardened for untrusted input or production traffic.
+  - You want to compare agent frameworks, because the point is to build one by hand rather than to choose between them.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 77745, MIT, Python, last commit 2026-09-28, topics, homepage. From README: self-play milestone citations, model-as-driver and harness-as-vehicle framing, Bash and Python implementation, multilingual READMEs. Individual build stages were not read or run."
+enrichment_notes: 'API-verified: stars 77745, MIT, Python, last commit 2026-09-28, topics, homepage. From README: self-play milestone citations, model-as-driver and harness-as-vehicle framing, Bash and Python implementation, multilingual READMEs. Individual build stages were not read or run.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

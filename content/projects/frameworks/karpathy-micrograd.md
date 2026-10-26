@@ -1,52 +1,61 @@
 ---
 id: karpathy-micrograd
-name: "micrograd"
+name: micrograd
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: libraries
-description: "Tiny scalar autograd engine plus neural-network layers with a PyTorch-shaped API, in a few hundred lines"
-github_url: "https://github.com/karpathy/micrograd"
-license: "MIT"
+description: Tiny scalar autograd engine plus neural-network layers with a PyTorch-shaped API, in a few hundred lines
+github_url: https://github.com/karpathy/micrograd
+license: MIT
 primary_language: Python
-org_or_maintainer: "karpathy"
-tags: [pytorch]
+org_or_maintainer: karpathy
+tags:
+  - pytorch
 maturity: experimental
 cost_model: open-source
-github_stars: 17686
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-08-03"
+github_stars: 18066
+github_stars_last_30d: 380
+trending_score: 63
+last_commit: '2026-08-03'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "A few hundred lines of autograd and neural-net code with a PyTorch-shaped API — the fastest correct way to understand backprop before touching a large framework."
+  - A few hundred lines of autograd and neural-net code with a PyTorch-shaped API — the fastest correct way to understand backprop before touching a large framework.
 best_for:
-  - "You are an engineer who can use PyTorch but cannot yet explain why a broadcasted sum and a mean loss produce the right parameter gradient, and want to see it end to end."
-  - "You are designing a custom autodiff or a new framework layer and need a known-correct reference implementation to test your derivative code against."
-  - "You are writing a teaching exercise, workshop, or onboarding doc and need a codebase short enough for a reader to hold in their head."
+  - You are an engineer who can use PyTorch but cannot yet explain why a broadcasted sum and a mean loss produce the right parameter gradient, and want to see it end to end.
+  - You are designing a custom autodiff or a new framework layer and need a known-correct reference implementation to test your derivative code against.
+  - You are writing a teaching exercise, workshop, or onboarding doc and need a codebase short enough for a reader to hold in their head.
 avoid_if:
-  - "You need performance, because every value is a Python scalar in a graph of Python objects and a small MLP will be orders of magnitude slower than torch."
-  - "You need GPU support, mixed precision, or any distributed training capability, none of which exist in this codebase."
-  - "You need a maintained library with a compatibility guarantee, since this is teaching code whose last commit is over a year old and whose API exists to be read."
+  - You need performance, because every value is a Python scalar in a graph of Python objects and a small MLP will be orders of magnitude slower than torch.
+  - You need GPU support, mixed precision, or any distributed training capability, none of which exist in this codebase.
+  - You need a maintained library with a compatibility guarantee, since this is teaching code whose last commit is over a year old and whose API exists to be read.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (17686), MIT license, last commit 2026-08-03, Python as primary language and the topic list were API-verified; the repo has no homepage field. The engine design, layer set, optimizers, and API surface come from reading the source and the official repo; the performance order-of-magnitude claim is an engineering estimate, not a measured benchmark for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (17686), MIT license, last commit 2026-08-03, Python as primary language and the topic list were API-verified; the repo has no homepage field. The engine design, layer set, optimizers, and API surface come from reading the source and the official repo; the performance order-of-magnitude claim is an engineering estimate, not a measured benchmark for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/karpathy/micrograd", "date": "2026-09-28", "description": "17,686 stars and last commit 2026-08-03 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/karpathy/micrograd
+    date: '2026-09-28'
+    description: 17,686 stars and last commit 2026-08-03 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

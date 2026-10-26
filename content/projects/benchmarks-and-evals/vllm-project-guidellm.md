@@ -1,52 +1,65 @@
 ---
 id: vllm-project-guidellm
-name: "guidellm"
+name: guidellm
 version_tracked: null
 artifact_type: tool
 category: evaluation
 subcategory: evaluation
-description: "Benchmark driver that sweeps concurrency against a live endpoint and reports the first-token and inter-token latency a real user waits on"
-github_url: "https://github.com/vllm-project/guidellm"
-license: "Apache-2.0"
+description: Benchmark driver that sweeps concurrency against a live endpoint and reports the first-token and inter-token latency a real user waits on
+github_url: https://github.com/vllm-project/guidellm
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "vllm-project"
-tags: [benchmark, efficiency, inference, evaluation]
+org_or_maintainer: vllm-project
+tags:
+  - benchmark
+  - efficiency
+  - inference
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 1652
-github_stars_last_30d: 0
-trending_score: 26
-last_commit: "2026-09-28"
-docs_url: "https://vllm-project.github.io/guidellm/"
+github_stars: 1725
+github_stars_last_30d: 73
+trending_score: 39
+last_commit: '2026-10-26'
+docs_url: https://vllm-project.github.io/guidellm/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Serving-oriented inference benchmark that measures time-to-first-token and inter-token latency under realistic concurrency, rather than offline tokens-per-second."
+  - Serving-oriented inference benchmark that measures time-to-first-token and inter-token latency under realistic concurrency, rather than offline tokens-per-second.
 best_for:
-  - "You are choosing between serving configurations and need to know which one improves time to first token at your real concurrency."
-  - "You are sizing a deployment and need the point on the latency-throughput curve where your user-facing SLO breaks."
-  - "You want to compare model or quantization choices under a request pattern rather than a synthetic fixed-length prompt."
+  - You are choosing between serving configurations and need to know which one improves time to first token at your real concurrency.
+  - You are sizing a deployment and need the point on the latency-throughput curve where your user-facing SLO breaks.
+  - You want to compare model or quantization choices under a request pattern rather than a synthetic fixed-length prompt.
 avoid_if:
-  - "You need output quality measured, since this measures serving performance and says nothing about what the model produced."
-  - "You are benchmarking training throughput or a training kernel, where this is the wrong tool entirely."
-  - "You have a single prompt and no concurrency, since the interesting behaviour only appears once requests overlap."
+  - You need output quality measured, since this measures serving performance and says nothing about what the model produced.
+  - You are benchmarking training throughput or a training kernel, where this is the wrong tool entirely.
+  - You have a single prompt and no concurrency, since the interesting behaviour only appears once requests overlap.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (1652), Apache-2.0 license, last commit 2026-09-28, and primary language Python were read from the GitHub API; the topics array is empty upstream. Time-to-first-token and inter-token latency metrics, concurrency sweeping, request profiles, OpenAI-compatible targeting, and offline mode come from the official README and docs; no server was started and no benchmark was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (1652), Apache-2.0 license, last commit 2026-09-28, and primary language Python were read from the GitHub API; the topics array is empty upstream. Time-to-first-token and inter-token latency metrics, concurrency sweeping, request profiles, OpenAI-compatible targeting, and offline mode come from the official README and docs; no server was started and no benchmark was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/vllm-project/guidellm", "date": "2026-09-28", "description": "1,652 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/vllm-project/guidellm
+    date: '2026-09-28'
+    description: 1,652 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

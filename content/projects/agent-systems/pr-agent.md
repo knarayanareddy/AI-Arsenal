@@ -1,50 +1,69 @@
 ---
 id: pr-agent
-name: "PR-Agent"
+name: PR-Agent
 version_tracked: null
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff"
-github_url: "https://github.com/The-PR-Agent/pr-agent"
-license: "MIT"
+description: Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
+github_url: https://github.com/The-PR-Agent/pr-agent
+license: MIT
 primary_language: Python
-org_or_maintainer: "The PR-Agent project"
-tags: [code-gen, agents, evaluation, guardrails]
+org_or_maintainer: The PR-Agent project
+tags:
+  - code-gen
+  - agents
+  - evaluation
+  - guardrails
 maturity: production
 cost_model: open-source
-github_stars: 12832
-github_stars_last_30d: 0
-trending_score: 58
-last_commit: "2026-09-03"
-docs_url: "https://github.com/The-PR-Agent/pr-agent#readme"
+github_stars: 13617
+github_stars_last_30d: 785
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/The-PR-Agent/pr-agent#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, community-driven, research-origin]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "The original open pull-request reviewer: a bounded, command-driven agent that turns a diff into a description, a review, and concrete inline suggestions rather than writing code unattended."
+  - 'The original open pull-request reviewer: a bounded, command-driven agent that turns a diff into a description, a review, and concrete inline suggestions rather than writing code unattended.'
 best_for:
-  - "You want automated first-pass review on every pull request — description, walkthrough, and risk notes — without granting an agent write access to the repository"
-  - "You run a mixed-provider estate and want the reviewer to work against OpenAI, Anthropic, or a local Ollama endpoint behind one configuration"
+  - You want automated first-pass review on every pull request — description, walkthrough, and risk notes — without granting an agent write access to the repository
+  - You run a mixed-provider estate and want the reviewer to work against OpenAI, Anthropic, or a local Ollama endpoint behind one configuration
 avoid_if:
-  - "You need the review to be deterministic or reproducible for compliance sign-off; model-generated findings vary between runs on identical diffs"
-  - "Your repository is huge or your diffs are very large, where diff-token budgets force truncation and the reviewer silently sees only part of the change"
+  - You need the review to be deterministic or reproducible for compliance sign-off; model-generated findings vary between runs on identical diffs
+  - Your repository is huge or your diffs are very large, where diff-token budgets force truncation and the reviewer silently sees only part of the change
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [aider, claude-code]
-integrates_with: [ollama, langfuse]
+alternatives:
+  - aider
+  - claude-code
+integrates_with:
+  - ollama
+  - langfuse
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (12,832), forks (1,797), licence (MIT), language (Python), created 2023-07-05, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The canonical repo resolves to The-PR-Agent/pr-agent; qodo-ai/pr-agent redirects there."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (12,832), forks (1,797), licence (MIT), language (Python), created 2023-07-05, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The canonical repo resolves to The-PR-Agent/pr-agent; qodo-ai/pr-agent redirects there.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/The-PR-Agent/pr-agent", "date": "2026-09-03", "description": "12,832 stars on GitHub as of 2026-09-03 (GitHub API); the longest-running open PR reviewer surveyed, created 2023-07-05"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/The-PR-Agent/pr-agent
+    date: '2026-09-03'
+    description: 12,832 stars on GitHub as of 2026-09-03 (GitHub API); the longest-running open PR reviewer surveyed, created 2023-07-05
 featured: false
 status: active
 ---

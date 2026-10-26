@@ -1,46 +1,70 @@
 ---
 id: camel-ai
-name: "CAMEL"
+name: CAMEL
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Apache-2.0 multi-agent research framework with ChatAgent, agent societies, synthetic data generation and benchmark suites for studying agent behaviour at scale"
-github_url: "https://github.com/camel-ai/camel"
+description: Apache-2.0 multi-agent research framework with ChatAgent, agent societies, synthetic data generation and benchmark suites for studying agent behaviour at scale
+github_url: https://github.com/camel-ai/camel
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "CAMEL-AI.org"
-tags: [agents, orchestration, research, llm]
+org_or_maintainer: CAMEL-AI.org
+tags:
+  - agents
+  - orchestration
+  - research
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 17791
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-20"
-docs_url: "https://docs.camel-ai.org/"
+github_stars: 17979
+github_stars_last_30d: 188
+trending_score: 30
+last_commit: '2026-10-19'
+docs_url: https://docs.camel-ai.org/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2303.17760"
+paper_url: https://arxiv.org/abs/2303.17760
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [research-origin, community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - research-origin
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The oldest living multi-agent framework (the March 2023 CAMEL paper predates AutoGen and CrewAI) with a research identity: finding the scaling laws of agents by simulating million-agent societies, generating synthetic training data, and spawning the OWL and Loong projects."
-best_for: ["You are running a multi-agent study and you need a framework where a society of agents can hold real state, exchange messages and be scored on a repeatable benchmark.", "You need synthetic instruction data at volume, because the data-generation module ships CoT generation, Self-Instruct, Source2Synth and a self-improving loop rather than a hand-rolled prompt loop.", "You are building an application where several specialised agents must divide a job, and you would rather assemble a Workforce or RolePlaying society than write your own message router."]
-avoid_if: ["You want a thin agent loop for one job, because CAMEL ships a broad research surface with societies, datagen, memory, retrievers, interpreters, storages and benchmarks, and most of that will be dead weight.", "You cannot point it at a hosted model, because the quickstart resolves models through ModelFactory against provider platform types and the example sets an OpenAI key.", "You need a small, well-understood dependency with a narrow blast radius, because the project is explicitly organised around scaling laws of agents and its module set is large and evolving."]
+  - 'The oldest living multi-agent framework (the March 2023 CAMEL paper predates AutoGen and CrewAI) with a research identity: finding the scaling laws of agents by simulating million-agent societies, generating synthetic training data, and spawning the OWL and Loong projects.'
+best_for:
+  - You are running a multi-agent study and you need a framework where a society of agents can hold real state, exchange messages and be scored on a repeatable benchmark.
+  - You need synthetic instruction data at volume, because the data-generation module ships CoT generation, Self-Instruct, Source2Synth and a self-improving loop rather than a hand-rolled prompt loop.
+  - You are building an application where several specialised agents must divide a job, and you would rather assemble a Workforce or RolePlaying society than write your own message router.
+avoid_if:
+  - You want a thin agent loop for one job, because CAMEL ships a broad research surface with societies, datagen, memory, retrievers, interpreters, storages and benchmarks, and most of that will be dead weight.
+  - You cannot point it at a hosted model, because the quickstart resolves models through ModelFactory against provider platform types and the example sets an OpenAI key.
+  - You need a small, well-understood dependency with a narrow blast radius, because the project is explicitly organised around scaling laws of agents and its module set is large and evolving.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [autogen, crewai, metagpt]
+alternatives:
+  - autogen
+  - crewai
+  - metagpt
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (17,343), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (17,343), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/camel-ai/camel", "date": "2026-07-08", "description": "17,343 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/camel-ai/camel
+    date: '2026-07-08'
+    description: 17,343 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

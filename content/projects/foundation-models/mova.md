@@ -6,39 +6,44 @@ artifact_type: library
 category: llms
 subcategory: open-source-models
 description: An OpenMOSS generative model that denoises video and audio jointly through asymmetric towers joined by cross-attention
-github_url: "https://github.com/OpenMOSS/MOVA"
+github_url: https://github.com/OpenMOSS/MOVA
 license: Apache-2.0
 primary_language: Python
-tags: [multimodal, voice]
+tags:
+  - multimodal
+  - voice
 maturity: beta
 cost_model: open-source
-github_stars: 1118
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://mosi.cn/models/mova"
+github_stars: 1131
+github_stars_last_30d: 13
+trending_score: 24
+last_commit: '2026-10-26'
+docs_url: https://mosi.cn/models/mova
 demo_url: null
 phase: foundation-model
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Replaces the two-stage video-then-audio cascade with one bimodal model, removing lip-sync drift and sound-effect mismatch as a pipeline artefact."
+  - Replaces the two-stage video-then-audio cascade with one bimodal model, removing lip-sync drift and sound-effect mismatch as a pipeline artefact.
 best_for:
-  - "You are producing short clips where lip-sync matters, and a cascaded video model plus a separate audio model keeps drifting apart."
-  - "You need environment-aware sound effects that match what is visibly happening in the frame, and a silent generator forces you to add audio afterwards."
-  - "You want to fine-tune a video-audio generator on your own domain with LoRA and you need training code and scripts rather than weights alone."
+  - You are producing short clips where lip-sync matters, and a cascaded video model plus a separate audio model keeps drifting apart.
+  - You need environment-aware sound effects that match what is visibly happening in the frame, and a silent generator forces you to add audio afterwards.
+  - You want to fine-tune a video-audio generator on your own domain with LoRA and you need training code and scripts rather than weights alone.
 avoid_if:
-  - "You need a photorealistic or broadcast-grade image, since MOVA's headline claim is joint audio-video fidelity rather than single-frame image quality against Sora 2, Veo 3 or Kling."
-  - "You have no GPU budget for diffusion, because joint video-audio generation is expensive per clip and the model is not a lightweight fine-tune target."
-  - "You need a commercial licence cleared for a product, since the code and weights are released but a hosted API and a separate usage agreement also exist upstream."
+  - You need a photorealistic or broadcast-grade image, since MOVA's headline claim is joint audio-video fidelity rather than single-frame image quality against Sora 2, Veo 3 or Kling.
+  - You have no GPU budget for diffusion, because joint video-audio generation is expensive per clip and the model is not a lightweight fine-tune target.
+  - You need a commercial licence cleared for a product, since the code and weights are released but a hosted API and a separate usage agreement also exist upstream.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Architecture description, benchmark size, release dates and ComfyUI/API availability are read from the README; no generation was run, and the lip-sync and sound-effect quality claims are the authors' reported results."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Architecture description, benchmark size, release dates and ComfyUI/API availability are read from the README; no generation was run, and the lip-sync and sound-effect quality claims are the authors' reported results.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

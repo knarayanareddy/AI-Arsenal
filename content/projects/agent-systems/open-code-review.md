@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "alibaba"
+org_or_maintainer: alibaba
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 6085
+trending_score: 55
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: open-code-review
-name: "Open Code Review"
+name: Open Code Review
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments"
-github_url: "https://github.com/alibaba/open-code-review"
+description: Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments
+github_url: https://github.com/alibaba/open-code-review
 license: Apache-2.0
 primary_language: Go
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 42251
-last_commit: "2026-09-28"
-docs_url: "https://open-codereview.ai"
+github_stars: 48336
+last_commit: '2026-10-22'
+docs_url: https://open-codereview.ai
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Deterministic-plus-agent CLI for token-efficient AI code review"
-  - "Alibaba production-origin review tool with diff and whole-file modes"
-best_for: ["You are a platform team standardising AI code review across many repositories and you want a tool that already ran inside a large engineering organisation for two years.", "You need precise inline comments on a pull request rather than a summary, because the tool targets line-level placement and can read full files for context.", "Your codebase has language-specific defect classes you want caught deterministically, since the built-in ruleset covers null pointer exceptions, thread safety, XSS and SQL injection."]
-avoid_if: ["You need a hosted code review service with a managed dashboard, because this is a CLI you run and configure yourself with a model endpoint.", "You are reviewing an entire legacy codebase rather than a change, because the primary mode is diff review even though a full-file scan mode exists.", "Your workflow requires the tool to post review comments directly to your forge, because the documented surface is CLI output you route into your own process."]
-enrichment_notes: "The README reports internal Alibaba production use and a benchmark with a precision/recall trade-off; independent validation is still needed. Draft pending review."
+  - Deterministic-plus-agent CLI for token-efficient AI code review
+  - Alibaba production-origin review tool with diff and whole-file modes
+best_for:
+  - You are a platform team standardising AI code review across many repositories and you want a tool that already ran inside a large engineering organisation for two years.
+  - You need precise inline comments on a pull request rather than a summary, because the tool targets line-level placement and can read full files for context.
+  - Your codebase has language-specific defect classes you want caught deterministically, since the built-in ruleset covers null pointer exceptions, thread safety, XSS and SQL injection.
+avoid_if:
+  - You need a hosted code review service with a managed dashboard, because this is a CLI you run and configure yourself with a model endpoint.
+  - You are reviewing an entire legacy codebase rather than a change, because the primary mode is diff review even though a full-file scan mode exists.
+  - Your workflow requires the tool to post review comments directly to your forge, because the documented surface is CLI output you route into your own process.
+enrichment_notes: The README reports internal Alibaba production use and a benchmark with a precision/recall trade-off; independent validation is still needed. Draft pending review.
 ---
 
 ## Overview

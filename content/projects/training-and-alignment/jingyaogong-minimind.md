@@ -1,52 +1,63 @@
 ---
 id: jingyaogong-minimind
-name: "minimind"
+name: minimind
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: fine-tuning
-description: "Apache-2.0 minimal LLM codebase that pretrains and instruction-tunes a 64M-parameter model on one consumer GPU in roughly two hours"
-github_url: "https://github.com/jingyaogong/minimind"
-license: "Apache-2.0"
+description: Apache-2.0 minimal LLM codebase that pretrains and instruction-tunes a 64M-parameter model on one consumer GPU in roughly two hours
+github_url: https://github.com/jingyaogong/minimind
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "jingyaogong"
-tags: [llm, pytorch, fine-tuning]
+org_or_maintainer: jingyaogong
+tags:
+  - llm
+  - pytorch
+  - fine-tuning
 maturity: beta
 cost_model: open-source
-github_stars: 62810
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-09-22"
-docs_url: "https://jingyaogong.github.io/minimind"
+github_stars: 64443
+github_stars_last_30d: 1633
+trending_score: 73
+last_commit: '2026-09-22'
+docs_url: https://jingyaogong.github.io/minimind
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language]
-relation_to_stack: [study-and-reference]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Minimal end-to-end LLM training codebase that fits a 64M-parameter model on a single consumer GPU in about two hours — the reference for reading a full pretraining loop without framework noise."
+  - Minimal end-to-end LLM training codebase that fits a 64M-parameter model on a single consumer GPU in about two hours — the reference for reading a full pretraining loop without framework noise.
 best_for:
-  - "You are an engineer joining an LLM project and need to understand the full pretraining loop - data packing, RoPE, grouped-query attention, loss scaling - without first learning a framework's abstractions."
-  - "2. You are building a curriculum or workshop and need a codebase small enough for a reader to hold in their head and run on hardware a student owns."
-  - "3. You are prototyping a new architectural variant and want a baseline you can diff against, since the model file is a few hundred readable lines rather than a generated config."
+  - You are an engineer joining an LLM project and need to understand the full pretraining loop - data packing, RoPE, grouped-query attention, loss scaling - without first learning a framework's abstractions.
+  - 2. You are building a curriculum or workshop and need a codebase small enough for a reader to hold in their head and run on hardware a student owns.
+  - 3. You are prototyping a new architectural variant and want a baseline you can diff against, since the model file is a few hundred readable lines rather than a generated config.
 avoid_if:
-  - "You need a competitive model, because a 64M-parameter model trained on a small corpus is a pedagogical artifact and will not hold a real workload."
-  - "2. You need distributed training, FSDP, or ZeRO, because the entire point is a single-device script with no sharding code to read or debug."
-  - "3. You need a supported, maintained path to production, since the project follows upstream model releases closely and its breaking changes track paper publication rather than release cadence."
+  - You need a competitive model, because a 64M-parameter model trained on a small corpus is a pedagogical artifact and will not hold a real workload.
+  - 2. You need distributed training, FSDP, or ZeRO, because the entire point is a single-device script with no sharding code to read or debug.
+  - 3. You need a supported, maintained path to production, since the project follows upstream model releases closely and its breaking changes track paper publication rather than release cadence.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 62810 stars, Apache-2.0 license, Python primary language, last commit 2026-09-22, only 2 GitHub topics. Architecture details (RMSNorm, RoPE, GQA, SwiGLU, MoE and distillation scripts) come from the repository README and code layout; the two-hour 64M training claim is the project's own README figure and was not reproduced."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 62810 stars, Apache-2.0 license, Python primary language, last commit 2026-09-22, only 2 GitHub topics. Architecture details (RMSNorm, RoPE, GQA, SwiGLU, MoE and distillation scripts) come from the repository README and code layout; the two-hour 64M training claim is the project''s own README figure and was not reproduced.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/jingyaogong/minimind", "date": "2026-09-28", "description": "62,810 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/jingyaogong/minimind
+    date: '2026-09-28'
+    description: 62,810 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

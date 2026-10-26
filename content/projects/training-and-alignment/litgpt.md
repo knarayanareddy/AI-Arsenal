@@ -1,50 +1,66 @@
 ---
 id: litgpt
-name: "LitGPT"
+name: LitGPT
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale"
-github_url: "https://github.com/Lightning-AI/litgpt"
-license: "Apache-2.0"
+description: Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
+github_url: https://github.com/Lightning-AI/litgpt
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Lightning AI"
-tags: [fine-tuning, training, llm]
+org_or_maintainer: Lightning AI
+tags:
+  - fine-tuning
+  - training
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 13728
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-10-13"
-docs_url: "https://github.com/Lightning-AI/litgpt/tree/main/tutorials"
+github_stars: 13729
+github_stars_last_30d: 1
+trending_score: 25
+last_commit: '2026-10-26'
+docs_url: https://github.com/Lightning-AI/litgpt/tree/main/tutorials
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language]
-relation_to_stack: [build-on-top, fork-and-adapt, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - fork-and-adapt
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Readable single-file model implementations plus production training recipes: LitGPT occupies the space between educational nanoGPT-style code and heavyweight training frameworks, with each architecture reimplemented from scratch and no abstraction layers to dig through."
+  - 'Readable single-file model implementations plus production training recipes: LitGPT occupies the space between educational nanoGPT-style code and heavyweight training frameworks, with each architecture reimplemented from scratch and no abstraction layers to dig through.'
 best_for:
-  - "You want to actually read and modify the model code you train — every architecture is a from-scratch single-file implementation, not a wrapper over transformers"
-  - "You need validated pretraining/fine-tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing"
+  - You want to actually read and modify the model code you train — every architecture is a from-scratch single-file implementation, not a wrapper over transformers
+  - You need validated pretraining/fine-tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing
 avoid_if:
-  - "You need day-one support for every new model release — the from-scratch implementation approach means new architectures land slower than in transformers-based trainers"
-  - "You want a YAML-only, no-code fine-tuning experience — Axolotl or LLaMA-Factory are more config-driven"
+  - You need day-one support for every new model release — the from-scratch implementation approach means new architectures land slower than in transformers-based trainers
+  - You want a YAML-only, no-code fine-tuning experience — Axolotl or LLaMA-Factory are more config-driven
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [axolotl, llamafactory, torchtune]
+alternatives:
+  - axolotl
+  - llamafactory
+  - torchtune
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Re-verified 2026-10-25 via the GitHub API (13,728 stars, 317 open issues, last push 2026-10-13) and against the README model table, which is the evidence for the staleness limitation. Sections rewritten from the README and tutorials."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: Re-verified 2026-10-25 via the GitHub API (13,728 stars, 317 open issues, last push 2026-10-13) and against the README model table, which is the evidence for the staleness limitation. Sections rewritten from the README and tutorials.
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Lightning-AI/litgpt", "date": "2026-10-25", "description": "13,728 stars and 317 open issues on GitHub as of 2026-10-25 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Lightning-AI/litgpt
+    date: '2026-10-25'
+    description: 13,728 stars and 317 open issues on GitHub as of 2026-10-25 (GitHub API)
 featured: false
 status: active
 ---

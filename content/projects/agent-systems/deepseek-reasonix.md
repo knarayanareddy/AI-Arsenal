@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways"
-github_url: "https://github.com/esengine/DeepSeek-Reasonix"
+description: Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways
+github_url: https://github.com/esengine/DeepSeek-Reasonix
 license: MIT
 primary_language: Go
-tags: [code-gen, llm, caching, training]
+tags:
+  - code-gen
+  - llm
+  - caching
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 35704
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/esengine/DeepSeek-Reasonix/blob/main/docs/ARCHITECTURE.md"
+github_stars: 35970
+github_stars_last_30d: 266
+trending_score: 44
+last_commit: '2026-10-26'
+docs_url: https://github.com/esengine/DeepSeek-Reasonix/blob/main/docs/ARCHITECTURE.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Keeps DeepSeek's cacheable prefix intact across long runs so a session left open keeps costing cents, with per-turn checkpoints to make that safe."
+  - Keeps DeepSeek's cacheable prefix intact across long runs so a session left open keeps costing cents, with per-turn checkpoints to make that safe.
 best_for:
-  - "You want to leave a long agent run going overnight and you need the token bill to stay flat rather than grow as context accumulates."
-  - "You want one engine reachable from a terminal, a desktop app, a browser and your editor over ACP, so the same session does not fragment across surfaces."
-  - "You need plan mode, an explicit permission stack and a workspace sandbox before an agent is allowed to write to your repo unattended."
+  - You want to leave a long agent run going overnight and you need the token bill to stay flat rather than grow as context accumulates.
+  - You want one engine reachable from a terminal, a desktop app, a browser and your editor over ACP, so the same session does not fragment across surfaces.
+  - You need plan mode, an explicit permission stack and a workspace sandbox before an agent is allowed to write to your repo unattended.
 avoid_if:
-  - "You need multi-provider support, because the README frames cache stability as the reason the tool is DeepSeek-only rather than a portable feature."
-  - "You installed the npm package expecting current behaviour, because the TypeScript 0.x line is in maintenance mode and development moved to a Go rewrite on a separate default branch."
-  - "You want a general assistant for chat and non-coding tasks, because the subcommands are scoped to code, with plain chat as a deliberately tool-free aside."
+  - You need multi-provider support, because the README frames cache stability as the reason the tool is DeepSeek-only rather than a portable feature.
+  - You installed the npm package expecting current behaviour, because the TypeScript 0.x line is in maintenance mode and development moved to a Go rewrite on a separate default branch.
+  - You want a general assistant for chat and non-coding tasks, because the subcommands are scoped to code, with plain chat as a deliberately tool-free aside.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, subcommands, ACP support, maintenance-mode notice and the 435M-token case-study figures are read from the official README and architecture doc; the cost case study was not independently reproduced."
+enrichment_notes: Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, subcommands, ACP support, maintenance-mode notice and the 435M-token case-study figures are read from the official README and architecture doc; the cost case study was not independently reproduced.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

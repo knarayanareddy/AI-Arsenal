@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Windows-only Python toolset driving WPS, Microsoft Office, Zotero, Illustrator and Photoshop through 47 CLI commands over COM automation"
-github_url: "https://github.com/yb2460/harness-anything"
+description: Windows-only Python toolset driving WPS, Microsoft Office, Zotero, Illustrator and Photoshop through 47 CLI commands over COM automation
+github_url: https://github.com/yb2460/harness-anything
 license: MIT
 primary_language: Python
-tags: [edge, retrieval]
+tags:
+  - edge
+  - retrieval
 maturity: experimental
 cost_model: open-source
-github_stars: 2110
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-26"
-docs_url: "https://github.com/yb2460/harness-anything#readme"
+github_stars: 2581
+github_stars_last_30d: 471
+trending_score: 61
+last_commit: '2026-10-09'
+docs_url: https://github.com/yb2460/harness-anything#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives an agent reliable command surfaces for desktop office and design apps that have no usable API, using the COM interfaces those apps already expose."
+  - Gives an agent reliable command surfaces for desktop office and design apps that have no usable API, using the COM interfaces those apps already expose.
 best_for:
-  - "You are on Windows and you need an agent to build a real .pptx or .xlsx through WPS or Microsoft Office rather than generating an HTML mock-up."
-  - "You do literature work in Zotero and you want review, writing and figure skills driven from the command line against your real library."
-  - "You want vector or raster work in Illustrator or Photoshop automated from an agent, where the only stable programmatic interface is COM automation."
+  - You are on Windows and you need an agent to build a real .pptx or .xlsx through WPS or Microsoft Office rather than generating an HTML mock-up.
+  - You do literature work in Zotero and you want review, writing and figure skills driven from the command line against your real library.
+  - You want vector or raster work in Illustrator or Photoshop automated from an agent, where the only stable programmatic interface is COM automation.
 avoid_if:
-  - "You are on macOS or Linux, because every harness here depends on Windows COM automation through pywin32 and none of it will run elsewhere."
-  - "You do not have WPS Office, Microsoft Office, Zotero or Adobe installed, because the harnesses drive those applications rather than a file format directly."
-  - "You need a maintained, tested library, because the repository presents itself as a collection of CLI tools and sample projects with a single open issue, not as a versioned library."
+  - You are on macOS or Linux, because every harness here depends on Windows COM automation through pywin32 and none of it will run elsewhere.
+  - You do not have WPS Office, Microsoft Office, Zotero or Adobe installed, because the harnesses drive those applications rather than a file format directly.
+  - You need a maintained, tested library, because the repository presents itself as a collection of CLI tools and sample projects with a single open issue, not as a versioned library.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Command counts (47 office, 27 Zotero skills), COM chain, ProgID switching, element types and prerequisites are read from the official README; the harnesses require Windows and were not run."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Command counts (47 office, 27 Zotero skills), COM chain, ProgID switching, element types and prerequisites are read from the official README; the harnesses require Windows and were not run.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

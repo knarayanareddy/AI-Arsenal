@@ -1,52 +1,62 @@
 ---
 id: open-mmlab-mmcv
-name: "mmcv"
+name: mmcv
 version_tracked: null
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "Vision operator library and config-runner stack that the OpenMMLab detection and segmentation projects are built on"
-github_url: "https://github.com/open-mmlab/mmcv"
-license: "Apache-2.0"
+description: Vision operator library and config-runner stack that the OpenMMLab detection and segmentation projects are built on
+github_url: https://github.com/open-mmlab/mmcv
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "open-mmlab"
-tags: [vision, pytorch]
+org_or_maintainer: open-mmlab
+tags:
+  - vision
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 6475
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://mmcv.readthedocs.io/en/latest/"
+github_stars: 6483
+github_stars_last_30d: 8
+trending_score: 34
+last_commit: '2026-09-28'
+docs_url: https://mmcv.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "OpenMMLab vision foundation whose operator library and config system made research code reproducible across detection, segmentation, and generation tasks."
+  - OpenMMLab vision foundation whose operator library and config system made research code reproducible across detection, segmentation, and generation tasks.
 best_for:
-  - "You are maintaining an OpenMMLab-style detection or segmentation codebase and need mmcv and mmengine to keep the runner, config, and checkpoint machinery working."
-  - "You need a specific vision operator such as deformable convolution, rotated NMS, or point-based sampling with a tested implementation rather than your own."
-  - "You want the config-driven experiment system that OpenMMLab algorithms are written against, so a paper's reported recipe can be reproduced exactly."
+  - You are maintaining an OpenMMLab-style detection or segmentation codebase and need mmcv and mmengine to keep the runner, config, and checkpoint machinery working.
+  - You need a specific vision operator such as deformable convolution, rotated NMS, or point-based sampling with a tested implementation rather than your own.
+  - You want the config-driven experiment system that OpenMMLab algorithms are written against, so a paper's reported recipe can be reproduced exactly.
 avoid_if:
-  - "You are starting a new detection project from scratch, because the API surface is enormous and only worth its weight if you are already inside the OpenMMLab ecosystem."
-  - "You need inference on a GPU without a matching build, since the compiled operators are ABI-tied to your exact torch and CUDA versions."
-  - "Your team prefers Hugging Face Transformers or a plain PyTorch training loop, where the registry and config machinery adds two abstractions to learn for no benefit."
+  - You are starting a new detection project from scratch, because the API surface is enormous and only worth its weight if you are already inside the OpenMMLab ecosystem.
+  - You need inference on a GPU without a matching build, since the compiled operators are ABI-tied to your exact torch and CUDA versions.
+  - Your team prefers Hugging Face Transformers or a plain PyTorch training loop, where the registry and config machinery adds two abstractions to learn for no benefit.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (6475), Apache-2.0 license, last commit 2026-09-28, and primary language Python were read from the GitHub API; the topics array is empty upstream. The 2.x split to mmengine, the MMCV_WITH_OPS build flag, and the operator list come from the official README and hosted docs; no build or operator test was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (6475), Apache-2.0 license, last commit 2026-09-28, and primary language Python were read from the GitHub API; the topics array is empty upstream. The 2.x split to mmengine, the MMCV_WITH_OPS build flag, and the operator list come from the official README and hosted docs; no build or operator test was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/open-mmlab/mmcv", "date": "2026-09-28", "description": "6,475 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/open-mmlab/mmcv
+    date: '2026-09-28'
+    description: 6,475 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

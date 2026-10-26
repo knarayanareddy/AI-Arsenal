@@ -1,52 +1,61 @@
 ---
 id: spotify-annoy
-name: "annoy"
+name: annoy
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "Read-only memory-mapped approximate nearest-neighbour index built on a forest of random-projection trees"
-github_url: "https://github.com/spotify/annoy"
-license: "Apache-2.0"
+description: Read-only memory-mapped approximate nearest-neighbour index built on a forest of random-projection trees
+github_url: https://github.com/spotify/annoy
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "spotify"
-tags: [embeddings, rag]
+org_or_maintainer: spotify
+tags:
+  - embeddings
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 14304
-github_stars_last_30d: 0
-trending_score: 24
-last_commit: "2025-10-29"
+github_stars: 14325
+github_stars_last_30d: 21
+trending_score: 35
+last_commit: '2025-10-29'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Memory-mapped approximate nearest-neighbour index whose read-only mmap file model makes static vector search cheap to ship and serve."
+  - Memory-mapped approximate nearest-neighbour index whose read-only mmap file model makes static vector search cheap to ship and serve.
 best_for:
-  - "You need read-only vector search over a fixed corpus and want a single file that many processes can memory-map instead of a running database service."
-  - "You want to prototype or ship a recommender or similarity search where the index is rebuilt occasionally and staleness is acceptable."
-  - "You are fitting an index into a memory-constrained container and want a simple, dependency-light C++ library with Python and other language bindings."
+  - You need read-only vector search over a fixed corpus and want a single file that many processes can memory-map instead of a running database service.
+  - You want to prototype or ship a recommender or similarity search where the index is rebuilt occasionally and staleness is acceptable.
+  - You are fitting an index into a memory-constrained container and want a simple, dependency-light C++ library with Python and other language bindings.
 avoid_if:
-  - "You need frequent inserts, deletes, or updates, because an Annoy index is append-and-rebuild and is not built for mutation."
-  - "You need metadata filtering, hybrid search, or a query language, since the library returns only neighbours and distances."
-  - "Recall or latency at large scale is critical, since a server-grade engine with better algorithms and a maintained index will beat it on both."
+  - You need frequent inserts, deletes, or updates, because an Annoy index is append-and-rebuild and is not built for mutation.
+  - You need metadata filtering, hybrid search, or a query language, since the library returns only neighbours and distances.
+  - Recall or latency at large scale is critical, since a server-grade engine with better algorithms and a maintained index will beat it on both.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (14304), Apache-2.0 license, last commit 2025-10-29, C++ as primary language and the topic list were API-verified; the repo has no homepage field. The random-projection tree construction, search path, and file layout are from reading the repository source; the recall comparison against hnswlib and ScaNN reflects published benchmarks, not runs performed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (14304), Apache-2.0 license, last commit 2025-10-29, C++ as primary language and the topic list were API-verified; the repo has no homepage field. The random-projection tree construction, search path, and file layout are from reading the repository source; the recall comparison against hnswlib and ScaNN reflects published benchmarks, not runs performed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/spotify/annoy", "date": "2026-09-28", "description": "14,304 stars and last commit 2025-10-29 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/spotify/annoy
+    date: '2026-09-28'
+    description: 14,304 stars and last commit 2025-10-29 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 19
+trending_score: 17
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: Deep Lake
 artifact_type: platform
 category: rag
 subcategory: vector-databases
-description: "Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage"
-github_url: "https://github.com/activeloopai/deeplake"
+description: Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage
+github_url: https://github.com/activeloopai/deeplake
 license: Apache-2.0
 primary_language: C++
-tags: [multimodal, embeddings]
+tags:
+  - multimodal
+  - embeddings
 maturity: production
 cost_model: freemium
-github_stars: 9243
-last_commit: "2026-05-21"
-docs_url: "https://docs.deeplake.ai/latest/"
+github_stars: 9262
+last_commit: '2026-05-21'
+docs_url: https://docs.deeplake.ai/latest/
 phase: data-and-retrieval
 domain:
   - language
@@ -52,8 +54,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A multimodal data runtime spanning dataset storage, tensor access, retrieval, and training-oriented data workflows.
-best_for: ["You need one store for both training datasets and vector search, because Deep Lake's stated purpose covers storing and searching data plus vectors while also managing datasets for training.", "Your data is large, multimodal and does not fit in memory, because it stores images, audio and video in their native compression and indexes them lazily like NumPy arrays.", "You need to keep a training dataset in the cloud you already use, because multi-cloud upload, download and streaming to S3, Azure, GCP, Activeloop cloud, local or memory storage is supported, including any S3-compatible store."]
-avoid_if: ["You want a small embedded vector store for a prototype, because Deep Lake is a storage format and managed platform rather than a three-line in-process client.", "You need a plain SQL or document database for application state, because this is a dataset and vector store specialised for deep learning rather than a general-purpose datastore.", "You are evaluating it purely on the open-source side, because part of the product is Activeloop's managed cloud and the licensing and cost boundary between them needs reading."]
+best_for:
+  - You need one store for both training datasets and vector search, because Deep Lake's stated purpose covers storing and searching data plus vectors while also managing datasets for training.
+  - Your data is large, multimodal and does not fit in memory, because it stores images, audio and video in their native compression and indexes them lazily like NumPy arrays.
+  - You need to keep a training dataset in the cloud you already use, because multi-cloud upload, download and streaming to S3, Azure, GCP, Activeloop cloud, local or memory storage is supported, including any S3-compatible store.
+avoid_if:
+  - You want a small embedded vector store for a prototype, because Deep Lake is a storage format and managed platform rather than a three-line in-process client.
+  - You need a plain SQL or document database for application state, because this is a dataset and vector store specialised for deep learning rather than a general-purpose datastore.
+  - You are evaluating it purely on the open-source side, because part of the product is Activeloop's managed cloud and the licensing and cost boundary between them needs reading.
 enrichment_notes: Official repository, Apache-2.0 license, architecture, and 2026-05-21 activity were reviewed on 2026-07-11. Current feature coverage and production suitability remain draft.
 ---
 

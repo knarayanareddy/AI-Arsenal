@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Marker-Inc-Korea"
+org_or_maintainer: Marker-Inc-Korea
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 83
+trending_score: 22
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: autorag
-name: "AutoRAG"
+name: AutoRAG
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "AutoRAG 2.0 self-evolving librarian agent that searches across retrieval methods, opens sources to verify, and curates cited answers"
-github_url: "https://github.com/Marker-Inc-Korea/AutoRAG"
+description: AutoRAG 2.0 self-evolving librarian agent that searches across retrieval methods, opens sources to verify, and curates cited answers
+github_url: https://github.com/Marker-Inc-Korea/AutoRAG
 license: NOASSERTION
 primary_language: TypeScript
-tags: [rag, agents, retrieval]
+tags:
+  - rag
+  - agents
+  - retrieval
 maturity: beta
 cost_model: open-source
-github_stars: 5111
-last_commit: "2026-09-28"
-docs_url: "https://marker-inc-korea.github.io/AutoRAG/"
+github_stars: 5194
+last_commit: '2026-10-26'
+docs_url: https://marker-inc-korea.github.io/AutoRAG/
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "RAG pipeline optimizer that complements retrieval libraries and competes with manual benchmark-and-tune workflows"
-best_for: ["You are frustrated by search tools that return file paths and matching lines and force the reader to open files and synthesise an answer by hand.", "You want answers that cite specific documents, pages or line ranges, because the agent opens sources directly to verify ground truth before curating the result.", "You are running the older Python AutoRAG and need to know it still ships, because the repository keeps it in a legacy directory in maintenance mode with PyPI releases."]
-avoid_if: ["You need the RAG AutoML tool that searched pipeline configurations, because new feature development is focused on AutoRAG Agent 2.0 and the Python version is in maintenance mode.", "You want a pure library to embed in a service, because this is an agent built on the Pi framework with its own answer-curation behaviour rather than a retrieval component.", "You need a stable production contract, because the 2.0 line is explicitly the active development target and the older tool's interface is frozen."]
-enrichment_notes: "Default-branch last commit is 2026-04-03; do not mark actively-maintained. AutoML results depend on benchmark data and model/provider costs. Draft pending review."
+  - RAG pipeline optimizer that complements retrieval libraries and competes with manual benchmark-and-tune workflows
+best_for:
+  - You are frustrated by search tools that return file paths and matching lines and force the reader to open files and synthesise an answer by hand.
+  - You want answers that cite specific documents, pages or line ranges, because the agent opens sources directly to verify ground truth before curating the result.
+  - You are running the older Python AutoRAG and need to know it still ships, because the repository keeps it in a legacy directory in maintenance mode with PyPI releases.
+avoid_if:
+  - You need the RAG AutoML tool that searched pipeline configurations, because new feature development is focused on AutoRAG Agent 2.0 and the Python version is in maintenance mode.
+  - You want a pure library to embed in a service, because this is an agent built on the Pi framework with its own answer-curation behaviour rather than a retrieval component.
+  - You need a stable production contract, because the 2.0 line is explicitly the active development target and the older tool's interface is frozen.
+enrichment_notes: Default-branch last commit is 2026-04-03; do not mark actively-maintained. AutoML results depend on benchmark data and model/provider costs. Draft pending review.
 ---
 
 ## Overview

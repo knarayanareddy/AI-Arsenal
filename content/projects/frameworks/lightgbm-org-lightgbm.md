@@ -1,52 +1,61 @@
 ---
 id: lightgbm-org-lightgbm
-name: "LightGBM"
+name: LightGBM
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: libraries
-description: "Histogram-based gradient boosting library with leaf-wise tree growth and GOSS/EFB sampling, written in C++"
-github_url: "https://github.com/lightgbm-org/LightGBM"
-license: "MIT"
+description: Histogram-based gradient boosting library with leaf-wise tree growth and GOSS/EFB sampling, written in C++
+github_url: https://github.com/lightgbm-org/LightGBM
+license: MIT
 primary_language: C++
-org_or_maintainer: "lightgbm-org"
-tags: [evaluation]
+org_or_maintainer: lightgbm-org
+tags:
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 18818
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-27"
-docs_url: "https://lightgbm.readthedocs.io/en/latest/"
+github_stars: 18921
+github_stars_last_30d: 103
+trending_score: 41
+last_commit: '2026-10-26'
+docs_url: https://lightgbm.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Histogram-based gradient boosting with leaf-wise growth and GOSS/EFB sampling — the fastest tabular learner to iterate against when features dominate the signal."
+  - Histogram-based gradient boosting with leaf-wise growth and GOSS/EFB sampling — the fastest tabular learner to iterate against when features dominate the signal.
 best_for:
-  - "You are building a CTR or ranking model over mixed tabular features and need a strong baseline within a day rather than after a modelling research phase."
-  - "You have wide datasets where most columns are sparse or mutually exclusive and naive histogram binning would blow up memory without EFB packing."
-  - "You are constrained on training time or RAM and need a boosting implementation that stays fast on a single machine without a GPU."
+  - You are building a CTR or ranking model over mixed tabular features and need a strong baseline within a day rather than after a modelling research phase.
+  - You have wide datasets where most columns are sparse or mutually exclusive and naive histogram binning would blow up memory without EFB packing.
+  - You are constrained on training time or RAM and need a boosting implementation that stays fast on a single machine without a GPU.
 avoid_if:
-  - "You are working with raw text, images, or audio, because the library consumes tabular features and offers no representation learning of its own."
-  - "Your categorical columns are high-cardinality and the ordering of categories is arbitrary, where CatBoost's ordered target statistics will usually beat integer-encoded bins."
-  - "You need reproducible exact splits or monotone-constrained splits, since split thresholds come from histogram bins and equality boundaries are approximate."
+  - You are working with raw text, images, or audio, because the library consumes tabular features and offers no representation learning of its own.
+  - Your categorical columns are high-cardinality and the ordering of categories is arbitrary, where CatBoost's ordered target statistics will usually beat integer-encoded bins.
+  - You need reproducible exact splits or monotone-constrained splits, since split thresholds come from histogram bins and equality boundaries are approximate.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (18818), MIT license, last commit 2026-09-27, C++ as primary language and the topic list were API-verified. Histogram subtraction, GOSS/EFB, lambdarank, and the GPU build details are from the official documentation and parameter reference; no training run or benchmark was executed for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (18818), MIT license, last commit 2026-09-27, C++ as primary language and the topic list were API-verified. Histogram subtraction, GOSS/EFB, lambdarank, and the GPU build details are from the official documentation and parameter reference; no training run or benchmark was executed for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/lightgbm-org/LightGBM", "date": "2026-09-28", "description": "18,818 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/lightgbm-org/LightGBM
+    date: '2026-09-28'
+    description: 18,818 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

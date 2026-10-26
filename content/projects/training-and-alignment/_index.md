@@ -43,16 +43,16 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Most Popular
 
-- [LlamaFactory](./hiyouga-llamafactory.md) — ⭐ 75142
-- [nanoGPT](./nanogpt.md) — ⭐ 64069
-- [minimind](./jingyaogong-minimind.md) — ⭐ 62810
-- [nanochat](./karpathy-nanochat.md) — ⭐ 58303
-- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41407
-- [lerobot](./huggingface-lerobot.md) — ⭐ 27825
-- [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26399
-- [verl](./verl.md) — ⭐ 24007
-- [Agent Lightning](./agent-lightning.md) — ⭐ 18521
-- [Speech](./nvidia-nemo-speech.md) — ⭐ 18518
+- [LlamaFactory](./hiyouga-llamafactory.md) — ⭐ 75742
+- [minimind](./jingyaogong-minimind.md) — ⭐ 64443
+- [nanoGPT](./nanogpt.md) — ⭐ 64088
+- [nanochat](./karpathy-nanochat.md) — ⭐ 58949
+- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41430
+- [lerobot](./huggingface-lerobot.md) — ⭐ 28486
+- [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26479
+- [verl](./verl.md) — ⭐ 24024
+- [Agent Lightning](./agent-lightning.md) — ⭐ 18816
+- [SkillOpt](./skillopt.md) — ⭐ 18698
 
 ### Browse All
 

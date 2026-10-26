@@ -1,52 +1,61 @@
 ---
 id: shap-shap
-name: "shap"
+name: shap
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "MIT-licensed explainability library computing Shapley-value attributions for any model, including black-box scorers and rankers"
-github_url: "https://github.com/shap/shap"
-license: "MIT"
+description: MIT-licensed explainability library computing Shapley-value attributions for any model, including black-box scorers and rankers
+github_url: https://github.com/shap/shap
+license: MIT
 primary_language: Python
-org_or_maintainer: "shap"
-tags: [evaluation]
+org_or_maintainer: shap
+tags:
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 25781
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-09-27"
-docs_url: "https://shap.readthedocs.io"
+github_stars: 25834
+github_stars_last_30d: 53
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://shap.readthedocs.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Game-theoretic explainability library computing Shapley attributions for any model output, including black-box LLM scorers and retrieval rankers."
+  - Game-theoretic explainability library computing Shapley attributions for any model output, including black-box LLM scorers and retrieval rankers.
 best_for:
-  - "A model made a decision someone is disputing, and you need per-feature contributions that add up to the prediction and can be shown as a local explanation."
-  - "You are shipping a black-box component - an LLM-as-judge, a reranker, a wrapped API - and stakeholders require attributable explanations even though the internals are not inspectable."
-  - "You are checking a global behavior claim, such as whether a credit or hiring model is leaning on a protected attribute, and need a population-level summary rather than anecdotes."
+  - A model made a decision someone is disputing, and you need per-feature contributions that add up to the prediction and can be shown as a local explanation.
+  - You are shipping a black-box component - an LLM-as-judge, a reranker, a wrapped API - and stakeholders require attributable explanations even though the internals are not inspectable.
+  - You are checking a global behavior claim, such as whether a credit or hiring model is leaning on a protected attribute, and need a population-level summary rather than anecdotes.
 avoid_if:
-  - "You need real-time explanations on a high-throughput path, because exact Shapley computation is expensive and the approximations add latency you may not have."
-  - "You need a causal account of why a decision happened, because Shapley values quantify model attribution within the model's own assumptions and are not causal identification."
-  - "Your features are free-form text or images with no meaningful feature decomposition, because a value per feature requires a feature representation to attribute against."
+  - You need real-time explanations on a high-throughput path, because exact Shapley computation is expensive and the approximations add latency you may not have.
+  - You need a causal account of why a decision happened, because Shapley values quantify model attribution within the model's own assumptions and are not causal identification.
+  - Your features are free-form text or images with no meaningful feature decomposition, because a value per feature requires a feature representation to attribute against.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 25781 stars, MIT license, Python primary language, last commit 2026-09-27, 8 GitHub topics including explainability, shapley, gradient-boosting, interpretability. Explainer variants, masker abstraction, kernel weighting, and global plots are from official docs; the code sample was not executed and no timing was measured."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 25781 stars, MIT license, Python primary language, last commit 2026-09-27, 8 GitHub topics including explainability, shapley, gradient-boosting, interpretability. Explainer variants, masker abstraction, kernel weighting, and global plots are from official docs; the code sample was not executed and no timing was measured.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/shap/shap", "date": "2026-09-28", "description": "25,781 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/shap/shap
+    date: '2026-09-28'
+    description: 25,781 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

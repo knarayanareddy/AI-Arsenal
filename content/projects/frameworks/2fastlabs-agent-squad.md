@@ -1,52 +1,63 @@
 ---
 id: 2fastlabs-agent-squad
-name: "agent-squad"
+name: agent-squad
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: multi-agent
-description: "Multi-agent framework that routes requests across specialised agents with per-agent model selection"
-github_url: "https://github.com/2FastLabs/agent-squad"
-license: "Apache-2.0"
+description: Multi-agent framework that routes requests across specialised agents with per-agent model selection
+github_url: https://github.com/2FastLabs/agent-squad
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "2FastLabs"
-tags: [agents, routing, orchestration]
+org_or_maintainer: 2FastLabs
+tags:
+  - agents
+  - routing
+  - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 7775
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-23"
-docs_url: "https://2fastlabs.github.io/agent-squad/"
+github_stars: 7792
+github_stars_last_30d: 17
+trending_score: 34
+last_commit: '2026-10-08'
+docs_url: https://2fastlabs.github.io/agent-squad/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Multi-agent framework routing tasks across specialised agents with per-agent model selection, illustrating the cost/latency tradeoff of parallel agent decomposition."
+  - Multi-agent framework routing tasks across specialised agents with per-agent model selection, illustrating the cost/latency tradeoff of parallel agent decomposition.
 best_for:
-  - "You want to route simple questions to a cheap fast model and only escalate to an expensive one when a specialist is needed, with the routing logic in your code rather than in a prompt."
-  - "You are experimenting with decomposition — splitting a request into domain specialists and merging their answers — and want a small framework that shows the pattern clearly."
-  - "You are deploying on AWS Lambda or Bedrock and want a multi-agent pattern that fits a serverless budget rather than a long-lived service."
+  - You want to route simple questions to a cheap fast model and only escalate to an expensive one when a specialist is needed, with the routing logic in your code rather than in a prompt.
+  - You are experimenting with decomposition — splitting a request into domain specialists and merging their answers — and want a small framework that shows the pattern clearly.
+  - You are deploying on AWS Lambda or Bedrock and want a multi-agent pattern that fits a serverless budget rather than a long-lived service.
 avoid_if:
-  - "You are latency-sensitive, because several agent round trips in series cost multiple model calls, and the cheapest version of this pattern is still slower than one call."
-  - "Your tasks are hard to decompose, since the framework's premise is that a request has a home in a specialist, and a genuinely cross-domain request falls through all of them."
-  - "You need a mature production framework with durable state, tracing, and a large ecosystem, since this is a small project with a much narrower feature set."
+  - You are latency-sensitive, because several agent round trips in series cost multiple model calls, and the cheapest version of this pattern is still slower than one call.
+  - Your tasks are hard to decompose, since the framework's premise is that a request has a home in a specialist, and a genuinely cross-domain request falls through all of them.
+  - You need a mature production framework with durable state, tracing, and a large ecosystem, since this is a small project with a much narrower feature set.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7775), Apache-2.0 license, last commit 2026-09-23, Python as primary language and the topic list were API-verified. Orchestrator, router, agent handler, team agent, and the FastAPI and Lambda service layer come from the official docs and repo examples; cost, latency, and routing-fragility caveats are engineering judgement about multi-agent patterns, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7775), Apache-2.0 license, last commit 2026-09-23, Python as primary language and the topic list were API-verified. Orchestrator, router, agent handler, team agent, and the FastAPI and Lambda service layer come from the official docs and repo examples; cost, latency, and routing-fragility caveats are engineering judgement about multi-agent patterns, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/2FastLabs/agent-squad", "date": "2026-09-28", "description": "7,775 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/2FastLabs/agent-squad
+    date: '2026-09-28'
+    description: 7,775 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

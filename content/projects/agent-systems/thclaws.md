@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Rust agent harness whose workspace holds several agents side by side, each isolated in its own folder and supervised process"
-github_url: "https://github.com/thClaws/thClaws"
+description: Rust agent harness whose workspace holds several agents side by side, each isolated in its own folder and supervised process
+github_url: https://github.com/thClaws/thClaws
 license: Apache-2.0
 primary_language: Rust
-tags: [agents, inference, security]
+tags:
+  - agents
+  - inference
+  - security
 maturity: beta
 cost_model: open-source
-github_stars: 1227
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-25"
-docs_url: "https://thclaws.ai/manual"
+github_stars: 1243
+github_stars_last_30d: 16
+trending_score: 24
+last_commit: '2026-10-25'
+docs_url: https://thclaws.ai/manual
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Lets a coding agent, a research agent and a writing agent share one project without sharing files, memory or browser logins."
+  - Lets a coding agent, a research agent and a writing agent share one project without sharing files, memory or browser logins.
 best_for:
-  - "You want several agents working the same project with different jobs and you need their file access, memory and sessions kept apart."
-  - "You switch between agents mid-task and you want each to keep its conversation, scroll position and half-typed message when you come back."
-  - "You want GUI, CLI, headless and webapp surfaces from one Rust binary rather than four separate tools."
+  - You want several agents working the same project with different jobs and you need their file access, memory and sessions kept apart.
+  - You switch between agents mid-task and you want each to keep its conversation, scroll position and half-typed message when you come back.
+  - You want GUI, CLI, headless and webapp surfaces from one Rust binary rather than four separate tools.
 avoid_if:
-  - "You cannot accept a path migration on upgrade, because the first time v0.126.0 opens a workspace it moves the project into .thclaws/bots/main/ and anything holding the old path breaks."
-  - "You run an older thClaws build against an upgraded folder, because the older client finds a note asking you to update rather than a working project."
-  - "You need more than eight concurrent agents in one workspace, because that is the documented ceiling."
+  - You cannot accept a path migration on upgrade, because the first time v0.126.0 opens a workspace it moves the project into .thclaws/bots/main/ and anything holding the old path breaks.
+  - You run an older thClaws build against an upgraded folder, because the older client finds a note asking you to update rather than a working project.
+  - You need more than eight concurrent agents in one workspace, because that is the documented ceiling.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (MIT OR Apache-2.0), last commit, primary language (Rust), topics and issue count came from the GitHub API. Workspace layout (.thclaws/bots/<name>/), per-agent isolation, the eight-agent ceiling, upgrade migration behaviour and surfaces are read from the official README release notes; the binary was not installed."
+enrichment_notes: Stars, license (MIT OR Apache-2.0), last commit, primary language (Rust), topics and issue count came from the GitHub API. Workspace layout (.thclaws/bots/<name>/), per-agent isolation, the eight-agent ceiling, upgrade migration behaviour and surfaces are read from the official README release notes; the binary was not installed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,40 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 62
+trending_score: 20
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: openai-swarm
-name: "OpenAI Swarm"
+name: OpenAI Swarm
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "OpenAI's educational Python framework built on two primitives: an Agent and a handoff to another agent"
-github_url: "https://github.com/openai/swarm"
+description: 'OpenAI''s educational Python framework built on two primitives: an Agent and a handoff to another agent'
+github_url: https://github.com/openai/swarm
 license: MIT
 primary_language: Python
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: experimental
 cost_model: open-source
-github_stars: 22018
-last_commit: "2026-04-15"
-docs_url: "https://github.com/openai/swarm"
+github_stars: 22080
+last_commit: '2026-04-15'
+docs_url: https://github.com/openai/swarm
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "An educational reference for lightweight multi-agent orchestration via agents, routines, and handoffs."
-best_for: ["You want to learn the handoff pattern for multi-agent routing before committing to a production framework, and twenty lines of readable Python is the right unit of study.", "You are porting a mental model from OpenAI's documentation into a design of your own, so you want the smallest implementation that is still correct.", "You are prototyping a triage or router shape and want to confirm a stateless handoff is enough before adding persistence machinery."]
-avoid_if: ["You are building something for production, because the README opens by recommending migration to the OpenAI Agents SDK for all production use cases.", "You need durable state or memory between calls, because Swarm runs almost entirely on the client and stores nothing between Chat Completions calls.", "You think the Agents in Swarm relate to the Assistants API, because the README explicitly notes they are unrelated despite the naming."]
-enrichment_notes: "Repository, MIT license, and 2026-04-15 activity verified via the GitHub API on 2026-07-12. Explicitly educational and not for production; superseded by the OpenAI Agents SDK."
+  - An educational reference for lightweight multi-agent orchestration via agents, routines, and handoffs.
+best_for:
+  - You want to learn the handoff pattern for multi-agent routing before committing to a production framework, and twenty lines of readable Python is the right unit of study.
+  - You are porting a mental model from OpenAI's documentation into a design of your own, so you want the smallest implementation that is still correct.
+  - You are prototyping a triage or router shape and want to confirm a stateless handoff is enough before adding persistence machinery.
+avoid_if:
+  - You are building something for production, because the README opens by recommending migration to the OpenAI Agents SDK for all production use cases.
+  - You need durable state or memory between calls, because Swarm runs almost entirely on the client and stores nothing between Chat Completions calls.
+  - You think the Agents in Swarm relate to the Assistants API, because the README explicitly notes they are unrelated despite the naming.
+enrichment_notes: Repository, MIT license, and 2026-04-15 activity verified via the GitHub API on 2026-07-12. Explicitly educational and not for production; superseded by the OpenAI Agents SDK.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "tensorzero"
+org_or_maintainer: tensorzero
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+github_stars_last_30d: 1
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: tensorzero
-name: "TensorZero"
+name: TensorZero
 artifact_type: platform
 category: observability
 subcategory: platforms
-description: "Rust LLMOps platform unifying a unified LLM gateway, observability, evaluation, optimization and experimentation in one deployment"
-github_url: "https://github.com/tensorzero/tensorzero"
+description: Rust LLMOps platform unifying a unified LLM gateway, observability, evaluation, optimization and experimentation in one deployment
+github_url: https://github.com/tensorzero/tensorzero
 license: Apache-2.0
 primary_language: Rust
-tags: [observability, embeddings]
+tags:
+  - observability
+  - embeddings
 maturity: beta
 cost_model: self-hostable
-github_stars: 11707
-last_commit: "2026-06-11"
-docs_url: "https://www.tensorzero.com/docs/"
+github_stars: 11708
+last_commit: '2026-06-11'
+docs_url: https://www.tensorzero.com/docs/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An LLMOps platform that turns gateway traffic and feedback into evaluation and optimization of prompts and models."
-best_for: ["You want routing and performance telemetry in the same system as the data you optimize on, because the gateway records every call and the eval and A/B tooling reads that data.", "You are self-hosting a high-throughput gateway and the added latency matters, because the project publishes a sub-millisecond p99 overhead claim at 10k+ QPS for its Rust proxy.", "You want prompt templates and JSON schemas enforced as the interface between your application and models, which is a first-class gateway feature here rather than an application concern."]
-avoid_if: ["You need the current codebase in this repository, because the GitHub API reports the repository as archived and the last commit is from June 2026.", "You want a hosted managed gateway with no operations, because this is a self-hosted platform you deploy and run yourself.", "You only need a proxy and nothing else, because the platform's scope spans gateway, observability, evaluation, optimization and experimentation, which is more surface than a simple proxy."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-11 activity verified via the GitHub API on 2026-10-24. Optimization value depends on collecting quality feedback signals."
+  - An LLMOps platform that turns gateway traffic and feedback into evaluation and optimization of prompts and models.
+best_for:
+  - You want routing and performance telemetry in the same system as the data you optimize on, because the gateway records every call and the eval and A/B tooling reads that data.
+  - You are self-hosting a high-throughput gateway and the added latency matters, because the project publishes a sub-millisecond p99 overhead claim at 10k+ QPS for its Rust proxy.
+  - You want prompt templates and JSON schemas enforced as the interface between your application and models, which is a first-class gateway feature here rather than an application concern.
+avoid_if:
+  - You need the current codebase in this repository, because the GitHub API reports the repository as archived and the last commit is from June 2026.
+  - You want a hosted managed gateway with no operations, because this is a self-hosted platform you deploy and run yourself.
+  - You only need a proxy and nothing else, because the platform's scope spans gateway, observability, evaluation, optimization and experimentation, which is more surface than a simple proxy.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-11 activity verified via the GitHub API on 2026-10-24. Optimization value depends on collecting quality feedback signals.
 ---
 
 ## Overview

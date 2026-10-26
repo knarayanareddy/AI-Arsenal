@@ -5,30 +5,42 @@ version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions"
-github_url: "https://github.com/cleanlab/cleanlab"
+description: Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions
+github_url: https://github.com/cleanlab/cleanlab
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: Cleanlab
-tags: [embeddings, llm]
+tags:
+  - embeddings
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 11682
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-01-13"
-docs_url: "https://docs.cleanlab.ai"
+github_stars: 11720
+github_stars_last_30d: 38
+trending_score: 18
+last_commit: '2026-01-13'
+docs_url: https://docs.cleanlab.ai
 demo_url: null
-paper_url: "https://arxiv.org/abs/1911.00068"
+paper_url: https://arxiv.org/abs/1911.00068
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [research-origin, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - research-origin
+  - production-proven
 ecosystem_role:
   - The standard open implementation of confident learning — it cross-examines a model's out-of-sample predicted probabilities against given labels to statistically flag mislabeled, ambiguous, and outlier examples, model-agnostically
-best_for: ["You have labeled data and a trained model whose validation score is lower than the data quality deserves, and you suspect label noise is the cause.", "You want to find mislabeled rows in text, image, audio or tabular data using a model you already have, rather than paying for manual relabeling.", "You are doing multi-annotator work and need consensus labels plus a per-annotator quality estimate before you trust an agreement score."]
-avoid_if: ["You have no trained model and no predicted probabilities, because cleanlab's issue detection is built on out-of-sample predictions from a model you fit first.", "You cannot accept the compute, because the workflow requires training at least two models on cross-validated folds and scoring the whole dataset.", "You are on an unsupported platform version, because the library runs on Python 3.10+ on Linux, macOS and Windows and nothing older."]
+best_for:
+  - You have labeled data and a trained model whose validation score is lower than the data quality deserves, and you suspect label noise is the cause.
+  - You want to find mislabeled rows in text, image, audio or tabular data using a model you already have, rather than paying for manual relabeling.
+  - You are doing multi-annotator work and need consensus labels plus a per-annotator quality estimate before you trust an agreement score.
+avoid_if:
+  - You have no trained model and no predicted probabilities, because cleanlab's issue detection is built on out-of-sample predictions from a model you fit first.
+  - You cannot accept the compute, because the workflow requires training at least two models on cross-validated folds and scoring the whole dataset.
+  - You are on an unsupported platform version, because the library runs on Python 3.10+ on Linux, macOS and Windows and nothing older.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -36,12 +48,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: 11.6k stars, AGPL-3.0, last push 2026-01-13 verified via the GitHub API on 2026-07-08. Cadence has slowed as the company focuses on its commercial platform; the library remains the reference confident-learning implementation. Backed by the peer-reviewed confident-learning paper (Northcutt et al.).
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"arxiv","url":"https://arxiv.org/abs/1911.00068","date":"2026-07-08","description":"Confident Learning: Estimating Uncertainty in Dataset Labels"}
+  - source: arxiv
+    url: https://arxiv.org/abs/1911.00068
+    date: '2026-07-08'
+    description: 'Confident Learning: Estimating Uncertainty in Dataset Labels'
 featured: false
 status: active
 ---

@@ -1,52 +1,62 @@
 ---
 id: deezer-spleeter
-name: "spleeter"
+name: spleeter
 version_tracked: null
 artifact_type: model
 category: voice-audio
 subcategory: models
-description: "MIT-licensed TensorFlow library with pretrained models that split a music mix into vocals, drums, bass, and accompaniment"
-github_url: "https://github.com/deezer/spleeter"
-license: "MIT"
+description: MIT-licensed TensorFlow library with pretrained models that split a music mix into vocals, drums, bass, and accompaniment
+github_url: https://github.com/deezer/spleeter
+license: MIT
 primary_language: Python
-org_or_maintainer: "deezer"
-tags: [voice, pytorch]
+org_or_maintainer: deezer
+tags:
+  - voice
+  - pytorch
 maturity: beta
 cost_model: open-source
-github_stars: 28477
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-06-18"
-docs_url: "https://research.deezer.com/projects/spleeter.html"
+github_stars: 28497
+github_stars_last_30d: 20
+trending_score: 35
+last_commit: '2026-06-18'
+docs_url: https://research.deezer.com/projects/spleeter.html
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [community-driven]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Music source-separation model family that splits a mix into vocals, drums, bass, and accompaniment with pretrained checkpoints and a short training recipe."
+  - Music source-separation model family that splits a mix into vocals, drums, bass, and accompaniment with pretrained checkpoints and a short training recipe.
 best_for:
-  - "You have commercial recordings and need karaoke or practice stems, and the source is already a stereo mix rather than the individual tracks."
-  - "You are building a dataset for a music analysis model and need vocals isolated from a large catalog of mixed audio before training."
-  - "You need a short, readable training recipe for a source-separation model on your own data, since the repository includes the training script alongside the checkpoints."
+  - You have commercial recordings and need karaoke or practice stems, and the source is already a stereo mix rather than the individual tracks.
+  - You are building a dataset for a music analysis model and need vocals isolated from a large catalog of mixed audio before training.
+  - You need a short, readable training recipe for a source-separation model on your own data, since the repository includes the training script alongside the checkpoints.
 avoid_if:
-  - "You need sample-accurate, artifact-free stems from a professional session, because a model reconstructing sources from a mix introduces bleed and phase artifacts that a mixing engineer will not accept."
-  - "You need to separate many more than four stems or handle classes the checkpoints do not cover, since the released models are trained on a fixed small set of source groups."
-  - "You need real-time or low-latency separation, because the network is a full offline spectral model with a forward pass over the whole signal rather than an online algorithm."
+  - You need sample-accurate, artifact-free stems from a professional session, because a model reconstructing sources from a mix introduces bleed and phase artifacts that a mixing engineer will not accept.
+  - You need to separate many more than four stems or handle classes the checkpoints do not cover, since the released models are trained on a fixed small set of source groups.
+  - You need real-time or low-latency separation, because the network is a full offline spectral model with a forward pass over the whole signal rather than an online algorithm.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 28477 stars, MIT license, Python primary language, last commit 2026-06-18, 9 GitHub topics including audio-processing, pretrained-models, tensorflow. The 2/4/5-stem configurations, mask-normalized U-Net, and waveform loss are from the README and paper; no audio was separated in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 28477 stars, MIT license, Python primary language, last commit 2026-06-18, 9 GitHub topics including audio-processing, pretrained-models, tensorflow. The 2/4/5-stem configurations, mask-normalized U-Net, and waveform loss are from the README and paper; no audio was separated in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/deezer/spleeter", "date": "2026-09-28", "description": "28,477 stars and last commit 2026-06-18 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/deezer/spleeter
+    date: '2026-09-28'
+    description: 28,477 stars and last commit 2026-06-18 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

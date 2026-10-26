@@ -1,52 +1,65 @@
 ---
 id: nvidia-dali
-name: "DALI"
+name: DALI
 version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: tools
-description: "GPU-accelerated data loading and augmentation library whose operator graph and execution engine keep accelerators busy during training and inference"
-github_url: "https://github.com/NVIDIA/DALI"
-license: "Apache-2.0"
+description: GPU-accelerated data loading and augmentation library whose operator graph and execution engine keep accelerators busy during training and inference
+github_url: https://github.com/NVIDIA/DALI
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "NVIDIA"
-tags: [data, pytorch, efficiency]
+org_or_maintainer: NVIDIA
+tags:
+  - data
+  - pytorch
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 5767
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html"
+github_stars: 5785
+github_stars_last_30d: 18
+trending_score: 34
+last_commit: '2026-10-26'
+docs_url: https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [vision, general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - vision
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "GPU-accelerated data loading and augmentation pipeline that keeps accelerators saturated, the standard fix for input-bound multimodal training."
+  - GPU-accelerated data loading and augmentation pipeline that keeps accelerators saturated, the standard fix for input-bound multimodal training.
 best_for:
-  - "Your GPU utilization is low and the profile shows the input pipeline is the bottleneck, typically on JPEG decode or heavy augmentation."
-  - "You train multimodal models and need decode, resize, crop, and normalization to run on-device as one fused graph rather than separate PyTorch ops."
-  - "You want a pluggable data loader that keeps its PyTorch Dataset interface, so the model code does not change when you swap the input path."
+  - Your GPU utilization is low and the profile shows the input pipeline is the bottleneck, typically on JPEG decode or heavy augmentation.
+  - You train multimodal models and need decode, resize, crop, and normalization to run on-device as one fused graph rather than separate PyTorch ops.
+  - You want a pluggable data loader that keeps its PyTorch Dataset interface, so the model code does not change when you swap the input path.
 avoid_if:
-  - "Your dataset is small enough to sit in memory or is plain text and tensors, where the standard PyTorch DataLoader has no problem to solve."
-  - "You are on AMD, Intel, or Apple Silicon, since DALI is CUDA and the pipeline-specific operators are NVIDIA-only."
-  - "You need a decoding format or augmentation the operator set does not cover, since gaps force a CPU fallback that silently costs throughput."
+  - Your dataset is small enough to sit in memory or is plain text and tensors, where the standard PyTorch DataLoader has no problem to solve.
+  - You are on AMD, Intel, or Apple Silicon, since DALI is CUDA and the pipeline-specific operators are NVIDIA-only.
+  - You need a decoding format or augmentation the operator set does not cover, since gaps force a CPU fallback that silently costs throughput.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (5767), Apache-2.0 license, last commit 2026-09-28, primary language C++, and all 16 topics were read from the GitHub API. Operator set, nvJPEG decode, executor split, prefetch queues, and the PyTorch adapter come from the official user guide; no pipeline was compiled or benchmarked on GPU here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (5767), Apache-2.0 license, last commit 2026-09-28, primary language C++, and all 16 topics were read from the GitHub API. Operator set, nvJPEG decode, executor split, prefetch queues, and the PyTorch adapter come from the official user guide; no pipeline was compiled or benchmarked on GPU here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/DALI", "date": "2026-09-28", "description": "5,767 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/DALI
+    date: '2026-09-28'
+    description: 5,767 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

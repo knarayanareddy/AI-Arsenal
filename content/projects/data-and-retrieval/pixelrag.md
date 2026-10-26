@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill"
-github_url: "https://github.com/StarTrail-org/PixelRAG"
+description: Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill
+github_url: https://github.com/StarTrail-org/PixelRAG
 license: Apache-2.0
 primary_language: Python
-tags: [retrieval, multimodal, rag, chunking]
+tags:
+  - retrieval
+  - multimodal
+  - rag
+  - chunking
 maturity: alpha
 cost_model: freemium
-github_stars: 10111
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-27"
-docs_url: "https://pixelrag.ai/docs"
+github_stars: 10355
+github_stars_last_30d: 244
+trending_score: 43
+last_commit: '2026-10-24'
+docs_url: https://pixelrag.ai/docs
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Keeps table, chart, and layout structure that HTML-to-text conversion discards, then retrieves on the visual form."
+  - Keeps table, chart, and layout structure that HTML-to-text conversion discards, then retrieves on the visual form.
 best_for:
-  - "You are answering questions about documents where the answer lives in a chart, table, or diagram rather than in prose."
-  - "You are building a coding agent that reads documentation sites and keep getting tables flattened into unusable text."
-  - "You are evaluating whether visual retrieval beats text retrieval for your corpus before committing to an indexing pipeline."
+  - You are answering questions about documents where the answer lives in a chart, table, or diagram rather than in prose.
+  - You are building a coding agent that reads documentation sites and keep getting tables flattened into unusable text.
+  - You are evaluating whether visual retrieval beats text retrieval for your corpus before committing to an indexing pipeline.
 avoid_if:
-  - "You are processing millions of pages yourself, because rendering and indexing at that scale is what the hosted index exists to avoid."
-  - "You need exact text extraction with byte fidelity, since the pipeline deliberately trades text for pixels and back."
-  - "You cannot send document content to a hosted index, because the production path renders and indexes outside your network."
+  - You are processing millions of pages yourself, because rendering and indexing at that scale is what the hosted index exists to avoid.
+  - You need exact text extraction with byte fidelity, since the pipeline deliberately trades text for pixels and back.
+  - You cannot send document content to a hosted index, because the production path renders and indexes outside your network.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 10111, Apache-2.0, Python, last commit 2026-09-27, topics, homepage. From README: arXiv 2606.28344, Berkeley affiliations, pixelshot command, api.pixelrag.ai endpoint, 8.28M page index, image-as-query, pixelbrowse skill, Colab demo. Paper numbers not reproduced."
+enrichment_notes: 'API-verified: stars 10111, Apache-2.0, Python, last commit 2026-09-27, topics, homepage. From README: arXiv 2606.28344, Berkeley affiliations, pixelshot command, api.pixelrag.ai endpoint, 8.28M page index, image-as-query, pixelbrowse skill, Colab demo. Paper numbers not reproduced.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

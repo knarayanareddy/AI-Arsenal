@@ -1,52 +1,61 @@
 ---
 id: paddlepaddle-paddledetection
-name: "PaddleDetection"
+name: PaddleDetection
 version_tracked: null
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "PaddlePaddle object-detection toolkit covering detection, instance segmentation, tracking, and pose"
-github_url: "https://github.com/PaddlePaddle/PaddleDetection"
-license: "Apache-2.0"
+description: PaddlePaddle object-detection toolkit covering detection, instance segmentation, tracking, and pose
+github_url: https://github.com/PaddlePaddle/PaddleDetection
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "PaddlePaddle"
-tags: [vision]
+org_or_maintainer: PaddlePaddle
+tags:
+  - vision
 maturity: production
 cost_model: open-source
-github_stars: 14434
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-05-28"
+github_stars: 14447
+github_stars_last_30d: 13
+trending_score: 34
+last_commit: '2026-05-28'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Object-detection toolkit on PaddlePaddle, notable as a full detection stack that trains and deploys through one vendor framework without a PyTorch dependency."
+  - Object-detection toolkit on PaddlePaddle, notable as a full detection stack that trains and deploys through one vendor framework without a PyTorch dependency.
 best_for:
-  - "You are already committed to PaddlePaddle and need detection, tracking, and pose in one codebase with matching config-driven training and export tooling."
-  - "You need a detection model family in Paddle format because your deployment target is Paddle Inference or a Paddle-supported accelerator, and reconverting to another runtime is not available."
-  - "You are looking for a PP-YOLOE or RT-DETR starting point to fine-tune on proprietary data without assembling a training recipe yourself."
+  - You are already committed to PaddlePaddle and need detection, tracking, and pose in one codebase with matching config-driven training and export tooling.
+  - You need a detection model family in Paddle format because your deployment target is Paddle Inference or a Paddle-supported accelerator, and reconverting to another runtime is not available.
+  - You are looking for a PP-YOLOE or RT-DETR starting point to fine-tune on proprietary data without assembling a training recipe yourself.
 avoid_if:
-  - "Your stack is PyTorch, since adopting this means adopting PaddlePaddle, and conversion back is lossy and manual."
-  - "You need the newest architectures or the strongest pretrained detection weights, which in this ecosystem usually trail the PyTorch ports of the same models."
-  - "You want a minimal, single-model dependency for one detection task, because this is a large multi-model research toolkit with a broad configuration surface."
+  - Your stack is PyTorch, since adopting this means adopting PaddlePaddle, and conversion back is lossy and manual.
+  - You need the newest architectures or the strongest pretrained detection weights, which in this ecosystem usually trail the PyTorch ports of the same models.
+  - You want a minimal, single-model dependency for one detection task, because this is a large multi-model research toolkit with a broad configuration surface.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (14434), Apache-2.0, last commit 2026-05-28, Python, and the topic list were API-verified; no homepage field. Model family names, the config-driven pipeline, Deepsort and fairmot composition, and export targets are from the official repo docs and configs. Relative model-quality claims reflect published comparisons, not runs done here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (14434), Apache-2.0, last commit 2026-05-28, Python, and the topic list were API-verified; no homepage field. Model family names, the config-driven pipeline, Deepsort and fairmot composition, and export targets are from the official repo docs and configs. Relative model-quality claims reflect published comparisons, not runs done here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/PaddlePaddle/PaddleDetection", "date": "2026-09-28", "description": "14,434 stars and last commit 2026-05-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/PaddlePaddle/PaddleDetection
+    date: '2026-09-28'
+    description: 14,434 stars and last commit 2026-05-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

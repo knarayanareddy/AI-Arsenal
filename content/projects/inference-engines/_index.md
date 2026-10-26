@@ -46,16 +46,16 @@ Before selecting an inference engine:
 
 ### Most Popular
 
-- [Ollama](./ollama.md) — ⭐ 174059
-- [llama.cpp](./llama-cpp.md) — ⭐ 132303
-- [vLLM](./vllm.md) — ⭐ 82772
-- [whisper.cpp](./whisper-cpp.md) — ⭐ 51732
+- [Ollama](./ollama.md) — ⭐ 184852
+- [llama.cpp](./llama-cpp.md) — ⭐ 132423
+- [vLLM](./vllm.md) — ⭐ 95599
+- [whisper.cpp](./whisper-cpp.md) — ⭐ 54686
+- [LocalAI](./localai.md) — ⭐ 49975
+- [exo (exo-explore)](./exo.md) — ⭐ 48059
+- [textgen](./oobabooga-textgen.md) — ⭐ 47724
 - [text-generation-webui (oobabooga)](./text-generation-webui.md) — ⭐ 47724
-- [textgen](./oobabooga-textgen.md) — ⭐ 47720
-- [LocalAI](./localai.md) — ⭐ 47415
-- [exo (exo-explore)](./exo.md) — ⭐ 46087
-- [FastChat](./lm-sys-fastchat.md) — ⭐ 39550
-- [mediapipe](./google-ai-edge-mediapipe.md) — ⭐ 37105
+- [airllm](./airllm.md) — ⭐ 40731
+- [FastChat](./lm-sys-fastchat.md) — ⭐ 39551
 
 ### Browse All
 

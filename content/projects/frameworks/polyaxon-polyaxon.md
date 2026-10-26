@@ -1,52 +1,61 @@
 ---
 id: polyaxon-polyaxon
-name: "polyaxon"
+name: polyaxon
 version_tracked: null
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Control plane that tracks runs, pipelines, and agents with full lineage from experiment through to deployment and restart"
-github_url: "https://github.com/polyaxon/polyaxon"
-license: "Apache-2.0"
+description: Control plane that tracks runs, pipelines, and agents with full lineage from experiment through to deployment and restart
+github_url: https://github.com/polyaxon/polyaxon
+license: Apache-2.0
 primary_language: Other
-org_or_maintainer: "polyaxon"
-tags: [orchestration]
+org_or_maintainer: polyaxon
+tags:
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 3737
-github_stars_last_30d: 0
-trending_score: 28
-last_commit: "2026-09-24"
-docs_url: "https://polyaxon.com"
+github_stars: 3748
+github_stars_last_30d: 11
+trending_score: 34
+last_commit: '2026-10-26'
+docs_url: https://polyaxon.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "AI control plane for orchestrating runs, promoting artifacts between environments, and tracking lineage across experiment and deployment stages."
+  - AI control plane for orchestrating runs, promoting artifacts between environments, and tracking lineage across experiment and deployment stages.
 best_for:
-  - "You want one place that tracks experiments, pipelines, notebook runs, and agent sessions with links between them rather than separate tools."
-  - "You need lineage from a training run to a registered model to a deployment, and must show which input produced which artifact."
-  - "You run hyperparameter sweeps and distributed reinforcement learning on Kubernetes and want the sweep controller and dashboards in the same system."
+  - You want one place that tracks experiments, pipelines, notebook runs, and agent sessions with links between them rather than separate tools.
+  - You need lineage from a training run to a registered model to a deployment, and must show which input produced which artifact.
+  - You run hyperparameter sweeps and distributed reinforcement learning on Kubernetes and want the sweep controller and dashboards in the same system.
 avoid_if:
-  - "You only need run-and-metric tracking, since a lighter tracker covers that with far less to operate."
-  - "You cannot run and maintain a server plus Kubernetes integration, because the control plane is a service you own."
-  - "Your team has standardized on Airflow for scheduling, since Polyaxon will want to own the orchestration layer instead of integrating with it."
+  - You only need run-and-metric tracking, since a lighter tracker covers that with far less to operate.
+  - You cannot run and maintain a server plus Kubernetes integration, because the control plane is a service you own.
+  - Your team has standardized on Airflow for scheduling, since Polyaxon will want to own the orchestration layer instead of integrating with it.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3737), Apache-2.0 license, last commit 2026-09-24, and the 20 topics were read from the GitHub API; upstream reports primary language as Other. The Kubernetes operator model, artifact lineage graph, matrix sweeps, and promotion flow come from the official docs and site; no server was installed and no run was tracked here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3737), Apache-2.0 license, last commit 2026-09-24, and the 20 topics were read from the GitHub API; upstream reports primary language as Other. The Kubernetes operator model, artifact lineage graph, matrix sweeps, and promotion flow come from the official docs and site; no server was installed and no run was tracked here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/polyaxon/polyaxon", "date": "2026-09-28", "description": "3,737 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/polyaxon/polyaxon
+    date: '2026-09-28'
+    description: 3,737 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

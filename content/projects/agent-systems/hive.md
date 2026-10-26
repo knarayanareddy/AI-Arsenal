@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python agent harness where a Queen agent loop spawns worker clones coordinated through a shared ledger, with crash-safe park and resume"
-github_url: "https://github.com/aden-hive/hive"
+description: Python agent harness where a Queen agent loop spawns worker clones coordinated through a shared ledger, with crash-safe park and resume
+github_url: https://github.com/aden-hive/hive
 license: Apache-2.0
 primary_language: Python
-tags: [agents, orchestration, stateful]
+tags:
+  - agents
+  - orchestration
+  - stateful
 maturity: alpha
 cost_model: open-source
-github_stars: 11081
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-14"
-docs_url: "https://github.com/aden-hive/hive/tree/main/docs/architecture"
+github_stars: 11121
+github_stars_last_30d: 40
+trending_score: 26
+last_commit: '2026-10-26'
+docs_url: https://github.com/aden-hive/hive/tree/main/docs/architecture
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Collapses multi-agent orchestration into one primitive so there is no graph to compile, while keeping recovery, cost enforcement and oversight in the loop itself."
+  - Collapses multi-agent orchestration into one primitive so there is no graph to compile, while keeping recovery, cost enforcement and oversight in the loop itself.
 best_for:
-  - "You want many agents working one long-running business process and you would rather describe the outcome than wire a DAG of nodes and edges."
-  - "You need crash-safe resume for agent runs because your workload is long enough that a restart mid-process is unacceptable."
-  - "You want cost enforcement and human oversight built into the runtime rather than bolted on, because both are features of the shared primitive."
+  - You want many agents working one long-running business process and you would rather describe the outcome than wire a DAG of nodes and edges.
+  - You need crash-safe resume for agent runs because your workload is long enough that a restart mid-process is unacceptable.
+  - You want cost enforcement and human oversight built into the runtime rather than bolted on, because both are features of the shared primitive.
 avoid_if:
-  - "You need a statically defined graph with conditional branching you control precisely, because there is deliberately no graph to compile."
-  - "You are only running one short task, because colony growth and the tracker ledger pay off across long jobs, not single prompts."
-  - "You need a stable documented API, because the repository's README is short, its default branch is early and it carries a high open-issue count."
+  - You need a statically defined graph with conditional branching you control precisely, because there is deliberately no graph to compile.
+  - You are only running one short task, because colony growth and the tracker ledger pay off across long jobs, not single prompts.
+  - You need a stable documented API, because the repository's README is short, its default branch is early and it carries a high open-issue count.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics, open-issue count and creation date came from the GitHub API. Colony model, clone-based workers, ledger, park/resume, cost enforcement and provider list are read from the official README; the runtime was not installed."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics, open-issue count and creation date came from the GitHub API. Colony model, clone-based workers, ledger, park/resume, cost enforcement and provider list are read from the official README; the runtime was not installed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -1,52 +1,65 @@
 ---
 id: swe-agent-swe-agent
-name: "SWE-agent"
+name: SWE-agent
 version_tracked: null
 artifact_type: tool
 category: agents
 subcategory: coding-agents
-description: "Agent harness that attempts a real fix for a GitHub issue using a chosen LM inside a shell sandbox"
-github_url: "https://github.com/SWE-agent/SWE-agent"
-license: "MIT"
+description: Agent harness that attempts a real fix for a GitHub issue using a chosen LM inside a shell sandbox
+github_url: https://github.com/SWE-agent/SWE-agent
+license: MIT
 primary_language: Python
-org_or_maintainer: "SWE-agent"
-tags: [code-gen, evaluation, research, agents]
+org_or_maintainer: SWE-agent
+tags:
+  - code-gen
+  - evaluation
+  - research
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 20433
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-21"
-docs_url: "https://swe-agent.com"
+github_stars: 20641
+github_stars_last_30d: 208
+trending_score: 50
+last_commit: '2026-10-19'
+docs_url: https://swe-agent.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Agent harness that takes a GitHub issue and attempts a real fix with an LM of choice, and the reference design behind most subsequent SWE agent loops."
+  - Agent harness that takes a GitHub issue and attempts a real fix with an LM of choice, and the reference design behind most subsequent SWE agent loops.
 best_for:
-  - "You are researching agent loop design and want one readable implementation of the edit-run-observe cycle to instrument, replay, and ablate."
-  - "You run an internal bug-fix backlog and want to pre-filter issues with a model before a human writes the patch, accepting a partial hit rate."
-  - "You maintain a benchmark harness and want the same agent harness pinned across two model providers so a comparison measures the model, not the loop."
+  - You are researching agent loop design and want one readable implementation of the edit-run-observe cycle to instrument, replay, and ablate.
+  - You run an internal bug-fix backlog and want to pre-filter issues with a model before a human writes the patch, accepting a partial hit rate.
+  - You maintain a benchmark harness and want the same agent harness pinned across two model providers so a comparison measures the model, not the loop.
 avoid_if:
-  - "You need a production fixing service with a success guarantee, since patch acceptance rates on real issues are low even with strong models."
-  - "Your environment has no container isolation story, because the agent executes arbitrary shell commands against the checkout you point it at."
-  - "Token budget is the binding constraint, since a single attempt routinely burns tens of thousands of tokens in failed edit-and-retry cycles."
+  - You need a production fixing service with a success guarantee, since patch acceptance rates on real issues are low even with strong models.
+  - Your environment has no container isolation story, because the agent executes arbitrary shell commands against the checkout you point it at.
+  - Token budget is the binding constraint, since a single attempt routinely burns tens of thousands of tokens in failed edit-and-retry cycles.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (20433), MIT license, last commit 2026-09-21, Python as primary language and the topic list were API-verified. ACI commands, YAML config fields, batch mode, and the NeurIPS 2024 venue come from the official README and docs; the low hit-rate and token-cost claims are read from the project's own results, not reproduced here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (20433), MIT license, last commit 2026-09-21, Python as primary language and the topic list were API-verified. ACI commands, YAML config fields, batch mode, and the NeurIPS 2024 venue come from the official README and docs; the low hit-rate and token-cost claims are read from the project's own results, not reproduced here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/SWE-agent/SWE-agent", "date": "2026-09-28", "description": "20,433 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/SWE-agent/SWE-agent
+    date: '2026-09-28'
+    description: 20,433 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,63 @@
 ---
 id: dmlc-xgboost
-name: "xgboost"
+name: xgboost
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: libraries
-description: "Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training"
-github_url: "https://github.com/dmlc/xgboost"
-license: "Apache-2.0"
+description: Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
+github_url: https://github.com/dmlc/xgboost
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "dmlc"
-tags: [pytorch, evaluation]
+org_or_maintainer: dmlc
+tags:
+  - pytorch
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 28801
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://xgboost.readthedocs.io/"
+github_stars: 28913
+github_stars_last_30d: 112
+trending_score: 42
+last_commit: '2026-10-26'
+docs_url: https://xgboost.readthedocs.io/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Scalable gradient-boosted decision trees — the tabular accuracy baseline that LLM systems must beat on structured and mixed-feature tasks."
+  - Scalable gradient-boosted decision trees — the tabular accuracy baseline that LLM systems must beat on structured and mixed-feature tasks.
 best_for:
-  - "You are training a model on structured or mixed tabular features and need a strong, fast baseline in hours rather than days, since boosted trees remain difficult to beat on this data shape."
-  - "You have a scikit-learn pipeline and want to swap in gradient boosting with the same interface, so a single search and cross-validation loop covers both model families."
-  - "Your data does not fit comfortably in a single machine's memory and you have a distributed backend, because the library ships distributed trainers for common cluster frameworks and a GPU histogram path."
+  - You are training a model on structured or mixed tabular features and need a strong, fast baseline in hours rather than days, since boosted trees remain difficult to beat on this data shape.
+  - You have a scikit-learn pipeline and want to swap in gradient boosting with the same interface, so a single search and cross-validation loop covers both model families.
+  - Your data does not fit comfortably in a single machine's memory and you have a distributed backend, because the library ships distributed trainers for common cluster frameworks and a GPU histogram path.
 avoid_if:
-  - "Your data is text, images, or audio, where a learned representation is required and a tree over raw features is the wrong inductive bias."
-  - "You need to deploy on a runtime without the library, since a boosted-tree model is an executable artifact that consumers need an XGBoost-compatible runtime to score."
-  - "You are optimizing peak single-node throughput on a small dataset, where the fixed overhead of the accelerated histogram path can exceed the gain on a few thousand rows."
+  - Your data is text, images, or audio, where a learned representation is required and a tree over raw features is the wrong inductive bias.
+  - You need to deploy on a runtime without the library, since a boosted-tree model is an executable artifact that consumers need an XGBoost-compatible runtime to score.
+  - You are optimizing peak single-node throughput on a small dataset, where the fixed overhead of the accelerated histogram path can exceed the gain on a few thousand rows.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 28801 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 6 GitHub topics (gbm, gbrt, gbdt, machine-learning, xgboost, distributed-systems). Split-finding, DMatrix, gpu_hist, and the distributed trainers are from official docs; the code sample was not executed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 28801 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 6 GitHub topics (gbm, gbrt, gbdt, machine-learning, xgboost, distributed-systems). Split-finding, DMatrix, gpu_hist, and the distributed trainers are from official docs; the code sample was not executed here.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/dmlc/xgboost", "date": "2026-09-28", "description": "28,801 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/dmlc/xgboost
+    date: '2026-09-28'
+    description: 28,801 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

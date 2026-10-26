@@ -1,32 +1,40 @@
 ---
 id: nanogpt
-name: "nanoGPT"
+name: nanoGPT
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat"
-github_url: "https://github.com/karpathy/nanoGPT"
-license: "MIT"
+description: Karpathy's frozen ~600-line GPT training repository — still the clearest complete implementation of a pretraining loop, superseded for new work by nanochat
+github_url: https://github.com/karpathy/nanoGPT
+license: MIT
 primary_language: Python
-org_or_maintainer: "Andrej Karpathy"
-tags: [training, llm, foundational]
+org_or_maintainer: Andrej Karpathy
+tags:
+  - training
+  - llm
+  - foundational
 maturity: production
 cost_model: open-source
-github_stars: 64069
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2025-11-12"
-docs_url: "https://github.com/karpathy/nanoGPT#readme"
+github_stars: 64088
+github_stars_last_30d: 19
+trending_score: 17
+last_commit: '2025-11-12'
+docs_url: https://github.com/karpathy/nanoGPT#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [community-driven, research-origin]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "The teaching implementation the field keeps forking: a complete GPT-2 pretraining stack in two readable files, and the substrate the nanoGPT speedrun community measured training-efficiency research against"
+  - 'The teaching implementation the field keeps forking: a complete GPT-2 pretraining stack in two readable files, and the substrate the nanoGPT speedrun community measured training-efficiency research against'
 best_for:
   - You want to see every part of pretraining in one sitting — data shard loading, the transformer block, the optimizer loop and DDP fit in two files you can read in an afternoon
   - You are teaching or learning training mechanics and want a codebase where nothing is hidden behind a configuration system
@@ -37,13 +45,17 @@ avoid_if:
   - You need multi-node training — parallelism stops at single-node DDP, and Megatron-class stacks or `torchtune` are the next step up
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [karpathy-nanochat, litgpt, torchtune, karpathy-micrograd]
+alternatives:
+  - karpathy-nanochat
+  - litgpt
+  - torchtune
+  - karpathy-micrograd
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 64,069 stars, 353 open issues, MIT, last push 2025-11-12 — no commits for roughly a year. Deliberately frozen as a completed teaching artifact; status set to watching and the successor (karpathy/nanochat, 58,916 stars, last push 2026-09-07) named in the body."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 64,069 stars, 353 open issues, MIT, last push 2025-11-12 — no commits for roughly a year. Deliberately frozen as a completed teaching artifact; status set to watching and the successor (karpathy/nanochat, 58,916 stars, last push 2026-09-07) named in the body.'
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

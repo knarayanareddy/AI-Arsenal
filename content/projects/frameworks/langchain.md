@@ -6,27 +6,37 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
-github_url: "https://github.com/langchain-ai/langchain"
+github_url: https://github.com/langchain-ai/langchain
 license: MIT
 primary_language: Python
-org_or_maintainer: "LangChain, Inc."
-tags: [llm, rag, agents, orchestration]
+org_or_maintainer: LangChain, Inc.
+tags:
+  - llm
+  - rag
+  - agents
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 148417
-github_stars_last_30d: 0
-trending_score: 80
-last_commit: "2026-10-25"
-docs_url: "https://docs.langchain.com/oss/python/langchain/overview"
+github_stars: 148493
+github_stars_last_30d: 9287
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.langchain.com/oss/python/langchain/overview
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
-  - "The integration layer of the Python agent ecosystem: a standard interface for chat models, embeddings, retrievers and toolkits, wrapped around a large catalogue of provider packages that would otherwise each have their own calling convention"
+  - 'The integration layer of the Python agent ecosystem: a standard interface for chat models, embeddings, retrievers and toolkits, wrapped around a large catalogue of provider packages that would otherwise each have their own calling convention'
 best_for:
   - The provider churn problem is your real cost — you want `init_chat_model("openai:gpt-5.5")` to be the only line that changes when a model or vendor swaps out, with retrieval and tools already wired to the same interface
   - You are assembling a RAG or tool-using application and would rather import a maintained integration for a loader, vector store or retriever than write and keep one
@@ -37,17 +47,27 @@ avoid_if:
   - Your workload is one model, one prompt, no retrieval — a provider SDK plus a retry wrapper is fewer moving parts than adopting a framework ecosystem
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, llamaindex, dspy, pydantic-ai, smolagents]
-integrates_with: [langsmith-platform, huggingface-transformers]
+alternatives:
+  - langgraph
+  - llamaindex
+  - dspy
+  - pydantic-ai
+  - smolagents
+integrates_with:
+  - langsmith-platform
+  - huggingface-transformers
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 148,417 stars, 677 open issues, MIT, last push 2026-10-25. README now headlines 'the agent engineering platform', quickstarts with `uv add langchain` and `init_chat_model`, and points to Deep Agents, LangGraph, integrations, LangSmith and LangSmith Deployment. Prior body was generator template prose."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 148,417 stars, 677 open issues, MIT, last push 2026-10-25. README now headlines ''the agent engineering platform'', quickstarts with `uv add langchain` and `init_chat_model`, and points to Deep Agents, LangGraph, integrations, LangSmith and LangSmith Deployment. Prior body was generator template prose.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://www.zenml.io/llmops-database/building-enterprise-scale-ai-applications-with-langchain-and-langsmith","date":"2025-01-01","description":"ZenML LLMOps case study: Rakuten Group built and deployed multiple production LLM applications (AI Analyst, AI Agent, AI Librarian) using LangChain and LangSmith"}
+  - source: hackernews
+    url: https://www.zenml.io/llmops-database/building-enterprise-scale-ai-applications-with-langchain-and-langsmith
+    date: '2025-01-01'
+    description: 'ZenML LLMOps case study: Rakuten Group built and deployed multiple production LLM applications (AI Analyst, AI Agent, AI Librarian) using LangChain and LangSmith'
 featured: false
 status: active
 ---

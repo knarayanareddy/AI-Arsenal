@@ -1,50 +1,70 @@
 ---
 id: torchtitan
-name: "torchtitan"
+name: torchtitan
 version_tracked: null
 artifact_type: platform
 category: llms
 subcategory: fine-tuning
-description: "PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points"
-github_url: "https://github.com/pytorch/torchtitan"
-license: "BSD-3-Clause"
+description: PyTorch-native training platform with clean-room implementations of large-scale parallelism and extension points
+github_url: https://github.com/pytorch/torchtitan
+license: BSD-3-Clause
 primary_language: Python
-org_or_maintainer: "PyTorch"
-tags: [training, pytorch, fine-tuning, efficiency]
+org_or_maintainer: PyTorch
+tags:
+  - training
+  - pytorch
+  - fine-tuning
+  - efficiency
 maturity: beta
 cost_model: open-source
-github_stars: 5697
-github_stars_last_30d: 0
-trending_score: 48
-last_commit: "2026-09-03"
-docs_url: "https://github.com/pytorch/torchtitan#readme"
+github_stars: 5853
+github_stars_last_30d: 156
+trending_score: 27
+last_commit: '2026-10-26'
+docs_url: https://github.com/pytorch/torchtitan#readme
 demo_url: null
-paper_url: "https://arxiv.org/abs/2410.06511"
+paper_url: https://arxiv.org/abs/2410.06511
 paper_id: null
 phase: training-and-alignment
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top, study-and-reference, fork-and-adapt]
-health_signals: [actively-maintained, org-backed, research-origin]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "The readable reference for PyTorch-native distributed training: minimal clean-room implementations of tensor, pipeline, and data parallelism that are meant to be read and extended rather than consumed as a black box."
+  - 'The readable reference for PyTorch-native distributed training: minimal clean-room implementations of tensor, pipeline, and data parallelism that are meant to be read and extended rather than consumed as a black box.'
 best_for:
-  - "You are modifying the training loop itself — a new parallelism strategy, a custom kernel path, or a scheduling change — and need code small enough to hold in your head while changing it"
-  - "You want a published, peer-reviewed account of how the parallelism primitives compose, rather than reverse-engineering behaviour out of a large framework"
+  - You are modifying the training loop itself — a new parallelism strategy, a custom kernel path, or a scheduling change — and need code small enough to hold in your head while changing it
+  - You want a published, peer-reviewed account of how the parallelism primitives compose, rather than reverse-engineering behaviour out of a large framework
 avoid_if:
-  - "You want a supported, batteries-included path to fine-tune a known model on your data — the project states it is under extensive development and recommends a PyTorch nightly"
-  - "Your team needs stability guarantees across releases; the API surface moves, and downstream forks such as the AMD port exist precisely because upstream tracks nightly PyTorch"
+  - You want a supported, batteries-included path to fine-tune a known model on your data — the project states it is under extensive development and recommends a PyTorch nightly
+  - Your team needs stability guarantees across releases; the API surface moves, and downstream forks such as the AMD port exist precisely because upstream tracks nightly PyTorch
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [litgpt, openrlhf]
-integrates_with: [megatron-lm, torchtune]
+alternatives:
+  - litgpt
+  - openrlhf
+integrates_with:
+  - megatron-lm
+  - torchtune
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (5,697), forks (979), licence (BSD-3-Clause), language (Python), created 2023-12-13, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The README records an ICLR 2025 paper (arXiv 2410.06511), a TitanRL experiment directory, and an AMD GPU fork. Architecture claims derive from README and docs, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (5,697), forks (979), licence (BSD-3-Clause), language (Python), created 2023-12-13, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The README records an ICLR 2025 paper (arXiv 2410.06511), a TitanRL experiment directory, and an AMD GPU fork. Architecture claims derive from README and docs, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "arxiv", "url": "https://arxiv.org/abs/2410.06511", "date": "2026-09-03", "description": "torchtitan paper, accepted at ICLR 2025; repository at 5,697 stars as of 2026-09-03 (GitHub API)"}]
+buzz_sources:
+  - source: arxiv
+    url: https://arxiv.org/abs/2410.06511
+    date: '2026-09-03'
+    description: torchtitan paper, accepted at ICLR 2025; repository at 5,697 stars as of 2026-09-03 (GitHub API)
 featured: false
 status: active
 ---

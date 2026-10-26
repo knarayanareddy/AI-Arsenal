@@ -1,52 +1,61 @@
 ---
 id: conductor-oss-conductor
-name: "conductor"
+name: conductor
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Apache-2.0 Java workflow engine giving long-running agent and microservice tasks durable retries, timers, and human steps"
-github_url: "https://github.com/conductor-oss/conductor"
-license: "Apache-2.0"
+description: Apache-2.0 Java workflow engine giving long-running agent and microservice tasks durable retries, timers, and human steps
+github_url: https://github.com/conductor-oss/conductor
+license: Apache-2.0
 primary_language: Java
-org_or_maintainer: "conductor-oss"
-tags: [orchestration, agents]
+org_or_maintainer: conductor-oss
+tags:
+  - orchestration
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 32238
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://docs.conductor-oss.org/"
+github_stars: 32385
+github_stars_last_30d: 147
+trending_score: 45
+last_commit: '2026-10-26'
+docs_url: https://docs.conductor-oss.org/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Durable event-driven workflow engine for agentic systems, giving long-running LLM tasks retries, timers, and human-in-the-loop steps that a request-scoped agent loop cannot."
+  - Durable event-driven workflow engine for agentic systems, giving long-running LLM tasks retries, timers, and human-in-the-loop steps that a request-scoped agent loop cannot.
 best_for:
-  - "You have an agent task that takes minutes or hours - a large document set, a long tool sequence - and a request-scoped loop will lose all progress the moment a worker restarts or an API rate limit hits."
-  - "You need a human approval step in the middle of an automated pipeline, and a chat-based confirmation in the model context is not an audit record you can show a reviewer."
-  - "You already run microservices and want orchestration, compensation, and per-task retry in the same system rather than bolting a separate queue and scheduler onto your services."
+  - You have an agent task that takes minutes or hours - a large document set, a long tool sequence - and a request-scoped loop will lose all progress the moment a worker restarts or an API rate limit hits.
+  - You need a human approval step in the middle of an automated pipeline, and a chat-based confirmation in the model context is not an audit record you can show a reviewer.
+  - You already run microservices and want orchestration, compensation, and per-task retry in the same system rather than bolting a separate queue and scheduler onto your services.
 avoid_if:
-  - "Your agent work is request-scoped and finishes in seconds, because a durable workflow engine adds persistence, a control plane, and eventual-consistency semantics for no benefit at that latency."
-  - "Your team has no on-call appetite for stateful infrastructure, since losing the database means losing in-flight tasks, and backup and upgrade are your responsibility."
-  - "You want a lightweight in-process library rather than a service, because the deployment model assumes a separate control plane and worker fleet you can see and scale."
+  - Your agent work is request-scoped and finishes in seconds, because a durable workflow engine adds persistence, a control plane, and eventual-consistency semantics for no benefit at that latency.
+  - Your team has no on-call appetite for stateful infrastructure, since losing the database means losing in-flight tasks, and backup and upgrade are your responsibility.
+  - You want a lightweight in-process library rather than a service, because the deployment model assumes a separate control plane and worker fleet you can see and scale.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 32238 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 14 GitHub topics including durable-execution, grpc, spring-boot. Task types, definition versioning, retry semantics, and the custom-task SDK are from official documentation; no server was started and no example image tag was verified."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 32238 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 14 GitHub topics including durable-execution, grpc, spring-boot. Task types, definition versioning, retry semantics, and the custom-task SDK are from official documentation; no server was started and no example image tag was verified.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/conductor-oss/conductor", "date": "2026-09-28", "description": "32,238 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/conductor-oss/conductor
+    date: '2026-09-28'
+    description: 32,238 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

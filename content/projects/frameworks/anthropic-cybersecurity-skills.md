@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Eight hundred eighteen agent skills across thirty-four security domains, each mapped to the frameworks that apply to its type"
-github_url: "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+description: Eight hundred eighteen agent skills across thirty-four security domains, each mapped to the frameworks that apply to its type
+github_url: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
 license: Apache-2.0
 primary_language: Python
-tags: [agents, security]
+tags:
+  - agents
+  - security
 maturity: alpha
 cost_model: open-source
-github_stars: 33509
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-31"
-docs_url: "https://agentskills.io"
+github_stars: 35050
+github_stars_last_30d: 1541
+trending_score: 63
+last_commit: '2026-08-31'
+docs_url: https://agentskills.io
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Solves the blank-page problem when an agent needs to know which tool and technique answers a specific security question."
+  - Solves the blank-page problem when an agent needs to know which tool and technique answers a specific security question.
 best_for:
-  - "You are a defender writing a threat-hunting playbook and need technique-level steps resembling what a working analyst would actually run."
-  - "You are building a compliance mapping and need each skill tagged to ATT&CK, D3FEND, CSF 2.0, ATLAS, AI RMF, or MITRE F3."
-  - "You are onboarding junior security staff who need a curated index instead of an unscoped research prompt."
+  - You are a defender writing a threat-hunting playbook and need technique-level steps resembling what a working analyst would actually run.
+  - You are building a compliance mapping and need each skill tagged to ATT&CK, D3FEND, CSF 2.0, ATLAS, AI RMF, or MITRE F3.
+  - You are onboarding junior security staff who need a curated index instead of an unscoped research prompt.
 avoid_if:
-  - "You are shipping agent behavior to production without reviewing the content, because offensive and dual-use material sits alongside the defensive material."
-  - "You are working air-gapped, since the skills assume access to scanners, cloud CLIs, and threat feeds they do not bundle."
-  - "You need a vendor support contract, because this is an explicitly unaffiliated community project rather than an Anthropic product."
+  - You are shipping agent behavior to production without reviewing the content, because offensive and dual-use material sits alongside the defensive material.
+  - You are working air-gapped, since the skills assume access to scanners, cloud CLIs, and threat feeds they do not bundle.
+  - You need a vendor support contract, because this is an explicitly unaffiliated community project rather than an Anthropic product.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 33509, Apache-2.0, Python, last commit 2026-08-31, topics, homepage. From README: 818 skills, 34 domains, 6 frameworks, 26+ platforms, agentskills.io standard, authorized-use notice. Individual skill bodies and mapping accuracy were not spot-checked."
+enrichment_notes: 'API-verified: stars 33509, Apache-2.0, Python, last commit 2026-08-31, topics, homepage. From README: 818 skills, 34 domains, 6 frameworks, 26+ platforms, agentskills.io standard, authorized-use notice. Individual skill bodies and mapping accuracy were not spot-checked.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

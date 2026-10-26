@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step"
-github_url: "https://github.com/beenuar/AiSOC"
+description: A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step
+github_url: https://github.com/beenuar/AiSOC
 license: MIT
 primary_language: Python
-tags: [security, self-hosted]
+tags:
+  - security
+  - self-hosted
 maturity: beta
 cost_model: self-hostable
-github_stars: 2373
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://beenuar.github.io/AiSOC/"
+github_stars: 3935
+github_stars_last_30d: 1562
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://beenuar.github.io/AiSOC/
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Triages alerts with a local model and no API key, and records every prompt and tool call so the reasoning can be replayed."
+  - Triages alerts with a local model and no API key, and records every prompt and tool call so the reasoning can be replayed.
 best_for:
-  - "You are a SOC team that needs alert triage to keep working during an outage when outbound API keys are unavailable."
-  - "You are an auditor who has to show exactly why an agent escalated or dismissed a detection rather than assert that it was reasonable."
-  - "You are a small team starting detection content from scratch and want an existing rule library to fork rather than author from zero."
+  - You are a SOC team that needs alert triage to keep working during an outage when outbound API keys are unavailable.
+  - You are an auditor who has to show exactly why an agent escalated or dismissed a detection rather than assert that it was reasonable.
+  - You are a small team starting detection content from scratch and want an existing rule library to fork rather than author from zero.
 avoid_if:
-  - "You are replacing a commercial SIEM that must retain and correlate evidence at enterprise scale, because this is a single-host Compose stack."
-  - "You need native connectors for your specific EDR or identity provider, because the bundled connector set will not cover it."
-  - "You have less than 8 GB of memory available inside the Docker VM, which is the documented floor before the first model download."
+  - You are replacing a commercial SIEM that must retain and correlate evidence at enterprise scale, because this is a single-host Compose stack.
+  - You need native connectors for your specific EDR or identity provider, because the bundled connector set will not cover it.
+  - You have less than 8 GB of memory available inside the Docker VM, which is the documented floor before the first model download.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 2373, MIT, Python, last commit 2026-09-28, topics, homepage. From README: 6991-rule library with 2603 executable, v12.0.0, 8 GB / 20 GB floors, six generated secrets, ~2 GB model download, CISA KEV, MCP server. Connector list and rule execution not verified."
+enrichment_notes: 'API-verified: stars 2373, MIT, Python, last commit 2026-09-28, topics, homepage. From README: 6991-rule library with 2603 executable, v12.0.0, 8 GB / 20 GB floors, six generated secrets, ~2 GB model download, CISA KEV, MCP server. Connector list and rule execution not verified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

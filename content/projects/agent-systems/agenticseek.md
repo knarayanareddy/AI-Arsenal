@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Self-hosted Python agent that routes browsing, coding and planning work to a local Ollama or LM Studio model through a bundled SearXNG instance"
-github_url: "https://github.com/Fosowl/agenticSeek"
+description: Self-hosted Python agent that routes browsing, coding and planning work to a local Ollama or LM Studio model through a bundled SearXNG instance
+github_url: https://github.com/Fosowl/agenticSeek
 license: GPL-3.0
 primary_language: Python
-tags: [local, planning]
+tags:
+  - local
+  - planning
 maturity: beta
 cost_model: self-hostable
-github_stars: 27362
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-25"
-docs_url: "https://github.com/Fosowl/agenticSeek#readme"
+github_stars: 27546
+github_stars_last_30d: 184
+trending_score: 38
+last_commit: '2026-10-22'
+docs_url: https://github.com/Fosowl/agenticSeek#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Runs a Manus-style autonomous agent loop against a model you host, so no API key, no cloud egress and no per-token bill."
+  - Runs a Manus-style autonomous agent loop against a model you host, so no API key, no cloud egress and no per-token bill.
 best_for:
-  - "You are on a workstation with a 24 GB GPU and you want an always-on agent that searches the web, writes code and plans multi-step jobs without sending a prompt to a hosted API."
-  - "You are trialling local reasoning models and you want one application that actually exercises DeepSeek-R1 or Magistral across browsing and code paths instead of a bare chat window."
-  - "You are behind a restrictive network and you need web search available to an agent, which the bundled SearXNG metasearch container supplies in place of a paid search API."
+  - You are on a workstation with a 24 GB GPU and you want an always-on agent that searches the web, writes code and plans multi-step jobs without sending a prompt to a hosted API.
+  - You are trialling local reasoning models and you want one application that actually exercises DeepSeek-R1 or Magistral across browsing and code paths instead of a bare chat window.
+  - You are behind a restrictive network and you need web search available to an agent, which the bundled SearXNG metasearch container supplies in place of a paid search API.
 avoid_if:
-  - "You are on a laptop with no discrete GPU and you need dependable planning, because the project FAQ puts a 14B model at 12 GB VRAM with visible struggle on browsing and planning tasks."
-  - "You need a team-supported production service with an SLA, because the maintainer states plainly that this started as a side project with zero roadmap and zero funding."
-  - "You cannot pin a Python 3.10.x environment, because the README hard-recommends 3.10 and warns that other interpreter versions lead to dependency errors."
+  - You are on a laptop with no discrete GPU and you need dependable planning, because the project FAQ puts a 14B model at 12 GB VRAM with visible struggle on browsing and planning tasks.
+  - You need a team-supported production service with an SLA, because the maintainer states plainly that this started as a side project with zero roadmap and zero funding.
+  - You cannot pin a Python 3.10.x environment, because the README hard-recommends 3.10 and warns that other interpreter versions lead to dependency errors.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics, open-issue count and creation date came from the GitHub API. Install commands, the Docker service list, config.ini keys, the provider table and the VRAM figures are read from the official README; agent quality on local models was not tested here."
+enrichment_notes: Stars, license, last commit, primary language, topics, open-issue count and creation date came from the GitHub API. Install commands, the Docker service list, config.ini keys, the provider table and the VRAM figures are read from the official README; agent quality on local models was not tested here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

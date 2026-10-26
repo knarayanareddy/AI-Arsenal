@@ -1,52 +1,62 @@
 ---
 id: lllyasviel-fooocus
-name: "Fooocus"
+name: Fooocus
 version_tracked: null
 artifact_type: tool
 category: multimodal
 subcategory: tools
-description: "GPL-3.0 minimal UI over SDXL and Flux that reduces image generation to prompt, style, aspect ratio, and advanced knobs"
-github_url: "https://github.com/lllyasviel/Fooocus"
-license: "GPL-3.0"
+description: GPL-3.0 minimal UI over SDXL and Flux that reduces image generation to prompt, style, aspect ratio, and advanced knobs
+github_url: https://github.com/lllyasviel/Fooocus
+license: GPL-3.0
 primary_language: Python
-org_or_maintainer: "lllyasviel"
-tags: [vision, multimodal]
+org_or_maintainer: lllyasviel
+tags:
+  - vision
+  - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 53209
-github_stars_last_30d: 0
-trending_score: 28
-last_commit: "2025-12-01"
+github_stars: 53694
+github_stars_last_30d: 485
+trending_score: 72
+last_commit: '2025-12-01'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [vision]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Opinionated image-generation UI that strips SDXL/Flux workflows down to prompt, style, and aspect — the reference for how little UI a diffusion model actually needs."
+  - Opinionated image-generation UI that strips SDXL/Flux workflows down to prompt, style, and aspect — the reference for how little UI a diffusion model actually needs.
 best_for:
-  - "You are a model developer who wants the fastest path to evaluating a new SDXL or Flux checkpoint without learning a graph interface."
-  - "You are building a demo or internal tool where a single-page form is a better fit than a node canvas, and you can live with a smaller feature surface."
-  - "You want to fork an image-generation UI: the codebase is small, opinionated, and structured so the sampling internals are easy to read and change."
+  - You are a model developer who wants the fastest path to evaluating a new SDXL or Flux checkpoint without learning a graph interface.
+  - You are building a demo or internal tool where a single-page form is a better fit than a node canvas, and you can live with a smaller feature surface.
+  - 'You want to fork an image-generation UI: the codebase is small, opinionated, and structured so the sampling internals are easy to read and change.'
 avoid_if:
-  - "You need control composition workflows - ControlNet graphs, inpainting chains, or multi-stage pipelines - because the UI deliberately hides that structure."
-  - "You need permissive licensing for a closed commercial product, because the project is GPL-3.0 and derivative distributions inherit those terms."
-  - "You expect active development against new model families, since the repository's last commit is dated 2025-12-01 and release cadence has effectively stopped."
+  - You need control composition workflows - ControlNet graphs, inpainting chains, or multi-stage pipelines - because the UI deliberately hides that structure.
+  - You need permissive licensing for a closed commercial product, because the project is GPL-3.0 and derivative distributions inherit those terms.
+  - You expect active development against new model families, since the repository's last commit is dated 2025-12-01 and release cadence has effectively stopped.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 53209 stars, GPL-3.0 license, Python primary language, last commit 2025-12-01 (noted as effectively frozen), empty topics, no homepage field. Supported model families and the three-control design come from the repository README; the Flux path and advanced-panel contents were read from code and docs, not run."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 53209 stars, GPL-3.0 license, Python primary language, last commit 2025-12-01 (noted as effectively frozen), empty topics, no homepage field. Supported model families and the three-control design come from the repository README; the Flux path and advanced-panel contents were read from code and docs, not run.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/lllyasviel/Fooocus", "date": "2026-09-28", "description": "53,209 stars and last commit 2025-12-01 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/lllyasviel/Fooocus
+    date: '2026-09-28'
+    description: 53,209 stars and last commit 2025-12-01 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Local MCP server that hands a ChatGPT session bounded access to repositories you explicitly allow, over a local tunnel"
-github_url: "https://github.com/rebel0789/codexpro"
+description: Local MCP server that hands a ChatGPT session bounded access to repositories you explicitly allow, over a local tunnel
+github_url: https://github.com/rebel0789/codexpro
 license: MIT
 primary_language: Other
-tags: [tool-use, code-gen, openai]
+tags:
+  - tool-use
+  - code-gen
+  - openai
 maturity: beta
 cost_model: open-source
-github_stars: 2065
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-20"
-docs_url: "https://rebel0789.github.io/codexpro/"
+github_stars: 2099
+github_stars_last_30d: 34
+trending_score: 26
+last_commit: '2026-10-01'
+docs_url: https://rebel0789.github.io/codexpro/
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Solves the ChatGPT-can't-touch-your-repo problem without a hosted proxy, keeping reads, writes, commands and handoffs under separate controls."
+  - Solves the ChatGPT-can't-touch-your-repo problem without a hosted proxy, keeping reads, writes, commands and handoffs under separate controls.
 best_for:
-  - "You use ChatGPT's web app rather than the desktop client and you need it to read, edit and review a local repository inside an allowlisted root."
-  - "You want repository intelligence without shipping your code to a separate analysis service, because the indexing runs locally and is cached by a workspace fingerprint."
-  - "You need ChatGPT to hand work back to a colleague or another chat, because the export path writes a context bundle and plans under .ai-bridge."
+  - You use ChatGPT's web app rather than the desktop client and you need it to read, edit and review a local repository inside an allowlisted root.
+  - You want repository intelligence without shipping your code to a separate analysis service, because the indexing runs locally and is cached by a workspace fingerprint.
+  - You need ChatGPT to hand work back to a colleague or another chat, because the export path writes a context bundle and plans under .ai-bridge.
 avoid_if:
-  - "You are using the ChatGPT desktop app or the Codex CLI, because those already have local access and do not need a tunnel plus Developer Mode."
-  - "You cannot expose an HTTPS URL to your machine, because ChatGPT web reaches the server over the public internet via a tunnel or Tailscale Funnel."
-  - "You need deep semantic navigation in languages outside its declared parsers, because TypeScript, JavaScript, Python, Go, Rust, Swift, Java, C#, C and C++ get declaration-level analysis while everything else falls back to lexical search."
+  - You are using the ChatGPT desktop app or the Codex CLI, because those already have local access and do not need a tunnel plus Developer Mode.
+  - You cannot expose an HTTPS URL to your machine, because ChatGPT web reaches the server over the public internet via a tunnel or Tailscale Funnel.
+  - You need deep semantic navigation in languages outside its declared parsers, because TypeScript, JavaScript, Python, Go, Rust, Swift, Java, C#, C and C++ get declaration-level analysis while everything else falls back to lexical search.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, tool names, supported languages, fingerprint caching claim and the no-proxy posture are read from the official README; the tunnel was not opened during authoring."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, tool names, supported languages, fingerprint caching claim and the no-proxy posture are read from the official README; the tunnel was not opened during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

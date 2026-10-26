@@ -1,52 +1,65 @@
 ---
 id: anomalyco-opencode
-name: "opencode"
+name: opencode
 version_tracked: null
 artifact_type: tool
 category: agents
 subcategory: coding-agents
-description: "MIT-licensed terminal coding agent in TypeScript that edits files, runs shell commands, and exposes a client/server session protocol"
-github_url: "https://github.com/anomalyco/opencode"
-license: "MIT"
+description: MIT-licensed terminal coding agent in TypeScript that edits files, runs shell commands, and exposes a client/server session protocol
+github_url: https://github.com/anomalyco/opencode
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "anomalyco"
-tags: [code-gen, pytorch, tool-use, agents]
+org_or_maintainer: anomalyco
+tags:
+  - code-gen
+  - pytorch
+  - tool-use
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 210538
-github_stars_last_30d: 0
-trending_score: 43
-last_commit: "2026-09-28"
-docs_url: "https://opencode.ai"
+github_stars: 221825
+github_stars_last_30d: 11287
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://opencode.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose, reasoning]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Terminal-first open-source coding agent: a TypeScript harness that drives an LLM through edit/run/test cycles inside a real shell rather than a chat transcript."
+  - 'Terminal-first open-source coding agent: a TypeScript harness that drives an LLM through edit/run/test cycles inside a real shell rather than a chat transcript.'
 best_for:
-  - "You are on SSH in an unfamiliar repository and need an agent that runs the failing test command, reads the stack trace, and patches until the suite is green."
-  - "You want model choice to be a config value rather than a vendor account, so you can point the same harness at a local vLLM or llama.cpp endpoint on your own hardware."
-  - "You are standardizing agent-driven fixes across a team and want a self-hosted, MIT-licensed harness whose session log is reviewable data instead of a chat scrollback."
+  - You are on SSH in an unfamiliar repository and need an agent that runs the failing test command, reads the stack trace, and patches until the suite is green.
+  - You want model choice to be a config value rather than a vendor account, so you can point the same harness at a local vLLM or llama.cpp endpoint on your own hardware.
+  - You are standardizing agent-driven fixes across a team and want a self-hosted, MIT-licensed harness whose session log is reviewable data instead of a chat scrollback.
 avoid_if:
-  - "You need a hosted product with managed sandboxing, because opencode runs commands with the permissions of your own shell session on your machine."
-  - "Your agents must be reproducible and replayable in CI, since the editing loop is designed for an interactive terminal rather than a locked-down runner."
-  - "You need a non-coding agent such as a research, browser, or data agent, because the tool surface and prompts are built around repository edit/run/test cycles."
+  - You need a hosted product with managed sandboxing, because opencode runs commands with the permissions of your own shell session on your machine.
+  - Your agents must be reproducible and replayable in CI, since the editing loop is designed for an interactive terminal rather than a locked-down runner.
+  - You need a non-coding agent such as a research, browser, or data agent, because the tool surface and prompts are built around repository edit/run/test cycles.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 210538 stars, MIT license, TypeScript primary language, last commit 2026-09-28, homepage opencode.ai. Repo topics list was empty. All capability claims (LSP-aware editing, client/server session API, provider list) come from the official README and docs, not hands-on verification."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 210538 stars, MIT license, TypeScript primary language, last commit 2026-09-28, homepage opencode.ai. Repo topics list was empty. All capability claims (LSP-aware editing, client/server session API, provider list) come from the official README and docs, not hands-on verification.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/anomalyco/opencode", "date": "2026-09-28", "description": "210,538 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/anomalyco/opencode
+    date: '2026-09-28'
+    description: 210,538 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

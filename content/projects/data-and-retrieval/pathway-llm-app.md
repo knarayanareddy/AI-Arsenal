@@ -19,9 +19,9 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
+trending_score: 15
 added_date: '2026-07-11'
-last_reviewed: "2026-10-24"
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: active
 id: pathway-llm-app
@@ -42,8 +42,8 @@ tags:
   - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 58769
-last_commit: "2026-10-16"
+github_stars: 58761
+last_commit: '2026-10-16'
 docs_url: https://github.com/pathwaycom/serviette
 phase: data-and-retrieval
 domain:

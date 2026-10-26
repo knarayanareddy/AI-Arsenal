@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "labring"
+org_or_maintainer: labring
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 150
+trending_score: 27
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: fastgpt
-name: "FastGPT"
+name: FastGPT
 artifact_type: platform
 category: rag
 subcategory: platforms
-description: "Knowledge-base and visual workflow platform for LLM apps with RAG retrieval, data processing and Flow orchestration"
-github_url: "https://github.com/labring/FastGPT"
+description: Knowledge-base and visual workflow platform for LLM apps with RAG retrieval, data processing and Flow orchestration
+github_url: https://github.com/labring/FastGPT
 license: NOASSERTION
 primary_language: TypeScript
-tags: [self-hosted, retrieval]
+tags:
+  - self-hosted
+  - retrieval
 maturity: production
 cost_model: self-hostable
-github_stars: 29765
-last_commit: "2026-09-28"
-docs_url: "https://doc.fastgpt.io"
+github_stars: 29915
+last_commit: '2026-10-26'
+docs_url: https://doc.fastgpt.io
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
-  - "org-backed"
+  - actively-maintained
+  - community-driven
+  - org-backed
 ecosystem_role:
-  - "A self-hostable RAG platform that combines document ingestion, chunking, vector retrieval, and a visual flow builder for QA and agent pipelines."
-best_for: ["You are building a Chinese-language or bilingual knowledge-base assistant and want a platform whose defaults match that corpus and UI ecosystem.", "You want RAG with configurable chunking and retrieval assembled through a visual flow rather than a Python script.", "You need one self-hostable deployment covering document processing, model routing and application flow instead of stitching three services together."]
-avoid_if: ["You need the graph to be reviewable in version control, because the Flow canvas is the authoring surface and the JSON is the artefact.", "You cannot accept a Node and MongoDB stack, which is the typical deployment shape behind the Docker Compose path.", "You are building on a Python-only stack, because this is a TypeScript platform with its own API rather than a library you import."]
-enrichment_notes: "Official repository and 2026-07-10 activity were reviewed on 2026-07-12; the license is a modified open-source license (verify terms before commercial redeployment). Retrieval quality claims remain draft."
+  - A self-hostable RAG platform that combines document ingestion, chunking, vector retrieval, and a visual flow builder for QA and agent pipelines.
+best_for:
+  - You are building a Chinese-language or bilingual knowledge-base assistant and want a platform whose defaults match that corpus and UI ecosystem.
+  - You want RAG with configurable chunking and retrieval assembled through a visual flow rather than a Python script.
+  - You need one self-hostable deployment covering document processing, model routing and application flow instead of stitching three services together.
+avoid_if:
+  - You need the graph to be reviewable in version control, because the Flow canvas is the authoring surface and the JSON is the artefact.
+  - You cannot accept a Node and MongoDB stack, which is the typical deployment shape behind the Docker Compose path.
+  - You are building on a Python-only stack, because this is a TypeScript platform with its own API rather than a library you import.
+enrichment_notes: Official repository and 2026-07-10 activity were reviewed on 2026-07-12; the license is a modified open-source license (verify terms before commercial redeployment). Retrieval quality claims remain draft.
 ---
 
 ## Overview

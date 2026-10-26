@@ -1,52 +1,63 @@
 ---
 id: dao-ailab-flash-attention
-name: "flash-attention"
+name: flash-attention
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "BSD-3-Clause exact-attention kernels that avoid materializing the attention matrix, cutting memory and speeding up sequence length"
-github_url: "https://github.com/Dao-AILab/flash-attention"
-license: "BSD-3-Clause"
+description: BSD-3-Clause exact-attention kernels that avoid materializing the attention matrix, cutting memory and speeding up sequence length
+github_url: https://github.com/Dao-AILab/flash-attention
+license: BSD-3-Clause
 primary_language: Python
-org_or_maintainer: "Dao-AILab"
-tags: [attention, pytorch, efficiency]
+org_or_maintainer: Dao-AILab
+tags:
+  - attention
+  - pytorch
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 25025
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-09-28"
+github_stars: 25219
+github_stars_last_30d: 194
+trending_score: 49
+last_commit: '2026-10-24'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "IO-aware exact attention kernels that cut attention memory and time enough to change what context length is servable — upstream of nearly every long-context engine."
+  - IO-aware exact attention kernels that cut attention memory and time enough to change what context length is servable — upstream of nearly every long-context engine.
 best_for:
-  - "You are serving long context and run out of memory building the attention matrix, because a blockwise kernel changes memory scaling from quadratic to linear in sequence length."
-  - "You are fine-tuning a transformer and want the speedup without changing the model, since these are exact kernels that produce the same attention output as the reference implementation."
-  - "You need head dimensions beyond what a stock kernel supports, where multi-query and grouped-query attention variants and the sliding-window kernel cover shapes the default path does not."
+  - You are serving long context and run out of memory building the attention matrix, because a blockwise kernel changes memory scaling from quadratic to linear in sequence length.
+  - You are fine-tuning a transformer and want the speedup without changing the model, since these are exact kernels that produce the same attention output as the reference implementation.
+  - You need head dimensions beyond what a stock kernel supports, where multi-query and grouped-query attention variants and the sliding-window kernel cover shapes the default path does not.
 avoid_if:
-  - "You are on AMD, Intel, or Apple hardware without a supported path, because the fast kernels are CUDA-first and a fallback exists but is not the reason to adopt the library."
-  - "You need approximate attention to fit an even longer context, because these kernels are exact and buy headroom rather than trading accuracy for length."
-  - "You are deploying to a runtime that only ships a standard attention implementation, since a custom kernel has to be compiled and matched to the serving stack's shape and dtype constraints."
+  - You are on AMD, Intel, or Apple hardware without a supported path, because the fast kernels are CUDA-first and a fallback exists but is not the reason to adopt the library.
+  - You need approximate attention to fit an even longer context, because these kernels are exact and buy headroom rather than trading accuracy for length.
+  - You are deploying to a runtime that only ships a standard attention implementation, since a custom kernel has to be compiled and matched to the serving stack's shape and dtype constraints.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 25025 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-28, empty topics, no homepage. IO-awareness, online softmax, triangular causal scheduling, and the MQA/GQA and sliding-window variants are from the published papers and README; no kernel was compiled or benchmarked in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 25025 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-28, empty topics, no homepage. IO-awareness, online softmax, triangular causal scheduling, and the MQA/GQA and sliding-window variants are from the published papers and README; no kernel was compiled or benchmarked in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Dao-AILab/flash-attention", "date": "2026-09-28", "description": "25,025 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Dao-AILab/flash-attention
+    date: '2026-09-28'
+    description: 25,025 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

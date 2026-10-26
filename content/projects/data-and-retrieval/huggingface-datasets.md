@@ -1,52 +1,63 @@
 ---
 id: huggingface-datasets
-name: "datasets"
+name: datasets
 version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: datasets
-description: "Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets"
-github_url: "https://github.com/huggingface/datasets"
-license: "Apache-2.0"
+description: Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
+github_url: https://github.com/huggingface/datasets
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [data, streaming, evaluation]
+org_or_maintainer: huggingface
+tags:
+  - data
+  - streaming
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 22014
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.co/docs/datasets"
+github_stars: 22089
+github_stars_last_30d: 75
+trending_score: 39
+last_commit: '2026-10-23'
+docs_url: https://huggingface.co/docs/datasets
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Dataset loading, caching, and streaming library that hides Parquet/Arrow/streaming format differences behind one map API, and is the standard ingestion path for evaluation corpora."
+  - Dataset loading, caching, and streaming library that hides Parquet/Arrow/streaming format differences behind one map API, and is the standard ingestion path for evaluation corpora.
 best_for:
-  - "You are building an evaluation harness and need versioned benchmark corpora with a pinned revision hash so results reproduce next quarter."
-  - "You are fine-tuning on a corpus larger than machine memory and need iterable streaming with shuffle and shard-level parallelism instead of a local download."
-  - "You are moving between raw Parquet on object storage and a NumPy/PyArrow training loop and want one loader that handles caching, resumption, and format quirks."
+  - You are building an evaluation harness and need versioned benchmark corpora with a pinned revision hash so results reproduce next quarter.
+  - You are fine-tuning on a corpus larger than machine memory and need iterable streaming with shuffle and shard-level parallelism instead of a local download.
+  - You are moving between raw Parquet on object storage and a NumPy/PyArrow training loop and want one loader that handles caching, resumption, and format quirks.
 avoid_if:
-  - "You need low-latency random writes or a mutable dataset, since Dataset objects are immutable and regeneration goes through a new cache entry."
-  - "You must guarantee that a remote dataset script never runs on your host, because load_dataset still honours dataset scripts in legacy repositories."
-  - "Your storage cost is the binding constraint: the default cache fingerprints every distinct transform, and unpruned map calls accumulate many full copies on disk."
+  - You need low-latency random writes or a mutable dataset, since Dataset objects are immutable and regeneration goes through a new cache entry.
+  - You must guarantee that a remote dataset script never runs on your host, because load_dataset still honours dataset scripts in legacy repositories.
+  - 'Your storage cost is the binding constraint: the default cache fingerprints every distinct transform, and unpruned map calls accumulate many full copies on disk.'
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (22014), Apache-2.0 license, last commit 2026-09-28, Python as primary language, and the topic list were verified via the GitHub API. Fingerprinting, Arrow storage, and streaming internals are described from official docs and the README; no local install or benchmark was run for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (22014), Apache-2.0 license, last commit 2026-09-28, Python as primary language, and the topic list were verified via the GitHub API. Fingerprinting, Arrow storage, and streaming internals are described from official docs and the README; no local install or benchmark was run for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/datasets", "date": "2026-09-28", "description": "22,014 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/datasets
+    date: '2026-09-28'
+    description: 22,014 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

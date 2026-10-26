@@ -1,46 +1,69 @@
 ---
 id: anythingllm
-name: "AnythingLLM"
+name: AnythingLLM
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "All-in-one desktop and Docker chat workspace bundling document RAG, agents and multi-user access"
-github_url: "https://github.com/Mintplex-Labs/anything-llm"
+description: All-in-one desktop and Docker chat workspace bundling document RAG, agents and multi-user access
+github_url: https://github.com/Mintplex-Labs/anything-llm
 license: MIT
 primary_language: Other
-org_or_maintainer: "Mintplex Labs"
-tags: [rag, self-hosted, local]
+org_or_maintainer: Mintplex Labs
+tags:
+  - rag
+  - self-hosted
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 66555
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://docs.anythingllm.com"
+github_stars: 67584
+github_stars_last_30d: 1029
+trending_score: 55
+last_commit: '2026-10-25'
+docs_url: https://docs.anythingllm.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The 'private ChatGPT over your documents' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no-code agents — the lowest-friction path from documents to a working private assistant."
-best_for: ["You need document Q&A working today without assembling a vector database, an embedding service and a chat UI, and you would rather run one container than tune four.", "You are on a laptop and want the same product locally: the project ships a desktop build for Mac, Windows and Linux alongside the Docker image, with local model backends supported.", "You need workspace-scoped retrieval — separate knowledge bases with their own embedding model and vector config — because mixing confidential and general documents in one index is a non-starter."]
-avoid_if: ["You need to inspect or replace individual pipeline stages, because the whole point of the product is that the vector, embedding and chat layers are wired together behind a settings UI you do not control.", "You are building a programmatic RAG service for another application to call, because this is a user-facing workspace application rather than a library you embed.", "You need a hard guarantee that the multi-user and agent features are hardened, because the README markets them as battle-tested without publishing a threat model, an audit, or an SLA."]
+  - 'The ''private ChatGPT over your documents'' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no-code agents — the lowest-friction path from documents to a working private assistant.'
+best_for:
+  - You need document Q&A working today without assembling a vector database, an embedding service and a chat UI, and you would rather run one container than tune four.
+  - 'You are on a laptop and want the same product locally: the project ships a desktop build for Mac, Windows and Linux alongside the Docker image, with local model backends supported.'
+  - You need workspace-scoped retrieval — separate knowledge bases with their own embedding model and vector config — because mixing confidential and general documents in one index is a non-starter.
+avoid_if:
+  - You need to inspect or replace individual pipeline stages, because the whole point of the product is that the vector, embedding and chat layers are wired together behind a settings UI you do not control.
+  - You are building a programmatic RAG service for another application to call, because this is a user-facing workspace application rather than a library you embed.
+  - You need a hard guarantee that the multi-user and agent features are hardened, because the README markets them as battle-tested without publishing a threat model, an audit, or an SLA.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, librechat]
-integrates_with: [ollama, lm-studio]
+alternatives:
+  - open-webui
+  - librechat
+integrates_with:
+  - ollama
+  - lm-studio
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (62,914), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (62,914), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Mintplex-Labs/anything-llm", "date": "2026-07-08", "description": "62,914 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Mintplex-Labs/anything-llm
+    date: '2026-07-08'
+    description: 62,914 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

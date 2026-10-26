@@ -1,52 +1,63 @@
 ---
 id: farama-foundation-gymnasium
-name: "Gymnasium"
+name: Gymnasium
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: libraries
-description: "Standard API for reinforcement-learning environments with spaces, vectorisation, and a curated env registry"
-github_url: "https://github.com/Farama-Foundation/Gymnasium"
-license: "MIT"
+description: Standard API for reinforcement-learning environments with spaces, vectorisation, and a curated env registry
+github_url: https://github.com/Farama-Foundation/Gymnasium
+license: MIT
 primary_language: Python
-org_or_maintainer: "Farama-Foundation"
-tags: [rlhf, benchmark, evaluation]
+org_or_maintainer: Farama-Foundation
+tags:
+  - rlhf
+  - benchmark
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 12590
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-27"
-docs_url: "https://gymnasium.farama.org"
+github_stars: 12731
+github_stars_last_30d: 141
+trending_score: 44
+last_commit: '2026-10-26'
+docs_url: https://gymnasium.farama.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [reinforcement-learning]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - reinforcement-learning
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Standard API for reinforcement-learning environments, whose observation/action space contracts keep RL code portable across simulators and model implementations."
+  - Standard API for reinforcement-learning environments, whose observation/action space contracts keep RL code portable across simulators and model implementations.
 best_for:
-  - "You are implementing or reproducing a reinforcement-learning algorithm and need one environment interface so the same code runs on classic control, box2d, and MuJoCo tasks."
-  - "You are comparing published results across papers and want a common environment version and seeding contract, since Gym's version policy pins behaviour against upstream changes."
-  - "You need vectorised rollouts on CPU with multiple environments stepping in one call, which is what most off-policy implementations assume for throughput."
+  - You are implementing or reproducing a reinforcement-learning algorithm and need one environment interface so the same code runs on classic control, box2d, and MuJoCo tasks.
+  - You are comparing published results across papers and want a common environment version and seeding contract, since Gym's version policy pins behaviour against upstream changes.
+  - You need vectorised rollouts on CPU with multiple environments stepping in one call, which is what most off-policy implementations assume for throughput.
 avoid_if:
-  - "You are working in a simulator whose engine has its own idiomatic batched API, since adapting it usually means fighting the space contract rather than using it."
-  - "You need multi-agent environments, since this API is explicitly single-agent and multi-agent support lives elsewhere."
-  - "You need a production service interface, because a step call is an in-process function with no networking, timeouts, or request handling."
+  - You are working in a simulator whose engine has its own idiomatic batched API, since adapting it usually means fighting the space contract rather than using it.
+  - You need multi-agent environments, since this API is explicitly single-agent and multi-agent support lives elsewhere.
+  - You need a production service interface, because a step call is an in-process function with no networking, timeouts, or request handling.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (12590), MIT license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Space types, the terminated/truncated split, vector API modes, wrappers, and the passive checker are from the official docs and source; throughput and multi-agent caveats are engineering judgement, not benchmarked here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (12590), MIT license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Space types, the terminated/truncated split, vector API modes, wrappers, and the passive checker are from the official docs and source; throughput and multi-agent caveats are engineering judgement, not benchmarked here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Farama-Foundation/Gymnasium", "date": "2026-09-28", "description": "12,590 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Farama-Foundation/Gymnasium
+    date: '2026-09-28'
+    description: 12,590 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

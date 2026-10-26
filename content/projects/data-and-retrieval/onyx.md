@@ -5,43 +5,64 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: platforms
-description: "Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved"
-github_url: "https://github.com/onyx-dot-app/onyx"
+description: Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
+github_url: https://github.com/onyx-dot-app/onyx
 license: NOASSERTION
 primary_language: Python
 org_or_maintainer: onyx-dot-app
-tags: [retrieval, self-hosted, agents, security]
+tags:
+  - retrieval
+  - self-hosted
+  - agents
+  - security
 maturity: production
 cost_model: self-hostable
-github_stars: 32271
-github_stars_last_30d: 0
-trending_score: 62
-last_commit: "2026-09-28"
-docs_url: "https://onyx.app"
+github_stars: 32998
+github_stars_last_30d: 727
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://onyx.app
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The leading open-source answer to Glean-style enterprise search: connector-first RAG where the hard problems are sync, document permissions, and freshness across dozens of workplace tools — not the chat layer"
-best_for: ["You need an assistant over the tools your team already uses, because Onyx connects to more than fifty applications and ingests data along with its metadata and permissions.", "You are an enterprise team that must self-host, because data sovereignty is the framing of the product and the deploy path is a single shell command.", "You want an agent to act in external systems rather than only read, since external actions and MCP are supported alongside a secure sandbox for code execution."]
-avoid_if: ["You need an OSI-approved licence for a self-hosted internal deployment, because the API reports the licence status as unasserted and that needs checking against the source before you commit.", "You are indexing one small corpus, because a fifty-connector platform with web search, sandboxes and artifacts is a lot of surface for a single document set.", "You want a retrieval engine rather than an application, because Onyx bundles the index, the agent harness, the chat surface and the integrations into one product."]
+  - 'The leading open-source answer to Glean-style enterprise search: connector-first RAG where the hard problems are sync, document permissions, and freshness across dozens of workplace tools — not the chat layer'
+best_for:
+  - You need an assistant over the tools your team already uses, because Onyx connects to more than fifty applications and ingests data along with its metadata and permissions.
+  - You are an enterprise team that must self-host, because data sovereignty is the framing of the product and the deploy path is a single shell command.
+  - You want an agent to act in external systems rather than only read, since external actions and MCP are supported alongside a secure sandbox for code execution.
+avoid_if:
+  - You need an OSI-approved licence for a self-hosted internal deployment, because the API reports the licence status as unasserted and that needs checking against the source before you commit.
+  - You are indexing one small corpus, because a fifty-connector platform with web search, sandboxes and artifacts is a lot of surface for a single document set.
+  - You want a retrieval engine rather than an application, because Onyx bundles the index, the agent harness, the chat surface and the integrations into one product.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [anything-llm, open-webui]
+alternatives:
+  - anything-llm
+  - open-webui
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (30.7k) and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. License split (MIT core + ee directory) from the repository. Connector count and permission-sync claims from official docs; not independently tested here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/onyx-dot-app/onyx","date":"2026-07-08","description":"30.7k stars, active development, formerly Danswer"}
+  - source: github-trending
+    url: https://github.com/onyx-dot-app/onyx
+    date: '2026-07-08'
+    description: 30.7k stars, active development, formerly Danswer
 featured: false
 status: active
 ---

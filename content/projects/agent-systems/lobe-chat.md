@@ -5,43 +5,64 @@ version_tracked: null
 artifact_type: platform
 category: llms
 subcategory: platforms
-description: "Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents"
-github_url: "https://github.com/lobehub/lobehub"
+description: Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
+github_url: https://github.com/lobehub/lobehub
 license: NOASSERTION
 primary_language: TypeScript
 org_or_maintainer: lobehub
-tags: [agents, orchestration, self-hosted]
+tags:
+  - agents
+  - orchestration
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 82874
-github_stars_last_30d: 0
-trending_score: 72
-last_commit: "2026-09-28"
-docs_url: "https://lobehub.com/docs"
+github_stars: 83504
+github_stars_last_30d: 630
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://lobehub.com/docs
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [actively-maintained, community-driven, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - community-driven
+  - production-proven
 ecosystem_role:
   - One of the two dominant self-hosted chat frontends (alongside Open WebUI), differentiated by its TypeScript/Next.js stack, agent/plugin marketplace, and polished multi-provider UX — the "bring your own API keys" deployment pattern for teams that want a ChatGPT-class interface without sending data to a SaaS
-best_for: ["You want a polished, self-hosted chat front end for your own models and your own API keys, deployed with Docker or a one-click Vercel, Zeabur, Sealos or Alibaba Cloud deploy.", "You are standardising on MCP tools and want them discoverable from one client rather than re-plumbed per application, which the plugin surface handles.", "You need an always-on agent operation — scheduled runs, a roster of agents and a report on what they did — rather than a chat window that only acts while somebody is looking."]
-avoid_if: ["You need a clean OSS licence you can read, because the GitHub API reports NOASSERTION for this repository, so the licence position needs checking against the source before you commit to it commercially.", "You want a minimal client, because this is a large TypeScript product with a plugin ecosystem and a UI-first design, and a thin SDK would be a better fit for embedding.", "You expect stable internals across upgrades, because the README describes the project as under active development with feedback invited on any issue."]
+best_for:
+  - You want a polished, self-hosted chat front end for your own models and your own API keys, deployed with Docker or a one-click Vercel, Zeabur, Sealos or Alibaba Cloud deploy.
+  - You are standardising on MCP tools and want them discoverable from one client rather than re-plumbed per application, which the plugin surface handles.
+  - You need an always-on agent operation — scheduled runs, a roster of agents and a report on what they did — rather than a chat window that only acts while somebody is looking.
+avoid_if:
+  - You need a clean OSS licence you can read, because the GitHub API reports NOASSERTION for this repository, so the licence position needs checking against the source before you commit to it commercially.
+  - You want a minimal client, because this is a large TypeScript product with a plugin ecosystem and a UI-first design, and a thin SDK would be a better fit for embedding.
+  - You expect stable internals across upgrades, because the README describes the project as under active development with feedback invited on any issue.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, librechat]
-integrates_with: [ollama]
+alternatives:
+  - open-webui
+  - librechat
+integrates_with:
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (79.6k), TypeScript, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. License nuance (Apache-2.0 base with additional terms) from the repository's LICENSE file. Feature claims from official docs; not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/lobehub/lobehub","date":"2026-07-08","description":"79.6k stars, active daily development"}
+  - source: github-trending
+    url: https://github.com/lobehub/lobehub
+    date: '2026-07-08'
+    description: 79.6k stars, active daily development
 featured: false
 status: active
 ---

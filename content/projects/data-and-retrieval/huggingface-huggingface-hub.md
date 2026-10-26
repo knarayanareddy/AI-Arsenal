@@ -1,52 +1,62 @@
 ---
 id: huggingface-huggingface-hub
-name: "huggingface_hub"
+name: huggingface_hub
 version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "Official Python client and CLI for the Hugging Face Hub, covering download, upload, cache management, and repo operations"
-github_url: "https://github.com/huggingface/huggingface_hub"
-license: "Apache-2.0"
+description: Official Python client and CLI for the Hugging Face Hub, covering download, upload, cache management, and repo operations
+github_url: https://github.com/huggingface/huggingface_hub
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [caching, huggingface]
+org_or_maintainer: huggingface
+tags:
+  - caching
+  - huggingface
 maturity: production
 cost_model: open-source
-github_stars: 3939
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.co/docs/huggingface_hub"
+github_stars: 4006
+github_stars_last_30d: 67
+trending_score: 38
+last_commit: '2026-10-24'
+docs_url: https://huggingface.co/docs/huggingface_hub
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The model and dataset distribution layer: client, CLI, and cache semantics that every Hugging Face pipeline and most open model releases depend on."
+  - 'The model and dataset distribution layer: client, CLI, and cache semantics that every Hugging Face pipeline and most open model releases depend on.'
 best_for:
-  - "You are downloading models or datasets in a training job and need a cache that is shared across runs and does not re-fetch on every process start."
-  - "You need to pin a model revision so a pipeline is reproducible next month, and a single commit hash must be the unit of dependency."
-  - "You are publishing artifacts and need gated, resumable uploads with progress rather than hand-rolled request code."
+  - You are downloading models or datasets in a training job and need a cache that is shared across runs and does not re-fetch on every process start.
+  - You need to pin a model revision so a pipeline is reproducible next month, and a single commit hash must be the unit of dependency.
+  - You are publishing artifacts and need gated, resumable uploads with progress rather than hand-rolled request code.
 avoid_if:
-  - "You work entirely with local checkpoints and never touch a Hub, since the client is pure overhead in that case."
-  - "You need artifact version control with real branching and reviews, where git itself is a better fit than Hub repositories."
-  - "You are in an air-gapped environment with a private artifact registry, since the client's value is the Hub's content, distribution, and gated access."
+  - You work entirely with local checkpoints and never touch a Hub, since the client is pure overhead in that case.
+  - You need artifact version control with real branching and reviews, where git itself is a better fit than Hub repositories.
+  - You are in an air-gapped environment with a private artifact registry, since the client's value is the Hub's content, distribution, and gated access.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3939), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all eight topics were read from the GitHub API. The two-level cache layout, snapshot symlinks, revision pinning, gated access, and hf_transfer come from the official documentation; no download was performed and no cache inspected here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3939), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all eight topics were read from the GitHub API. The two-level cache layout, snapshot symlinks, revision pinning, gated access, and hf_transfer come from the official documentation; no download was performed and no cache inspected here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/huggingface_hub", "date": "2026-09-28", "description": "3,939 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/huggingface_hub
+    date: '2026-09-28'
+    description: 3,939 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

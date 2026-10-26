@@ -1,52 +1,62 @@
 ---
 id: facebookresearch-dinov2
-name: "dinov2"
+name: dinov2
 version_tracked: null
 artifact_type: model
 category: computer-vision
 subcategory: models
-description: "Self-supervised vision foundation model whose ViT backbones are the default feature extractor when no labels exist"
-github_url: "https://github.com/facebookresearch/dinov2"
-license: "Apache-2.0"
+description: Self-supervised vision foundation model whose ViT backbones are the default feature extractor when no labels exist
+github_url: https://github.com/facebookresearch/dinov2
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "facebookresearch"
-tags: [vision, embeddings]
+org_or_maintainer: facebookresearch
+tags:
+  - vision
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 13376
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-03"
+github_stars: 13476
+github_stars_last_30d: 100
+trending_score: 41
+last_commit: '2026-10-06'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [vision]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Self-supervised vision foundation model whose distilled backbones are the default feature extractor when no task-specific vision dataset exists."
+  - Self-supervised vision foundation model whose distilled backbones are the default feature extractor when no task-specific vision dataset exists.
 best_for:
-  - "You need image embeddings for classification, clustering, or retrieval and have no labelled data for the domain, so you start from a self-supervised backbone."
-  - "You are building a vision model for a new task and want to fine-tune a ViT on a small labelled set rather than training a backbone from scratch."
-  - "You want a frozen-feature baseline quickly, extracting embeddings with a single forward pass and fitting a linear or k-NN classifier on top."
+  - You need image embeddings for classification, clustering, or retrieval and have no labelled data for the domain, so you start from a self-supervised backbone.
+  - You are building a vision model for a new task and want to fine-tune a ViT on a small labelled set rather than training a backbone from scratch.
+  - You want a frozen-feature baseline quickly, extracting embeddings with a single forward pass and fitting a linear or k-NN classifier on top.
 avoid_if:
-  - "You need dense prediction at production resolution and care about throughput, since a full-resolution ViT pass is heavier than a distilled or smaller backbone for the same accuracy."
-  - "You are in a text-image or multimodal setting, since these are vision-only checkpoints with no language tower."
-  - "You need a domain with a strong specialist checkpoint, since a task-specific model will beat a generic self-supervised backbone on in-domain data."
+  - You need dense prediction at production resolution and care about throughput, since a full-resolution ViT pass is heavier than a distilled or smaller backbone for the same accuracy.
+  - You are in a text-image or multimodal setting, since these are vision-only checkpoints with no language tower.
+  - You need a domain with a strong specialist checkpoint, since a task-specific model will beat a generic self-supervised backbone on in-domain data.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (13376), Apache-2.0, last commit 2026-06-03, Python, and the topic list were API-verified; no homepage field. Self-distillation with multi-crop, centering plus sharpening, the distilled ViT sizes, and get_intermediate_layers come from the official repo and paper. Comparative claims against CLIP and MAE reflect published results, not runs performed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (13376), Apache-2.0, last commit 2026-06-03, Python, and the topic list were API-verified; no homepage field. Self-distillation with multi-crop, centering plus sharpening, the distilled ViT sizes, and get_intermediate_layers come from the official repo and paper. Comparative claims against CLIP and MAE reflect published results, not runs performed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/facebookresearch/dinov2", "date": "2026-09-28", "description": "13,376 stars and last commit 2026-06-03 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/facebookresearch/dinov2
+    date: '2026-09-28'
+    description: 13,376 stars and last commit 2026-06-03 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

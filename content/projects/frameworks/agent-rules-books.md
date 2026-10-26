@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "AGENTS.md rule sets distilled from Clean Code, Clean Architecture, DDD, and DDIA, each shipped in mini, nano, and full sizes"
-github_url: "https://github.com/ciembor/agent-rules-books"
+description: AGENTS.md rule sets distilled from Clean Code, Clean Architecture, DDD, and DDIA, each shipped in mini, nano, and full sizes
+github_url: https://github.com/ciembor/agent-rules-books
 license: MIT
 primary_language: Other
-tags: [agents, code-gen, structured-output]
+tags:
+  - agents
+  - code-gen
+  - structured-output
 maturity: production
 cost_model: open-source
-github_stars: 2877
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-10"
-docs_url: "https://ciembor.github.io/agent-rules-books/"
+github_stars: 3115
+github_stars_last_30d: 238
+trending_score: 42
+last_commit: '2026-09-10'
+docs_url: https://ciembor.github.io/agent-rules-books/
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns book-length style advice into scoped Markdown rules that a coding agent can actually load and obey."
+  - Turns book-length style advice into scoped Markdown rules that a coding agent can actually load and obey.
 best_for:
-  - "You are standardizing how Codex and Claude Code modify an unfamiliar repository and need refactoring rules rather than generic style advice."
-  - "You are working under a tight context budget and need the nano tier to fit inside a system prompt without eating the window."
-  - "You are writing a design document and want the same architectural vocabulary your agents will use when they touch the code."
+  - You are standardizing how Codex and Claude Code modify an unfamiliar repository and need refactoring rules rather than generic style advice.
+  - You are working under a tight context budget and need the nano tier to fit inside a system prompt without eating the window.
+  - You are writing a design document and want the same architectural vocabulary your agents will use when they touch the code.
 avoid_if:
-  - "You need enforcement, because these are Markdown rules an agent may interpret loosely and nothing compiles or checks them."
-  - "You are applying them to a codebase whose conventions deliberately contradict the source books."
-  - "You want one size that fits every language, since the rules are language-agnostic prose with no framework-specific detail."
+  - You need enforcement, because these are Markdown rules an agent may interpret loosely and nothing compiles or checks them.
+  - You are applying them to a codebase whose conventions deliberately contradict the source books.
+  - You want one size that fits every language, since the rules are language-agnostic prose with no framework-specific detail.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 2877, MIT, null primary language, last commit 2026-09-10, topics, homepage. From README: mini/nano/full tiers and the Clean Architecture, Clean Code, A Philosophy line and rule counts. Per-book compatibility and installed behavior not run."
+enrichment_notes: 'API-verified: stars 2877, MIT, null primary language, last commit 2026-09-10, topics, homepage. From README: mini/nano/full tiers and the Clean Architecture, Clean Code, A Philosophy line and rule counts. Per-book compatibility and installed behavior not run.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

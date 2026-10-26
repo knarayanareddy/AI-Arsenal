@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 3 entries | 2026-10-25 |
-| [data pipelines](./data-pipelines/) | 1 entries | 2026-10-25 |
-| [evaluation pipelines](./evaluation-pipelines/) | 1 entries | 2026-10-25 |
-| [fine tuning workflows](./fine-tuning-workflows/) | 1 entries | 2026-10-25 |
-| [multimodal](./multimodal/) | 1 entries | 2026-10-25 |
-| [production deployment](./production-deployment/) | 1 entries | 2026-10-25 |
-| [rag systems](./rag-systems/) | 3 entries | 2026-10-25 |
+| [agent systems](./agent-systems/) | 3 entries | 2026-10-26 |
+| [data pipelines](./data-pipelines/) | 1 entries | 2026-10-26 |
+| [evaluation pipelines](./evaluation-pipelines/) | 1 entries | 2026-10-26 |
+| [fine tuning workflows](./fine-tuning-workflows/) | 1 entries | 2026-10-26 |
+| [multimodal](./multimodal/) | 1 entries | 2026-10-26 |
+| [production deployment](./production-deployment/) | 1 entries | 2026-10-26 |
+| [rag systems](./rag-systems/) | 3 entries | 2026-10-26 |
 
 ## Recently Added
 

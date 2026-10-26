@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "SillyTavern"
+org_or_maintainer: SillyTavern
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 1088
+trending_score: 55
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: sillytavern
-name: "SillyTavern"
+name: SillyTavern
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Local LLM front end unifying text, image and TTS backends with lorebooks, Visual Novel mode and a large extension ecosystem"
-github_url: "https://github.com/SillyTavern/SillyTavern"
+description: Local LLM front end unifying text, image and TTS backends with lorebooks, Visual Novel mode and a large extension ecosystem
+github_url: https://github.com/SillyTavern/SillyTavern
 license: AGPL-3.0
 primary_language: Other
-tags: [multimodal, llm]
+tags:
+  - multimodal
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 33887
-last_commit: "2026-09-23"
-docs_url: "https://docs.sillytavern.app/"
+github_stars: 34975
+last_commit: '2026-10-02'
+docs_url: https://docs.sillytavern.app/
 phase: agent-system
 domain:
-  - "language"
-  - "general-purpose"
+  - language
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "fork-and-adapt"
+  - deploy-as-is
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A locally hosted conversation frontend that manages personas, prompt assembly, context budgeting, and connections to many local or hosted model backends."
-best_for: ["You are running a local text model and you want prompt templates, sampling parameters and lorebook-driven world context that a bare completion endpoint does not give you.", "You want one interface over many backends, because the README lists KoboldAI/CPP, Horde, NovelAI, Ooba, Tabby, OpenAI, OpenRouter, Claude and Mistral as supported connections.", "You want to couple text generation with images and speech, since Automatic1111 and ComfyUI image generation plus TTS voice models are integrated into the same session."]
-avoid_if: ["You need an embeddable library or a multi-user service, because this is a locally installed user interface for a single operator rather than a component you build on.", "You need a turnkey chat product with no learning curve, because the project's stated vision explicitly includes a steep learning curve as part of the appeal.", "You need a supported commercial product, because it is a community passion project that is always free and open source with no hosted service."]
-enrichment_notes: "Official repository, AGPL-3.0 license, and 2026-07-11 activity were reviewed on 2026-07-12. Suitability beyond single-user/local use remains draft."
+  - A locally hosted conversation frontend that manages personas, prompt assembly, context budgeting, and connections to many local or hosted model backends.
+best_for:
+  - You are running a local text model and you want prompt templates, sampling parameters and lorebook-driven world context that a bare completion endpoint does not give you.
+  - You want one interface over many backends, because the README lists KoboldAI/CPP, Horde, NovelAI, Ooba, Tabby, OpenAI, OpenRouter, Claude and Mistral as supported connections.
+  - You want to couple text generation with images and speech, since Automatic1111 and ComfyUI image generation plus TTS voice models are integrated into the same session.
+avoid_if:
+  - You need an embeddable library or a multi-user service, because this is a locally installed user interface for a single operator rather than a component you build on.
+  - You need a turnkey chat product with no learning curve, because the project's stated vision explicitly includes a steep learning curve as part of the appeal.
+  - You need a supported commercial product, because it is a community passion project that is always free and open source with no hosted service.
+enrichment_notes: Official repository, AGPL-3.0 license, and 2026-07-11 activity were reviewed on 2026-07-12. Suitability beyond single-user/local use remains draft.
 ---
 
 ## Overview

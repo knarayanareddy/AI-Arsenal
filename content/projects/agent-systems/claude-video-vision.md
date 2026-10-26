@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Claude Code plugin that gives it ffmpeg-extracted video frames plus timestamped audio transcriptions from Whisper, Gemini or OpenAI"
-github_url: "https://github.com/jordanrendric/claude-video-vision"
+description: Claude Code plugin that gives it ffmpeg-extracted video frames plus timestamped audio transcriptions from Whisper, Gemini or OpenAI
+github_url: https://github.com/jordanrendric/claude-video-vision
 license: MIT
 primary_language: TypeScript
-tags: [multimodal, code-gen, voice]
+tags:
+  - multimodal
+  - code-gen
+  - voice
 maturity: beta
 cost_model: open-source
-github_stars: 1336
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-07"
-docs_url: "https://github.com/jordanrendric/claude-video-vision#readme"
+github_stars: 1425
+github_stars_last_30d: 89
+trending_score: 30
+last_commit: '2026-10-14'
+docs_url: https://github.com/jordanrendric/claude-video-vision#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Closes the perception gap for video: frames go in as images, audio comes back as timestamped text, and Claude does the interpreting."
+  - 'Closes the perception gap for video: frames go in as images, audio comes back as timestamped text, and Claude does the interpreting.'
 best_for:
-  - "You are in Claude Code and you need to ask questions about a local video file without leaving the terminal or uploading the file anywhere."
-  - "You want a fully local perception path and you prefer to run whisper.cpp or openai-whisper on your own machine rather than sending audio to Gemini or OpenAI."
-  - "You have a YouTube URL you need analysed and you want yt-dlp to fetch the media and preserve source metadata and captions as context."
+  - You are in Claude Code and you need to ask questions about a local video file without leaving the terminal or uploading the file anywhere.
+  - You want a fully local perception path and you prefer to run whisper.cpp or openai-whisper on your own machine rather than sending audio to Gemini or OpenAI.
+  - You have a YouTube URL you need analysed and you want yt-dlp to fetch the media and preserve source metadata and captions as context.
 avoid_if:
-  - "You need a model to make autonomous decisions about which frames matter, because the plugin is deliberately a perception layer that hands Claude the frames and transcription and lets it adapt parameters itself."
-  - "You are working with hour-long 4K footage and you expect it to be cheap, because frame extraction scales with fps, resolution and duration even though the audio backend can be local."
-  - "You are not using Claude Code, because the whole surface is a plugin plus an MCP server wired into that harness specifically."
+  - You need a model to make autonomous decisions about which frames matter, because the plugin is deliberately a perception layer that hands Claude the frames and transcription and lets it adapt parameters itself.
+  - You are working with hour-long 4K footage and you expect it to be cheap, because frame extraction scales with fps, resolution and duration even though the audio backend can be local.
+  - You are not using Claude Code, because the whole surface is a plugin plus an MCP server wired into that harness specifically.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Backend table, free-tier quota, slash commands, install flow and the ffmpeg/audio parallel architecture are read from the official README; no video was processed during authoring."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Backend table, free-tier quota, slash commands, install flow and the ffmpeg/audio parallel architecture are read from the official README; no video was processed during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

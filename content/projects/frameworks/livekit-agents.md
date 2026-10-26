@@ -1,50 +1,68 @@
 ---
 id: livekit-agents
-name: "LiveKit Agents"
+name: LiveKit Agents
 version_tracked: null
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "Framework for realtime voice and video AI agents that join a LiveKit room as participants"
-github_url: "https://github.com/livekit/agents"
-license: "Apache-2.0"
+description: Framework for realtime voice and video AI agents that join a LiveKit room as participants
+github_url: https://github.com/livekit/agents
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "LiveKit"
-tags: [voice, agents, streaming, tool-use]
+org_or_maintainer: LiveKit
+tags:
+  - voice
+  - agents
+  - streaming
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 13979
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-09-03"
-docs_url: "https://github.com/livekit/agents#readme"
+github_stars: 14941
+github_stars_last_30d: 962
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/livekit/agents#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [audio, multimodal, language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - audio
+  - multimodal
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The room-centric realtime agent framework: an agent becomes a participant in a LiveKit room, so voice, video, and screen share arrive through the same WebRTC transport as every human in the call."
+  - 'The room-centric realtime agent framework: an agent becomes a participant in a LiveKit room, so voice, video, and screen share arrive through the same WebRTC transport as every human in the call.'
 best_for:
-  - "Your product already runs on LiveKit, or needs voice and video together in one session, and you want the agent to join as an ordinary participant"
-  - "You are building multi-party conversational experiences where several humans and an agent share one room and need consistent transport for all of them"
+  - Your product already runs on LiveKit, or needs voice and video together in one session, and you want the agent to join as an ordinary participant
+  - You are building multi-party conversational experiences where several humans and an agent share one room and need consistent transport for all of them
 avoid_if:
-  - "You want transport independence and expect to swap the media layer later — the room and participant model is coupled to LiveKit's infrastructure by design"
-  - "Your workload is audio-only and single-participant, where a lighter pipeline framework carries less operational surface than a WebRTC SFU"
+  - You want transport independence and expect to swap the media layer later — the room and participant model is coupled to LiveKit's infrastructure by design
+  - Your workload is audio-only and single-participant, where a lighter pipeline framework carries less operational surface than a WebRTC SFU
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [pipecat]
-integrates_with: [whisper, openai-swarm]
+alternatives:
+  - pipecat
+integrates_with:
+  - whisper
+  - openai-swarm
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (13,979), forks (3,681), licence (Apache-2.0), primary language (Python), created 2023-10-19, and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Maintainer attribution to LiveKit comes from the repository owner and description. Architecture claims derive from the README and repository topics, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (13,979), forks (3,681), licence (Apache-2.0), primary language (Python), created 2023-10-19, and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Maintainer attribution to LiveKit comes from the repository owner and description. Architecture claims derive from the README and repository topics, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/livekit/agents", "date": "2026-09-03", "description": "13,979 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-10-19"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/livekit/agents
+    date: '2026-09-03'
+    description: 13,979 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-10-19
 featured: false
 status: active
 ---

@@ -1,52 +1,66 @@
 ---
 id: hiyouga-llamafactory
-name: "LlamaFactory"
+name: LlamaFactory
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: fine-tuning
-description: "Apache-2.0 fine-tuning workbench covering 100+ LLM and VLM families behind one YAML config for LoRA, QLoRA, and RLHF"
-github_url: "https://github.com/hiyouga/LlamaFactory"
-license: "Apache-2.0"
+description: Apache-2.0 fine-tuning workbench covering 100+ LLM and VLM families behind one YAML config for LoRA, QLoRA, and RLHF
+github_url: https://github.com/hiyouga/LlamaFactory
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "hiyouga"
-tags: [fine-tuning, rlhf, llm]
+org_or_maintainer: hiyouga
+tags:
+  - fine-tuning
+  - rlhf
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 75142
-github_stars_last_30d: 0
-trending_score: 39
-last_commit: "2026-09-28"
-docs_url: "https://llamafactory.readthedocs.io"
+github_stars: 75742
+github_stars_last_30d: 600
+trending_score: 73
+last_commit: '2026-10-21'
+docs_url: https://llamafactory.readthedocs.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language, vision, multimodal]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - language
+  - vision
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The unified fine-tuning workbench covering 100+ LLMs and VLMs behind one config surface — the fastest route from a base checkpoint to a LoRA/QLoRA/RLHF artifact."
+  - The unified fine-tuning workbench covering 100+ LLMs and VLMs behind one config surface — the fastest route from a base checkpoint to a LoRA/QLoRA/RLHF artifact.
 best_for:
-  - "You need an instruction-tuned artifact for a specific domain and want SFT plus LoRA in a single config file rather than a hand-assembled PEFT and Trainer script."
-  - "2. You are fine-tuning a vision-language model on image-text pairs and would otherwise maintain separate tokenizer, processor, and collator code per checkpoint family."
-  - "3. You want DPO or PPO alignment on top of an SFT adapter and need the reference-model, reward, and rollout wiring already solved."
+  - You need an instruction-tuned artifact for a specific domain and want SFT plus LoRA in a single config file rather than a hand-assembled PEFT and Trainer script.
+  - 2. You are fine-tuning a vision-language model on image-text pairs and would otherwise maintain separate tokenizer, processor, and collator code per checkpoint family.
+  - 3. You want DPO or PPO alignment on top of an SFT adapter and need the reference-model, reward, and rollout wiring already solved.
 avoid_if:
-  - "You are doing algorithmic research on optimization or RL, because the abstraction deliberately hides the training loop behind configs and a subclassed Trainer."
-  - "2. Your GPU fleet is exotic - only a non-CUDA accelerator or a single very small board - because the supported matrix assumes mainstream CUDA hardware with flash attention and bitsandbytes."
-  - "3. You need a training recipe the project has not templated, since a method that does not fit the config surface means forking the framework."
+  - You are doing algorithmic research on optimization or RL, because the abstraction deliberately hides the training loop behind configs and a subclassed Trainer.
+  - 2. Your GPU fleet is exotic - only a non-CUDA accelerator or a single very small board - because the supported matrix assumes mainstream CUDA hardware with flash attention and bitsandbytes.
+  - 3. You need a training recipe the project has not templated, since a method that does not fit the config surface means forking the framework.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 75142 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, 19 GitHub topics including lora, qlora, rlhf, peft, quantization. Model-count, backend, and export-path claims come from the official README and docs; no fine-tuning run was executed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 75142 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, 19 GitHub topics including lora, qlora, rlhf, peft, quantization. Model-count, backend, and export-path claims come from the official README and docs; no fine-tuning run was executed here.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/hiyouga/LlamaFactory", "date": "2026-09-28", "description": "75,142 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/hiyouga/LlamaFactory
+    date: '2026-09-28'
+    description: 75,142 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,55 +1,70 @@
 ---
 id: llamafile
 name: Llamafile
-version_tracked: "0.10"
+version_tracked: '0.10'
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD"
-github_url: "https://github.com/mozilla-ai/llamafile"
-license: "Apache-2.0"
+description: 'Single-file LLM distribution: llama.cpp plus Cosmopolitan Libc in one executable that runs uninstalled on Windows, macOS, Linux and BSD'
+github_url: https://github.com/mozilla-ai/llamafile
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "Mozilla.ai"
-tags: [llm, inference, local, edge]
+org_or_maintainer: Mozilla.ai
+tags:
+  - llm
+  - inference
+  - local
+  - edge
 maturity: production
 cost_model: open-source
-github_stars: 26485
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-10-12"
-docs_url: "https://docs.mozilla.ai/llamafile"
+github_stars: 26491
+github_stars_last_30d: 6
+trending_score: 15
+last_commit: '2026-10-12'
+docs_url: https://docs.mozilla.ai/llamafile
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/mozilla-ai/llamafile_0.10"
+hf_url: https://huggingface.co/mozilla-ai/llamafile_0.10
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [GGUF]
+supported_formats:
+  - GGUF
 api_compatible: openai
 phase: inference-engine
-domain: [language, audio]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+  - audio
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The distribution format for local models rather than a serving engine: llama.cpp's runtime and the weights welded into one executable, so the deliverable is a file someone double-clicks instead of an install procedure"
+  - 'The distribution format for local models rather than a serving engine: llama.cpp''s runtime and the weights welded into one executable, so the deliverable is a file someone double-clicks instead of an install procedure'
 best_for:
   - You need to hand a working model to a non-engineer — one download, `chmod +x`, run; no Python, no CUDA toolkit, no package manager, no network afterwards
   - You want offline speech-to-text as well as chat from the same packaging trick, which is what whisperfile provides
   - Your target is a machine you cannot administer — a locked-down Windows desktop, an air-gapped laptop, a BSD box — and you need to know the binary itself will start
 avoid_if:
-  - "You are serving concurrent traffic: this is one process with a modest server attached, not a scheduler, and there is no continuous batching to tune"
+  - 'You are serving concurrent traffic: this is one process with a modest server attached, not a scheduler, and there is no continuous batching to tune'
   - Your model exceeds 4GB and the target is Windows — the executable form will not run, so you fall back to the binary plus external GGUF and lose most of the reason to use this at all
-  - "You need the newest llama.cpp features: the 0.10 build system tracks upstream closely but deliberately drops some older capabilities, so check the release notes before assuming parity"
-upstream_dependencies: [llama-cpp]
+  - 'You need the newest llama.cpp features: the 0.10 build system tracks upstream closely but deliberately drops some older capabilities, so check the release notes before assuming parity'
+upstream_dependencies:
+  - llama-cpp
 downstream_consumers: []
-alternatives: [llama-cpp, ollama, localai]
-integrates_with: [whisper-cpp]
+alternatives:
+  - llama-cpp
+  - ollama
+  - localai
+integrates_with:
+  - whisper-cpp
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified 2026-10-25: repo is now mozilla-ai/llamafile (26,485 stars, 216 open issues, last push 2026-10-12), README states it is a Mozilla Builders project now revamped by Mozilla.ai. 0.10.x moved to a new build system aligned with upstream llama.cpp; pre-built llamafiles are published under huggingface.co/mozilla-ai/llamafile_0.10."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: repo is now mozilla-ai/llamafile (26,485 stars, 216 open issues, last push 2026-10-12), README states it is a Mozilla Builders project now revamped by Mozilla.ai. 0.10.x moved to a new build system aligned with upstream llama.cpp; pre-built llamafiles are published under huggingface.co/mozilla-ai/llamafile_0.10.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

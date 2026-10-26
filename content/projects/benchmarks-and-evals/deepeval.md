@@ -6,24 +6,33 @@ artifact_type: library
 category: observability
 subcategory: evaluation
 description: A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
-github_url: "https://github.com/confident-ai/deepeval"
+github_url: https://github.com/confident-ai/deepeval
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [evaluation, llm, observability, monitoring]
+tags:
+  - evaluation
+  - llm
+  - observability
+  - monitoring
 maturity: production
 cost_model: open-source
-github_stars: 19090
-trending_score: 70
-last_commit: "2026-10-23"
-docs_url: "https://deepeval.com"
+github_stars: 19111
+trending_score: 55
+last_commit: '2026-10-23'
+docs_url: https://deepeval.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - General-purpose open-source LLM evaluation framework designed to run in CI like a unit-test suite
 best_for:
@@ -36,18 +45,22 @@ avoid_if:
   - Your test data cannot leave your infrastructure in any form, because `deepeval login` uploads every test case to Confident AI by default and that has to be turned off deliberately
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [ragas, promptfoo, giskard]
+alternatives:
+  - ragas
+  - promptfoo
+  - giskard
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified against the GitHub API on 2026-10-25: 19,090 stars, 779 open issues, Apache-2.0, last push 2026-10-23. Body re-read against the README (metric families, pytest runner, `deepeval login` upload behaviour, integrations list); the earlier 2026-06-13 last_commit was the batch-import placeholder."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified against the GitHub API on 2026-10-25: 19,090 stars, 779 open issues, Apache-2.0, last push 2026-10-23. Body re-read against the README (metric families, pytest runner, `deepeval login` upload behaviour, integrations list); the earlier 2026-06-13 last_commit was the batch-import placeholder.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
+github_stars_last_30d: 2971
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "truefoundry"
+org_or_maintainer: truefoundry
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,40 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: cognita
-name: "Cognita"
+name: Cognita
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "Archived RAG platform from TrueFoundry that wraps LangChain and LlamaIndex into a modular, API-driven, UI-configurable production structure"
-github_url: "https://github.com/truefoundry/cognita"
+description: Archived RAG platform from TrueFoundry that wraps LangChain and LlamaIndex into a modular, API-driven, UI-configurable production structure
+github_url: https://github.com/truefoundry/cognita
 license: Apache-2.0
 primary_language: Python
-tags: [rag, langchain]
+tags:
+  - rag
+  - langchain
 maturity: experimental
 cost_model: open-source
 github_stars: 4410
-last_commit: "2026-03-13"
-docs_url: "https://github.com/truefoundry/cognita#readme"
+last_commit: '2026-03-13'
+docs_url: https://github.com/truefoundry/cognita#readme
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A structured RAG framework that turns notebook-style pipelines into modular, deployable, API-driven services."
-best_for: ["You are moving a LangChain or LlamaIndex RAG prototype into production and want each component modular, API-driven and separately extendable.", "You want a no-code UI over a RAG pipeline so a non-developer can create collections and data sources without editing a metadata YAML file.", "You are studying how a retrieval platform was structured around LangChain and LlamaIndex and need a readable reference rather than a maintained dependency."]
-avoid_if: ["You need a maintained product, because the README opens with a notice that the project is no longer actively maintained.", "You want new features or bug fixes, because the repository is archived and the GitHub API confirms the archived flag.", "You are starting a new production retrieval system, because adopting an unmaintained platform's structure means you own every future dependency upgrade yourself."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-10-24. Production framing; expect to operate backing services."
+  - A structured RAG framework that turns notebook-style pipelines into modular, deployable, API-driven services.
+best_for:
+  - You are moving a LangChain or LlamaIndex RAG prototype into production and want each component modular, API-driven and separately extendable.
+  - You want a no-code UI over a RAG pipeline so a non-developer can create collections and data sources without editing a metadata YAML file.
+  - You are studying how a retrieval platform was structured around LangChain and LlamaIndex and need a readable reference rather than a maintained dependency.
+avoid_if:
+  - You need a maintained product, because the README opens with a notice that the project is no longer actively maintained.
+  - You want new features or bug fixes, because the repository is archived and the GitHub API confirms the archived flag.
+  - You are starting a new production retrieval system, because adopting an unmaintained platform's structure means you own every future dependency upgrade yourself.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-10-24. Production framing; expect to operate backing services.
 ---
 
 ## Overview

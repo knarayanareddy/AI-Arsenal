@@ -5,19 +5,21 @@ version_tracked: null
 artifact_type: platform
 category: observability
 subcategory: tracing
-description: "Self-hostable workspace where you build agents by chatting with them, then share them with a team and run them in the background on schedules or events"
-github_url: "https://github.com/Agenta-AI/agenta"
+description: Self-hostable workspace where you build agents by chatting with them, then share them with a team and run them in the background on schedules or events
+github_url: https://github.com/Agenta-AI/agenta
 license: NOASSERTION
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [self-hosted, agents]
+tags:
+  - self-hosted
+  - agents
 maturity: beta
 cost_model: self-hostable
-github_stars: 4787
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://agenta.ai/docs/self-host/quick-start"
+github_stars: 4862
+github_stars_last_30d: 75
+trending_score: 21
+last_commit: '2026-10-26'
+docs_url: https://agenta.ai/docs/self-host/quick-start
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,22 +31,38 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source LLMOps platform combining prompt management, evaluation, and observability in a self-hostable stack
-best_for: ["You want a non-specialist on your team to build and share an automation, because agents are defined in chat and shared with role-based access rather than as code they would have to review.", "You need agents that run unattended on a schedule or an event from a connected app, and you need per-tool permissions deciding what may run automatically, what needs approval, and what is blocked.", "You already pay for a Claude or ChatGPT subscription and would rather run agents against that on your own infrastructure than move every task onto metered API billing."]
-avoid_if: ["You intend to expose the instance beyond a trusted network, because sign-ups are open by default and the documentation routes you to a separate guide for restricting registration.", "You need harness coverage beyond Claude Code, Pi and Codex today, because the roadmap marks Gemini, OpenCode, E2B, Vercel, Cloudflare, Modal and BoxLite as not yet delivered.", "You cannot accept a Docker dependency with socket access, because agents execute in a separate runner container that needs the daemon, and the docs are explicit that docker group membership is effectively root on that host."]
+best_for:
+  - You want a non-specialist on your team to build and share an automation, because agents are defined in chat and shared with role-based access rather than as code they would have to review.
+  - You need agents that run unattended on a schedule or an event from a connected app, and you need per-tool permissions deciding what may run automatically, what needs approval, and what is blocked.
+  - You already pay for a Claude or ChatGPT subscription and would rather run agents against that on your own infrastructure than move every task onto metered API billing.
+avoid_if:
+  - You intend to expose the instance beyond a trusted network, because sign-ups are open by default and the documentation routes you to a separate guide for restricting registration.
+  - You need harness coverage beyond Claude Code, Pi and Codex today, because the roadmap marks Gemini, OpenCode, E2B, Vercel, Cloudflare, Modal and BoxLite as not yet delivered.
+  - You cannot accept a Docker dependency with socket access, because agents execute in a separate runner container that needs the daemon, and the docs are explicit that docker group membership is effectively root on that host.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own documentation; assessment is based on public repository structure and feature documentation rather than an external case study.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

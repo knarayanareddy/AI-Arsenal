@@ -1,52 +1,64 @@
 ---
 id: nvidia-isaac-gr00t
-name: "Isaac-GR00T"
+name: Isaac-GR00T
 version_tracked: null
 artifact_type: model
 category: agents
 subcategory: models
-description: "Generalist robot foundation model pairing a vision-language-action backbone with synthetic data in Isaac"
-github_url: "https://github.com/NVIDIA/Isaac-GR00T"
-license: "Apache-2.0"
+description: Generalist robot foundation model pairing a vision-language-action backbone with synthetic data in Isaac
+github_url: https://github.com/NVIDIA/Isaac-GR00T
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "NVIDIA"
-tags: [vision, data, agents]
+org_or_maintainer: NVIDIA
+tags:
+  - vision
+  - data
+  - agents
 maturity: alpha
 cost_model: open-source
-github_stars: 8136
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-08-20"
-docs_url: "https://developer.nvidia.com/isaac/gr00t"
+github_stars: 8265
+github_stars_last_30d: 129
+trending_score: 43
+last_commit: '2026-10-22'
+docs_url: https://developer.nvidia.com/isaac/gr00t
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [vision, reinforcement-learning]
-relation_to_stack: [study-and-reference, deploy-as-is]
-health_signals: [org-backed]
+domain:
+  - vision
+  - reinforcement-learning
+relation_to_stack:
+  - study-and-reference
+  - deploy-as-is
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Generalist robot foundation model and simulation stack for embodied agents, pairing a VLA backbone with synthetic-data generation in Isaac."
+  - Generalist robot foundation model and simulation stack for embodied agents, pairing a VLA backbone with synthetic-data generation in Isaac.
 best_for:
-  - "You are a robotics researcher who needs one policy to perform a range of manipulation tasks without training a separate model per skill."
-  - "You have a small number of real robot demonstrations and need to augment them with synthetic trajectories generated in simulation before fine-tuning."
-  - "You are building on NVIDIA Isaac and want the foundation-model policy and the simulation and deployment tooling from the same vendor path."
+  - You are a robotics researcher who needs one policy to perform a range of manipulation tasks without training a separate model per skill.
+  - You have a small number of real robot demonstrations and need to augment them with synthetic trajectories generated in simulation before fine-tuning.
+  - You are building on NVIDIA Isaac and want the foundation-model policy and the simulation and deployment tooling from the same vendor path.
 avoid_if:
-  - "You want a proven production recipe, since the model, the data recipe, and the hardware stack are all moving targets across releases."
-  - "Your target robot is not an NVIDIA-supported arm, because the fine-tuning and deployment paths assume Isaac hardware and its ROS and SDK integration."
-  - "You need to run this on a single workstation GPU, since the training and simulation stack expects substantial memory and often multiple devices."
+  - You want a proven production recipe, since the model, the data recipe, and the hardware stack are all moving targets across releases.
+  - Your target robot is not an NVIDIA-supported arm, because the fine-tuning and deployment paths assume Isaac hardware and its ROS and SDK integration.
+  - You need to run this on a single workstation GPU, since the training and simulation stack expects substantial memory and often multiple devices.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (8136), Apache-2.0, last commit 2026-08-20, Python, and the topic list were API-verified. The VLA policy with a diffusion action head, post-training path, Isaac Lab integration, data schema, and Gr00t-Dreams are described from the official repo and developer page. The model version string and config filenames are as published in the README and were not executed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (8136), Apache-2.0, last commit 2026-08-20, Python, and the topic list were API-verified. The VLA policy with a diffusion action head, post-training path, Isaac Lab integration, data schema, and Gr00t-Dreams are described from the official repo and developer page. The model version string and config filenames are as published in the README and were not executed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/Isaac-GR00T", "date": "2026-09-28", "description": "8,136 stars and last commit 2026-08-20 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/Isaac-GR00T
+    date: '2026-09-28'
+    description: 8,136 stars and last commit 2026-08-20 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,61 @@
 ---
 id: cvat-ai-cvat
-name: "cvat"
+name: cvat
 version_tracked: null
 artifact_type: platform
 category: data-pipelines
 subcategory: tools
-description: "Web platform for annotating images, video, and 3D scenes with review workflows, consensus, and AI-assisted labeling"
-github_url: "https://github.com/cvat-ai/cvat"
-license: "MIT"
+description: Web platform for annotating images, video, and 3D scenes with review workflows, consensus, and AI-assisted labeling
+github_url: https://github.com/cvat-ai/cvat
+license: MIT
 primary_language: Python
-org_or_maintainer: "cvat-ai"
-tags: [vision, data]
+org_or_maintainer: cvat-ai
+tags:
+  - vision
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 16808
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-28"
-docs_url: "https://www.cvat.ai"
+github_stars: 17004
+github_stars_last_30d: 196
+trending_score: 49
+last_commit: '2026-10-26'
+docs_url: https://www.cvat.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Computer-vision annotation platform covering image, video, and 3D formats with consensus workflows — the default choice when labeling quality needs inter-annotator agreement."
+  - Computer-vision annotation platform covering image, video, and 3D formats with consensus workflows — the default choice when labeling quality needs inter-annotator agreement.
 best_for:
-  - "You are building a detection, tracking, or segmentation dataset and label quality has to be demonstrable to a reviewer, so you need consensus scoring and a review stage."
-  - "You are annotating long video where object tracks must persist across occlusion and you need interpolation plus a tracker-driven auto-annotation path to skip obvious frames."
-  - "You have a team of annotators and need roles, job assignment, and a programmatic path to export labels into training pipelines."
+  - You are building a detection, tracking, or segmentation dataset and label quality has to be demonstrable to a reviewer, so you need consensus scoring and a review stage.
+  - You are annotating long video where object tracks must persist across occlusion and you need interpolation plus a tracker-driven auto-annotation path to skip obvious frames.
+  - You have a team of annotators and need roles, job assignment, and a programmatic path to export labels into training pipelines.
 avoid_if:
-  - "You are labelling a few hundred images solo and want zero setup, since standing up the Docker stack is real overhead for a small job."
-  - "You need text, audio, or point-cloud annotation, which this platform does not cover."
-  - "Your data cannot leave the trust boundary of an offline environment, because the standard deployment is a server plus object storage and a Postgres metadata database."
+  - You are labelling a few hundred images solo and want zero setup, since standing up the Docker stack is real overhead for a small job.
+  - You need text, audio, or point-cloud annotation, which this platform does not cover.
+  - Your data cannot leave the trust boundary of an offline environment, because the standard deployment is a server plus object storage and a Postgres metadata database.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (16808), MIT license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Task and job hierarchy, consensus, review workflow, annotation dump storage, and the SDK surface come from official docs and source reading; no instance was deployed and no labelling throughput was measured for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (16808), MIT license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Task and job hierarchy, consensus, review workflow, annotation dump storage, and the SDK surface come from official docs and source reading; no instance was deployed and no labelling throughput was measured for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/cvat-ai/cvat", "date": "2026-09-28", "description": "16,808 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/cvat-ai/cvat
+    date: '2026-09-28'
+    description: 16,808 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

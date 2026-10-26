@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "2noise"
+org_or_maintainer: 2noise
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 73
+trending_score: 21
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: chattts
-name: "ChatTTS"
+name: ChatTTS
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "AGPL-3.0 dialogue-oriented TTS from 2noise with token-level prosody control, zero-shot speaker sampling and a streaming audio path"
-github_url: "https://github.com/2noise/ChatTTS"
+description: AGPL-3.0 dialogue-oriented TTS from 2noise with token-level prosody control, zero-shot speaker sampling and a streaming audio path
+github_url: https://github.com/2noise/ChatTTS
 license: AGPL-3.0
 primary_language: Python
-tags: [voice, multimodal, streaming, research]
+tags:
+  - voice
+  - multimodal
+  - streaming
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 39874
-last_commit: "2026-04-10"
-docs_url: "https://huggingface.co/2Noise/ChatTTS"
+github_stars: 39947
+last_commit: '2026-04-10'
+docs_url: https://huggingface.co/2Noise/ChatTTS
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A dialogue-optimized TTS model that emits expressive, multi-speaker conversational speech with inline prosody and disfluency control."
-best_for: ["You are building a Chinese or English conversational assistant and you need the model to place laughter, interjections and pauses in the reply rather than reading a flat transcript aloud.", "You want to control delivery per sentence or per word, because the proseody tokens `oral_0-9`, `laugh_0-2` and `break_0-7` can be injected into the text and sampled speaker embeddings are reusable via spk_emb.", "You need streaming audio generation, which is on the completed roadmap list alongside the open-sourced DVAE encoder and zero-shot inference code."]
-avoid_if: ["You need a permissive licence for a product, because the model weights are CC BY-NC 4.0 for educational and research use and the code is AGPLv3+, so neither half is commercial-friendly.", "You need a stable single-pass output, because the maintainers document autoregressive instability that requires multiple samples to find an acceptable result, particularly with multiple speakers.", "You need a small GPU footprint or low latency, because a 30-second clip needs at least 4GB of VRAM and the README quotes a real-time factor near 0.3 on a 4090."]
-enrichment_notes: "Repository, AGPL-3.0 license, and 2026-04-10 activity verified via the GitHub API on 2026-07-12. AGPL copyleft has real implications for hosted services; verify licensing before production use."
+  - A dialogue-optimized TTS model that emits expressive, multi-speaker conversational speech with inline prosody and disfluency control.
+best_for:
+  - You are building a Chinese or English conversational assistant and you need the model to place laughter, interjections and pauses in the reply rather than reading a flat transcript aloud.
+  - You want to control delivery per sentence or per word, because the proseody tokens `oral_0-9`, `laugh_0-2` and `break_0-7` can be injected into the text and sampled speaker embeddings are reusable via spk_emb.
+  - You need streaming audio generation, which is on the completed roadmap list alongside the open-sourced DVAE encoder and zero-shot inference code.
+avoid_if:
+  - You need a permissive licence for a product, because the model weights are CC BY-NC 4.0 for educational and research use and the code is AGPLv3+, so neither half is commercial-friendly.
+  - You need a stable single-pass output, because the maintainers document autoregressive instability that requires multiple samples to find an acceptable result, particularly with multiple speakers.
+  - You need a small GPU footprint or low latency, because a 30-second clip needs at least 4GB of VRAM and the README quotes a real-time factor near 0.3 on a 4090.
+enrichment_notes: Repository, AGPL-3.0 license, and 2026-04-10 activity verified via the GitHub API on 2026-07-12. AGPL copyleft has real implications for hosted services; verify licensing before production use.
 ---
 
 ## Overview

@@ -5,19 +5,22 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: vector-databases
-description: "Developer-focused vector database with a four-function core API, automatic embedding and indexing, and a hosted cloud tier"
-github_url: "https://github.com/chroma-core/chroma"
+description: Developer-focused vector database with a four-function core API, automatic embedding and indexing, and a hosted cloud tier
+github_url: https://github.com/chroma-core/chroma
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [embeddings, retrieval, rag]
+tags:
+  - embeddings
+  - retrieval
+  - rag
 maturity: production
 cost_model: freemium
-github_stars: 29404
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://docs.trychroma.com"
+github_stars: 29584
+github_stars_last_30d: 1166
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.trychroma.com
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +31,25 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Developer-friendly embedded/lightweight vector database, the most common default for RAG prototyping and small-to-medium production apps
-best_for: ["You are prototyping a RAG feature and want a vector database working in a few lines, because the core API is four functions and embedding plus indexing happen automatically on add.", "You want to add your own embeddings instead of the built-in defaults, because the add call accepts either documents or precomputed vectors.", "You need metadata filtering on results, since the query path takes a where clause for metadata and a where_document clause for full-text containment."]
-avoid_if: ["You need a mature distributed vector database with a proven scaling story, because the open-source Chroma is developer-oriented and the scaling claims belong to the hosted cloud tier.", "You want many concurrent production writers, because the embedded mode is explicitly for prototyping and the server deployment is the step beyond that.", "You need an open-source license with no proprietary component, because the hosted cloud service is a separate commercial product and the license field needs confirming."]
+best_for:
+  - You are prototyping a RAG feature and want a vector database working in a few lines, because the core API is four functions and embedding plus indexing happen automatically on add.
+  - You want to add your own embeddings instead of the built-in defaults, because the add call accepts either documents or precomputed vectors.
+  - You need metadata filtering on results, since the query path takes a where clause for metadata and a where_document clause for full-text containment.
+avoid_if:
+  - You need a mature distributed vector database with a proven scaling story, because the open-source Chroma is developer-oriented and the scaling claims belong to the hosted cloud tier.
+  - You want many concurrent production writers, because the embedded mode is explicitly for prototyping and the server deployment is the step beyond that.
+  - You need an open-source license with no proprietary component, because the hosted cloud service is a separate commercial product and the license field needs confirming.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,8 +57,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Chroma is the most frequently used vector database in RAG tutorials, LangChain/LlamaIndex quickstarts, and starter templates across the ecosystem, which is strong practical-adoption evidence for the prototyping/small-scale niche it targets.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

@@ -5,43 +5,61 @@ version_tracked: null
 artifact_type: platform
 category: code-generation
 subcategory: coding-agents
-description: "Self-hosted coding assistant that runs completion and chat on your own GPU with no DBMS or cloud dependency"
-github_url: "https://github.com/TabbyML/tabby"
+description: Self-hosted coding assistant that runs completion and chat on your own GPU with no DBMS or cloud dependency
+github_url: https://github.com/TabbyML/tabby
 license: NOASSERTION
 primary_language: Rust
 org_or_maintainer: TabbyML
-tags: [self-hosted, agents]
+tags:
+  - self-hosted
+  - agents
 maturity: production
 cost_model: self-hostable
-github_stars: 33890
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2026-06-30"
-docs_url: "https://tabby.tabbyml.com/docs/welcome/"
+github_stars: 33924
+github_stars_last_30d: 34
+trending_score: 18
+last_commit: '2026-06-30'
+docs_url: https://tabby.tabbyml.com/docs/welcome/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The turnkey pole of self-hosted coding assistance: one Rust binary/container that serves the models, indexes your repositories for context-aware suggestions, and manages team access — versus Continue-style extensions that require you to operate serving separately"
-best_for: ["You have a source-code confidentiality constraint that rules out sending code to a hosted completion API, and you have a GPU to spend on it.", "You want an internal Answer Engine that answers questions from your own documentation and repositories through REST APIs rather than a public chatbot.", "You need to plug the assistant into cloud IDE infrastructure through an OpenAPI interface instead of shipping a proprietary client."]
-avoid_if: ["You need frontier-model answer quality on a large refactor, because a self-hosted model on a single GPU will not match a hosted frontier model.", "You want a fully autonomous agent that writes and opens pull requests, because the Pochi task integration arrived in a December 2025 release and is still early.", "You cannot dedicate hardware or accept indexing your codebase, because a self-hosted assistant needs both a GPU and a populated index."]
+  - 'The turnkey pole of self-hosted coding assistance: one Rust binary/container that serves the models, indexes your repositories for context-aware suggestions, and manages team access — versus Continue-style extensions that require you to operate serving separately'
+best_for:
+  - You have a source-code confidentiality constraint that rules out sending code to a hosted completion API, and you have a GPU to spend on it.
+  - You want an internal Answer Engine that answers questions from your own documentation and repositories through REST APIs rather than a public chatbot.
+  - You need to plug the assistant into cloud IDE infrastructure through an OpenAPI interface instead of shipping a proprietary client.
+avoid_if:
+  - You need frontier-model answer quality on a large refactor, because a self-hosted model on a single GPU will not match a hosted frontier model.
+  - You want a fully autonomous agent that writes and opens pull requests, because the Pochi task integration arrived in a December 2025 release and is still early.
+  - You cannot dedicate hardware or accept indexing your codebase, because a self-hosted assistant needs both a GPU and a populated index.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [continue, aider]
+alternatives:
+  - continue
+  - aider
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (33.6k), Rust, and recent activity (last push 2026-06-30) verified via the GitHub API on 2026-07-08. License structure (open core with enterprise components) per repository. Deployment/feature claims from official docs; suggestion quality not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/TabbyML/tabby","date":"2026-07-08","description":"33.6k stars, Rust, org-backed active development"}
+  - source: github-trending
+    url: https://github.com/TabbyML/tabby
+    date: '2026-07-08'
+    description: 33.6k stars, Rust, org-backed active development
 featured: false
 status: active
 ---

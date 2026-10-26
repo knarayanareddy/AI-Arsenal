@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A hundred-line Python LLM framework whose Node, Flow, and nested-Flow primitives express multi-agent, RAG, and workflow patterns"
-github_url: "https://github.com/The-Pocket/PocketFlow"
+description: A hundred-line Python LLM framework whose Node, Flow, and nested-Flow primitives express multi-agent, RAG, and workflow patterns
+github_url: https://github.com/The-Pocket/PocketFlow
 license: MIT
 primary_language: Python
-tags: [agents, orchestration, community-favorite, pytorch]
+tags:
+  - agents
+  - orchestration
+  - community-favorite
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 11201
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-07-26"
-docs_url: "https://the-pocket.github.io/PocketFlow/"
+github_stars: 11280
+github_stars_last_30d: 79
+trending_score: 29
+last_commit: '2026-07-26'
+docs_url: https://the-pocket.github.io/PocketFlow/
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Lets you read the entire abstraction surface in one file instead of adopting a framework to express a five-step loop."
+  - Lets you read the entire abstraction surface in one file instead of adopting a framework to express a five-step loop.
 best_for:
-  - "You need a flow you can hold in your head and hand to a colleague as one file rather than a dependency tree."
-  - "You are prototyping an agent pattern and want to see whether it is a graph or a nested flow before committing."
-  - "You are constrained to air-gapped or audited environments where zero dependencies is a hard requirement."
+  - You need a flow you can hold in your head and hand to a colleague as one file rather than a dependency tree.
+  - You are prototyping an agent pattern and want to see whether it is a graph or a nested flow before committing.
+  - You are constrained to air-gapped or audited environments where zero dependencies is a hard requirement.
 avoid_if:
-  - "You need built-in retry, persistence, or observability, because none of that is in the hundred lines."
-  - "You are on a runtime other than Python and one of the community ports, since the ports are separate projects with their own fidelity."
-  - "You want a maintained abstraction, because the design bet is that patterns come from reading the source instead."
+  - You need built-in retry, persistence, or observability, because none of that is in the hundred lines.
+  - You are on a runtime other than Python and one of the community ports, since the ports are separate projects with their own fidelity.
+  - You want a maintained abstraction, because the design bet is that patterns come from reading the source instead.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 11201, MIT, Python, last commit 2026-07-26, topics, homepage. From README: 100-line single file, Node/Flow/connect/two_or_parallel, zero dependencies, pip install or copy source, nested Flow in Node, seven language ports. Line count and port fidelity unverified."
+enrichment_notes: 'API-verified: stars 11201, MIT, Python, last commit 2026-07-26, topics, homepage. From README: 100-line single file, Node/Flow/connect/two_or_parallel, zero dependencies, pip install or copy source, nested Flow in Node, seven language ports. Line count and port fidelity unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

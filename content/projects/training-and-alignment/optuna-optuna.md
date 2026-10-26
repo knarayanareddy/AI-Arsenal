@@ -1,52 +1,61 @@
 ---
 id: optuna-optuna
-name: "optuna"
+name: optuna
 version_tracked: null
 artifact_type: library
 category: tooling
 subcategory: frameworks
-description: "Define-by-run hyperparameter optimization with pruning, distributed trials, and a study-based API"
-github_url: "https://github.com/optuna/optuna"
-license: "MIT"
+description: Define-by-run hyperparameter optimization with pruning, distributed trials, and a study-based API
+github_url: https://github.com/optuna/optuna
+license: MIT
 primary_language: Python
-org_or_maintainer: "optuna"
-tags: [retrieval, training]
+org_or_maintainer: optuna
+tags:
+  - retrieval
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 14854
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-25"
-docs_url: "https://optuna.org"
+github_stars: 14970
+github_stars_last_30d: 116
+trending_score: 42
+last_commit: '2026-10-23'
+docs_url: https://optuna.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Define-by-run hyperparameter optimization with pruning, whose trial API fits prompt, LoRA, and quantization sweeps better than fixed grid search."
+  - Define-by-run hyperparameter optimization with pruning, whose trial API fits prompt, LoRA, and quantization sweeps better than fixed grid search.
 best_for:
-  - "You are tuning a LoRA or full fine-tune and want learning-rate and rank trials pruned early when the loss is not going anywhere."
-  - "You are sweeping prompt templates or few-shot orderings, where the search space is a Python list of choices rather than a numeric grid."
-  - "You have a cluster or many GPUs and need a distributed study that shares the pruning decision across workers."
+  - You are tuning a LoRA or full fine-tune and want learning-rate and rank trials pruned early when the loss is not going anywhere.
+  - You are sweeping prompt templates or few-shot orderings, where the search space is a Python list of choices rather than a numeric grid.
+  - You have a cluster or many GPUs and need a distributed study that shares the pruning decision across workers.
 avoid_if:
-  - "You need a single fast deterministic grid and have no compute budget for search overhead, because every trial costs a full training run."
-  - "Your objective is noisy and non-monotonic, where pruning will cut off good regions and you need many more trials to compensate."
-  - "You need reproducible exact results with a documented search path, since a TPE study is stochastic and only the sampler seed makes it repeatable."
+  - You need a single fast deterministic grid and have no compute budget for search overhead, because every trial costs a full training run.
+  - Your objective is noisy and non-monotonic, where pruning will cut off good regions and you need many more trials to compensate.
+  - You need reproducible exact results with a documented search path, since a TPE study is stochastic and only the sampler seed makes it repeatable.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (14854), MIT license, last commit 2026-09-25, Python as primary language and the topic list were API-verified. Sampler and pruner names, storage modes, define-by-run semantics, and the callback wiring are from official docs; the compute-cost warnings are engineering judgement rather than measurements for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (14854), MIT license, last commit 2026-09-25, Python as primary language and the topic list were API-verified. Sampler and pruner names, storage modes, define-by-run semantics, and the callback wiring are from official docs; the compute-cost warnings are engineering judgement rather than measurements for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/optuna/optuna", "date": "2026-09-28", "description": "14,854 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/optuna/optuna
+    date: '2026-09-28'
+    description: 14,854 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

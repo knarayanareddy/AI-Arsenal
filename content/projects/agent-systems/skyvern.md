@@ -5,43 +5,62 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: browser-agents
-description: "Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder"
-github_url: "https://github.com/Skyvern-AI/skyvern"
+description: Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder
+github_url: https://github.com/Skyvern-AI/skyvern
 license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: Skyvern-AI
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: production
 cost_model: freemium
-github_stars: 23090
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-09-28"
-docs_url: "https://www.skyvern.com/docs/"
+github_stars: 23280
+github_stars_last_30d: 190
+trending_score: 30
+last_commit: '2026-10-26'
+docs_url: https://www.skyvern.com/docs/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose, vision]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The workflow-automation pole of the browser-agent space: where browser-use targets developers building agents, Skyvern targets replacing brittle RPA scripts — vision + LLM planning over screenshots so automations survive website redesigns"
-best_for: ["You are automating the same business process across many different vendor or partner sites and want one workflow definition rather than one script per site.", "You have XPaths breaking on a redesign and need navigation that re-derives targets from the visual page each run instead of following a fixed selector path.", "You want both a Python SDK for engineers and a no-code builder for the operations people who will actually maintain the workflow."]
-avoid_if: ["You need byte-identical reproducibility, because an LLM choosing each interaction means two runs can differ even with the same workflow file.", "You cannot run multiple concurrent browser sessions and pay for the compute behind them, since Skyvern Cloud exists precisely because parallel instances cost infrastructure.", "You have no vision-capable model budget, because every page visit is a vision call rather than a cheap DOM parse."]
+  - 'The workflow-automation pole of the browser-agent space: where browser-use targets developers building agents, Skyvern targets replacing brittle RPA scripts — vision + LLM planning over screenshots so automations survive website redesigns'
+best_for:
+  - You are automating the same business process across many different vendor or partner sites and want one workflow definition rather than one script per site.
+  - You have XPaths breaking on a redesign and need navigation that re-derives targets from the visual page each run instead of following a fixed selector path.
+  - You want both a Python SDK for engineers and a no-code builder for the operations people who will actually maintain the workflow.
+avoid_if:
+  - You need byte-identical reproducibility, because an LLM choosing each interaction means two runs can differ even with the same workflow file.
+  - You cannot run multiple concurrent browser sessions and pay for the compute behind them, since Skyvern Cloud exists precisely because parallel instances cost infrastructure.
+  - You have no vision-capable model budget, because every page visit is a vision call rather than a cheap DOM parse.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [browser-use, stagehand]
+alternatives:
+  - browser-use
+  - stagehand
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (22.1k), AGPL-3.0, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Anti-fragility claims describe the mechanism (vision-based grounding vs selectors) per official docs; per-task reliability not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/Skyvern-AI/skyvern","date":"2026-07-08","description":"22.1k stars, YC-backed company, active development"}
+  - source: github-trending
+    url: https://github.com/Skyvern-AI/skyvern
+    date: '2026-07-08'
+    description: 22.1k stars, YC-backed company, active development
 featured: false
 status: active
 ---

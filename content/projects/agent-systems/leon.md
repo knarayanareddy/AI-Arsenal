@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "leon-ai"
+org_or_maintainer: leon-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 57
+trending_score: 20
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: leon
-name: "Leon"
+name: Leon
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "TypeScript and Python personal assistant with native skills, layered memory and progressive computer use"
-github_url: "https://github.com/leon-ai/leon"
+description: TypeScript and Python personal assistant with native skills, layered memory and progressive computer use
+github_url: https://github.com/leon-ai/leon
 license: MIT
 primary_language: TypeScript
-tags: [agents, local, tool-use]
+tags:
+  - agents
+  - local
+  - tool-use
 maturity: alpha
 cost_model: open-source
-github_stars: 17550
-last_commit: "2026-09-26"
-docs_url: "https://getleon.ai"
+github_stars: 17607
+last_commit: '2026-10-26'
+docs_url: https://getleon.ai
 phase: agent-system
 domain:
-  - "language"
-  - "audio"
+  - language
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A self-hosted, privacy-first personal assistant with a modular, extensible skill system and voice interface."
-best_for: ["You want a personal assistant that runs on your own hardware and can use a local model provider instead of sending every request to a hosted API.", "You need the same task to behave the same way every time, because controlled mode walks deterministic native skills and actions while agent mode is reserved for open-ended work.", "You are an assistant developer who wants to see the layering written down, since the README points to core/context/ARCHITECTURE.md and core/context/LEON.md as the accurate current references."]
-avoid_if: ["You need stable, documented behaviour, because the project is mid-transition: the notice dated 2026-03-29 says 2.0 is a developer preview on the develop branch, new documentation is not ready, and existing docs describe the legacy architecture.", "You want to deploy this today and have someone answer tickets, because the maintainer calls it an actively previewed rebuild rather than a finished assistant.", "You are looking for the 2019-era intent-classification assistant, because the README states outright that Leon is no longer that and is being rebuilt around tools, context, memory and agentic execution."]
-enrichment_notes: "Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Capability depends on installed skills and configured models."
+  - A self-hosted, privacy-first personal assistant with a modular, extensible skill system and voice interface.
+best_for:
+  - You want a personal assistant that runs on your own hardware and can use a local model provider instead of sending every request to a hosted API.
+  - You need the same task to behave the same way every time, because controlled mode walks deterministic native skills and actions while agent mode is reserved for open-ended work.
+  - You are an assistant developer who wants to see the layering written down, since the README points to core/context/ARCHITECTURE.md and core/context/LEON.md as the accurate current references.
+avoid_if:
+  - 'You need stable, documented behaviour, because the project is mid-transition: the notice dated 2026-03-29 says 2.0 is a developer preview on the develop branch, new documentation is not ready, and existing docs describe the legacy architecture.'
+  - You want to deploy this today and have someone answer tickets, because the maintainer calls it an actively previewed rebuild rather than a finished assistant.
+  - You are looking for the 2019-era intent-classification assistant, because the README states outright that Leon is no longer that and is being rebuilt around tools, context, memory and agentic execution.
+enrichment_notes: Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Capability depends on installed skills and configured models.
 ---
 
 ## Overview

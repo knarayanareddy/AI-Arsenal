@@ -6,39 +6,46 @@ artifact_type: library
 category: evaluation
 subcategory: evaluation
 description: A browser-based in-editor game where players secure a simulated AI agent across four self-contained seasons
-github_url: "https://github.com/skills/secure-code-game"
+github_url: https://github.com/skills/secure-code-game
 license: MIT
 primary_language: Other
-tags: [security, agents, guardrails, community-favorite]
+tags:
+  - security
+  - agents
+  - guardrails
+  - community-favorite
 maturity: production
 cost_model: open-source
-github_stars: 2838
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-13"
-docs_url: "https://gh.io/scg"
+github_stars: 2850
+github_stars_last_30d: 12
+trending_score: 24
+last_commit: '2026-10-26'
+docs_url: https://gh.io/scg
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Teaches agent-specific weaknesses - tool abuse, memory poisoning, multi-agent trust - in a sandbox with no setup."
+  - Teaches agent-specific weaknesses - tool abuse, memory poisoning, multi-agent trust - in a sandbox with no setup.
 best_for:
-  - "You are teaching secure-by-default thinking to engineers who have no security background and no appetite for a CVE course."
-  - "You are onboarding a team onto agent tooling and want them to internalize prompt injection and tool-permission risk first."
-  - "You are running a workshop and need a self-contained exercise that works in the browser with no local toolchain."
+  - You are teaching secure-by-default thinking to engineers who have no security background and no appetite for a CVE course.
+  - You are onboarding a team onto agent tooling and want them to internalize prompt injection and tool-permission risk first.
+  - You are running a workshop and need a self-contained exercise that works in the browser with no local toolchain.
 avoid_if:
-  - "You need to train engineers on real production vulnerabilities, since the scenarios are simulated and structured for teaching."
-  - "You have a policy against spending GitHub Actions minutes, because every season runs in a Codespace against the 60-hour monthly allowance."
-  - "You want assessment analytics, since completion is self-reported rather than captured for a manager."
+  - You need to train engineers on real production vulnerabilities, since the scenarios are simulated and structured for teaching.
+  - You have a policy against spending GitHub Actions minutes, because every season runs in a Codespace against the 60-hour monthly allowance.
+  - You want assessment analytics, since completion is self-reported rather than captured for a manager.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 2838, MIT, JavaScript, last commit 2026-09-13, topics, homepage. From README: template-repo workflow, Codespaces under three minutes, 60-hour Actions allowance, Season 4 agentic ~2h, Season 3 LLM ~1.5h, Season 2 CodeQL ~6h, Season 1 Python/C ~6h, 10,000 players claim. Exercises unverified."
+enrichment_notes: 'API-verified: stars 2838, MIT, JavaScript, last commit 2026-09-13, topics, homepage. From README: template-repo workflow, Codespaces under three minutes, 60-hour Actions allowance, Season 4 agentic ~2h, Season 3 LLM ~1.5h, Season 2 CodeQL ~6h, Season 1 Python/C ~6h, 10,000 players claim. Exercises unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

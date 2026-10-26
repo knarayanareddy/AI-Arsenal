@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "datalab-to"
+org_or_maintainer: datalab-to
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 249
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: chandra-ocr
-name: "Chandra"
+name: Chandra
 artifact_type: model
 category: computer-vision
 subcategory: document-processing
-description: "Document OCR model from Datalab that renders pages to HTML, Markdown or JSON with layout, and runs locally on Hugging Face or against a vLLM server"
-github_url: "https://github.com/datalab-to/chandra"
+description: Document OCR model from Datalab that renders pages to HTML, Markdown or JSON with layout, and runs locally on Hugging Face or against a vLLM server
+github_url: https://github.com/datalab-to/chandra
 license: Apache-2.0
 primary_language: Python
-tags: [multimodal, data, self-hosted]
+tags:
+  - multimodal
+  - data
+  - self-hosted
 maturity: production
 cost_model: self-hostable
-github_stars: 12338
-last_commit: "2026-06-26"
-docs_url: "https://documentation.datalab.to"
+github_stars: 12587
+last_commit: '2026-10-22'
+docs_url: https://documentation.datalab.to
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A layout-aware OCR model that reconstructs tables, forms, and reading order into structured output."
-best_for: ["You are building a retrieval pipeline over scanned documents and you need tables, math, checkboxes and handwriting preserved rather than flattened into a text blob.", "You need a single self-hosted OCR model covering 90+ languages, because the multilingual benchmark table shows a 77.8% average against Gemini 2.5 Flash at 67.6% on 43 languages.", "You want to choose your own serving stack, because the same weights run through a local Hugging Face path or a vLLM server you control with an OpenAI-style endpoint."]
-avoid_if: ["You need unrestricted commercial self-hosting, because the weights carry a modified OpenRAIL-M licence that is free for research, personal use and startups under $2M and cannot be used competitively against Datalab's own API.", "You need high-volume throughput on a modest budget, because the measured figure is 1.44 pages per second at 96 concurrent sequences on a single H100 80GB with a 60-second average latency and 156-second P95.", "You need a light CPU or laptop path, because the model is a GPU inference workload served through vLLM or Hugging Face rather than a lightweight binary."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-26 activity verified via the GitHub API on 2026-07-12. From the Datalab team behind Marker; accuracy claims are project-reported."
+  - A layout-aware OCR model that reconstructs tables, forms, and reading order into structured output.
+best_for:
+  - You are building a retrieval pipeline over scanned documents and you need tables, math, checkboxes and handwriting preserved rather than flattened into a text blob.
+  - You need a single self-hosted OCR model covering 90+ languages, because the multilingual benchmark table shows a 77.8% average against Gemini 2.5 Flash at 67.6% on 43 languages.
+  - You want to choose your own serving stack, because the same weights run through a local Hugging Face path or a vLLM server you control with an OpenAI-style endpoint.
+avoid_if:
+  - You need unrestricted commercial self-hosting, because the weights carry a modified OpenRAIL-M licence that is free for research, personal use and startups under $2M and cannot be used competitively against Datalab's own API.
+  - You need high-volume throughput on a modest budget, because the measured figure is 1.44 pages per second at 96 concurrent sequences on a single H100 80GB with a 60-second average latency and 156-second P95.
+  - You need a light CPU or laptop path, because the model is a GPU inference workload served through vLLM or Hugging Face rather than a lightweight binary.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-26 activity verified via the GitHub API on 2026-07-12. From the Datalab team behind Marker; accuracy claims are project-reported.
 ---
 
 ## Overview

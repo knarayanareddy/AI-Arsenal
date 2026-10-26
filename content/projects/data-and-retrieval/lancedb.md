@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: vector-databases
-description: "Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine"
-github_url: "https://github.com/lancedb/lancedb"
+description: Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine
+github_url: https://github.com/lancedb/lancedb
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [retrieval, data, self-hosted, efficiency]
+tags:
+  - retrieval
+  - data
+  - self-hosted
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 11549
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://lancedb.com/docs"
+github_stars: 11778
+github_stars_last_30d: 229
+trending_score: 33
+last_commit: '2026-10-26'
+docs_url: https://lancedb.com/docs
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +32,26 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Embedded, serverless vector database built on the Lance columnar format, positioned for multimodal data and zero-copy versioned storage
-best_for: ["You are indexing images, video or point clouds alongside text and want one store for all of it rather than a vector index plus an object store plus a metadata database.", "You want vector search, full-text search and SQL over the same data, because all three run against the Lance columnar format without a separate search engine.", "You need data versioning without infrastructure, since automatic versioning and zero-copy operations are listed as built-in features rather than something you bolt on."]
-avoid_if: ["You need a multi-writer distributed service, because this is an embedded library and the hosted tier is a separate product with its own operational model.", "You cannot add a Rust or Python dependency to your stack, since the core is written in Rust and the client libraries wrap a native extension.", "Your workload is a single-user laptop with a few thousand vectors, because the embedded design solves a scale problem you do not have yet."]
+best_for:
+  - You are indexing images, video or point clouds alongside text and want one store for all of it rather than a vector index plus an object store plus a metadata database.
+  - You want vector search, full-text search and SQL over the same data, because all three run against the Lance columnar format without a separate search engine.
+  - You need data versioning without infrastructure, since automatic versioning and zero-copy operations are listed as built-in features rather than something you bolt on.
+avoid_if:
+  - You need a multi-writer distributed service, because this is an embedded library and the hosted tier is a separate product with its own operational model.
+  - You cannot add a Rust or Python dependency to your stack, since the core is written in Rust and the client libraries wrap a native extension.
+  - Your workload is a single-user laptop with a few thousand vectors, because the embedded design solves a scale problem you do not have yet.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,8 +59,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture (Lance columnar format, zero-copy versioning, serverless-embedded model with S3/GCS backing) is documented directly in LanceDB's own technical documentation and is architecturally distinct enough from competitors to be independently verifiable from the public repo structure, not just marketing framing.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

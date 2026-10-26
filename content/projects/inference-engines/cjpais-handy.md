@@ -1,52 +1,61 @@
 ---
 id: cjpais-handy
-name: "Handy"
+name: Handy
 version_tracked: null
 artifact_type: tool
 category: voice-audio
 subcategory: tools
-description: "MIT-licensed Rust desktop app for fully offline Whisper-family speech-to-text, built as a Tauri v2 native client"
-github_url: "https://github.com/cjpais/Handy"
-license: "MIT"
+description: MIT-licensed Rust desktop app for fully offline Whisper-family speech-to-text, built as a Tauri v2 native client
+github_url: https://github.com/cjpais/Handy
+license: MIT
 primary_language: Rust
-org_or_maintainer: "cjpais"
-tags: [voice]
+org_or_maintainer: cjpais
+tags:
+  - voice
 maturity: production
 cost_model: open-source
-github_stars: 32347
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://handy.computer"
+github_stars: 34741
+github_stars_last_30d: 2394
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://handy.computer
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [audio, language]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - audio
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Local speech-to-text application in Rust that runs Whisper-family models entirely offline, aimed at dictation and captioning without a cloud round trip."
+  - Local speech-to-text application in Rust that runs Whisper-family models entirely offline, aimed at dictation and captioning without a cloud round trip.
 best_for:
-  - "You dictate on a laptop and the audio must never leave the device, whether for a compliance rule, a confidential codebase, or simply an unreliable connection."
-  - "You want a global hotkey that injects transcribed text into whatever application has focus, which is the difference between a transcription tool and dictation."
-  - "You are choosing a local Whisper variant and a quantization for your hardware and want a small surface to try them, since the model choice and compute type are user-selectable."
+  - You dictate on a laptop and the audio must never leave the device, whether for a compliance rule, a confidential codebase, or simply an unreliable connection.
+  - You want a global hotkey that injects transcribed text into whatever application has focus, which is the difference between a transcription tool and dictation.
+  - You are choosing a local Whisper variant and a quantization for your hardware and want a small surface to try them, since the model choice and compute type are user-selectable.
 avoid_if:
-  - "You need speaker diarization or per-speaker labels, because the app is a single-stream transcriber and does not separate voices."
-  - "You need a batch pipeline over a directory of audio files with structured output, because the interface is built around interactive dictation rather than batch jobs."
-  - "You need the lowest possible latency on very long recordings, because transcription speed tracks model size and hardware, and a large model on CPU can fall behind real time."
+  - You need speaker diarization or per-speaker labels, because the app is a single-stream transcriber and does not separate voices.
+  - You need a batch pipeline over a directory of audio files with structured output, because the interface is built around interactive dictation rather than batch jobs.
+  - You need the lowest possible latency on very long recordings, because transcription speed tracks model size and hardware, and a large model on CPU can fall behind real time.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 32347 stars, MIT license, Rust primary language, last commit 2026-09-28, 4 GitHub topics including cross-platform, speech-to-text, tauri-v2, accessibility. Tauri v2 shell, local Whisper variants, and native insertion are described in the official README; the app was not built or run in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 32347 stars, MIT license, Rust primary language, last commit 2026-09-28, 4 GitHub topics including cross-platform, speech-to-text, tauri-v2, accessibility. Tauri v2 shell, local Whisper variants, and native insertion are described in the official README; the app was not built or run in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/cjpais/Handy", "date": "2026-09-28", "description": "32,347 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/cjpais/Handy
+    date: '2026-09-28'
+    description: 32,347 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

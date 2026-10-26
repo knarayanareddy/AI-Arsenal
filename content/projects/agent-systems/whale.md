@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Go terminal coding agent for DeepSeek with a claimed 98% prompt cache hit rate and JavaScript multi-agent workflows"
-github_url: "https://github.com/usewhale/Whale"
+description: Go terminal coding agent for DeepSeek with a claimed 98% prompt cache hit rate and JavaScript multi-agent workflows
+github_url: https://github.com/usewhale/Whale
 license: MIT
 primary_language: Go
-tags: [code-gen, llm, caching, orchestration]
+tags:
+  - code-gen
+  - llm
+  - caching
+  - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 930
+github_stars: 928
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-11"
-docs_url: "https://github.com/usewhale/Whale/blob/main/docs/configuration.en.md"
+trending_score: 23
+last_commit: '2026-10-14'
+docs_url: https://github.com/usewhale/Whale/blob/main/docs/configuration.en.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Optimises the DeepSeek prefix cache hard and adds scriptable multi-agent workflows, which is the combination the other DeepSeek CLIs split between them."
+  - Optimises the DeepSeek prefix cache hard and adds scriptable multi-agent workflows, which is the combination the other DeepSeek CLIs split between them.
 best_for:
-  - "You want a DeepSeek coding agent whose cache-hit rate stays high enough that a long session costs pennies rather than dollars."
-  - "You want multi-agent orchestration you write yourself, because dynamic workflows are JavaScript files that fan out parallel agents and synthesise a result."
-  - "You already have Claude Code workflow scripts and you want them to keep working, because the workflow format is claimed to be compatible."
+  - You want a DeepSeek coding agent whose cache-hit rate stays high enough that a long session costs pennies rather than dollars.
+  - You want multi-agent orchestration you write yourself, because dynamic workflows are JavaScript files that fan out parallel agents and synthesise a result.
+  - You already have Claude Code workflow scripts and you want them to keep working, because the workflow format is claimed to be compatible.
 avoid_if:
-  - "You need dynamic workflows on by default, because the feature ships disabled and must be turned on in the TUI or in .whale/config.local.toml."
-  - "You need multi-provider support, because the tool is DeepSeek-native by design and describes itself as not a generic multi-model wrapper."
-  - "You need Windows ARM, where the PowerShell installer is the documented path and Windows support starts at Windows 10 or Server 2016."
+  - You need dynamic workflows on by default, because the feature ships disabled and must be turned on in the TUI or in .whale/config.local.toml.
+  - You need multi-provider support, because the tool is DeepSeek-native by design and describes itself as not a generic multi-model wrapper.
+  - You need Windows ARM, where the PowerShell installer is the documented path and Windows support starts at Windows 10 or Server 2016.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, workflow API (agent/parallel), disabled-by-default flag, config keys and the 98% cache claim are read from the official README; the cache figure was not independently measured."
+enrichment_notes: Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, workflow API (agent/parallel), disabled-by-default flag, config keys and the 98% cache claim are read from the official README; the cache figure was not independently measured.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

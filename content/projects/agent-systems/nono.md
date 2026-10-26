@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 419
+trending_score: 49
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: nono
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Rust sandbox from the Sigstore team that confines coding agents with least-privilege policy and no daemon or container"
-github_url: "https://github.com/nolabs-ai/nono"
+description: Rust sandbox from the Sigstore team that confines coding agents with least-privilege policy and no daemon or container
+github_url: https://github.com/nolabs-ai/nono
 license: Apache-2.0
 primary_language: Rust
-tags: [security, agents]
+tags:
+  - security
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 4262
-last_commit: "2026-09-28"
-docs_url: "https://nono.sh"
+github_stars: 4681
+last_commit: '2026-10-26'
+docs_url: https://nono.sh
 phase: agent-system
 domain:
   - language
@@ -51,8 +53,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A process and syscall sandbox candidate for constraining agent-created commands, files, network connections, and descendants.
-best_for: ["You run Claude Code, Codex, Pi, Copilot, Hermes or OpenCode on a workstation and want the agent's shell confined without paying a container image build.", "You need per-command policies plus scoped credential handling for an agent that will run against a real repository with real secrets.", "You want to publish a hardened agent profile to your team through the nono registry instead of maintaining a bespoke sandbox image."]
-avoid_if: ["You need a pre-1.0 stable API surface, because the README notes the project is stabilising APIs ahead of 1.0 and changes may still occur.", "Your automation already runs agents inside hardened containers and you would rather not maintain two isolation layers.", "You are still referencing packs under the always-further namespace, because the official registry namespace has moved to nolabs-ai and the old one will be retired."]
+best_for:
+  - You run Claude Code, Codex, Pi, Copilot, Hermes or OpenCode on a workstation and want the agent's shell confined without paying a container image build.
+  - You need per-command policies plus scoped credential handling for an agent that will run against a real repository with real secrets.
+  - You want to publish a hardened agent profile to your team through the nono registry instead of maintaining a bespoke sandbox image.
+avoid_if:
+  - You need a pre-1.0 stable API surface, because the README notes the project is stabilising APIs ahead of 1.0 and changes may still occur.
+  - Your automation already runs agents inside hardened containers and you would rather not maintain two isolation layers.
+  - You are still referencing packs under the always-further namespace, because the official registry namespace has moved to nolabs-ai and the old one will be retired.
 enrichment_notes: Official repository, Apache-2.0 license, Rust implementation, and 2026-07-10 activity were reviewed on 2026-07-11. Isolation guarantees remain draft pending hands-on threat-model testing.
 ---
 

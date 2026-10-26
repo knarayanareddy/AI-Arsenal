@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zilliztech"
+org_or_maintainer: zilliztech
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 61
+trending_score: 20
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: deep-searcher
-name: "DeepSearcher"
+name: DeepSearcher
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "Deep research agent that searches a private corpus in Milvus and writes a cited report from the retrieved evidence"
-github_url: "https://github.com/zilliztech/deep-searcher"
+description: Deep research agent that searches a private corpus in Milvus and writes a cited report from the retrieved evidence
+github_url: https://github.com/zilliztech/deep-searcher
 license: Apache-2.0
 primary_language: Python
-tags: [rag, retrieval, data, agents]
+tags:
+  - rag
+  - retrieval
+  - data
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 8287
-last_commit: "2026-09-22"
-docs_url: "https://zilliztech.github.io/deep-searcher/"
+github_stars: 8348
+last_commit: '2026-09-22'
+docs_url: https://zilliztech.github.io/deep-searcher/
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An agentic deep-research pipeline that decomposes questions and iteratively retrieves over private data to produce cited reports."
-best_for: ["You are an enterprise team that needs research answers grounded in internal documents, because the pipeline loads local files and can add web results only when a question needs outside context.", "You already run Milvus or Zilliz Cloud, since that is the first-class vector backend and partitioning is the documented way to keep retrieval efficient across a large corpus.", "You want to choose the model per component, because embedding provider and LLM provider are configured separately rather than being welded to one vendor."]
-avoid_if: ["You need report quality you can defend to a regulator, because the reasoning is model-generated over retrieved evidence and the excerpt publishes no citation-fidelity evaluation.", "You are on a tight schedule with no GPU budget, because the default LLM configuration is a hosted model and the reasoner does multi-step reasoning over a retrieved set.", "You need web crawling to work, because the README states web crawling capability is under development and the example path needs a third-party crawl API key."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Agentic loops cost multiple LLM calls per query."
+  - An agentic deep-research pipeline that decomposes questions and iteratively retrieves over private data to produce cited reports.
+best_for:
+  - You are an enterprise team that needs research answers grounded in internal documents, because the pipeline loads local files and can add web results only when a question needs outside context.
+  - You already run Milvus or Zilliz Cloud, since that is the first-class vector backend and partitioning is the documented way to keep retrieval efficient across a large corpus.
+  - You want to choose the model per component, because embedding provider and LLM provider are configured separately rather than being welded to one vendor.
+avoid_if:
+  - You need report quality you can defend to a regulator, because the reasoning is model-generated over retrieved evidence and the excerpt publishes no citation-fidelity evaluation.
+  - You are on a tight schedule with no GPU budget, because the default LLM configuration is a hosted model and the reasoner does multi-step reasoning over a retrieved set.
+  - You need web crawling to work, because the README states web crawling capability is under development and the example path needs a third-party crawl API key.
+enrichment_notes: Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Agentic loops cost multiple LLM calls per query.
 ---
 
 ## Overview

@@ -1,52 +1,61 @@
 ---
 id: lightpanda-io-browser
-name: "browser"
+name: browser
 version_tracked: null
 artifact_type: tool
 category: agents
 subcategory: browser-agents
-description: "AGPL-3.0 headless browser written in Zig that speaks CDP for fast agent navigation without a full rendering engine"
-github_url: "https://github.com/lightpanda-io/browser"
-license: "AGPL-3.0"
+description: AGPL-3.0 headless browser written in Zig that speaks CDP for fast agent navigation without a full rendering engine
+github_url: https://github.com/lightpanda-io/browser
+license: AGPL-3.0
 primary_language: Other
-org_or_maintainer: "lightpanda-io"
-tags: [agents]
+org_or_maintainer: lightpanda-io
+tags:
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 35626
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://lightpanda.io"
+github_stars: 37012
+github_stars_last_30d: 1386
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://lightpanda.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Headless browser written in Zig and designed for agent workloads: fast, scriptable navigation primitives without a full rendering engine in the hot path."
+  - 'Headless browser written in Zig and designed for agent workloads: fast, scriptable navigation primitives without a full rendering engine in the hot path.'
 best_for:
-  - "You are running an agent that fetches thousands of pages and the bottleneck is per-navigation overhead, because a headless engine without full rendering starts and navigates faster."
-  - "You are parsing HTML rather than looking at pixels, so you want a browser that loads a page and gives you the DOM without paying for layout, paint, and images."
-  - "You have an existing Playwright or Puppeteer driver and want a drop-in CDP-compatible backend behind the same client code."
+  - You are running an agent that fetches thousands of pages and the bottleneck is per-navigation overhead, because a headless engine without full rendering starts and navigates faster.
+  - You are parsing HTML rather than looking at pixels, so you want a browser that loads a page and gives you the DOM without paying for layout, paint, and images.
+  - You have an existing Playwright or Puppeteer driver and want a drop-in CDP-compatible backend behind the same client code.
 avoid_if:
-  - "Your task needs pixel-accurate rendering, canvas, WebGL, or screenshots, because a browser built to skip the rendering path is the wrong tool for a visual assertion."
-  - "You need a mature, widely staffed browser engine, since the project is young and its coverage of the web platform is deliberately partial."
-  - "You cannot accept AGPL-3.0 obligations, which attach to networked use of a modified or combined work and complicate embedding in a commercial service."
+  - Your task needs pixel-accurate rendering, canvas, WebGL, or screenshots, because a browser built to skip the rendering path is the wrong tool for a visual assertion.
+  - You need a mature, widely staffed browser engine, since the project is young and its coverage of the web platform is deliberately partial.
+  - You cannot accept AGPL-3.0 obligations, which attach to networked use of a modified or combined work and complicate embedding in a commercial service.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 35626 stars, AGPL-3.0 license, primary language reported as Other (Zig repo), last commit 2026-09-28, 7 GitHub topics including cdp, playwright, puppeteer, zig. CDP support, the absence of a rendering path, and Playwright/Puppeteer adapters come from the official README and site; speed and memory figures are the project's own claims."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 35626 stars, AGPL-3.0 license, primary language reported as Other (Zig repo), last commit 2026-09-28, 7 GitHub topics including cdp, playwright, puppeteer, zig. CDP support, the absence of a rendering path, and Playwright/Puppeteer adapters come from the official README and site; speed and memory figures are the project''s own claims.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/lightpanda-io/browser", "date": "2026-09-28", "description": "35,626 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/lightpanda-io/browser
+    date: '2026-09-28'
+    description: 35,626 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

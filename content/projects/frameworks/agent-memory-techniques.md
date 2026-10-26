@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Thirty executable notebooks that rebuild one chat assistant on progressively richer memory backends, then score them against the LoCoMo benchmark"
-github_url: "https://github.com/NirDiamant/Agent_Memory_Techniques"
+description: Thirty executable notebooks that rebuild one chat assistant on progressively richer memory backends, then score them against the LoCoMo benchmark
+github_url: https://github.com/NirDiamant/Agent_Memory_Techniques
 license: Apache-2.0
 primary_language: Other
-tags: [memory, rag, graphs]
+tags:
+  - memory
+  - rag
+  - graphs
 maturity: alpha
 cost_model: open-source
-github_stars: 1079
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-21"
-docs_url: "https://diamantai.substack.com/"
+github_stars: 1123
+github_stars_last_30d: 44
+trending_score: 27
+last_commit: '2026-10-26'
+docs_url: https://diamantai.substack.com/
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Lets you compare memory designs side by side on one agent instead of trusting a single vendor's numbers."
+  - Lets you compare memory designs side by side on one agent instead of trusting a single vendor's numbers.
 best_for:
-  - "You are choosing a memory backend for a long-running support agent and need measured recall before you commit."
-  - "You are writing a design doc on agent memory and want runnable code for the buffer, vector, and graph approaches to attach."
-  - "You are onboarding engineers who have never implemented context paging and want a path from a naive buffer to a MemGPT-style setup."
+  - You are choosing a memory backend for a long-running support agent and need measured recall before you commit.
+  - You are writing a design doc on agent memory and want runnable code for the buffer, vector, and graph approaches to attach.
+  - You are onboarding engineers who have never implemented context paging and want a path from a naive buffer to a MemGPT-style setup.
 avoid_if:
-  - "You are shipping an agent this quarter and need a memory service with an on-call rotation behind it."
-  - "You are working air-gapped, because several notebooks call hosted embedding endpoints to build their vector index."
-  - "You are looking for one blessed memory design, since the repository exists to show competing implementations side by side."
+  - You are shipping an agent this quarter and need a memory service with an on-call rotation behind it.
+  - You are working air-gapped, because several notebooks call hosted embedding endpoints to build their vector index.
+  - You are looking for one blessed memory design, since the repository exists to show competing implementations side by side.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1079, Apache-2.0, Jupyter Notebook, last commit 2026-09-21, topics. From README: 30 notebooks, learning paths, decision tree, LoCoMo section. Notebook internals and any recall figures were not read or executed."
+enrichment_notes: 'API-verified: stars 1079, Apache-2.0, Jupyter Notebook, last commit 2026-09-21, topics. From README: 30 notebooks, learning paths, decision tree, LoCoMo section. Notebook internals and any recall figures were not read or executed.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

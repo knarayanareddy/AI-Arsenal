@@ -5,19 +5,21 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: document-processing
-description: "Open-source crawler that turns any page into LLM-ready Markdown, runnable locally or through a hosted API with MCP"
-github_url: "https://github.com/unclecode/crawl4ai"
+description: Open-source crawler that turns any page into LLM-ready Markdown, runnable locally or through a hosted API with MCP
+github_url: https://github.com/unclecode/crawl4ai
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, retrieval]
+tags:
+  - rag
+  - retrieval
 maturity: production
 cost_model: freemium
-github_stars: 84414
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-25"
-docs_url: "https://docs.crawl4ai.com"
+github_stars: 86303
+github_stars_last_30d: 1889
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.crawl4ai.com
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +30,24 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source Python crawler specifically designed to output LLM-ready Markdown for RAG ingestion pipelines
-best_for: ["You are building a RAG pipeline and need page text as clean Markdown rather than raw HTML that your chunker has to strip.", "You want the same crawler in-process for a batch job and behind an API for an agent, with an MCP endpoint so an agent client can call it as a tool.", "You want to avoid standing up proxies and browser infrastructure, because the hosted tier handles both behind a single key."]
-avoid_if: ["You need byte-deterministic pages for compliance archiving, because rendering and extraction can change between versions.", "Your corpus is behind an authenticated session that the crawler cannot hold, because a stateless fetch path will get a login wall.", "You must avoid a dependency on a hosted service, since the paid tier is where the anti-bot and proxy work lives."]
+best_for:
+  - You are building a RAG pipeline and need page text as clean Markdown rather than raw HTML that your chunker has to strip.
+  - You want the same crawler in-process for a batch job and behind an API for an agent, with an MCP endpoint so an agent client can call it as a tool.
+  - You want to avoid standing up proxies and browser infrastructure, because the hosted tier handles both behind a single key.
+avoid_if:
+  - You need byte-deterministic pages for compliance archiving, because rendering and extraction can change between versions.
+  - Your corpus is behind an authenticated session that the crawler cannot hold, because a stateless fetch path will get a login wall.
+  - You must avoid a dependency on a hosted service, since the paid tier is where the anti-bot and proxy work lives.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,8 +55,8 @@ integrates_with: []
 corresponding_tool_entry: crawl4ai-tool
 enrichment_status: reviewed
 enrichment_notes: This entry is architecturally identical to the crawl4ai-tool entry in the tools vertical (content/tools/data-ingestion/); this project entry documents the project's architecture and ecosystem position, while the tool entry covers usage-oriented job guidance. See corresponding_tool_entry cross-reference.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

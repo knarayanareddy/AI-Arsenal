@@ -1,52 +1,64 @@
 ---
 id: enricoros-big-agi
-name: "big-AGI"
+name: big-AGI
 version_tracked: null
 artifact_type: tool
 category: agents
 subcategory: tools
-description: "Browser-and-server AI workbench bundling multi-provider chat, personas, image generation, voice, and sandboxed code execution behind one local interface"
-github_url: "https://github.com/enricoros/big-AGI"
-license: "MIT"
+description: Browser-and-server AI workbench bundling multi-provider chat, personas, image generation, voice, and sandboxed code execution behind one local interface
+github_url: https://github.com/enricoros/big-AGI
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "enricoros"
-tags: [llm, self-hosted, multimodal, agents]
+org_or_maintainer: enricoros
+tags:
+  - llm
+  - self-hosted
+  - multimodal
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 7133
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-28"
-docs_url: "https://big-agi.com"
+github_stars: 7154
+github_stars_last_30d: 21
+trending_score: 35
+last_commit: '2026-10-26'
+docs_url: https://big-agi.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Self-hostable multi-model AI suite for local-first use, notable for the breadth of providers and modalities exposed behind a single interface."
+  - Self-hostable multi-model AI suite for local-first use, notable for the breadth of providers and modalities exposed behind a single interface.
 best_for:
-  - "You want to compare several vendors on the same prompt and need true side-by-side streaming rather than switching browser tabs."
-  - "You are prototyping multi-modal features such as image generation, text-to-speech, or vision input and want one client that speaks all of them."
-  - "You need a self-hostable team AI front end where credentials and conversation history stay on infrastructure you control."
+  - You want to compare several vendors on the same prompt and need true side-by-side streaming rather than switching browser tabs.
+  - You are prototyping multi-modal features such as image generation, text-to-speech, or vision input and want one client that speaks all of them.
+  - You need a self-hostable team AI front end where credentials and conversation history stay on infrastructure you control.
 avoid_if:
-  - "You need a hardened, audited deployment with SSO and role-based access, since this is a fast-moving product rather than a governed enterprise platform."
-  - "You are building a programmable backend service, because the interface is human-facing and offers no stable SDK contract for programmatic callers."
-  - "You cannot use third-party model APIs at all, where the local-inference entries in the catalog are the correct starting point."
+  - You need a hardened, audited deployment with SSO and role-based access, since this is a fast-moving product rather than a governed enterprise platform.
+  - You are building a programmable backend service, because the interface is human-facing and offers no stable SDK contract for programmatic callers.
+  - You cannot use third-party model APIs at all, where the local-inference entries in the catalog are the correct starting point.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7133), MIT license, last commit 2026-09-28, primary language TypeScript, and all listed topics were read from the GitHub API. Beam multi-model comparison, personas, modalities, code execution, and the Docker deployment path come from the official README; the app was not run here and provider behavior was not tested."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7133), MIT license, last commit 2026-09-28, primary language TypeScript, and all listed topics were read from the GitHub API. Beam multi-model comparison, personas, modalities, code execution, and the Docker deployment path come from the official README; the app was not run here and provider behavior was not tested.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/enricoros/big-AGI", "date": "2026-09-28", "description": "7,133 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/enricoros/big-AGI
+    date: '2026-09-28'
+    description: 7,133 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,62 @@
 ---
 id: kornia-kornia
-name: "kornia"
+name: kornia
 version_tracked: null
 artifact_type: library
 category: computer-vision
 subcategory: libraries
-description: "Differentiable geometric computer-vision library of batched PyTorch operators for warps, homographies, and pose"
-github_url: "https://github.com/kornia/kornia"
-license: "Apache-2.0"
+description: Differentiable geometric computer-vision library of batched PyTorch operators for warps, homographies, and pose
+github_url: https://github.com/kornia/kornia
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "kornia"
-tags: [vision, pytorch]
+org_or_maintainer: kornia
+tags:
+  - vision
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 11385
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-28"
-docs_url: "https://kornia.readthedocs.io"
+github_stars: 11449
+github_stars_last_30d: 64
+trending_score: 38
+last_commit: '2026-10-26'
+docs_url: https://kornia.readthedocs.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Geometric computer-vision library of differentiable operators on tensors, so warps, homographies, and pose maths are batched and differentiable rather than hand-rolled per project."
+  - Geometric computer-vision library of differentiable operators on tensors, so warps, homographies, and pose maths are batched and differentiable rather than hand-rolled per project.
 best_for:
-  - "You need image warps, homography estimation, or camera pose in a training loop and want them batched and differentiable rather than a per-sample OpenCV call."
-  - "You are implementing or reproducing geometric vision work — feature matching, optical flow, image registration, SLAM front-ends — where kornia supplies the operators the paper assumes."
-  - "You need depth estimation, image alignment, or spatial transformer layers as drop-in PyTorch modules with gradients flowing to the poses and depth maps."
+  - You need image warps, homography estimation, or camera pose in a training loop and want them batched and differentiable rather than a per-sample OpenCV call.
+  - You are implementing or reproducing geometric vision work — feature matching, optical flow, image registration, SLAM front-ends — where kornia supplies the operators the paper assumes.
+  - You need depth estimation, image alignment, or spatial transformer layers as drop-in PyTorch modules with gradients flowing to the poses and depth maps.
 avoid_if:
-  - "You need a general-purpose image processing toolbox, since kornia is deliberately focused on geometry and photometric filtering is not its strength."
-  - "You are doing classical, non-learned processing on CPU at scale, where OpenCV is faster, better tested, and already parallelised."
-  - "You need pre-trained recognition or detection models, since this is an operator library with no model zoo."
+  - You need a general-purpose image processing toolbox, since kornia is deliberately focused on geometry and photometric filtering is not its strength.
+  - You are doing classical, non-learned processing on CPU at scale, where OpenCV is faster, better tested, and already parallelised.
+  - You need pre-trained recognition or detection models, since this is an operator library with no model zoo.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (11385), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. grid_sample-based warps, SVD homography solving, pose decomposition, and the geometry and feature namespaces are from the official docs and source; conditioning and export caveats are engineering judgement, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (11385), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. grid_sample-based warps, SVD homography solving, pose decomposition, and the geometry and feature namespaces are from the official docs and source; conditioning and export caveats are engineering judgement, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/kornia/kornia", "date": "2026-09-28", "description": "11,385 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/kornia/kornia
+    date: '2026-09-28'
+    description: 11,385 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

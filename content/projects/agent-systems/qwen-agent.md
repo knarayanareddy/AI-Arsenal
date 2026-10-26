@@ -5,19 +5,21 @@ version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application"
-github_url: "https://github.com/QwenLM/Qwen-Agent"
+description: Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application
+github_url: https://github.com/QwenLM/Qwen-Agent
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Qwen Team (Alibaba)"
-tags: [rag, retrieval]
+org_or_maintainer: Qwen Team (Alibaba)
+tags:
+  - rag
+  - retrieval
 maturity: production
 cost_model: open-source
-github_stars: 17132
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-03-04"
-docs_url: "https://qwenlm.github.io/Qwen-Agent/"
+github_stars: 17213
+github_stars_last_30d: 81
+trending_score: 21
+last_commit: '2026-03-04'
+docs_url: https://qwenlm.github.io/Qwen-Agent/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,25 +30,41 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: agent-system
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - Qwen-native agent framework; the reference option when your stack is built on Qwen models and you want function calling, code interpreter, and RAG components tuned to Qwen rather than a model-agnostic framework
-best_for: ["You are serving Qwen or QwQ models and need the function-calling template that matches the checkpoint rather than a generic JSON-mode prompt.", "You want a runnable assistant out of the box, since the package ships Browser Assistant, Code Interpreter and Custom Assistant applications alongside the framework.", "You are connecting Qwen to MCP servers and want a reference integration that already ships the cookbook patterns."]
-avoid_if: ["You need provider-neutral abstractions, because the framework's templates, demos and defaults are built around Qwen's instruction-following conventions.", "You plan to run the Python executor against untrusted input, because the README states plainly that it is not sandboxed and is for local testing only.", "You are behind on Qwen releases, because the default function-call template is versioned and the README documents how to fall back to the previous one."]
+best_for:
+  - You are serving Qwen or QwQ models and need the function-calling template that matches the checkpoint rather than a generic JSON-mode prompt.
+  - You want a runnable assistant out of the box, since the package ships Browser Assistant, Code Interpreter and Custom Assistant applications alongside the framework.
+  - You are connecting Qwen to MCP servers and want a reference integration that already ships the cookbook patterns.
+avoid_if:
+  - You need provider-neutral abstractions, because the framework's templates, demos and defaults are built around Qwen's instruction-following conventions.
+  - You plan to run the Python executor against untrusted input, because the README states plainly that it is not sandboxed and is for local testing only.
+  - You are behind on Qwen releases, because the default function-call template is versioned and the README documents how to fall back to the previous one.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (16,694), Apache-2.0 license, and last commit (2026-03-04) verified via the GitHub API on 2026-07-08. Feature claims from the README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (16,694), Apache-2.0 license, and last commit (2026-03-04) verified via the GitHub API on 2026-07-08. Feature claims from the README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/QwenLM/Qwen-Agent", "date": "2026-07-08", "description": "16,694 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/QwenLM/Qwen-Agent
+    date: '2026-07-08'
+    description: 16,694 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

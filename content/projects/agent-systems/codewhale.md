@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Rust terminal agent that reads a repo, edits files and runs commands on hosted or local models, with fleet mode for multi-agent work"
-github_url: "https://github.com/Hmbown/Codewhale"
+description: Rust terminal agent that reads a repo, edits files and runs commands on hosted or local models, with fleet mode for multi-agent work
+github_url: https://github.com/Hmbown/Codewhale
 license: MIT
 primary_language: Rust
-tags: [code-gen, inference, agents]
+tags:
+  - code-gen
+  - inference
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 41037
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/Hmbown/Codewhale/blob/main/docs/README.md"
+github_stars: 41120
+github_stars_last_30d: 83
+trending_score: 30
+last_commit: '2026-10-26'
+docs_url: https://github.com/Hmbown/Codewhale/blob/main/docs/README.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "One native binary covers terminal, bundled web client and desktop, with explicit approval modes and no lock-in to a single model vendor."
+  - One native binary covers terminal, bundled web client and desktop, with explicit approval modes and no lock-in to a single model vendor.
 best_for:
-  - "You want a single fast native binary for coding work and you dislike Electron shells that start slowly or hold a lot of resident memory."
-  - "You split a large job across several roles and want to hand different parts to agents running on different models, coordinating them as a fleet rather than one long session."
-  - "You need the same agent to run headlessly in CI, because codewhale exec takes a task string and returns results without an interactive TUI."
+  - You want a single fast native binary for coding work and you dislike Electron shells that start slowly or hold a lot of resident memory.
+  - You split a large job across several roles and want to hand different parts to agents running on different models, coordinating them as a fleet rather than one long session.
+  - You need the same agent to run headlessly in CI, because codewhale exec takes a task string and returns results without an interactive TUI.
 avoid_if:
-  - "You are on Windows and want a one-line installer, because macOS and Linux use the install script while Windows needs a manual download from GitHub Releases."
-  - "You need a guaranteed-stable API contract, because the changelog publishes an unreleased candidate section whose changes are not in any download yet."
-  - "You want a project with no lineage to a model vendor's tooling, because the README notes it began as deepseek-tui and still preserves that configuration and session compatibility."
+  - You are on Windows and want a one-line installer, because macOS and Linux use the install script while Windows needs a manual download from GitHub Releases.
+  - You need a guaranteed-stable API contract, because the changelog publishes an unreleased candidate section whose changes are not in any download yet.
+  - You want a project with no lineage to a model vendor's tooling, because the README notes it began as deepseek-tui and still preserves that configuration and session compatibility.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, permission modes, runtime architecture, provider options and packaging channels are read from the official README and docs; no agent run was performed here."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, permission modes, runtime architecture, provider options and packaging channels are read from the official README and docs; no agent run was performed here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

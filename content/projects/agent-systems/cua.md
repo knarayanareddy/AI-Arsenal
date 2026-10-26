@@ -1,50 +1,68 @@
 ---
 id: cua
-name: "Cua"
+name: Cua
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux"
-github_url: "https://github.com/trycua/cua"
-license: "MIT"
+description: Open drivers, virtual-machine fleets, and benchmarks for computer-use agents across macOS, Windows, and Linux
+github_url: https://github.com/trycua/cua
+license: MIT
 primary_language: Python
-org_or_maintainer: "Cua"
-tags: [agents, tool-use, benchmark, evaluation]
+org_or_maintainer: Cua
+tags:
+  - agents
+  - tool-use
+  - benchmark
+  - evaluation
 maturity: beta
 cost_model: open-source
-github_stars: 22143
-github_stars_last_30d: 0
-trending_score: 68
-last_commit: "2026-09-03"
-docs_url: "https://github.com/trycua/cua#readme"
+github_stars: 31012
+github_stars_last_30d: 8869
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/trycua/cua#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [vision, multimodal, general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - vision
+  - multimodal
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The infrastructure layer beneath computer-use agents: virtualisation drivers plus a fleet API plus task benchmarks, so an agent can be pointed at a disposable desktop operating system instead of the operator's machine."
+  - 'The infrastructure layer beneath computer-use agents: virtualisation drivers plus a fleet API plus task benchmarks, so an agent can be pointed at a disposable desktop operating system instead of the operator''s machine.'
 best_for:
-  - "You need to evaluate or train a computer-use agent against reproducible desktop tasks and want isolated, disposable virtual machines rather than a shared host"
-  - "You are generating trajectories or demonstration data for GUI automation and need cross-OS capture with a consistent action schema"
+  - You need to evaluate or train a computer-use agent against reproducible desktop tasks and want isolated, disposable virtual machines rather than a shared host
+  - You are generating trajectories or demonstration data for GUI automation and need cross-OS capture with a consistent action schema
 avoid_if:
-  - "Your target is a single stable web application — a browser-level driver is a far cheaper and more deterministic surface than a full desktop virtual machine"
-  - "You cannot afford the host hardware or orchestration overhead of running virtualised desktops, where a headless browser or API integration costs a fraction of the compute"
+  - Your target is a single stable web application — a browser-level driver is a far cheaper and more deterministic surface than a full desktop virtual machine
+  - You cannot afford the host hardware or orchestration overhead of running virtualised desktops, where a headless browser or API integration costs a fraction of the compute
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [browser-use, skyvern]
-integrates_with: [browser-use]
+alternatives:
+  - browser-use
+  - skyvern
+integrates_with:
+  - browser-use
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (22,143), forks (1,523), licence (MIT), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports HTML as dominant across a polyglot monorepo (Rust, Python, TypeScript, Go, Swift); Python is recorded as the agent-facing integration surface."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (22,143), forks (1,523), licence (MIT), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports HTML as dominant across a polyglot monorepo (Rust, Python, TypeScript, Go, Swift); Python is recorded as the agent-facing integration surface.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/trycua/cua", "date": "2026-09-03", "description": "22,143 stars on GitHub as of 2026-09-03 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/trycua/cua
+    date: '2026-09-03'
+    description: 22,143 stars on GitHub as of 2026-09-03 (GitHub API)
 featured: false
 status: active
 ---

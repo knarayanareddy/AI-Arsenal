@@ -1,52 +1,62 @@
 ---
 id: s3prl-s3prl
-name: "s3prl"
+name: s3prl
 version_tracked: null
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "Research toolkit that wraps dozens of self-supervised speech pretraining methods behind one hidden-state interface, so comparisons run through a single call"
-github_url: "https://github.com/s3prl/s3prl"
-license: "Apache-2.0"
+description: Research toolkit that wraps dozens of self-supervised speech pretraining methods behind one hidden-state interface, so comparisons run through a single call
+github_url: https://github.com/s3prl/s3prl
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "s3prl"
-tags: [voice, training]
+org_or_maintainer: s3prl
+tags:
+  - voice
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 2566
-github_stars_last_30d: 0
-trending_score: 23
-last_commit: "2026-03-12"
-docs_url: "https://s3prl.github.io/s3prl/"
+github_stars: 2568
+github_stars_last_30d: 2
+trending_score: 33
+last_commit: '2026-03-12'
+docs_url: https://s3prl.github.io/s3prl/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [audio]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [community-driven]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Self-supervised speech pre-training and representation-learning toolkit spanning dozens of upstream recipes behind one upstream-model interface."
+  - Self-supervised speech pre-training and representation-learning toolkit spanning dozens of upstream recipes behind one upstream-model interface.
 best_for:
-  - "You want to reproduce a paper's self-supervised speech result and need the specific upstream configuration rather than a reimplementation."
-  - "You are comparing SSL methods on your own downstream task and want the comparison to differ only by the upstream model."
-  - "You need a pre-trained upstream checkpoint for a language or domain that the mainstream releases do not cover."
+  - You want to reproduce a paper's self-supervised speech result and need the specific upstream configuration rather than a reimplementation.
+  - You are comparing SSL methods on your own downstream task and want the comparison to differ only by the upstream model.
+  - You need a pre-trained upstream checkpoint for a language or domain that the mainstream releases do not cover.
 avoid_if:
-  - "You just want a speech encoder, since a Hugging Face Transformers model with a fine-tune head is a shorter path to a result."
-  - "Your task is end-to-end ASR or synthesis, since this produces representations, not a recognizer or a vocoder."
-  - "You have no compute for pretraining, because a from-scratch SSL run is a multi-GPU-week project even for a small configuration."
+  - You just want a speech encoder, since a Hugging Face Transformers model with a fine-tune head is a shorter path to a result.
+  - Your task is end-to-end ASR or synthesis, since this produces representations, not a recognizer or a vocoder.
+  - You have no compute for pretraining, because a from-scratch SSL run is a multi-GPU-week project even for a small configuration.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2566), Apache-2.0 license, last commit 2026-03-12, primary language Python, and all 21 topics were read from the GitHub API. The hub, the upstream and downstream and self-supervised interfaces, the method list, and the matched-condition protocol come from the official README and docs; no checkpoint was downloaded and no representation was computed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2566), Apache-2.0 license, last commit 2026-03-12, primary language Python, and all 21 topics were read from the GitHub API. The hub, the upstream and downstream and self-supervised interfaces, the method list, and the matched-condition protocol come from the official README and docs; no checkpoint was downloaded and no representation was computed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/s3prl/s3prl", "date": "2026-09-28", "description": "2,566 stars and last commit 2026-03-12 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/s3prl/s3prl
+    date: '2026-09-28'
+    description: 2,566 stars and last commit 2026-03-12 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

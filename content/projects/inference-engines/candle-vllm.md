@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "EricLBuehler"
+org_or_maintainer: EricLBuehler
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 10
+trending_score: 15
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: candle-vllm
-name: "candle-vllm"
+name: candle-vllm
 artifact_type: tool
 category: llms
 subcategory: inference-engines
-description: "Rust LLM serving engine on Hugging Face's candle, with an OpenAI-compatible API, Web UI, PagedAttention, continuous batching and TurboQuant KV compression"
-github_url: "https://github.com/EricLBuehler/candle-vllm"
+description: Rust LLM serving engine on Hugging Face's candle, with an OpenAI-compatible API, Web UI, PagedAttention, continuous batching and TurboQuant KV compression
+github_url: https://github.com/EricLBuehler/candle-vllm
 license: MIT
 primary_language: Rust
-tags: [inference, quantization, caching, batching]
+tags:
+  - inference
+  - quantization
+  - caching
+  - batching
 maturity: beta
 cost_model: open-source
-github_stars: 728
-last_commit: "2026-09-17"
-docs_url: "https://github.com/EricLBuehler/candle-vllm#readme"
+github_stars: 738
+last_commit: '2026-10-18'
+docs_url: https://github.com/EricLBuehler/candle-vllm#readme
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "contribute-to"
+  - deploy-as-is
+  - contribute-to
 health_signals:
-  - "community-driven"
-  - "experimental"
+  - community-driven
+  - experimental
 ecosystem_role:
-  - "Rust and Candle alternative to Python-heavy LLM servers, with a narrower model surface than vLLM"
-best_for: ["You serve local models on macOS or Apple Silicon and you want an OpenAI-compatible endpoint with continuous batching rather than a single-user desktop runtime.", "You need a long context window on a memory-constrained device and you want to trade KV precision for capacity with turbo8, turbo4 or turbo3 rather than shrinking the model.", "You are on CUDA and want PagedAttention, prefix caching, chunked prefill and Marlin or GPTQ quantization in a single binary, with MCP tool calling on the same server."]
-avoid_if: ["You need a benchmark-proven throughput leader for large multi-tenant serving, because the published decode-speed table is single-request on one Hopper GPU and leaves several frontier checkpoints marked TBD.", "You are on an architecture outside CUDA and Metal, because the README lists those two backends and nothing else.", "You need speculative decoding on a non-Qwen3.5-family target, because both documented modes (MTP weights and DFlash2 draft checkpoints) are scoped to the Qwen3.5, 3.6 and 3.8 line."]
-enrichment_notes: "MIT-licensed community project with a smaller model-coverage footprint than vLLM. Draft pending review."
+  - Rust and Candle alternative to Python-heavy LLM servers, with a narrower model surface than vLLM
+best_for:
+  - You serve local models on macOS or Apple Silicon and you want an OpenAI-compatible endpoint with continuous batching rather than a single-user desktop runtime.
+  - You need a long context window on a memory-constrained device and you want to trade KV precision for capacity with turbo8, turbo4 or turbo3 rather than shrinking the model.
+  - You are on CUDA and want PagedAttention, prefix caching, chunked prefill and Marlin or GPTQ quantization in a single binary, with MCP tool calling on the same server.
+avoid_if:
+  - You need a benchmark-proven throughput leader for large multi-tenant serving, because the published decode-speed table is single-request on one Hopper GPU and leaves several frontier checkpoints marked TBD.
+  - You are on an architecture outside CUDA and Metal, because the README lists those two backends and nothing else.
+  - You need speculative decoding on a non-Qwen3.5-family target, because both documented modes (MTP weights and DFlash2 draft checkpoints) are scoped to the Qwen3.5, 3.6 and 3.8 line.
+enrichment_notes: MIT-licensed community project with a smaller model-coverage footprint than vLLM. Draft pending review.
 ---
 
 ## Overview

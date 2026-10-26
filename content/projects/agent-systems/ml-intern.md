@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,41 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-10-24"
+trending_score: 15
+added_date: '2026-07-19'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: ml-intern
-name: "ml-intern"
+name: ml-intern
 artifact_type: tool
 category: agents
 subcategory: autonomous
-description: "Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down"
-github_url: "https://github.com/huggingface/ml-intern"
+description: Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down
+github_url: https://github.com/huggingface/ml-intern
 license: Apache-2.0
 primary_language: Python
-tags: [huggingface, agents]
+tags:
+  - huggingface
+  - agents
 maturity: experimental
 cost_model: open-source
-github_stars: 10800
-last_commit: "2026-10-22"
-docs_url: "https://huggingface.co/chat/"
+github_stars: 10795
+last_commit: '2026-10-22'
+docs_url: https://huggingface.co/chat/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing"
-  - "smolagents reference for end-to-end ML workflow automation"
-best_for: ["You are studying how an autonomous ML-engineering agent was structured and want its historical documentation as a reference for agent loop, tool use and model routing.", "You already have a deployment built against the ml-intern CLI and you need to know precisely what was retired and what to migrate to instead.", "You want to understand the Hugging Face Inference Providers and Hub integration pattern the agent used, since the retained docs still describe the token and routing setup."]
-avoid_if: ["You need a working agent, because the README states the hosted web application and the ml-intern CLI have both been retired.", "You need support, bug fixes, or security updates, because the repository is archived and explicitly promises none of those.", "You are evaluating it as a maintained dependency, because the maintainers redirect all users to HuggingChat instead."]
-enrichment_notes: "The agent uses hosted Inference Providers by default and can use local OpenAI-compatible servers; compute billing and sandbox controls are operator concerns. Draft pending review."
+  - Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing
+  - smolagents reference for end-to-end ML workflow automation
+best_for:
+  - You are studying how an autonomous ML-engineering agent was structured and want its historical documentation as a reference for agent loop, tool use and model routing.
+  - You already have a deployment built against the ml-intern CLI and you need to know precisely what was retired and what to migrate to instead.
+  - You want to understand the Hugging Face Inference Providers and Hub integration pattern the agent used, since the retained docs still describe the token and routing setup.
+avoid_if:
+  - You need a working agent, because the README states the hosted web application and the ml-intern CLI have both been retired.
+  - You need support, bug fixes, or security updates, because the repository is archived and explicitly promises none of those.
+  - You are evaluating it as a maintained dependency, because the maintainers redirect all users to HuggingChat instead.
+enrichment_notes: The agent uses hosted Inference Providers by default and can use local OpenAI-compatible servers; compute billing and sandbox controls are operator concerns. Draft pending review.
 ---
 
 ## Overview

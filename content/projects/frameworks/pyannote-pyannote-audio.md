@@ -1,52 +1,63 @@
 ---
 id: pyannote-pyannote-audio
-name: "pyannote-audio"
+name: pyannote-audio
 version_tracked: null
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "Neural building blocks for speaker diarization: activity detection, change detection, and speaker embeddings"
-github_url: "https://github.com/pyannote/pyannote-audio"
-license: "MIT"
+description: 'Neural building blocks for speaker diarization: activity detection, change detection, and speaker embeddings'
+github_url: https://github.com/pyannote/pyannote-audio
+license: MIT
 primary_language: Python
-org_or_maintainer: "pyannote"
-tags: [voice, research]
+org_or_maintainer: pyannote
+tags:
+  - voice
+  - research
 maturity: production
 cost_model: open-source
-github_stars: 10598
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-24"
-docs_url: "https://www.pyannote.ai"
+github_stars: 10708
+github_stars_last_30d: 110
+trending_score: 42
+last_commit: '2026-10-25'
+docs_url: https://www.pyannote.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [audio]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Speaker-diarization toolkit whose segmentation, embeddings, and clustering pipeline is the reference implementation behind most open diarization stacks."
+  - Speaker-diarization toolkit whose segmentation, embeddings, and clustering pipeline is the reference implementation behind most open diarization stacks.
 best_for:
-  - "You are transcribing meetings or calls and need to know who spoke when, not just what was said, for downstream attribution or analytics."
-  - "You are building a diarization pipeline and want the standard segmentation-plus-embedding-plus-clustering components separately so you can swap or fine-tune each stage."
-  - "You are working with overlapping speech and want the overlapped-speech-detection model alongside segmentation rather than a single monolithic system."
+  - You are transcribing meetings or calls and need to know who spoke when, not just what was said, for downstream attribution or analytics.
+  - You are building a diarization pipeline and want the standard segmentation-plus-embedding-plus-clustering components separately so you can swap or fine-tune each stage.
+  - You are working with overlapping speech and want the overlapped-speech-detection model alongside segmentation rather than a single monolithic system.
 avoid_if:
-  - "You need speaker identity recognition as a security control, since diarization labels speakers within one recording and is not a verification system."
-  - "Your audio is very clean with two known speakers, where energy-based voice-activity gating plus channel assignment is far cheaper and more accurate."
-  - "You need everything in one package with a managed pipeline and support, since this is a research codebase that expects you to assemble and configure the stages yourself."
+  - You need speaker identity recognition as a security control, since diarization labels speakers within one recording and is not a verification system.
+  - Your audio is very clean with two known speakers, where energy-based voice-activity gating plus channel assignment is far cheaper and more accurate.
+  - You need everything in one package with a managed pipeline and support, since this is a research codebase that expects you to assemble and configure the stages yourself.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (10598), MIT license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. Powerset segmentation decoding, ECAPA embeddings, agglomerative clustering, gated Hub pipeline access, and the 3.1 versus 4.x split come from official docs and repo history; accuracy and real-time-factor caveats are engineering judgement, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (10598), MIT license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. Powerset segmentation decoding, ECAPA embeddings, agglomerative clustering, gated Hub pipeline access, and the 3.1 versus 4.x split come from official docs and repo history; accuracy and real-time-factor caveats are engineering judgement, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/pyannote/pyannote-audio", "date": "2026-09-28", "description": "10,598 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/pyannote/pyannote-audio
+    date: '2026-09-28'
+    description: 10,598 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

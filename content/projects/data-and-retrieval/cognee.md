@@ -1,46 +1,67 @@
 ---
 id: cognee
-name: "Cognee"
+name: Cognee
 version_tracked: null
 artifact_type: framework
 category: rag
 subcategory: vector-databases
-description: "Memory platform that turns documents, code and conversations into a self-hosted knowledge graph agents can query"
-github_url: "https://github.com/topoteretes/cognee"
+description: Memory platform that turns documents, code and conversations into a self-hosted knowledge graph agents can query
+github_url: https://github.com/topoteretes/cognee
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Topoteretes"
-tags: [memory, retrieval, graphs, local]
+org_or_maintainer: Topoteretes
+tags:
+  - memory
+  - retrieval
+  - graphs
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 31135
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://www.cognee.ai"
+github_stars: 32776
+github_stars_last_30d: 1641
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://www.cognee.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The pipeline-centric take on agent memory: cognee models memory construction as composable Extract-Cognify-Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms."
-best_for: ["You are building agent memory and the cost of an embedding-plus-LLM pipeline per session is the sticking point, because the default path is deliberately small models on your CPU.", "You want memory that is inspectable rather than opaque, because the store is a knowledge graph you can query, so you can see why a fact was retrieved.", "You are assembling shared team memory across documentation, tickets, code and conversations, which is the Company Brain pattern the project names as its primary use case."]
-avoid_if: ["You need a managed SLA, because this is a self-hosted graph stack you operate, with a Discord and a subreddit rather than a support contract.", "You want retrieval quality that a frontier embedding model would give you out of the box, because CPU-sized small models are the default and you are trading accuracy for the zero-cost claim.", "You already have a graph database and a vector store wired into production, because adding a second memory system is a new consistency problem rather than a simplification."]
+  - 'The pipeline-centric take on agent memory: cognee models memory construction as composable Extract-Cognify-Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms.'
+best_for:
+  - You are building agent memory and the cost of an embedding-plus-LLM pipeline per session is the sticking point, because the default path is deliberately small models on your CPU.
+  - You want memory that is inspectable rather than opaque, because the store is a knowledge graph you can query, so you can see why a fact was retrieved.
+  - You are assembling shared team memory across documentation, tickets, code and conversations, which is the Company Brain pattern the project names as its primary use case.
+avoid_if:
+  - You need a managed SLA, because this is a self-hosted graph stack you operate, with a Discord and a subreddit rather than a support contract.
+  - You want retrieval quality that a frontier embedding model would give you out of the box, because CPU-sized small models are the default and you are trading accuracy for the zero-cost claim.
+  - You already have a graph database and a vector store wired into production, because adding a second memory system is a new consistency problem rather than a simplification.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [graphiti, mem0]
+alternatives:
+  - graphiti
+  - mem0
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (27,350), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (27,350), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/topoteretes/cognee", "date": "2026-07-08", "description": "27,350 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/topoteretes/cognee
+    date: '2026-07-08'
+    description: 27,350 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

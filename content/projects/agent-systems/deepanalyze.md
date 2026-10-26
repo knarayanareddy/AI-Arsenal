@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ruc-datalab"
+org_or_maintainer: ruc-datalab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,43 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 93
+trending_score: 22
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: deepanalyze
-name: "DeepAnalyze"
+name: DeepAnalyze
 artifact_type: model
 category: agents
 subcategory: autonomous
-description: "Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports"
-github_url: "https://github.com/ruc-datalab/DeepAnalyze"
+description: Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports
+github_url: https://github.com/ruc-datalab/DeepAnalyze
 license: MIT
 primary_language: Python
-tags: [data, research]
+tags:
+  - data
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 4661
-last_commit: "2026-09-23"
-docs_url: "https://ruc-deepanalyze.github.io"
+github_stars: 4754
+last_commit: '2026-10-13'
+docs_url: https://ruc-deepanalyze.github.io
 phase: agent-system
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "Open 8B autonomous data-science agent with model, code, data, and UI"
-  - "Execution-grounded analyst workflow for mixed structured and unstructured files"
-best_for: ["You are a data analyst who wants the whole loop — load, inspect, model, plot, narrate — driven from a natural-language question rather than typed in a notebook cell by cell.", "You work across mixed sources, because the system is documented against structured data in databases, CSV and Excel alongside JSON, XML, YAML and plain-text or Markdown files.", "You want the reasoning trace behind an analysis, because the project ships model, code and training data openly rather than only a chat endpoint."]
-avoid_if: ["You need audited, reproducible numbers for a regulatory or financial decision, because an autonomous agent choosing its own analysis steps is the opposite of a controlled pipeline.", "You have a tight time-to-first-answer budget, because this is a research project from Renmin University and Tsinghua with a model download step before anything runs.", "You want a governed tool with a stable API contract, because the outputs are analyst-style reports rather than a service you can call from a pipeline with a schema."]
-enrichment_notes: "DeepAnalyze is an academic/research release with a Docker sandbox option, open model, code, and training data; its reports require independent validation. Draft pending review."
+  - Open 8B autonomous data-science agent with model, code, data, and UI
+  - Execution-grounded analyst workflow for mixed structured and unstructured files
+best_for:
+  - You are a data analyst who wants the whole loop — load, inspect, model, plot, narrate — driven from a natural-language question rather than typed in a notebook cell by cell.
+  - You work across mixed sources, because the system is documented against structured data in databases, CSV and Excel alongside JSON, XML, YAML and plain-text or Markdown files.
+  - You want the reasoning trace behind an analysis, because the project ships model, code and training data openly rather than only a chat endpoint.
+avoid_if:
+  - You need audited, reproducible numbers for a regulatory or financial decision, because an autonomous agent choosing its own analysis steps is the opposite of a controlled pipeline.
+  - You have a tight time-to-first-answer budget, because this is a research project from Renmin University and Tsinghua with a model download step before anything runs.
+  - You want a governed tool with a stable API contract, because the outputs are analyst-style reports rather than a service you can call from a pipeline with a schema.
+enrichment_notes: DeepAnalyze is an academic/research release with a Docker sandbox option, open model, code, and training data; its reports require independent validation. Draft pending review.
 ---
 
 ## Overview

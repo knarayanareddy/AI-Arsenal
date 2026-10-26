@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "TypeScript terminal agent whose control loop runs on a TurboQuant-patched llama.cpp, with SQLite FTS5 memory and Playwright browser control"
-github_url: "https://github.com/AtomicBot-ai/atomic-agent"
+description: TypeScript terminal agent whose control loop runs on a TurboQuant-patched llama.cpp, with SQLite FTS5 memory and Playwright browser control
+github_url: https://github.com/AtomicBot-ai/atomic-agent
 license: MIT
 primary_language: TypeScript
-tags: [local, inference, memory]
+tags:
+  - local
+  - inference
+  - memory
 maturity: alpha
 cost_model: open-source
-github_stars: 2515
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/AtomicBot-ai/atomic-agent#readme"
+github_stars: 3439
+github_stars_last_30d: 924
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://github.com/AtomicBot-ai/atomic-agent#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Keeps the entire loop, state and inference local, so a small quantised model stays useful for long multi-step work with no token bill."
+  - Keeps the entire loop, state and inference local, so a small quantised model stays useful for long multi-step work with no token bill.
 best_for:
-  - "You want an agent that runs entirely on your own hardware with no API key, and you accept that a quantised 7-8B-class model will be less capable than a frontier one."
-  - "You are evaluating whether local models can hold up on long agentic tasks and you want a GAIA-style benchmark number and a TUI to watch the run happen."
-  - "You already use Hermes, OpenClaw, Claude Code or Codex and want to migrate skills, memory, MCP servers, sessions and cron jobs across with a dry-run preview first."
+  - You want an agent that runs entirely on your own hardware with no API key, and you accept that a quantised 7-8B-class model will be less capable than a frontier one.
+  - You are evaluating whether local models can hold up on long agentic tasks and you want a GAIA-style benchmark number and a TUI to watch the run happen.
+  - You already use Hermes, OpenClaw, Claude Code or Codex and want to migrate skills, memory, MCP servers, sessions and cron jobs across with a dry-run preview first.
 avoid_if:
-  - "You need production-grade stability, because the README labels this a developer preview where APIs, commands, config and behaviour are still moving and advises pinning a release."
-  - "You are on Windows ARM or an unsupported Linux target, because published binaries cover macOS Apple Silicon, Linux x64/arm64 and Windows x64 only."
-  - "You need a hosted-scale multi-agent platform, because this is a single-agent desktop tool with a Tauri sidecar rather than a scheduler or orchestrator."
+  - You need production-grade stability, because the README labels this a developer preview where APIs, commands, config and behaviour are still moving and advises pinning a release.
+  - You are on Windows ARM or an unsupported Linux target, because published binaries cover macOS Apple Silicon, Linux x64/arm64 and Windows x64 only.
+  - You need a hosted-scale multi-agent platform, because this is a single-agent desktop tool with a Tauri sidecar rather than a scheduler or orchestrator.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, TurboQuant and GAIA figures, dependency list (Playwright, better-sqlite3, grammY, pdf.js, Tauri) and import targets are read from the official README and acknowledgements; the GAIA score was not reproduced here."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install commands, TurboQuant and GAIA figures, dependency list (Playwright, better-sqlite3, grammY, pdf.js, Tauri) and import targets are read from the official README and acknowledgements; the GAIA score was not reproduced here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

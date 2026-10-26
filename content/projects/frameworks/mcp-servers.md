@@ -1,50 +1,69 @@
 ---
 id: mcp-servers
-name: "MCP Reference Servers"
+name: MCP Reference Servers
 version_tracked: null
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents"
-github_url: "https://github.com/modelcontextprotocol/servers"
-license: "Apache-2.0"
+description: Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
+github_url: https://github.com/modelcontextprotocol/servers
+license: Apache-2.0
 primary_language: TypeScript
-org_or_maintainer: "Model Context Protocol project"
-tags: [tool-use, agents, structured-output, security]
+org_or_maintainer: Model Context Protocol project
+tags:
+  - tool-use
+  - agents
+  - structured-output
+  - security
 maturity: production
 cost_model: open-source
-github_stars: 90043
-github_stars_last_30d: 0
-trending_score: 84
-last_commit: "2026-09-03"
-docs_url: "https://github.com/modelcontextprotocol/servers#readme"
+github_stars: 91585
+github_stars_last_30d: 1542
+trending_score: 55
+last_commit: '2026-10-25'
+docs_url: https://github.com/modelcontextprotocol/servers#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose, language]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+  - language
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The canonical worked examples of the Model Context Protocol: one repository of small, single-purpose servers that an agent attaches to at runtime, each exposing a narrow tool surface over stdio or HTTP."
+  - 'The canonical worked examples of the Model Context Protocol: one repository of small, single-purpose servers that an agent attaches to at runtime, each exposing a narrow tool surface over stdio or HTTP.'
 best_for:
-  - "You are adding tool access to an agent and want a reviewed reference for the request/response shape, capability negotiation, and error handling a conforming server must implement"
-  - "You need filesystem, fetch, or search capabilities attached to an agent today, without writing and maintaining a bespoke integration for each provider API"
+  - You are adding tool access to an agent and want a reviewed reference for the request/response shape, capability negotiation, and error handling a conforming server must implement
+  - You need filesystem, fetch, or search capabilities attached to an agent today, without writing and maintaining a bespoke integration for each provider API
 avoid_if:
-  - "You want one gateway that brokers many tools behind a single authorisation boundary — these are deliberately separate processes, each with its own credential scope and failure mode"
-  - "Your threat model cannot tolerate a subprocess holding read access to the working tree, since the filesystem server inherits the invoking user's permissions"
+  - You want one gateway that brokers many tools behind a single authorisation boundary — these are deliberately separate processes, each with its own credential scope and failure mode
+  - Your threat model cannot tolerate a subprocess holding read access to the working tree, since the filesystem server inherits the invoking user's permissions
 upstream_dependencies: []
-downstream_consumers: [opencode, claude-code]
+downstream_consumers:
+  - opencode
+  - claude-code
 alternatives: []
-integrates_with: [opencode, claude-code, gemini-cli]
+integrates_with:
+  - opencode
+  - claude-code
+  - gemini-cli
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (90,043), forks (11,546), language (TypeScript), last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports NOASSERTION because the repo documents a transition: Apache-2.0 for new code and specs, CC-BY-4.0 for docs, MIT for legacy."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: 'Stars (90,043), forks (11,546), language (TypeScript), last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The API reports NOASSERTION because the repo documents a transition: Apache-2.0 for new code and specs, CC-BY-4.0 for docs, MIT for legacy.'
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/modelcontextprotocol/servers", "date": "2026-09-03", "description": "90,043 stars on GitHub as of 2026-09-03 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/modelcontextprotocol/servers
+    date: '2026-09-03'
+    description: 90,043 stars on GitHub as of 2026-09-03 (GitHub API)
 featured: false
 status: active
 ---

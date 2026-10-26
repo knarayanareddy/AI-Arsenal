@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python meta-harness giving one orchestration, policy and sandboxing layer over Claude Code, Codex, Cursor, OpenCode, Hermes and custom agents"
-github_url: "https://github.com/omnigent-ai/omnigent"
+description: Python meta-harness giving one orchestration, policy and sandboxing layer over Claude Code, Codex, Cursor, OpenCode, Hermes and custom agents
+github_url: https://github.com/omnigent-ai/omnigent
 license: Apache-2.0
 primary_language: Python
-tags: [orchestration, guardrails, security, agents]
+tags:
+  - orchestration
+  - guardrails
+  - security
+  - agents
 maturity: alpha
 cost_model: open-source
-github_stars: 10322
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/omnigent-ai/omnigent/blob/main/docs/POLICIES.md"
+github_stars: 11062
+github_stars_last_30d: 740
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://github.com/omnigent-ai/omnigent/blob/main/docs/POLICIES.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Lets you swap or mix harnesses without rewriting, with policies and OS-level sandboxing applied uniformly above whichever agent runs."
+  - Lets you swap or mix harnesses without rewriting, with policies and OS-level sandboxing applied uniformly above whichever agent runs.
 best_for:
-  - "You use more than one coding agent and you want one place to supervise them, compare outputs and ask one to review another's work."
-  - "You need governance over what agents can do on your machine, because policies stack at server, agent and session level with spend caps and tool limits built in."
-  - "You want to run agent sessions in disposable cloud sandboxes like Modal, E2B or Kubernetes instead of your laptop, and still drive them from a phone."
+  - You use more than one coding agent and you want one place to supervise them, compare outputs and ask one to review another's work.
+  - You need governance over what agents can do on your machine, because policies stack at server, agent and session level with spend caps and tool limits built in.
+  - You want to run agent sessions in disposable cloud sandboxes like Modal, E2B or Kubernetes instead of your laptop, and still drive them from a phone.
 avoid_if:
-  - "You are on Windows and need full sandboxing, because the native terminal wrappers and bwrap/seatbelt filesystem and network isolation are unavailable and you fall back to Job Objects that do not isolate the filesystem."
-  - "You want a stable release, because the README labels the project alpha and telemetry is on by default."
-  - "You need one agent with one config file, because the meta-harness premise is that you are running several and paying for that coordination."
+  - You are on Windows and need full sandboxing, because the native terminal wrappers and bwrap/seatbelt filesystem and network isolation are unavailable and you fall back to Job Objects that do not isolate the filesystem.
+  - You want a stable release, because the README labels the project alpha and telemetry is on by default.
+  - You need one agent with one config file, because the meta-harness premise is that you are running several and paying for that coordination.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Install commands, harness list, policy tiers, sandbox providers, Windows degradation and custom-agent YAML are read from the official README and docs; the server was not installed."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Install commands, harness list, policy tiers, sandbox providers, Windows degradation and custom-agent YAML are read from the official README and docs; the server was not installed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

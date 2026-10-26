@@ -1,46 +1,66 @@
 ---
 id: librechat
-name: "LibreChat"
+name: LibreChat
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "Self-hostable ChatGPT-style web client with multi-user auth, agents, MCP, skills and a sandboxed code interpreter"
-github_url: "https://github.com/LibreChat-AI/LibreChat"
+description: Self-hostable ChatGPT-style web client with multi-user auth, agents, MCP, skills and a sandboxed code interpreter
+github_url: https://github.com/LibreChat-AI/LibreChat
 license: MIT
 primary_language: TypeScript
-org_or_maintainer: "LibreChat (Danny Avila)"
-tags: [agents, self-hosted]
+org_or_maintainer: LibreChat (Danny Avila)
+tags:
+  - agents
+  - self-hosted
 maturity: production
 cost_model: self-hostable
-github_stars: 45055
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://www.librechat.ai"
+github_stars: 46350
+github_stars_last_30d: 1295
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://www.librechat.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The multi-provider self-hosted chat frontend: where Open WebUI grew up around Ollama, LibreChat grew up around unifying every commercial API (OpenAI, Anthropic, Google, Azure, Bedrock) behind one familiar ChatGPT-clone UX with enterprise-grade auth."
-best_for: ["You are standing up an internal ChatGPT replacement and need per-user authentication, group management and conversation isolation rather than a shared API key.", "You need many model providers behind one UI, including OpenAI-compatible custom endpoints and local servers like Ollama and MLX, without a proxy layer in front.", "You want a sandboxed code interpreter for uploaded files inside the chat, running Python, Node, Go, C/C++, Java, PHP, Rust and Fortran in isolation."]
-avoid_if: ["You want a lightweight single-user chat client, because the multi-tenant auth, group model and agent machinery are the point of the project and add real surface area.", "You cannot run a MongoDB and a Node service pair, which is the standard self-hosted topology behind the docker-compose and Kubernetes paths.", "You need attached code workspaces in production today, because the README labels workspaces highly experimental in this release."]
+  - 'The multi-provider self-hosted chat frontend: where Open WebUI grew up around Ollama, LibreChat grew up around unifying every commercial API (OpenAI, Anthropic, Google, Azure, Bedrock) behind one familiar ChatGPT-clone UX with enterprise-grade auth.'
+best_for:
+  - You are standing up an internal ChatGPT replacement and need per-user authentication, group management and conversation isolation rather than a shared API key.
+  - You need many model providers behind one UI, including OpenAI-compatible custom endpoints and local servers like Ollama and MLX, without a proxy layer in front.
+  - You want a sandboxed code interpreter for uploaded files inside the chat, running Python, Node, Go, C/C++, Java, PHP, Rust and Fortran in isolation.
+avoid_if:
+  - You want a lightweight single-user chat client, because the multi-tenant auth, group model and agent machinery are the point of the project and add real surface area.
+  - You cannot run a MongoDB and a Node service pair, which is the standard self-hosted topology behind the docker-compose and Kubernetes paths.
+  - You need attached code workspaces in production today, because the README labels workspaces highly experimental in this release.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, anythingllm]
-integrates_with: [ollama]
+alternatives:
+  - open-webui
+  - anythingllm
+integrates_with:
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (40,447), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (40,447), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/danny-avila/LibreChat", "date": "2026-07-08", "description": "40,447 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/danny-avila/LibreChat
+    date: '2026-07-08'
+    description: 40,447 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

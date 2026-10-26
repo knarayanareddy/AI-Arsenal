@@ -1,52 +1,61 @@
 ---
 id: explosion-spacy
-name: "spaCy"
+name: spaCy
 version_tracked: null
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking"
-github_url: "https://github.com/explosion/spaCy"
-license: "MIT"
+description: MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
+github_url: https://github.com/explosion/spaCy
+license: MIT
 primary_language: Python
-org_or_maintainer: "explosion"
-tags: [battle-tested]
+org_or_maintainer: explosion
+tags:
+  - battle-tested
 maturity: production
 cost_model: open-source
-github_stars: 33927
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-08-24"
-docs_url: "https://spacy.io"
+github_stars: 33996
+github_stars_last_30d: 69
+trending_score: 39
+last_commit: '2026-10-26'
+docs_url: https://spacy.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Industrial NLP pipeline library whose tokenization, tagging, NER, and dependency-parse models are the standard preprocessing contract for non-LLM text pipelines."
+  - Industrial NLP pipeline library whose tokenization, tagging, NER, and dependency-parse models are the standard preprocessing contract for non-LLM text pipelines.
 best_for:
-  - "You need named-entity recognition, part-of-speech tags, or dependency parses at high volume and want per-document latency in the low milliseconds rather than a model call per field."
-  - "You are building a rules or lookup system on top of extracted entities - indexing, redaction, deduplication - and need spans with offsets you can trust for character-level operations."
-  - "You are pretraining a domain model or a tokenizer and need a fast baseline to compare against, since spaCy's small pipelines establish the accuracy floor for these tasks."
+  - You need named-entity recognition, part-of-speech tags, or dependency parses at high volume and want per-document latency in the low milliseconds rather than a model call per field.
+  - You are building a rules or lookup system on top of extracted entities - indexing, redaction, deduplication - and need spans with offsets you can trust for character-level operations.
+  - You are pretraining a domain model or a tokenizer and need a fast baseline to compare against, since spaCy's small pipelines establish the accuracy floor for these tasks.
 avoid_if:
-  - "Your task is open-ended generation, summarization, or reasoning over long documents, because these pipelines annotate structure rather than produce language."
-  - "You need deep contextual representations for your own encoder, since the pipeline components wrap third-party embedding backbones rather than training a novel model here."
-  - "You need per-language coverage for a language with no pretrained vectors, where annotation quality drops sharply and you are retraining the components yourself."
+  - Your task is open-ended generation, summarization, or reasoning over long documents, because these pipelines annotate structure rather than produce language.
+  - You need deep contextual representations for your own encoder, since the pipeline components wrap third-party embedding backbones rather than training a novel model here.
+  - You need per-language coverage for a language with no pretrained vectors, where annotation quality drops sharply and you are retraining the components yourself.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 33927 stars, MIT license, Python primary language, last commit 2026-08-24, 18 GitHub topics. Component list, Doc/Span offset semantics, floret vectors, and CLI training commands are from official documentation; no pipeline was trained or benchmarked here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 33927 stars, MIT license, Python primary language, last commit 2026-08-24, 18 GitHub topics. Component list, Doc/Span offset semantics, floret vectors, and CLI training commands are from official documentation; no pipeline was trained or benchmarked here.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/explosion/spaCy", "date": "2026-09-28", "description": "33,927 stars and last commit 2026-08-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/explosion/spaCy
+    date: '2026-09-28'
+    description: 33,927 stars and last commit 2026-08-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

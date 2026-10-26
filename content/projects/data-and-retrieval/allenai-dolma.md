@@ -1,52 +1,62 @@
 ---
 id: allenai-dolma
-name: "dolma"
+name: dolma
 version_tracked: null
 artifact_type: dataset
 category: data-pipelines
 subcategory: datasets
-description: "Toolkit for generating, annotating, and inspecting OLMo pretraining data, with stage-wise tools and a decontamination pass"
-github_url: "https://github.com/allenai/dolma"
-license: "Apache-2.0"
+description: Toolkit for generating, annotating, and inspecting OLMo pretraining data, with stage-wise tools and a decontamination pass
+github_url: https://github.com/allenai/dolma
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "allenai"
-tags: [training, data]
+org_or_maintainer: allenai
+tags:
+  - training
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 1548
-github_stars_last_30d: 0
-trending_score: 25
-last_commit: "2026-08-24"
-docs_url: "https://allenai.github.io/dolma/"
+github_stars: 1561
+github_stars_last_30d: 13
+trending_score: 34
+last_commit: '2026-08-24'
+docs_url: https://allenai.github.io/dolma/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Tools for generating and inspecting OLMo pretraining data, making corpus curation and decontamination inspectable instead of a black box."
+  - Tools for generating and inspecting OLMo pretraining data, making corpus curation and decontamination inspectable instead of a black box.
 best_for:
-  - "You are curating a pretraining corpus and need to see exactly which documents a filter stage removed, not just a count."
-  - "You need decontamination against benchmark test sets before training, as a first-class stage rather than an afterthought."
-  - "You are reproducing the OLMo data recipe or want a reference corpus whose construction is inspectable end to end."
+  - You are curating a pretraining corpus and need to see exactly which documents a filter stage removed, not just a count.
+  - You need decontamination against benchmark test sets before training, as a first-class stage rather than an afterthought.
+  - You are reproducing the OLMo data recipe or want a reference corpus whose construction is inspectable end to end.
 avoid_if:
-  - "You need a large-scale classifier-based filter that is already trained and tuned, since the stages here are tools and configs you assemble."
-  - "You are preparing data at a scale requiring a purpose-built distributed system, since the tooling is written for research-scale iteration."
-  - "You want a ready-to-train corpus with no assembly work, in which case a published data release is the faster path."
+  - You need a large-scale classifier-based filter that is already trained and tuned, since the stages here are tools and configs you assemble.
+  - You are preparing data at a scale requiring a purpose-built distributed system, since the tooling is written for research-scale iteration.
+  - You want a ready-to-train corpus with no assembly work, in which case a published data release is the faster path.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (1548), Apache-2.0 license, last commit 2026-08-24, primary language Python, and all five topics were read from the GitHub API. Tag-based annotation, the inspect command, the decontamination stage with n-gram matching, and the OLMo mixture configs come from the official docs and repository; no corpus was processed and no stage was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (1548), Apache-2.0 license, last commit 2026-08-24, primary language Python, and all five topics were read from the GitHub API. Tag-based annotation, the inspect command, the decontamination stage with n-gram matching, and the OLMo mixture configs come from the official docs and repository; no corpus was processed and no stage was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/allenai/dolma", "date": "2026-09-28", "description": "1,548 stars and last commit 2026-08-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/allenai/dolma
+    date: '2026-09-28'
+    description: 1,548 stars and last commit 2026-08-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

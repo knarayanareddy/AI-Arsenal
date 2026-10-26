@@ -6,39 +6,44 @@ artifact_type: library
 category: agents
 subcategory: autonomous
 description: PySide6 desktop application bundling a local chat companion and a layered image canvas over llama.cpp and whisper.cpp sidecar processes
-github_url: "https://github.com/Capsize-Games/airunner"
+github_url: https://github.com/Capsize-Games/airunner
 license: GPL-3.0
 primary_language: Python
-tags: [local, multimodal]
+tags:
+  - local
+  - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 1316
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-23"
-docs_url: "https://github.com/Capsize-Games/airunner/wiki"
+github_stars: 1319
+github_stars_last_30d: 3
+trending_score: 23
+last_commit: '2026-10-25'
+docs_url: https://github.com/Capsize-Games/airunner/wiki
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Pairs a persistent offline companion with SDXL and Z-Image Turbo generation in one app, with no API key and no subscription."
+  - Pairs a persistent offline companion with SDXL and Z-Image Turbo generation in one app, with no API key and no subscription.
 best_for:
-  - "You want a private conversational companion that keeps long-term memory of you across sessions and never phones home."
-  - "You sketch on a layer and want to convert the sketch into an SDXL or Z-Image Turbo render, then iterate with img2img and inpainting in place."
-  - "You need one application that manages model downloads from HuggingFace and Civitai plus local LLM, TTS and STT runtimes, so you are not juggling four separate tools."
+  - You want a private conversational companion that keeps long-term memory of you across sessions and never phones home.
+  - You sketch on a layer and want to convert the sketch into an SDXL or Z-Image Turbo render, then iterate with img2img and inpainting in place.
+  - You need one application that manages model downloads from HuggingFace and Civitai plus local LLM, TTS and STT runtimes, so you are not juggling four separate tools.
 avoid_if:
-  - "You need speech-to-text outside English, because the README language matrix marks STT as unsupported for Japanese, Spanish, French, Chinese and Korean."
-  - "You are building a server-side pipeline rather than a desktop app, because this is a GUI-and-daemon product with an offscreen test mode, not a library you import into your own service."
-  - "You intend to embed it in a closed-source product, because the project is GPL-3.0 and the obligations survive distribution."
+  - You need speech-to-text outside English, because the README language matrix marks STT as unsupported for Japanese, Spanish, French, Chinese and Korean.
+  - You are building a server-side pipeline rather than a desktop app, because this is a GUI-and-daemon product with an offscreen test mode, not a library you import into your own service.
+  - You intend to embed it in a closed-source product, because the project is GPL-3.0 and the obligations survive distribution.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (GPL-3.0), last commit, primary language, topics and open-issue count came from the GitHub API. Feature matrix, install channels, language support table and the four-package architecture are read from the official README and linked architecture docs; runtime behaviour was not exercised here."
+enrichment_notes: Stars, license (GPL-3.0), last commit, primary language, topics and open-issue count came from the GitHub API. Feature matrix, install channels, language support table and the four-package architecture are read from the official README and linked architecture docs; runtime behaviour was not exercised here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

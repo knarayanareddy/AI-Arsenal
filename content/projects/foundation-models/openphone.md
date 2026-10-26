@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: open-source-models
-description: "HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents"
-github_url: "https://github.com/HKUDS/OpenPhone"
+description: HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents
+github_url: https://github.com/HKUDS/OpenPhone
 license: MIT
 primary_language: Python
-tags: [agents, tool-use, research]
+tags:
+  - agents
+  - tool-use
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 976
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-26"
-docs_url: "https://arxiv.org/abs/2510.22009"
+github_stars: 996
+github_stars_last_30d: 20
+trending_score: 25
+last_commit: '2026-10-07'
+docs_url: https://arxiv.org/abs/2510.22009
 demo_url: null
 phase: foundation-model
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns brittle screen-tap trajectories into named app operations, so a mobile agent can act through a CLI instead of re-deriving coordinates every step."
+  - Turns brittle screen-tap trajectories into named app operations, so a mobile agent can act through a CLI instead of re-deriving coordinates every step.
 best_for:
-  - "You are building an agent that operates a real phone and you keep losing steps to brittle coordinate taps on changing UI layouts."
-  - "You are evaluating phone agents on AndroidLab-style environments and you want a model and tool interface that plugs into an existing harness rather than a bespoke one."
-  - "You have both Android and iOS targets and you need one abstraction over app actions that does not require a screenshot-only interaction loop."
+  - You are building an agent that operates a real phone and you keep losing steps to brittle coordinate taps on changing UI layouts.
+  - You are evaluating phone agents on AndroidLab-style environments and you want a model and tool interface that plugs into an existing harness rather than a bespoke one.
+  - You have both Android and iOS targets and you need one abstraction over app actions that does not require a screenshot-only interaction loop.
 avoid_if:
-  - "You cannot provide real device or emulator environments, because the whole premise is grounded action execution against a live OS, not simulated text output."
-  - "You need a cloud-hosted phone automation service with device fleets and compliance guarantees, because this is research infrastructure you host yourself."
-  - "You assume the models transfer unchanged to a new app without the labelled trajectories; the paper's own framing is that mobile agents need domain adaptation, not just a stronger backbone."
+  - You cannot provide real device or emulator environments, because the whole premise is grounded action execution against a live OS, not simulated text output.
+  - You need a cloud-hosted phone automation service with device fleets and compliance guarantees, because this is research infrastructure you host yourself.
+  - You assume the models transfer unchanged to a new app without the labelled trajectories; the paper's own framing is that mobile agents need domain adaptation, not just a stronger backbone.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license string, primary language, topics, last commit, homepage and issue count; the license field is a non-standard value, not a recognised OSI licence. PhoneCLI, model and dataset links are read from the README; no device run was performed and no benchmark was reproduced."
+enrichment_notes: GitHub API verified stars, license string, primary language, topics, last commit, homepage and issue count; the license field is a non-standard value, not a recognised OSI licence. PhoneCLI, model and dataset links are read from the README; no device run was performed and no benchmark was reproduced.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

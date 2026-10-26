@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "1Panel-dev"
+org_or_maintainer: 1Panel-dev
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,43 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 156
+trending_score: 27
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: maxkb
-name: "MaxKB"
+name: MaxKB
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Open-source knowledge-base agent platform with built-in RAG chunking, a workflow engine and MCP tool use in one Docker image"
-github_url: "https://github.com/1Panel-dev/MaxKB"
+description: Open-source knowledge-base agent platform with built-in RAG chunking, a workflow engine and MCP tool use in one Docker image
+github_url: https://github.com/1Panel-dev/MaxKB
 license: GPL-3.0
 primary_language: Python
-tags: [rag, self-hosted]
+tags:
+  - rag
+  - self-hosted
 maturity: beta
 cost_model: self-hostable
-github_stars: 22885
-last_commit: "2026-09-28"
-docs_url: "https://maxkb.cn"
+github_stars: 23041
+last_commit: '2026-10-26'
+docs_url: https://maxkb.cn
 phase: agent-system
 domain:
-  - "language"
-  - "general-purpose"
+  - language
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A self-hosted platform that combines document RAG, an agent/workflow engine, and model-backend abstraction for building internal knowledge assistants."
-best_for: ["You are building an internal customer-service or enterprise knowledge assistant and you need document upload, chunking and retrieval working on the first deploy rather than assembled from parts.", "You want retrieval plus a visual workflow plus MCP tool use in one product, because those three usually mean three services you now have to integrate and secure.", "You need the assistant to reach private models such as DeepSeek, Llama and Qwen alongside hosted ones such as OpenAI, Claude and Gemini from a single provider list."]
-avoid_if: ["You want to build retrieval logic in code, because this is a deployable application with a UI and an opinionated pipeline rather than a library you import.", "You cannot run containers in your environment, because the documented quick start is a docker run with a persistent volume on port 8080.", "You need multi-tenant isolation or an identity model, because the README's enterprise claims are about application scope rather than documented per-tenant security boundaries."]
-enrichment_notes: "Official repository, GPL-3.0 license, and 2026-07-10 activity were reviewed on 2026-07-12. Enterprise-grade claims remain draft pending your own security and scale testing."
+  - A self-hosted platform that combines document RAG, an agent/workflow engine, and model-backend abstraction for building internal knowledge assistants.
+best_for:
+  - You are building an internal customer-service or enterprise knowledge assistant and you need document upload, chunking and retrieval working on the first deploy rather than assembled from parts.
+  - You want retrieval plus a visual workflow plus MCP tool use in one product, because those three usually mean three services you now have to integrate and secure.
+  - You need the assistant to reach private models such as DeepSeek, Llama and Qwen alongside hosted ones such as OpenAI, Claude and Gemini from a single provider list.
+avoid_if:
+  - You want to build retrieval logic in code, because this is a deployable application with a UI and an opinionated pipeline rather than a library you import.
+  - You cannot run containers in your environment, because the documented quick start is a docker run with a persistent volume on port 8080.
+  - You need multi-tenant isolation or an identity model, because the README's enterprise claims are about application scope rather than documented per-tenant security boundaries.
+enrichment_notes: Official repository, GPL-3.0 license, and 2026-07-10 activity were reviewed on 2026-07-12. Enterprise-grade claims remain draft pending your own security and scale testing.
 ---
 
 ## Overview

@@ -1,52 +1,64 @@
 ---
 id: infiniflow-infinity
-name: "infinity"
+name: infinity
 version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: vector-databases
-description: "C++ database that runs dense, sparse, tensor, and full-text search plus relational filtering in a single engine over one table"
-github_url: "https://github.com/infiniflow/infinity"
-license: "Apache-2.0"
+description: C++ database that runs dense, sparse, tensor, and full-text search plus relational filtering in a single engine over one table
+github_url: https://github.com/infiniflow/infinity
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "infiniflow"
-tags: [embeddings, retrieval, rag]
+org_or_maintainer: infiniflow
+tags:
+  - embeddings
+  - retrieval
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 4725
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-09-23"
-docs_url: "https://infinityai.org"
+github_stars: 4744
+github_stars_last_30d: 19
+trending_score: 35
+last_commit: '2026-10-26'
+docs_url: https://infinityai.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "AI-native database unifying dense and sparse vector search with full-text and relational queries, so hybrid retrieval does not require federating two systems."
+  - AI-native database unifying dense and sparse vector search with full-text and relational queries, so hybrid retrieval does not require federating two systems.
 best_for:
-  - "You are building hybrid retrieval and want vector plus BM25 ranking in one query rather than two clients and a merge step in application code."
-  - "You need metadata filters combined with semantic search, since filtering is expressed in SQL against the same rows being searched."
-  - "You want to swap from a client-server vector store to a single embedded process for a moderate corpus and keep a SQL surface."
+  - You are building hybrid retrieval and want vector plus BM25 ranking in one query rather than two clients and a merge step in application code.
+  - You need metadata filters combined with semantic search, since filtering is expressed in SQL against the same rows being searched.
+  - You want to swap from a client-server vector store to a single embedded process for a moderate corpus and keep a SQL surface.
 avoid_if:
-  - "Your corpus is small enough to search exhaustively, where a brute-force scan is simpler and has no approximation error."
-  - "You need a managed service with uptime guarantees and horizontal scaling, because this is a database you run and operate yourself."
-  - "You want the maturity of a long-established vector store's ecosystem, since this project is younger and its tooling is thinner."
+  - Your corpus is small enough to search exhaustively, where a brute-force scan is simpler and has no approximation error.
+  - You need a managed service with uptime guarantees and horizontal scaling, because this is a database you run and operate yourself.
+  - You want the maturity of a long-established vector store's ecosystem, since this project is younger and its tooling is thinner.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (4725), Apache-2.0 license, last commit 2026-09-23, primary language C++, and all 20 topics were read from the GitHub API. The C++20 modules design, per-column-type index structures, single-table hybrid DSL, and embedded mode come from the official README and docs; no server was started and no query was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (4725), Apache-2.0 license, last commit 2026-09-23, primary language C++, and all 20 topics were read from the GitHub API. The C++20 modules design, per-column-type index structures, single-table hybrid DSL, and embedded mode come from the official README and docs; no server was started and no query was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/infiniflow/infinity", "date": "2026-09-28", "description": "4,725 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/infiniflow/infinity
+    date: '2026-09-28'
+    description: 4,725 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,62 @@
 ---
 id: huggingface-evaluate
-name: "evaluate"
+name: evaluate
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "A metrics registry where each metric declares the columns it needs, so a score is computed the same way in every project that uses it"
-github_url: "https://github.com/huggingface/evaluate"
-license: "Apache-2.0"
+description: A metrics registry where each metric declares the columns it needs, so a score is computed the same way in every project that uses it
+github_url: https://github.com/huggingface/evaluate
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [evaluation, huggingface]
+org_or_maintainer: huggingface
+tags:
+  - evaluation
+  - huggingface
 maturity: production
 cost_model: open-source
-github_stars: 2485
-github_stars_last_30d: 0
-trending_score: 27
-last_commit: "2026-09-23"
-docs_url: "https://huggingface.co/docs/evaluate"
+github_stars: 2491
+github_stars_last_30d: 6
+trending_score: 33
+last_commit: '2026-10-06'
+docs_url: https://huggingface.co/docs/evaluate
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Thin evaluation layer pairing metrics with datasets, so classifier, regression, and retrieval scores are computed the same way across projects."
+  - Thin evaluation layer pairing metrics with datasets, so classifier, regression, and retrieval scores are computed the same way across projects.
 best_for:
-  - "You want one place where a metric, its required columns, and its aggregation are defined, so a number is comparable across models and repos."
-  - "You are evaluating models across several projects and need the same metric implementation rather than a per-project copy."
-  - "You are choosing between metrics and want to see what each expects, since the metric metadata names its inputs."
+  - You want one place where a metric, its required columns, and its aggregation are defined, so a number is comparable across models and repos.
+  - You are evaluating models across several projects and need the same metric implementation rather than a per-project copy.
+  - You are choosing between metrics and want to see what each expects, since the metric metadata names its inputs.
 avoid_if:
-  - "You need model-based or LLM-as-judge evaluation, since this is a metric registry rather than a generation or judging framework."
-  - "You want a full experiment record with lineage and artifacts, since a metric library produces a number and nothing else."
-  - "Your metric is domain-specific and not in the registry, at which point you are writing the loader yourself anyway."
+  - You need model-based or LLM-as-judge evaluation, since this is a metric registry rather than a generation or judging framework.
+  - You want a full experiment record with lineage and artifacts, since a metric library produces a number and nothing else.
+  - Your metric is domain-specific and not in the registry, at which point you are writing the loader yourself anyway.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2485), Apache-2.0 license, last commit 2026-09-23, primary language Python, and both topics were read from the GitHub API. The metric-plus-dataset pairing, the pure metric function contract, accumulation in the evaluation module, and the MetricInfo metadata shape come from the official docs; no metric was computed here and no module was fetched from the Hub."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2485), Apache-2.0 license, last commit 2026-09-23, primary language Python, and both topics were read from the GitHub API. The metric-plus-dataset pairing, the pure metric function contract, accumulation in the evaluation module, and the MetricInfo metadata shape come from the official docs; no metric was computed here and no module was fetched from the Hub.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/evaluate", "date": "2026-09-28", "description": "2,485 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/evaluate
+    date: '2026-09-28'
+    description: 2,485 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

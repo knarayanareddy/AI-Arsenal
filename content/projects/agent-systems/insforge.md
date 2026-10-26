@@ -5,44 +5,65 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: coding-agents
-description: "Backend-as-a-service that exposes Postgres, auth, storage and edge functions to coding agents over MCP"
-github_url: "https://github.com/InsForge/InsForge"
+description: Backend-as-a-service that exposes Postgres, auth, storage and edge functions to coding agents over MCP
+github_url: https://github.com/InsForge/InsForge
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [cloud, code-gen, data]
+tags:
+  - cloud
+  - code-gen
+  - data
 maturity: beta
 cost_model: freemium
-github_stars: 13024
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-09-26"
-docs_url: "https://insforge.dev"
+github_stars: 13237
+github_stars_last_30d: 213
+trending_score: 32
+last_commit: '2026-10-25'
+docs_url: https://insforge.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Agent-native backend platform giving AI coding agents (Cursor, Claude Code, GitHub Copilot) direct operational control over database, auth, storage, and deployment via MCP
-best_for: ["You are using a coding agent to build a full-stack app and it currently stalls because it has no database, no auth and no way to run a migration.", "You want the agent to read back state — schemas, deployed functions, bucket contents, auth config, runtime logs — so it can verify and debug the backend it just wrote.", "You already have pgvector and Postgres in mind and want one platform that exposes Postgres, storage, edge functions and an AI gateway without stitching four services."]
-avoid_if: ["You need a battle-tested general-purpose BaaS with a published SLA, because this is a young TypeScript project at 13k stars whose CLI and Skills interface is cloud-only per the README.", "Your agents are not MCP-compatible, because the primary integration path is an MCP server and the alternative CLI-plus-Skills route is only available on the cloud tier.", "You are on a locked-down network with no container platform, because the platform itself is a deployable service you host or reach over its cloud."]
+best_for:
+  - You are using a coding agent to build a full-stack app and it currently stalls because it has no database, no auth and no way to run a migration.
+  - You want the agent to read back state — schemas, deployed functions, bucket contents, auth config, runtime logs — so it can verify and debug the backend it just wrote.
+  - You already have pgvector and Postgres in mind and want one platform that exposes Postgres, storage, edge functions and an AI gateway without stitching four services.
+avoid_if:
+  - You need a battle-tested general-purpose BaaS with a published SLA, because this is a young TypeScript project at 13k stars whose CLI and Skills interface is cloud-only per the README.
+  - Your agents are not MCP-compatible, because the primary integration path is an MCP server and the alternative CLI-plus-Skills route is only available on the cloud tier.
+  - You are on a locked-down network with no container platform, because the platform itself is a deployable service you host or reach over its cloud.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [supabase]
+alternatives:
+  - supabase
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture (MCP Server + CLI/Skills interface for agent-driven backend operations) confirmed directly from InsForge's own GitHub README; a third-party benchmark (MCPMark, per altools.ai coverage) reports InsForge outperforming Supabase on speed/token-efficiency/accuracy for agent-driven backend tasks specifically, giving independent comparative evidence beyond vendor claims.
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under coding-agents"}
-  - {"source":"github-trending","url":"https://altools.ai/16402.html","date":"2026-05-12","description":"Third-party coverage of MCPMark benchmark results showing InsForge 1.6x faster than Supabase with 30% fewer tokens and 1.7x higher accuracy for agent-driven backend operations"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under coding-agents
+  - source: github-trending
+    url: https://altools.ai/16402.html
+    date: '2026-05-12'
+    description: Third-party coverage of MCPMark benchmark results showing InsForge 1.6x faster than Supabase with 30% fewer tokens and 1.7x higher accuracy for agent-driven backend operations
 featured: false
 status: active
 ---

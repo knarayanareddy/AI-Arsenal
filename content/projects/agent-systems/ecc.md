@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "MIT-licensed harness layer installing 68 agents, 286 skills, hooks, memory and AgentShield scanning into Claude Code, Codex and others"
-github_url: "https://github.com/affaan-m/ECC"
+description: MIT-licensed harness layer installing 68 agents, 286 skills, hooks, memory and AgentShield scanning into Claude Code, Codex and others
+github_url: https://github.com/affaan-m/ECC
 license: MIT
 primary_language: Other
-tags: [agents, code-gen, security]
+tags:
+  - agents
+  - code-gen
+  - security
 maturity: production
 cost_model: open-source
-github_stars: 268797
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://ecc.tools"
+github_stars: 289453
+github_stars_last_30d: 20656
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://ecc.tools
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Encodes the plan-test-implement-review-verify loop once instead of restating it in every prompt, with adapters across seven harnesses."
+  - Encodes the plan-test-implement-review-verify loop once instead of restating it in every prompt, with adapters across seven harnesses.
 best_for:
-  - "You keep rewriting the same engineering prompt for Claude Code and you would rather install the process once as skills, agents and hooks."
-  - "You run agents across more than one harness and you want a common skill and agent library with a documented capability matrix rather than per-tool setup."
-  - "You want a security pass over agent configuration itself, because AgentShield scans prompts, hooks, MCP config, permissions, secrets and agent files."
+  - You keep rewriting the same engineering prompt for Claude Code and you would rather install the process once as skills, agents and hooks.
+  - You run agents across more than one harness and you want a common skill and agent library with a documented capability matrix rather than per-tool setup.
+  - You want a security pass over agent configuration itself, because AgentShield scans prompts, hooks, MCP config, permissions, secrets and agent files.
 avoid_if:
-  - "You expect identical feature parity across harnesses, because the README ships a support status matrix and calls several integrations capability-limited adapters."
-  - "You have already layered multiple ECC installs into the same harness, because duplicate skills, commands and hooks are a known state that needs the reset path rather than another install."
-  - "You want a small auditable dependency, because this is a large prompt-and-config surface whose behaviour you are adopting wholesale."
+  - You expect identical feature parity across harnesses, because the README ships a support status matrix and calls several integrations capability-limited adapters.
+  - You have already layered multiple ECC installs into the same harness, because duplicate skills, commands and hooks are a known state that needs the reset path rather than another install.
+  - You want a small auditable dependency, because this is a large prompt-and-config surface whose behaviour you are adopting wholesale.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Asset counts (68 agents, 286 skills, 94 commands), the workflow loop, install commands, adapter list, AgentShield scope and identifier scheme are read from the official README; nothing was installed during authoring."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Asset counts (68 agents, 286 skills, 94 commands), the workflow loop, install commands, adapter list, AgentShield scope and identifier scheme are read from the official README; nothing was installed during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

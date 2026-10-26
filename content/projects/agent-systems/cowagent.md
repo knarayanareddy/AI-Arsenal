@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python agent harness with three-tier memory, a knowledge wiki, self-evolution loops and multi-agent teams on any major LLM provider"
-github_url: "https://github.com/zhayujie/CowAgent"
+description: Python agent harness with three-tier memory, a knowledge wiki, self-evolution loops and multi-agent teams on any major LLM provider
+github_url: https://github.com/zhayujie/CowAgent
 license: MIT
 primary_language: Python
-tags: [agents, memory]
+tags:
+  - agents
+  - memory
 maturity: beta
 cost_model: open-source
-github_stars: 47152
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://docs.cowagent.ai/intro/index"
+github_stars: 47610
+github_stars_last_30d: 458
+trending_score: 60
+last_commit: '2026-10-26'
+docs_url: https://docs.cowagent.ai/intro/index
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Treats the harness as the product: memory tiers, a skill hub and multi-agent teams are the deliverable, not a thin loop over one model."
+  - 'Treats the harness as the product: memory tiers, a skill hub and multi-agent teams are the deliverable, not a thin loop over one model.'
 best_for:
-  - "You want a 24/7 assistant that reaches you over the web plus IM channels from one deployment rather than a per-invocation tool."
-  - "You are building a personal knowledge base that must stay readable and editable, because CowAgent curates conversations into a Markdown wiki with a visual graph rather than a hidden store."
-  - "You want agents with distinct roles, models and skills collaborating in one conversation, and you would rather configure that than code a framework."
+  - You want a 24/7 assistant that reaches you over the web plus IM channels from one deployment rather than a per-invocation tool.
+  - You are building a personal knowledge base that must stay readable and editable, because CowAgent curates conversations into a Markdown wiki with a visual graph rather than a hidden store.
+  - You want agents with distinct roles, models and skills collaborating in one conversation, and you would rather configure that than code a framework.
 avoid_if:
-  - "You want the smallest possible footprint, because this is deliberately a full harness with memory tiers, a knowledge layer, evolution loops and multi-agent teams."
-  - "You cannot run it 24/7 on a host you control, because the design assumes a personal machine or server that is always reachable rather than a tool you invoke per task."
-  - "You are unwilling to supervise self-evolution, because the system rewrites skills and consolidates memory on its own schedule."
+  - You want the smallest possible footprint, because this is deliberately a full harness with memory tiers, a knowledge layer, evolution loops and multi-agent teams.
+  - You cannot run it 24/7 on a host you control, because the design assumes a personal machine or server that is always reachable rather than a tool you invoke per task.
+  - You are unwilling to supervise self-evolution, because the system rewrites skills and consolidates memory on its own schedule.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Memory tiers, Deep Dream distillation, knowledge wiki, evolution loop, team model and Skill Hub are read from the official README and linked docs; no harness was run here."
+enrichment_notes: Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Memory tiers, Deep Dream distillation, knowledge wiki, evolution loop, team model and Skill Hub are read from the official README and linked docs; no harness was run here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

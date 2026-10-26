@@ -1,52 +1,65 @@
 ---
 id: huggingface-lerobot
-name: "lerobot"
+name: lerobot
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: frameworks
-description: "Apache-2.0 robotics learning stack standardizing datasets, policies, and evaluation so imitation learning transfers across robot hardware"
-github_url: "https://github.com/huggingface/lerobot"
-license: "Apache-2.0"
+description: Apache-2.0 robotics learning stack standardizing datasets, policies, and evaluation so imitation learning transfers across robot hardware
+github_url: https://github.com/huggingface/lerobot
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [vision, data, agents]
+org_or_maintainer: huggingface
+tags:
+  - vision
+  - data
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 27825
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.co/docs/lerobot"
+github_stars: 28486
+github_stars_last_30d: 661
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://huggingface.co/docs/lerobot
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [reinforcement-learning, vision]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - reinforcement-learning
+  - vision
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "End-to-end robotics learning stack that standardizes datasets, policies, and evaluation so imitation and RL policies transfer across robot hardware."
+  - End-to-end robotics learning stack that standardizes datasets, policies, and evaluation so imitation and RL policies transfer across robot hardware.
 best_for:
-  - "You have one policy that must run on two different robot arms, and you need a common action and observation representation so the model transfers instead of being retrained per embodiment."
-  - "You want to train imitation-learning policies from demonstration data collected on real hardware, and you need the data format, the training loop, and the evaluation protocol already wired together."
-  - "You are contributing or comparing robotics policies and want a shared dataset and leaderboard convention so results are comparable rather than self-reported."
+  - You have one policy that must run on two different robot arms, and you need a common action and observation representation so the model transfers instead of being retrained per embodiment.
+  - You want to train imitation-learning policies from demonstration data collected on real hardware, and you need the data format, the training loop, and the evaluation protocol already wired together.
+  - You are contributing or comparing robotics policies and want a shared dataset and leaderboard convention so results are comparable rather than self-reported.
 avoid_if:
-  - "You have a fixed simulator-only task and want to iterate quickly, because the hardware integration and real-data emphasis are the point and simulator throughput is not the goal."
-  - "You need safety-certified control for a deployed system, since this is a research and development stack with no certification story around the learned controller."
-  - "Your task is autonomous driving at scale or a manipulation benchmark with its own mature tooling, where the problem domain has conventions this stack is only beginning to absorb."
+  - You have a fixed simulator-only task and want to iterate quickly, because the hardware integration and real-data emphasis are the point and simulator throughput is not the goal.
+  - You need safety-certified control for a deployed system, since this is a research and development stack with no certification story around the learned controller.
+  - Your task is autonomous driving at scale or a manipulation benchmark with its own mature tooling, where the problem domain has conventions this stack is only beginning to absorb.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 27825 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, empty topics, homepage huggingface.co/docs/lerobot. Dataset format, policy interface, evaluation protocol, and hardware drivers are from official docs; the training command flags reflect documented usage and were not run on hardware."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 27825 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, empty topics, homepage huggingface.co/docs/lerobot. Dataset format, policy interface, evaluation protocol, and hardware drivers are from official docs; the training command flags reflect documented usage and were not run on hardware.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/lerobot", "date": "2026-09-28", "description": "27,825 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/lerobot
+    date: '2026-09-28'
+    description: 27,825 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

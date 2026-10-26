@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 12
+trending_score: 16
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: DataChain
 artifact_type: platform
 category: data-pipelines
 subcategory: libraries
-description: "Versioned, typed dataset layer over S3, GCS and Azure with local query and an agent-facing knowledge base"
-github_url: "https://github.com/datachain-ai/datachain"
+description: Versioned, typed dataset layer over S3, GCS and Azure with local query and an agent-facing knowledge base
+github_url: https://github.com/datachain-ai/datachain
 license: Apache-2.0
 primary_language: Python
-tags: [retrieval, agents]
+tags:
+  - retrieval
+  - agents
 maturity: beta
 cost_model: freemium
-github_stars: 2817
-last_commit: "2026-09-28"
-docs_url: "https://docs.datachain.ai"
+github_stars: 2829
+last_commit: '2026-10-26'
+docs_url: https://docs.datachain.ai
 phase: data-and-retrieval
 domain:
   - language
@@ -52,8 +54,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A typed context/data layer for discovering, versioning, filtering, and processing unstructured datasets in object storage.
-best_for: ["You have millions of unstructured files in object storage and want typed, versioned records with filter, join and group_by at warehouse speed.", "You want a knowledge base your coding agent can read, because the skill plus MCP path lets Claude Code, Cursor, Codex or Copilot understand your data.", "You want pipeline runs to deposit artefacts rather than recompute, since each run leaves a typed dataset the next pipeline or agent consumes."]
-avoid_if: ["You need guaranteed durability without a managed tier, because the Studio tier is where hundreds-of-millions-record performance and the MCP path are promised.", "You cannot have bytes processed outside your storage, since the design claim is that raw bytes never leave the object store.", "You want a general-purpose warehouse, because this is a Python library over files rather than a query service you point BI tools at."]
+best_for:
+  - You have millions of unstructured files in object storage and want typed, versioned records with filter, join and group_by at warehouse speed.
+  - You want a knowledge base your coding agent can read, because the skill plus MCP path lets Claude Code, Cursor, Codex or Copilot understand your data.
+  - You want pipeline runs to deposit artefacts rather than recompute, since each run leaves a typed dataset the next pipeline or agent consumes.
+avoid_if:
+  - You need guaranteed durability without a managed tier, because the Studio tier is where hundreds-of-millions-record performance and the MCP path are promised.
+  - You cannot have bytes processed outside your storage, since the design claim is that raw bytes never leave the object store.
+  - You want a general-purpose warehouse, because this is a Python library over files rather than a query service you point BI tools at.
 enrichment_notes: Official repository, Apache-2.0 license, typed/versioned dataset scope, and 2026-07-11 activity were reviewed on 2026-07-11. Production and scale behavior remain draft.
 ---
 

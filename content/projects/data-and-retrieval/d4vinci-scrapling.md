@@ -1,52 +1,62 @@
 ---
 id: d4vinci-scrapling
-name: "Scrapling"
+name: Scrapling
 version_tracked: null
 artifact_type: library
 category: data-pipelines
 subcategory: tools
-description: "BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts"
-github_url: "https://github.com/D4Vinci/Scrapling"
-license: "BSD-3-Clause"
+description: BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
+github_url: https://github.com/D4Vinci/Scrapling
+license: BSD-3-Clause
 primary_language: Python
-org_or_maintainer: "D4Vinci"
-tags: [retrieval, pytorch]
+org_or_maintainer: D4Vinci
+tags:
+  - retrieval
+  - pytorch
 maturity: beta
 cost_model: open-source
-github_stars: 84212
-github_stars_last_30d: 0
-trending_score: 39
-last_commit: "2026-09-27"
-docs_url: "https://scrapling.readthedocs.io/en/latest/"
+github_stars: 89842
+github_stars_last_30d: 5630
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://scrapling.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Adaptive web-scraping framework that detects and adapts to anti-bot measures, giving agent pipelines a resilient fetch layer instead of a static request loop."
+  - Adaptive web-scraping framework that detects and adapts to anti-bot measures, giving agent pipelines a resilient fetch layer instead of a static request loop.
 best_for:
-  - "You are building a research or agent pipeline that hits sites with bot defenses and need automatic escalation from plain HTTP to a stealth browser rather than hand-tuned per-domain workarounds."
-  - "2. You maintain many extractors and a routine CSS change silently breaks one overnight, so you want selectors that re-resolve by content and attribute similarity."
-  - "3. You want a crawl loop with the ergonomics of requests plus a Playwright escape hatch, in one Python import, without a two-architecture codebase."
+  - You are building a research or agent pipeline that hits sites with bot defenses and need automatic escalation from plain HTTP to a stealth browser rather than hand-tuned per-domain workarounds.
+  - 2. You maintain many extractors and a routine CSS change silently breaks one overnight, so you want selectors that re-resolve by content and attribute similarity.
+  - 3. You want a crawl loop with the ergonomics of requests plus a Playwright escape hatch, in one Python import, without a two-architecture codebase.
 avoid_if:
-  - "You have a signed contract, an official API, or a data license, because circumventing defenses is both brittle and a legal exposure you should not take on."
-  - "2. Your targets render everything client-side behind a login and captcha, because no amount of adaptation substitutes for authorization or a compliant account."
-  - "3. You need guaranteed, court-grade provenance for archival work, since the adaptive layer deliberately re-resolves elements in ways that weaken a fixed chain of custody."
+  - You have a signed contract, an official API, or a data license, because circumventing defenses is both brittle and a legal exposure you should not take on.
+  - 2. Your targets render everything client-side behind a login and captcha, because no amount of adaptation substitutes for authorization or a compliant account.
+  - 3. You need guaranteed, court-grade provenance for archival work, since the adaptive layer deliberately re-resolves elements in ways that weaken a fixed chain of custody.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 84212 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-27, 20 GitHub topics including mcp-server, stealth, xpath. Driver names, escalation behavior, and adaptive-matcher design come from the official docs and source; not hands-on verified against defended sites."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 84212 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-27, 20 GitHub topics including mcp-server, stealth, xpath. Driver names, escalation behavior, and adaptive-matcher design come from the official docs and source; not hands-on verified against defended sites.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/D4Vinci/Scrapling", "date": "2026-09-28", "description": "84,212 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/D4Vinci/Scrapling
+    date: '2026-09-28'
+    description: 84,212 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

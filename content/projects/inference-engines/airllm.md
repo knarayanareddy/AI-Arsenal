@@ -6,39 +6,45 @@ artifact_type: library
 category: llms
 subcategory: inference-engines
 description: Runs 70B-plus checkpoints by streaming transformer layers from host RAM into a few GB of VRAM instead of quantizing weights
-github_url: "https://github.com/lyogavin/airllm"
+github_url: https://github.com/lyogavin/airllm
 license: Apache-2.0
 primary_language: Other
-tags: [efficiency, inference, training]
+tags:
+  - efficiency
+  - inference
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 35151
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
+github_stars: 40731
+github_stars_last_30d: 5580
+trending_score: 63
+last_commit: '2026-10-26'
 docs_url: null
 demo_url: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Moves the weight-capacity problem to host memory and I/O bandwidth so a 4GB card can execute models no quantizer would leave intact."
+  - Moves the weight-capacity problem to host memory and I/O bandwidth so a 4GB card can execute models no quantizer would leave intact.
 best_for:
-  - "You have a workstation with tens of gigabytes of system RAM and a small consumer GPU, and you want to execute a full-precision checkpoint that simply does not fit in VRAM."
-  - "You are benchmarking a new release whose weights have no quantized derivative yet, and you need an answer before someone publishes a GGUF conversion."
-  - "You are experimenting with training a very large model on a single card by keeping frozen weights streamed and adapters resident in device memory."
+  - You have a workstation with tens of gigabytes of system RAM and a small consumer GPU, and you want to execute a full-precision checkpoint that simply does not fit in VRAM.
+  - You are benchmarking a new release whose weights have no quantized derivative yet, and you need an answer before someone publishes a GGUF conversion.
+  - You are experimenting with training a very large model on a single card by keeping frozen weights streamed and adapters resident in device memory.
 avoid_if:
-  - "You need interactive latency, because per-token layer streaming makes generation I/O bound and roughly two to three orders of magnitude slower than a resident-weight runtime."
-  - "You need throughput or concurrency, since AirLLM is a single-sequence, single-process inference path with no continuous batching, paged attention or OpenAI server."
-  - "You have a storage-constrained machine, since large checkpoints can demand hundreds of gigabytes of disk during the splitting and conversion steps."
+  - You need interactive latency, because per-token layer streaming makes generation I/O bound and roughly two to three orders of magnitude slower than a resident-weight runtime.
+  - You need throughput or concurrency, since AirLLM is a single-sequence, single-process inference path with no continuous batching, paged attention or OpenAI server.
+  - You have a storage-constrained machine, since large checkpoints can demand hundreds of gigabytes of disk during the splitting and conversion steps.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, open-issue count and creation date. VRAM figures, disk requirements, dependency pins and code snippets come from the README and were not measured on this machine; no model was run."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, open-issue count and creation date. VRAM figures, disk requirements, dependency pins and code snippets come from the README and were not measured on this machine; no model was run.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -1,52 +1,64 @@
 ---
 id: stanford-oval-storm
-name: "storm"
+name: storm
 version_tracked: null
 artifact_type: tool
 category: agents
 subcategory: autonomous
-description: "MIT-licensed research system that researches a topic through perspective-guided questioning and writes a cited, Wikipedia-style article"
-github_url: "https://github.com/stanford-oval/storm"
-license: "MIT"
+description: MIT-licensed research system that researches a topic through perspective-guided questioning and writes a cited, Wikipedia-style article
+github_url: https://github.com/stanford-oval/storm
+license: MIT
 primary_language: Python
-org_or_maintainer: "stanford-oval"
-tags: [retrieval, rag, agents]
+org_or_maintainer: stanford-oval
+tags:
+  - retrieval
+  - rag
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 31515
-github_stars_last_30d: 0
-trending_score: 25
-last_commit: "2025-09-30"
-docs_url: "http://storm.genie.stanford.edu"
+github_stars: 31697
+github_stars_last_30d: 182
+trending_score: 48
+last_commit: '2025-09-30'
+docs_url: http://storm.genie.stanford.edu
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "LLM knowledge-curation system that researches a topic through multi-perspective question asking and writes a cited Wikipedia-style article — the reference for outline-first synthesis."
+  - LLM knowledge-curation system that researches a topic through multi-perspective question asking and writes a cited Wikipedia-style article — the reference for outline-first synthesis.
 best_for:
-  - "You need a long-form researched report with real citations rather than a summary of whatever the model already knows, and you want the retrieval and writing stages separated so each can be evaluated."
-  - "You are studying multi-agent research design, because the topic and outline are handled by distinct role agents and the question generation is perspective-driven rather than a flat list of subqueries."
-  - "You are prototyping a research pipeline and want a reference implementation with a real web-retrieval and citation-tracking path you can fork and modify."
+  - You need a long-form researched report with real citations rather than a summary of whatever the model already knows, and you want the retrieval and writing stages separated so each can be evaluated.
+  - You are studying multi-agent research design, because the topic and outline are handled by distinct role agents and the question generation is perspective-driven rather than a flat list of subqueries.
+  - You are prototyping a research pipeline and want a reference implementation with a real web-retrieval and citation-tracking path you can fork and modify.
 avoid_if:
-  - "You need a fast factual answer to a simple question, because the pipeline is built for a long article and the multi-stage orchestration is disproportionate to a one-line response."
-  - "You need to run without web access, since the system depends on live retrieval and has no offline corpus mode as its main path."
-  - "You are maintaining this in production, because the reference implementation is research code whose dependencies and APIs track upstream projects that move quickly."
+  - You need a fast factual answer to a simple question, because the pipeline is built for a long article and the multi-stage orchestration is disproportionate to a one-line response.
+  - You need to run without web access, since the system depends on live retrieval and has no offline corpus mode as its main path.
+  - You are maintaining this in production, because the reference implementation is research code whose dependencies and APIs track upstream projects that move quickly.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 31515 stars, MIT license, Python primary language, last commit 2025-09-30 (activity has slowed), 9 GitHub topics including agentic-rag, deep-research, naacl. Four-stage structure, perspective-conditioned question generation, and citation behavior are from the README and the published paper; the pipeline was not executed in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 31515 stars, MIT license, Python primary language, last commit 2025-09-30 (activity has slowed), 9 GitHub topics including agentic-rag, deep-research, naacl. Four-stage structure, perspective-conditioned question generation, and citation behavior are from the README and the published paper; the pipeline was not executed in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/stanford-oval/storm", "date": "2026-09-28", "description": "31,515 stars and last commit 2025-09-30 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/stanford-oval/storm
+    date: '2026-09-28'
+    description: 31,515 stars and last commit 2025-09-30 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

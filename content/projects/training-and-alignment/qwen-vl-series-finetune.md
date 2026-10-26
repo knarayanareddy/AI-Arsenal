@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Single-repo training scripts for Qwen2-VL, Qwen2.5-VL, Qwen3-VL and Qwen3.5 spanning SFT, DPO, GRPO and classification"
-github_url: "https://github.com/2U1/Qwen-VL-Series-Finetune"
+description: Single-repo training scripts for Qwen2-VL, Qwen2.5-VL, Qwen3-VL and Qwen3.5 spanning SFT, DPO, GRPO and classification
+github_url: https://github.com/2U1/Qwen-VL-Series-Finetune
 license: Apache-2.0
 primary_language: Python
-tags: [fine-tuning, multimodal, rlhf]
+tags:
+  - fine-tuning
+  - multimodal
+  - rlhf
 maturity: beta
 cost_model: open-source
-github_stars: 1972
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-09"
-docs_url: "https://github.com/2U1/Qwen-VL-Series-Finetune"
+github_stars: 1979
+github_stars_last_30d: 7
+trending_score: 24
+last_commit: '2026-09-09'
+docs_url: https://github.com/2U1/Qwen-VL-Series-Finetune
 demo_url: null
 phase: training-and-alignment
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives a Qwen-VL owner one maintained script family for SFT, preference and RL training without adopting a general multi-model trainer."
+  - Gives a Qwen-VL owner one maintained script family for SFT, preference and RL training without adopting a general multi-model trainer.
 best_for:
-  - "You are fine-tuning a Qwen-VL checkpoint and you want LoRA, DoRA, full fine-tuning, DPO or GRPO in one place instead of four forks."
-  - "You need video or mixed-modality training with ZeRO-3 and you want a working script rather than an example to adapt."
-  - "You are porting Qwen-specific ideas such as window-attention patches and separate learning rates for the projector and vision tower, and you want the upstream-shaped implementation."
+  - You are fine-tuning a Qwen-VL checkpoint and you want LoRA, DoRA, full fine-tuning, DPO or GRPO in one place instead of four forks.
+  - You need video or mixed-modality training with ZeRO-3 and you want a working script rather than an example to adapt.
+  - You are porting Qwen-specific ideas such as window-attention patches and separate learning rates for the projector and vision tower, and you want the upstream-shaped implementation.
 avoid_if:
-  - "You need a general multi-architecture trainer, since the repository is deliberately scoped to the Qwen-VL family and its authors keep separate sibling repos for Phi3-Vision, Llama 3.2 Vision, Molmo, Pixtral, SmolVLM and Gemma 3."
-  - "You need a stable, tested release cadence, because the update log shows frequent dependency bumps such as transformers 5.3.0 and liger-kernel 0.8.0 that can break a working environment."
-  - "You need managed training infrastructure, since this is scripts you run and debug yourself with no job queue, checkpoint management or experiment tracking."
+  - You need a general multi-architecture trainer, since the repository is deliberately scoped to the Qwen-VL family and its authors keep separate sibling repos for Phi3-Vision, Llama 3.2 Vision, Molmo, Pixtral, SmolVLM and Gemma 3.
+  - You need a stable, tested release cadence, because the update log shows frequent dependency bumps such as transformers 5.3.0 and liger-kernel 0.8.0 that can break a working environment.
+  - You need managed training infrastructure, since this is scripts you run and debug yourself with no job queue, checkpoint management or experiment tracking.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, default branch and issue count. Feature list, dependency versions, install methods and the window-attention patch are read from the README; no training run was executed and no memory or throughput figure was measured."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, default branch and issue count. Feature list, dependency versions, install methods and the window-attention patch are read from the README; no training run was executed and no memory or throughput figure was measured.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

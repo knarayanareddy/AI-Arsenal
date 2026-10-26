@@ -1,52 +1,62 @@
 ---
 id: invoke-ai-invokeai
-name: "InvokeAI"
+name: InvokeAI
 version_tracked: null
 artifact_type: tool
 category: multimodal
 subcategory: tools
-description: "Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation"
-github_url: "https://github.com/invoke-ai/InvokeAI"
-license: "Apache-2.0"
+description: Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation
+github_url: https://github.com/invoke-ai/InvokeAI
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "invoke-ai"
-tags: [vision, tool-use, multimodal]
+org_or_maintainer: invoke-ai
+tags:
+  - vision
+  - tool-use
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 28309
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-27"
-docs_url: "https://invoke-ai.github.io/InvokeAI/"
+github_stars: 28868
+github_stars_last_30d: 559
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://invoke-ai.github.io/InvokeAI/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Creative engine for Stable Diffusion with a managed asset and metadata layer — the reference for production image generation where outputs are versioned, not just prompted."
+  - Creative engine for Stable Diffusion with a managed asset and metadata layer — the reference for production image generation where outputs are versioned, not just prompted.
 best_for:
-  - "You are producing many images for a campaign or dataset and need them stored with their prompt, seed, model, and settings, so you can find a variant you liked last month."
-  - "You are handing image generation to designers who will not build node graphs, and want a curated workflow UI with the reproducibility guarantees underneath it."
-  - "You are integrating generation into a pipeline, since a documented API and a local installable workflow file mean the same output can be reproduced outside the UI."
+  - You are producing many images for a campaign or dataset and need them stored with their prompt, seed, model, and settings, so you can find a variant you liked last month.
+  - You are handing image generation to designers who will not build node graphs, and want a curated workflow UI with the reproducibility guarantees underneath it.
+  - You are integrating generation into a pipeline, since a documented API and a local installable workflow file mean the same output can be reproduced outside the UI.
 avoid_if:
-  - "You need the rawest possible control over a complex pipeline with ControlNet graphs and hand-wired conditioning, because the node-based interface in the graph-oriented entry in this batch goes further."
-  - "Your deployment must be permissive-license clean in a closed product, since the platform is Apache-2.0 but its foundation models and many community checkpoints carry their own terms."
-  - "You are doing bulk unattended generation where per-request overhead and the database layer cost more than they save, because this is a creative tool first and a batch server second."
+  - You need the rawest possible control over a complex pipeline with ControlNet graphs and hand-wired conditioning, because the node-based interface in the graph-oriented entry in this batch goes further.
+  - Your deployment must be permissive-license clean in a closed product, since the platform is Apache-2.0 but its foundation models and many community checkpoints carry their own terms.
+  - You are doing bulk unattended generation where per-request overhead and the database layer cost more than they save, because this is a creative tool first and a batch server second.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 28309 stars, Apache-2.0 license, Python primary language, last commit 2026-09-27, 12 GitHub topics including img2img, inpainting, outpainting, latent-diffusion. Asset database, boards, metadata provenance, node canvas, and API are from official docs; the install command name and the linked nodes URL were not verified against a running install."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 28309 stars, Apache-2.0 license, Python primary language, last commit 2026-09-27, 12 GitHub topics including img2img, inpainting, outpainting, latent-diffusion. Asset database, boards, metadata provenance, node canvas, and API are from official docs; the install command name and the linked nodes URL were not verified against a running install.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/invoke-ai/InvokeAI", "date": "2026-09-28", "description": "28,309 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/invoke-ai/InvokeAI
+    date: '2026-09-28'
+    description: 28,309 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

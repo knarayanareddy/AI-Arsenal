@@ -1,52 +1,62 @@
 ---
 id: dbt-labs-dbt
-name: "dbt"
+name: dbt
 version_tracked: null
 artifact_type: tool
 category: data-pipelines
 subcategory: tools
-description: "SQL-first transformation tool that compiles a project of models into a warehouse DAG with tests and lineage"
-github_url: "https://github.com/dbt-labs/dbt"
-license: "Apache-2.0"
+description: SQL-first transformation tool that compiles a project of models into a warehouse DAG with tests and lineage
+github_url: https://github.com/dbt-labs/dbt
+license: Apache-2.0
 primary_language: Rust
-org_or_maintainer: "dbt-labs"
-tags: [data]
+org_or_maintainer: dbt-labs
+tags:
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 13940
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-28"
-docs_url: "https://getdbt.com"
+github_stars: 14083
+github_stars_last_30d: 143
+trending_score: 44
+last_commit: '2026-10-26'
+docs_url: https://getdbt.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "SQL-first transformation tool that compiles a project into a warehouse DAG with tests and lineage, which is how analytic feature inputs for ranking models stay reproducible."
+  - SQL-first transformation tool that compiles a project into a warehouse DAG with tests and lineage, which is how analytic feature inputs for ranking models stay reproducible.
 best_for:
-  - "You are building analytic feature tables for a ranking or recommendation model and need the transformation logic in version control with tests on every model."
-  - "Your analysts write SQL but your pipelines are managed in a scheduler with no lineage, so you cannot answer what broke when a dashboard number moved."
-  - "You want a staging-to-marts layering convention enforced by a tool rather than by code review, across several people touching the same warehouse."
+  - You are building analytic feature tables for a ranking or recommendation model and need the transformation logic in version control with tests on every model.
+  - Your analysts write SQL but your pipelines are managed in a scheduler with no lineage, so you cannot answer what broke when a dashboard number moved.
+  - You want a staging-to-marts layering convention enforced by a tool rather than by code review, across several people touching the same warehouse.
 avoid_if:
-  - "Your transformation logic lives in Python and must stay there, since dbt only orchestrates SQL and Jinja; a Python-heavy project wants a different tool."
-  - "You need sub-second or streaming transformations, because dbt compiles to warehouse SQL and inherits the warehouse's execution characteristics."
-  - "Your warehouse does not support the SQL dialect dbt targets, in which case you need the adapter layer to cover it first."
+  - Your transformation logic lives in Python and must stay there, since dbt only orchestrates SQL and Jinja; a Python-heavy project wants a different tool.
+  - You need sub-second or streaming transformations, because dbt compiles to warehouse SQL and inherits the warehouse's execution characteristics.
+  - Your warehouse does not support the SQL dialect dbt targets, in which case you need the adapter layer to cover it first.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (13940), Apache-2.0 license, last commit 2026-09-28, Rust as primary language and the topic list were API-verified. Manifest parsing, ref and source resolution, materialisation strategies, the adapter split introduced in 1.x, and test types come from the official docs; CI and cost caveats are engineering judgement about this class of tooling."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (13940), Apache-2.0 license, last commit 2026-09-28, Rust as primary language and the topic list were API-verified. Manifest parsing, ref and source resolution, materialisation strategies, the adapter split introduced in 1.x, and test types come from the official docs; CI and cost caveats are engineering judgement about this class of tooling.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/dbt-labs/dbt", "date": "2026-09-28", "description": "13,940 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/dbt-labs/dbt
+    date: '2026-09-28'
+    description: 13,940 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

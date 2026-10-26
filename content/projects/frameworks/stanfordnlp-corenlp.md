@@ -1,52 +1,61 @@
 ---
 id: stanfordnlp-corenlp
-name: "CoreNLP"
+name: CoreNLP
 version_tracked: null
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "Java NLP suite of tokenizers, parsers, and annotators behind a stable pipeline API"
-github_url: "https://github.com/stanfordnlp/CoreNLP"
-license: "GPL-3.0"
+description: Java NLP suite of tokenizers, parsers, and annotators behind a stable pipeline API
+github_url: https://github.com/stanfordnlp/CoreNLP
+license: GPL-3.0
 primary_language: Java
-org_or_maintainer: "stanfordnlp"
-tags: [data]
+org_or_maintainer: stanfordnlp
+tags:
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 10122
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-28"
-docs_url: "http://stanfordnlp.github.io/CoreNLP/"
+github_stars: 10125
+github_stars_last_30d: 3
+trending_score: 33
+last_commit: '2026-10-26'
+docs_url: http://stanfordnlp.github.io/CoreNLP/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Java NLP suite of tokenizers, parsers, and annotators that is still a dependency of many JVM production pipelines because its annotator contracts are stable."
+  - Java NLP suite of tokenizers, parsers, and annotators that is still a dependency of many JVM production pipelines because its annotator contracts are stable.
 best_for:
-  - "You are on the JVM and need constituency and dependency parsing, NER, or coreference in a service where adding a Python service would be worse than the model cost."
-  - "You are extending an existing pipeline that already produces CoreNLP-style annotations, and you need the same tokenisation and POS format to keep downstream code working."
-  - "You need morphological analysis or a parser for a language where the available mainstream tooling is thinner than for English."
+  - You are on the JVM and need constituency and dependency parsing, NER, or coreference in a service where adding a Python service would be worse than the model cost.
+  - You are extending an existing pipeline that already produces CoreNLP-style annotations, and you need the same tokenisation and POS format to keep downstream code working.
+  - You need morphological analysis or a parser for a language where the available mainstream tooling is thinner than for English.
 avoid_if:
-  - "You are a new Python-first project, where spaCy or stanza give better documentation, faster iteration, and more maintained tooling for the same annotations."
-  - "You need GPU-accelerated transformer inference, since the neural components run on CPU through TensorFlow Lite in-process."
-  - "Your organisation forbids GPL-3.0 in the dependency tree, which is a real constraint in many commercial products."
+  - You are a new Python-first project, where spaCy or stanza give better documentation, faster iteration, and more maintained tooling for the same annotations.
+  - You need GPU-accelerated transformer inference, since the neural components run on CPU through TensorFlow Lite in-process.
+  - Your organisation forbids GPL-3.0 in the dependency tree, which is a real constraint in many commercial products.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (10122), GPL-3.0 license, last commit 2026-09-28, Java as primary language and the topic list were API-verified. Annotator list, pipeline construction, token and POS stability, the TensorFlow Lite neural components, and the stanza relationship come from official docs and repo history; the CPU-only latency and licence-constraint warnings are documented behaviour and engineering judgement."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (10122), GPL-3.0 license, last commit 2026-09-28, Java as primary language and the topic list were API-verified. Annotator list, pipeline construction, token and POS stability, the TensorFlow Lite neural components, and the stanza relationship come from official docs and repo history; the CPU-only latency and licence-constraint warnings are documented behaviour and engineering judgement.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/stanfordnlp/CoreNLP", "date": "2026-09-28", "description": "10,122 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/stanfordnlp/CoreNLP
+    date: '2026-09-28'
+    description: 10,122 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

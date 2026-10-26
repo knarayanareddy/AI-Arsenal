@@ -1,52 +1,63 @@
 ---
 id: 567-labs-instructor
-name: "instructor"
+name: instructor
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: libraries
-description: "Library that constrains LLM output to a Pydantic model, validating and retrying until it parses"
-github_url: "https://github.com/567-labs/instructor"
-license: "MIT"
+description: Library that constrains LLM output to a Pydantic model, validating and retrying until it parses
+github_url: https://github.com/567-labs/instructor
+license: MIT
 primary_language: Python
-org_or_maintainer: "567-labs"
-tags: [structured-output, llm, tool-use]
+org_or_maintainer: 567-labs
+tags:
+  - structured-output
+  - llm
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 13953
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-27"
-docs_url: "https://python.useinstructor.com/"
+github_stars: 14065
+github_stars_last_30d: 112
+trending_score: 42
+last_commit: '2026-10-20'
+docs_url: https://python.useinstructor.com/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Constrains LLM output to Pydantic models with automatic retry and validation, turning free-form generation into a schema-checked function result."
+  - Constrains LLM output to Pydantic models with automatic retry and validation, turning free-form generation into a schema-checked function result.
 best_for:
-  - "You are building a tool-calling agent and need arguments to arrive as validated Python objects rather than a JSON string you parse and hope."
-  - "You have several model providers with inconsistent structured-output support and want one code path that works across all of them."
-  - "You are extracting typed records from documents and need validation, automatic retries, and clear errors when the model produces something off-schema."
+  - You are building a tool-calling agent and need arguments to arrive as validated Python objects rather than a JSON string you parse and hope.
+  - You have several model providers with inconsistent structured-output support and want one code path that works across all of them.
+  - You are extracting typed records from documents and need validation, automatic retries, and clear errors when the model produces something off-schema.
 avoid_if:
-  - "Your single provider already guarantees schema conformance natively, where calling that structured-output feature directly is simpler and free."
-  - "You need a streaming response token by token, since validation and retries work against a completed response rather than an incremental one."
-  - "Your model is not good at following schemas at all, since retries cost tokens and a weak model will loop rather than converge."
+  - Your single provider already guarantees schema conformance natively, where calling that structured-output feature directly is simpler and free.
+  - You need a streaming response token by token, since validation and retries work against a completed response rather than an incremental one.
+  - Your model is not good at following schemas at all, since retries cost tokens and a weak model will loop rather than converge.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (13953), MIT license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Mode selection, the retry-with-errors loop, partial streaming, and the adapter list come from the official docs; retry-cost and schema-versioning caveats are engineering judgement about this pattern, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (13953), MIT license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Mode selection, the retry-with-errors loop, partial streaming, and the adapter list come from the official docs; retry-cost and schema-versioning caveats are engineering judgement about this pattern, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/567-labs/instructor", "date": "2026-09-28", "description": "13,953 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/567-labs/instructor
+    date: '2026-09-28'
+    description: 13,953 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

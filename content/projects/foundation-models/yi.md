@@ -6,31 +6,41 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: 01.AI open model family with bilingual and long-context variants from small to mid-large sizes
-github_url: "https://github.com/01-ai/Yi"
+github_url: https://github.com/01-ai/Yi
 license: Apache-2.0
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, inference, local, multimodal]
+tags:
+  - llm
+  - inference
+  - local
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 7834
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2024-11-27"
-docs_url: "https://github.com/01-ai/Yi"
+github_stars: 7835
+github_stars_last_30d: 1
+trending_score: 15
+last_commit: '2024-11-27'
+docs_url: https://github.com/01-ai/Yi
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/01-ai"
-model_sizes: [6B, 9B, 34B]
+hf_url: https://huggingface.co/01-ai
+model_sizes:
+  - 6B
+  - 9B
+  - 34B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [study-and-reference]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+health_signals:
+  - community-driven
 ecosystem_role:
   - 01.AI's open-weight model family from the 2023-2024 open-model wave
 best_for:
@@ -41,13 +51,16 @@ avoid_if:
   - You want a model with strong current-generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023-2024 release
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [qwen, llama-3, gemma]
+alternatives:
+  - qwen
+  - llama-3
+  - gemma
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "01.AI shows no maintainer activity on 01-ai/Yi since 2024-11-27, so the family is frozen; newer work moved to other 01.AI projects. Re-checked 2026-10-24 against the GitHub API: 7,834 stars, last push 2024-11-27, no archived flag."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-24"
+enrichment_notes: '01.AI shows no maintainer activity on 01-ai/Yi since 2024-11-27, so the family is frozen; newer work moved to other 01.AI projects. Re-checked 2026-10-24 against the GitHub API: 7,834 stars, last push 2024-11-27, no archived flag.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

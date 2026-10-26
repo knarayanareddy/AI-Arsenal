@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python FastAPI voice stack giving a browser full-duplex-feel conversation with Gemma 4 via llama.cpp, Kokoro TTS and smart-turn detection"
-github_url: "https://github.com/fikrikarim/parlor"
+description: Python FastAPI voice stack giving a browser full-duplex-feel conversation with Gemma 4 via llama.cpp, Kokoro TTS and smart-turn detection
+github_url: https://github.com/fikrikarim/parlor
 license: Apache-2.0
 primary_language: Python
-tags: [voice, local, multimodal, streaming]
+tags:
+  - voice
+  - local
+  - multimodal
+  - streaming
 maturity: experimental
 cost_model: open-source
-github_stars: 2069
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-03"
-docs_url: "https://github.com/fikrikarim/parlor#readme"
+github_stars: 2105
+github_stars_last_30d: 36
+trending_score: 26
+last_commit: '2026-08-03'
+docs_url: https://github.com/fikrikarim/parlor#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Reproduces the GPT-Live interaction model entirely on-device, including barge-in and mid-thought pause handling, with no frontier API in the loop."
+  - Reproduces the GPT-Live interaction model entirely on-device, including barge-in and mid-thought pause handling, with no frontier API in the loop.
 best_for:
-  - "You want a voice assistant that never sends audio off your machine, and you have an Apple Silicon machine where the MLX TTS path performs well."
-  - "You are building or studying a real-time multimodal stack and you want a reference implementation whose latency benchmarks and architectural trade-offs are published."
-  - "You want the action channel separated from speech, because timers and mode switches go through a grammar-forced JSON head instead of riding on the spoken reply."
+  - You want a voice assistant that never sends audio off your machine, and you have an Apple Silicon machine where the MLX TTS path performs well.
+  - You are building or studying a real-time multimodal stack and you want a reference implementation whose latency benchmarks and architectural trade-offs are published.
+  - You want the action channel separated from speech, because timers and mode switches go through a grammar-forced JSON head instead of riding on the spoken reply.
 avoid_if:
-  - "You need production reliability, because the project labels itself a research preview and tells you to expect rough edges and bugs."
-  - "You are on an older llama.cpp build, because it requires build b9503 or newer (b9512 for the 12b model) as older builds lack Gemma 4 audio or crash loading the mmproj."
-  - "You need frontier-quality conversation quality, because the README is candid that a cascade of small models is the fallback while a comparable full-duplex model does not exist locally."
+  - You need production reliability, because the project labels itself a research preview and tells you to expect rough edges and bugs.
+  - You are on an older llama.cpp build, because it requires build b9503 or newer (b9512 for the 12b model) as older builds lack Gemma 4 audio or crash loading the mmproj.
+  - You need frontier-quality conversation quality, because the README is candid that a cascade of small models is the fallback while a comparable full-duplex model does not exist locally.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Architecture diagram, module layout, llama.cpp build requirements, model choices, action-head benchmark and mode list are read from the official README; the voice pipeline was not run."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Architecture diagram, module layout, llama.cpp build requirements, model choices, action-head benchmark and mode list are read from the official README; the voice pipeline was not run.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

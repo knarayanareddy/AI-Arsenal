@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "StarTrail-org"
+org_or_maintainer: StarTrail-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 203
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: leann
-name: "LEANN"
+name: LEANN
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "Vector index that recomputes embeddings on demand, claiming 97 percent storage savings without accuracy loss"
-github_url: "https://github.com/StarTrail-org/LEANN"
+description: Vector index that recomputes embeddings on demand, claiming 97 percent storage savings without accuracy loss
+github_url: https://github.com/StarTrail-org/LEANN
 license: MIT
 primary_language: Python
-tags: [retrieval, local, efficiency, self-hosted]
+tags:
+  - retrieval
+  - local
+  - efficiency
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 12966
-last_commit: "2026-09-28"
-docs_url: "https://arxiv.org/abs/2506.08276"
+github_stars: 13169
+last_commit: '2026-10-25'
+docs_url: https://arxiv.org/abs/2506.08276
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "A low-storage vector index that makes private, on-device RAG practical by avoiding full embedding storage."
-best_for: ["You want to index a personal corpus on a laptop - mail, chat history, browser history, a codebase - and the storage cost of conventional embeddings is what stopped you.", "You have an existing vector search backend you cannot move, because LEANN is positioned as a drop-in index rather than a new database.", "You are a Claude Code user who want semantic retrieval over your files, since the MCP service is documented as fully compatible with that client."]
-avoid_if: ["You need deterministic, reproducible embeddings, because on-demand recomputation means the index is a function of the model and the pruning, not a fixed stored artefact.", "You cannot run a local embedding model, since the whole storage argument depends on recomputing embeddings rather than reading them from disk.", "You need a production service with an SLA, because the project is research-origin work from a university lab with a Slack community and a public roadmap rather than a support contract."]
-enrichment_notes: "Repository, MIT license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. MLSys 2026 paper; storage-savings figures are project-reported."
+  - A low-storage vector index that makes private, on-device RAG practical by avoiding full embedding storage.
+best_for:
+  - You want to index a personal corpus on a laptop - mail, chat history, browser history, a codebase - and the storage cost of conventional embeddings is what stopped you.
+  - You have an existing vector search backend you cannot move, because LEANN is positioned as a drop-in index rather than a new database.
+  - You are a Claude Code user who want semantic retrieval over your files, since the MCP service is documented as fully compatible with that client.
+avoid_if:
+  - You need deterministic, reproducible embeddings, because on-demand recomputation means the index is a function of the model and the pruning, not a fixed stored artefact.
+  - You cannot run a local embedding model, since the whole storage argument depends on recomputing embeddings rather than reading them from disk.
+  - You need a production service with an SLA, because the project is research-origin work from a university lab with a Slack community and a public roadmap rather than a support contract.
+enrichment_notes: Repository, MIT license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. MLSys 2026 paper; storage-savings figures are project-reported.
 ---
 
 ## Overview

@@ -1,52 +1,63 @@
 ---
 id: illuin-tech-colpali
-name: "colpali"
+name: colpali
 version_tracked: null
 artifact_type: model
 category: rag
 subcategory: advanced-rag
-description: "Vision-language retrieval models that index document page images directly with one embedding per image patch instead of OCR text"
-github_url: "https://github.com/illuin-tech/colpali"
-license: "MIT"
+description: Vision-language retrieval models that index document page images directly with one embedding per image patch instead of OCR text
+github_url: https://github.com/illuin-tech/colpali
+license: MIT
 primary_language: Python
-org_or_maintainer: "illuin-tech"
-tags: [retrieval, rag]
+org_or_maintainer: illuin-tech
+tags:
+  - retrieval
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 2818
-github_stars_last_30d: 0
-trending_score: 27
-last_commit: "2026-09-21"
-docs_url: "https://docs.colpali.ai"
+github_stars: 2843
+github_stars_last_30d: 25
+trending_score: 35
+last_commit: '2026-09-21'
+docs_url: https://docs.colpali.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [vision, language]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [actively-maintained]
+domain:
+  - vision
+  - language
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Vision-language retrieval models that index document page images directly, skipping OCR-and-embed entirely for visually complex documents."
+  - Vision-language retrieval models that index document page images directly, skipping OCR-and-embed entirely for visually complex documents.
 best_for:
-  - "You are retrieving over documents where layout carries meaning, such as tables, forms, multi-column pages, or scanned PDFs with figures."
-  - "You want to skip the OCR and text chunking stages entirely and index page images as the retrieval unit."
-  - "You are building RAG over a document collection and need one retrieval model rather than a parser, an embedder, and a chunker in sequence."
+  - You are retrieving over documents where layout carries meaning, such as tables, forms, multi-column pages, or scanned PDFs with figures.
+  - You want to skip the OCR and text chunking stages entirely and index page images as the retrieval unit.
+  - You are building RAG over a document collection and need one retrieval model rather than a parser, an embedder, and a chunker in sequence.
 avoid_if:
-  - "You need exact text output from the retriever, since this returns page images and a reader is still required to produce text."
-  - "Your storage cannot absorb a much larger index, because per-patch vectors cost many times more than one vector per text chunk."
-  - "You have simple clean text documents where a text embedder over chunks is cheaper and equally accurate."
+  - You need exact text output from the retriever, since this returns page images and a reader is still required to produce text.
+  - Your storage cannot absorb a much larger index, because per-patch vectors cost many times more than one vector per text chunk.
+  - You have simple clean text documents where a text embedder over chunks is cheaper and equally accurate.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2818), MIT license, last commit 2026-09-21, primary language Python, and all six topics were read from the GitHub API. Per-patch embeddings, MaxSim scoring, the ColQwen2 and ColSmol variants, and page-proxy indexing come from the official README and docs; no checkpoint was downloaded and no page was indexed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2818), MIT license, last commit 2026-09-21, primary language Python, and all six topics were read from the GitHub API. Per-patch embeddings, MaxSim scoring, the ColQwen2 and ColSmol variants, and page-proxy indexing come from the official README and docs; no checkpoint was downloaded and no page was indexed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/illuin-tech/colpali", "date": "2026-09-28", "description": "2,818 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/illuin-tech/colpali
+    date: '2026-09-28'
+    description: 2,818 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

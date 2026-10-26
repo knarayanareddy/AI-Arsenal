@@ -1,46 +1,65 @@
 ---
 id: gpt-researcher
-name: "GPT Researcher"
+name: GPT Researcher
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "Autonomous research agent that plans questions, fans out parallel scrapers, and publishes a cited report from web or local sources"
-github_url: "https://github.com/assafelovic/gpt-researcher"
+description: Autonomous research agent that plans questions, fans out parallel scrapers, and publishes a cited report from web or local sources
+github_url: https://github.com/assafelovic/gpt-researcher
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Assaf Elovic / community"
-tags: [agents, retrieval]
+org_or_maintainer: Assaf Elovic / community
+tags:
+  - agents
+  - retrieval
 maturity: production
 cost_model: open-source
-github_stars: 29710
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-26"
-docs_url: "https://docs.gptr.dev"
+github_stars: 30301
+github_stars_last_30d: 591
+trending_score: 55
+last_commit: '2026-10-10'
+docs_url: https://docs.gptr.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The reference open-source implementation of 'deep research': a planner-executor architecture that decomposes a question into parallel search queries, scrapes and filters sources, and synthesizes a long-form cited report — predating and paralleling the commercial deep-research products."
-best_for: ["You are a consultant or analyst who needs a cited market or competitive brief in minutes rather than a week of manual searching, and can tolerate the agent's missteps.", "You are building a research feature and you need the planner, executor and publisher roles as a working reference rather than a design sketch.", "You want to hand the whole research capability to an LLM agent inside Claude via a skill, because the README documents installing it as a Claude Skill with a single npx command."]
-avoid_if: ["You need a citation you can defend without checking it, because the agent composes findings from retrieved pages and the README does not claim any guarantee of source accuracy.", "You are on a metered research API budget and want predictable cost, because the parallelised execution design is explicitly about increased speed and work is multiplied across concurrent agents.", "You need to run entirely on internal documents with no outbound access, because the default path scrapes the live web and local research is a separate configured mode you must set up."]
+  - 'The reference open-source implementation of ''deep research'': a planner-executor architecture that decomposes a question into parallel search queries, scrapes and filters sources, and synthesizes a long-form cited report — predating and paralleling the commercial deep-research products.'
+best_for:
+  - You are a consultant or analyst who needs a cited market or competitive brief in minutes rather than a week of manual searching, and can tolerate the agent's missteps.
+  - You are building a research feature and you need the planner, executor and publisher roles as a working reference rather than a design sketch.
+  - You want to hand the whole research capability to an LLM agent inside Claude via a skill, because the README documents installing it as a Claude Skill with a single npx command.
+avoid_if:
+  - You need a citation you can defend without checking it, because the agent composes findings from retrieved pages and the README does not claim any guarantee of source accuracy.
+  - You are on a metered research API budget and want predictable cost, because the parallelised execution design is explicitly about increased speed and work is multiplied across concurrent agents.
+  - You need to run entirely on internal documents with no outbound access, because the default path scrapes the live web and local research is a separate configured mode you must set up.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
-integrates_with: [langgraph]
+integrates_with:
+  - langgraph
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (28,151), primary language, license, and last commit (2026-07-05) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (28,151), primary language, license, and last commit (2026-07-05) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/assafelovic/gpt-researcher", "date": "2026-07-08", "description": "28,151 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/assafelovic/gpt-researcher
+    date: '2026-07-08'
+    description: 28,151 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

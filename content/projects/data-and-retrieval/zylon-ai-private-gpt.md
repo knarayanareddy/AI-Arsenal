@@ -1,52 +1,65 @@
 ---
 id: zylon-ai-private-gpt
-name: "private-gpt"
+name: private-gpt
 version_tracked: null
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "Apache-2.0 self-hosted API layer bundling RAG, tools, agent skills, MCP, and text-to-SQL over any OpenAI-compatible server"
-github_url: "https://github.com/zylon-ai/private-gpt"
-license: "Apache-2.0"
+description: Apache-2.0 self-hosted API layer bundling RAG, tools, agent skills, MCP, and text-to-SQL over any OpenAI-compatible server
+github_url: https://github.com/zylon-ai/private-gpt
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "zylon-ai"
-tags: [rag, self-hosted, tool-use]
+org_or_maintainer: zylon-ai
+tags:
+  - rag
+  - self-hosted
+  - tool-use
 maturity: beta
 cost_model: open-source
-github_stars: 57548
-github_stars_last_30d: 0
+github_stars: 57616
+github_stars_last_30d: 68
 trending_score: 38
-last_commit: "2026-09-22"
-docs_url: "https://www.zylon.ai/private-gpt"
+last_commit: '2026-10-26'
+docs_url: https://www.zylon.ai/private-gpt
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "Complete API layer for private local-model applications, bundling RAG, agent skills, tool calling, and MCP under one self-hosted contract for air-gapped deployments."
+  - Complete API layer for private local-model applications, bundling RAG, agent skills, tool calling, and MCP under one self-hosted contract for air-gapped deployments.
 best_for:
-  - "You are deploying an internal document assistant behind a firewall and need one container to own ingestion, retrieval, tool access, and the serving contract instead of four services you now operate."
-  - "You want to change model providers without changing your application, because the project is written against the OpenAI-compatible API surface rather than one vendor's SDK."
-  - "You need to give an internal assistant access to internal systems through a governed tool layer, and you would rather configure existing tool integrations than write a bespoke function-calling service."
+  - You are deploying an internal document assistant behind a firewall and need one container to own ingestion, retrieval, tool access, and the serving contract instead of four services you now operate.
+  - You want to change model providers without changing your application, because the project is written against the OpenAI-compatible API surface rather than one vendor's SDK.
+  - You need to give an internal assistant access to internal systems through a governed tool layer, and you would rather configure existing tool integrations than write a bespoke function-calling service.
 avoid_if:
-  - "You only need a vector index or a single retrieval step, because the project deliberately covers much more surface than that and the extra components are your responsibility to configure and keep current."
-  - "You need a proven retrieval architecture you can tune, since the bundled pipeline exposes defaults and configuration rather than a researchable index implementation."
-  - "You cannot run a server that holds models and document corpora in-process, because the entire value proposition is a self-hosted, stateful deployment."
+  - You only need a vector index or a single retrieval step, because the project deliberately covers much more surface than that and the extra components are your responsibility to configure and keep current.
+  - You need a proven retrieval architecture you can tune, since the bundled pipeline exposes defaults and configuration rather than a researchable index implementation.
+  - You cannot run a server that holds models and document corpora in-process, because the entire value proposition is a self-hosted, stateful deployment.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 57548 stars, Apache-2.0 license, Python primary language, last commit 2026-09-22, 3 GitHub topics. Component list (RAG, skills, tools, MCP, text-to-SQL) and the OpenAI-compatible constraint come from the repository README; environment-variable names and module entry points were read from docs, not executed."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 57548 stars, Apache-2.0 license, Python primary language, last commit 2026-09-22, 3 GitHub topics. Component list (RAG, skills, tools, MCP, text-to-SQL) and the OpenAI-compatible constraint come from the repository README; environment-variable names and module entry points were read from docs, not executed.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/zylon-ai/private-gpt", "date": "2026-09-28", "description": "57,548 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/zylon-ai/private-gpt
+    date: '2026-09-28'
+    description: 57,548 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

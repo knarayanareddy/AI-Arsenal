@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 94 entries | 2026-10-25 |
-| [benchmarks and evals](./benchmarks-and-evals/) | 32 entries | 2026-10-25 |
-| [data and retrieval](./data-and-retrieval/) | 90 entries | 2026-10-25 |
-| [foundation models](./foundation-models/) | 79 entries | 2026-10-25 |
-| [frameworks](./frameworks/) | 122 entries | 2026-10-25 |
-| [inference engines](./inference-engines/) | 62 entries | 2026-10-25 |
-| [training and alignment](./training-and-alignment/) | 32 entries | 2026-10-25 |
+| [agent systems](./agent-systems/) | 94 entries | 2026-10-26 |
+| [benchmarks and evals](./benchmarks-and-evals/) | 32 entries | 2026-10-26 |
+| [data and retrieval](./data-and-retrieval/) | 90 entries | 2026-10-26 |
+| [foundation models](./foundation-models/) | 79 entries | 2026-10-26 |
+| [frameworks](./frameworks/) | 122 entries | 2026-10-26 |
+| [inference engines](./inference-engines/) | 62 entries | 2026-10-26 |
+| [training and alignment](./training-and-alignment/) | 32 entries | 2026-10-26 |
 
 ## Recently Added
 
@@ -29,16 +29,16 @@
 
 ## Most Popular
 
-- [OpenClaw](./agent-systems/openclaw.md) — ⭐ 388702
-- [ECC](./agent-systems/ecc.md) — ⭐ 268797
-- [DeepSeek Harness](./agent-systems/deepseek-harness.md) — ⭐ 260425
-- [Hermes Agent](./agent-systems/hermes-agent.md) — ⭐ 249768
-- [opencode](./agent-systems/anomalyco-opencode.md) — ⭐ 210538
-- [opencode](./agent-systems/opencode.md) — ⭐ 203399
-- [tensorflow](./frameworks/tensorflow-tensorflow.md) — ⭐ 200583
-- [Firecrawl](./data-and-retrieval/firecrawl.md) — ⭐ 185940
-- [AutoGPT](./frameworks/autogpt.md) — ⭐ 184931
-- [Ollama](./inference-engines/ollama.md) — ⭐ 174059
+- [OpenClaw](./agent-systems/openclaw.md) — ⭐ 393130
+- [ECC](./agent-systems/ecc.md) — ⭐ 289453
+- [DeepSeek Harness](./agent-systems/deepseek-harness.md) — ⭐ 262384
+- [Hermes Agent](./agent-systems/hermes-agent.md) — ⭐ 257303
+- [opencode](./agent-systems/opencode.md) — ⭐ 221827
+- [opencode](./agent-systems/anomalyco-opencode.md) — ⭐ 221825
+- [tensorflow](./frameworks/tensorflow-tensorflow.md) — ⭐ 201266
+- [Firecrawl](./data-and-retrieval/firecrawl.md) — ⭐ 195566
+- [AutoGPT](./frameworks/autogpt.md) — ⭐ 187762
+- [Ollama](./inference-engines/ollama.md) — ⭐ 184852
 
 ## Browse All
 

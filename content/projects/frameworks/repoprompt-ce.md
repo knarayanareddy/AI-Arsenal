@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A native macOS app that assembles reviewable CodeMaps, file selections, and Git diffs, then hands that context to agents via MCP"
-github_url: "https://github.com/repoprompt/repoprompt-ce"
+description: A native macOS app that assembles reviewable CodeMaps, file selections, and Git diffs, then hands that context to agents via MCP
+github_url: https://github.com/repoprompt/repoprompt-ce
 license: Apache-2.0
 primary_language: Other
-tags: [memory, edge, tool-use, code-gen]
+tags:
+  - memory
+  - edge
+  - tool-use
+  - code-gen
 maturity: beta
 cost_model: open-source
-github_stars: 938
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://repoprompt.com"
+github_stars: 969
+github_stars_last_30d: 31
+trending_score: 25
+last_commit: '2026-10-26'
+docs_url: https://repoprompt.com
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Makes context assembly a visible artifact you curate before it reaches the model, instead of an invisible scroll of tool calls."
+  - Makes context assembly a visible artifact you curate before it reaches the model, instead of an invisible scroll of tool calls.
 best_for:
-  - "You are working in a large repository and need to select exactly the right files and symbols before the agent starts editing."
-  - "You are reviewing what an agent read before you accept what it wrote, since the assembled context is on screen."
-  - "You want one context surface usable from both MCP clients and CLI agents, rather than per-agent prompt files."
+  - You are working in a large repository and need to select exactly the right files and symbols before the agent starts editing.
+  - You are reviewing what an agent read before you accept what it wrote, since the assembled context is on screen.
+  - You want one context surface usable from both MCP clients and CLI agents, rather than per-agent prompt files.
 avoid_if:
-  - "You are on Linux or Windows, because this is a Swift app gated to macOS 26 or newer."
-  - "You work in a headless CI environment with no local desktop, since the whole product is a macOS application."
-  - "You want a cloud-shared context store, because context assembly is local to one machine and its Keychain."
+  - You are on Linux or Windows, because this is a Swift app gated to macOS 26 or newer.
+  - You work in a headless CI environment with no local desktop, since the whole product is a macOS application.
+  - You want a cloud-shared context store, because context assembly is local to one machine and its Keychain.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 938, Apache-2.0, Swift, last commit 2026-09-28, topics, homepage. From README: macOS 26+ gate, Homebrew tap and cask, repoprompt-ce-updates repo, launcher, conductor relaunch, ALLOW_ADHOC_SIGNING and SIGN_IDENTITY, in-memory secure storage, CodeMaps, MCP harness. CE feature gap undocumented."
+enrichment_notes: 'API-verified: stars 938, Apache-2.0, Swift, last commit 2026-09-28, topics, homepage. From README: macOS 26+ gate, Homebrew tap and cask, repoprompt-ce-updates repo, launcher, conductor relaunch, ALLOW_ADHOC_SIGNING and SIGN_IDENTITY, in-memory secure storage, CodeMaps, MCP harness. CE feature gap undocumented.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

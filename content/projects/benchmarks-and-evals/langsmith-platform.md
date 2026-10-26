@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: service
 category: observability
 subcategory: tracing
-description: "LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan"
-github_url: "https://github.com/langchain-ai/langsmith-python"
+description: LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
+github_url: https://github.com/langchain-ai/langsmith-python
 license: Proprietary
 primary_language: Other
 org_or_maintainer: null
-tags: [observability, tracing, evaluation, langchain]
+tags:
+  - observability
+  - tracing
+  - evaluation
+  - langchain
 maturity: production
 cost_model: freemium
-github_stars: 17
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-10-24"
-docs_url: "https://docs.langchain.com/langsmith/observability"
+github_stars: 18
+github_stars_last_30d: 1
+trending_score: 6
+last_commit: '2026-10-26'
+docs_url: https://docs.langchain.com/langsmith/observability
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,14 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - LangChain's commercial platform for tracing, evaluation, prompts and agent deployment, which is also the reference implementation of the tracing conventions the rest of the ecosystem follows
 best_for:
@@ -44,17 +53,26 @@ avoid_if:
   - Your stack is deliberately framework-neutral and you do not want a vendor whose product and frameworks share a roadmap
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, phoenix, helicone, opik]
-integrates_with: [langchain, langgraph]
+alternatives:
+  - langfuse
+  - phoenix
+  - helicone
+  - opik
+integrates_with:
+  - langchain
+  - langgraph
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified 2026-10-25 against docs.langchain.com: Cloud/BYOC/self-hosted topologies (self-hosted and BYOC need the enterprise plan), 14-day base vs 180-day extended retention with automatic upgrades, plus Engine and Deployment. github_url moved to the Python SDK repo after langsmith-sdk was archived on 2026-10-16."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25 against docs.langchain.com: Cloud/BYOC/self-hosted topologies (self-hosted and BYOC need the enterprise plan), 14-day base vs 180-day extended retention with automatic upgrades, plus Engine and Deployment. github_url moved to the Python SDK repo after langsmith-sdk was archived on 2026-10-16.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.ibm.com/think/topics/langsmith","date":"2025-11-17","description":"IBM documents Factory's production use of LangSmith (integrated with AWS CloudWatch) for secure, reliable LLM operations, doubling iteration speed and reducing open-to-merge time by 20%"}
+  - source: conference
+    url: https://www.ibm.com/think/topics/langsmith
+    date: '2025-11-17'
+    description: IBM documents Factory's production use of LangSmith (integrated with AWS CloudWatch) for secure, reliable LLM operations, doubling iteration speed and reducing open-to-merge time by 20%
 featured: false
 status: active
 ---

@@ -1,52 +1,65 @@
 ---
 id: google-brax
-name: "brax"
+name: brax
 version_tracked: null
 artifact_type: framework
 category: evaluation
 subcategory: libraries
-description: "Massively parallel rigid-body simulation library where entire environments are vmapped and jitted on TPU or GPU"
-github_url: "https://github.com/google/brax"
-license: "Apache-2.0"
+description: Massively parallel rigid-body simulation library where entire environments are vmapped and jitted on TPU or GPU
+github_url: https://github.com/google/brax
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "google"
-tags: [rlhf, jax, vision, evaluation]
+org_or_maintainer: google
+tags:
+  - rlhf
+  - jax
+  - vision
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 3241
-github_stars_last_30d: 0
-trending_score: 28
-last_commit: "2026-09-15"
-docs_url: "https://github.com/google/brax"
+github_stars: 3252
+github_stars_last_30d: 11
+trending_score: 34
+last_commit: '2026-10-20'
+docs_url: https://github.com/google/brax
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [reinforcement-learning]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - reinforcement-learning
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Massively parallel rigid-body simulation on accelerators, where environment steps are vmapped on-device so RL training no longer bottlenecked on physics CPU time."
+  - Massively parallel rigid-body simulation on accelerators, where environment steps are vmapped on-device so RL training no longer bottlenecked on physics CPU time.
 best_for:
-  - "You are training a policy with thousands of parallel rollouts and the CPU simulator is the bottleneck rather than the update step."
-  - "You want to run a whole batch of locomotion environments on a single accelerator with the physics inlined into the training graph."
-  - "You need differentiable or at least fully jitted simulation so a model-based or planning method can use the same code path."
+  - You are training a policy with thousands of parallel rollouts and the CPU simulator is the bottleneck rather than the update step.
+  - You want to run a whole batch of locomotion environments on a single accelerator with the physics inlined into the training graph.
+  - You need differentiable or at least fully jitted simulation so a model-based or planning method can use the same code path.
 avoid_if:
-  - "Your task is not rigid-body dynamics, since the engine covers articulated bodies, not fluids, cloth, or deformables."
-  - "You need contact-rich manipulation with complex friction models, since the generalized and positional solvers are simplified."
-  - "You need photorealistic rendering for imitation learning, where a renderer-based simulator rather than a physics engine is what you require."
+  - Your task is not rigid-body dynamics, since the engine covers articulated bodies, not fluids, cloth, or deformables.
+  - You need contact-rich manipulation with complex friction models, since the generalized and positional solvers are simplified.
+  - You need photorealistic rendering for imitation learning, where a renderer-based simulator rather than a physics engine is what you require.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3241), Apache-2.0 license, last commit 2026-09-15, and primary language Python were read from the GitHub API; the topics array is empty upstream and no homepage is declared. The pytree state, vmap-over-environments design, generalized versus mjx backends, collider and actuator systems, and export tooling come from the official README and docs; no environment was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3241), Apache-2.0 license, last commit 2026-09-15, and primary language Python were read from the GitHub API; the topics array is empty upstream and no homepage is declared. The pytree state, vmap-over-environments design, generalized versus mjx backends, collider and actuator systems, and export tooling come from the official README and docs; no environment was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/google/brax", "date": "2026-09-28", "description": "3,241 stars and last commit 2026-09-15 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/google/brax
+    date: '2026-09-28'
+    description: 3,241 stars and last commit 2026-09-15 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

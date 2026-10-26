@@ -6,18 +6,22 @@ artifact_type: library
 category: llms
 subcategory: inference-engines
 description: C/C++ inference engine for GGUF models on CPUs, consumer GPUs and Apple silicon, with a unified `llama` CLI and OpenAI-compatible server
-github_url: "https://github.com/ggml-org/llama.cpp"
+github_url: https://github.com/ggml-org/llama.cpp
 license: MIT
 primary_language: C++
-org_or_maintainer: "ggml-org"
-tags: [llm, inference, quantization, local]
+org_or_maintainer: ggml-org
+tags:
+  - llm
+  - inference
+  - quantization
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 132303
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-10-25"
-docs_url: "https://llama.app"
+github_stars: 132423
+github_stars_last_30d: 16029
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://llama.app
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,31 +29,51 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [GGUF]
+supported_formats:
+  - GGUF
 api_compatible: openai
 phase: inference-engine
-domain: [language, vision]
-relation_to_stack: [deploy-as-is, build-on-top, fork-and-adapt]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The substrate of the local-AI ecosystem: ggml's kernels plus a GGUF format that became the interchange standard, with Ollama, LM Studio, llamafile and most desktop apps running this code underneath"
+  - 'The substrate of the local-AI ecosystem: ggml''s kernels plus a GGUF format that became the interchange standard, with Ollama, LM Studio, llamafile and most desktop apps running this code underneath'
 best_for:
   - You need a model running on hardware nobody else targets — a CPU-only box, Apple silicon, an AMD or Intel GPU through Vulkan, a RISC-V SBC — and cannot afford a Python/CUDA dependency chain
-  - "You want the whole model in memory with a quantisation level you choose: 1.5- to 8-bit integer formats let a 30B model fit where a 70B would not, and CPU+GPU offload covers the gap when VRAM is short"
+  - 'You want the whole model in memory with a quantisation level you choose: 1.5- to 8-bit integer formats let a 30B model fit where a 70B would not, and CPU+GPU offload covers the gap when VRAM is short'
   - You are embedding inference inside a product and need a C library with no runtime to ship, rather than a Python server to operate
 avoid_if:
   - You are serving many concurrent users on datacentre GPUs — llama.cpp schedules one request stream well and batches modestly; vLLM and SGLang exist for the throughput case
   - Your team will only ever touch Python — the bindings are real but secondary, and a Python-first server will be less friction
   - You need every new architecture on release day with vendor-grade support — the community adds architectures fast, but occasionally late, and nothing is contracted
-upstream_dependencies: [ggml-org-ggml]
-downstream_consumers: [ollama, llamafile, localai]
-alternatives: [vllm, sglang, ollama, llamafile, mlc-llm, exllamav2]
-integrates_with: [hugging-face-hub, llama-cpp]
+upstream_dependencies:
+  - ggml-org-ggml
+downstream_consumers:
+  - ollama
+  - llamafile
+  - localai
+alternatives:
+  - vllm
+  - sglang
+  - ollama
+  - llamafile
+  - mlc-llm
+  - exllamav2
+integrates_with:
+  - hugging-face-hub
+  - llama-cpp
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 132,303 stars, 2,581 open issues, MIT, last push 2026-10-25. README documents the 2026 `llama` unified CLI (`llama cli -hf …`, `llama serve -hf …`, install scripts at llama.app), 1.5- to 8-bit quantisation, CUDA/HIP/MUSA/Vulkan/SYCL/Metal backends, CPU+GPU hybrid inference, and the built-in web UI."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 132,303 stars, 2,581 open issues, MIT, last push 2026-10-25. README documents the 2026 `llama` unified CLI (`llama cli -hf …`, `llama serve -hf …`, install scripts at llama.app), 1.5- to 8-bit quantisation, CUDA/HIP/MUSA/Vulkan/SYCL/Metal backends, CPU+GPU hybrid inference, and the built-in web UI.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

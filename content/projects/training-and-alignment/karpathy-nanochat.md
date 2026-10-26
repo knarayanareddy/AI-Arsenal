@@ -1,52 +1,65 @@
 ---
 id: karpathy-nanochat
-name: "nanochat"
+name: nanochat
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: fine-tuning
-description: "MIT-licensed single-GPU recipe that pretrains, midtrains, and instruction-tunes a small chat model end to end in one repository"
-github_url: "https://github.com/karpathy/nanochat"
-license: "MIT"
+description: MIT-licensed single-GPU recipe that pretrains, midtrains, and instruction-tunes a small chat model end to end in one repository
+github_url: https://github.com/karpathy/nanochat
+license: MIT
 primary_language: Python
-org_or_maintainer: "karpathy"
-tags: [llm, pytorch, fine-tuning]
+org_or_maintainer: karpathy
+tags:
+  - llm
+  - pytorch
+  - fine-tuning
 maturity: alpha
 cost_model: open-source
-github_stars: 58303
-github_stars_last_30d: 0
-trending_score: 37
-last_commit: "2026-09-07"
+github_stars: 58949
+github_stars_last_30d: 646
+trending_score: 73
+last_commit: '2026-09-07'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The smallest honest chat-model recipe — pretrain, midtrain, and SFT a full pipeline on one GPU — used as the reference for what a modern small-model stack actually requires."
+  - The smallest honest chat-model recipe — pretrain, midtrain, and SFT a full pipeline on one GPU — used as the reference for what a modern small-model stack actually requires.
 best_for:
-  - "You are designing a training stack and want one readable pipeline covering tokenizer, pretrain, midtrain, SFT, and evaluation with no framework magic between the stages."
-  - "You want a reproducible reference for the midtraining step, which is the least-documented phase in most small-model chat recipes and the one that most affects instruction-following behavior."
-  - "You are evaluating whether your own training stack is missing a stage, since a four-stage pipeline with a held-out perplexity and chat check is a fast way to find the gap."
+  - You are designing a training stack and want one readable pipeline covering tokenizer, pretrain, midtrain, SFT, and evaluation with no framework magic between the stages.
+  - You want a reproducible reference for the midtraining step, which is the least-documented phase in most small-model chat recipes and the one that most affects instruction-following behavior.
+  - You are evaluating whether your own training stack is missing a stage, since a four-stage pipeline with a held-out perplexity and chat check is a fast way to find the gap.
 avoid_if:
-  - "You need a model good enough to serve, because the target is deliberately a small model with a small token budget and its output will not hold a real workload."
-  - "You need multi-node or multi-GPU training, because the whole design presumes one accelerator and a data budget measured in hours rather than weeks."
-  - "You want a supported production stack with issue triage and release notes, since the project is a reference implementation and its breaking changes are unannounced."
+  - You need a model good enough to serve, because the target is deliberately a small model with a small token budget and its output will not hold a real workload.
+  - You need multi-node or multi-GPU training, because the whole design presumes one accelerator and a data budget measured in hours rather than weeks.
+  - You want a supported production stack with issue triage and release notes, since the project is a reference implementation and its breaking changes are unannounced.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 58303 stars, MIT license, Python primary language, last commit 2026-09-07, empty topics list, no homepage field. Stage names and the speedrun script are read from the repository README and script list; the hundred-dollar cost and quality claims are the author's own and were not reproduced."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 58303 stars, MIT license, Python primary language, last commit 2026-09-07, empty topics list, no homepage field. Stage names and the speedrun script are read from the repository README and script list; the hundred-dollar cost and quality claims are the author''s own and were not reproduced.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/karpathy/nanochat", "date": "2026-09-28", "description": "58,303 stars and last commit 2026-09-07 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/karpathy/nanochat
+    date: '2026-09-28'
+    description: 58,303 stars and last commit 2026-09-07 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "mistralai"
+org_or_maintainer: mistralai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 188
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: mistral-vibe
-name: "Mistral Vibe"
+name: Mistral Vibe
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Mistral's open-source terminal coding agent with subagent delegation, a trust-folder model and MCP support"
-github_url: "https://github.com/mistralai/mistral-vibe"
+description: Mistral's open-source terminal coding agent with subagent delegation, a trust-folder model and MCP support
+github_url: https://github.com/mistralai/mistral-vibe
 license: Apache-2.0
 primary_language: Python
-tags: [code-gen, agents]
+tags:
+  - code-gen
+  - agents
 maturity: beta
 cost_model: usage-based
-github_stars: 5016
-last_commit: "2026-09-23"
-docs_url: "https://github.com/mistralai/mistral-vibe#readme"
+github_stars: 5204
+last_commit: '2026-10-22'
+docs_url: https://github.com/mistralai/mistral-vibe#readme
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Mistral open-source CLI coding assistant with skills and subagents"
-  - "Terminal alternative for delegated repository work and voice interaction"
-best_for: ["You want a terminal coding agent from a model vendor so the default model and the agent harness are developed and versioned together rather than assembled from parts.", "You are running a parallel job — migrations, refactors, test sweeps — and want the agent to delegate chunks to subagents through the task tool instead of blocking on one sequential loop.", "You want to bring your own external tools, because MCP server configuration and a skills system for custom slash commands are both first-class in the README."]
-avoid_if: ["You need to work offline, because the agent is powered by Mistral's hosted models and the install path assumes an API key rather than pointing at a local server.", "You are on Windows and want first-class support, because the README states plainly that it works there but that UNIX environments are officially supported and targeted.", "You need to read or modify files outside the project, because the trust-folder system exists precisely to keep the agent inside directories you have granted."]
-enrichment_notes: "The CLI is an active open-source project, but coding-agent quality and tool permissions remain model- and repository-dependent. Draft pending review."
+  - Mistral open-source CLI coding assistant with skills and subagents
+  - Terminal alternative for delegated repository work and voice interaction
+best_for:
+  - You want a terminal coding agent from a model vendor so the default model and the agent harness are developed and versioned together rather than assembled from parts.
+  - You are running a parallel job — migrations, refactors, test sweeps — and want the agent to delegate chunks to subagents through the task tool instead of blocking on one sequential loop.
+  - You want to bring your own external tools, because MCP server configuration and a skills system for custom slash commands are both first-class in the README.
+avoid_if:
+  - You need to work offline, because the agent is powered by Mistral's hosted models and the install path assumes an API key rather than pointing at a local server.
+  - You are on Windows and want first-class support, because the README states plainly that it works there but that UNIX environments are officially supported and targeted.
+  - You need to read or modify files outside the project, because the trust-folder system exists precisely to keep the agent inside directories you have granted.
+enrichment_notes: The CLI is an active open-source project, but coding-agent quality and tool permissions remain model- and repository-dependent. Draft pending review.
 ---
 
 ## Overview

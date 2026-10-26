@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills"
-github_url: "https://github.com/lessweb/deepcode-cli"
+description: TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills
+github_url: https://github.com/lessweb/deepcode-cli
 license: MIT
 primary_language: TypeScript
-tags: [code-gen, llm, agents]
+tags:
+  - code-gen
+  - llm
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 2256
+github_stars: 2170
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/lessweb/deepcode-cli#readme"
+trending_score: 23
+last_commit: '2026-10-26'
+docs_url: https://github.com/lessweb/deepcode-cli#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "A deliberately single-model harness whose argument is that tool schemas are not neutral and DeepSeek performs best in a harness shaped for it."
+  - A deliberately single-model harness whose argument is that tool schemas are not neutral and DeepSeek performs best in a harness shaped for it.
 best_for:
-  - "You want a DeepSeek-only terminal assistant and you prefer a harness tuned to one model's behaviour over a generic multi-provider wrapper."
-  - "You rely on DeepSeek's thinking mode and want explicit reasoning-effort control plus a raw-scroll mode for inspecting the full chain."
-  - "You want agent skills that follow both DeepSeek-native and cross-client directory conventions so the same skills work in other tools."
+  - You want a DeepSeek-only terminal assistant and you prefer a harness tuned to one model's behaviour over a generic multi-provider wrapper.
+  - You rely on DeepSeek's thinking mode and want explicit reasoning-effort control plus a raw-scroll mode for inspecting the full chain.
+  - You want agent skills that follow both DeepSeek-native and cross-client directory conventions so the same skills work in other tools.
 avoid_if:
-  - "You need to switch between model vendors mid-task, because the architecture explicitly forgoes generality in favour of one tuned target."
-  - "You need the deepest reasoning controls available, because the highest documented reasoningEffort setting is already max."
-  - "You need a mature, heavily English-documented project, because the README is primarily Chinese and the surrounding documentation is thinner than for the English-first entries here."
+  - You need to switch between model vendors mid-task, because the architecture explicitly forgoes generality in favour of one tuned target.
+  - You need the deepest reasoning controls available, because the highest documented reasoningEffort setting is already max.
+  - You need a mature, heavily English-documented project, because the README is primarily Chinese and the surrounding documentation is thinner than for the English-first entries here.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install command, settings keys, slash-command table, skill directory precedence and the tuning rationale are read from the official README; the third-party benchmark was not rerun."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Install command, settings keys, slash-command table, skill directory precedence and the tuning rationale are read from the official README; the third-party benchmark was not rerun.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

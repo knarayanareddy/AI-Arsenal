@@ -1,52 +1,61 @@
 ---
 id: ml-explore-mlx
-name: "mlx"
+name: mlx
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "MIT-licensed array framework with a NumPy-like API and lazy evaluation built on Apple silicon's unified memory"
-github_url: "https://github.com/ml-explore/mlx"
-license: "MIT"
+description: MIT-licensed array framework with a NumPy-like API and lazy evaluation built on Apple silicon's unified memory
+github_url: https://github.com/ml-explore/mlx
+license: MIT
 primary_language: C++
-org_or_maintainer: "ml-explore"
-tags: [local]
+org_or_maintainer: ml-explore
+tags:
+  - local
 maturity: beta
 cost_model: open-source
-github_stars: 28582
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://ml-explore.github.io/mlx/"
+github_stars: 28944
+github_stars_last_30d: 362
+trending_score: 62
+last_commit: '2026-10-26'
+docs_url: https://ml-explore.github.io/mlx/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Array framework with a NumPy-like API and a lazy unified-memory execution model, purpose-built for Apple silicon so training and inference loops never leave the SoC."
+  - Array framework with a NumPy-like API and a lazy unified-memory execution model, purpose-built for Apple silicon so training and inference loops never leave the SoC.
 best_for:
-  - "You are on a Mac and want to fine-tune or run a small language model without a separate GPU, because the unified memory removes the host-device copy the CUDA path is built around."
-  - "You are porting a NumPy or JAX-style model to a Mac, and you want a familiar functional API plus composition, with the same lazy-graph execution model the array frameworks use."
-  - "You are prototyping an on-device model for iOS or macOS and want the same library in the prototype and in a Metal-backed application."
+  - You are on a Mac and want to fine-tune or run a small language model without a separate GPU, because the unified memory removes the host-device copy the CUDA path is built around.
+  - You are porting a NumPy or JAX-style model to a Mac, and you want a familiar functional API plus composition, with the same lazy-graph execution model the array frameworks use.
+  - You are prototyping an on-device model for iOS or macOS and want the same library in the prototype and in a Metal-backed application.
 avoid_if:
-  - "Your deployment is Linux with an NVIDIA GPU, because the framework targets Apple silicon and you gain nothing from its memory model elsewhere."
-  - "You need the breadth of the dominant model-definition ecosystem, since checkpoints and third-party code written against the eager PyTorch interface do not run here without conversion."
-  - "You need distributed multi-node training, because the supported execution is local to one machine's unified memory with no cluster story."
+  - Your deployment is Linux with an NVIDIA GPU, because the framework targets Apple silicon and you gain nothing from its memory model elsewhere.
+  - You need the breadth of the dominant model-definition ecosystem, since checkpoints and third-party code written against the eager PyTorch interface do not run here without conversion.
+  - You need distributed multi-node training, because the supported execution is local to one machine's unified memory with no cluster story.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 28582 stars, MIT license, C++ primary language, last commit 2026-09-28, single topic 'mlx', homepage ml-explore.github.io. Lazy evaluation, unified-memory scheduling, reverse-mode grad, and conversion utilities are from official docs; the code sample was not executed on Apple hardware here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 28582 stars, MIT license, C++ primary language, last commit 2026-09-28, single topic ''mlx'', homepage ml-explore.github.io. Lazy evaluation, unified-memory scheduling, reverse-mode grad, and conversion utilities are from official docs; the code sample was not executed on Apple hardware here.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/ml-explore/mlx", "date": "2026-09-28", "description": "28,582 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/ml-explore/mlx
+    date: '2026-09-28'
+    description: 28,582 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

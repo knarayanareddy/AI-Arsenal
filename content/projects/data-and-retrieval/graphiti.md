@@ -1,46 +1,67 @@
 ---
 id: graphiti
-name: "Graphiti"
+name: Graphiti
 version_tracked: null
 artifact_type: framework
 category: rag
 subcategory: vector-databases
-description: "Framework for temporal knowledge graphs that track how facts change over time with provenance, incremental updates and hybrid retrieval"
-github_url: "https://github.com/getzep/graphiti"
+description: Framework for temporal knowledge graphs that track how facts change over time with provenance, incremental updates and hybrid retrieval
+github_url: https://github.com/getzep/graphiti
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Zep AI"
-tags: [retrieval, agents]
+org_or_maintainer: Zep AI
+tags:
+  - retrieval
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 31273
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://help.getzep.com/graphiti"
+github_stars: 32242
+github_stars_last_30d: 969
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://help.getzep.com/graphiti
 demo_url: null
-paper_url: "https://arxiv.org/abs/2501.13956"
+paper_url: https://arxiv.org/abs/2501.13956
 paper_id: null
 phase: data-and-retrieval
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The temporal-knowledge-graph approach to agent memory: instead of appending embeddings to a vector store, Graphiti incrementally builds an entity-relationship graph where every edge carries validity intervals, so agents can ask what was true when — the engine underneath Zep's memory platform."
-best_for: ["You need an agent that answers questions about how facts changed over time, because the context graph records validity intervals rather than overwriting a fact when it stops being true.", "Your corpus is enterprise or interaction data that arrives continuously, because incremental updates avoid complete graph recomputation on every write.", "You need to know where a fact came from, because the graph maintains provenance back to source data rather than storing assertions without attribution."]
-avoid_if: ["You need a one-shot static knowledge graph or a plain vector search, because temporal validity and provenance are the features you are paying for in complexity.", "You cannot afford the extraction step, because getting facts and relationships out of unstructured text is model work that happens before anything is stored.", "Your data rarely changes, because incremental update machinery and edge invalidation earn their cost only when facts actually evolve."]
+  - 'The temporal-knowledge-graph approach to agent memory: instead of appending embeddings to a vector store, Graphiti incrementally builds an entity-relationship graph where every edge carries validity intervals, so agents can ask what was true when — the engine underneath Zep''s memory platform.'
+best_for:
+  - You need an agent that answers questions about how facts changed over time, because the context graph records validity intervals rather than overwriting a fact when it stops being true.
+  - Your corpus is enterprise or interaction data that arrives continuously, because incremental updates avoid complete graph recomputation on every write.
+  - You need to know where a fact came from, because the graph maintains provenance back to source data rather than storing assertions without attribution.
+avoid_if:
+  - You need a one-shot static knowledge graph or a plain vector search, because temporal validity and provenance are the features you are paying for in complexity.
+  - You cannot afford the extraction step, because getting facts and relationships out of unstructured text is model work that happens before anything is stored.
+  - Your data rarely changes, because incremental update machinery and edge invalidation earn their cost only when facts actually evolve.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [mem0]
-integrates_with: [letta, zep]
+alternatives:
+  - mem0
+integrates_with:
+  - letta
+  - zep
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (28,508), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (28,508), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/getzep/graphiti", "date": "2026-07-08", "description": "28,508 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/getzep/graphiti
+    date: '2026-07-08'
+    description: 28,508 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

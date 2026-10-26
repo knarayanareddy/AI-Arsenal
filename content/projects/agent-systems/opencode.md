@@ -1,50 +1,69 @@
 ---
 id: opencode
-name: "opencode"
+name: opencode
 version_tracked: null
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split"
-github_url: "https://github.com/anomalyco/opencode"
-license: "MIT"
+description: Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
+github_url: https://github.com/anomalyco/opencode
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "Anomaly"
-tags: [code-gen, agents, tool-use, streaming]
+org_or_maintainer: Anomaly
+tags:
+  - code-gen
+  - agents
+  - tool-use
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 203399
-github_stars_last_30d: 0
-trending_score: 92
-last_commit: "2026-09-03"
-docs_url: "https://github.com/anomalyco/opencode#readme"
+github_stars: 221827
+github_stars_last_30d: 2
+trending_score: 15
+last_commit: '2026-10-26'
+docs_url: https://github.com/anomalyco/opencode#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, community-driven, org-backed]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
+  - org-backed
 ecosystem_role:
-  - "The most-starred open terminal coding agent: a TypeScript client/server pair where the agent loop runs in a server process and the terminal UI is one of several clients that can attach to it."
+  - 'The most-starred open terminal coding agent: a TypeScript client/server pair where the agent loop runs in a server process and the terminal UI is one of several clients that can attach to it.'
 best_for:
-  - "You live in a terminal and want an editing agent that streams diffs, runs your test suite, and rolls back failed edits without leaving the shell or opening an IDE"
-  - "You want to standardise a team on one open coding agent while keeping model choice open, since bring-your-own-key access spans hosted APIs and local runtimes"
+  - You live in a terminal and want an editing agent that streams diffs, runs your test suite, and rolls back failed edits without leaving the shell or opening an IDE
+  - You want to standardise a team on one open coding agent while keeping model choice open, since bring-your-own-key access spans hosted APIs and local runtimes
 avoid_if:
-  - "Your engineers work inside an IDE and expect inline completions and gutter affordances — a TUI agent is a different interaction surface, not a drop-in for editor integration"
-  - "You need the agent to operate under a reviewed, fixed prompt-and-tool contract; the default configuration is tuned for general software work, not for a constrained tool budget"
+  - Your engineers work inside an IDE and expect inline completions and gutter affordances — a TUI agent is a different interaction surface, not a drop-in for editor integration
+  - You need the agent to operate under a reviewed, fixed prompt-and-tool contract; the default configuration is tuned for general software work, not for a constrained tool budget
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [openhands, aider, cline]
-integrates_with: [mcp-servers]
+alternatives:
+  - openhands
+  - aider
+  - cline
+integrates_with:
+  - mcp-servers
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (203,399), forks (26,532), licence (MIT), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The canonical repository resolves to anomalyco/opencode; earlier references to sst/opencode redirect there after the project moved organisations. Architecture claims derive from the README and repository layout, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (203,399), forks (26,532), licence (MIT), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The canonical repository resolves to anomalyco/opencode; earlier references to sst/opencode redirect there after the project moved organisations. Architecture claims derive from the README and repository layout, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/anomalyco/opencode", "date": "2026-09-03", "description": "203,399 stars on GitHub as of 2026-09-03 (GitHub API), the highest-starred open terminal coding agent surveyed"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/anomalyco/opencode
+    date: '2026-09-03'
+    description: 203,399 stars on GitHub as of 2026-09-03 (GitHub API), the highest-starred open terminal coding agent surveyed
 featured: true
 status: active
 ---

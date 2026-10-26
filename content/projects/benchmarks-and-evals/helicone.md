@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: platform
 category: observability
 subcategory: tracing
-description: "Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions"
-github_url: "https://github.com/Helicone/helicone"
+description: 'Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions'
+github_url: https://github.com/Helicone/helicone
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, monitoring, cloud, self-hosted]
+tags:
+  - observability
+  - monitoring
+  - cloud
+  - self-hosted
 maturity: production
 cost_model: freemium
 github_stars: 6238
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-10-24"
-docs_url: "https://docs.helicone.ai/"
+github_stars_last_30d: 429
+trending_score: 49
+last_commit: '2026-10-24'
+docs_url: https://docs.helicone.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,11 +33,17 @@ supported_formats: []
 api_compatible: null
 approach: proxy
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "An LLM gateway that doubles as the observability layer: the same base-URL redirect that routes traffic across providers is what produces the traces, costs and sessions"
+  - 'An LLM gateway that doubles as the observability layer: the same base-URL redirect that routes traffic across providers is what produces the traces, costs and sessions'
 best_for:
   - You want traces, costs and sessions without instrumenting the application, and are willing to send inference through a gateway to get them — one baseURL and one API key replaces per-provider SDK setup
   - You want provider routing and automatic fallbacks in the same component that records the calls, rather than a separate gateway plus a separate observability tool
@@ -44,13 +54,17 @@ avoid_if:
   - Your team has no appetite for operating ClickHouse, Postgres, MinIO and a worker tier, which is what the self-hosted docker-compose stack requires
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, opik]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - opik
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Re-verified 2026-10-25: GitHub API 6238 stars, 172 open issues, last push 2026-10-24. Body rewritten from the README, which now positions the proxy as an AI gateway (100+ providers, routing, fallbacks, sessions, 10k free requests/month) and documents the five-service self-hosted stack."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: GitHub API 6238 stars, 172 open issues, last push 2026-10-24. Body rewritten from the README, which now positions the proxy as an AI gateway (100+ providers, routing, fallbacks, sessions, 10k free requests/month) and documents the five-service self-hosted stack.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

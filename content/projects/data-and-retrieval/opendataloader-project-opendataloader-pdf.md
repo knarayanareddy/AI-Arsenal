@@ -1,52 +1,63 @@
 ---
 id: opendataloader-project-opendataloader-pdf
-name: "opendataloader-pdf"
+name: opendataloader-pdf
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: document-processing
-description: "Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility"
-github_url: "https://github.com/opendataloader-project/opendataloader-pdf"
-license: "Apache-2.0"
+description: Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
+github_url: https://github.com/opendataloader-project/opendataloader-pdf
+license: Apache-2.0
 primary_language: Java
-org_or_maintainer: "opendataloader-project"
-tags: [rag]
+org_or_maintainer: opendataloader-project
+tags:
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 29391
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://opendataloader.org"
+github_stars: 30033
+github_stars_last_30d: 642
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://opendataloader.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "PDF parser built for AI-ready extraction, producing structured tagged output and repairing PDFs for accessibility rather than only extracting glyphs."
+  - PDF parser built for AI-ready extraction, producing structured tagged output and repairing PDFs for accessibility rather than only extracting glyphs.
 best_for:
-  - "You are building a RAG index over a PDF corpus and reading order or table structure is breaking your chunks, so you need a parser that emits tagged structure rather than a flat text stream."
-  - "You have a regulatory accessibility obligation, such as the European Accessibility Act, and want one tool that produces both the accessible tagged PDF and the structured text your model consumes."
-  - "Your documents are mixed born-digital and scanned, and you want a single pipeline that detects text versus images and routes the image pages through OCR with bounding boxes."
+  - You are building a RAG index over a PDF corpus and reading order or table structure is breaking your chunks, so you need a parser that emits tagged structure rather than a flat text stream.
+  - You have a regulatory accessibility obligation, such as the European Accessibility Act, and want one tool that produces both the accessible tagged PDF and the structured text your model consumes.
+  - Your documents are mixed born-digital and scanned, and you want a single pipeline that detects text versus images and routes the image pages through OCR with bounding boxes.
 avoid_if:
-  - "Your corpus is HTML, Markdown, or office documents rather than PDF, where a different converter in content/projects/data-and-retrieval/ is the direct answer."
-  - "You need a Python-only pipeline with no JVM in your environment, because the implementation is Java and you will be shipping or side-loading a runtime."
-  - "You need pixel-perfect visual fidelity, since the output is a structural and accessibility representation of a page, not a rendering of what a human would see."
+  - Your corpus is HTML, Markdown, or office documents rather than PDF, where a different converter in content/projects/data-and-retrieval/ is the direct answer.
+  - You need a Python-only pipeline with no JVM in your environment, because the implementation is Java and you will be shipping or side-loading a runtime.
+  - You need pixel-perfect visual fidelity, since the output is a structural and accessibility representation of a page, not a rendering of what a human would see.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 29391 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 18 GitHub topics including a11y, eaa, pdf-ua, tagged-pdf, ocr-recognition. Output formats, the tagging and PDF/UA goal, and the OCR routing are from official docs; the exact CLI flag names may vary by release and were not executed."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 29391 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 18 GitHub topics including a11y, eaa, pdf-ua, tagged-pdf, ocr-recognition. Output formats, the tagging and PDF/UA goal, and the OCR routing are from official docs; the exact CLI flag names may vary by release and were not executed.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/opendataloader-project/opendataloader-pdf", "date": "2026-09-28", "description": "29,391 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/opendataloader-project/opendataloader-pdf
+    date: '2026-09-28'
+    description: 29,391 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

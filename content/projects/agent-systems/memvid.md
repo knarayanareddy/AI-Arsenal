@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "memvid"
+org_or_maintainer: memvid
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 46
+trending_score: 19
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: memvid
-name: "Memvid"
+name: Memvid
 artifact_type: library
 category: agents
 subcategory: libraries
-description: "Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames"
-github_url: "https://github.com/memvid/memvid"
+description: Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames
+github_url: https://github.com/memvid/memvid
 license: Apache-2.0
 primary_language: Rust
-tags: [retrieval, embeddings]
+tags:
+  - retrieval
+  - embeddings
 maturity: beta
 cost_model: open-source
-github_stars: 16564
-last_commit: "2026-07-14"
-docs_url: "https://docs.memvid.com"
+github_stars: 16610
+last_commit: '2026-07-14'
+docs_url: https://docs.memvid.com
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A single-file agent memory layer offering portable semantic retrieval without operating a vector database."
-best_for: ["You are shipping an agent that needs persistent memory on a laptop or edge device and cannot justify standing up a vector database or an embedding service.", "You want memory you can version, copy between machines, and query at earlier points in time, because the frame design makes writes append-only and history rewindable.", "You are an engineer evaluating a memory layer and want a reproducible benchmark harness, because the project publishes an open-source LoCoMo evaluation with an LLM-as-judge scorer."]
-avoid_if: ["You need concurrent writers across a service fleet, because the design is an append-only single file rather than a networked store that coordinates multiple clients.", "You cannot accept project-published accuracy numbers without independent reproduction, because the headline gains are vendor benchmarks and the store is only at 1,600 stars with recent activity.", "Your memory is large enough that a single file becomes an operational problem, because there is no server tier described anywhere in the design."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Novel approach; benchmark against a conventional vector store for your workload."
+  - A single-file agent memory layer offering portable semantic retrieval without operating a vector database.
+best_for:
+  - You are shipping an agent that needs persistent memory on a laptop or edge device and cannot justify standing up a vector database or an embedding service.
+  - You want memory you can version, copy between machines, and query at earlier points in time, because the frame design makes writes append-only and history rewindable.
+  - You are an engineer evaluating a memory layer and want a reproducible benchmark harness, because the project publishes an open-source LoCoMo evaluation with an LLM-as-judge scorer.
+avoid_if:
+  - You need concurrent writers across a service fleet, because the design is an append-only single file rather than a networked store that coordinates multiple clients.
+  - You cannot accept project-published accuracy numbers without independent reproduction, because the headline gains are vendor benchmarks and the store is only at 1,600 stars with recent activity.
+  - Your memory is large enough that a single file becomes an operational problem, because there is no server tier described anywhere in the design.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Novel approach; benchmark against a conventional vector store for your workload.
 ---
 
 ## Overview

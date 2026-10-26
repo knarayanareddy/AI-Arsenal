@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "NanoNets"
+org_or_maintainer: NanoNets
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 3
+trending_score: 15
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: docext
-name: "docext"
+name: docext
 artifact_type: tool
 category: data-pipelines
 subcategory: document-processing
-description: "On-premises document toolkit using vision-language models for image-to-markdown conversion, key information extraction, and IDP benchmarking"
-github_url: "https://github.com/NanoNets/docext"
+description: On-premises document toolkit using vision-language models for image-to-markdown conversion, key information extraction, and IDP benchmarking
+github_url: https://github.com/NanoNets/docext
 license: Apache-2.0
 primary_language: Python
-tags: [llm, training]
+tags:
+  - llm
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 2085
-last_commit: "2026-03-17"
-docs_url: "https://nanonets.com/document-parsing-and-extraction"
+github_stars: 2088
+last_commit: '2026-03-17'
+docs_url: https://nanonets.com/document-parsing-and-extraction
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "On-prem document-intelligence tool that complements OCR/VLM models and competes with hosted extraction APIs"
-best_for: ["You want to convert PDFs and images to markdown that preserves equations, tables, signatures and watermarks as semantic content, because that is the toolkit's primary conversion path.", "You need fields and tables extracted from invoices, passports and similar documents with a confidence score, because that is the OCR-free extraction capability with scoring.", "You are choosing a VLM for document work and want a leaderboard, because the project includes a benchmarking platform tracking OCR, key information extraction, classification and table extraction performance."]
-avoid_if: ["You need a high-throughput, low-latency extraction service, because a VLM pass per page is substantially more expensive than a classic OCR engine on the same page.", "You are on hardware that cannot host a vision-language model, because the toolkit is explicitly on-premises and model-backed rather than a lightweight OCR binary.", "You need a mature, decades-old OCR engine with tuned accuracy on a single script, because the trade here is semantic understanding rather than character-recognition throughput."]
-enrichment_notes: "Last commit 2026-03-17; do not mark actively-maintained. Nanonets-OCR-s and leaderboard claims are vendor-associated. Draft pending review."
+  - On-prem document-intelligence tool that complements OCR/VLM models and competes with hosted extraction APIs
+best_for:
+  - You want to convert PDFs and images to markdown that preserves equations, tables, signatures and watermarks as semantic content, because that is the toolkit's primary conversion path.
+  - You need fields and tables extracted from invoices, passports and similar documents with a confidence score, because that is the OCR-free extraction capability with scoring.
+  - You are choosing a VLM for document work and want a leaderboard, because the project includes a benchmarking platform tracking OCR, key information extraction, classification and table extraction performance.
+avoid_if:
+  - You need a high-throughput, low-latency extraction service, because a VLM pass per page is substantially more expensive than a classic OCR engine on the same page.
+  - You are on hardware that cannot host a vision-language model, because the toolkit is explicitly on-premises and model-backed rather than a lightweight OCR binary.
+  - You need a mature, decades-old OCR engine with tuned accuracy on a single script, because the trade here is semantic understanding rather than character-recognition throughput.
+enrichment_notes: Last commit 2026-03-17; do not mark actively-maintained. Nanonets-OCR-s and leaderboard claims are vendor-associated. Draft pending review.
 ---
 
 ## Overview

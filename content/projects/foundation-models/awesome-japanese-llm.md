@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: open-source-models
-description: "Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns"
-github_url: "https://github.com/llm-jp/awesome-japanese-llm"
+description: Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns
+github_url: https://github.com/llm-jp/awesome-japanese-llm
 license: Apache-2.0
 primary_language: TypeScript
-tags: [community-favorite, research, security]
+tags:
+  - community-favorite
+  - research
+  - security
 maturity: beta
 cost_model: open-source
-github_stars: 1433
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-26"
-docs_url: "https://llm-jp.github.io/awesome-japanese-llm"
+github_stars: 1442
+github_stars_last_30d: 9
+trending_score: 24
+last_commit: '2026-10-25'
+docs_url: https://llm-jp.github.io/awesome-japanese-llm
 demo_url: null
 phase: foundation-model
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns a scattered set of Japanese model releases into one comparable table, with licensing called out per row."
+  - Turns a scattered set of Japanese model releases into one comparable table, with licensing called out per row.
 best_for:
-  - "You are choosing a Japanese base or instruct model and you need pretraining token counts, context length and developer provenance side by side rather than from memory."
-  - "You are checking whether a specific Japanese checkpoint is actually open source, because several rows carry non-commercial or organisation-specific terms."
-  - "You are surveying Japanese evaluation benchmarks and you want to know which harnesses the community actually runs before writing your own."
+  - You are choosing a Japanese base or instruct model and you need pretraining token counts, context length and developer provenance side by side rather than from memory.
+  - You are checking whether a specific Japanese checkpoint is actually open source, because several rows carry non-commercial or organisation-specific terms.
+  - You are surveying Japanese evaluation benchmarks and you want to know which harnesses the community actually runs before writing your own.
 avoid_if:
-  - "You need a machine-readable API, since the catalogue is a Markdown document rendered by a static site and carries no structured feed."
-  - "You need a guarantee of completeness or accuracy, because the maintainers state explicitly that entries are volunteer collected and may be incomplete, stale or interpretive."
-  - "You are automating a license audit, because terms are summarised in prose cells and must be verified against each model's own license file."
+  - You need a machine-readable API, since the catalogue is a Markdown document rendered by a static site and carries no structured feed.
+  - You need a guarantee of completeness or accuracy, because the maintainers state explicitly that entries are volunteer collected and may be incomplete, stale or interpretive.
+  - You are automating a license audit, because terms are summarised in prose cells and must be verified against each model's own license file.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Table contents, the licence warning and the site URL are read from the README; individual model licences and the accuracy of every row were not independently checked."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Table contents, the licence warning and the site URL are read from the README; individual model licences and the accuracy of every row were not independently checked.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

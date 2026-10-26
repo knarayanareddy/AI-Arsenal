@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "TransformerOptimus"
+org_or_maintainer: TransformerOptimus
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+github_stars_last_30d: 6
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: watching
 id: superagi
-name: "SuperAGI"
+name: SuperAGI
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "Dev-first autonomous agent platform with a GUI, action console, toolkit marketplace and vector-backed memory"
-github_url: "https://github.com/TransformerOptimus/SuperAGI"
+description: Dev-first autonomous agent platform with a GUI, action console, toolkit marketplace and vector-backed memory
+github_url: https://github.com/TransformerOptimus/SuperAGI
 license: MIT
 primary_language: Python
-tags: [agents, tool-use, self-hosted, docker]
+tags:
+  - agents
+  - tool-use
+  - self-hosted
+  - docker
 maturity: beta
 cost_model: open-source
-github_stars: 17712
-last_commit: "2025-01-22"
-docs_url: "https://superagi.com/docs/"
+github_stars: 17718
+last_commit: '2025-01-22'
+docs_url: https://superagi.com/docs/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "deploy-as-is"
+  - study-and-reference
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "community-driven"
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "An early autonomous-agent platform pairing a GUI and tool marketplace with concurrent, memory-backed agents."
-best_for: ["You are piloting autonomous agents with non-engineers in the loop and need a graphical interface plus an action console where a human grants permissions per run.", "You want a toolkit marketplace instead of hand-written connectors, because packages for Twitter, Instagram, email, Jira, file management and knowledge search install into an agent's workflow.", "You are evaluating token spend per agent, because the platform exposes performance telemetry and an optimised-token-usage control rather than leaving cost to guesswork."]
-avoid_if: ["You are starting a new project, because the last commit on record is from January 2025 and the surrounding agent frameworks have moved on substantially since.", "You need a library rather than a platform, since the unit of deployment is a Docker Compose stack with Postgres, Redis, Celery and nginx rather than a pip package.", "You want hosted support or an SLA, because the community routes in the README run to a Discord, a subreddit and a maintainer's social account rather than a support contract."]
-enrichment_notes: "Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform. Dormancy re-checked 2026-10-24, when the GitHub API reported 17712 stars, 263 open issues and last push 2025-01-22; claims re-read against the repository and status set to watching."
+  - An early autonomous-agent platform pairing a GUI and tool marketplace with concurrent, memory-backed agents.
+best_for:
+  - You are piloting autonomous agents with non-engineers in the loop and need a graphical interface plus an action console where a human grants permissions per run.
+  - You want a toolkit marketplace instead of hand-written connectors, because packages for Twitter, Instagram, email, Jira, file management and knowledge search install into an agent's workflow.
+  - You are evaluating token spend per agent, because the platform exposes performance telemetry and an optimised-token-usage control rather than leaving cost to guesswork.
+avoid_if:
+  - You are starting a new project, because the last commit on record is from January 2025 and the surrounding agent frameworks have moved on substantially since.
+  - You need a library rather than a platform, since the unit of deployment is a Docker Compose stack with Postgres, Redis, Celery and nginx rather than a pip package.
+  - You want hosted support or an SLA, because the community routes in the README run to a Discord, a subreddit and a maintainer's social account rather than a support contract.
+enrichment_notes: Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform. Dormancy re-checked 2026-10-24, when the GitHub API reported 17712 stars, 263 open issues and last push 2025-01-22; claims re-read against the repository and status set to watching.
 ---
 
 ## Overview

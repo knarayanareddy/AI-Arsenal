@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "An agent skill that pushes agents toward the laziest sufficient solution, with a benchmarked code-volume reduction writeup"
-github_url: "https://github.com/DietrichGebert/ponytail"
+description: An agent skill that pushes agents toward the laziest sufficient solution, with a benchmarked code-volume reduction writeup
+github_url: https://github.com/DietrichGebert/ponytail
 license: MIT
 primary_language: Other
-tags: [agents, community-favorite, code-gen, structured-output]
+tags:
+  - agents
+  - community-favorite
+  - code-gen
+  - structured-output
 maturity: beta
 cost_model: open-source
-github_stars: 147381
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-14"
-docs_url: "https://ponytail.dev"
+github_stars: 176834
+github_stars_last_30d: 29453
+trending_score: 63
+last_commit: '2026-10-18'
+docs_url: https://ponytail.dev
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Targets the most common failure in agentic coding - over-building - and publishes the measurement instead of the slogan."
+  - Targets the most common failure in agentic coding - over-building - and publishes the measurement instead of the slogan.
 best_for:
-  - "You are reviewing agent-authored code that adds a dependency and a wrapper where one line of platform API would do."
-  - "You are measuring whether an agent skill changes output quality as well as code volume on your own codebase."
-  - "You want a YAGNI posture encoded as an instruction an agent reads before it starts writing, rather than a review rule you apply later."
+  - You are reviewing agent-authored code that adds a dependency and a wrapper where one line of platform API would do.
+  - You are measuring whether an agent skill changes output quality as well as code volume on your own codebase.
+  - You want a YAGNI posture encoded as an instruction an agent reads before it starts writing, rather than a review rule you apply later.
 avoid_if:
-  - "You are building features that genuinely need abstraction now, because the skill will keep steering toward the smaller wrong answer."
-  - "You are in a codebase with heavy platform-dependency constraints, since recommending the platform primitive may not apply."
-  - "You need a guaranteed reduction, because the benchmark mean hides a distribution where the gain is near zero."
+  - You are building features that genuinely need abstraction now, because the skill will keep steering toward the smaller wrong answer.
+  - You are in a codebase with heavy platform-dependency constraints, since recommending the platform primitive may not apply.
+  - You need a guaranteed reduction, because the benchmark mean hides a distribution where the gain is near zero.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 147381, MIT, JavaScript, last commit 2026-09-14, topics, homepage. From README: ~54% mean and up to 94% code reduction, ~20% cheaper, ~27% faster, 12 tasks, Haiku 4.5 n=4, FastAPI+React repo, benchmarks writeup, npm package. Benchmarks not verified."
+enrichment_notes: 'API-verified: stars 147381, MIT, JavaScript, last commit 2026-09-14, topics, homepage. From README: ~54% mean and up to 94% code reduction, ~20% cheaper, ~27% faster, 12 tasks, Haiku 4.5 n=4, FastAPI+React repo, benchmarks writeup, npm package. Benchmarks not verified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

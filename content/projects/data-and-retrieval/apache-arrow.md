@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "apache"
+org_or_maintainer: apache
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 72
+trending_score: 21
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: apache-arrow
-name: "Apache Arrow"
+name: Apache Arrow
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "Apache Software Foundation columnar format, IPC serialization and Flight RPC underpinning in-memory data exchange"
-github_url: "https://github.com/apache/arrow"
+description: Apache Software Foundation columnar format, IPC serialization and Flight RPC underpinning in-memory data exchange
+github_url: https://github.com/apache/arrow
 license: Apache-2.0
 primary_language: C++
-tags: [memory, retrieval]
+tags:
+  - memory
+  - retrieval
 maturity: production
 cost_model: open-source
-github_stars: 17157
-last_commit: "2026-09-28"
-docs_url: "https://arrow.apache.org/"
+github_stars: 17229
+last_commit: '2026-10-26'
+docs_url: https://arrow.apache.org/
 phase: data-and-retrieval
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The columnar interchange standard that lets AI data tools share memory without copying or serialization."
-best_for: ["You are building a data engine or analysis runtime and need one in-memory representation that C++, Go, Rust, Java, Python, R and JavaScript all read without conversion.", "You need to move columnar batches between processes without paying pickle or JSON costs, using the IPC format over shared memory or a socket.", "You are designing a remote data service where the wire payload should be the same object the client already has in memory, which is what Flight RPC provides."]
-avoid_if: ["You only need a dataframe library in one language, because Arrow adds a format contract and dependency surface a single-language tool does not need.", "Your data is small row-oriented records that a database handles fine, because the columnar layout's advantage appears at scale and in vectorised operations.", "You need one library rather than a foundation specification, since Arrow is a set of components and choosing the wrong one for your job is easy."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Foundational infrastructure rather than an end-user tool."
+  - The columnar interchange standard that lets AI data tools share memory without copying or serialization.
+best_for:
+  - You are building a data engine or analysis runtime and need one in-memory representation that C++, Go, Rust, Java, Python, R and JavaScript all read without conversion.
+  - You need to move columnar batches between processes without paying pickle or JSON costs, using the IPC format over shared memory or a socket.
+  - You are designing a remote data service where the wire payload should be the same object the client already has in memory, which is what Flight RPC provides.
+avoid_if:
+  - You only need a dataframe library in one language, because Arrow adds a format contract and dependency surface a single-language tool does not need.
+  - Your data is small row-oriented records that a database handles fine, because the columnar layout's advantage appears at scale and in vectorised operations.
+  - You need one library rather than a foundation specification, since Arrow is a set of components and choosing the wrong one for your job is easy.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Foundational infrastructure rather than an end-user tool.
 ---
 
 ## Overview

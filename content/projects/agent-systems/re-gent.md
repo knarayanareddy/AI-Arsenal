@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Go CLI that version-controls agent activity in .regent/, so any line can be blamed to the prompt that wrote it"
-github_url: "https://github.com/regent-vcs/re_gent"
+description: Go CLI that version-controls agent activity in .regent/, so any line can be blamed to the prompt that wrote it
+github_url: https://github.com/regent-vcs/re_gent
 license: Apache-2.0
 primary_language: Go
-tags: [observability, data]
+tags:
+  - observability
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 795
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-07-02"
-docs_url: "https://github.com/regent-vcs/re_gent#readme"
+github_stars: 803
+github_stars_last_30d: 8
+trending_score: 23
+last_commit: '2026-07-02'
+docs_url: https://github.com/regent-vcs/re_gent#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Records every tool-using agent turn as a content-addressed Step, giving agents the log, blame and diff primitives git gives humans."
+  - Records every tool-using agent turn as a content-addressed Step, giving agents the log, blame and diff primitives git gives humans.
 best_for:
-  - "An agent made a change you cannot explain and you need to know which prompt produced it, because rgt blame maps a file line back to a step, session and prompt text."
-  - "You run more than one agent concurrently and you need to separate their histories, because sessions are tracked per agent with filterable logs."
-  - "You want to inspect one step in full, including the tool arguments, the diff and the surrounding conversation."
+  - An agent made a change you cannot explain and you need to know which prompt produced it, because rgt blame maps a file line back to a step, session and prompt text.
+  - You run more than one agent concurrently and you need to separate their histories, because sessions are tracked per agent with filterable logs.
+  - You want to inspect one step in full, including the tool arguments, the diff and the surrounding conversation.
 avoid_if:
-  - "You only use one agent in one repo and never need attribution, because git plus your agent's own session log may already be enough."
-  - "You need the recorded history to be a commit you can push, because this is a separate store under .regent/ with its own object format rather than a git remote."
-  - "You need broad language coverage for the tracked tools, because the integration surface named in the README is Claude Code, Codex and OpenCode."
+  - You only use one agent in one repo and never need attribution, because git plus your agent's own session log may already be enough.
+  - You need the recorded history to be a commit you can push, because this is a separate store under .regent/ with its own object format rather than a git remote.
+  - You need broad language coverage for the tracked tools, because the integration surface named in the README is Claude Code, Codex and OpenCode.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language (Go), topics and issue count came from the GitHub API. Directory layout (.regent/objects, refs, index.db, config.toml), Step struct fields, command set and host integrations are read from the official README; no repository was tracked during authoring."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language (Go), topics and issue count came from the GitHub API. Directory layout (.regent/objects, refs, index.db, config.toml), Step struct fields, command set and host integrations are read from the official README; no repository was tracked during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "X-PLUG"
+org_or_maintainer: X-PLUG
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,43 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 69
+trending_score: 21
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: mobileagent
-name: "Mobile-Agent"
+name: Mobile-Agent
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Alibaba Tongyi Lab's GUI agent family pairing Mobile-Agent orchestration with GUI-Owl vision-language models"
-github_url: "https://github.com/X-PLUG/MobileAgent"
+description: Alibaba Tongyi Lab's GUI agent family pairing Mobile-Agent orchestration with GUI-Owl vision-language models
+github_url: https://github.com/X-PLUG/MobileAgent
 license: MIT
 primary_language: Python
-tags: [multimodal, agents]
+tags:
+  - multimodal
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 9261
-last_commit: "2026-07-07"
-docs_url: "https://github.com/X-PLUG/MobileAgent"
+github_stars: 9330
+last_commit: '2026-07-07'
+docs_url: https://github.com/X-PLUG/MobileAgent
 phase: agent-system
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "actively-maintained"
-  - "community-driven"
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A research codebase of mobile GUI agents that perceive phone screens, plan multi-step operations, and execute taps and text input to complete app tasks."
-best_for: ["You are building Android or cross-platform GUI automation and need a model that emits grounded tap, type and swipe actions rather than API calls into app internals.", "You need to run device control on hardware you choose, since 7B and 32B GUI-Owl checkpoints are published and the smaller sizes fit a single workstation GPU.", "You are comparing GUI grounding against tool-calling APIs and want a model that decides when to act through the screen and when to call a tool instead."]
-avoid_if: ["You need an off-the-shelf API product with an SLA, because the hosted paths named in the README are Alibaba Bailian and ModelScope demos rather than a service you contract.", "You need stable Android automation for a production app without human review, because GUI grounding accuracy degrades with unfamiliar layouts.", "You are pinned to a stack that cannot host a 32B or 235B checkpoint, since the flagship sizes assume datacenter hardware."]
-enrichment_notes: "Official repository from Alibaba X-PLUG, MIT license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and not independently production-verified."
+  - A research codebase of mobile GUI agents that perceive phone screens, plan multi-step operations, and execute taps and text input to complete app tasks.
+best_for:
+  - You are building Android or cross-platform GUI automation and need a model that emits grounded tap, type and swipe actions rather than API calls into app internals.
+  - You need to run device control on hardware you choose, since 7B and 32B GUI-Owl checkpoints are published and the smaller sizes fit a single workstation GPU.
+  - You are comparing GUI grounding against tool-calling APIs and want a model that decides when to act through the screen and when to call a tool instead.
+avoid_if:
+  - You need an off-the-shelf API product with an SLA, because the hosted paths named in the README are Alibaba Bailian and ModelScope demos rather than a service you contract.
+  - You need stable Android automation for a production app without human review, because GUI grounding accuracy degrades with unfamiliar layouts.
+  - You are pinned to a stack that cannot host a 32B or 235B checkpoint, since the flagship sizes assume datacenter hardware.
+enrichment_notes: Official repository from Alibaba X-PLUG, MIT license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and not independently production-verified.
 ---
 
 ## Overview

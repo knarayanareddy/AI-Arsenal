@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: vector-databases
-description: "Distributed vector database in Go and C++ with HNSW and DiskANN indexes plus a single-binary Lite mode"
-github_url: "https://github.com/milvus-io/milvus"
+description: Distributed vector database in Go and C++ with HNSW and DiskANN indexes plus a single-binary Lite mode
+github_url: https://github.com/milvus-io/milvus
 license: Apache-2.0
 primary_language: Go
 org_or_maintainer: null
-tags: [retrieval, data, kubernetes, self-hosted]
+tags:
+  - retrieval
+  - data
+  - kubernetes
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 46274
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://github.com/milvus-io/milvus"
+github_stars: 46486
+github_stars_last_30d: 1724
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/milvus-io/milvus
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +32,27 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Distributed, horizontally-scalable vector database designed from the ground up for billion-scale vector search, a CNCF-adjacent project backed by Zilliz
-best_for: ["You need a vector index that outgrew a single machine, because the architecture is fully distributed and K8s-native with horizontal scaling and real-time streaming updates.", "You have a corpus too large for RAM, since DiskANN is in the topic set alongside HNSW, which is the disk-based index for that case.", "You want one dependency from prototype to cluster, because Milvus Lite installs from pip for a quickstart while the same project runs as a distributed service."]
-avoid_if: ["You want an embedded library with no server, because the quickstart path is a real service even in Standalone mode, and only Milvus Lite avoids that.", "You are choosing on benchmark claims alone, because the performance figures in the ecosystem come from vendor comparisons rather than a neutral harness.", "You need a permissive licence with no foundation governance, because the project is under the LF AI and Data Foundation with a single major contributor vendor."]
+best_for:
+  - You need a vector index that outgrew a single machine, because the architecture is fully distributed and K8s-native with horizontal scaling and real-time streaming updates.
+  - You have a corpus too large for RAM, since DiskANN is in the topic set alongside HNSW, which is the disk-based index for that case.
+  - You want one dependency from prototype to cluster, because Milvus Lite installs from pip for a quickstart while the same project runs as a distributed service.
+avoid_if:
+  - You want an embedded library with no server, because the quickstart path is a real service even in Standalone mode, and only Milvus Lite avoids that.
+  - You are choosing on benchmark claims alone, because the performance figures in the ecosystem come from vendor comparisons rather than a neutral harness.
+  - You need a permissive licence with no foundation governance, because the project is under the LF AI and Data Foundation with a single major contributor vendor.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,12 +60,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Milvus has a long production track record (predating the LLM/RAG wave, originally built for general large-scale similarity search) and is backed by Zilliz, which also offers a managed cloud version — this combination of open-source maturity plus commercial backing gives strong production-proven signal.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://cloud.google.com/customers/zilliz","date":"2025-06-19","description":"Google Cloud case study: Milvus/Zilliz Cloud reported over 10,000 global enterprise customers by end of 2024, running production semantic search, RAG, and agentic workloads"}
+  - source: conference
+    url: https://cloud.google.com/customers/zilliz
+    date: '2025-06-19'
+    description: 'Google Cloud case study: Milvus/Zilliz Cloud reported over 10,000 global enterprise customers by end of 2024, running production semantic search, RAG, and agentic workloads'
 featured: false
 status: active
 ---

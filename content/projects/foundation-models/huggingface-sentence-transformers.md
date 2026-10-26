@@ -1,52 +1,64 @@
 ---
 id: huggingface-sentence-transformers
-name: "sentence-transformers"
+name: sentence-transformers
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: models
-description: "Wraps hundreds of embedding, cross-encoder, and sparse retrieval checkpoints behind one encode API"
-github_url: "https://github.com/huggingface/sentence-transformers"
-license: "Apache-2.0"
+description: Wraps hundreds of embedding, cross-encoder, and sparse retrieval checkpoints behind one encode API
+github_url: https://github.com/huggingface/sentence-transformers
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [embeddings, retrieval, rag, pytorch]
+org_or_maintainer: huggingface
+tags:
+  - embeddings
+  - retrieval
+  - rag
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 19129
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-24"
-docs_url: "https://www.sbert.net"
+github_stars: 19226
+github_stars_last_30d: 97
+trending_score: 41
+last_commit: '2026-10-26'
+docs_url: https://www.sbert.net
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The default embedding and reranking API: hundreds of checkpoints behind one encode/cross-encode interface, which is what most self-hosted RAG stacks start from."
+  - 'The default embedding and reranking API: hundreds of checkpoints behind one encode/cross-encode interface, which is what most self-hosted RAG stacks start from.'
 best_for:
-  - "You are standing up a self-hosted RAG retriever and want to compare several embedding checkpoints on your own queries before committing to one."
-  - "You need a second-stage reranker over initial vector hits and want a cross-encoder that runs on a single GPU instead of an external reranking API."
-  - "You train domain-specific embeddings with contrastive pairs and want the in-batch-negative losses and evaluation helpers already implemented."
+  - You are standing up a self-hosted RAG retriever and want to compare several embedding checkpoints on your own queries before committing to one.
+  - You need a second-stage reranker over initial vector hits and want a cross-encoder that runs on a single GPU instead of an external reranking API.
+  - You train domain-specific embeddings with contrastive pairs and want the in-batch-negative losses and evaluation helpers already implemented.
 avoid_if:
-  - "Your documents are far longer than a few hundred tokens and you need chunking built in, since this library encodes, it does not split."
-  - "You need an index with persistence, filtering, and updates, because the library returns tensors and leaves the vector store entirely to you."
-  - "You are deploying to a constrained environment where a torch dependency is unacceptable, in which case an ONNX-based alternative will serve you better."
+  - Your documents are far longer than a few hundred tokens and you need chunking built in, since this library encodes, it does not split.
+  - You need an index with persistence, filtering, and updates, because the library returns tensors and leaves the vector store entirely to you.
+  - You are deploying to a constrained environment where a torch dependency is unacceptable, in which case an ONNX-based alternative will serve you better.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (19129), Apache-2.0 license, last commit 2026-09-24 and Python as primary language were API-verified; the topic list came back empty from the API. Module stack, pooling, CrossEncoder scoring, and loss functions are described from official docs; no checkpoint was downloaded or benchmarked for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (19129), Apache-2.0 license, last commit 2026-09-24 and Python as primary language were API-verified; the topic list came back empty from the API. Module stack, pooling, CrossEncoder scoring, and loss functions are described from official docs; no checkpoint was downloaded or benchmarked for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/sentence-transformers", "date": "2026-09-28", "description": "19,129 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/sentence-transformers
+    date: '2026-09-28'
+    description: 19,129 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

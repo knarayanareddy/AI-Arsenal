@@ -1,52 +1,63 @@
 ---
 id: onnx-onnx
-name: "onnx"
+name: onnx
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "Versioned serialization format and operator schema for ML graphs, plus checker and shape-inference tooling"
-github_url: "https://github.com/onnx/onnx"
-license: "Apache-2.0"
+description: Versioned serialization format and operator schema for ML graphs, plus checker and shape-inference tooling
+github_url: https://github.com/onnx/onnx
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "onnx"
-tags: [onnx, inference]
+org_or_maintainer: onnx
+tags:
+  - onnx
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 21539
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-09-27"
-docs_url: "https://onnx.ai/onnx/"
+github_stars: 21618
+github_stars_last_30d: 79
+trending_score: 39
+last_commit: '2026-10-26'
+docs_url: https://onnx.ai/onnx/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The interchange format for machine-learning graphs — the contract that lets a model trained in one framework run through many runtimes and accelerators."
+  - The interchange format for machine-learning graphs — the contract that lets a model trained in one framework run through many runtimes and accelerators.
 best_for:
-  - "You trained a model in PyTorch and must hand it to a team whose runtime is C++ or Java, or to a mobile target, without shipping a Python process."
-  - "You publish model artifacts and want a format whose compatibility rules are written down in a versioned operator set rather than implied by a framework release."
-  - "You are replacing a legacy TorchScript or SavedModel pipeline and need an intermediate format with a schema checker to validate the conversion before rollout."
+  - You trained a model in PyTorch and must hand it to a team whose runtime is C++ or Java, or to a mobile target, without shipping a Python process.
+  - You publish model artifacts and want a format whose compatibility rules are written down in a versioned operator set rather than implied by a framework release.
+  - You are replacing a legacy TorchScript or SavedModel pipeline and need an intermediate format with a schema checker to validate the conversion before rollout.
 avoid_if:
-  - "Your graph relies on custom control flow or an operator that has no ONNX standard schema, because export will silently fall back to custom-domain nodes no runtime implements."
-  - "You need to train or fine-tune through this artifact, since onnx is a serialization and shape-inference layer with no backward pass."
-  - "Your model is small and the team is all Python, since torch.export plus a direct PyTorch path removes an entire conversion step."
+  - Your graph relies on custom control flow or an operator that has no ONNX standard schema, because export will silently fall back to custom-domain nodes no runtime implements.
+  - You need to train or fine-tune through this artifact, since onnx is a serialization and shape-inference layer with no backward pass.
+  - Your model is small and the team is all Python, since torch.export plus a direct PyTorch path removes an entire conversion step.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (21539), Apache-2.0 license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Opset history, external-data requirements, and converter names come from the official documentation and spec, not from hands-on runs of this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (21539), Apache-2.0 license, last commit 2026-09-27, Python as primary language and the topic list were API-verified. Opset history, external-data requirements, and converter names come from the official documentation and spec, not from hands-on runs of this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/onnx/onnx", "date": "2026-09-28", "description": "21,539 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/onnx/onnx
+    date: '2026-09-28'
+    description: 21,539 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

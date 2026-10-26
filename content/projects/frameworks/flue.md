@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability"
-github_url: "https://github.com/withastro/flue"
+description: A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability
+github_url: https://github.com/withastro/flue
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, inference, security, stateful]
+tags:
+  - agents
+  - inference
+  - security
+  - stateful
 maturity: beta
 cost_model: open-source
-github_stars: 8388
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-25"
-docs_url: "https://flueframework.com"
+github_stars: 8548
+github_stars_last_30d: 160
+trending_score: 36
+last_commit: '2026-10-17'
+docs_url: https://flueframework.com
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Treats the harness as the product, making model, environment, and permissions an explicit declaration rather than a config file."
+  - Treats the harness as the product, making model, environment, and permissions an explicit declaration rather than a config file.
 best_for:
-  - "You are building an autonomous agent that must survive restarts and need durable recovery for work it has already accepted."
-  - "You want a full sandbox with filesystem and tool access without assembling container isolation into your own loop."
-  - "You are deploying the same agent across Node, Cloudflare Workers, GitHub Actions, and GitLab CI from one TypeScript source."
+  - You are building an autonomous agent that must survive restarts and need durable recovery for work it has already accepted.
+  - You want a full sandbox with filesystem and tool access without assembling container isolation into your own loop.
+  - You are deploying the same agent across Node, Cloudflare Workers, GitHub Actions, and GitLab CI from one TypeScript source.
 avoid_if:
-  - "You want a Python-first stack, because the runtime and hook APIs here are TypeScript-only."
-  - "You need a hosted control plane with SLAs, since you run agents locally via CLI or deploy them to a runtime you choose."
-  - "You are building a fixed linear pipeline with no model discretion, which a five-minute flow script expresses more clearly."
+  - You want a Python-first stack, because the runtime and hook APIs here are TypeScript-only.
+  - You need a hosted control plane with SLAs, since you run agents locally via CLI or deploy them to a runtime you choose.
+  - You are building a fixed linear pipeline with no model discretion, which a five-minute flow script expresses more clearly.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 8388, Apache-2.0, TypeScript, last commit 2026-09-25, topics, homepage. From README: use-agent directive, useModel/useSandbox/useSkill/useTool, @flue/runtime and /node, claude-sonnet-4-6 example, feature and deployment lists. Durability internals untested."
+enrichment_notes: 'API-verified: stars 8388, Apache-2.0, TypeScript, last commit 2026-09-25, topics, homepage. From README: use-agent directive, useModel/useSandbox/useSkill/useTool, @flue/runtime and /node, claude-sonnet-4-6 example, feature and deployment lists. Durability internals untested.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

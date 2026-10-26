@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Electron control console for local coding agents, with one-click setup, model routing, IM channels and per-task runtime metrics"
-github_url: "https://github.com/freestylefly/wesight"
+description: Electron control console for local coding agents, with one-click setup, model routing, IM channels and per-task runtime metrics
+github_url: https://github.com/freestylefly/wesight
 license: MIT
 primary_language: TypeScript
-tags: [agents, observability, routing]
+tags:
+  - agents
+  - observability
+  - routing
 maturity: beta
 cost_model: open-source
-github_stars: 931
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-19"
-docs_url: "https://wesight.ai/"
+github_stars: 961
+github_stars_last_30d: 30
+trending_score: 25
+last_commit: '2026-10-01'
+docs_url: https://wesight.ai/
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Puts agent install, model routing, permissions, file diffs, channel delivery and token metrics in one desktop surface."
+  - Puts agent install, model routing, permissions, file diffs, channel delivery and token metrics in one desktop surface.
 best_for:
-  - "You use several local coding agents and you want one place to install or reuse them instead of managing each CLI separately."
-  - "You want per-task cost visibility with engine, model, token usage, TTFT, TPS, tool latency, steps and duration in one dashboard."
-  - "You want agent tasks pushed to IM channels such as Feishu with per-engine configuration, and you would rather not build that bridge."
+  - You use several local coding agents and you want one place to install or reuse them instead of managing each CLI separately.
+  - You want per-task cost visibility with engine, model, token usage, TTFT, TPS, tool latency, steps and duration in one dashboard.
+  - You want agent tasks pushed to IM channels such as Feishu with per-engine configuration, and you would rather not build that bridge.
 avoid_if:
-  - "You are on Linux, because public releases are signed macOS builds for Apple Silicon and Intel plus a Windows x64 installer."
-  - "You need a server-side or headless deployment, because WeSight is an Electron desktop application that supervises local agent processes."
-  - "You are comfortable with terminal-only tooling and do not want a GUI, because the value here is the visualisation, not the agent capability."
+  - You are on Linux, because public releases are signed macOS builds for Apple Silicon and Intel plus a Windows x64 installer.
+  - You need a server-side or headless deployment, because WeSight is an Electron desktop application that supervises local agent processes.
+  - You are comfortable with terminal-only tooling and do not want a GUI, because the value here is the visualisation, not the agent capability.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Supported agent list, telemetry fields, channel support, platform coverage and install steps are read from the official README; the app was not run."
+enrichment_notes: Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Supported agent list, telemetry fields, channel support, platform coverage and install steps are read from the official README; the app was not run.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

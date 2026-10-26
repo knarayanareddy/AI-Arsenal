@@ -1,52 +1,63 @@
 ---
 id: kagent-dev-kagent
-name: "kagent"
+name: kagent
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Kubernetes-native platform that runs AI agents as cluster workloads with declared tools, scheduled tasks, and event-driven triggers"
-github_url: "https://github.com/kagent-dev/kagent"
-license: "Apache-2.0"
+description: Kubernetes-native platform that runs AI agents as cluster workloads with declared tools, scheduled tasks, and event-driven triggers
+github_url: https://github.com/kagent-dev/kagent
+license: Apache-2.0
 primary_language: Go
-org_or_maintainer: "kagent-dev"
-tags: [agents, kubernetes, tool-use]
+org_or_maintainer: kagent-dev
+tags:
+  - agents
+  - kubernetes
+  - tool-use
 maturity: alpha
 cost_model: open-source
-github_stars: 3876
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-09-28"
-docs_url: "https://kagent.dev"
+github_stars: 4095
+github_stars_last_30d: 219
+trending_score: 51
+last_commit: '2026-10-26'
+docs_url: https://kagent.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Cloud-native agentic AI platform running agents as Kubernetes workloads with tool discovery, aimed at operating many agents rather than one local loop."
+  - Cloud-native agentic AI platform running agents as Kubernetes workloads with tool discovery, aimed at operating many agents rather than one local loop.
 best_for:
-  - "You already run Kubernetes and want agents to be ordinary workloads with replicas, limits, and rollout controls."
-  - "You want agents to react to cluster events such as a new alert, a failed job, or a scheduled tick without a bespoke daemon."
-  - "You need per-agent tool access scoped by Kubernetes service accounts and secrets rather than a shared API key."
+  - You already run Kubernetes and want agents to be ordinary workloads with replicas, limits, and rollout controls.
+  - You want agents to react to cluster events such as a new alert, a failed job, or a scheduled tick without a bespoke daemon.
+  - You need per-agent tool access scoped by Kubernetes service accounts and secrets rather than a shared API key.
 avoid_if:
-  - "You do not run a Kubernetes cluster, since the whole design presumes pods, custom resources, and cluster events."
-  - "Your agent work is a single local loop you develop against, where the platform's operational cost exceeds the benefit."
-  - "You need a battle-tested, versioned platform, since the project is young and its APIs and defaults are still moving."
+  - You do not run a Kubernetes cluster, since the whole design presumes pods, custom resources, and cluster events.
+  - Your agent work is a single local loop you develop against, where the platform's operational cost exceeds the benefit.
+  - You need a battle-tested, versioned platform, since the project is young and its APIs and defaults are still moving.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3876), Apache-2.0 license, last commit 2026-09-28, primary language Go, and all five topics including cncf and mcp were read from the GitHub API. The controller reconciliation model, MCP tool discovery, custom resource design, and Helm-based install come from the official README and docs; no cluster was created and no agent was deployed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3876), Apache-2.0 license, last commit 2026-09-28, primary language Go, and all five topics including cncf and mcp were read from the GitHub API. The controller reconciliation model, MCP tool discovery, custom resource design, and Helm-based install come from the official README and docs; no cluster was created and no agent was deployed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/kagent-dev/kagent", "date": "2026-09-28", "description": "3,876 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/kagent-dev/kagent
+    date: '2026-09-28'
+    description: 3,876 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,65 @@
 ---
 id: comfy-org-comfyui
-name: "ComfyUI"
+name: ComfyUI
 version_tracked: null
 artifact_type: framework
 category: multimodal
 subcategory: frameworks
-description: "GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay"
-github_url: "https://github.com/Comfy-Org/ComfyUI"
-license: "GPL-3.0"
+description: GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
+github_url: https://github.com/Comfy-Org/ComfyUI
+license: GPL-3.0
 primary_language: Python
-org_or_maintainer: "Comfy-Org"
-tags: [vision, graphs, tool-use, multimodal]
+org_or_maintainer: Comfy-Org
+tags:
+  - vision
+  - graphs
+  - tool-use
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 135314
-github_stars_last_30d: 0
-trending_score: 41
-last_commit: "2026-09-28"
-docs_url: "https://docs.comfy.org"
+github_stars: 143175
+github_stars_last_30d: 7861
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://docs.comfy.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The de facto open-source graph interface for diffusion and video generation, where a workflow is a saved node graph and the community ships custom nodes for almost any model release."
+  - The de facto open-source graph interface for diffusion and video generation, where a workflow is a saved node graph and the community ships custom nodes for almost any model release.
 best_for:
-  - "You are handing a specific look to a designer who should not be writing Python, and you need the pipeline delivered as a reopenable graph with fixed seeds and weights."
-  - "You are building a batch image or video service and want a `/prompt` JSON API that accepts a workflow graph and returns artifacts, instead of a bespoke diffusers wrapper per pipeline."
-  - "You are integrating several model families - SDXL base plus refiner, ControlNet, LoRA, an upscaler - and need explicit node-level control over ordering and tensor reuse."
+  - You are handing a specific look to a designer who should not be writing Python, and you need the pipeline delivered as a reopenable graph with fixed seeds and weights.
+  - You are building a batch image or video service and want a `/prompt` JSON API that accepts a workflow graph and returns artifacts, instead of a bespoke diffusers wrapper per pipeline.
+  - You are integrating several model families - SDXL base plus refiner, ControlNet, LoRA, an upscaler - and need explicit node-level control over ordering and tensor reuse.
 avoid_if:
-  - "You need permissive licensing for a closed commercial product, because the GPL-3.0 terms attach to the interface and the custom-node ecosystem is largely GPL as well."
-  - "You need a stable, versioned API contract with a compatibility promise, because the node schema and internals change with upstream releases and third-party nodes lag."
-  - "You are batching thousands of images on a rented GPU where per-request Python graph overhead dominates, because the engine is optimized for interactive latency and flexible caching rather than raw throughput per core-second."
+  - You need permissive licensing for a closed commercial product, because the GPL-3.0 terms attach to the interface and the custom-node ecosystem is largely GPL as well.
+  - You need a stable, versioned API contract with a compatibility promise, because the node schema and internals change with upstream releases and third-party nodes lag.
+  - You are batching thousands of images on a rented GPU where per-request Python graph overhead dominates, because the engine is optimized for interactive latency and flexible caching rather than raw throughput per core-second.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 135314 stars, GPL-3.0 license, Python primary language, last commit 2026-09-28, 6 GitHub topics, homepage comfy.org. Claims about the API prompt format, memory flags, optional SageAttention and torch.compile paths, and node registration come from the official README and docs, not hands-on execution."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 135314 stars, GPL-3.0 license, Python primary language, last commit 2026-09-28, 6 GitHub topics, homepage comfy.org. Claims about the API prompt format, memory flags, optional SageAttention and torch.compile paths, and node registration come from the official README and docs, not hands-on execution.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Comfy-Org/ComfyUI", "date": "2026-09-28", "description": "135,314 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Comfy-Org/ComfyUI
+    date: '2026-09-28'
+    description: 135,314 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

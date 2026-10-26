@@ -6,39 +6,46 @@ artifact_type: library
 category: llms
 subcategory: frameworks
 description: A prompt-shrinking skill and proxy that rewrites agent output into clipped caveman grammar to cut billed tokens
-github_url: "https://github.com/JuliusBrussee/caveman"
+github_url: https://github.com/JuliusBrussee/caveman
 license: NOASSERTION
 primary_language: Go
-tags: [efficiency, structured-output, routing, agents]
+tags:
+  - efficiency
+  - structured-output
+  - routing
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 108165
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://docs.caveman.so/docs/quickstart"
+github_stars: 115218
+github_stars_last_30d: 7053
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://docs.caveman.so/docs/quickstart
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Tests whether terse register actually reduces spend, with published third-party numbers instead of a hand-wave."
+  - Tests whether terse register actually reduces spend, with published third-party numbers instead of a hand-wave.
 best_for:
-  - "You are paying per output token on long coding sessions and want a cheap experiment before restructuring your prompts."
-  - "You are instrumenting agent token cost and need a baseline technique that changes style only, leaving tools and logic untouched."
-  - "You run an agent fleet where style rewriting can be applied centrally at a proxy rather than inside every prompt template."
+  - You are paying per output token on long coding sessions and want a cheap experiment before restructuring your prompts.
+  - You are instrumenting agent token cost and need a baseline technique that changes style only, leaving tools and logic untouched.
+  - You run an agent fleet where style rewriting can be applied centrally at a proxy rather than inside every prompt template.
 avoid_if:
-  - "You need the agent's prose to be readable by non-technical reviewers, because compressed register is the entire mechanism."
-  - "You are in a domain where terse phrasing risks under-specifying a requirement, such as clinical, legal, or safety-critical output."
-  - "You are on a fixed subscription plan with no per-token metering, since you would be trading clarity for savings you are not billed for."
+  - You need the agent's prose to be readable by non-technical reviewers, because compressed register is the entire mechanism.
+  - You are in a domain where terse phrasing risks under-specifying a requirement, such as clinical, legal, or safety-critical output.
+  - You are on a fixed subscription plan with no per-token metering, since you would be trading clarity for savings you are not billed for.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 108165, NOASSERTION license, Go, last commit 2026-09-28, topics, homepage. From README: npx install, 65% claim, 30+ agents, 10 wraps, MIT+BSL, 69-token example, Adobe and JetBrains citations. Those third-party benchmarks were not reproduced."
+enrichment_notes: 'API-verified: stars 108165, NOASSERTION license, Go, last commit 2026-09-28, topics, homepage. From README: npx install, 65% claim, 30+ agents, 10 wraps, MIT+BSL, 69-token example, Adobe and JetBrains citations. Those third-party benchmarks were not reproduced.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

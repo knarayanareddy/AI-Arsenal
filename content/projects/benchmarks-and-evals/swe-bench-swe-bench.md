@@ -1,52 +1,64 @@
 ---
 id: swe-bench-swe-bench
-name: "SWE-bench"
+name: SWE-bench
 version_tracked: null
 artifact_type: dataset
 category: evaluation
 subcategory: evaluation
-description: "Real GitHub issues paired with hidden fail-to-pass and pass-to-pass test suites, and the harness that turns a patch into a resolution rate"
-github_url: "https://github.com/SWE-bench/SWE-bench"
-license: "MIT"
+description: Real GitHub issues paired with hidden fail-to-pass and pass-to-pass test suites, and the harness that turns a patch into a resolution rate
+github_url: https://github.com/SWE-bench/SWE-bench
+license: MIT
 primary_language: Python
-org_or_maintainer: "SWE-bench"
-tags: [benchmark, code-gen, evaluation]
+org_or_maintainer: SWE-bench
+tags:
+  - benchmark
+  - code-gen
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 5928
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-18"
-docs_url: "https://www.swebench.com"
+github_stars: 6090
+github_stars_last_30d: 162
+trending_score: 46
+last_commit: '2026-09-18'
+docs_url: https://www.swebench.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "The benchmark that made coding-agent evaluation standard: real GitHub issues paired with hidden tests, and the reference for reporting resolution rates honestly."
+  - 'The benchmark that made coding-agent evaluation standard: real GitHub issues paired with hidden tests, and the reference for reporting resolution rates honestly.'
 best_for:
-  - "You are selecting a coding agent or model and need a number that reflects real repository work rather than synthetic function completion."
-  - "You are publishing a coding-agent result and need a specific, runnable harness version so a reader can reproduce the resolution rate."
-  - "You are building a training or filtering pipeline for code models and want a verifiable outcome signal for reinforcement learning."
+  - You are selecting a coding agent or model and need a number that reflects real repository work rather than synthetic function completion.
+  - You are publishing a coding-agent result and need a specific, runnable harness version so a reader can reproduce the resolution rate.
+  - You are building a training or filtering pipeline for code models and want a verifiable outcome signal for reinforcement learning.
 avoid_if:
-  - "Your target domain is a language, framework, or repository type under-represented in the sampled projects, where the aggregate score will mislead you."
-  - "You want to measure documentation, config, or design work, since the suite scores only whether unit tests pass after a patch."
-  - "You need a cheap signal, because the harness builds repository-specific Docker images and the full run is expensive in wall-clock and compute."
+  - Your target domain is a language, framework, or repository type under-represented in the sampled projects, where the aggregate score will mislead you.
+  - You want to measure documentation, config, or design work, since the suite scores only whether unit tests pass after a patch.
+  - You need a cheap signal, because the harness builds repository-specific Docker images and the full run is expensive in wall-clock and compute.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (5928), MIT license, last commit 2026-09-18, primary language Python, and the three topics were read from the GitHub API. Task structure, the FAIL_TO_PASS and PASS_TO_PASS fields, the Docker-based harness, and the Lite, Verified, Multimodal, and Pro variants come from the official paper and README; no image was built and no instance was evaluated here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (5928), MIT license, last commit 2026-09-18, primary language Python, and the three topics were read from the GitHub API. Task structure, the FAIL_TO_PASS and PASS_TO_PASS fields, the Docker-based harness, and the Lite, Verified, Multimodal, and Pro variants come from the official paper and README; no image was built and no instance was evaluated here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/SWE-bench/SWE-bench", "date": "2026-09-28", "description": "5,928 stars and last commit 2026-09-18 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/SWE-bench/SWE-bench
+    date: '2026-09-28'
+    description: 5,928 stars and last commit 2026-09-18 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

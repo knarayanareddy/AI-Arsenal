@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 46
+trending_score: 19
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: AIBrix
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Cloud-native control plane from the vLLM project for deploying, routing, autoscaling and serving LLM inference on Kubernetes"
-github_url: "https://github.com/vllm-project/aibrix"
+description: Cloud-native control plane from the vLLM project for deploying, routing, autoscaling and serving LLM inference on Kubernetes
+github_url: https://github.com/vllm-project/aibrix
 license: Apache-2.0
 primary_language: Go
-tags: [kubernetes, llm]
+tags:
+  - kubernetes
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 5116
-last_commit: "2026-09-28"
-docs_url: "https://aibrix.readthedocs.io/latest/"
+github_stars: 5162
+last_commit: '2026-10-25'
+docs_url: https://aibrix.readthedocs.io/latest/
 phase: inference-engine
 domain:
   - language
@@ -52,8 +54,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A Kubernetes-oriented serving and operations layer connecting model deployment, gateway routing, batch workloads, and multiple inference engines.
-best_for: ["You run vLLM on Kubernetes and generic HPA scaling misbehaves, because replica count driven by CPU or request rate does not track queue depth or KV cache pressure in an inference workload.", "You need to serve many LoRA adapters over a shared base model without launching a full replica per adapter, and you want dynamic adapter loading handled by the platform.", "You are hitting KV cache capacity limits and want to move cache state to external storage or reuse it across engines rather than sizing GPUs purely for cache."]
-avoid_if: ["You are not on Kubernetes, because the entire value proposition is custom resources, controllers and an Envoy-based gateway, and none of it helps a single process on one machine.", "You need every feature to be stable, because the documentation still labels heterogeneous-GPU inference as experimental and other capabilities carry similar caveats.", "You serve a non-vLLM engine and expect equal support, because the project grew out of the vLLM ecosystem and its tightest integrations, including Ray-based distributed inference, assume that lineage."]
+best_for:
+  - You run vLLM on Kubernetes and generic HPA scaling misbehaves, because replica count driven by CPU or request rate does not track queue depth or KV cache pressure in an inference workload.
+  - You need to serve many LoRA adapters over a shared base model without launching a full replica per adapter, and you want dynamic adapter loading handled by the platform.
+  - You are hitting KV cache capacity limits and want to move cache state to external storage or reuse it across engines rather than sizing GPUs purely for cache.
+avoid_if:
+  - You are not on Kubernetes, because the entire value proposition is custom resources, controllers and an Envoy-based gateway, and none of it helps a single process on one machine.
+  - You need every feature to be stable, because the documentation still labels heterogeneous-GPU inference as experimental and other capabilities carry similar caveats.
+  - You serve a non-vLLM engine and expect equal support, because the project grew out of the vLLM ecosystem and its tightest integrations, including Ray-based distributed inference, assume that lineage.
 enrichment_notes: AIBrix v0.7.0 materials, Apache-2.0 license, and same-day repository activity were reviewed on 2026-07-11. Preview-feature maturity and deployment complexity remain draft.
 ---
 

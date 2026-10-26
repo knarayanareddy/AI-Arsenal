@@ -1,52 +1,62 @@
 ---
 id: nmslib-hnswlib
-name: "hnswlib"
+name: hnswlib
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "Header-only C++ HNSW implementation with Python bindings, tunable memory versus recall, and no server or daemon"
-github_url: "https://github.com/nmslib/hnswlib"
-license: "Apache-2.0"
+description: Header-only C++ HNSW implementation with Python bindings, tunable memory versus recall, and no server or daemon
+github_url: https://github.com/nmslib/hnswlib
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "nmslib"
-tags: [embeddings, rag]
+org_or_maintainer: nmslib
+tags:
+  - embeddings
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 5334
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-09-15"
-docs_url: "https://github.com/nmslib/hnswlib"
+github_stars: 5360
+github_stars_last_30d: 26
+trending_score: 35
+last_commit: '2026-09-15'
+docs_url: https://github.com/nmslib/hnswlib
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Header-only HNSW implementation giving fast, memory-tunable approximate nearest-neighbour search in-process, without standing up a vector database."
+  - Header-only HNSW implementation giving fast, memory-tunable approximate nearest-neighbour search in-process, without standing up a vector database.
 best_for:
-  - "You are embedding millions to hundreds of millions of vectors inside one application process and do not want to run a separate database."
-  - "You need to tune recall against memory budget for a specific corpus, since M, efConstruction, and efSearch are all exposed at build and query time."
-  - "You are prototyping a retrieval component and want a dependency-light index that compiles in seconds rather than a client-server install."
+  - You are embedding millions to hundreds of millions of vectors inside one application process and do not want to run a separate database.
+  - You need to tune recall against memory budget for a specific corpus, since M, efConstruction, and efSearch are all exposed at build and query time.
+  - You are prototyping a retrieval component and want a dependency-light index that compiles in seconds rather than a client-server install.
 avoid_if:
-  - "You need durability, replication, metadata filtering, or concurrent writers across processes, since a header-only index has none of those."
-  - "Your collection must be queried by many services, because each one would need its own copy of the index and its own RAM budget."
-  - "You need distributed sharding or a managed uptime story, where Qdrant, Milvus, or pgvector supply the operational layer."
+  - You need durability, replication, metadata filtering, or concurrent writers across processes, since a header-only index has none of those.
+  - Your collection must be queried by many services, because each one would need its own copy of the index and its own RAM budget.
+  - You need distributed sharding or a managed uptime story, where Qdrant, Milvus, or pgvector supply the operational layer.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (5334), Apache-2.0 license, last commit 2026-09-15, and primary language C++ were read from the GitHub API; the topics array is empty upstream and there is no separate docs site. The HNSW algorithm, the M and efConstruction and efSearch parameters, similarity spaces, and deletion marking come from the official README; no index was built or benchmarked here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (5334), Apache-2.0 license, last commit 2026-09-15, and primary language C++ were read from the GitHub API; the topics array is empty upstream and there is no separate docs site. The HNSW algorithm, the M and efConstruction and efSearch parameters, similarity spaces, and deletion marking come from the official README; no index was built or benchmarked here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/nmslib/hnswlib", "date": "2026-09-28", "description": "5,334 stars and last commit 2026-09-15 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/nmslib/hnswlib
+    date: '2026-09-28'
+    description: 5,334 stars and last commit 2026-09-15 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

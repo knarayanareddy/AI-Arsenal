@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant"
-github_url: "https://github.com/calesthio/OpenMontage"
+description: AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant
+github_url: https://github.com/calesthio/OpenMontage
 license: AGPL-3.0
 primary_language: Python
-tags: [multimodal, agents, voice]
+tags:
+  - multimodal
+  - agents
+  - voice
 maturity: beta
 cost_model: usage-based
-github_stars: 61695
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-06"
-docs_url: "https://github.com/calesthio/OpenMontage/blob/main/docs/ARCHITECTURE.md"
+github_stars: 72093
+github_stars_last_30d: 10398
+trending_score: 63
+last_commit: '2026-10-24'
+docs_url: https://github.com/calesthio/OpenMontage/blob/main/docs/ARCHITECTURE.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns a plain-language brief into a rendered video with real motion clips, narration and self-review, instead of animating a few stills."
+  - Turns a plain-language brief into a rendered video with real motion clips, narration and self-review, instead of animating a few stills.
 best_for:
-  - "You want a produced video rather than a prompt, and you need the pipeline to run ffprobe validation, frame sampling, audio checks and subtitle verification before delivery."
-  - "You want the real-footage path, because OpenMontage builds a corpus from free stock and open archives, retrieves actual motion clips and edits them into a timeline rather than animating stills."
-  - "You want cost visibility before generation starts, because a reference video yields 2-3 differentiated concepts with an honest tool path and cost estimates."
+  - You want a produced video rather than a prompt, and you need the pipeline to run ffprobe validation, frame sampling, audio checks and subtitle verification before delivery.
+  - You want the real-footage path, because OpenMontage builds a corpus from free stock and open archives, retrieves actual motion clips and edits them into a timeline rather than animating stills.
+  - You want cost visibility before generation starts, because a reference video yields 2-3 differentiated concepts with an honest tool path and cost estimates.
 avoid_if:
-  - "You need this to be OSI open source, because the AGPL-3.0 licence reaches any network-served use you build on top of it."
-  - "You have no generation API budget, because the free path still needs keys for image, video or voice providers for most pipelines."
-  - "You want a deterministic render pipeline, because the whole design routes creative decisions through an agent rather than a fixed graph."
+  - You need this to be OSI open source, because the AGPL-3.0 licence reaches any network-served use you build on top of it.
+  - You have no generation API budget, because the free path still needs keys for image, video or voice providers for most pipelines.
+  - You want a deterministic render pipeline, because the whole design routes creative decisions through an agent rather than a fixed graph.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (AGPL-3.0), last commit, primary language, topics and issue count came from the GitHub API. Pipeline and tool counts, manifest structure, verification stages, provider list and published cost figures are read from the official README and docs; no video was produced during authoring."
+enrichment_notes: Stars, license (AGPL-3.0), last commit, primary language, topics and issue count came from the GitHub API. Pipeline and tool counts, manifest structure, verification stages, provider list and published cost figures are read from the official README and docs; no video was produced during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

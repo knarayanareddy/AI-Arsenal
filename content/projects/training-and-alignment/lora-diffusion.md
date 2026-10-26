@@ -8,58 +8,60 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "cloneofsimo"
+org_or_maintainer: cloneofsimo
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [stable-diffusion-webui, peft]
+alternatives:
+  - stable-diffusion-webui
+  - peft
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+github_stars_last_30d: 1
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: deprecated
 id: lora-diffusion
-name: "LoRA for Diffusion (cloneofsimo)"
+name: LoRA for Diffusion (cloneofsimo)
 artifact_type: library
 category: multimodal
 subcategory: fine-tuning
-description: "An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters"
+description: An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters
 github_url: https://github.com/cloneofsimo/lora
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "multimodal"
-  - "self-hosted"
+  - fine-tuning
+  - multimodal
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7557
-last_commit: "2024-03-22"
+github_stars: 7558
+last_commit: '2024-03-22'
 docs_url: https://arxiv.org/abs/2106.09685
 phase: training-and-alignment
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A reference implementation that brought LoRA fine-tuning to diffusion models, seeding the modern adapter ecosystem."
+  - A reference implementation that brought LoRA fine-tuning to diffusion models, seeding the modern adapter ecosystem.
 best_for:
-  - "You want to understand how LoRA adapters are applied to diffusion UNets and text encoders from a canonical implementation"
-  - "You are studying lightweight, composable fine-tuning that trains a small fraction of parameters"
+  - You want to understand how LoRA adapters are applied to diffusion UNets and text encoders from a canonical implementation
+  - You are studying lightweight, composable fine-tuning that trains a small fraction of parameters
 avoid_if:
-  - "You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current"
-  - "You need general-purpose LLM LoRA tooling rather than diffusion-focused code"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries. Dormancy re-checked 2026-10-24, when the GitHub API reported 7557 stars and last push 2024-03-22; claims re-read against the repository and status set to deprecated, superseded by Diffusers' built-in LoRA support."
+  - You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current
+  - You need general-purpose LLM LoRA tooling rather than diffusion-focused code
+enrichment_notes: Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries. Dormancy re-checked 2026-10-24, when the GitHub API reported 7557 stars and last push 2024-03-22; claims re-read against the repository and status set to deprecated, superseded by Diffusers' built-in LoRA support.
 ---
 
 > **Deprecated:** superseded, not withdrawn. Upstream last pushed 2024-03-22, and LoRA for diffusion models is now built into Diffusers (`pipe.load_lora_weights`), which is the entry to use for training or inference today. This file stays as the canonical reference for how the technique works. See `diffusers` in the same phase.

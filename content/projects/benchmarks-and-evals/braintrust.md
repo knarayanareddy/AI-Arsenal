@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: service
 category: observability
 subcategory: tracing
-description: "TypeScript SDK that emits traces, runs scored evals and wraps OpenAI, LangChain, OpenTelemetry and Temporal code for the Braintrust platform"
-github_url: "https://github.com/braintrustdata/braintrust-sdk-javascript"
+description: TypeScript SDK that emits traces, runs scored evals and wraps OpenAI, LangChain, OpenTelemetry and Temporal code for the Braintrust platform
+github_url: https://github.com/braintrustdata/braintrust-sdk-javascript
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [evaluation, tracing, observability, llm]
+tags:
+  - evaluation
+  - tracing
+  - observability
+  - llm
 maturity: beta
 cost_model: usage-based
-github_stars: 28
-github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-09-28"
-docs_url: "https://www.braintrust.dev/docs/reference/sdks/typescript"
+github_stars: 29
+github_stars_last_30d: 1
+trending_score: 7
+last_commit: '2026-10-26'
+docs_url: https://www.braintrust.dev/docs/reference/sdks/typescript
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,22 +33,36 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Managed evaluation and observability platform, positioned around rigorous, data-driven LLM evaluation workflows
-best_for: ["You ship a TypeScript product whose quality depends on model output and you want per-span traces with token counts attached to the same place as your regression scores.", "You are swapping models or rewriting prompts and you need an eval harness that runs from the CLI on a committed dataset instead of by reading transcripts.", "Your TypeScript stack already speaks OpenTelemetry or runs Temporal workflows, and you want those spans folded into the same trace without rewriting the instrumentation layer."]
-avoid_if: ["You cannot send prompts and completions to a third-party service, because the platform this SDK targets is hosted and trace payloads leave your process.", "You are a Python shop, because the Python SDK was split out into a separate braintrust-sdk-python repository and is not covered by this package.", "You want evaluation that runs with no hosted backend at all, because this SDK writes results to a Braintrust workspace keyed on BRAINTRUST_API_KEY rather than to a local file."]
+best_for:
+  - You ship a TypeScript product whose quality depends on model output and you want per-span traces with token counts attached to the same place as your regression scores.
+  - You are swapping models or rewriting prompts and you need an eval harness that runs from the CLI on a committed dataset instead of by reading transcripts.
+  - Your TypeScript stack already speaks OpenTelemetry or runs Temporal workflows, and you want those spans folded into the same trace without rewriting the instrumentation layer.
+avoid_if:
+  - You cannot send prompts and completions to a third-party service, because the platform this SDK targets is hosted and trace payloads leave your process.
+  - You are a Python shop, because the Python SDK was split out into a separate braintrust-sdk-python repository and is not covered by this package.
+  - You want evaluation that runs with no hosted backend at all, because this SDK writes results to a Braintrust workspace keyed on BRAINTRUST_API_KEY rather than to a local file.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own marketing site; as a closed-source managed service, internal architecture details are not independently verifiable from a public repository.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

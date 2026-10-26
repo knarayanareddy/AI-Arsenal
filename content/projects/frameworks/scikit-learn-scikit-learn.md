@@ -1,52 +1,62 @@
 ---
 id: scikit-learn-scikit-learn
-name: "scikit-learn"
+name: scikit-learn
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: libraries
-description: "BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use"
-github_url: "https://github.com/scikit-learn/scikit-learn"
-license: "BSD-3-Clause"
+description: BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
+github_url: https://github.com/scikit-learn/scikit-learn
+license: BSD-3-Clause
 primary_language: Python
-org_or_maintainer: "scikit-learn"
-tags: [data, evaluation]
+org_or_maintainer: scikit-learn
+tags:
+  - data
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 67407
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-09-24"
-docs_url: "https://scikit-learn.org"
+github_stars: 67929
+github_stars_last_30d: 522
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://scikit-learn.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Classical ML baseline that still wins on tabular data: the estimator, preprocessing, and pipeline contracts every LLM system falls back to for regression, ranking, and structured-feature stages."
+  - 'Classical ML baseline that still wins on tabular data: the estimator, preprocessing, and pipeline contracts every LLM system falls back to for regression, ranking, and structured-feature stages.'
 best_for:
-  - "You are predicting a numeric or categorical target from mixed numeric, categorical, and text columns and need a leakage-safe Pipeline with cross-validation in one object."
-  - "2. You are building a ranking or retrieval feature stage and want `ColumnTransformer` to handle scaling, encoding, and imputation per column type without custom glue."
-  - "3. You need a defensible baseline in a day - fit a `HistGradientBoostingClassifier` and know exactly what the neural alternative has to beat."
+  - You are predicting a numeric or categorical target from mixed numeric, categorical, and text columns and need a leakage-safe Pipeline with cross-validation in one object.
+  - 2. You are building a ranking or retrieval feature stage and want `ColumnTransformer` to handle scaling, encoding, and imputation per column type without custom glue.
+  - 3. You need a defensible baseline in a day - fit a `HistGradientBoostingClassifier` and know exactly what the neural alternative has to beat.
 avoid_if:
-  - "Your task is image, audio, or long-form sequence modeling, where the relevant libraries are deep frameworks rather than a tabular estimator API."
-  - "2. You are building deep learning, differentiable, or reinforcement-learning systems, because there is no autograd and no tensor graph anywhere in the library."
-  - "3. Your dataset is far larger than fits in memory and training is the bottleneck, because most estimators here require an in-memory matrix even when the loop is chunked."
+  - Your task is image, audio, or long-form sequence modeling, where the relevant libraries are deep frameworks rather than a tabular estimator API.
+  - 2. You are building deep learning, differentiable, or reinforcement-learning systems, because there is no autograd and no tensor graph anywhere in the library.
+  - 3. Your dataset is far larger than fits in memory and training is the bottleneck, because most estimators here require an in-memory matrix even when the loop is chunked.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 67407 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-24, 5 GitHub topics, homepage scikit-learn.org. Claims about estimator tags, __data__ protocol, joblib memmapping, and _partial_fit are from official docs and release notes; no models were trained locally."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 67407 stars, BSD-3-Clause license, Python primary language, last commit 2026-09-24, 5 GitHub topics, homepage scikit-learn.org. Claims about estimator tags, __data__ protocol, joblib memmapping, and _partial_fit are from official docs and release notes; no models were trained locally.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/scikit-learn/scikit-learn", "date": "2026-09-28", "description": "67,407 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/scikit-learn/scikit-learn
+    date: '2026-09-28'
+    description: 67,407 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

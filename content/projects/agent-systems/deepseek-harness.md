@@ -1,52 +1,70 @@
 ---
 id: deepseek-harness
-name: "DeepSeek Harness"
+name: DeepSeek Harness
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: coding-agents
-description: "DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework"
-github_url: "https://github.com/deepseek-ai/deepseek-harness"
-license: "MIT"
+description: 'DeepSeek''s open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework'
+github_url: https://github.com/deepseek-ai/deepseek-harness
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "DeepSeek AI"
-tags: [agents, tool-use, code-gen]
+org_or_maintainer: DeepSeek AI
+tags:
+  - agents
+  - tool-use
+  - code-gen
 maturity: beta
 cost_model: open-source
-github_stars: 260425
-github_stars_last_30d: 0
-trending_score: 95
-last_commit: "2026-10-23"
-docs_url: "https://deepseek-harness.github.io/deepseek-harness/"
+github_stars: 262384
+github_stars_last_30d: 1959
+trending_score: 80
+last_commit: '2026-10-23'
+docs_url: https://deepseek-harness.github.io/deepseek-harness/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2608.25512"
+paper_url: https://arxiv.org/abs/2608.25512
 paper_id: null
 phase: agent-system
-domain: [general-purpose, language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - general-purpose
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The first agent harness from a frontier-model lab that treats its own agent loop as an unprivileged plugin: model adapters, the tool registry, the session log and the loop itself are all mounted modules, so a team can replace the parts it disagrees with instead of forking the product."
+  - 'The first agent harness from a frontier-model lab that treats its own agent loop as an unprivileged plugin: model adapters, the tool registry, the session log and the loop itself are all mounted modules, so a team can replace the parts it disagrees with instead of forking the product.'
 best_for:
-  - "You want to assemble an agent runtime from parts you control — swap the model adapter, replace the tool registry, or mount your own approval policy — rather than configure a fixed product"
-  - "You need the same agent definition to run as a local web UI, a headless one-shot job, an SDK-driven service, or an ACP endpoint for an editor, without maintaining four forks"
-  - "You are building a DeepSeek-model workflow and want the vendor's own harness, including its sandbox and approval defaults, rather than wiring the API yourself"
+  - You want to assemble an agent runtime from parts you control — swap the model adapter, replace the tool registry, or mount your own approval policy — rather than configure a fixed product
+  - You need the same agent definition to run as a local web UI, a headless one-shot job, an SDK-driven service, or an ACP endpoint for an editor, without maintaining four forks
+  - You are building a DeepSeek-model workflow and want the vendor's own harness, including its sandbox and approval defaults, rather than wiring the API yourself
 avoid_if:
-  - "You need a stable plugin API to build a product on: the project is in developer preview and its README states plainly that compatibility-breaking changes will happen"
-  - "You want a finished coding assistant for a team today — the web UI is young, the ecosystem of third-party plugins is small, and the documentation is still catching up with the architecture"
-  - "Your security review requires an audited permission model out of the box; sandbox and approval behaviour is plugin configuration, so the defaults are the starting point rather than a guarantee"
+  - 'You need a stable plugin API to build a product on: the project is in developer preview and its README states plainly that compatibility-breaking changes will happen'
+  - You want a finished coding assistant for a team today — the web UI is young, the ecosystem of third-party plugins is small, and the documentation is still catching up with the architecture
+  - Your security review requires an audited permission model out of the box; sandbox and approval behaviour is plugin configuration, so the defaults are the starting point rather than a guarantee
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [claude-code, openai-codex-cli, gemini-cli, opencode]
+alternatives:
+  - claude-code
+  - openai-codex-cli
+  - gemini-cli
+  - opencode
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (260,425), forks (31,458), licence (MIT), primary language (TypeScript), contributors (48) and last push (2026-10-23) verified via the GitHub API on 2026-10-24 for a repository created 2026-08-13. Behavioural claims come from the README and docs/architecture.md; nothing here was run hands-on, and the developer-preview warning means the plugin surface should be expected to move."
-added_date: "2026-10-24"
-last_reviewed: "2026-10-24"
+enrichment_notes: Stars (260,425), forks (31,458), licence (MIT), primary language (TypeScript), contributors (48) and last push (2026-10-23) verified via the GitHub API on 2026-10-24 for a repository created 2026-08-13. Behavioural claims come from the README and docs/architecture.md; nothing here was run hands-on, and the developer-preview warning means the plugin surface should be expected to move.
+added_date: '2026-10-24'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/deepseek-ai/deepseek-harness", "date": "2026-10-24", "description": "260,425 stars and 31,458 forks within ten weeks of the 2026-08-13 repository creation (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/deepseek-ai/deepseek-harness
+    date: '2026-10-24'
+    description: 260,425 stars and 31,458 forks within ten weeks of the 2026-08-13 repository creation (GitHub API)
 featured: false
 status: active
 ---

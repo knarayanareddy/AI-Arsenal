@@ -6,39 +6,44 @@ artifact_type: library
 category: agents
 subcategory: autonomous
 description: Electron desktop client that drives dozens of external CLI coding agents plus a bundled Office-document agent behind one visual workspace
-github_url: "https://github.com/iOfficeAI/AionUi"
+github_url: https://github.com/iOfficeAI/AionUi
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, community-favorite]
+tags:
+  - agents
+  - community-favorite
 maturity: beta
 cost_model: open-source
-github_stars: 33185
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-09"
-docs_url: "https://www.aionui.com"
+github_stars: 33790
+github_stars_last_30d: 605
+trending_score: 63
+last_commit: '2026-10-23'
+docs_url: https://www.aionui.com
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives CLI agents a graphical front end, a file workspace and cron scheduling without replacing the agent runtimes underneath."
+  - Gives CLI agents a graphical front end, a file workspace and cron scheduling without replacing the agent runtimes underneath.
 best_for:
-  - "You already run Claude Code, Codex, OpenClaw or Hermes Agent in a terminal and you want file diffs, permission prompts and a chat surface without rewriting your workflow."
-  - "You produce PowerPoint, Word or Excel deliverables and you want an agent that emits an editable .pptx with Morph transitions rather than a text outline."
-  - "You want to monitor and steer long-running agent work from your phone through Telegram, Lark, DingTalk or WeChat while the agent runs on an unattended machine."
+  - You already run Claude Code, Codex, OpenClaw or Hermes Agent in a terminal and you want file diffs, permission prompts and a chat surface without rewriting your workflow.
+  - You produce PowerPoint, Word or Excel deliverables and you want an agent that emits an editable .pptx with Morph transitions rather than a text outline.
+  - You want to monitor and steer long-running agent work from your phone through Telegram, Lark, DingTalk or WeChat while the agent runs on an unattended machine.
 avoid_if:
-  - "You are deploying headless with no desktop environment, because AionUi is an Electron GUI and its cron automation is designed to run alongside that window on a host you keep alive."
-  - "You need byte-level control of agent internals, because AionUi orchestrates external CLIs through its own backend rather than exposing their configuration surface."
-  - "You have no API budget at all and no local model, because the built-in agent is API-driven even though the UI itself is free."
+  - You are deploying headless with no desktop environment, because AionUi is an Electron GUI and its cron automation is designed to run alongside that window on a host you keep alive.
+  - You need byte-level control of agent internals, because AionUi orchestrates external CLIs through its own backend rather than exposing their configuration surface.
+  - You have no API budget at all and no local model, because the built-in agent is API-driven even though the UI itself is free.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics and open-issue count came from the GitHub API. Feature claims (Morph PPT, OfficeCLI, agent auto-detection, mobile bridges, cron) are read from the official README and repo layout; installation was not performed here."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics and open-issue count came from the GitHub API. Feature claims (Morph PPT, OfficeCLI, agent auto-detection, mobile bridges, cron) are read from the official README and repo layout; installation was not performed here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

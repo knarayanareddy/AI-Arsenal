@@ -6,39 +6,44 @@ artifact_type: library
 category: llms
 subcategory: inference-engines
 description: Local OpenAI-compatible proxy that tiers provider calls and rewrites tool_result payloads before forwarding them upstream
-github_url: "https://github.com/decolua/9router"
+github_url: https://github.com/decolua/9router
 license: MIT
 primary_language: Other
-tags: [routing, efficiency]
+tags:
+  - routing
+  - efficiency
 maturity: beta
 cost_model: open-source
-github_stars: 29951
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-26"
-docs_url: "https://9router.com"
+github_stars: 31448
+github_stars_last_30d: 1497
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://9router.com
 demo_url: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns subscription quota, cheap tiers and free tiers into one ordered fallback chain behind a single /v1 endpoint."
+  - Turns subscription quota, cheap tiers and free tiers into one ordered fallback chain behind a single /v1 endpoint.
 best_for:
-  - "You are running Claude Code, Codex or Cline on metered API keys and you need one endpoint that survives rate limits without you swapping providers by hand."
-  - "You have unused monthly subscription quota and you want a router that spends it before the reset window closes, then degrades to a cheaper tier."
-  - "You are paying for several provider accounts at once and you want round-robin rotation across them instead of serialising on a single key."
+  - You are running Claude Code, Codex or Cline on metered API keys and you need one endpoint that survives rate limits without you swapping providers by hand.
+  - You have unused monthly subscription quota and you want a router that spends it before the reset window closes, then degrades to a cheaper tier.
+  - You are paying for several provider accounts at once and you want round-robin rotation across them instead of serialising on a single key.
 avoid_if:
-  - "You need a contractual SLA, an audit trail, or a data-residency guarantee, since this sits in the request path between your agent and every upstream provider."
-  - "You cannot accept free-tier providers whose upstream terms may forbid resale or automated use of subscription credentials."
-  - "You want to review the running code, since the npm package that serves the dashboard is published private and the public repository does not contain the whole service."
+  - You need a contractual SLA, an audit trail, or a data-residency guarantee, since this sits in the request path between your agent and every upstream provider.
+  - You cannot accept free-tier providers whose upstream terms may forbid resale or automated use of subscription credentials.
+  - You want to review the running code, since the npm package that serves the dashboard is published private and the public repository does not contain the whole service.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, open-issue count and homepage. The tier ladder, port number, install command and token-saving percentages are read from the README and project site; none were exercised on this machine."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, open-issue count and homepage. The tier ladder, port number, install command and token-saving percentages are read from the README and project site; none were exercised on this machine.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

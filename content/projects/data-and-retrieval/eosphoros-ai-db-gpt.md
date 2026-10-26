@@ -1,52 +1,65 @@
 ---
 id: eosphoros-ai-db-gpt
-name: "DB-GPT"
+name: DB-GPT
 version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: advanced-rag
-description: "Agentic data platform connecting LLMs to enterprise databases via text-to-SQL, RAG, and multi-agent roles"
-github_url: "https://github.com/eosphoros-ai/DB-GPT"
-license: "MIT"
+description: Agentic data platform connecting LLMs to enterprise databases via text-to-SQL, RAG, and multi-agent roles
+github_url: https://github.com/eosphoros-ai/DB-GPT
+license: MIT
 primary_language: Python
-org_or_maintainer: "eosphoros-ai"
-tags: [agents, data, rag, orchestration]
+org_or_maintainer: eosphoros-ai
+tags:
+  - agents
+  - data
+  - rag
+  - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 20058
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-28"
-docs_url: "http://docs.dbgpt.cn"
+github_stars: 20194
+github_stars_last_30d: 136
+trending_score: 44
+last_commit: '2026-10-26'
+docs_url: http://docs.dbgpt.cn
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Agentic data assistant connecting LLMs to enterprise databases through text-to-SQL and multi-agent execution, with database metadata grounding the generated queries."
+  - Agentic data assistant connecting LLMs to enterprise databases through text-to-SQL and multi-agent execution, with database metadata grounding the generated queries.
 best_for:
-  - "You operate a MySQL or PostgreSQL warehouse and want an internal chat assistant that answers analyst questions against live tables rather than a static export."
-  - "You need a custom data application built on LLM agents over multiple sources and want the AWEL workflow engine, plugin registry, and web UI already assembled."
-  - "You are prototyping a text-to-SQL feature and want a reference implementation of schema linking, query execution, and multi-agent data analysis to fork."
+  - You operate a MySQL or PostgreSQL warehouse and want an internal chat assistant that answers analyst questions against live tables rather than a static export.
+  - You need a custom data application built on LLM agents over multiple sources and want the AWEL workflow engine, plugin registry, and web UI already assembled.
+  - You are prototyping a text-to-SQL feature and want a reference implementation of schema linking, query execution, and multi-agent data analysis to fork.
 avoid_if:
-  - "You need guarantees that generated SQL is safe, because a text-to-SQL agent with a live connection will eventually run an unintended write unless you bolt on a read-only proxy."
-  - "Your team will not operate a service stack, since DB-GPT expects a running database, cache, and web process rather than a pip install."
-  - "You want a small, current codebase: the repository history spans many framework generations and the plugin surface is broad and unevenly maintained."
+  - You need guarantees that generated SQL is safe, because a text-to-SQL agent with a live connection will eventually run an unintended write unless you bolt on a read-only proxy.
+  - Your team will not operate a service stack, since DB-GPT expects a running database, cache, and web process rather than a pip install.
+  - 'You want a small, current codebase: the repository history spans many framework generations and the plugin surface is broad and unevenly maintained.'
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (20058), MIT license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. AWEL operator semantics, connector behaviour, and the RAG/Text2SQL module structure come from the official docs and README; the read-only-safety and schema-scaling warnings are engineering judgement about this class of tool, not claims from the project."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (20058), MIT license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. AWEL operator semantics, connector behaviour, and the RAG/Text2SQL module structure come from the official docs and README; the read-only-safety and schema-scaling warnings are engineering judgement about this class of tool, not claims from the project.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/eosphoros-ai/DB-GPT", "date": "2026-09-28", "description": "20,058 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/eosphoros-ai/DB-GPT
+    date: '2026-09-28'
+    description: 20,058 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

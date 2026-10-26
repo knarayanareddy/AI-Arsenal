@@ -1,52 +1,64 @@
 ---
 id: tensorflow-tensorflow
-name: "tensorflow"
+name: tensorflow
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "Apache-2.0 tensor and autodiff framework with graph execution, distributed strategies, and the broadest export surface of any DL stack"
-github_url: "https://github.com/tensorflow/tensorflow"
-license: "Apache-2.0"
+description: Apache-2.0 tensor and autodiff framework with graph execution, distributed strategies, and the broadest export surface of any DL stack
+github_url: https://github.com/tensorflow/tensorflow
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "tensorflow"
-tags: [training, battle-tested]
+org_or_maintainer: tensorflow
+tags:
+  - training
+  - battle-tested
 maturity: production
 cost_model: open-source
-github_stars: 200583
-github_stars_last_30d: 0
-trending_score: 42
-last_commit: "2026-09-28"
-docs_url: "https://tensorflow.org"
+github_stars: 201266
+github_stars_last_30d: 683
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://tensorflow.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose, vision]
-relation_to_stack: [build-on-top, fork-and-adapt]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+  - vision
+relation_to_stack:
+  - build-on-top
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The default reference implementation of the deep-learning framework ecosystem — graph-mode execution, distributed training, and the widest deployment surface (TFLite, TensorFlow.js, TensorFlow Serving)."
+  - The default reference implementation of the deep-learning framework ecosystem — graph-mode execution, distributed training, and the widest deployment surface (TFLite, TensorFlow.js, TensorFlow Serving).
 best_for:
-  - "You are shipping one trained model to Android, a browser bundle, and a server fleet and need converters and signing conventions for each target in the same repo."
-  - "You are inheriting an organization with TF1 checkpoints, custom C++ ops, or TPU training infrastructure that would cost months to port."
-  - "You are building a graph-mode training job where XLA compilation and MixedPrecision policy are worth more than eager iteration speed."
+  - You are shipping one trained model to Android, a browser bundle, and a server fleet and need converters and signing conventions for each target in the same repo.
+  - You are inheriting an organization with TF1 checkpoints, custom C++ ops, or TPU training infrastructure that would cost months to port.
+  - You are building a graph-mode training job where XLA compilation and MixedPrecision policy are worth more than eager iteration speed.
 avoid_if:
-  - "You are starting fresh research code and iterate on architecture, because the PyTorch ecosystem publishes architectures and papers days earlier and eager execution is the faster feedback loop."
-  - "Your container image size is a hard constraint, since the default install pulls a large runtime and a slow cold start for a small model server."
-  - "You only plan to LoRA-fine-tune a text model, where PEFT plus accelerate on PyTorch gets you there with a fraction of the install and none of the graph abstraction."
+  - You are starting fresh research code and iterate on architecture, because the PyTorch ecosystem publishes architectures and papers days earlier and eager execution is the faster feedback loop.
+  - Your container image size is a hard constraint, since the default install pulls a large runtime and a slow cold start for a small model server.
+  - You only plan to LoRA-fine-tune a text model, where PEFT plus accelerate on PyTorch gets you there with a fraction of the install and none of the graph abstraction.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 200583 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 8 GitHub topics, homepage tensorflow.org. Claims about tf.function, AutoGraph, XLA, TFLite FlatBuffer export, and SavedModel signatures come from official TensorFlow documentation, not hands-on runs."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 200583 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 8 GitHub topics, homepage tensorflow.org. Claims about tf.function, AutoGraph, XLA, TFLite FlatBuffer export, and SavedModel signatures come from official TensorFlow documentation, not hands-on runs.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/tensorflow/tensorflow", "date": "2026-09-28", "description": "200,583 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/tensorflow/tensorflow
+    date: '2026-09-28'
+    description: 200,583 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,63 @@
 ---
 id: evalplus-evalplus
-name: "evalplus"
+name: evalplus
 version_tracked: null
 artifact_type: tool
 category: evaluation
 subcategory: evaluation
-description: "Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests"
-github_url: "https://github.com/evalplus/evalplus"
-license: "Apache-2.0"
+description: Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests
+github_url: https://github.com/evalplus/evalplus
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "evalplus"
-tags: [benchmark, evaluation]
+org_or_maintainer: evalplus
+tags:
+  - benchmark
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 1820
-github_stars_last_30d: 0
-trending_score: 18
-last_commit: "2025-10-02"
-docs_url: "https://evalplus.github.io"
+github_stars: 1837
+github_stars_last_30d: 17
+trending_score: 34
+last_commit: '2025-10-02'
+docs_url: https://evalplus.github.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Hardens HumanEval/MBPP with far more test inputs to catch solutions that pass weak tests — the standard critique of reported code pass@1 numbers."
+  - Hardens HumanEval/MBPP with far more test inputs to catch solutions that pass weak tests — the standard critique of reported code pass@1 numbers.
 best_for:
-  - "You want to know whether a reported pass@1 number reflects correct code or just test gaming, and need the stricter measurement."
-  - "You are comparing code models and want a benchmark that discriminates between them rather than one where all top models saturate."
-  - "You are choosing between two candidate solutions and want edge-case tests as an objective tiebreaker."
+  - You want to know whether a reported pass@1 number reflects correct code or just test gaming, and need the stricter measurement.
+  - You are comparing code models and want a benchmark that discriminates between them rather than one where all top models saturate.
+  - You are choosing between two candidate solutions and want edge-case tests as an objective tiebreaker.
 avoid_if:
-  - "You need to compare against published numbers from earlier work, since a different harness version and a different test set make the comparison invalid."
-  - "Your model only generates code in a narrow language, since the harness is Python-specific and covers function-level synthesis only."
-  - "You need to measure repository-level work, since this scores single functions rather than multi-file changes against an existing codebase."
+  - You need to compare against published numbers from earlier work, since a different harness version and a different test set make the comparison invalid.
+  - Your model only generates code in a narrow language, since the harness is Python-specific and covers function-level synthesis only.
+  - You need to measure repository-level work, since this scores single functions rather than multi-file changes against an existing codebase.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (1820), Apache-2.0 license, last commit 2025-10-02, primary language Python, and all seven topics were read from the GitHub API. Test generation approach, the pass@1 and eff@1 metrics, the CLI and Python entry points, and the NeurIPS 2023 and COLM 2024 attribution come from the official README and paper; no model was evaluated and no dataset was downloaded here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (1820), Apache-2.0 license, last commit 2025-10-02, primary language Python, and all seven topics were read from the GitHub API. Test generation approach, the pass@1 and eff@1 metrics, the CLI and Python entry points, and the NeurIPS 2023 and COLM 2024 attribution come from the official README and paper; no model was evaluated and no dataset was downloaded here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/evalplus/evalplus", "date": "2026-09-28", "description": "1,820 stars and last commit 2025-10-02 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/evalplus/evalplus
+    date: '2026-09-28'
+    description: 1,820 stars and last commit 2025-10-02 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

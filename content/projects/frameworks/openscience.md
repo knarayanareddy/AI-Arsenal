@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry"
-github_url: "https://github.com/synthetic-sciences/openscience"
+description: A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry
+github_url: https://github.com/synthetic-sciences/openscience
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, research, local, observability]
+tags:
+  - agents
+  - research
+  - local
+  - observability
 maturity: beta
 cost_model: open-source
-github_stars: 3795
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://openscience.sh/docs"
+github_stars: 4255
+github_stars_last_30d: 460
+trending_score: 60
+last_commit: '2026-10-26'
+docs_url: https://openscience.sh/docs
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Keeps the entire research session - searches, code, runs, outputs - on your machine and replayable afterwards."
+  - Keeps the entire research session - searches, code, runs, outputs - on your machine and replayable afterwards.
 best_for:
-  - "You are reproducing a paper's result and need every generated file, kernel execution, and data source recorded in one trace."
-  - "You are analysing sensitive experimental data that cannot leave your workstation or your institution's boundary."
-  - "You are drafting a methods section and need the agent to write reproducible code rather than prose you cannot verify."
+  - You are reproducing a paper's result and need every generated file, kernel execution, and data source recorded in one trace.
+  - You are analysing sensitive experimental data that cannot leave your workstation or your institution's boundary.
+  - You are drafting a methods section and need the agent to write reproducible code rather than prose you cannot verify.
 avoid_if:
-  - "You want a hosted research platform, because this runs as a desktop app, browser workspace, or local terminal command."
-  - "You need literature access without API keys, since the database connectors assume credentials you supply."
-  - "You want autonomous multi-day experimentation, because the lead agent keeps synthesis and the final call for itself."
+  - You want a hosted research platform, because this runs as a desktop app, browser workspace, or local terminal command.
+  - You need literature access without API keys, since the database connectors assume credentials you supply.
+  - You want autonomous multi-day experimentation, because the lead agent keeps synthesis and the final call for itself.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 3795, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: npm @synsci/openscience, npx synsci, curl installer, keys add and local add and run, Python and R kernels, read/write grants, ChEMBL/UniProt/PubMed/arXiv, Ace paid option. Accuracy unverified."
+enrichment_notes: 'API-verified: stars 3795, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: npm @synsci/openscience, npx synsci, curl installer, keys add and local add and run, Python and R kernels, read/write grants, ChEMBL/UniProt/PubMed/arXiv, Ace paid option. Accuracy unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

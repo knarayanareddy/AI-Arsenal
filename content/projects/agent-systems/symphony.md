@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 373
+trending_score: 45
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: symphony
-name: "Symphony"
+name: Symphony
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "OpenAI engineering preview that monitors a work tracker and spawns isolated agent runs that deliver pull requests with proof of work"
-github_url: "https://github.com/openai/symphony"
+description: OpenAI engineering preview that monitors a work tracker and spawns isolated agent runs that deliver pull requests with proof of work
+github_url: https://github.com/openai/symphony
 license: Apache-2.0
 primary_language: Other
-tags: [agents, observability]
+tags:
+  - agents
+  - observability
 maturity: experimental
 cost_model: open-source
-github_stars: 27456
-last_commit: "2026-09-15"
-docs_url: "https://github.com/openai/symphony/blob/main/SPEC.md"
+github_stars: 27829
+last_commit: '2026-09-15'
+docs_url: https://github.com/openai/symphony/blob/main/SPEC.md
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "experimental"
+  - org-backed
+  - experimental
 ecosystem_role:
-  - "Elixir reference orchestrator for autonomous Codex work-board tasks"
-  - "Proof-of-work workflow for monitored coding-agent operations"
-best_for: ["You already run coding agents per ticket and want the loop moved up a level, so a board item becomes an isolated implementation run with a pull request at the end.", "You want to read a specification and build your own orchestrator in your preferred language, because the repository ships a SPEC.md and explicitly invites implementation by any coding agent.", "You are experimenting with harness engineering practices and want a reference implementation in Elixir to read alongside the specification."]
-avoid_if: ["You need a supported production tool, because the README carries an explicit warning that Symphony is a low-key engineering preview for testing in trusted environments.", "You need agents to work without repository and tracker write access, because the design has agents completing tasks and landing pull requests, which implies real write credentials.", "You are not already using harness engineering practices, because the README states it works best in codebases that have adopted them."]
-enrichment_notes: "Symphony is explicitly an engineering preview; the Elixir reference implementation and Codex coupling make maturity and portability important caveats. Draft pending review."
+  - Elixir reference orchestrator for autonomous Codex work-board tasks
+  - Proof-of-work workflow for monitored coding-agent operations
+best_for:
+  - You already run coding agents per ticket and want the loop moved up a level, so a board item becomes an isolated implementation run with a pull request at the end.
+  - You want to read a specification and build your own orchestrator in your preferred language, because the repository ships a SPEC.md and explicitly invites implementation by any coding agent.
+  - You are experimenting with harness engineering practices and want a reference implementation in Elixir to read alongside the specification.
+avoid_if:
+  - You need a supported production tool, because the README carries an explicit warning that Symphony is a low-key engineering preview for testing in trusted environments.
+  - You need agents to work without repository and tracker write access, because the design has agents completing tasks and landing pull requests, which implies real write credentials.
+  - You are not already using harness engineering practices, because the README states it works best in codebases that have adopted them.
+enrichment_notes: Symphony is explicitly an engineering preview; the Elixir reference implementation and Codex coupling make maturity and portability important caveats. Draft pending review.
 ---
 
 ## Overview

@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python microkernel agent whose local SquillaRouter picks the cheapest capable model per turn, with tool compression and one shared runtime"
-github_url: "https://github.com/TokenRhythm/opensquilla"
+description: Python microkernel agent whose local SquillaRouter picks the cheapest capable model per turn, with tool compression and one shared runtime
+github_url: https://github.com/TokenRhythm/opensquilla
 license: Apache-2.0
 primary_language: Python
-tags: [routing, efficiency, memory]
+tags:
+  - routing
+  - efficiency
+  - memory
 maturity: beta
 cost_model: open-source
-github_stars: 7062
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://opensquilla.ai/"
+github_stars: 7084
+github_stars_last_30d: 22
+trending_score: 25
+last_commit: '2026-10-26'
+docs_url: https://opensquilla.ai/
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Optimises cost per successful outcome rather than per turn, routing locally and compressing tool output before it reaches the context."
+  - Optimises cost per successful outcome rather than per turn, routing locally and compressing tool output before it reaches the context.
 best_for:
-  - "You are paying per token across several providers and you want simple turns to stop hitting your frontier model."
-  - "Your agents produce enormous tool outputs (logs, web pages, diffs, JSON) and you need those results preserved without flooding the context window."
-  - "You want CLI, Web UI, gateway RPC and chat channels to behave identically, because they all run through one shared runtime path."
+  - You are paying per token across several providers and you want simple turns to stop hitting your frontier model.
+  - Your agents produce enormous tool outputs (logs, web pages, diffs, JSON) and you need those results preserved without flooding the context window.
+  - You want CLI, Web UI, gateway RPC and chat channels to behave identically, because they all run through one shared runtime path.
 avoid_if:
-  - "You want a small Python library, because this is a full runtime with a gateway, control console and channel bridges."
-  - "You need the routing decision to be inspectable by an external classifier, because SquillaRouter keeps routing decisions local and does not send your prompt elsewhere to pick a model."
-  - "You are on a machine without Git LFS and need the source install path, because the from-source route requires git clone plus Git LFS for the Vue control console."
+  - You want a small Python library, because this is a full runtime with a gateway, control console and channel bridges.
+  - You need the routing decision to be inspectable by an external classifier, because SquillaRouter keeps routing decisions local and does not send your prompt elsewhere to pick a model.
+  - You are on a machine without Git LFS and need the source install path, because the from-source route requires git clone plus Git LFS for the Vue control console.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. SquillaRouter behaviour, tool compression, provider list, install commands, gateway defaults and feature table are read from the official README and product guide; routing quality was not measured."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. SquillaRouter behaviour, tool compression, provider list, install commands, gateway defaults and feature table are read from the official README and product guide; routing quality was not measured.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

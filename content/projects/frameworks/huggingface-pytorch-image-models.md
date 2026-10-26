@@ -1,52 +1,62 @@
 ---
 id: huggingface-pytorch-image-models
-name: "pytorch-image-models"
+name: pytorch-image-models
 version_tracked: null
 artifact_type: library
 category: computer-vision
 subcategory: libraries
-description: "Apache-2.0 collection of PyTorch image encoders with matched training, validation, and ONNX export scripts for fair comparison"
-github_url: "https://github.com/huggingface/pytorch-image-models"
-license: "Apache-2.0"
+description: Apache-2.0 collection of PyTorch image encoders with matched training, validation, and ONNX export scripts for fair comparison
+github_url: https://github.com/huggingface/pytorch-image-models
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [vision, pytorch]
+org_or_maintainer: huggingface
+tags:
+  - vision
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 37173
-github_stars_last_30d: 0
-trending_score: 37
-last_commit: "2026-09-27"
-docs_url: "https://huggingface.co/docs/timm"
+github_stars: 37249
+github_stars_last_30d: 76
+trending_score: 39
+last_commit: '2026-10-26'
+docs_url: https://huggingface.co/docs/timm
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The largest curated collection of PyTorch image encoders, with matched training, evaluation, and export scripts so backbones are comparable instead of bespoke."
+  - The largest curated collection of PyTorch image encoders, with matched training, evaluation, and export scripts so backbones are comparable instead of bespoke.
 best_for:
-  - "You are choosing a backbone and need every candidate evaluated under the same augmentation, schedule, and metric, since a vendor's own training script rarely matches anyone else's numbers."
-  - "You are reproducing a paper that reported a result with its authors' script, and the repository ships the reference recipes, configs, and pretrained weights for those architectures."
-  - "You need a deployment-friendly encoder such as a MobileNet or EfficientNet variant with a matching ONNX export and a documented accuracy-latency trade-off."
+  - You are choosing a backbone and need every candidate evaluated under the same augmentation, schedule, and metric, since a vendor's own training script rarely matches anyone else's numbers.
+  - You are reproducing a paper that reported a result with its authors' script, and the repository ships the reference recipes, configs, and pretrained weights for those architectures.
+  - You need a deployment-friendly encoder such as a MobileNet or EfficientNet variant with a matching ONNX export and a documented accuracy-latency trade-off.
 avoid_if:
-  - "Your task is detection, segmentation, or video, because the recipes here are image classification and the head, loss, and augmentation for other tasks are not part of the maintained surface."
-  - "You need fine-grained control of a custom training loop with a novel loss, since the maintained training script assumes the standard classification setup."
-  - "You need a text or multimodal encoder, where the model-definition layer for language and vision-language checkpoints is the relevant dependency instead."
+  - Your task is detection, segmentation, or video, because the recipes here are image classification and the head, loss, and augmentation for other tasks are not part of the maintained surface.
+  - You need fine-grained control of a custom training loop with a novel loss, since the maintained training script assumes the standard classification setup.
+  - You need a text or multimodal encoder, where the model-definition layer for language and vision-language checkpoints is the relevant dependency instead.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 37173 stars, Apache-2.0 license, Python primary language, last commit 2026-09-27, 19 GitHub topics, homepage huggingface.co/docs/timm. Supported families, training features, and export paths are read from official docs; the GitHub repo name differs from the timm package name, so docs are the authoritative source for model counts."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 37173 stars, Apache-2.0 license, Python primary language, last commit 2026-09-27, 19 GitHub topics, homepage huggingface.co/docs/timm. Supported families, training features, and export paths are read from official docs; the GitHub repo name differs from the timm package name, so docs are the authoritative source for model counts.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/pytorch-image-models", "date": "2026-09-28", "description": "37,173 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/pytorch-image-models
+    date: '2026-09-28'
+    description: 37,173 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

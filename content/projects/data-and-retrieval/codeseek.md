@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A Rust CLI that indexes seven languages with tree-sitter call graphs plus hybrid dense and sparse search, exposed as MCP tools"
-github_url: "https://github.com/CodeBendKit/codeseek"
+description: A Rust CLI that indexes seven languages with tree-sitter call graphs plus hybrid dense and sparse search, exposed as MCP tools
+github_url: https://github.com/CodeBendKit/codeseek
 license: MIT
 primary_language: Rust
-tags: [code-gen, retrieval, tool-use, inference]
+tags:
+  - code-gen
+  - retrieval
+  - tool-use
+  - inference
 maturity: alpha
 cost_model: open-source
-github_stars: 768
+github_stars: 762
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-02"
+trending_score: 22
+last_commit: '2026-08-02'
 docs_url: null
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives an agent grounded symbol-level answers and a real call graph instead of grep over files it has to read itself."
+  - Gives an agent grounded symbol-level answers and a real call graph instead of grep over files it has to read itself.
 best_for:
-  - "You are wiring a coding agent that keeps guessing at call relationships and need callers and callees resolved from the AST."
-  - "You are onboarding an agent to a large polyglot repository and need an incremental index with hybrid recall rather than brute-force reading."
-  - "You are budgeted on embedding spend and want BM25 fused with dense vectors through reciprocal rank fusion instead of one expensive path."
+  - You are wiring a coding agent that keeps guessing at call relationships and need callers and callees resolved from the AST.
+  - You are onboarding an agent to a large polyglot repository and need an incremental index with hybrid recall rather than brute-force reading.
+  - You are budgeted on embedding spend and want BM25 fused with dense vectors through reciprocal rank fusion instead of one expensive path.
 avoid_if:
-  - "You are on Windows or ARM Linux, since the released binaries cover macOS arm64 and x64 plus Linux x64 only."
-  - "You are in a dynamically typed language where call edges are ambiguous, because graph accuracy depends on the parser resolving the call site."
-  - "You cannot run a local Rust binary per developer, which rules it out for some locked-down managed environments."
+  - You are on Windows or ARM Linux, since the released binaries cover macOS arm64 and x64 plus Linux x64 only.
+  - You are in a dynamically typed language where call edges are ambiguous, because graph accuracy depends on the parser resolving the call site.
+  - You cannot run a local Rust binary per developer, which rules it out for some locked-down managed environments.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 768, MIT, Rust, last commit 2026-08-02, topics. From README: npm wrapper, platform matrix, tree-sitter, BM25/dense/RRF/reranker, LanceDB and cross-encoder topics, MD5 incremental index, command table. Language list and index accuracy not confirmed."
+enrichment_notes: 'API-verified: stars 768, MIT, Rust, last commit 2026-08-02, topics. From README: npm wrapper, platform matrix, tree-sitter, BM25/dense/RRF/reranker, LanceDB and cross-encoder topics, MD5 incremental index, command table. Language list and index accuracy not confirmed.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

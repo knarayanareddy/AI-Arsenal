@@ -1,52 +1,67 @@
 ---
 id: huggingface-transformers
-name: "transformers"
+name: transformers
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "Apache-2.0 model-definition layer exposing one AutoModel API over thousands of text, vision, audio, and multimodal checkpoints"
-github_url: "https://github.com/huggingface/transformers"
-license: "Apache-2.0"
+description: Apache-2.0 model-definition layer exposing one AutoModel API over thousands of text, vision, audio, and multimodal checkpoints
+github_url: https://github.com/huggingface/transformers
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "huggingface"
-tags: [multimodal, fine-tuning]
+org_or_maintainer: huggingface
+tags:
+  - multimodal
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 166755
-github_stars_last_30d: 0
-trending_score: 42
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.co/docs/transformers"
+github_stars: 168195
+github_stars_last_30d: 1440
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://huggingface.co/docs/transformers
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, vision, audio, multimodal]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - language
+  - vision
+  - audio
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The model-definition layer almost every open ML project depends on: one AutoModel API over thousands of pretrained checkpoints, plus the tokenizer and processor contracts that pin the input format."
+  - 'The model-definition layer almost every open ML project depends on: one AutoModel API over thousands of pretrained checkpoints, plus the tokenizer and processor contracts that pin the input format.'
 best_for:
-  - "You need to serve or fine-tune six different model families this quarter and want one `AutoModelForCausalLM.from_pretrained` call per family instead of six vendored modeling files."
-  - "You are writing a pipeline that mixes modalities, such as audio in and text out, and need the processor classes to pin exactly how each checkpoint expects its inputs encoded."
-  - "You are reproducing a paper that names a checkpoint on the Hub and you need the exact tokenizer, generation config, and processor revision pinned for reproducibility."
+  - You need to serve or fine-tune six different model families this quarter and want one `AutoModelForCausalLM.from_pretrained` call per family instead of six vendored modeling files.
+  - You are writing a pipeline that mixes modalities, such as audio in and text out, and need the processor classes to pin exactly how each checkpoint expects its inputs encoded.
+  - You are reproducing a paper that names a checkpoint on the Hub and you need the exact tokenizer, generation config, and processor revision pinned for reproducibility.
 avoid_if:
-  - "You need sustained multi-request throughput from one checkpoint, because eager Python generate loops are the wrong layer for batching and paged attention."
-  - "You have a hard no-dependency or no-network requirement, since the default path fetches configs and weights from the Hub at load time."
-  - "Your model is only available as a custom architecture with a private modeling file, where you will be running unreviewed remote code in your process."
+  - You need sustained multi-request throughput from one checkpoint, because eager Python generate loops are the wrong layer for batching and paged attention.
+  - You have a hard no-dependency or no-network requirement, since the default path fetches configs and weights from the Hub at load time.
+  - Your model is only available as a custom architecture with a private modeling file, where you will be running unreviewed remote code in your process.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 166755 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, 18 GitHub topics. Architecture claims (Auto* registries, DynamicCache, GenerationConfig, processor classes, safetensors loading) are drawn from official docs and source layout, not hands-on benchmarking."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 166755 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, 18 GitHub topics. Architecture claims (Auto* registries, DynamicCache, GenerationConfig, processor classes, safetensors loading) are drawn from official docs and source layout, not hands-on benchmarking.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/transformers", "date": "2026-09-28", "description": "166,755 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/transformers
+    date: '2026-09-28'
+    description: 166,755 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

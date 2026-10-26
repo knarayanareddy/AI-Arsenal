@@ -6,39 +6,45 @@ artifact_type: library
 category: agents
 subcategory: autonomous
 description: Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces
-github_url: "https://github.com/Core-Mate/OpenGUI"
+github_url: https://github.com/Core-Mate/OpenGUI
 license: NOASSERTION
 primary_language: TypeScript
-tags: [edge, agents, guardrails]
+tags:
+  - edge
+  - agents
+  - guardrails
 maturity: beta
 cost_model: freemium
-github_stars: 1807
+github_stars: 1803
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/Core-Mate/OpenGUI/blob/main/docs/get-started.md"
+trending_score: 23
+last_commit: '2026-10-18'
+docs_url: https://github.com/Core-Mate/OpenGUI/blob/main/docs/get-started.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Targets the one device surface most agent tooling ignores: real Android apps driven through Accessibility rather than an emulated test harness."
+  - 'Targets the one device surface most agent tooling ignores: real Android apps driven through Accessibility rather than an emulated test harness.'
 best_for:
-  - "You need an agent to operate a real Android app on an authorised device, because OpenGUI reads the live UI hierarchy and acts through Accessibility instead of a test emulator."
-  - "You want GUI regression and flow testing on physical hardware, including repetitive game or in-app flows where the account owner permits automation."
-  - "You already run DeepSeek Harness or WorkBuddy and you want phone operation added as a plugin rather than as a separate backend stack to deploy."
+  - You need an agent to operate a real Android app on an authorised device, because OpenGUI reads the live UI hierarchy and acts through Accessibility instead of a test emulator.
+  - You want GUI regression and flow testing on physical hardware, including repetitive game or in-app flows where the account owner permits automation.
+  - You already run DeepSeek Harness or WorkBuddy and you want phone operation added as a plugin rather than as a separate backend stack to deploy.
 avoid_if:
-  - "You intend to use this in a commercial product, because the licence is BUSL-1.1 with a change date of 2030-04-29, so it is source-available rather than OSI open source until then."
-  - "You need unattended parallel operation across many phones, because the source implementation admits one OpenGUI task per DSH session and the managed browser is globally serial."
-  - "You have no vision-language model available, because the recommended model order starts with Doubao VLM and each provider needs image input plus tool calling."
+  - You intend to use this in a commercial product, because the licence is BUSL-1.1 with a change date of 2030-04-29, so it is source-available rather than OSI open source until then.
+  - You need unattended parallel operation across many phones, because the source implementation admits one OpenGUI task per DSH session and the managed browser is globally serial.
+  - You have no vision-language model available, because the recommended model order starts with Doubao VLM and each provider needs image input plus tool calling.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, licence as reported by the GitHub API (NOASSERTION, resolved from the repo to BUSL-1.1 with a 2030-04-29 change date), last commit, primary language and topics are API-verified. DSH version support, serialisation limits, model ranking, installer behaviour and system requirements are read from the official README; no Android device run was performed."
+enrichment_notes: Stars, licence as reported by the GitHub API (NOASSERTION, resolved from the repo to BUSL-1.1 with a 2030-04-29 change date), last commit, primary language and topics are API-verified. DSH version support, serialisation limits, model ranking, installer behaviour and system requirements are read from the official README; no Android device run was performed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -5,30 +5,43 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits"
-github_url: "https://github.com/usestrix/strix"
+description: Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
+github_url: https://github.com/usestrix/strix
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: usestrix
-tags: [agents, security]
+tags:
+  - agents
+  - security
 maturity: beta
 cost_model: freemium
-github_stars: 65378
-github_stars_last_30d: 0
-trending_score: 70
-last_commit: "2026-09-28"
-docs_url: "https://docs.strix.ai"
+github_stars: 72053
+github_stars_last_30d: 6675
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.strix.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Autonomous offensive-security agent that runs real exploitation attempts (in sandboxed environments) against your own applications, rather than static scanning — one of the most visible examples of agents applied to security testing
-best_for: ["You want application security testing on every pull request without scheduling a human pentester, and a CI job is the delivery mechanism.", "You are tired of static-analysis false positives and need each reported issue demonstrated with a working exploit against a running instance.", "You need remediation guidance rather than a scanner output, so the same run produces a patch proposal and a report you can hand to an auditor."]
-avoid_if: ["You are not authorised to run offensive tooling against a system, because this is built to execute exploits and testing without written authorisation is both illegal and contractually fraught.", "You need a certified penetration test report, because an autonomous run is evidence gathering, not a compliance deliverable with a human signature.", "You need deterministic results for regression gating, because agent behaviour varies between runs and findings need triage before they block a merge."]
+best_for:
+  - You want application security testing on every pull request without scheduling a human pentester, and a CI job is the delivery mechanism.
+  - You are tired of static-analysis false positives and need each reported issue demonstrated with a working exploit against a running instance.
+  - You need remediation guidance rather than a scanner output, so the same run produces a patch proposal and a report you can hand to an auditor.
+avoid_if:
+  - You are not authorised to run offensive tooling against a system, because this is built to execute exploits and testing without written authorisation is both illegal and contractually fraught.
+  - You need a certified penetration test report, because an autonomous run is evidence gathering, not a compliance deliverable with a human signature.
+  - You need deterministic results for regression gating, because agent behaviour varies between runs and findings need triage before they block a merge.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -36,12 +49,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Star count (38.4k), Apache-2.0 license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; appeared on GitHub weekly trending the same day. Exploitation-validation claims come from the project's own documentation and have not been independently benchmarked here.
-added_date: "2026-07-07"
-last_reviewed: "2026-07-07"
+added_date: '2026-07-07'
+last_reviewed: '2026-07-07'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending?since=weekly","date":"2026-07-07","description":"On GitHub weekly and monthly trending; 38.4k stars"}
+  - source: github-trending
+    url: https://github.com/trending?since=weekly
+    date: '2026-07-07'
+    description: On GitHub weekly and monthly trending; 38.4k stars
 featured: false
 status: active
 ---

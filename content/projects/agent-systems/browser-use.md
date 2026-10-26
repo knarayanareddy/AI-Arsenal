@@ -1,46 +1,67 @@
 ---
 id: browser-use
-name: "Browser Use"
+name: Browser Use
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: browser-agents
-description: "Open-source browser agent that drives Chrome for LLM, available as a Python library, a CLI, or hosted cloud browsers"
-github_url: "https://github.com/browser-use/browser-use"
+description: Open-source browser agent that drives Chrome for LLM, available as a Python library, a CLI, or hosted cloud browsers
+github_url: https://github.com/browser-use/browser-use
 license: MIT
 primary_language: Python
-org_or_maintainer: "Browser Use"
-tags: [agents, embeddings]
+org_or_maintainer: Browser Use
+tags:
+  - agents
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 116618
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-26"
-docs_url: "https://docs.browser-use.com/llms.txt"
+github_stars: 119191
+github_stars_last_30d: 2573
+trending_score: 55
+last_commit: '2026-10-24'
+docs_url: https://docs.browser-use.com/llms.txt
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The default open-source answer to 'let my agent use the web': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against."
-best_for: ["You are automating a booking, checkout or form-heavy portal where the layout changes often enough that hand-written XPath breaks every other week.", "You want an agent to complete CAPTCHA-gated or residential-IP-sensitive flows and you need stealth browsers, proxy rotation and CAPTCHA solving rather than a bare headless Chrome.", "You already run an LLM tool-calling loop and just need the browser handed to it as one more tool, either through the CLI or the Agents API."]
-avoid_if: ["You need deterministic repeatability on a site you control, because an LLM choosing each click makes the same script non-reproducible in a way an assertion-based test is not.", "Your budget cannot absorb per-browser-hour cloud costs at scale, because the hosted tier is billed at $0.02 per browser-hour on top of your model spend.", "You are legally barred from automated access to a target site, because the stealth and residential-proxy feature set exists precisely to defeat the controls that site operator set."]
+  - 'The default open-source answer to ''let my agent use the web'': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against.'
+best_for:
+  - You are automating a booking, checkout or form-heavy portal where the layout changes often enough that hand-written XPath breaks every other week.
+  - You want an agent to complete CAPTCHA-gated or residential-IP-sensitive flows and you need stealth browsers, proxy rotation and CAPTCHA solving rather than a bare headless Chrome.
+  - You already run an LLM tool-calling loop and just need the browser handed to it as one more tool, either through the CLI or the Agents API.
+avoid_if:
+  - You need deterministic repeatability on a site you control, because an LLM choosing each click makes the same script non-reproducible in a way an assertion-based test is not.
+  - Your budget cannot absorb per-browser-hour cloud costs at scale, because the hosted tier is billed at $0.02 per browser-hour on top of your model spend.
+  - You are legally barred from automated access to a target site, because the stealth and residential-proxy feature set exists precisely to defeat the controls that site operator set.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [stagehand, playwright]
-integrates_with: [browserbase]
+alternatives:
+  - stagehand
+  - playwright
+integrates_with:
+  - browserbase
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (103,506), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (103,506), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/browser-use/browser-use", "date": "2026-07-08", "description": "103,506 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/browser-use/browser-use
+    date: '2026-07-08'
+    description: 103,506 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

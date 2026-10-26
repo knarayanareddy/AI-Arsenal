@@ -5,43 +5,65 @@ version_tracked: null
 artifact_type: platform
 category: code-generation
 subcategory: coding-agents
-description: "Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release"
-github_url: "https://github.com/continuedev/continue"
+description: Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release
+github_url: https://github.com/continuedev/continue
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: continuedev
-tags: [agents, chunking]
+tags:
+  - agents
+  - chunking
 maturity: production
 cost_model: open-source
-github_stars: 36053
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-09-28"
-docs_url: "https://docs.continue.dev"
+github_stars: 36331
+github_stars_last_30d: 278
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://docs.continue.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The open-source, bring-your-own-model counterpart to Copilot/Cursor: the reference choice when the constraint is model control (local models, self-hosted endpoints, no code leaving the network) rather than maximum assistant capability"
-best_for: ["You are reviving an existing fork of Continue and you need the exact 2.0.0 extension, CLI or plugin surface to work against rather than an actively developed main branch.", "You are studying how an editor-agnostic coding agent was packaged across three surfaces, because the CLI and VS Code extension remain readable reference implementations under Apache-2.0.", "You have a team that standardised on this agent before the sunset and you need to plan a migration, since no further fixes will ship to the repository."]
-avoid_if: ["You are starting a new editor-agent project, because the README states plainly that the repository is no longer actively maintained and is read-only for all users.", "You need security patches, model-provider updates or a bug fix from upstream, because the final 2.0.0 release already shipped and nothing will follow it.", "You are choosing an actively maintained JetBrains integration, because the README recommends the Continue CLI over the JetBrains plugin."]
+  - 'The open-source, bring-your-own-model counterpart to Copilot/Cursor: the reference choice when the constraint is model control (local models, self-hosted endpoints, no code leaving the network) rather than maximum assistant capability'
+best_for:
+  - You are reviving an existing fork of Continue and you need the exact 2.0.0 extension, CLI or plugin surface to work against rather than an actively developed main branch.
+  - You are studying how an editor-agnostic coding agent was packaged across three surfaces, because the CLI and VS Code extension remain readable reference implementations under Apache-2.0.
+  - You have a team that standardised on this agent before the sunset and you need to plan a migration, since no further fixes will ship to the repository.
+avoid_if:
+  - You are starting a new editor-agent project, because the README states plainly that the repository is no longer actively maintained and is read-only for all users.
+  - You need security patches, model-provider updates or a bug fix from upstream, because the final 2.0.0 release already shipped and nothing will follow it.
+  - You are choosing an actively maintained JetBrains integration, because the README recommends the Continue CLI over the JetBrains plugin.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [aider, cline, tabby]
-integrates_with: [ollama, vllm]
+alternatives:
+  - aider
+  - cline
+  - tabby
+integrates_with:
+  - ollama
+  - vllm
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (34.7k), Apache-2.0, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Capability descriptions from official docs; comparative capability claims are qualitative, not benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/continuedev/continue","date":"2026-07-08","description":"34.7k stars, Apache-2.0, active development"}
+  - source: github-trending
+    url: https://github.com/continuedev/continue
+    date: '2026-07-08'
+    description: 34.7k stars, Apache-2.0, active development
 featured: false
 status: active
 ---

@@ -5,43 +5,65 @@ version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: browser-agents
-description: "Browser agent SDK whose observe() returns real CSS selectors so credentials never reach the model"
-github_url: "https://github.com/browserbase/stagehand"
+description: Browser agent SDK whose observe() returns real CSS selectors so credentials never reach the model
+github_url: https://github.com/browserbase/stagehand
 license: MIT
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [tool-use, data, agents, local]
+tags:
+  - tool-use
+  - data
+  - agents
+  - local
 maturity: production
 cost_model: usage-based
-github_stars: 25439
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://stagehand.dev"
+github_stars: 25827
+github_stars_last_30d: 388
+trending_score: 46
+last_commit: '2026-10-23'
+docs_url: https://stagehand.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS-selector scripts and fully autonomous browsing agents
-best_for: ["You are automating an authenticated application and need a persistent signed-in session, because a userDataDir keeps cookies between runs so the next invocation starts already logged in.", "You need structured data out of a page with a schema you control, since extract() takes a Zod or Pydantic object and returns validated records rather than free text.", "You want a browser agent that self-heals when a site redesigns a form, because act() re-resolves the target at call time instead of replaying a recorded coordinate."]
-avoid_if: ["You need every action to be pixel-deterministic, because the model decides what a phrase like 'click the sign in button' refers to on the live page each time.", "You cannot send page structure to a model provider, because resolving a target requires a model call against the live DOM, which is a data-egress decision you have to make explicitly.", "You want a zero-dependency scraper for a static site, because running Chromium and paying per model call is heavy for a page that plain HTTP and a parser could read."]
+best_for:
+  - You are automating an authenticated application and need a persistent signed-in session, because a userDataDir keeps cookies between runs so the next invocation starts already logged in.
+  - You need structured data out of a page with a schema you control, since extract() takes a Zod or Pydantic object and returns validated records rather than free text.
+  - You want a browser agent that self-heals when a site redesigns a form, because act() re-resolves the target at call time instead of replaying a recorded coordinate.
+avoid_if:
+  - You need every action to be pixel-deterministic, because the model decides what a phrase like 'click the sign in button' refers to on the live page each time.
+  - You cannot send page structure to a model provider, because resolving a target requires a model call against the live DOM, which is a data-egress decision you have to make explicitly.
+  - You want a zero-dependency scraper for a static site, because running Chromium and paying per model call is heavy for a page that plain HTTP and a parser could read.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [playwright, firecrawl]
-integrates_with: [browserbase]
+alternatives:
+  - playwright
+  - firecrawl
+integrates_with:
+  - browserbase
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture (CDP-native as of v3, removing the prior Playwright dependency for a 44% performance improvement on complex DOM interactions; act()/extract()/observe()/agent() primitives; multi-provider LLM support) is sourced from Browserbase's own deepwiki documentation and corroborated by independent third-party comparison coverage (scrapfly.io), not just marketing copy.
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under browser-agents"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under browser-agents
 featured: false
 status: active
 ---

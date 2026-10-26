@@ -1,52 +1,63 @@
 ---
 id: huginn-huginn
-name: "huginn"
+name: huginn
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "MIT-licensed Ruby event-driven platform where agents watch sites, feeds, files, and webhooks and react on a schedule"
-github_url: "https://github.com/huginn/huginn"
-license: "MIT"
+description: MIT-licensed Ruby event-driven platform where agents watch sites, feeds, files, and webhooks and react on a schedule
+github_url: https://github.com/huginn/huginn
+license: MIT
 primary_language: Other
-org_or_maintainer: "huginn"
-tags: [monitoring, agents]
+org_or_maintainer: huginn
+tags:
+  - monitoring
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 50005
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-09-26"
+github_stars: 50146
+github_stars_last_30d: 141
+trending_score: 44
+last_commit: '2026-10-26'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "Long-running event-driven agent platform whose agents watch websites, APIs, and files on a schedule and act on changes — the pre-LLM precedent for autonomous monitoring loops."
+  - Long-running event-driven agent platform whose agents watch websites, APIs, and files on a schedule and act on changes — the pre-LLM precedent for autonomous monitoring loops.
 best_for:
-  - "You need alerts when a vendor status page, a competitor's pricing page, or a scraped listing changes, and a deterministic rule is enough to decide what counts as a change."
-  - "You want to see exactly what an automated agent fetched and did, because every event and payload is stored in the database and rendered in a web interface rather than hidden in a model context."
-  - "You are wiring many small automations across RSS, webhooks, and file drops and want a visual graph of agent-to-agent communication with rate limits and deduplication built in."
+  - You need alerts when a vendor status page, a competitor's pricing page, or a scraped listing changes, and a deterministic rule is enough to decide what counts as a change.
+  - You want to see exactly what an automated agent fetched and did, because every event and payload is stored in the database and rendered in a web interface rather than hidden in a model context.
+  - You are wiring many small automations across RSS, webhooks, and file drops and want a visual graph of agent-to-agent communication with rate limits and deduplication built in.
 avoid_if:
-  - "You need open-ended reasoning, because agents here follow fixed rules and cannot summarize, classify, or decide anything the scenario does not already express."
-  - "You need a modern developer experience, since the Ruby on Rails codebase carries long-standing conventions and a large surface of inherited UI that most teams have to work around."
-  - "You are deploying a multi-tenant product, because the design assumes a trusted single-user or small-team installation with a shared credential store."
+  - You need open-ended reasoning, because agents here follow fixed rules and cannot summarize, classify, or decide anything the scenario does not already express.
+  - You need a modern developer experience, since the Ruby on Rails codebase carries long-standing conventions and a large surface of inherited UI that most teams have to work around.
+  - You are deploying a multi-tenant product, because the design assumes a trusted single-user or small-team installation with a shared credential store.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 50005 stars, MIT license, primary language reported as Other (Ruby-dominant repo), last commit 2026-09-26, 12 GitHub topics, no homepage. Agent types, change-detection modes, and the V8 JavaScriptAgent sandbox are read from official docs; the platform was not deployed in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 50005 stars, MIT license, primary language reported as Other (Ruby-dominant repo), last commit 2026-09-26, 12 GitHub topics, no homepage. Agent types, change-detection modes, and the V8 JavaScriptAgent sandbox are read from official docs; the platform was not deployed in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huginn/huginn", "date": "2026-09-28", "description": "50,005 stars and last commit 2026-09-26 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huginn/huginn
+    date: '2026-09-28'
+    description: 50,005 stars and last commit 2026-09-26 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

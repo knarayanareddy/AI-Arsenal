@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL"
-github_url: "https://github.com/roboflow/maestro"
+description: Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL
+github_url: https://github.com/roboflow/maestro
 license: Apache-2.0
 primary_language: Python
-tags: [fine-tuning, multimodal, edge]
+tags:
+  - fine-tuning
+  - multimodal
+  - edge
 maturity: beta
 cost_model: open-source
-github_stars: 2696
+github_stars: 2695
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-24"
-docs_url: "https://maestro.roboflow.com"
+trending_score: 23
+last_commit: '2026-10-19'
+docs_url: https://maestro.roboflow.com
 demo_url: null
 phase: training-and-alignment
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Collapses per-model vision-language fine-tuning boilerplate into one CLI, one JSONL data format and shared LoRA/QLoRA defaults."
+  - Collapses per-model vision-language fine-tuning boilerplate into one CLI, one JSONL data format and shared LoRA/QLoRA defaults.
 best_for:
-  - "You are fine-tuning Florence-2, PaliGemma 2 or Qwen2.5-VL on a single GPU and you want a working recipe without writing the training loop yourself."
-  - "You are turning labelled images into a VLM that emits structured output such as JSON or bounding boxes and you want QLoRA rather than a full fine-tune."
-  - "You already have annotations in a JSONL file and you want a Colab-runnable baseline before you invest in a custom trainer."
+  - You are fine-tuning Florence-2, PaliGemma 2 or Qwen2.5-VL on a single GPU and you want a working recipe without writing the training loop yourself.
+  - You are turning labelled images into a VLM that emits structured output such as JSON or bounding boxes and you want QLoRA rather than a full fine-tune.
+  - You already have annotations in a JSONL file and you want a Colab-runnable baseline before you invest in a custom trainer.
 avoid_if:
-  - "You need to support model families beyond Florence-2, PaliGemma 2 and Qwen2.5-VL, because the recipe list is the product and it is deliberately short."
-  - "You need distributed training, custom loss functions or a research-modified optimizer schedule, because you would be fighting a fixed training loop."
-  - "You intend to put several supported models in one environment, since the project explicitly recommends a separate Python environment per model because their dependency requirements clash."
+  - You need to support model families beyond Florence-2, PaliGemma 2 and Qwen2.5-VL, because the recipe list is the product and it is deliberately short.
+  - You need distributed training, custom loss functions or a research-modified optimizer schedule, because you would be fighting a fixed training loop.
+  - You intend to put several supported models in one environment, since the project explicitly recommends a separate Python environment per model because their dependency requirements clash.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Model recipes, install extras, CLI flags and Colab links are read from the README; no fine-tune was run, so the VRAM and throughput figures implied by the Colab claims are unverified."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Model recipes, install extras, CLI flags and Colab links are read from the README; no fine-tune was run, so the VRAM and throughput figures implied by the Colab claims are unverified.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

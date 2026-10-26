@@ -1,52 +1,64 @@
 ---
 id: nvidia-nemo-speech
-name: "Speech"
+name: Speech
 version_tracked: null
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "NVIDIA NeMo speech stack for training and serving ASR, TTS, diarization, and translation models"
-github_url: "https://github.com/NVIDIA-NeMo/Speech"
-license: "Apache-2.0"
+description: NVIDIA NeMo speech stack for training and serving ASR, TTS, diarization, and translation models
+github_url: https://github.com/NVIDIA-NeMo/Speech
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "NVIDIA-NeMo"
-tags: [voice, training, inference]
+org_or_maintainer: NVIDIA-NeMo
+tags:
+  - voice
+  - training
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 18518
+github_stars: 18618
 github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-24"
-docs_url: "https://docs.nvidia.com/nemo/speech/nightly/index.html"
+trending_score: 33
+last_commit: '2026-10-26'
+docs_url: https://docs.nvidia.com/nemo/speech/nightly/index.html
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [audio, language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - audio
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Conversational-speech toolkit spanning ASR, TTS, and voice conversion with NeMo-format checkpoints that drop into low-latency serving."
+  - Conversational-speech toolkit spanning ASR, TTS, and voice conversion with NeMo-format checkpoints that drop into low-latency serving.
 best_for:
-  - "You are deploying a streaming ASR or TTS endpoint and want a low-latency server that loads a NeMo-format checkpoint without writing a custom inference loop."
-  - "You are fine-tuning a speech model on your own audio and want distributed training, mixed precision, and pretrained model collection already wired together."
-  - "You need a pipeline that spans ASR, translation, diarization, and voice conversion and must keep all of those on one framework's checkpoint format."
+  - You are deploying a streaming ASR or TTS endpoint and want a low-latency server that loads a NeMo-format checkpoint without writing a custom inference loop.
+  - You are fine-tuning a speech model on your own audio and want distributed training, mixed precision, and pretrained model collection already wired together.
+  - You need a pipeline that spans ASR, translation, diarization, and voice conversion and must keep all of those on one framework's checkpoint format.
 avoid_if:
-  - "You want a small pure-Python speech library with no CUDA dependency, since the toolkit assumes substantial NVIDIA hardware for the paths that matter."
-  - "You are evaluating open ASR models and need one uniform benchmarking harness across dozens of model families, since the collection is scoped to what NeMo supports."
-  - "Your deployment target is a browser or mobile client, where the format and runtime are heavy and a lighter client-side stack will serve you better."
+  - You want a small pure-Python speech library with no CUDA dependency, since the toolkit assumes substantial NVIDIA hardware for the paths that matter.
+  - You are evaluating open ASR models and need one uniform benchmarking harness across dozens of model families, since the collection is scoped to what NeMo supports.
+  - Your deployment target is a browser or mobile client, where the format and runtime are heavy and a lighter client-side stack will serve you better.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (18518), Apache-2.0 license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. The .nemo archive format, model collections, chunk and stride streaming knobs, and the Triton service layout come from official docs and the repository README; hardware and upgrade-pain notes are engineering judgement, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (18518), Apache-2.0 license, last commit 2026-09-24, Python as primary language and the topic list were API-verified. The .nemo archive format, model collections, chunk and stride streaming knobs, and the Triton service layout come from official docs and the repository README; hardware and upgrade-pain notes are engineering judgement, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA-NeMo/Speech", "date": "2026-09-28", "description": "18,518 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA-NeMo/Speech
+    date: '2026-09-28'
+    description: 18,518 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

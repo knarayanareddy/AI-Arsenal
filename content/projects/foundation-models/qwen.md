@@ -1,55 +1,89 @@
 ---
 id: qwen
 name: Qwen
-version_tracked: "3.8"
+version_tracked: '3.8'
 artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Alibaba's current open-weight flagship line (Qwen3.5, Qwen3.6, Qwen3.8) — hybrid gated-attention/MoE models with native vision and tunable reasoning depth
-github_url: "https://github.com/QwenLM/Qwen3.8"
+github_url: https://github.com/QwenLM/Qwen3.8
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Alibaba Qwen team"
-tags: [llm, inference, reasoning, code-gen, multimodal]
+org_or_maintainer: Alibaba Qwen team
+tags:
+  - llm
+  - inference
+  - reasoning
+  - code-gen
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 4324
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-08-17"
-docs_url: "https://qwen.ai/"
-demo_url: "https://chat.qwen.ai/"
+github_stars: 4328
+github_stars_last_30d: 4
+trending_score: 15
+last_commit: '2026-08-17'
+docs_url: https://qwen.ai/
+demo_url: https://chat.qwen.ai/
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/collections/Qwen/qwen38"
-model_sizes: ["0.8B", "2B", "4B", "9B", "27B", "35B-A3B", "122B-A10B", "397B-A17B", "2.4T-A95B"]
+hf_url: https://huggingface.co/collections/Qwen/qwen38
+model_sizes:
+  - 0.8B
+  - 2B
+  - 4B
+  - 9B
+  - 27B
+  - 35B-A3B
+  - 122B-A10B
+  - 397B-A17B
+  - 2.4T-A95B
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [HF, GGUF, FP8]
+supported_formats:
+  - HF
+  - GGUF
+  - FP8
 api_compatible: openai
 phase: foundation-model
-domain: [language, vision, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+  - vision
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "Alibaba's open-weight flagship line, released every few months with a dense small model and a sparse MoE large model in each generation, and the only major family that ships native vision at every size from 0.8B upward"
+  - Alibaba's open-weight flagship line, released every few months with a dense small model and a sparse MoE large model in each generation, and the only major family that ships native vision at every size from 0.8B upward
 best_for:
   - You want one open-weight family that covers a laptop-sized 4B model and a Qwen-Max-class flagship under the same tokenizer and chat template, so prompt work transfers between the two
   - Long-horizon agentic coding is the workload — Qwen3.8-27B reports 61.7 on SWE-bench Pro and 79.0 on Qwen's own QwenSWEBench, both measured with the Claude Code harness rather than a bespoke scaffold
   - You need document, chart or screen understanding inside the same model that writes the code, instead of a separate VLM call per step
 avoid_if:
   - Your jurisdiction or procurement rules exclude Chinese-origin models regardless of licence, which is a policy question no benchmark resolves
-  - "You want a stable checkpoint to fine-tune once and forget: Alibaba ships a new generation roughly every two months and each one resets the tokenizer's special tokens, chat template and reasoning controls"
+  - 'You want a stable checkpoint to fine-tune once and forget: Alibaba ships a new generation roughly every two months and each one resets the tokenizer''s special tokens, chat template and reasoning controls'
   - You need a licence you can pin to a specific artefact long-term — the GitHub repos carry no licence file and the terms live on each model card, so confirm per checkpoint rather than per family
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [qwen-2-5, qwen3-vl, qwen3-omni, deepseek-v3-r1, kimi-k2]
-integrates_with: [vllm, sglang, llama-cpp, transformers]
+alternatives:
+  - qwen-2-5
+  - qwen3-vl
+  - qwen3-omni
+  - deepseek-v3-r1
+  - kimi-k2
+integrates_with:
+  - vllm
+  - sglang
+  - llama-cpp
+  - transformers
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Verified 2026-10-25: QwenLM/Qwen3.8 repo (4,324 stars, 68 open issues, last push 2026-08-17); HF API for Qwen/Qwen3.8-27B shows license apache-2.0, 7.76M downloads, architecture Qwen3_5ForConditionalGeneration; README release timeline and model cards supply sizes, context length and benchmark numbers. Replaces the earlier entry that tracked the retired Qwen1 generation."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Verified 2026-10-25: QwenLM/Qwen3.8 repo (4,324 stars, 68 open issues, last push 2026-08-17); HF API for Qwen/Qwen3.8-27B shows license apache-2.0, 7.76M downloads, architecture Qwen3_5ForConditionalGeneration; README release timeline and model cards supply sizes, context length and benchmark numbers. Replaces the earlier entry that tracked the retired Qwen1 generation.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

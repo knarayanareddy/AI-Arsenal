@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "pipelab-org"
+org_or_maintainer: pipelab-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,10 +18,10 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 3
+trending_score: 15
 added_date: '2026-07-11'
-last_reviewed: "2026-10-24"
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: active
 id: pipelock
@@ -42,8 +42,8 @@ tags:
   - tool-use
 maturity: beta
 cost_model: open-source
-github_stars: 959
-last_commit: "2026-10-24"
+github_stars: 962
+last_commit: '2026-10-26'
 docs_url: https://github.com/pipelab-org/pipelock
 phase: benchmark-and-eval
 domain:

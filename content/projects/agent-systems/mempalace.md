@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 410
+trending_score: 48
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,19 @@ name: MemPalace
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search"
-github_url: "https://github.com/MemPalace/mempalace"
+description: Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search
+github_url: https://github.com/MemPalace/mempalace
 license: MIT
 primary_language: Python
-tags: [memory, retrieval, local]
+tags:
+  - memory
+  - retrieval
+  - local
 maturity: beta
 cost_model: open-source
-github_stars: 59335
-last_commit: "2026-09-25"
-docs_url: "http://mempalaceofficial.com/"
+github_stars: 59745
+last_commit: '2026-10-25'
+docs_url: http://mempalaceofficial.com/
 phase: agent-system
 domain:
   - language
@@ -52,8 +55,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A persistent-memory layer with recall, storage, deletion, and agent-integration surfaces for long-running assistants.
-best_for: ["You are losing long-running context to session expiry — the README specifically flags that Claude Code sessions expire in 30 days without auto-save hooks wired — and want durable recall before that happens.", "You need recall to return the original wording of a conversation rather than a paraphrase, because the system stores text verbatim and explicitly does not summarise, extract or rewrite.", "You want search scoped by subject rather than run against one flat corpus, since people and projects become wings, topics become rooms and the original content lives in drawers."]
-avoid_if: ["You need compressed, token-cheap summaries of very large histories, because verbatim storage is the deliberate design choice and will grow your context rather than shrink it.", "You are on a machine where a local ChromaDB instance is not acceptable, because the current default backend is Chroma and the interface lives in mempalace/backends/base.py with alternatives still to be written.", "You are in a shared multi-tenant deployment needing hard isolation guarantees, because the local-palace, shared-brain-hub and client topologies described in the setup skill are early and the README warns about Claude Code session expiry without auto-save hooks."]
+best_for:
+  - You are losing long-running context to session expiry — the README specifically flags that Claude Code sessions expire in 30 days without auto-save hooks wired — and want durable recall before that happens.
+  - You need recall to return the original wording of a conversation rather than a paraphrase, because the system stores text verbatim and explicitly does not summarise, extract or rewrite.
+  - You want search scoped by subject rather than run against one flat corpus, since people and projects become wings, topics become rooms and the original content lives in drawers.
+avoid_if:
+  - You need compressed, token-cheap summaries of very large histories, because verbatim storage is the deliberate design choice and will grow your context rather than shrink it.
+  - You are on a machine where a local ChromaDB instance is not acceptable, because the current default backend is Chroma and the interface lives in mempalace/backends/base.py with alternatives still to be written.
+  - You are in a shared multi-tenant deployment needing hard isolation guarantees, because the local-palace, shared-brain-hub and client topologies described in the setup skill are early and the README warns about Claude Code session expiry without auto-save hooks.
 enrichment_notes: Official repository, MIT license, benchmark positioning, and 2026-07-10 activity were reviewed on 2026-07-12. Comparative claims and production fit remain draft.
 ---
 

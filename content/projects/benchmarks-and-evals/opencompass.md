@@ -1,50 +1,69 @@
 ---
 id: opencompass
-name: "OpenCompass"
+name: OpenCompass
 version_tracked: null
 artifact_type: platform
 category: evaluation
 subcategory: evaluation
-description: "LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration"
-github_url: "https://github.com/open-compass/opencompass"
-license: "Apache-2.0"
+description: LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
+github_url: https://github.com/open-compass/opencompass
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "OpenCompass"
-tags: [evaluation, benchmark, llm, batching]
+org_or_maintainer: OpenCompass
+tags:
+  - evaluation
+  - benchmark
+  - llm
+  - batching
 maturity: production
 cost_model: open-source
-github_stars: 7392
-github_stars_last_30d: 0
-trending_score: 52
-last_commit: "2026-09-03"
-docs_url: "https://opencompass.readthedocs.io/en/latest/"
-demo_url: "https://rank.opencompass.org.cn/home"
+github_stars: 7549
+github_stars_last_30d: 157
+trending_score: 28
+last_commit: '2026-10-26'
+docs_url: https://opencompass.readthedocs.io/en/latest/
+demo_url: https://rank.opencompass.org.cn/home
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language, general-purpose, reasoning]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, community-driven, research-origin]
+domain:
+  - language
+  - general-purpose
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "The broad-coverage evaluation platform: one config-driven runner that drives a large dataset corpus across many model families, so a comparison rests on a fixed harness rather than per-benchmark scripts."
+  - 'The broad-coverage evaluation platform: one config-driven runner that drives a large dataset corpus across many model families, so a comparison rests on a fixed harness rather than per-benchmark scripts.'
 best_for:
-  - "You need one reproducible pass over a wide dataset corpus for several models at once, and care that every model saw the identical prompt template and scoring code"
-  - "You are comparing open-weight checkpoints against hosted APIs and want the same harness driving both rather than trusting each vendor's own leaderboard submission"
+  - You need one reproducible pass over a wide dataset corpus for several models at once, and care that every model saw the identical prompt template and scoring code
+  - You are comparing open-weight checkpoints against hosted APIs and want the same harness driving both rather than trusting each vendor's own leaderboard submission
 avoid_if:
-  - "You need to evaluate a narrow, application-specific behaviour — a 100+ dataset sweep costs compute you will not use, and a targeted suite answers the question faster"
-  - "Your evaluation requires agentic multi-turn interaction or tool use, which sits outside a prompt-and-score harness and belongs in an agent-level benchmark"
+  - You need to evaluate a narrow, application-specific behaviour — a 100+ dataset sweep costs compute you will not use, and a targeted suite answers the question faster
+  - Your evaluation requires agentic multi-turn interaction or tool use, which sits outside a prompt-and-score harness and belongs in an agent-level benchmark
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [deepeval]
-integrates_with: [ollama, vllm]
+alternatives:
+  - deepeval
+integrates_with:
+  - ollama
+  - vllm
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (7,392), forks (860), licence (Apache-2.0), language (Python), created 2023-06-15, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Dataset-coverage and model-support claims come from the README. Architecture claims derive from README and docs, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (7,392), forks (860), licence (Apache-2.0), language (Python), created 2023-06-15, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Dataset-coverage and model-support claims come from the README. Architecture claims derive from README and docs, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/open-compass/opencompass", "date": "2026-09-03", "description": "7,392 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-06-15"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/open-compass/opencompass
+    date: '2026-09-03'
+    description: 7,392 stars on GitHub as of 2026-09-03 (GitHub API), created 2023-06-15
 featured: false
 status: active
 ---

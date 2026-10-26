@@ -1,52 +1,63 @@
 ---
 id: aimhubio-aim
-name: "aim"
+name: aim
 version_tracked: null
 artifact_type: tool
 category: evaluation
 subcategory: monitoring
-description: "Self-hostable experiment tracker with a fast comparison UI, a terminal client for diffing runs, and RocksDB-backed metric storage"
-github_url: "https://github.com/aimhubio/aim"
-license: "Apache-2.0"
+description: Self-hostable experiment tracker with a fast comparison UI, a terminal client for diffing runs, and RocksDB-backed metric storage
+github_url: https://github.com/aimhubio/aim
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "aimhubio"
-tags: [monitoring, self-hosted, evaluation]
+org_or_maintainer: aimhubio
+tags:
+  - monitoring
+  - self-hosted
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 6269
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-27"
-docs_url: "https://aimstack.io"
+github_stars: 6291
+github_stars_last_30d: 22
+trending_score: 35
+last_commit: '2026-10-25'
+docs_url: https://aimstack.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Experiment tracker with a fast UI, comparison views, and a self-hosted deployment mode — the lightweight alternative when a hosted ML tracker is not acceptable."
+  - Experiment tracker with a fast UI, comparison views, and a self-hosted deployment mode — the lightweight alternative when a hosted ML tracker is not acceptable.
 best_for:
-  - "You run many short experiments and need a compare view that answers which change actually moved the metric, without a hosted account or per-seat cost."
-  - "You want to track prompts, parameters, and text outputs as first-class entities, not only scalar training curves."
-  - "You are migrating from TensorBoard logs and want a real run database with names, tags, and reproducible metadata attached to each run."
+  - You run many short experiments and need a compare view that answers which change actually moved the metric, without a hosted account or per-seat cost.
+  - You want to track prompts, parameters, and text outputs as first-class entities, not only scalar training curves.
+  - You are migrating from TensorBoard logs and want a real run database with names, tags, and reproducible metadata attached to each run.
 avoid_if:
-  - "You need team governance with SSO, RBAC, and approval workflows, since this is an open-source server with no enterprise identity layer."
-  - "Your experiment metadata exceeds what a single-node RocksDB store handles well, where a warehouse-backed platform is built for that."
-  - "You already have a full tracking platform and need only LLM tracing, where the observability phase entries fit the job better."
+  - You need team governance with SSO, RBAC, and approval workflows, since this is an open-source server with no enterprise identity layer.
+  - Your experiment metadata exceeds what a single-node RocksDB store handles well, where a warehouse-backed platform is built for that.
+  - You already have a full tracking platform and need only LLM tracing, where the observability phase entries fit the job better.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (6269), Apache-2.0 license, last commit 2026-09-27, primary language Python, and all 16 topics were read from the GitHub API. RocksDB storage, the Rust core, the CLI diff command, and in-process server mode come from the official docs; no server was started and no run was logged here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (6269), Apache-2.0 license, last commit 2026-09-27, primary language Python, and all 16 topics were read from the GitHub API. RocksDB storage, the Rust core, the CLI diff command, and in-process server mode come from the official docs; no server was started and no run was logged here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/aimhubio/aim", "date": "2026-09-28", "description": "6,269 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/aimhubio/aim
+    date: '2026-09-28'
+    description: 6,269 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

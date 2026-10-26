@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks"
-github_url: "https://github.com/toon-format/toon"
+description: A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks
+github_url: https://github.com/toon-format/toon
 license: MIT
 primary_language: TypeScript
-tags: [structured-output, efficiency, inference]
+tags:
+  - structured-output
+  - efficiency
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 25436
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-03"
-docs_url: "https://toonformat.dev"
+github_stars: 25564
+github_stars_last_30d: 128
+trending_score: 33
+last_commit: '2026-10-09'
+docs_url: https://toonformat.dev
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Drops redundant per-record syntax on uniform data while staying a lossless view of the JSON you already have."
+  - Drops redundant per-record syntax on uniform data while staying a lossless view of the JSON you already have.
 best_for:
-  - "You are sending arrays of same-shaped records to a model and paying for repeated JSON key names on every item."
-  - "You are feeding a model structured data it must parse reliably and want explicit headers rather than brace matching."
-  - "You already produce JSON programmatically and need a token-efficient encoding without changing your data model."
+  - You are sending arrays of same-shaped records to a model and paying for repeated JSON key names on every item.
+  - You are feeding a model structured data it must parse reliably and want explicit headers rather than brace matching.
+  - You already produce JSON programmatically and need a token-efficient encoding without changing your data model.
 avoid_if:
-  - "You are working with deeply nested or irregular data, since the README states JSON may be more efficient there."
-  - "You need a format every downstream consumer parses, because most models and libraries expect JSON."
-  - "You have a workload with few records, since the overhead of a header line dominates at small n."
+  - You are working with deeply nested or irregular data, since the README states JSON may be more efficient there.
+  - You need a format every downstream consumer parses, because most models and libraries expect JSON.
+  - You have a workload with few records, since the overhead of a header line dominates at small n.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 25436, MIT, TypeScript, last commit 2026-09-03, topics, homepage. From README: spec v4.1, four forms including keyed tabular, nested field groups, ~117 vs ~66 token example, lossless JSON encoding claim, npm @toon-format/toon. Benchmarks not reproduced."
+enrichment_notes: 'API-verified: stars 25436, MIT, TypeScript, last commit 2026-09-03, topics, homepage. From README: spec v4.1, four forms including keyed tabular, nested field groups, ~117 vs ~66 token example, lossless JSON encoding claim, npm @toon-format/toon. Benchmarks not reproduced.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

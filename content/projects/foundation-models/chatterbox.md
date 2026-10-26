@@ -5,43 +5,64 @@ version_tracked: null
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3"
-github_url: "https://github.com/resemble-ai/chatterbox"
+description: Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3
+github_url: https://github.com/resemble-ai/chatterbox
 license: MIT
 primary_language: Python
 org_or_maintainer: resemble-ai
-tags: [voice, multimodal, edge, local]
+tags:
+  - voice
+  - multimodal
+  - edge
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 26600
-github_stars_last_30d: 0
+github_stars: 27276
+github_stars_last_30d: 676
 trending_score: 55
-last_commit: "2026-07-21"
-docs_url: "https://huggingface.co/ResembleAI/Chatterbox-Multilingual-TTS"
-demo_url: "https://huggingface.co/spaces/ResembleAI/Chatterbox"
+last_commit: '2026-07-21'
+docs_url: https://huggingface.co/ResembleAI/Chatterbox-Multilingual-TTS
+demo_url: https://huggingface.co/spaces/ResembleAI/Chatterbox
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, production-proven, actively-maintained]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - production-proven
+  - actively-maintained
 ecosystem_role:
-  - "The commercial-vendor gambit in open TTS: a voice-AI company (Resemble) open-sourcing a production-grade cloning model under MIT — bringing things research repos skip (default perceptual watermarking, emotion-intensity control, multilingual checkpoints, a paid-API upgrade path) and instantly becoming the most-starred open cloning-TTS release of its generation"
-best_for: ["You need a voice agent that responds in a conversational timeframe and you want the 350M Turbo checkpoint, whose speech-token-to-mel decoder runs in one step instead of ten.", "You are deploying on hardware with no GPU and you need English TTS that runs three times faster than realtime on eight CPU cores, which is what the 110M Nano checkpoint targets.", "You need cross-language voice cloning from one reference clip, because Multilingual V3 covers 23 languages and dedicated Single Language Pack finetunes exist for Chinese, Latam and Spain Spanish, Brazilian and European Portuguese, and Hindi."]
-avoid_if: ["You need a hard latency SLA for a high-QPS production voice service, because the README points you to Resemble AI's commercial endpoint with sub-200ms latency for that case rather than the open weights.", "You need output free of watermarks, because every generated file carries a Perth perceptual-threshold neural watermark that survives MP3 compression and edits.", "You need a model whose licences let you train a competing commercial service on the same stack, because the reference architectures (S3Tokenizer, HiFT-GAN) are acknowledged upstream work and the repo's own disclaimer is blunt."]
+  - 'The commercial-vendor gambit in open TTS: a voice-AI company (Resemble) open-sourcing a production-grade cloning model under MIT — bringing things research repos skip (default perceptual watermarking, emotion-intensity control, multilingual checkpoints, a paid-API upgrade path) and instantly becoming the most-starred open cloning-TTS release of its generation'
+best_for:
+  - You need a voice agent that responds in a conversational timeframe and you want the 350M Turbo checkpoint, whose speech-token-to-mel decoder runs in one step instead of ten.
+  - You are deploying on hardware with no GPU and you need English TTS that runs three times faster than realtime on eight CPU cores, which is what the 110M Nano checkpoint targets.
+  - You need cross-language voice cloning from one reference clip, because Multilingual V3 covers 23 languages and dedicated Single Language Pack finetunes exist for Chinese, Latam and Spain Spanish, Brazilian and European Portuguese, and Hindi.
+avoid_if:
+  - You need a hard latency SLA for a high-QPS production voice service, because the README points you to Resemble AI's commercial endpoint with sub-200ms latency for that case rather than the open weights.
+  - You need output free of watermarks, because every generated file carries a Perth perceptual-threshold neural watermark that survives MP3 compression and edits.
+  - You need a model whose licences let you train a competing commercial service on the same stack, because the reference architectures (S3Tokenizer, HiFT-GAN) are acknowledged upstream work and the repo's own disclaimer is blunt.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [f5-tts, kokoro]
+alternatives:
+  - f5-tts
+  - kokoro
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (25.4k), MIT, last push 2026-06-10 verified via the GitHub API on 2026-07-08. Benchmark claim (preferred over ElevenLabs in side-by-side evals) is the vendor's published result, flagged as such. Multilingual v2 coverage per official README.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/resemble-ai/chatterbox","date":"2026-07-08","description":"25.4k stars; Resemble AI's open production TTS, a 2025 breakout release"}
+  - source: github-trending
+    url: https://github.com/resemble-ai/chatterbox
+    date: '2026-07-08'
+    description: 25.4k stars; Resemble AI's open production TTS, a 2025 breakout release
 featured: false
 status: active
 ---

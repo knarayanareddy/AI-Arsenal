@@ -1,52 +1,62 @@
 ---
 id: run-llama-llama-deploy
-name: "llama_deploy"
+name: llama_deploy
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: tools
-description: "Deployment layer that turns a LlamaIndex agentic workflow into running services with API and control-plane surfaces"
-github_url: "https://github.com/run-llama/llama_deploy"
-license: "MIT"
+description: Deployment layer that turns a LlamaIndex agentic workflow into running services with API and control-plane surfaces
+github_url: https://github.com/run-llama/llama_deploy
+license: MIT
 primary_language: Python
-org_or_maintainer: "run-llama"
-tags: [agents, llamaindex, inference]
+org_or_maintainer: run-llama
+tags:
+  - agents
+  - llamaindex
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 2068
+github_stars: 2067
 github_stars_last_30d: 0
-trending_score: 22
-last_commit: "2026-04-06"
-docs_url: "https://developers.llamaindex.ai/"
+trending_score: 33
+last_commit: '2026-04-06'
+docs_url: https://developers.llamaindex.ai/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "Turns agentic workflows into deployed services with API and control-plane surfaces — the packaging layer between a working notebook and a running multi-agent deployment."
+  - Turns agentic workflows into deployed services with API and control-plane surfaces — the packaging layer between a working notebook and a running multi-agent deployment.
 best_for:
-  - "You have a working LlamaIndex agent or workflow and need it running as a service with a stable endpoint."
-  - "You want to run several agent deployments side by side with versions and traffic rules rather than a single ad hoc process."
-  - "You need a control-plane UI or API to inspect and manage deployed agents without building custom tooling."
+  - You have a working LlamaIndex agent or workflow and need it running as a service with a stable endpoint.
+  - You want to run several agent deployments side by side with versions and traffic rules rather than a single ad hoc process.
+  - You need a control-plane UI or API to inspect and manage deployed agents without building custom tooling.
 avoid_if:
-  - "You are still iterating on the agent's logic, since deploying before the behaviour is stable is effort you will redo."
-  - "You do not use LlamaIndex, since the deployment model is built around its workflow abstractions rather than being framework-neutral."
-  - "You need a hardened long-lived platform with SSO and audit, since this is a young open-source control plane without enterprise identity."
+  - You are still iterating on the agent's logic, since deploying before the behaviour is stable is effort you will redo.
+  - You do not use LlamaIndex, since the deployment model is built around its workflow abstractions rather than being framework-neutral.
+  - You need a hardened long-lived platform with SSO and audit, since this is a young open-source control plane without enterprise identity.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2068), MIT license, last commit 2026-04-06, primary language Python, and all six topics were read from the GitHub API. The event-driven execution model, generated typed API, model deployments with a selector, and the CLI surface come from the official docs; no deployment was run and no control plane was started here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2068), MIT license, last commit 2026-04-06, primary language Python, and all six topics were read from the GitHub API. The event-driven execution model, generated typed API, model deployments with a selector, and the CLI surface come from the official docs; no deployment was run and no control plane was started here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/run-llama/llama_deploy", "date": "2026-09-28", "description": "2,068 stars and last commit 2026-04-06 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/run-llama/llama_deploy
+    date: '2026-09-28'
+    description: 2,068 stars and last commit 2026-04-06 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

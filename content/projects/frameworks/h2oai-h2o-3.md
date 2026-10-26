@@ -1,52 +1,64 @@
 ---
 id: h2oai-h2o-3
-name: "h2o-3"
+name: h2o-3
 version_tracked: null
 artifact_type: platform
 category: evaluation
 subcategory: tools
-description: "Distributed ML platform spanning AutoML, GLM, GBM, and model serving across data frames and Spark"
-github_url: "https://github.com/h2oai/h2o-3"
-license: "Apache-2.0"
+description: Distributed ML platform spanning AutoML, GLM, GBM, and model serving across data frames and Spark
+github_url: https://github.com/h2oai/h2o-3
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "h2oai"
-tags: [efficiency, inference, evaluation]
+org_or_maintainer: h2oai
+tags:
+  - efficiency
+  - inference
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 7510
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-25"
-docs_url: "http://h2o.ai"
+github_stars: 7515
+github_stars_last_30d: 5
+trending_score: 33
+last_commit: '2026-10-22'
+docs_url: http://h2o.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Distributed ML platform spanning AutoML, feature engineering, and model serving, notable for a single GLM that is unusually easy to serve and explain."
+  - Distributed ML platform spanning AutoML, feature engineering, and model serving, notable for a single GLM that is unusually easy to serve and explain.
 best_for:
-  - "You need a model you can explain to a risk or compliance audience, since a GLM with elastic net and a GAM give per-feature contributions without a post-hoc explainer."
-  - "Your table is larger than memory and you want to train GLMs, gradient boosting, or random forests across a cluster with a single interface."
-  - "You want AutoML that trains and stacks a broad model set automatically and hands back something you can serve from the same platform."
+  - You need a model you can explain to a risk or compliance audience, since a GLM with elastic net and a GAM give per-feature contributions without a post-hoc explainer.
+  - Your table is larger than memory and you want to train GLMs, gradient boosting, or random forests across a cluster with a single interface.
+  - You want AutoML that trains and stacks a broad model set automatically and hands back something you can serve from the same platform.
 avoid_if:
-  - "Your data fits comfortably in memory on a laptop, where a single-node library is simpler and faster than a distributed platform and a JVM-backed runtime."
-  - "You need state-of-the-art accuracy on a competitive tabular benchmark, where LightGBM or CatBoost usually beat the H2O defaults for less effort."
-  - "You want a Python-native model object, since the models are Java objects reached through a Python client and the ecosystem of third-party tooling is thinner."
+  - Your data fits comfortably in memory on a laptop, where a single-node library is simpler and faster than a distributed platform and a JVM-backed runtime.
+  - You need state-of-the-art accuracy on a competitive tabular benchmark, where LightGBM or CatBoost usually beat the H2O defaults for less effort.
+  - You want a Python-native model object, since the models are Java objects reached through a Python client and the ecosystem of third-party tooling is thinner.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7510), Apache-2.0 license, last commit 2026-09-25, Python as primary language and the topic list were API-verified. KeyedFrame storage, the algorithm set, AutoML with stacking, and the MOJO format are from official documentation; the single-node-versus-distributed performance judgement and ONNX export coverage caveats are engineering assessment, not benchmarks run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7510), Apache-2.0 license, last commit 2026-09-25, Python as primary language and the topic list were API-verified. KeyedFrame storage, the algorithm set, AutoML with stacking, and the MOJO format are from official documentation; the single-node-versus-distributed performance judgement and ONNX export coverage caveats are engineering assessment, not benchmarks run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/h2oai/h2o-3", "date": "2026-09-28", "description": "7,510 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/h2oai/h2o-3
+    date: '2026-09-28'
+    description: 7,510 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

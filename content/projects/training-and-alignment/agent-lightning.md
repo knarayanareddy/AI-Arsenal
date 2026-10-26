@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 295
+trending_score: 39
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: agent-lightning
-name: "Agent Lightning"
+name: Agent Lightning
 artifact_type: framework
 category: agents
 subcategory: fine-tuning
-description: "Microsoft's roughly 3,500-line agentic RL framework that inserts a proxy between your agent and its model so a real harness can be trained without modification"
-github_url: "https://github.com/microsoft/agent-lightning"
+description: Microsoft's roughly 3,500-line agentic RL framework that inserts a proxy between your agent and its model so a real harness can be trained without modification
+github_url: https://github.com/microsoft/agent-lightning
 license: MIT
 primary_language: Python
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 18521
-last_commit: "2026-09-28"
-docs_url: "https://microsoft.github.io/agent-lightning/stable/"
+github_stars: 18816
+last_commit: '2026-10-20'
+docs_url: https://microsoft.github.io/agent-lightning/stable/
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A training layer that optimizes agents via RL and other methods without rewriting the agent's code."
-best_for: ["You have a working agent with tools and environments and you want to train it with RL, but cannot justify rewriting the agent to expose the training loop supervised fine-tuning frameworks expect.", "You are training a coding agent and want a reproducible reference pipeline, since the repository releases the full setup including data cleaning, reward-hacking prevention and training scripts alongside a reported SWE-bench Verified improvement on Qwen3.5-9B.", "Your rollouts are expensive or stateful and need isolation, because the rollout controller can run each agent as a Kubernetes Job rather than depending on an external sandbox service."]
-avoid_if: ["You are on a single GPU with no appetite for a full training stack, because installation drives uv plus a verl setup script and the documented example is a CUDA 13.0 machine.", "You are still relying on pre-1.0 behaviour, because v1.0 was a complete refactor and older releases live on a separate v0.x branch with different internals and configuration.", "You need a peer-reviewed result rather than a project self-report, because the headline improvement numbers come from the project's own benchmark run and have not been independently reproduced."]
-enrichment_notes: "Repository, MIT license, and 2026-04-29 activity verified via the GitHub API on 2026-07-12. Emerging area; expect setup effort to wire rewards and environments."
+  - A training layer that optimizes agents via RL and other methods without rewriting the agent's code.
+best_for:
+  - You have a working agent with tools and environments and you want to train it with RL, but cannot justify rewriting the agent to expose the training loop supervised fine-tuning frameworks expect.
+  - You are training a coding agent and want a reproducible reference pipeline, since the repository releases the full setup including data cleaning, reward-hacking prevention and training scripts alongside a reported SWE-bench Verified improvement on Qwen3.5-9B.
+  - Your rollouts are expensive or stateful and need isolation, because the rollout controller can run each agent as a Kubernetes Job rather than depending on an external sandbox service.
+avoid_if:
+  - You are on a single GPU with no appetite for a full training stack, because installation drives uv plus a verl setup script and the documented example is a CUDA 13.0 machine.
+  - You are still relying on pre-1.0 behaviour, because v1.0 was a complete refactor and older releases live on a separate v0.x branch with different internals and configuration.
+  - You need a peer-reviewed result rather than a project self-report, because the headline improvement numbers come from the project's own benchmark run and have not been independently reproduced.
+enrichment_notes: Repository, MIT license, and 2026-04-29 activity verified via the GitHub API on 2026-07-12. Emerging area; expect setup effort to wire rewards and environments.
 ---
 
 ## Overview

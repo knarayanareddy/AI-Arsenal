@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Google's Python SDK that wraps the Antigravity runtime so one Agent object owns binary discovery, tools, hooks, and policy"
-github_url: "https://github.com/google-antigravity/antigravity-sdk-python"
+description: Google's Python SDK that wraps the Antigravity runtime so one Agent object owns binary discovery, tools, hooks, and policy
+github_url: https://github.com/google-antigravity/antigravity-sdk-python
 license: Apache-2.0
 primary_language: Python
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: alpha
 cost_model: open-source
-github_stars: 3557
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-27"
-docs_url: "https://antigravity.google/product/antigravity-sdk"
+github_stars: 3861
+github_stars_last_30d: 304
+trending_score: 47
+last_commit: '2026-10-13'
+docs_url: https://antigravity.google/product/antigravity-sdk
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Hides the compiled runtime and the agentic loop behind a single async context manager instead of hand-wiring both."
+  - Hides the compiled runtime and the agentic loop behind a single async context manager instead of hand-wiring both.
 best_for:
-  - "You are already on Gemini or the Gemini Enterprise Agent Platform and want a stateful agent loop without writing the runtime plumbing."
-  - "You are prototyping a console or UI agent and need ChatResponse tokens streamed without building your own transport."
-  - "You are moving between API-key Express Mode and ADC-backed regional Vertex endpoints and want one config object covering both."
+  - You are already on Gemini or the Gemini Enterprise Agent Platform and want a stateful agent loop without writing the runtime plumbing.
+  - You are prototyping a console or UI agent and need ChatResponse tokens streamed without building your own transport.
+  - You are moving between API-key Express Mode and ADC-backed regional Vertex endpoints and want one config object covering both.
 avoid_if:
-  - "You need a provider-neutral stack, because the loop and the runtime binary are tied to Gemini and Antigravity."
-  - "You are on a platform with no published wheel, since the compiled runtime ships only inside the platform-specific PyPI wheels."
-  - "You expect a source checkout to run, because the README states the binary comes only from PyPI and the repo alone is insufficient."
+  - You need a provider-neutral stack, because the loop and the runtime binary are tied to Gemini and Antigravity.
+  - You are on a platform with no published wheel, since the compiled runtime ships only inside the platform-specific PyPI wheels.
+  - You expect a source checkout to run, because the README states the binary comes only from PyPI and the repo alone is insufficient.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 3557, Apache-2.0, Python, last commit 2026-09-27, topics, homepage. From README: pip name google-antigravity, Agent/LocalAgentConfig/ChatResponse, Express vs Standard auth, env-var precedence, PyPI-only binary. Hook and tool-registration internals not read."
+enrichment_notes: 'API-verified: stars 3557, Apache-2.0, Python, last commit 2026-09-27, topics, homepage. From README: pip name google-antigravity, Agent/LocalAgentConfig/ChatResponse, Express vs Standard auth, env-var precedence, PyPI-only binary. Hook and tool-registration internals not read.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

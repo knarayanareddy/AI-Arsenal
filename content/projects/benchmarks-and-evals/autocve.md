@@ -6,39 +6,44 @@ artifact_type: library
 category: evaluation
 subcategory: evaluation
 description: A multi-agent platform that audits source code for reportable vulnerabilities and produces CVE-ready findings with reproduction steps
-github_url: "https://github.com/larlarua/AutoCVE"
+github_url: https://github.com/larlarua/AutoCVE
 license: AGPL-3.0
 primary_language: Python
-tags: [security, agents]
+tags:
+  - security
+  - agents
 maturity: beta
 cost_model: self-hostable
-github_stars: 1425
+github_stars: 1197
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-03"
+trending_score: 23
+last_commit: '2026-10-01'
 docs_url: null
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Replaces a one-shot audit prompt with an orchestrated agent pipeline that filters tool false positives before deep verification."
+  - Replaces a one-shot audit prompt with an orchestrated agent pipeline that filters tool false positives before deep verification.
 best_for:
-  - "You are hunting CVEs in open-source projects and need the full loop from repository import through deduplicated findings to a submission-ready report."
-  - "You are triaging a scanner's output and need an agent to explain why each finding is or is not real rather than reading raw SAST JSON yourself."
-  - "You are running security research as a team and want the audit trail, agent tree, and tool calls preserved per session for later review."
+  - You are hunting CVEs in open-source projects and need the full loop from repository import through deduplicated findings to a submission-ready report.
+  - You are triaging a scanner's output and need an agent to explain why each finding is or is not real rather than reading raw SAST JSON yourself.
+  - You are running security research as a team and want the audit trail, agent tree, and tool calls preserved per session for later review.
 avoid_if:
-  - "You need a scanner that is safe to point at untrusted repositories, because agents execute analysis tooling against code you import."
-  - "You are deploying without a plan for the AGPL-3.0 obligations, which reach any network service you expose from modified code."
-  - "You are evaluating an audit whose output feeds a disclosure process, because agent-produced severity calls need human verification before disclosure."
+  - You need a scanner that is safe to point at untrusted repositories, because agents execute analysis tooling against code you import.
+  - You are deploying without a plan for the AGPL-3.0 obligations, which reach any network service you expose from modified code.
+  - You are evaluating an audit whose output feeds a disclosure process, because agent-produced severity calls need human verification before disclosure.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1425, AGPL-3.0, Python, last commit 2026-09-03, topics. From README: five-agent graph, three audit modes, ReAct loop, FinalizeFinding, port layout, pinned v1.0.5 compose URL, 30 CVE and 14 project badges. CVE claim not independently verified; accuracy untested."
+enrichment_notes: 'API-verified: stars 1425, AGPL-3.0, Python, last commit 2026-09-03, topics. From README: five-agent graph, three audit modes, ReAct loop, FinalizeFinding, port layout, pinned v1.0.5 compose URL, 30 CVE and 14 project badges. CVE claim not independently verified; accuracy untested.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

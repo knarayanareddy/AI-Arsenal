@@ -5,19 +5,22 @@ version_tracked: null
 artifact_type: service
 category: rag
 subcategory: document-processing
-description: "Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service"
-github_url: "https://github.com/run-llama/llama_cloud_services"
+description: Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service
+github_url: https://github.com/run-llama/llama_cloud_services
 license: MIT
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [data, cloud, featured]
+tags:
+  - data
+  - cloud
+  - featured
 maturity: production
 cost_model: paid
-github_stars: 4267
-github_stars_last_30d: 0
+github_stars: 4270
+github_stars_last_30d: 3
 trending_score: 15
-last_commit: "2026-05-18"
-docs_url: "https://github.com/run-llama/llama_cloud_services#readme"
+last_commit: '2026-05-18'
+docs_url: https://github.com/run-llama/llama_cloud_services#readme
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +31,24 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - LlamaIndex's commercial, managed document-parsing service, specializing in complex PDF/document layouts for RAG ingestion
-best_for: ["You are evaluating managed document parsing and want the vendor's own migration path documented, because this repository states exactly which package replaces it and when maintenance ends.", "You need LlamaParse's current client and this entry tells you the old import is wrong, since the successor is a differently named Python package and a scoped npm package.", "You are auditing dependencies and found this package installed, because the README carries an explicit deprecation notice with a stated maintenance deadline rather than a silent rot."]
-avoid_if: ["You are starting anything new, because the repository states the packages are deprecated and maintained only until May 1, 2026, with migration to differently named packages as the only path forward.", "You need a self-hosted parser, because this is a client for a hosted service rather than an implementation you can run.", "You need an open-source dependency you can vendor, because the value here is the API contract against a commercial backend, not code you own."]
+best_for:
+  - You are evaluating managed document parsing and want the vendor's own migration path documented, because this repository states exactly which package replaces it and when maintenance ends.
+  - You need LlamaParse's current client and this entry tells you the old import is wrong, since the successor is a differently named Python package and a scoped npm package.
+  - You are auditing dependencies and found this package installed, because the README carries an explicit deprecation notice with a stated maintenance deadline rather than a silent rot.
+avoid_if:
+  - You are starting anything new, because the repository states the packages are deprecated and maintained only until May 1, 2026, with migration to differently named packages as the only path forward.
+  - You need a self-hosted parser, because this is a client for a hosted service rather than an implementation you can run.
+  - You need an open-source dependency you can vendor, because the value here is the API contract against a commercial backend, not code you own.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,12 +56,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: LlamaParse is referenced in independent production case studies as a component of larger LlamaIndex-based systems (e.g. StackAI's use of LlamaParse for high-accuracy retrieval in enterprise document agents, per LlamaIndex's own case-study blog, corroborating real customer usage beyond marketing claims).
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.llamaindex.ai/blog?tag=Llamaindex","date":"2024-09-16","description":"LlamaIndex case study documenting StackAI's production use of LlamaParse to power high-accuracy retrieval for enterprise document agents"}
+  - source: conference
+    url: https://www.llamaindex.ai/blog?tag=Llamaindex
+    date: '2024-09-16'
+    description: LlamaIndex case study documenting StackAI's production use of LlamaParse to power high-accuracy retrieval for enterprise document agents
 featured: false
 status: active
 ---

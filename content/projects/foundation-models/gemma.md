@@ -6,25 +6,36 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: The 2024 Gemma 1 and Gemma 2 open-weight checkpoints (2B-27B, 8K context, text-only) that precede Gemma 3 and Gemma 4
-github_url: "https://github.com/google-deepmind/gemma"
+github_url: https://github.com/google-deepmind/gemma
 license: Custom
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, multimodal, local]
+tags:
+  - llm
+  - inference
+  - multimodal
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 5817
+github_stars: 5816
 github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-10-15"
-docs_url: "https://ai.google.dev/gemma/docs/core"
+trending_score: 15
+last_commit: '2026-10-15'
+docs_url: https://ai.google.dev/gemma/docs/core
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - The 2024 Gemma 1 and Gemma 2 checkpoints, kept because a large body of fine-tunes, quantisations and benchmarks still targets exactly these weights
 best_for:
@@ -40,9 +51,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified 2026-10-25 (GitHub API: 5817 stars, last push 2026-10-15). Corrected a factual error: interleaved local/global attention shipped in Gemma 2, not Gemma 3 (arXiv:2408.00118). The entry documents the 2024 generation only; see gemma-3 and the gemma-4 report."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'Re-verified 2026-10-25 (GitHub API: 5817 stars, last push 2026-10-15). Corrected a factual error: interleaved local/global attention shipped in Gemma 2, not Gemma 3 (arXiv:2408.00118). The entry documents the 2024 generation only; see gemma-3 and the gemma-4 report.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

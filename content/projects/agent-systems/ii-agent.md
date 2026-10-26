@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Apache-2.0 agent framework and web app for building apps, slides, storybooks and research briefs, out of beta with BYOK model config"
-github_url: "https://github.com/Intelligent-Internet/ii-agent"
+description: Apache-2.0 agent framework and web app for building apps, slides, storybooks and research briefs, out of beta with BYOK model config
+github_url: https://github.com/Intelligent-Internet/ii-agent
 license: Apache-2.0
 primary_language: Python
-tags: [agents, data, research, inference]
+tags:
+  - agents
+  - data
+  - research
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 3390
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-16"
-docs_url: "https://ii.inc/web/blog/post/ii-agent"
+github_stars: 3392
+github_stars_last_30d: 2
+trending_score: 23
+last_commit: '2026-08-16'
+docs_url: https://ii.inc/web/blog/post/ii-agent
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Packages an agent product end to end with its own web UI, integrations and skills, and asks you to bring your own provider keys."
+  - Packages an agent product end to end with its own web UI, integrations and skills, and asks you to bring your own provider keys.
 best_for:
-  - "You want a deployable agent product rather than a library, because this ships backend, frontend and infrastructure together with make dev-all starting everything."
-  - "You build mobile or web apps from prompts and you want the agent to produce a real project, not a scaffold you finish by hand."
-  - "You need research that ends in a deliverable, because the documented flow goes from fast or deep research through interactive website generation with citations and embedded Q&A."
+  - You want a deployable agent product rather than a library, because this ships backend, frontend and infrastructure together with make dev-all starting everything.
+  - You build mobile or web apps from prompts and you want the agent to produce a real project, not a scaffold you finish by hand.
+  - You need research that ends in a deliverable, because the documented flow goes from fast or deep research through interactive website generation with citations and embedded Q&A.
 avoid_if:
-  - "You want to embed the agent in your own Python service, because this is deployed as a stack (backend plus frontend plus infra) rather than imported as a module."
-  - "You need multiple providers configured easily, because model configuration goes through a MODEL_CONFIGS JSON blob or a YAML file you fill in by hand."
-  - "You have no Docker, uv and Node available, because all three are stated prerequisites for the quick start."
+  - You want to embed the agent in your own Python service, because this is deployed as a stack (backend plus frontend plus infra) rather than imported as a module.
+  - You need multiple providers configured easily, because model configuration goes through a MODEL_CONFIGS JSON blob or a YAML file you fill in by hand.
+  - You have no Docker, uv and Node available, because all three are stated prerequisites for the quick start.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics, issue count and creation date came from the GitHub API. Feature list, MODEL_CONFIGS format, install commands, port numbers and integration names are read from the official README; the stack was not deployed here."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics, issue count and creation date came from the GitHub API. Feature list, MODEL_CONFIGS format, install commands, port numbers and integration names are read from the official README; the stack was not deployed here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

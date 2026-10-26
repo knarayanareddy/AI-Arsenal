@@ -1,52 +1,63 @@
 ---
 id: google-ai-edge-mediapipe
-name: "mediapipe"
+name: mediapipe
 version_tracked: null
 artifact_type: library
 category: computer-vision
 subcategory: libraries
-description: "Apache-2.0 cross-platform pipeline for live media shipping ready-made face, hand, pose, and segmentation graphs that run on-device"
-github_url: "https://github.com/google-ai-edge/mediapipe"
-license: "Apache-2.0"
+description: Apache-2.0 cross-platform pipeline for live media shipping ready-made face, hand, pose, and segmentation graphs that run on-device
+github_url: https://github.com/google-ai-edge/mediapipe
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "google-ai-edge"
-tags: [vision, streaming]
+org_or_maintainer: google-ai-edge
+tags:
+  - vision
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 37105
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-25"
-docs_url: "https://ai.google.dev/edge/mediapipe"
+github_stars: 37413
+github_stars_last_30d: 308
+trending_score: 58
+last_commit: '2026-10-25'
+docs_url: https://ai.google.dev/edge/mediapipe
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [vision, audio]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - vision
+  - audio
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Cross-platform ML pipeline for live and streaming media, shipping face, hand, pose, and segmentation graphs that run on-device across mobile and web."
+  - Cross-platform ML pipeline for live and streaming media, shipping face, hand, pose, and segmentation graphs that run on-device across mobile and web.
 best_for:
-  - "You are building a camera feature on mobile or in the browser and need face landmarks, hand tracking, or pose estimation running at interactive frame rates without a server round trip."
-  - "You need a composable inference graph rather than a single model call, so you can reorder, drop, or add stages - an image-effect renderer, an ROI crop, a second classifier - with each node timed separately."
-  - "You are porting a perception feature across Android, iOS, the web, and desktop and want one graph definition and one set of packaged models instead of four separate implementations."
+  - You are building a camera feature on mobile or in the browser and need face landmarks, hand tracking, or pose estimation running at interactive frame rates without a server round trip.
+  - You need a composable inference graph rather than a single model call, so you can reorder, drop, or add stages - an image-effect renderer, an ROI crop, a second classifier - with each node timed separately.
+  - You are porting a perception feature across Android, iOS, the web, and desktop and want one graph definition and one set of packaged models instead of four separate implementations.
 avoid_if:
-  - "You need to train or fine-tune the perception models, because the packaged task graphs are provided and the repository is a runtime for them rather than a training toolkit."
-  - "You need general image classification or segmentation on server GPUs, where a training framework in content/projects/frameworks/ and a model-definition layer give you far more control."
-  - "Your accuracy requirement exceeds what a quantized mobile-optimized model can deliver, since the shipped graphs trade a few points of accuracy for latency and footprint."
+  - You need to train or fine-tune the perception models, because the packaged task graphs are provided and the repository is a runtime for them rather than a training toolkit.
+  - You need general image classification or segmentation on server GPUs, where a training framework in content/projects/frameworks/ and a model-definition layer give you far more control.
+  - Your accuracy requirement exceeds what a quantized mobile-optimized model can deliver, since the shipped graphs trade a few points of accuracy for latency and footprint.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 37105 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-25, 17 GitHub topics, homepage ai.google.dev. Calculator and graph model, task bundle format, delegate choices, and the two API generations are read from official docs; nothing was run on a device."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 37105 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-25, 17 GitHub topics, homepage ai.google.dev. Calculator and graph model, task bundle format, delegate choices, and the two API generations are read from official docs; nothing was run on a device.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/google-ai-edge/mediapipe", "date": "2026-09-28", "description": "37,105 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/google-ai-edge/mediapipe
+    date: '2026-09-28'
+    description: 37,105 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

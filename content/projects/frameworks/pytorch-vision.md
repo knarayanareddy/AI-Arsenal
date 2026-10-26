@@ -1,52 +1,63 @@
 ---
 id: pytorch-vision
-name: "vision"
+name: vision
 version_tracked: null
 artifact_type: library
 category: computer-vision
 subcategory: libraries
-description: "Torchvision's datasets, image transforms, and reference vision models built directly on torch tensors"
-github_url: "https://github.com/pytorch/vision"
-license: "BSD-3-Clause"
+description: Torchvision's datasets, image transforms, and reference vision models built directly on torch tensors
+github_url: https://github.com/pytorch/vision
+license: BSD-3-Clause
 primary_language: Python
-org_or_maintainer: "pytorch"
-tags: [vision, pytorch, training]
+org_or_maintainer: pytorch
+tags:
+  - vision
+  - pytorch
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 17931
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-28"
-docs_url: "https://pytorch.org/vision"
+github_stars: 17971
+github_stars_last_30d: 40
+trending_score: 36
+last_commit: '2026-10-26'
+docs_url: https://pytorch.org/vision
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Torchvision datasets, transforms, and reference vision models that define the augmentation and preprocessing contract most PyTorch vision training inherits."
+  - Torchvision datasets, transforms, and reference vision models that define the augmentation and preprocessing contract most PyTorch vision training inherits.
 best_for:
-  - "You are training a vision model on ImageNet-style data and want the reference augmentations, ResNet and ViT weights, and pretrained checkpoint definitions to line up with published numbers."
-  - "You are debugging a training run whose accuracy is suspiciously low and need to rule out an augmentation or normalisation bug before touching the model."
-  - "You want detection and segmentation reference models with built-in box and mask transforms that correctly invert coordinates back to image space."
+  - You are training a vision model on ImageNet-style data and want the reference augmentations, ResNet and ViT weights, and pretrained checkpoint definitions to line up with published numbers.
+  - You are debugging a training run whose accuracy is suspiciously low and need to rule out an augmentation or normalisation bug before touching the model.
+  - You want detection and segmentation reference models with built-in box and mask transforms that correctly invert coordinates back to image space.
 avoid_if:
-  - "You need operators outside classical image processing, such as learned augmentations or domain-specific warping, since kornia and albumentations are where that lives."
-  - "You need framework portability, because the transforms return torch tensors and couple your pipeline to a specific torch version."
-  - "Your dataset is not image-like, meaning audio, video, or point clouds, where the module set simply does not cover the modality."
+  - You need operators outside classical image processing, such as learned augmentations or domain-specific warping, since kornia and albumentations are where that lives.
+  - You need framework portability, because the transforms return torch tensors and couple your pipeline to a specific torch version.
+  - Your dataset is not image-like, meaning audio, video, or point clouds, where the module set simply does not cover the modality.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (17931), BSD-3-Clause license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. v2 transform semantics, the weights-enum recipe mechanism, and model and ops contents are from the official docs; no model was downloaded or trained for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (17931), BSD-3-Clause license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. v2 transform semantics, the weights-enum recipe mechanism, and model and ops contents are from the official docs; no model was downloaded or trained for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/pytorch/vision", "date": "2026-09-28", "description": "17,931 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/pytorch/vision
+    date: '2026-09-28'
+    description: 17,931 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

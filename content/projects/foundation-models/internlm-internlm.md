@@ -1,52 +1,61 @@
 ---
 id: internlm-internlm
-name: "InternLM"
+name: InternLM
 version_tracked: null
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "Shanghai AI Laboratory's bilingual model family, shipping InternLM, InternLM2, InternLM2.5, and InternLM3 weights alongside training and RLHF code"
-github_url: "https://github.com/InternLM/InternLM"
-license: "Apache-2.0"
+description: Shanghai AI Laboratory's bilingual model family, shipping InternLM, InternLM2, InternLM2.5, and InternLM3 weights alongside training and RLHF code
+github_url: https://github.com/InternLM/InternLM
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "InternLM"
-tags: [llm]
+org_or_maintainer: InternLM
+tags:
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 7277
-github_stars_last_30d: 0
-trending_score: 22
-last_commit: "2025-10-30"
-docs_url: "https://internlm.readthedocs.io/"
+github_stars: 7278
+github_stars_last_30d: 1
+trending_score: 33
+last_commit: '2025-10-30'
+docs_url: https://internlm.readthedocs.io/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Open bilingual model family with released weights, tokenizer, and training code, giving a reproducible base for long-context and Chinese-first research."
+  - Open bilingual model family with released weights, tokenizer, and training code, giving a reproducible base for long-context and Chinese-first research.
 best_for:
-  - "You are fine-tuning a bilingual assistant and want a base model whose tokenizer and data mixture were documented for Chinese and English together."
-  - "You are researching long-context behavior and want a model released with long sequence training recipes and an associated evaluation harness."
-  - "You need an Apache-2.0 base with matching pretrain, SFT, and RLHF code so your fine-tuning recipe is diffable against the original."
+  - You are fine-tuning a bilingual assistant and want a base model whose tokenizer and data mixture were documented for Chinese and English together.
+  - You are researching long-context behavior and want a model released with long sequence training recipes and an associated evaluation harness.
+  - You need an Apache-2.0 base with matching pretrain, SFT, and RLHF code so your fine-tuning recipe is diffable against the original.
 avoid_if:
-  - "Your workload is English-only and quality-per-parameter is the deciding factor, because stronger English-first bases generally win on common benchmarks."
-  - "You have no appetite for the Chinese-first data distribution, which can shift style, formatting, and safety behavior in ways that need retuning."
-  - "Your serving budget only fits a very small model, since the useful checkpoints start around the 7B class and scale upward from there."
+  - Your workload is English-only and quality-per-parameter is the deciding factor, because stronger English-first bases generally win on common benchmarks.
+  - You have no appetite for the Chinese-first data distribution, which can shift style, formatting, and safety behavior in ways that need retuning.
+  - Your serving budget only fits a very small model, since the useful checkpoints start around the 7B class and scale upward from there.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7277), Apache-2.0 license, last commit 2025-10-30, primary language Python, and all ten topics were read from the GitHub API. Model sizes, the 256K long-context claim, grouped-query attention, and the InternEvo framework come from the official README and documentation; no checkpoint was downloaded or benchmarked here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7277), Apache-2.0 license, last commit 2025-10-30, primary language Python, and all ten topics were read from the GitHub API. Model sizes, the 256K long-context claim, grouped-query attention, and the InternEvo framework come from the official README and documentation; no checkpoint was downloaded or benchmarked here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/InternLM/InternLM", "date": "2026-09-28", "description": "7,277 stars and last commit 2025-10-30 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/InternLM/InternLM
+    date: '2026-09-28'
+    description: 7,277 stars and last commit 2025-10-30 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

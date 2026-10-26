@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "AntonOsika"
+org_or_maintainer: AntonOsika
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,40 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: gpt-engineer
-name: "GPT Engineer"
+name: GPT Engineer
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Archived Python CLI that specified software in natural language and let a model write and execute it"
-github_url: "https://github.com/AntonOsika/gpt-engineer"
+description: Archived Python CLI that specified software in natural language and let a model write and execute it
+github_url: https://github.com/AntonOsika/gpt-engineer
 license: MIT
 primary_language: Python
-tags: [code-gen, tool-use, research]
+tags:
+  - code-gen
+  - tool-use
+  - research
 maturity: experimental
 cost_model: open-source
-github_stars: 55005
-last_commit: "2025-05-14"
-docs_url: "https://github.com/AntonOsika/gpt-engineer"
+github_stars: 55003
+last_commit: '2025-05-14'
+docs_url: https://github.com/AntonOsika/gpt-engineer
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "deploy-as-is"
+  - study-and-reference
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A pioneering CLI coding agent that turns a natural-language spec into a generated, iteratively refined codebase."
-best_for: ["You want to study the earliest widely-copied spec-then-generate loop: a file called prompt in an otherwise empty folder, and a CLI that reads it and writes code into that folder.", "You need the bench binary to score your own agent implementation against the APPS and MBPP datasets, which is the one piece of this repository with lasting value.", "You are writing about codegen tooling history and want the original project that the README itself calls the OG code generation experimentation platform."]
-avoid_if: ["You want an actively maintained coding CLI, because the repository is archived and its own README routes you to aider for a maintained CLI and to a managed service for an opinionated product.", "You are on Python 3.8 or 3.9, since the README states the actively supported range is 3.10 to 3.12 and the last release covering 3.8 and 3.9 was 0.2.6.", "You need agentic file editing with search, subagents and git awareness, because this generation of the tool predates all of that and its loop is a single generate-then-execute pass."]
-enrichment_notes: "Repository, MIT license, and 2025-05-14 activity verified via the GitHub API on 2026-10-24. Historically pivotal (precursor to Lovable); upstream cadence slowed."
+  - A pioneering CLI coding agent that turns a natural-language spec into a generated, iteratively refined codebase.
+best_for:
+  - 'You want to study the earliest widely-copied spec-then-generate loop: a file called prompt in an otherwise empty folder, and a CLI that reads it and writes code into that folder.'
+  - You need the bench binary to score your own agent implementation against the APPS and MBPP datasets, which is the one piece of this repository with lasting value.
+  - You are writing about codegen tooling history and want the original project that the README itself calls the OG code generation experimentation platform.
+avoid_if:
+  - You want an actively maintained coding CLI, because the repository is archived and its own README routes you to aider for a maintained CLI and to a managed service for an opinionated product.
+  - You are on Python 3.8 or 3.9, since the README states the actively supported range is 3.10 to 3.12 and the last release covering 3.8 and 3.9 was 0.2.6.
+  - You need agentic file editing with search, subagents and git awareness, because this generation of the tool predates all of that and its loop is a single generate-then-execute pass.
+enrichment_notes: Repository, MIT license, and 2025-05-14 activity verified via the GitHub API on 2026-10-24. Historically pivotal (precursor to Lovable); upstream cadence slowed.
 ---
 
 ## Overview

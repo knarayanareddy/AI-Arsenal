@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: tool
 category: tooling
 subcategory: tools
-description: "AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier"
-github_url: "https://github.com/CherryHQ/cherry-studio"
+description: AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
+github_url: https://github.com/CherryHQ/cherry-studio
 license: AGPL-3.0
 primary_language: TypeScript
-org_or_maintainer: "CherryHQ"
-tags: [llm, agents, local, tool-use]
+org_or_maintainer: CherryHQ
+tags:
+  - llm
+  - agents
+  - local
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 52215
-github_stars_last_30d: 0
-trending_score: 46
-last_commit: "2026-09-28"
-docs_url: "https://docs.cherry-ai.com/docs/en-us"
+github_stars: 53000
+github_stars_last_30d: 785
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.cherry-ai.com/docs/en-us
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,25 +32,41 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [community-driven, actively-maintained, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Popular open desktop front-end that unifies many LLM providers (cloud + local) with assistants, RAG knowledge bases, and MCP tools, competing with clients like LibreChat/Open WebUI but as a native desktop app
-best_for: ["You evaluate models for a team and you need one client where the same prompt can be sent to OpenAI, Anthropic, Gemini, DeepSeek, a local Ollama model and an LM Studio instance side by side.", "You want a usable desktop surface for MCP servers and agent skills without assembling an editor extension, a terminal harness and a browser tab.", "You are an individual or small team that wants the multi-model conversation, document handling and assistant catalogue of a commercial client under an open-source licence."]
-avoid_if: ["You need to embed the AGPL obligations away, because the Community Edition is AGPL-3.0 and the README routes commercial licensing through a sales contact rather than a self-serve exception.", "You need a server-side or team-deployed instance, because the Community Edition has no admin backend and the shared knowledge base, role-based access control and dedicated private deployment are all Enterprise Edition features.", "You need an agent that owns a repository, because the topics tag agent skills and coding harnesses but the product is a chat-and-assistant desktop, not a terminal coding agent."]
+best_for:
+  - You evaluate models for a team and you need one client where the same prompt can be sent to OpenAI, Anthropic, Gemini, DeepSeek, a local Ollama model and an LM Studio instance side by side.
+  - You want a usable desktop surface for MCP servers and agent skills without assembling an editor extension, a terminal harness and a browser tab.
+  - You are an individual or small team that wants the multi-model conversation, document handling and assistant catalogue of a commercial client under an open-source licence.
+avoid_if:
+  - You need to embed the AGPL obligations away, because the Community Edition is AGPL-3.0 and the README routes commercial licensing through a sales contact rather than a self-serve exception.
+  - You need a server-side or team-deployed instance, because the Community Edition has no admin backend and the shared knowledge base, role-based access control and dedicated private deployment are all Enterprise Edition features.
+  - You need an agent that owns a repository, because the topics tag agent skills and coding harnesses but the product is a chat-and-assistant desktop, not a terminal coding agent.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (48,319), AGPL-3.0 license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (48,319), AGPL-3.0 license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/CherryHQ/cherry-studio", "date": "2026-07-08", "description": "48,319 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/CherryHQ/cherry-studio
+    date: '2026-07-08'
+    description: 48,319 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

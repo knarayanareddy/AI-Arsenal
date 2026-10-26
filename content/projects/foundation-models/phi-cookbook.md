@@ -5,28 +5,40 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: open-source-models
-description: "Microsoft's Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile"
-github_url: "https://github.com/microsoft/PhiCookBook"
+description: 'Microsoft''s Phi course: inference, quantization and fine-tuning recipes for the Phi family across ONNX, MLX, Ollama, NIM and mobile'
+github_url: https://github.com/microsoft/PhiCookBook
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, quantization, edge, local]
+tags:
+  - llm
+  - inference
+  - quantization
+  - edge
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 3902
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-10-21"
-docs_url: "https://github.com/microsoft/PhiCookBook#readme"
+github_stars: 3903
+github_stars_last_30d: 153
+trending_score: 27
+last_commit: '2026-10-26'
+docs_url: https://github.com/microsoft/PhiCookBook#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language, vision]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The vendor's own worked examples for putting a small model on an unusual target: Phi on iOS, Android, Jetson, an AI PC, or quantized to 4 bits with llama.cpp"
+  - 'The vendor''s own worked examples for putting a small model on an unusual target: Phi on iOS, Android, Jetson, an AI PC, or quantized to 4 bits with llama.cpp'
 best_for:
   - You are deploying a Phi model to an edge target (iOS, Android, Jetson, AI PC, Rust binary) and want the vendor's own worked example instead of deriving the export path from three other projects' READMEs
   - You need to pick a quantization route for Phi — llama.cpp, ONNX Runtime GenAI, OpenVINO or MLX — and want the same model exercised through each before committing
@@ -37,13 +49,14 @@ avoid_if:
   - You need a supported library with an API contract, since sample notebooks are updated in place and carry no compatibility promise
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [phi-4]
+alternatives:
+  - phi-4
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Re-verified 2026-10-25: GitHub API 3902 stars, 18 open issues, last push 2026-10-21, MIT. Read against the README's table of contents, which lists the inference targets (HF, Foundry, Ollama, AITK, NIM, Foundry Local, iOS, Android, Jetson, AI PC, MLX, Rust, Kaito) and the four quantization routes. artifact_type corrected from model to library: this repository ships no weights."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: GitHub API 3902 stars, 18 open issues, last push 2026-10-21, MIT. Read against the README''s table of contents, which lists the inference targets (HF, Foundry, Ollama, AITK, NIM, Foundry Local, iOS, Android, Jetson, AI PC, MLX, Rust, Kaito) and the four quantization routes. artifact_type corrected from model to library: this repository ships no weights.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

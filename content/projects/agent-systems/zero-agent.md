@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Go terminal coding agent supporting 25+ providers, scriptable exec mode, permission policies and durable local sessions"
-github_url: "https://github.com/Gitlawb/zero"
+description: Go terminal coding agent supporting 25+ providers, scriptable exec mode, permission policies and durable local sessions
+github_url: https://github.com/Gitlawb/zero
 license: MIT
 primary_language: Go
-tags: [code-gen, inference, security]
+tags:
+  - code-gen
+  - inference
+  - security
 maturity: beta
 cost_model: open-source
-github_stars: 1683
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://github.com/Gitlawb/zero/blob/main/docs/INSTALL.md"
+github_stars: 1746
+github_stars_last_30d: 63
+trending_score: 28
+last_commit: '2026-10-25'
+docs_url: https://github.com/Gitlawb/zero/blob/main/docs/INSTALL.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Provider-neutral by design, with a real sandbox on Linux and an exec mode that fits CI, so you can change models without changing tooling."
+  - Provider-neutral by design, with a real sandbox on Linux and an exec mode that fits CI, so you can change models without changing tooling.
 best_for:
-  - "You want one CLI across OpenAI, Anthropic, Gemini, Groq, OpenRouter, DeepSeek, Mistral, xAI, Qwen, Kimi, GitHub Models, Ollama or LM Studio."
-  - "You need the agent in CI or a script, because zero exec supports text, JSON and stream-JSON I/O, isolated worktrees, spec-first runs and meaningful exit codes."
-  - "You want Linux-native sandboxing, because a separate sandbox helper binary plus seccomp gives process containment that most agent CLIs skip."
+  - You want one CLI across OpenAI, Anthropic, Gemini, Groq, OpenRouter, DeepSeek, Mistral, xAI, Qwen, Kimi, GitHub Models, Ollama or LM Studio.
+  - You need the agent in CI or a script, because zero exec supports text, JSON and stream-JSON I/O, isolated worktrees, spec-first runs and meaningful exit codes.
+  - You want Linux-native sandboxing, because a separate sandbox helper binary plus seccomp gives process containment that most agent CLIs skip.
 avoid_if:
-  - "You need native ARM64 Windows, because the x64 build runs under emulation there."
-  - "You want a Graphical interface, because this is a terminal tool with a TUI rather than a desktop application."
-  - "You need a guaranteed-stable release, because source builds require Go 1.26.6+ and the installer depends on published GitHub Release assets."
+  - You need native ARM64 Windows, because the x64 build runs under emulation there.
+  - You want a Graphical interface, because this is a terminal tool with a TUI rather than a desktop application.
+  - You need a guaranteed-stable release, because source builds require Go 1.26.6+ and the installer depends on published GitHub Release assets.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, provider list, permission/sandbox model, exec flags and Go version requirement are read from the official README and docs; the binary was not installed."
+enrichment_notes: Stars, license, last commit, primary language (Go), topics and issue count came from the GitHub API. Install commands, provider list, permission/sandbox model, exec flags and Go version requirement are read from the official README and docs; the binary was not installed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

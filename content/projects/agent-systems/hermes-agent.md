@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 7535
+trending_score: 55
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: Hermes Agent
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "Nous Research's self-improving personal agent with a TUI, messaging gateway, skill authoring and seven terminal backends"
-github_url: "https://github.com/NousResearch/hermes-agent"
+description: Nous Research's self-improving personal agent with a TUI, messaging gateway, skill authoring and seven terminal backends
+github_url: https://github.com/NousResearch/hermes-agent
 license: MIT
 primary_language: Python
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 249768
-last_commit: "2026-09-28"
-docs_url: "https://hermes-agent.nousresearch.com/docs"
+github_stars: 257303
+last_commit: '2026-10-26'
+docs_url: https://hermes-agent.nousresearch.com/docs
 phase: agent-system
 domain:
   - language
@@ -53,8 +55,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A general-purpose agent runtime that combines provider access, persistent context, tools, skills, and channel adapters in one deployable system.
-best_for: ["You want one agent reachable from Telegram, Discord, Slack, WhatsApp, Signal and a terminal at the same time, from a single gateway process on a small VPS.", "You are spending money on idle GPU or VM capacity and want the execution environment to hibernate between sessions, which the Modal and Daytona backends support directly.", "You want the agent to write and then refine its own SKILL.md playbooks from experience, with FTS5 session search giving it recall of past conversations."]
-avoid_if: ["You need a governed agent runtime with an approval chain and a compliance story, because this is a personal-agent product rather than a managed platform.", "You must not have the agent able to write files outside a boundary you define, because local, Docker and SSH backends are chosen for flexibility rather than confinement.", "You need a hard SLA on tool latency, because a large part of the runtime is LLM-driven and the gateway can queue behind long tool calls."]
+best_for:
+  - You want one agent reachable from Telegram, Discord, Slack, WhatsApp, Signal and a terminal at the same time, from a single gateway process on a small VPS.
+  - You are spending money on idle GPU or VM capacity and want the execution environment to hibernate between sessions, which the Modal and Daytona backends support directly.
+  - You want the agent to write and then refine its own SKILL.md playbooks from experience, with FTS5 session search giving it recall of past conversations.
+avoid_if:
+  - You need a governed agent runtime with an approval chain and a compliance story, because this is a personal-agent product rather than a managed platform.
+  - You must not have the agent able to write files outside a boundary you define, because local, Docker and SSH backends are chosen for flexibility rather than confinement.
+  - You need a hard SLA on tool latency, because a large part of the runtime is LLM-driven and the gateway can queue behind long tool calls.
 enrichment_notes: Official repository, MIT license, and same-day repository activity were reviewed on 2026-07-11. Installation, permission defaults, and production suitability still require hands-on review.
 ---
 

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "smallcloudai"
+org_or_maintainer: smallcloudai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,40 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+trending_score: 15
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: refact
-name: "Refact.ai"
+name: Refact.ai
 artifact_type: platform
 category: code-generation
 subcategory: coding-agents
-description: "Archived Rust coding agent that planned, executed and iterated on engineering tasks inside the IDE"
-github_url: "https://github.com/smallcloudai/refact"
+description: Archived Rust coding agent that planned, executed and iterated on engineering tasks inside the IDE
+github_url: https://github.com/smallcloudai/refact
 license: BSD-3-Clause
 primary_language: Rust
-tags: [retrieval, agents]
+tags:
+  - retrieval
+  - agents
 maturity: experimental
 cost_model: open-source
-github_stars: 3530
-last_commit: "2026-05-30"
-docs_url: "https://docs.refact.ai"
+github_stars: 3529
+last_commit: '2026-05-30'
+docs_url: https://docs.refact.ai
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A self-hostable coding agent that plans, executes, and iterates on engineering tasks across developer tools."
-best_for: ["You are still running an installed Refact build and need the BSD-3-Clause terms and the original repository as the historical reference for its behaviour.", "You want to understand the local-first coding-agent design, including self-hosted model support and RAG over the repository, before evaluating the successor.", "You are migrating off Refact and need to know which features disappeared when Refact Cloud was retired and development moved to another repository."]
-avoid_if: ["You are starting a new project, because the README states this repository is a legacy archive and directs all new issues and pull requests elsewhere.", "You need the hosted assistant, because Refact Cloud has been retired.", "You need security fixes or compatibility with current model providers, since an archive stops at whatever release predates the migration."]
-enrichment_notes: "Repository, BSD-3-Clause license, and 2026-05-30 activity verified via the GitHub API on 2026-10-24. Agentic code changes require review before merging."
+  - A self-hostable coding agent that plans, executes, and iterates on engineering tasks across developer tools.
+best_for:
+  - You are still running an installed Refact build and need the BSD-3-Clause terms and the original repository as the historical reference for its behaviour.
+  - You want to understand the local-first coding-agent design, including self-hosted model support and RAG over the repository, before evaluating the successor.
+  - You are migrating off Refact and need to know which features disappeared when Refact Cloud was retired and development moved to another repository.
+avoid_if:
+  - You are starting a new project, because the README states this repository is a legacy archive and directs all new issues and pull requests elsewhere.
+  - You need the hosted assistant, because Refact Cloud has been retired.
+  - You need security fixes or compatibility with current model providers, since an archive stops at whatever release predates the migration.
+enrichment_notes: Repository, BSD-3-Clause license, and 2026-05-30 activity verified via the GitHub API on 2026-10-24. Agentic code changes require review before merging.
 ---
 
 ## Overview

@@ -1,52 +1,64 @@
 ---
 id: nvidia-tensorrt
-name: "TensorRT"
+name: TensorRT
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: inference-engines
-description: "NVIDIA inference SDK that fuses and specialises a framework graph into an optimised engine plan for one GPU"
-github_url: "https://github.com/NVIDIA/TensorRT"
-license: "Apache-2.0"
+description: NVIDIA inference SDK that fuses and specialises a framework graph into an optimised engine plan for one GPU
+github_url: https://github.com/NVIDIA/TensorRT
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "NVIDIA"
-tags: [inference, pytorch, quantization]
+org_or_maintainer: NVIDIA
+tags:
+  - inference
+  - pytorch
+  - quantization
 maturity: production
 cost_model: open-source
-github_stars: 13369
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-22"
-docs_url: "https://developer.nvidia.com/tensorrt"
+github_stars: 13420
+github_stars_last_30d: 51
+trending_score: 37
+last_commit: '2026-10-09'
+docs_url: https://developer.nvidia.com/tensorrt
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "NVIDIA deep-learning inference SDK that fuses and specializes graphs for a specific GPU, converting framework graphs into engine plans for deployment."
+  - NVIDIA deep-learning inference SDK that fuses and specializes graphs for a specific GPU, converting framework graphs into engine plans for deployment.
 best_for:
-  - "You have a fixed model on a fixed NVIDIA GPU and need the lowest per-request latency you can get, especially for small models where launch overhead dominates."
-  - "You are serving vision or recommendation models at high concurrency and want kernel fusion plus INT8 or FP8 paths without writing custom CUDA."
-  - "You need INT8 quantisation with per-tensor or per-channel calibration and want the calibration and engine-building flow handled for you."
+  - You have a fixed model on a fixed NVIDIA GPU and need the lowest per-request latency you can get, especially for small models where launch overhead dominates.
+  - You are serving vision or recommendation models at high concurrency and want kernel fusion plus INT8 or FP8 paths without writing custom CUDA.
+  - You need INT8 quantisation with per-tensor or per-channel calibration and want the calibration and engine-building flow handled for you.
 avoid_if:
-  - "Your model or GPU changes often, because an engine plan is built for one GPU architecture and one software version and has to be rebuilt or repackaged."
-  - "You need portability across accelerators, since the engine is NVIDIA-specific where ONNX Runtime or OpenVINO is the portable choice."
-  - "You need dynamic batching across many different request shapes, which is what a serving engine such as vllm or sglang is built for instead."
+  - Your model or GPU changes often, because an engine plan is built for one GPU architecture and one software version and has to be rebuilt or repackaged.
+  - You need portability across accelerators, since the engine is NVIDIA-specific where ONNX Runtime or OpenVINO is the portable choice.
+  - You need dynamic batching across many different request shapes, which is what a serving engine such as vllm or sglang is built for instead.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (13369), Apache-2.0, last commit 2026-09-22, C++, and the topic list were API-verified. Build stages, fusion passes, optimisation profiles, precision modes, and the engine-plan portability constraint come from the official developer documentation. The missing-server-functionality and version-coupling notes reflect documented behaviour."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (13369), Apache-2.0, last commit 2026-09-22, C++, and the topic list were API-verified. Build stages, fusion passes, optimisation profiles, precision modes, and the engine-plan portability constraint come from the official developer documentation. The missing-server-functionality and version-coupling notes reflect documented behaviour.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/TensorRT", "date": "2026-09-28", "description": "13,369 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/TensorRT
+    date: '2026-09-28'
+    description: 13,369 stars and last commit 2026-09-22 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

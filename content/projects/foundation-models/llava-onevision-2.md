@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: open-source-models
-description: "Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks"
-github_url: "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2"
+description: Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks
+github_url: https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2
 license: Apache-2.0
 primary_language: Python
-tags: [multimodal, llm, data]
+tags:
+  - multimodal
+  - llm
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 1214
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://evolvinglmms-lab.github.io/LLaVA-OneVision-2/projects/index.html"
+github_stars: 1225
+github_stars_last_30d: 11
+trending_score: 24
+last_commit: '2026-10-26'
+docs_url: https://evolvinglmms-lab.github.io/LLaVA-OneVision-2/projects/index.html
 demo_url: null
 phase: foundation-model
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Ships the whole multimodal recipe, including a codec-stream vision encoder, instead of a checkpoint with an opaque data pipeline."
+  - Ships the whole multimodal recipe, including a codec-stream vision encoder, instead of a checkpoint with an opaque data pipeline.
 best_for:
-  - "You are training or fine-tuning a vision-language model on long video and need an encoder that spends tokens on motion rather than on redundant static frames."
-  - "You want a VLM whose training data, intermediate logs and evaluation reproduction scripts are public, because you intend to run the same recipe and compare numbers."
-  - "You are building spatial or video-caption pipelines and you want a single architecture covering images, long-form video and spatial reasoning rather than three separate models."
+  - You are training or fine-tuning a vision-language model on long video and need an encoder that spends tokens on motion rather than on redundant static frames.
+  - You want a VLM whose training data, intermediate logs and evaluation reproduction scripts are public, because you intend to run the same recipe and compare numbers.
+  - You are building spatial or video-caption pipelines and you want a single architecture covering images, long-form video and spatial reasoning rather than three separate models.
 avoid_if:
-  - "You need a frontier-closed VLM, since this is an 8B open release whose vision-language quality sits below the best proprietary systems on most general tasks."
-  - "You need a plug-and-play API only, because running it means pulling model weights and accepting a specific runtime such as the vLLM or NeMo integration path they document."
-  - "You are on a tight inference budget, because an 8B multimodal model with video input is far more expensive per request than a text-only 8B and usually needs an engine with vision support."
+  - You need a frontier-closed VLM, since this is an 8B open release whose vision-language quality sits below the best proprietary systems on most general tasks.
+  - You need a plug-and-play API only, because running it means pulling model weights and accepting a specific runtime such as the vLLM or NeMo integration path they document.
+  - You are on a tight inference budget, because an 8B multimodal model with video input is far more expensive per request than a text-only 8B and usually needs an engine with vision support.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Architecture, dataset names, report IDs and serving links are read from the README; no checkpoint was downloaded and no benchmark was re-run here."
+enrichment_notes: GitHub API verified stars, license, primary language, topics, last commit, homepage and issue count. Architecture, dataset names, report IDs and serving links are read from the README; no checkpoint was downloaded and no benchmark was re-run here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

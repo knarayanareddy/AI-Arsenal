@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python OSINT agent wrapping 20 real investigation tools behind a REPL, CLI, MCP server and web UI, with a statement-layer entity graph"
-github_url: "https://github.com/OpenOSINT/OpenOSINT"
+description: Python OSINT agent wrapping 20 real investigation tools behind a REPL, CLI, MCP server and web UI, with a statement-layer entity graph
+github_url: https://github.com/OpenOSINT/OpenOSINT
 license: MIT
 primary_language: Python
-tags: [security, tool-use, data]
+tags:
+  - security
+  - tool-use
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 1662
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-26"
-docs_url: "https://openosint.tech"
+github_stars: 1816
+github_stars_last_30d: 154
+trending_score: 35
+last_commit: '2026-10-22'
+docs_url: https://openosint.tech
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Makes hallucinated findings structurally impossible by having the model emit tool calls while your code executes the actual binary."
+  - Makes hallucinated findings structurally impossible by having the model emit tool calls while your code executes the actual binary.
 best_for:
-  - "You are a security researcher with an authorised investigation and you want a natural-language front end over existing OSINT binaries rather than learning each tool's flags."
-  - "You want to use these lookups from Claude or Cursor directly, because the tool set is published as an MCP server so any MCP client can call it without the REPL."
-  - "You need to see where a finding came from, because every entity statement records its dataset, extractor, run id and confidence in a graph you can audit."
+  - You are a security researcher with an authorised investigation and you want a natural-language front end over existing OSINT binaries rather than learning each tool's flags.
+  - You want to use these lookups from Claude or Cursor directly, because the tool set is published as an MCP server so any MCP client can call it without the REPL.
+  - You need to see where a finding came from, because every entity statement records its dataset, extractor, run id and confidence in a graph you can audit.
 avoid_if:
-  - "You do not have explicit authorisation for the target, because the project states it is for authorized security research only and the tools include username and email enumeration."
-  - "You need the tool catalogue to be the largest available, because twenty tools is a curated set, not a wrapper around every OSINT project."
-  - "You cannot supply a model key or run Ollama locally, because the natural-language layer needs one even though the underlying tools work standalone from the CLI."
+  - You do not have explicit authorisation for the target, because the project states it is for authorized security research only and the tools include username and email enumeration.
+  - You need the tool catalogue to be the largest available, because twenty tools is a curated set, not a wrapper around every OSINT project.
+  - You cannot supply a model key or run Ollama locally, because the natural-language layer needs one even though the underlying tools work standalone from the CLI.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Tool count, install commands, REPL/CLI/web surfaces, MCP registry entry and the statement-layer graph description are read from the official README; no investigation was run during authoring."
+enrichment_notes: Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Tool count, install commands, REPL/CLI/web surfaces, MCP registry entry and the statement-layer graph description are read from the official README; no investigation was run during authoring.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -5,19 +5,21 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: document-processing
-description: "IBM-originated document parser producing a unified DoclingDocument with layout, tables, formulas and OCR"
-github_url: "https://github.com/docling-project/docling"
+description: IBM-originated document parser producing a unified DoclingDocument with layout, tables, formulas and OCR
+github_url: https://github.com/docling-project/docling
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [vision, chunking]
+tags:
+  - vision
+  - chunking
 maturity: production
 cost_model: open-source
-github_stars: 68132
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://docling-project.github.io/docling"
+github_stars: 69618
+github_stars_last_30d: 1486
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docling-project.github.io/docling
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +30,25 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - IBM's open-source document conversion library, specializing in high-fidelity parsing of complex document formats (PDF, DOCX) into structured, LLM-ready representations
-best_for: ["You need PDFs parsed with table structure and reading order preserved, because chunkers that work on flat text destroy tabular content.", "You have scanned documents and need OCR in the same pipeline as native digital ones, without maintaining two extraction paths.", "You cannot send documents to a third-party service, because local execution is supported for air-gapped and sensitive data."]
-avoid_if: ["You need a 95 percent-confidence parse of a clean native PDF and a simple extractor is enough, because Docling adds a heavier pipeline than a text dump needs.", "You cannot afford model-based layout analysis on large batches, because accuracy comes from layout models that cost GPU time per page.", "Your pipeline only handles web pages, since the web-to-Markdown entry in this catalog is a better fit for URLs than for files."]
+best_for:
+  - You need PDFs parsed with table structure and reading order preserved, because chunkers that work on flat text destroy tabular content.
+  - You have scanned documents and need OCR in the same pipeline as native digital ones, without maintaining two extraction paths.
+  - You cannot send documents to a third-party service, because local execution is supported for air-gapped and sensitive data.
+avoid_if:
+  - You need a 95 percent-confidence parse of a clean native PDF and a simple extractor is enough, because Docling adds a heavier pipeline than a text dump needs.
+  - You cannot afford model-based layout analysis on large batches, because accuracy comes from layout models that cost GPU time per page.
+  - Your pipeline only handles web pages, since the web-to-Markdown entry in this catalog is a better fit for URLs than for files.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,8 +56,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Docling is developed and backed by IBM Research, giving credible org-backing signal; it's increasingly cited alongside Unstructured and LlamaParse as a leading open-source document-parsing option specifically for RAG pipelines dealing with complex layouts.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

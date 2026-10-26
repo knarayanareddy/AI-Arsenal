@@ -1,52 +1,64 @@
 ---
 id: ggml-org-ggml
-name: "ggml"
+name: ggml
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "C tensor library with a build-graph execution model, providing quantized matmul kernels for local inference"
-github_url: "https://github.com/ggml-org/ggml"
-license: "MIT"
+description: C tensor library with a build-graph execution model, providing quantized matmul kernels for local inference
+github_url: https://github.com/ggml-org/ggml
+license: MIT
 primary_language: C++
-org_or_maintainer: "ggml-org"
-tags: [inference, quantization, local]
+org_or_maintainer: ggml-org
+tags:
+  - inference
+  - quantization
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 15416
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-24"
-docs_url: "https://github.com/ggml-org/ggml"
+github_stars: 15540
+github_stars_last_30d: 124
+trending_score: 43
+last_commit: '2026-10-20'
+docs_url: https://github.com/ggml-org/ggml
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The C tensor and graph library underneath the llama.cpp ecosystem, defining the quantized runtime that made local LLM inference on commodity hardware practical."
+  - The C tensor and graph library underneath the llama.cpp ecosystem, defining the quantized runtime that made local LLM inference on commodity hardware practical.
 best_for:
-  - "You are writing a new inference runtime or accelerator backend and need a tensor library with a graph-building execution model rather than eager op-by-op dispatch."
-  - "You are quantizing and want reference implementations of the block-wise Q4, Q5, and Q8 dequantisation and matmul schemes that every GGUF quantisation type maps onto."
-  - "You need to support hardware without a vendor GPU stack and want a small C library with plain scalar fallbacks that still run correctly anywhere."
+  - You are writing a new inference runtime or accelerator backend and need a tensor library with a graph-building execution model rather than eager op-by-op dispatch.
+  - You are quantizing and want reference implementations of the block-wise Q4, Q5, and Q8 dequantisation and matmul schemes that every GGUF quantisation type maps onto.
+  - You need to support hardware without a vendor GPU stack and want a small C library with plain scalar fallbacks that still run correctly anywhere.
 avoid_if:
-  - "You only need to run a language model, because llama.cpp already packages this library and you will not out-engineer it by linking it directly."
-  - "Your workload is dense float32 GPU tensor work, where a library tuned for quantized low-bit CPU paths is the wrong shape of tool."
-  - "You need autograd and training, since the graph execution model here is forward inference only with no backward pass."
+  - You only need to run a language model, because llama.cpp already packages this library and you will not out-engineer it by linking it directly.
+  - Your workload is dense float32 GPU tensor work, where a library tuned for quantized low-bit CPU paths is the wrong shape of tool.
+  - You need autograd and training, since the graph execution model here is forward inference only with no backward pass.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (15416), MIT license, last commit 2026-09-24, C++ as primary language and the topic list were API-verified. Context arenas, backend scheduling, GGUF block quantisation, and the graph-optimizer pass are described from the repository source and docs; the multi-backend C snippet is illustrative of the documented API and was not compiled for this entry."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (15416), MIT license, last commit 2026-09-24, C++ as primary language and the topic list were API-verified. Context arenas, backend scheduling, GGUF block quantisation, and the graph-optimizer pass are described from the repository source and docs; the multi-backend C snippet is illustrative of the documented API and was not compiled for this entry.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/ggml-org/ggml", "date": "2026-09-28", "description": "15,416 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/ggml-org/ggml
+    date: '2026-09-28'
+    description: 15,416 stars and last commit 2026-09-24 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

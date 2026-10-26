@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A provider-neutral Agent Skill covering harness design, permission ladders, typed tool contracts, and production-readiness audits"
-github_url: "https://github.com/DenisSergeevitch/agents-best-practices"
+description: A provider-neutral Agent Skill covering harness design, permission ladders, typed tool contracts, and production-readiness audits
+github_url: https://github.com/DenisSergeevitch/agents-best-practices
 license: MIT
 primary_language: Other
-tags: [agents, structured-output, guardrails]
+tags:
+  - agents
+  - structured-output
+  - guardrails
 maturity: alpha
 cost_model: open-source
-github_stars: 2357
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-22"
-docs_url: "https://github.com/DenisSergeevitch/agents-best-practices/blob/main/SKILL.md"
+github_stars: 2397
+github_stars_last_30d: 40
+trending_score: 26
+last_commit: '2026-10-19'
+docs_url: https://github.com/DenisSergeevitch/agents-best-practices/blob/main/SKILL.md
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Encodes one opinionated doctrine for where autonomy stops and a human approves, instead of leaving tool permissions to improvisation."
+  - Encodes one opinionated doctrine for where autonomy stops and a human approves, instead of leaving tool permissions to improvisation.
 best_for:
-  - "You are starting a new agent from scratch and need the smallest approval-gated harness that can do one real job."
-  - "You are reviewing an existing agent's tool permissions and need a written map of which calls run, which are gated, which are denied."
-  - "You are a platform team standardizing hooks, evals, and observability across every internal agent you ship."
+  - You are starting a new agent from scratch and need the smallest approval-gated harness that can do one real job.
+  - You are reviewing an existing agent's tool permissions and need a written map of which calls run, which are gated, which are denied.
+  - You are a platform team standardizing hooks, evals, and observability across every internal agent you ship.
 avoid_if:
-  - "You want a library to import, because this repository is instruction text the agent reads rather than a package you depend on."
-  - "You are eight weeks from a launch and need tested implementation rather than design guidance."
-  - "You are in the middle of a live incident, where reading doctrine is slower than reading the trace."
+  - You want a library to import, because this repository is instruction text the agent reads rather than a package you depend on.
+  - You are eight weeks from a launch and need tested implementation rather than design guidance.
+  - You are in the middle of a live incident, where reading doctrine is slower than reading the trace.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 2357, MIT, null primary language, last commit 2026-09-22, topics. From README: install commands, SKILL.md plus references layout, nine use cases, freshness/self-update behavior. references/ contents and audit procedures were not read or run."
+enrichment_notes: 'API-verified: stars 2357, MIT, null primary language, last commit 2026-09-22, topics. From README: install commands, SKILL.md plus references layout, nine use cases, freshness/self-update behavior. references/ contents and audit procedures were not read or run.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

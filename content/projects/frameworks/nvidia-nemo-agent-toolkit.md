@@ -1,52 +1,64 @@
 ---
 id: nvidia-nemo-agent-toolkit
-name: "NeMo-Agent-Toolkit"
+name: NeMo-Agent-Toolkit
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "NVIDIA's library for connecting LLMs to tools and data, with profiling, guardrails, and evaluation built into the agent workflow"
-github_url: "https://github.com/NVIDIA/NeMo-Agent-Toolkit"
-license: "Apache-2.0"
+description: NVIDIA's library for connecting LLMs to tools and data, with profiling, guardrails, and evaluation built into the agent workflow
+github_url: https://github.com/NVIDIA/NeMo-Agent-Toolkit
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "NVIDIA"
-tags: [agents, tool-use, guardrails]
+org_or_maintainer: NVIDIA
+tags:
+  - agents
+  - tool-use
+  - guardrails
 maturity: production
 cost_model: open-source
-github_stars: 2647
-github_stars_last_30d: 0
-trending_score: 27
-last_commit: "2026-09-26"
-docs_url: "https://docs.nvidia.com/nemo/agent-toolkit/latest/"
+github_stars: 2678
+github_stars_last_30d: 31
+trending_score: 35
+last_commit: '2026-10-26'
+docs_url: https://docs.nvidia.com/nemo/agent-toolkit/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Toolkit for connecting LLMs to enterprise systems and data, with profiling and guardrail hooks that let an agent stack be tuned and wrapped for production use."
+  - Toolkit for connecting LLMs to enterprise systems and data, with profiling and guardrail hooks that let an agent stack be tuned and wrapped for production use.
 best_for:
-  - "You need to profile where an agent spends its tokens and wall clock before optimizing, since the telemetry is the point of the toolkit."
-  - "You are connecting an LLM to enterprise systems and want a defined tool interface rather than ad hoc function calling."
-  - "You need guardrails and evaluation hooks around a production agent, added at the framework layer rather than in application code."
+  - You need to profile where an agent spends its tokens and wall clock before optimizing, since the telemetry is the point of the toolkit.
+  - You are connecting an LLM to enterprise systems and want a defined tool interface rather than ad hoc function calling.
+  - You need guardrails and evaluation hooks around a production agent, added at the framework layer rather than in application code.
 avoid_if:
-  - "You want a minimal agent loop you can read in an afternoon, since this is a framework with configuration, plugins, and a learning curve."
-  - "You are on non-NVIDIA hardware with no plan to use NeMo or NGC services, since parts of the ecosystem assume that stack."
-  - "Your agent is a single classification call with one tool, where a full multi-agent framework is heavy machinery for one decision."
+  - You want a minimal agent loop you can read in an afternoon, since this is a framework with configuration, plugins, and a learning curve.
+  - You are on non-NVIDIA hardware with no plan to use NeMo or NGC services, since parts of the ecosystem assume that stack.
+  - Your agent is a single classification call with one tool, where a full multi-agent framework is heavy machinery for one decision.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2647), Apache-2.0 license, last commit 2026-09-26, and primary language Python were read from the GitHub API; the topics array is empty upstream. Profiling of steps and tool calls, guardrail middleware, multi-agent handoffs, and the evaluation layer come from the official docs and examples; no agent was run and no provider key was used here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2647), Apache-2.0 license, last commit 2026-09-26, and primary language Python were read from the GitHub API; the topics array is empty upstream. Profiling of steps and tool calls, guardrail middleware, multi-agent handoffs, and the evaluation layer come from the official docs and examples; no agent was run and no provider key was used here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/NeMo-Agent-Toolkit", "date": "2026-09-28", "description": "2,647 stars and last commit 2026-09-26 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/NeMo-Agent-Toolkit
+    date: '2026-09-28'
+    description: 2,647 stars and last commit 2026-09-26 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

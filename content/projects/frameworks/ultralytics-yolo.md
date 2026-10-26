@@ -1,32 +1,41 @@
 ---
 id: ultralytics-yolo
-name: "Ultralytics YOLO"
-version_tracked: "YOLO26"
+name: Ultralytics YOLO
+version_tracked: YOLO26
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence"
-github_url: "https://github.com/ultralytics/ultralytics"
-license: "AGPL-3.0"
+description: 'Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence'
+github_url: https://github.com/ultralytics/ultralytics
+license: AGPL-3.0
 primary_language: Python
-org_or_maintainer: "Ultralytics"
-tags: [multimodal, efficiency, data]
+org_or_maintainer: Ultralytics
+tags:
+  - multimodal
+  - efficiency
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 62824
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-10-25"
-docs_url: "https://docs.ultralytics.com"
+github_stars: 62857
+github_stars_last_30d: 33
+trending_score: 18
+last_commit: '2026-10-26'
+docs_url: https://docs.ultralytics.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
-  - "The default production path for real-time vision: Ultralytics turned the YOLO lineage into a train/validate/export pipeline complete enough that 'use YOLO' means 'use this repo' for detection, segmentation, depth, pose, OBB and tracking"
+  - 'The default production path for real-time vision: Ultralytics turned the YOLO lineage into a train/validate/export pipeline complete enough that ''use YOLO'' means ''use this repo'' for detection, segmentation, depth, pose, OBB and tracking'
 best_for:
   - You need real-time detection or segmentation on GPU or edge hardware with minimal ML engineering — YOLO26n runs at 1.7 ms on a T4 TensorRT build at 40.9 mAP, and export to ONNX, TensorRT, CoreML or TFLite is one command
   - You fine-tune on your own labelled objects — the training loop, augmentation set, dataset validation and hyperparameter defaults are tuned for small custom datasets rather than for ImageNet-scale pretraining
@@ -37,17 +46,29 @@ avoid_if:
   - You need permissive-licence weights for a research artefact — RT-DETR variants and Apache-licensed detectors avoid the copyleft issue entirely
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [ultralytics, rf-detr, detectron2, grounding-dino, supervision]
-integrates_with: [pytorch-vision, onnx-onnx, tensorrt-llm, openvino]
+alternatives:
+  - ultralytics
+  - rf-detr
+  - detectron2
+  - grounding-dino
+  - supervision
+integrates_with:
+  - pytorch-vision
+  - onnx-onnx
+  - tensorrt-llm
+  - openvino
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 62,824 stars, 92 open issues, AGPL-3.0, last push 2026-10-25. README shows YOLO26 as the current line with detection/segmentation/semantic-segmentation/depth/classify/pose/OBB tasks, YOLO26n at 40.9 mAP / 1.7 ms T4 TensorRT, and an Enterprise Licence route for commercial use."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 62,824 stars, 92 open issues, AGPL-3.0, last push 2026-10-25. README shows YOLO26 as the current line with detection/segmentation/semantic-segmentation/depth/classify/pose/OBB tasks, YOLO26n at 40.9 mAP / 1.7 ms T4 TensorRT, and an Enterprise Licence route for commercial use.'
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source": "github-trending", "url": "https://github.com/ultralytics/ultralytics", "date": "2026-07-08", "description": "59,255 stars on GitHub as of 2026-07-08 (GitHub API); 62,824 by 2026-10-25"}
+  - source: github-trending
+    url: https://github.com/ultralytics/ultralytics
+    date: '2026-07-08'
+    description: 59,255 stars on GitHub as of 2026-07-08 (GitHub API); 62,824 by 2026-10-25
 featured: false
 status: active
 ---

@@ -1,52 +1,63 @@
 ---
 id: nvidia-transformerengine
-name: "TransformerEngine"
+name: TransformerEngine
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "NVIDIA library of fused transformer primitives with FP8 and FP4 GEMM paths, low-precision attention, and framework plugin integration"
-github_url: "https://github.com/NVIDIA/TransformerEngine"
-license: "Apache-2.0"
+description: NVIDIA library of fused transformer primitives with FP8 and FP4 GEMM paths, low-precision attention, and framework plugin integration
+github_url: https://github.com/NVIDIA/TransformerEngine
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "NVIDIA"
-tags: [pytorch, transformers]
+org_or_maintainer: NVIDIA
+tags:
+  - pytorch
+  - transformers
 maturity: production
 cost_model: open-source
-github_stars: 3554
-github_stars_last_30d: 0
-trending_score: 28
-last_commit: "2026-09-25"
-docs_url: "https://docs.nvidia.com/deeplearning/transformer-engine/"
+github_stars: 3594
+github_stars_last_30d: 40
+trending_score: 36
+last_commit: '2026-10-26'
+docs_url: https://docs.nvidia.com/deeplearning/transformer-engine/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Transformer primitives with FP8/FP4 paths and fused kernels for NVIDIA GPUs, supplying the low-precision building blocks training and inference stacks share."
+  - Transformer primitives with FP8/FP4 paths and fused kernels for NVIDIA GPUs, supplying the low-precision building blocks training and inference stacks share.
 best_for:
-  - "You are training or serving large transformer models on Hopper, Ada, or Blackwell and need FP8 or FP4 GEMM with correct scaling."
-  - "You want the low-precision path without hand-writing quantization logic, since the fused kernels own the scale and the amax history."
-  - "You need the same numerics in training and inference, so a checkpoint trained at FP8 does not shift behavior when served at FP8."
+  - You are training or serving large transformer models on Hopper, Ada, or Blackwell and need FP8 or FP4 GEMM with correct scaling.
+  - You want the low-precision path without hand-writing quantization logic, since the fused kernels own the scale and the amax history.
+  - You need the same numerics in training and inference, so a checkpoint trained at FP8 does not shift behavior when served at FP8.
 avoid_if:
-  - "You are on AMD, Intel, or Apple Silicon, since the library is built on NVIDIA's FP8 and FP4 tensor core instructions."
-  - "Your model is small enough that FP16 already fits, since the added complexity and the calibration step rarely pay off there."
-  - "You need portable numerics across vendors, since recipes tuned through this library will need a different low-precision path elsewhere."
+  - You are on AMD, Intel, or Apple Silicon, since the library is built on NVIDIA's FP8 and FP4 tensor core instructions.
+  - Your model is small enough that FP16 already fits, since the added complexity and the calibration step rarely pay off there.
+  - You need portable numerics across vendors, since recipes tuned through this library will need a different low-precision path elsewhere.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3554), Apache-2.0 license, last commit 2026-09-25, primary language Python, and all ten topics were read from the GitHub API. Scaling modes, amax history and delayed scaling, the fused module set, framework integrations, and checkpoint state come from the official README and user guide; no FP8 run was executed on GPU here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3554), Apache-2.0 license, last commit 2026-09-25, primary language Python, and all ten topics were read from the GitHub API. Scaling modes, amax history and delayed scaling, the fused module set, framework integrations, and checkpoint state come from the official README and user guide; no FP8 run was executed on GPU here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/TransformerEngine", "date": "2026-09-28", "description": "3,554 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/TransformerEngine
+    date: '2026-09-28'
+    description: 3,554 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

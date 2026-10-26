@@ -1,52 +1,65 @@
 ---
 id: strands-agents-harness-sdk
-name: "harness-sdk"
+name: harness-sdk
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: frameworks
-description: "Agent harness SDK that owns the control loop, session state, and tool routing for agents in Python and TypeScript"
-github_url: "https://github.com/strands-agents/harness-sdk"
-license: "Apache-2.0"
+description: Agent harness SDK that owns the control loop, session state, and tool routing for agents in Python and TypeScript
+github_url: https://github.com/strands-agents/harness-sdk
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "strands-agents"
-tags: [agents, tool-use, battle-tested, orchestration]
+org_or_maintainer: strands-agents
+tags:
+  - agents
+  - tool-use
+  - battle-tested
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 8508
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-28"
-docs_url: "http://strandsagents.com/"
+github_stars: 8956
+github_stars_last_30d: 448
+trending_score: 69
+last_commit: '2026-10-26'
+docs_url: http://strandsagents.com/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Agent harness SDK that owns the control loop, session state, and tool routing so an agent can be driven and observed end-to-end rather than as an ad-hoc loop."
+  - Agent harness SDK that owns the control loop, session state, and tool routing so an agent can be driven and observed end-to-end rather than as an ad-hoc loop.
 best_for:
-  - "You are building a production agent and need session state, tool routing, and lifecycle control in a maintained SDK instead of an in-house while loop."
-  - "You want the same agent definition to run in Python and TypeScript, so a service and a frontend share one harness rather than two reimplementations."
-  - "You are wiring an agent to an existing tool ecosystem and want MCP-compatible tool registration rather than bespoke adapter glue."
+  - You are building a production agent and need session state, tool routing, and lifecycle control in a maintained SDK instead of an in-house while loop.
+  - You want the same agent definition to run in Python and TypeScript, so a service and a frontend share one harness rather than two reimplementations.
+  - You are wiring an agent to an existing tool ecosystem and want MCP-compatible tool registration rather than bespoke adapter glue.
 avoid_if:
-  - "You want a research loop you can read in one file to study agent design, since a harness SDK abstracts that loop away on purpose."
-  - "Your agent is a single prompt with no tools, no state, and no retries, since the harness is overhead until there is something to manage."
-  - "You need to own every detail of scheduling, sandboxing, and approval, where an opinionated harness is a constraint rather than an accelerant."
+  - You want a research loop you can read in one file to study agent design, since a harness SDK abstracts that loop away on purpose.
+  - Your agent is a single prompt with no tools, no state, and no retries, since the harness is overhead until there is something to manage.
+  - You need to own every detail of scheduling, sandboxing, and approval, where an opinionated harness is a constraint rather than an accelerant.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (8508), Apache-2.0, last commit 2026-09-28, Python, and the topic list were API-verified. The model-provider abstraction, loop with tool dispatch, lifecycle hooks, event callbacks, session state, MCP tool registration, and built-in tools come from the official repo README and docs. The operational-responsibility caveat is engineering judgement."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (8508), Apache-2.0, last commit 2026-09-28, Python, and the topic list were API-verified. The model-provider abstraction, loop with tool dispatch, lifecycle hooks, event callbacks, session state, MCP tool registration, and built-in tools come from the official repo README and docs. The operational-responsibility caveat is engineering judgement.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/strands-agents/harness-sdk", "date": "2026-09-28", "description": "8,508 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/strands-agents/harness-sdk
+    date: '2026-09-28'
+    description: 8,508 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

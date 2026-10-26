@@ -5,43 +5,62 @@ version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: inference-engines
-description: "Rust machine-learning framework from Hugging Face built around a small Tensor type with CPU, CUDA, Metal and WASM backends and safetensors-native weight loading"
-github_url: "https://github.com/huggingface/candle"
+description: Rust machine-learning framework from Hugging Face built around a small Tensor type with CPU, CUDA, Metal and WASM backends and safetensors-native weight loading
+github_url: https://github.com/huggingface/candle
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: huggingface
-tags: [inference, huggingface, efficiency, edge]
+tags:
+  - inference
+  - huggingface
+  - efficiency
+  - edge
 maturity: production
 cost_model: open-source
-github_stars: 21118
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.github.io/candle/guide/installation.html"
+github_stars: 21233
+github_stars_last_30d: 115
+trending_score: 24
+last_commit: '2026-10-14'
+docs_url: https://huggingface.github.io/candle/guide/installation.html
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The Rust foundation of Hugging Face's production inference stack: where PyTorch deployment drags the Python runtime along, Candle compiles model inference into small static binaries — the substrate under text-embeddings-inference and the base layer the Rust ML ecosystem (mistral.rs and others) builds on"
-best_for: ["You are shipping inference inside a Lambda, a container image or a WASM bundle and you cannot afford a Python runtime in the cold path.", "You want to embed one specific model, such as a Whisper, YOLO or Segment Anything pipeline, and you would rather compile a small binary than vendor a full deep-learning framework.", "You already live in Rust and you want tensor ops, safetensors loading and a transformer implementation that does not require a second language in the build."]
-avoid_if: ["You need the breadth of a general training framework, because Candle is deliberately minimalist and the README's comparison is dfdx, burn and tch-rs rather than PyTorch feature parity.", "You need autograd and training loops, because the project is positioned for serverless inference and the example set is dominated by forward-pass model runners.", "You want a drop-in for existing Python model code, because tch-rs exists for that purpose and Candle would mean rewriting your model plumbing in Rust."]
+  - 'The Rust foundation of Hugging Face''s production inference stack: where PyTorch deployment drags the Python runtime along, Candle compiles model inference into small static binaries — the substrate under text-embeddings-inference and the base layer the Rust ML ecosystem (mistral.rs and others) builds on'
+best_for:
+  - You are shipping inference inside a Lambda, a container image or a WASM bundle and you cannot afford a Python runtime in the cold path.
+  - You want to embed one specific model, such as a Whisper, YOLO or Segment Anything pipeline, and you would rather compile a small binary than vendor a full deep-learning framework.
+  - You already live in Rust and you want tensor ops, safetensors loading and a transformer implementation that does not require a second language in the build.
+avoid_if:
+  - You need the breadth of a general training framework, because Candle is deliberately minimalist and the README's comparison is dfdx, burn and tch-rs rather than PyTorch feature parity.
+  - You need autograd and training loops, because the project is positioned for serverless inference and the example set is dominated by forward-pass model runners.
+  - You want a drop-in for existing Python model code, because tch-rs exists for that purpose and Candle would mean rewriting your model plumbing in Rust.
 upstream_dependencies: []
-downstream_consumers: [text-embeddings-inference]
+downstream_consumers:
+  - text-embeddings-inference
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (20.6k), Apache-2.0, and active maintenance (last push 2026-07-06) verified via the GitHub API on 2026-07-08. Its role under text-embeddings-inference is documented in that project's repository; performance positioning is qualitative.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/huggingface/candle","date":"2026-07-08","description":"20.6k stars, Hugging Face's core Rust ML framework"}
+  - source: github-trending
+    url: https://github.com/huggingface/candle
+    date: '2026-07-08'
+    description: 20.6k stars, Hugging Face's core Rust ML framework
 featured: false
 status: active
 ---

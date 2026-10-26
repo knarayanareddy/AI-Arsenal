@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Pattern library and npx CLI for running recurring agent loops around a codebase, with autonomy levels, cost tiers and a Loop Ready score"
-github_url: "https://github.com/cobusgreyling/loop-engineering"
+description: Pattern library and npx CLI for running recurring agent loops around a codebase, with autonomy levels, cost tiers and a Loop Ready score
+github_url: https://github.com/cobusgreyling/loop-engineering
 license: MIT
 primary_language: TypeScript
-tags: [orchestration, community-favorite, kubernetes]
+tags:
+  - orchestration
+  - community-favorite
+  - kubernetes
 maturity: beta
 cost_model: open-source
-github_stars: 11330
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://cobusgreyling.github.io/loop-engineering/"
+github_stars: 11637
+github_stars_last_30d: 307
+trending_score: 48
+last_commit: '2026-10-26'
+docs_url: https://cobusgreyling.github.io/loop-engineering/
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Treats agent work as a scheduled system with discovery, verification and persisted state, rather than something you re-prompt by hand."
+  - Treats agent work as a scheduled system with discovery, verification and persisted state, rather than something you re-prompt by hand.
 best_for:
-  - "You want agents to keep a repository healthy between your own working sessions, because the daily-triage pattern runs on a one-to-two-hour cadence and starts report-only."
-  - "You need to hand PR babysitting to a loop and you want the autonomy level and cost tier explicit before you enable writes."
-  - "You are porting a workflow between Claude Code, Codex, Grok or OpenCode and you want one pattern definition that targets all four."
+  - You want agents to keep a repository healthy between your own working sessions, because the daily-triage pattern runs on a one-to-two-hour cadence and starts report-only.
+  - You need to hand PR babysitting to a loop and you want the autonomy level and cost tier explicit before you enable writes.
+  - You are porting a workflow between Claude Code, Codex, Grok or OpenCode and you want one pattern definition that targets all four.
 avoid_if:
-  - "You want an agent framework or SDK, because this is a set of documented patterns plus a CLI, not a library you import."
-  - "You are starting with one long task rather than recurring work, because every pattern here is defined by cadence and runs repeatedly."
-  - "You need week-one automation, because the project deliberately defaults the first week to report-only so nothing writes before you have seen the output."
+  - You want an agent framework or SDK, because this is a set of documented patterns plus a CLI, not a library you import.
+  - You are starting with one long task rather than recurring work, because every pattern here is defined by cadence and runs repeatedly.
+  - You need week-one automation, because the project deliberately defaults the first week to report-only so nothing writes before you have seen the output.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Pattern list, cadence and autonomy table, cost tiers, CLI commands and week-one report-only default are read from the official README and docs; no loop was executed."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Pattern list, cadence and autonomy table, cost tiers, CLI commands and week-one report-only default are read from the official README and docs; no loop was executed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

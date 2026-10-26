@@ -1,52 +1,65 @@
 ---
 id: snakers4-silero-vad
-name: "silero-vad"
+name: silero-vad
 version_tracked: null
 artifact_type: model
 category: voice-audio
 subcategory: models
-description: "Small CPU-fast voice-activity detector that gates streaming ASR and realtime voice interfaces"
-github_url: "https://github.com/snakers4/silero-vad"
-license: "MIT"
+description: Small CPU-fast voice-activity detector that gates streaming ASR and realtime voice interfaces
+github_url: https://github.com/snakers4/silero-vad
+license: MIT
 primary_language: Python
-org_or_maintainer: "snakers4"
-tags: [voice, streaming, onnx, edge]
+org_or_maintainer: snakers4
+tags:
+  - voice
+  - streaming
+  - onnx
+  - edge
 maturity: production
 cost_model: open-source
-github_stars: 10313
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-23"
+github_stars: 10532
+github_stars_last_30d: 219
+trending_score: 51
+last_commit: '2026-10-22'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [audio]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Small CPU-fast voice-activity detector that gates streaming ASR and realtime voice agents, costing milliseconds per chunk instead of seconds."
+  - Small CPU-fast voice-activity detector that gates streaming ASR and realtime voice agents, costing milliseconds per chunk instead of seconds.
 best_for:
-  - "You are building a streaming voice interface and need to know when the user starts and stops talking so you can finalise a turn without a fixed silence timer."
-  - "You are batching transcription across long recordings and need speech segments first so the recogniser skips hours of silence instead of decoding them."
-  - "You need a voice gate that runs in a browser, on a Raspberry Pi, or in a mobile app, where a torch dependency would be unacceptable."
+  - You are building a streaming voice interface and need to know when the user starts and stops talking so you can finalise a turn without a fixed silence timer.
+  - You are batching transcription across long recordings and need speech segments first so the recogniser skips hours of silence instead of decoding them.
+  - You need a voice gate that runs in a browser, on a Raspberry Pi, or in a mobile app, where a torch dependency would be unacceptable.
 avoid_if:
-  - "You need word-level timestamps with no extra latency, since gating adds a boundary decision you still have to account for in alignment."
-  - "You need to distinguish overlapping speakers, since a binary speech-versus-non-speech decision is all this model produces."
-  - "You are already paying for an end-to-end speech model with its own internal activity detection, where a separate gate is redundant work."
+  - You need word-level timestamps with no extra latency, since gating adds a boundary decision you still have to account for in alignment.
+  - You need to distinguish overlapping speakers, since a binary speech-versus-non-speech decision is all this model produces.
+  - You are already paying for an end-to-end speech model with its own internal activity detection, where a separate gate is redundant work.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (10313), MIT, last commit 2026-09-23, Python, and the topic list were API-verified; no homepage field. The two-stage dilated CNN design, 512-sample frame chunking, ONNX and TorchScript exports, and the post-processing parameter names come from the official README and source. Latency and model-size figures are the project's published numbers, not re-measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (10313), MIT, last commit 2026-09-23, Python, and the topic list were API-verified; no homepage field. The two-stage dilated CNN design, 512-sample frame chunking, ONNX and TorchScript exports, and the post-processing parameter names come from the official README and source. Latency and model-size figures are the project's published numbers, not re-measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/snakers4/silero-vad", "date": "2026-09-28", "description": "10,313 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/snakers4/silero-vad
+    date: '2026-09-28'
+    description: 10,313 stars and last commit 2026-09-23 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,63 @@
 ---
 id: google-deepmind-alphafold3
-name: "alphafold3"
+name: alphafold3
 version_tracked: null
 artifact_type: tool
 category: multimodal
 subcategory: tools
-description: "AlphaFold 3 inference pipeline for biomolecular complex structure and interaction prediction"
-github_url: "https://github.com/google-deepmind/alphafold3"
-license: "Apache-2.0"
+description: AlphaFold 3 inference pipeline for biomolecular complex structure and interaction prediction
+github_url: https://github.com/google-deepmind/alphafold3
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "google-deepmind"
-tags: [vision, research, multimodal]
+org_or_maintainer: google-deepmind
+tags:
+  - vision
+  - research
+  - multimodal
 maturity: alpha
 cost_model: open-source
-github_stars: 8596
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-21"
+github_stars: 8684
+github_stars_last_30d: 88
+trending_score: 40
+last_commit: '2026-10-23'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [multimodal]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained]
+domain:
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "AlphaFold 3 inference pipeline for biomolecular structure and interaction prediction, and the reference for running diffusion-based structure models at research scale."
+  - AlphaFold 3 inference pipeline for biomolecular structure and interaction prediction, and the reference for running diffusion-based structure models at research scale.
 best_for:
-  - "You are a structural biologist who needs predicted coordinates and confidence values for a complex containing protein, ligand, nucleic acid, or ions."
-  - "You are reproducing or extending AlphaFold 3 methodologically and need the actual inference code, since the weights are gated and the paper alone does not give you the pipeline."
-  - "You are benchmarking a complex-prediction method and need the canonical preprocessing, tokenisation, and recycling setup to compare against fairly."
+  - You are a structural biologist who needs predicted coordinates and confidence values for a complex containing protein, ligand, nucleic acid, or ions.
+  - You are reproducing or extending AlphaFold 3 methodologically and need the actual inference code, since the weights are gated and the paper alone does not give you the pipeline.
+  - You are benchmarking a complex-prediction method and need the canonical preprocessing, tokenisation, and recycling setup to compare against fairly.
 avoid_if:
-  - "You need the weights, because they are gated and the terms restrict non-commercial research; this repository is code, not a checkpoint you can just download."
-  - "You are doing drug discovery or clinical work, since a research licence and predicted-not-measured output make it unsuitable for a decision path."
-  - "You need single-protein folding only, where the open AlphaFold 2 code and its released weights are simpler, better documented, and free of the complex-modality machinery."
+  - You need the weights, because they are gated and the terms restrict non-commercial research; this repository is code, not a checkpoint you can just download.
+  - You are doing drug discovery or clinical work, since a research licence and predicted-not-measured output make it unsuitable for a decision path.
+  - You need single-protein folding only, where the open AlphaFold 2 code and its released weights are simpler, better documented, and free of the complex-modality machinery.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (8596), Apache-2.0, last commit 2026-09-21, Python, and the topic list were API-verified; no homepage field. Pipeline stages, Pairformer and Triformer blocks, the diffusion module, predicted lDDT and PAE, and gated-weights licensing are from the official repo and technical report. Database-size and failure-mode claims are from official docs, not reproduced here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (8596), Apache-2.0, last commit 2026-09-21, Python, and the topic list were API-verified; no homepage field. Pipeline stages, Pairformer and Triformer blocks, the diffusion module, predicted lDDT and PAE, and gated-weights licensing are from the official repo and technical report. Database-size and failure-mode claims are from official docs, not reproduced here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/google-deepmind/alphafold3", "date": "2026-09-28", "description": "8,596 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/google-deepmind/alphafold3
+    date: '2026-09-28'
+    description: 8,596 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

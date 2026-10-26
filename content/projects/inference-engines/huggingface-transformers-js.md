@@ -1,53 +1,66 @@
 ---
 id: huggingface-transformers-js
-name: "transformers.js"
+name: transformers.js
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "Runs Transformer models in browsers and Node with ONNX Runtime Web, WebGPU, and WASM backends"
-github_url: "https://github.com/huggingface/transformers.js"
-license: "Apache-2.0"
+description: Runs Transformer models in browsers and Node with ONNX Runtime Web, WebGPU, and WASM backends
+github_url: https://github.com/huggingface/transformers.js
+license: Apache-2.0
 primary_language: TypeScript
-org_or_maintainer: "huggingface"
-tags: [pytorch, onnx, security]
+org_or_maintainer: huggingface
+tags:
+  - pytorch
+  - onnx
+  - security
 maturity: production
 cost_model: open-source
-github_stars: 16329
-github_stars_last_30d: 0
-trending_score: 34
-last_commit: "2026-09-28"
-docs_url: "https://huggingface.co/docs/transformers.js"
+github_stars: 16379
+github_stars_last_30d: 50
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://huggingface.co/docs/transformers.js
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, vision, audio]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - language
+  - vision
+  - audio
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Runs Transformer models directly in the browser and in Node with WebGPU/WASM backends — the practical way to ship private on-device inference without a server."
+  - Runs Transformer models directly in the browser and in Node with WebGPU/WASM backends — the practical way to ship private on-device inference without a server.
 best_for:
-  - "You are building a feature where user data must not reach a server, and you need a real model running in the browser rather than a keyword heuristic."
-  - "You want client-side embedding, classification, or transcription without shipping a Python service, with the same model checkpoints the server side uses."
-  - "You need a Node or edge worker to load a small model and want one API across a WebGPU device, WASM fallback, and a server runtime."
+  - You are building a feature where user data must not reach a server, and you need a real model running in the browser rather than a keyword heuristic.
+  - You want client-side embedding, classification, or transcription without shipping a Python service, with the same model checkpoints the server side uses.
+  - You need a Node or edge worker to load a small model and want one API across a WebGPU device, WASM fallback, and a server runtime.
 avoid_if:
-  - "You need a frontier model, since anything past roughly a billion parameters either will not fit in a browser download budget or will be unusably slow on most clients.
-  "
-  - "You need per-request GPU throughput or batching, because a browser tab is a single user session with a shared device, not a serving tier."
-  - "Your model needs a backend the ONNX exports lack, so check that your specific checkpoint has a WebGPU or WASM-compatible build before committing."
+  - 'You need a frontier model, since anything past roughly a billion parameters either will not fit in a browser download budget or will be unusably slow on most clients. '
+  - You need per-request GPU throughput or batching, because a browser tab is a single user session with a shared device, not a serving tier.
+  - Your model needs a backend the ONNX exports lack, so check that your specific checkpoint has a WebGPU or WASM-compatible build before committing.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (16329), Apache-2.0 license, last commit 2026-09-28, TypeScript as primary language and the topic list were API-verified. Pipeline task list, onnxruntime-web execution providers, dtype options, the Cache API, and the model-id prefixes come from the official docs; download-size and browser-coverage caveats are engineering judgement, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (16329), Apache-2.0 license, last commit 2026-09-28, TypeScript as primary language and the topic list were API-verified. Pipeline task list, onnxruntime-web execution providers, dtype options, the Cache API, and the model-id prefixes come from the official docs; download-size and browser-coverage caveats are engineering judgement, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingface/transformers.js", "date": "2026-09-28", "description": "16,329 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/huggingface/transformers.js
+    date: '2026-09-28'
+    description: 16,329 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

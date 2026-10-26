@@ -5,19 +5,22 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: document-processing
-description: "Web data API with search, scrape, crawl and map endpoints, AGPL-licensed and also sold as a hosted service"
-github_url: "https://github.com/firecrawl/firecrawl"
+description: Web data API with search, scrape, crawl and map endpoints, AGPL-licensed and also sold as a hosted service
+github_url: https://github.com/firecrawl/firecrawl
 license: AGPL-3.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [data, retrieval, tool-use]
+tags:
+  - data
+  - retrieval
+  - tool-use
 maturity: production
 cost_model: freemium
-github_stars: 185940
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://docs.firecrawl.dev"
+github_stars: 195566
+github_stars_last_30d: 9626
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://docs.firecrawl.dev
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +31,26 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Managed API (with a smaller open-source self-hosted variant) for crawling entire websites into clean, LLM-ready Markdown
-best_for: ["You need one call to turn a site into a corpus, because the crawl endpoint takes a single request to scrape all URLs of a website while map discovers them first.", "You want several output shapes from the same page, since scrape returns markdown, HTML, screenshots or structured JSON rather than forcing one representation.", "You are on JS-heavy or bot-walled targets, because the README's central claim is that rotating proxies, orchestration, rate limits and JS-blocked content are handled for you."]
-avoid_if: ["You need an OSI-approved open-source licence for the server, because the repository is AGPL-3.0 and the API you would deploy is the code you would have to open.", "You cannot send target content to a third party, because the value proposition is their proxy and browser infrastructure, which means your URLs and the fetched content transit their systems.", "You need a predictable bill, because the hosted tier is metered per request and the README's own numbers are marketing figures, not a rate card."]
+best_for:
+  - You need one call to turn a site into a corpus, because the crawl endpoint takes a single request to scrape all URLs of a website while map discovers them first.
+  - You want several output shapes from the same page, since scrape returns markdown, HTML, screenshots or structured JSON rather than forcing one representation.
+  - You are on JS-heavy or bot-walled targets, because the README's central claim is that rotating proxies, orchestration, rate limits and JS-blocked content are handled for you.
+avoid_if:
+  - You need an OSI-approved open-source licence for the server, because the repository is AGPL-3.0 and the API you would deploy is the code you would have to open.
+  - You cannot send target content to a third party, because the value proposition is their proxy and browser infrastructure, which means your URLs and the fetched content transit their systems.
+  - You need a predictable bill, because the hosted tier is metered per request and the README's own numbers are marketing figures, not a rate card.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,12 +58,15 @@ integrates_with: []
 corresponding_tool_entry: firecrawl-tool
 enrichment_status: reviewed
 enrichment_notes: Documents the same project as the firecrawl-tool entry in the tools vertical; this entry covers architecture/ecosystem position, the tool entry covers usage-oriented job guidance. Firecrawl is widely adopted across RAG tutorials and production ingestion pipelines.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso (including Firecrawl MCP variant) as an LLM-ready data extraction tool"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso (including Firecrawl MCP variant) as an LLM-ready data extraction tool
 featured: false
 status: active
 ---

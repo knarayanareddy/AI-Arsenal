@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Portkey-AI"
+org_or_maintainer: Portkey-AI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 177
+trending_score: 29
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: portkey-gateway
-name: "Portkey AI Gateway"
+name: Portkey AI Gateway
 artifact_type: platform
 category: observability
 subcategory: platforms
-description: "Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing"
-github_url: "https://github.com/Portkey-AI/gateway"
+description: Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing
+github_url: https://github.com/Portkey-AI/gateway
 license: MIT
 primary_language: TypeScript
-tags: [routing, guardrails]
+tags:
+  - routing
+  - guardrails
 maturity: beta
 cost_model: freemium
-github_stars: 13098
-last_commit: "2026-05-25"
-docs_url: "https://portkey.ai/docs"
+github_stars: 13275
+last_commit: '2026-05-25'
+docs_url: https://portkey.ai/docs
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A unified LLM gateway that routes across many providers with reliability and guardrail features."
-best_for: ["You are integrating a first model provider in minutes and you want a single base URL with a provider-neutral request shape, because the quickstart is a single npx command and a two-minute integration claim.", "You need automatic retries, fallbacks and conditional routing so a provider outage or rate limit does not surface as an application error.", "You want guardrails in the request path, because the project ships a guardrail catalogue alongside routing and an MCP gateway for tool servers."]
-avoid_if: ["You need the current enterprise feature set in the open-source build, because the README says the core enterprise gateway is merging into open source with a 2.0 release and points at a pre-release branch for that.", "You want an open-source license for a commercial product without conditions, because the repository is MIT but the hosted gateway and enterprise features are separately commercial.", "You are serving a single provider on a single workload where a direct SDK call would do, because a gateway is a hop and a dependency you now have to operate."]
-enrichment_notes: "Repository, MIT license, and 2026-05-25 activity verified via the GitHub API on 2026-07-12. Adds a hop in the request path; account for its latency and availability."
+  - A unified LLM gateway that routes across many providers with reliability and guardrail features.
+best_for:
+  - You are integrating a first model provider in minutes and you want a single base URL with a provider-neutral request shape, because the quickstart is a single npx command and a two-minute integration claim.
+  - You need automatic retries, fallbacks and conditional routing so a provider outage or rate limit does not surface as an application error.
+  - You want guardrails in the request path, because the project ships a guardrail catalogue alongside routing and an MCP gateway for tool servers.
+avoid_if:
+  - You need the current enterprise feature set in the open-source build, because the README says the core enterprise gateway is merging into open source with a 2.0 release and points at a pre-release branch for that.
+  - You want an open-source license for a commercial product without conditions, because the repository is MIT but the hosted gateway and enterprise features are separately commercial.
+  - You are serving a single provider on a single workload where a direct SDK call would do, because a gateway is a hop and a dependency you now have to operate.
+enrichment_notes: Repository, MIT license, and 2026-05-25 activity verified via the GitHub API on 2026-07-12. Adds a hop in the request path; account for its latency and availability.
 ---
 
 ## Overview

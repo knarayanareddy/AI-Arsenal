@@ -1,52 +1,63 @@
 ---
 id: opencv-opencv
-name: "opencv"
+name: opencv
 version_tracked: null
 artifact_type: library
 category: computer-vision
 subcategory: libraries
-description: "Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference"
-github_url: "https://github.com/opencv/opencv"
-license: "Apache-2.0"
+description: Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference
+github_url: https://github.com/opencv/opencv
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "opencv"
-tags: [vision]
+org_or_maintainer: opencv
+tags:
+  - vision
 maturity: production
 cost_model: open-source
-github_stars: 90994
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-09-28"
-docs_url: "https://docs.opencv.org"
+github_stars: 91329
+github_stars_last_30d: 335
+trending_score: 60
+last_commit: '2026-10-26'
+docs_url: https://docs.opencv.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The baseline computer-vision primitives library — image decode, filtering, geometry, and the DNN/objdetect modules most production vision pipelines still link before reaching a deep framework."
+  - The baseline computer-vision primitives library — image decode, filtering, geometry, and the DNN/objdetect modules most production vision pipelines still link before reaching a deep framework.
 best_for:
-  - "You are writing an ingest path that must decode a heterogeneous camera and file mix, normalize it, and hand clean frames to a model, and you need codec coverage without vendoring ffmpeg yourself."
-  - "2. You are debugging an inference pipeline where the model's recall is fine but the preprocessing is suspect, so you need to visualize resizing, color conversion, and affine alignment directly."
-  - "3. You are running classical detection or tracking - HOG cascades, ORB keypoint matching, optical flow, contour geometry - on CPU where a deep model would be wasted."
+  - You are writing an ingest path that must decode a heterogeneous camera and file mix, normalize it, and hand clean frames to a model, and you need codec coverage without vendoring ffmpeg yourself.
+  - 2. You are debugging an inference pipeline where the model's recall is fine but the preprocessing is suspect, so you need to visualize resizing, color conversion, and affine alignment directly.
+  - 3. You are running classical detection or tracking - HOG cascades, ORB keypoint matching, optical flow, contour geometry - on CPU where a deep model would be wasted.
 avoid_if:
-  - "You are building a training loop in Python and want autograd plus distributed training, since OpenCV is not a training framework and hands you tensors without gradients."
-  - "You need modern segmentation or transformer vision as a first-class model API, because the DNN module loads networks but offers none of the ergonomic model classes a training stack provides."
-  - "Your deployment target has no C++ toolchain and no ability to ship native wheels, because the Python bindings are still thin wrappers over compiled C++ rather than a pure-Python fallback."
+  - You are building a training loop in Python and want autograd plus distributed training, since OpenCV is not a training framework and hands you tensors without gradients.
+  - You need modern segmentation or transformer vision as a first-class model API, because the DNN module loads networks but offers none of the ergonomic model classes a training stack provides.
+  - Your deployment target has no C++ toolchain and no ability to ship native wheels, because the Python bindings are still thin wrappers over compiled C++ rather than a pure-Python fallback.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 90994 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 5 GitHub topics, homepage opencv.org. Backend and DNN-layer claims derive from official module documentation and release notes; no local build or benchmark was performed."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 90994 stars, Apache-2.0 license, C++ primary language, last commit 2026-09-28, 5 GitHub topics, homepage opencv.org. Backend and DNN-layer claims derive from official module documentation and release notes; no local build or benchmark was performed.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/opencv/opencv", "date": "2026-09-28", "description": "90,994 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/opencv/opencv
+    date: '2026-09-28'
+    description: 90,994 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

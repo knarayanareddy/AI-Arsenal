@@ -1,52 +1,62 @@
 ---
 id: togethercomputer-redpajama-data
-name: "RedPajama-Data"
+name: RedPajama-Data
 version_tracked: null
 artifact_type: dataset
 category: data-pipelines
 subcategory: datasets
-description: "Preparation pipeline and filter configurations for assembling open web-scale pretraining corpora, released alongside the RedPajama V1 and V2 datasets"
-github_url: "https://github.com/togethercomputer/RedPajama-Data"
-license: "Apache-2.0"
+description: Preparation pipeline and filter configurations for assembling open web-scale pretraining corpora, released alongside the RedPajama V1 and V2 datasets
+github_url: https://github.com/togethercomputer/RedPajama-Data
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "togethercomputer"
-tags: [training, data]
+org_or_maintainer: togethercomputer
+tags:
+  - training
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 4992
-github_stars_last_30d: 0
-trending_score: 27
-last_commit: "2026-06-03"
-docs_url: "https://github.com/togethercomputer/RedPajama-Data"
+github_stars: 4996
+github_stars_last_30d: 4
+trending_score: 33
+last_commit: '2026-06-03'
+docs_url: https://github.com/togethercomputer/RedPajama-Data
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Open pretraining corpus with the preparation and filtering code that produced it — referenceable provenance for teams that need to justify their own corpus filters."
+  - Open pretraining corpus with the preparation and filtering code that produced it — referenceable provenance for teams that need to justify their own corpus filters.
 best_for:
-  - "You are assembling a pretraining or midtraining corpus and need a documented, re-runnable filter pipeline rather than an opaque mixture."
-  - "You want to reproduce the RedPajama V2 training mixture to validate your own tooling against a known result."
-  - "You need reference code for large-scale dedup and heuristic quality filtering, which is the hardest part to write correctly from scratch."
+  - You are assembling a pretraining or midtraining corpus and need a documented, re-runnable filter pipeline rather than an opaque mixture.
+  - You want to reproduce the RedPajama V2 training mixture to validate your own tooling against a known result.
+  - You need reference code for large-scale dedup and heuristic quality filtering, which is the hardest part to write correctly from scratch.
 avoid_if:
-  - "You need only a few billion tokens for midtraining, where downloading a filtered subset or your own domain corpus is faster than running the pipeline."
-  - "You need the data itself ready to use, since this repository ships preparation code and configurations more than it ships a turnkey corpus."
-  - "You lack the storage and compute to run multi-terabyte passes, which is the scale the pipeline is written for."
+  - You need only a few billion tokens for midtraining, where downloading a filtered subset or your own domain corpus is faster than running the pipeline.
+  - You need the data itself ready to use, since this repository ships preparation code and configurations more than it ships a turnkey corpus.
+  - You lack the storage and compute to run multi-terabyte passes, which is the scale the pipeline is written for.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (4992), Apache-2.0 license, last commit 2026-06-03, and primary language Python were read from the GitHub API; the topics array is empty upstream and no separate homepage is declared. Source mix, dedup approach, and the V2 classifier and curriculum claims come from the official README and technical report; no corpus was downloaded and no filter was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (4992), Apache-2.0 license, last commit 2026-06-03, and primary language Python were read from the GitHub API; the topics array is empty upstream and no separate homepage is declared. Source mix, dedup approach, and the V2 classifier and curriculum claims come from the official README and technical report; no corpus was downloaded and no filter was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/togethercomputer/RedPajama-Data", "date": "2026-09-28", "description": "4,992 stars and last commit 2026-06-03 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/togethercomputer/RedPajama-Data
+    date: '2026-09-28'
+    description: 4,992 stars and last commit 2026-06-03 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

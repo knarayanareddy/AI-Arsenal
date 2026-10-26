@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A visual playground for agentic workflows with trace capture, evals, RAG tooling, and one-click deployment as an API"
-github_url: "https://github.com/PySpur-Dev/pyspur"
+description: A visual playground for agentic workflows with trace capture, evals, RAG tooling, and one-click deployment as an API
+github_url: https://github.com/PySpur-Dev/pyspur
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, tracing, evaluation]
+tags:
+  - agents
+  - tracing
+  - evaluation
 maturity: beta
 cost_model: freemium
-github_stars: 5796
+github_stars: 5794
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-06-29"
-docs_url: "https://docs.pyspur.dev/"
+trending_score: 23
+last_commit: '2026-06-29'
+docs_url: https://docs.pyspur.dev/
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Replaces terminal-based agent debugging with a graph view of each run plus a test-case set you iterate against."
+  - Replaces terminal-based agent debugging with a graph view of each run plus a test-case set you iterate against.
 best_for:
-  - "You are debugging why an agent took a wrong branch and need to see every node's input and output in one view."
-  - "You are building an agent against a fixed test set and need to compare two prompt versions side by side."
-  - "You are prototyping in Python and want a visual builder without surrendering the code you will actually ship."
+  - You are debugging why an agent took a wrong branch and need to see every node's input and output in one view.
+  - You are building an agent against a fixed test set and need to compare two prompt versions side by side.
+  - You are prototyping in Python and want a visual builder without surrendering the code you will actually ship.
 avoid_if:
-  - "You have a hard requirement that agent state stay in your own datastore, because the platform persists projects and traces."
-  - "You need a self-hosted deployment with no external calls, since the hosted cloud option is the easy path and is a paid dependency."
-  - "You are shipping a runtime-critical path, because this is an iteration environment first and a deploy target second."
+  - You have a hard requirement that agent state stay in your own datastore, because the platform persists projects and traces.
+  - You need a self-hosted deployment with no external calls, since the hosted cloud option is the easy path and is a paid dependency.
+  - You are shipping a runtime-critical path, because this is an iteration environment first and a deploy target second.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 5796, Apache-2.0, TypeScript, last commit 2026-06-29, topics. From README: four-step workflow, Python node files, pyspur init and serve --sqlite on 6080, human-in-the-loop, JSON Schema editor, RAG pipeline, integrations, traces, evals, 100+ providers, Python 3.11+. Cloud pricing unverified."
+enrichment_notes: 'API-verified: stars 5796, Apache-2.0, TypeScript, last commit 2026-06-29, topics. From README: four-step workflow, Python node files, pyspur init and serve --sqlite on 6080, human-in-the-loop, JSON Schema editor, RAG pipeline, integrations, traces, evals, 100+ providers, Python 3.11+. Cloud pricing unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

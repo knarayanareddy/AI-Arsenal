@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Bun-runtime personal agent whose gateway is the system of record, serving web, CLI, mobile, MCP and messaging clients over one API contract"
-github_url: "https://github.com/Open-Curiosity/gini-agent"
+description: Bun-runtime personal agent whose gateway is the system of record, serving web, CLI, mobile, MCP and messaging clients over one API contract
+github_url: https://github.com/Open-Curiosity/gini-agent
 license: MIT
 primary_language: TypeScript
-tags: [agents, routing, stateful, inference]
+tags:
+  - agents
+  - routing
+  - stateful
+  - inference
 maturity: alpha
 cost_model: open-source
-github_stars: 2353
+github_stars: 2170
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-07-18"
-docs_url: "https://github.com/Open-Curiosity/gini-agent/blob/main/docs/architecture-overview.md"
+trending_score: 23
+last_commit: '2026-07-18'
+docs_url: https://github.com/Open-Curiosity/gini-agent/blob/main/docs/architecture-overview.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Puts durable state, memory, approvals and audit in one runtime process, with inline interactive controls so approvals happen where the work is."
+  - Puts durable state, memory, approvals and audit in one runtime process, with inline interactive controls so approvals happen where the work is.
 best_for:
-  - "You run agents on a machine you do not sit in front of and you want to approve a risky step or hand over a login from your phone rather than walking back to the desktop."
-  - "You are handling credentials and do not want them pasted into a chat transcript, because Gini's secure field sends the value straight to the gateway without it reaching the model or the audit trail."
-  - "You want an agent that remembers and improves its own skills from task outcomes, with the daily review and a human gate before anything is promoted."
+  - You run agents on a machine you do not sit in front of and you want to approve a risky step or hand over a login from your phone rather than walking back to the desktop.
+  - You are handling credentials and do not want them pasted into a chat transcript, because Gini's secure field sends the value straight to the gateway without it reaching the model or the audit trail.
+  - You want an agent that remembers and improves its own skills from task outcomes, with the daily review and a human gate before anything is promoted.
 avoid_if:
-  - "You need the messaging bridges as a primary surface, because the README states the Telegram and Discord bridges exist to exercise the gateway contract and are not being actively worked on."
-  - "You are on Linux and need the service to survive reboots unattended, because autostart is currently macOS-only."
-  - "You need a stable release channel, because the project is young, documents an ADRs directory and a roadmap, and last committed in July 2026."
+  - You need the messaging bridges as a primary surface, because the README states the Telegram and Discord bridges exist to exercise the gateway contract and are not being actively worked on.
+  - You are on Linux and need the service to survive reboots unattended, because autostart is currently macOS-only.
+  - You need a stable release channel, because the project is young, documents an ADRs directory and a roadmap, and last committed in July 2026.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Gateway architecture, ports, disk layout, provider list, control types and install commands are read from the official README and docs index; the runtime was not installed or exercised."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Gateway architecture, ports, disk layout, provider list, control types and install commands are read from the official README and docs index; the runtime was not installed or exercised.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

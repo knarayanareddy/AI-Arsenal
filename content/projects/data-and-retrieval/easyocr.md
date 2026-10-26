@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "JaidedAI"
+org_or_maintainer: JaidedAI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 68
+trending_score: 20
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: easyocr
-name: "EasyOCR"
+name: EasyOCR
 artifact_type: library
 category: computer-vision
 subcategory: document-processing
-description: "Ready-to-use Python OCR package with 80-plus supported languages, a Gradio web demo, and a simple reader API"
-github_url: "https://github.com/JaidedAI/EasyOCR"
+description: Ready-to-use Python OCR package with 80-plus supported languages, a Gradio web demo, and a simple reader API
+github_url: https://github.com/JaidedAI/EasyOCR
 license: Apache-2.0
 primary_language: Python
-tags: [llm, evaluation]
+tags:
+  - llm
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 30037
-last_commit: "2025-12-05"
-docs_url: "https://www.jaided.ai/easyocr"
+github_stars: 30105
+last_commit: '2025-12-05'
+docs_url: https://www.jaided.ai/easyocr
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "A batteries-included Python OCR library that pairs a deep text detector with a recognizer for scene and document text."
-best_for: ["You need OCR working today across many scripts including Latin, Chinese, Arabic, Devanagari and Cyrillic, because that is the headline capability and the package is ready to use.", "You want a hosted demo or a Hugging Face Space without setting anything up, because the README points at a Gradio web demo and published Spaces.", "You are prototyping multilingual text extraction and want a two-line reader API before deciding whether you need a heavier pipeline."]
-avoid_if: ["You need handwritten text recognition today, because the roadmap section lists handwritten text support as still to come.", "You need document layout understanding, tables or reading order, because this is character recognition rather than a layout-aware document parser.", "You need active development pace, because the release notes stop at version 1.7.2 from September 2024 and the last commit in the repository is from December 2025."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-12-05 activity verified via the GitHub API on 2026-07-12. GPU strongly improves throughput."
+  - A batteries-included Python OCR library that pairs a deep text detector with a recognizer for scene and document text.
+best_for:
+  - You need OCR working today across many scripts including Latin, Chinese, Arabic, Devanagari and Cyrillic, because that is the headline capability and the package is ready to use.
+  - You want a hosted demo or a Hugging Face Space without setting anything up, because the README points at a Gradio web demo and published Spaces.
+  - You are prototyping multilingual text extraction and want a two-line reader API before deciding whether you need a heavier pipeline.
+avoid_if:
+  - You need handwritten text recognition today, because the roadmap section lists handwritten text support as still to come.
+  - You need document layout understanding, tables or reading order, because this is character recognition rather than a layout-aware document parser.
+  - You need active development pace, because the release notes stop at version 1.7.2 from September 2024 and the last commit in the repository is from December 2025.
+enrichment_notes: Repository, Apache-2.0 license, and 2025-12-05 activity verified via the GitHub API on 2026-07-12. GPU strongly improves throughput.
 ---
 
 ## Overview

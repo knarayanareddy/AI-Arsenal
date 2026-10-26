@@ -45,16 +45,16 @@ Before selecting an agent system:
 
 ### Most Popular
 
-- [OpenClaw](./openclaw.md) — ⭐ 388702
-- [ECC](./ecc.md) — ⭐ 268797
-- [DeepSeek Harness](./deepseek-harness.md) — ⭐ 260425
-- [Hermes Agent](./hermes-agent.md) — ⭐ 249768
-- [opencode](./anomalyco-opencode.md) — ⭐ 210538
-- [opencode](./opencode.md) — ⭐ 203399
-- [Browser Use](./browser-use.md) — ⭐ 116618
-- [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 82874
-- [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
-- [AnythingLLM](./anythingllm.md) — ⭐ 66555
+- [OpenClaw](./openclaw.md) — ⭐ 393130
+- [ECC](./ecc.md) — ⭐ 289453
+- [DeepSeek Harness](./deepseek-harness.md) — ⭐ 262384
+- [Hermes Agent](./hermes-agent.md) — ⭐ 257303
+- [opencode](./opencode.md) — ⭐ 221827
+- [opencode](./anomalyco-opencode.md) — ⭐ 221825
+- [Browser Use](./browser-use.md) — ⭐ 119191
+- [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 83504
+- [screenshot-to-code](./screenshot-to-code.md) — ⭐ 80737
+- [OpenMontage](./openmontage.md) — ⭐ 72093
 
 ### Browse All
 

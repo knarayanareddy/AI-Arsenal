@@ -1,52 +1,61 @@
 ---
 id: autogluon-autogluon
-name: "autogluon"
+name: autogluon
 version_tracked: null
 artifact_type: tool
 category: evaluation
 subcategory: tools
-description: "AutoML that fits, tunes, and ensembles models behind a few lines and returns a fitted predictor"
-github_url: "https://github.com/autogluon/autogluon"
-license: "Apache-2.0"
+description: AutoML that fits, tunes, and ensembles models behind a few lines and returns a fitted predictor
+github_url: https://github.com/autogluon/autogluon
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "autogluon"
-tags: [evaluation]
+org_or_maintainer: autogluon
+tags:
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 10751
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-28"
-docs_url: "https://auto.gluon.ai/"
+github_stars: 10797
+github_stars_last_30d: 46
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://auto.gluon.ai/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Automated AutoML that ensembles and stacks models with a small API, and the fastest way to get a defensible classical baseline before custom modelling."
+  - Automated AutoML that ensembles and stacks models with a small API, and the fastest way to get a defensible classical baseline before custom modelling.
 best_for:
-  - "You need a defensible baseline on a tabular problem this week and want the library to return a stacked ensemble rather than one model you have to trust."
-  - "You want to compare several model families on identical folds with a consistent interface, which is the comparison a leaderboard decision needs."
-  - "You are prototyping a text, image, or time-series task and want a strong default pipeline without assembling a feature and training recipe."
+  - You need a defensible baseline on a tabular problem this week and want the library to return a stacked ensemble rather than one model you have to trust.
+  - You want to compare several model families on identical folds with a consistent interface, which is the comparison a leaderboard decision needs.
+  - You are prototyping a text, image, or time-series task and want a strong default pipeline without assembling a feature and training recipe.
 avoid_if:
-  - "You need to control or explain the final model, since a stacked ensemble of bagged folds is the opposite of a single auditable artefact."
-  - "Your data is large and the budget is tight, since the default search trains many models across several families and a big dataset makes that expensive fast."
-  - "You are in production and need a stable, versioned training path, because the presets and the search space change between releases."
+  - You need to control or explain the final model, since a stacked ensemble of bagged folds is the opposite of a single auditable artefact.
+  - Your data is large and the budget is tight, since the default search trains many models across several families and a big dataset makes that expensive fast.
+  - You are in production and need a stable, versioned training path, because the presets and the search space change between releases.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (10751), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Preset names, bagging and stacking behaviour, SequentialPredictor, leaderboard(), SHAP, and the modality-specific predictors are from official docs; cost scaling and release-stability caveats are engineering judgement, not measured here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (10751), Apache-2.0 license, last commit 2026-09-28, Python as primary language and the topic list were API-verified. Preset names, bagging and stacking behaviour, SequentialPredictor, leaderboard(), SHAP, and the modality-specific predictors are from official docs; cost scaling and release-stability caveats are engineering judgement, not measured here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/autogluon/autogluon", "date": "2026-09-28", "description": "10,751 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/autogluon/autogluon
+    date: '2026-09-28'
+    description: 10,751 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

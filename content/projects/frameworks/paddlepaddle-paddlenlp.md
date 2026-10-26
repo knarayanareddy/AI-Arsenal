@@ -1,52 +1,63 @@
 ---
 id: paddlepaddle-paddlenlp
-name: "PaddleNLP"
+name: PaddleNLP
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "PaddlePaddle library of pretrained NLP and multimodal models with LLM and SLM training and serving paths"
-github_url: "https://github.com/PaddlePaddle/PaddleNLP"
-license: "Apache-2.0"
+description: PaddlePaddle library of pretrained NLP and multimodal models with LLM and SLM training and serving paths
+github_url: https://github.com/PaddlePaddle/PaddleNLP
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "PaddlePaddle"
-tags: [llm, multimodal]
+org_or_maintainer: PaddlePaddle
+tags:
+  - llm
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 12979
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-05-23"
-docs_url: "https://paddlenlp.readthedocs.io"
+github_stars: 12981
+github_stars_last_30d: 2
+trending_score: 33
+last_commit: '2026-05-23'
+docs_url: https://paddlenlp.readthedocs.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, multimodal]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "PaddlePaddle NLP and large-model library with a broad model zoo plus a unified LLM/SLM serving path, notable as a non-PyTorch full stack."
+  - PaddlePaddle NLP and large-model library with a broad model zoo plus a unified LLM/SLM serving path, notable as a non-PyTorch full stack.
 best_for:
-  - "You are deploying on Paddle Inference or a Paddle-supported accelerator and want pretrained language models already in that framework's format and serving path."
-  - "You need a broad task model zoo — classification, sequence labelling, question answering, semantic retrieval, document intelligence — without assembling each separately."
-  - "You want fine-tuning and serving recipes for a specific open LLM on Paddle, including compression options, in one place rather than across a conversion pipeline."
+  - You are deploying on Paddle Inference or a Paddle-supported accelerator and want pretrained language models already in that framework's format and serving path.
+  - You need a broad task model zoo — classification, sequence labelling, question answering, semantic retrieval, document intelligence — without assembling each separately.
+  - You want fine-tuning and serving recipes for a specific open LLM on Paddle, including compression options, in one place rather than across a conversion pipeline.
 avoid_if:
-  - "You are a PyTorch shop, since adopting this means adopting PaddlePaddle and accepting a thinner third-party tooling ecosystem."
-  - "You need the newest model releases fastest, since new open models typically land in transformers first and reach this library later."
-  - "You need a portable serving layer, where an ONNX export path plus onnxruntime is a smaller commitment than a full framework switch."
+  - You are a PyTorch shop, since adopting this means adopting PaddlePaddle and accepting a thinner third-party tooling ecosystem.
+  - You need the newest model releases fastest, since new open models typically land in transformers first and reach this library later.
+  - You need a portable serving layer, where an ONNX export path plus onnxruntime is a smaller commitment than a full framework switch.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (12979), Apache-2.0, last commit 2026-05-23, Python, and the topic list were API-verified. LLM collection classes, the inference library with HTTP and gRPC plus streaming, the compression utilities, retrieval components, and AutoModel factories come from the official docs. Framework-commitment and release-lag caveats are engineering judgement."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (12979), Apache-2.0, last commit 2026-05-23, Python, and the topic list were API-verified. LLM collection classes, the inference library with HTTP and gRPC plus streaming, the compression utilities, retrieval components, and AutoModel factories come from the official docs. Framework-commitment and release-lag caveats are engineering judgement.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/PaddlePaddle/PaddleNLP", "date": "2026-09-28", "description": "12,979 stars and last commit 2026-05-23 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/PaddlePaddle/PaddleNLP
+    date: '2026-09-28'
+    description: 12,979 stars and last commit 2026-05-23 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

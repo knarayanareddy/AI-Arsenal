@@ -1,50 +1,70 @@
 ---
 id: mini-swe-agent
-name: "mini-swe-agent"
+name: mini-swe-agent
 version_tracked: null
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution"
-github_url: "https://github.com/SWE-agent/mini-swe-agent"
-license: "MIT"
+description: 'Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution'
+github_url: https://github.com/SWE-agent/mini-swe-agent
+license: MIT
 primary_language: Python
-org_or_maintainer: "SWE-agent (Princeton & Stanford)"
-tags: [code-gen, agents, tool-use, docker]
+org_or_maintainer: SWE-agent (Princeton & Stanford)
+tags:
+  - code-gen
+  - agents
+  - tool-use
+  - docker
 maturity: production
 cost_model: open-source
-github_stars: 6933
-github_stars_last_30d: 0
+github_stars: 8854
+github_stars_last_30d: 1921
 trending_score: 55
-last_commit: "2026-09-03"
-docs_url: "https://mini-swe-agent.com/latest/"
+last_commit: '2026-10-19'
+docs_url: https://mini-swe-agent.com/latest/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2405.15793"
+paper_url: https://arxiv.org/abs/2405.15793
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, research-origin, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - research-origin
+  - production-proven
 ecosystem_role:
-  - "The minimal-scaffold counterweight in the coding-agent lane: roughly a hundred lines of agent logic, bash as the sole tool, and a message history that is identical to the trajectory it sends to the model."
+  - 'The minimal-scaffold counterweight in the coding-agent lane: roughly a hundred lines of agent logic, bash as the sole tool, and a message history that is identical to the trajectory it sends to the model.'
 best_for:
-  - "You need a legible baseline agent whose entire behaviour you can read in one file, so that measured differences are attributable to the model rather than to scaffolding"
-  - "You are generating or replaying trajectories for training and want the recorded history to be exactly what the model saw, with no scaffold-side transformation in between"
+  - You need a legible baseline agent whose entire behaviour you can read in one file, so that measured differences are attributable to the model rather than to scaffolding
+  - You are generating or replaying trajectories for training and want the recorded history to be exactly what the model saw, with no scaffold-side transformation in between
 avoid_if:
-  - "You want rich editor affordances, multi-file planning UI, or a curated tool registry — the design deliberately has none, and adding them is a rewrite rather than a configuration change"
-  - "You need a persistent interactive shell across steps; each action runs independently, so shell state does not survive between commands by design"
+  - You want rich editor affordances, multi-file planning UI, or a curated tool registry — the design deliberately has none, and adding them is a rewrite rather than a configuration change
+  - You need a persistent interactive shell across steps; each action runs independently, so shell state does not survive between commands by design
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [openhands, cline]
-integrates_with: [litellm, e2b]
+alternatives:
+  - openhands
+  - cline
+integrates_with:
+  - litellm
+  - e2b
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (6,933), forks (964), licence (MIT), language (Python), created 2025-06-28, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The >74% SWE-bench Verified figure and the list of adopting organisations are maintainer-reported in the README, not independently reproduced here. production-proven rests on those named adopters rather than on verification by this catalogue."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (6,933), forks (964), licence (MIT), language (Python), created 2025-06-28, last commit (2026-09-03) verified via the GitHub API on 2026-09-03. The >74% SWE-bench Verified figure and the list of adopting organisations are maintainer-reported in the README, not independently reproduced here. production-proven rests on those named adopters rather than on verification by this catalogue.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/SWE-agent/mini-swe-agent", "date": "2026-09-03", "description": "6,933 stars on GitHub as of 2026-09-03 (GitHub API); created 2025-06-28 by the team behind SWE-bench"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/SWE-agent/mini-swe-agent
+    date: '2026-09-03'
+    description: 6,933 stars on GitHub as of 2026-09-03 (GitHub API); created 2025-06-28 by the team behind SWE-bench
 featured: false
 status: active
 ---

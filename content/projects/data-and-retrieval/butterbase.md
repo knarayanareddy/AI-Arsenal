@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A Postgres-backed backend-as-a-service with auth, storage, functions, an LLM gateway, and an MCP server for agents"
-github_url: "https://github.com/butterbase-ai/butterbase"
+description: A Postgres-backed backend-as-a-service with auth, storage, functions, an LLM gateway, and an MCP server for agents
+github_url: https://github.com/butterbase-ai/butterbase
 license: Apache-2.0
 primary_language: TypeScript
-tags: [data, tool-use, routing]
+tags:
+  - data
+  - tool-use
+  - routing
 maturity: beta
 cost_model: self-hostable
-github_stars: 3690
+github_stars: 3031
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-27"
-docs_url: "https://butterbase.ai"
+trending_score: 23
+last_commit: '2026-10-26'
+docs_url: https://butterbase.ai
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Puts the database, the agent-facing tool surface, and the AI gateway in one self-hosted deployment instead of three vendors."
+  - Puts the database, the agent-facing tool surface, and the AI gateway in one self-hosted deployment instead of three vendors.
 best_for:
-  - "You are building a SaaS product and want Postgres with row-level security plus agent-manageable auth without assembling Supabase-style pieces yourself."
-  - "You are shipping an agent that needs to act on your backend through tools rather than bespoke glue code calling your REST API."
-  - "You are self-hosting for data residency reasons and need storage, KV, and functions alongside your primary database."
+  - You are building a SaaS product and want Postgres with row-level security plus agent-manageable auth without assembling Supabase-style pieces yourself.
+  - You are shipping an agent that needs to act on your backend through tools rather than bespoke glue code calling your REST API.
+  - You are self-hosting for data residency reasons and need storage, KV, and functions alongside your primary database.
 avoid_if:
-  - "You are on a serverless edge platform without a container runtime, because functions run on the Deno runtime inside this stack."
-  - "You need a battle-tested multi-region control plane, since this is a self-hosted deployment you operate yourself."
-  - "You are expecting Supabase feature parity, because the row-level security and auth surface is narrower than the incumbent's."
+  - You are on a serverless edge platform without a container runtime, because functions run on the Deno runtime inside this stack.
+  - You need a battle-tested multi-region control plane, since this is a self-hosted deployment you operate yourself.
+  - You are expecting Supabase feature parity, because the row-level security and auth surface is narrower than the incumbent's.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 3690, Apache-2.0, TypeScript, last commit 2026-09-27, topics. From README: route paths, Deno functions, Durable Objects, edge SSR, KV in v0.2.0, AI gateway, RAG, MCP server, Supabase alternative framing. SETUP.md and runtime behavior not read."
+enrichment_notes: 'API-verified: stars 3690, Apache-2.0, TypeScript, last commit 2026-09-27, topics. From README: route paths, Deno functions, Durable Objects, edge SSR, KV in v0.2.0, AI gateway, RAG, MCP server, Supabase alternative framing. SETUP.md and runtime behavior not read.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

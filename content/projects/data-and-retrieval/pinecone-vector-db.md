@@ -5,19 +5,23 @@ version_tracked: null
 artifact_type: service
 category: rag
 subcategory: vector-databases
-description: "Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API"
-github_url: "https://github.com/pinecone-io/python-sdk"
+description: Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API
+github_url: https://github.com/pinecone-io/python-sdk
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [retrieval, cloud, data, rag]
+tags:
+  - retrieval
+  - cloud
+  - data
+  - rag
 maturity: production
 cost_model: usage-based
-github_stars: 452
-github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-09-19"
-docs_url: "https://docs.pinecone.io"
+github_stars: 454
+github_stars_last_30d: 2
+trending_score: 13
+last_commit: '2026-10-23'
+docs_url: https://docs.pinecone.io
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,13 +32,23 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - Fully managed, closed-source vector database — the most established managed vector-DB vendor, prioritizing zero-ops production reliability
-best_for: ["You want a managed vector database and would rather not size, shard or operate one, because the index and its deployment target are both declared in a single call.", "You have an existing codebase migrating from the older SDK, because the README documents the v10 change where create and configure moved from spec and dimension to schema and deployment, with a migration guide.", "You run an async service, because a first-class async client exists whose index call is a coroutine and whose handle is a context manager."]
-avoid_if: ["You need the data to stay inside your own infrastructure, because this is a client for a hosted service and there is no self-hosted mode in this repository.", "You want exact recall or synchronous visibility after an upsert, because the README states plainly that upserts apply asynchronously and a document may not be visible to the next search immediately.", "You need a small local index, because a hosted service is the wrong cost and operational shape for thousands of vectors."]
+best_for:
+  - You want a managed vector database and would rather not size, shard or operate one, because the index and its deployment target are both declared in a single call.
+  - You have an existing codebase migrating from the older SDK, because the README documents the v10 change where create and configure moved from spec and dimension to schema and deployment, with a migration guide.
+  - You run an async service, because a first-class async client exists whose index call is a coroutine and whose handle is a context manager.
+avoid_if:
+  - You need the data to stay inside your own infrastructure, because this is a client for a hosted service and there is no self-hosted mode in this repository.
+  - You want exact recall or synchronous visibility after an upsert, because the README states plainly that upserts apply asynchronously and a document may not be visible to the next search immediately.
+  - You need a small local index, because a hosted service is the wrong cost and operational shape for thousands of vectors.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -42,12 +56,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Pinecone was one of the earliest and most widely-cited managed vector databases in the initial RAG wave (2023-2024) and remains frequently referenced in production RAG architecture discussions, though as a closed-source product its internal architecture is less independently verifiable than the open-source alternatives in this catalog.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.pinecone.io/blog/serverless-architecture/","date":"2025-11-04","description":"Pinecone case study: Gong's production 'Smart Trackers' system uses Pinecone to store and search embedded conversation sentences at scale"}
+  - source: conference
+    url: https://www.pinecone.io/blog/serverless-architecture/
+    date: '2025-11-04'
+    description: 'Pinecone case study: Gong''s production ''Smart Trackers'' system uses Pinecone to store and search embedded conversation sentences at scale'
 featured: false
 status: active
 ---

@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 24
+trending_score: 17
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: Daft
 artifact_type: framework
 category: data-pipelines
 subcategory: libraries
-description: "Python-native distributed data engine in Rust that processes images, audio, video and structured data together with LLM and embedding operations"
-github_url: "https://github.com/Eventual-Inc/Daft"
+description: Python-native distributed data engine in Rust that processes images, audio, video and structured data together with LLM and embedding operations
+github_url: https://github.com/Eventual-Inc/Daft
 license: Apache-2.0
 primary_language: Rust
-tags: [multimodal, embeddings]
+tags:
+  - multimodal
+  - embeddings
 maturity: beta
 cost_model: open-source
-github_stars: 5789
-last_commit: "2026-09-26"
-docs_url: "https://docs.daft.ai/"
+github_stars: 5813
+last_commit: '2026-10-23'
+docs_url: https://docs.daft.ai/
 phase: data-and-retrieval
 domain:
   - language
@@ -52,8 +54,14 @@ health_signals:
   - actively-maintained
 ecosystem_role:
   - A dataframe/dataflow engine for multimodal AI preparation, UDF execution, and distributed data processing.
-best_for: ["You are building an ETL or scoring pipeline over a mix of structured records and media files, because Daft processes images, audio, video and embeddings alongside structured data in one framework.", "You want inference to run inside your data pipeline rather than as a separate batch job, because prompts, embedding generation and classification are built-in operations using OpenAI, Transformers or a custom model.", "You are in Python and want distributed execution without a JVM, since Daft is Python at the API and Rust under the hood, scaling to Ray or Kubernetes."]
-avoid_if: ["Your workload is purely relational SQL analytics, because Daft is built for AI and multimodal data rather than as a SQL engine replacement.", "You cannot add a dependency that shells into Rust binaries, because the performance story depends on the compiled engine rather than being a pure-Python library.", "You need a fully mature production history across many distributed deployments, because the project is young and its scaling story is built on Ray or Kubernetes rather than its own scheduler."]
+best_for:
+  - You are building an ETL or scoring pipeline over a mix of structured records and media files, because Daft processes images, audio, video and embeddings alongside structured data in one framework.
+  - You want inference to run inside your data pipeline rather than as a separate batch job, because prompts, embedding generation and classification are built-in operations using OpenAI, Transformers or a custom model.
+  - You are in Python and want distributed execution without a JVM, since Daft is Python at the API and Rust under the hood, scaling to Ray or Kubernetes.
+avoid_if:
+  - Your workload is purely relational SQL analytics, because Daft is built for AI and multimodal data rather than as a SQL engine replacement.
+  - You cannot add a dependency that shells into Rust binaries, because the performance story depends on the compiled engine rather than being a pure-Python library.
+  - You need a fully mature production history across many distributed deployments, because the project is young and its scaling story is built on Ray or Kubernetes rather than its own scheduler.
 enrichment_notes: Official repository, Apache-2.0 license, Rust implementation, and 2026-07-10 activity were reviewed on 2026-07-12. Multimodal performance and production fit remain draft.
 ---
 

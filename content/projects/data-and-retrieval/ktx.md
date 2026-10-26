@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents"
-github_url: "https://github.com/Kaelio/ktx"
+description: An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents
+github_url: https://github.com/Kaelio/ktx
 license: Apache-2.0
 primary_language: TypeScript
-tags: [data, tool-use]
+tags:
+  - data
+  - tool-use
 maturity: beta
 cost_model: self-hostable
-github_stars: 1603
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-11"
-docs_url: "https://docs.kaelio.com/ktx/docs/"
+github_stars: 1624
+github_stars_last_30d: 21
+trending_score: 25
+last_commit: '2026-10-22'
+docs_url: https://docs.kaelio.com/ktx/docs/
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Replaces hand-maintained semantic-layer YAML with an ingestion engine that derives joinable columns and flags contradictions."
+  - Replaces hand-maintained semantic-layer YAML with an ingestion engine that derives joinable columns and flags contradictions.
 best_for:
-  - "You are letting a coding agent query your warehouse and need it constrained to approved metric definitions rather than free-form SQL."
-  - "You are tired of maintaining a semantic layer by hand and want metric logic plus business knowledge derived from the stack you already have."
-  - "You need chasm and fan traps resolved automatically, because these are join-graph problems a static YAML layer will not catch for you."
+  - You are letting a coding agent query your warehouse and need it constrained to approved metric definitions rather than free-form SQL.
+  - You are tired of maintaining a semantic layer by hand and want metric logic plus business knowledge derived from the stack you already have.
+  - You need chasm and fan traps resolved automatically, because these are join-graph problems a static YAML layer will not catch for you.
 avoid_if:
-  - "You need write access to the warehouse, because the serving path compiles read-only SQL by design."
-  - "You are on a warehouse ktx cannot connect to, since ingestion depends on the supported source connectors."
-  - "You cannot let an agent query production data at all, since the whole purpose is to grant scoped read access with approved semantics."
+  - You need write access to the warehouse, because the serving path compiles read-only SQL by design.
+  - You are on a warehouse ktx cannot connect to, since ingestion depends on the supported source connectors.
+  - You cannot let an agent query production data at all, since the whole purpose is to grant scoped read access with approved semantics.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1603, Apache-2.0, TypeScript, last commit 2026-09-11, topics, homepage. From README: ingestion and serving flows, context-engine stages, wiki Markdown and semantic-layer YAML outputs, join graph with chasm/fan trap resolution, MCP serving, no extra billing. Connectors untested."
+enrichment_notes: 'API-verified: stars 1603, Apache-2.0, TypeScript, last commit 2026-09-11, topics, homepage. From README: ingestion and serving flows, context-engine stages, wiki Markdown and semantic-layer YAML outputs, join graph with chasm/fan trap resolution, MCP serving, no extra billing. Connectors untested.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

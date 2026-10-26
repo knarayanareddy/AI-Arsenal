@@ -1,52 +1,64 @@
 ---
 id: oobabooga-textgen
-name: "textgen"
+name: textgen
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: tools
-description: "AGPL-3.0 desktop and local-server front end for self-hosted LLMs with vision, tool calling, and OpenAI-compatible APIs"
-github_url: "https://github.com/oobabooga/textgen"
-license: "AGPL-3.0"
+description: AGPL-3.0 desktop and local-server front end for self-hosted LLMs with vision, tool calling, and OpenAI-compatible APIs
+github_url: https://github.com/oobabooga/textgen
+license: AGPL-3.0
 primary_language: Python
-org_or_maintainer: "oobabooga"
-tags: [local, llm, quantization, self-hosted]
+org_or_maintainer: oobabooga
+tags:
+  - local
+  - llm
+  - quantization
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 47720
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-08-17"
+github_stars: 47724
+github_stars_last_30d: 4
+trending_score: 33
+last_commit: '2026-08-17'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [community-driven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Desktop and local-server front end for self-hosted LLMs with vision, tool-calling, and OpenAI-compatible endpoints — the reference for evaluating quantizations on consumer hardware."
+  - Desktop and local-server front end for self-hosted LLMs with vision, tool-calling, and OpenAI-compatible endpoints — the reference for evaluating quantizations on consumer hardware.
 best_for:
-  - "You have several GGUFs or quantized checkpoints of the same model and want to A/B them in one interface with identical prompts and sampling settings."
-  - "You want an OpenAI-compatible endpoint for a local model on a workstation or a home server, so a desktop app can sit in front of the same backend other clients call."
-  - "You are testing vision-language checkpoints and need a UI that sends an image with the prompt without writing a multimodal client."
+  - You have several GGUFs or quantized checkpoints of the same model and want to A/B them in one interface with identical prompts and sampling settings.
+  - You want an OpenAI-compatible endpoint for a local model on a workstation or a home server, so a desktop app can sit in front of the same backend other clients call.
+  - You are testing vision-language checkpoints and need a UI that sends an image with the prompt without writing a multimodal client.
 avoid_if:
-  - "You need to ship a modified version inside a closed commercial product, because AGPL-3.0 obligations attach to networked use of the work."
-  - "You need multi-user serving with auth, quotas, and request routing, because this is a local single-process tool rather than a server tier."
-  - "You need a tokenization-accuracy-driven serving stack, because its documented purpose is comparing and chatting with local models, not maximizing throughput on GPUs."
+  - You need to ship a modified version inside a closed commercial product, because AGPL-3.0 obligations attach to networked use of the work.
+  - You need multi-user serving with auth, quotas, and request routing, because this is a local single-process tool rather than a server tier.
+  - You need a tokenization-accuracy-driven serving stack, because its documented purpose is comparing and chatting with local models, not maximizing throughput on GPUs.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 47720 stars, AGPL-3.0 license, Python primary language, last commit 2026-08-17, empty topics, no homepage. Supported backends, API endpoints, and launcher options come from the repository README and wiki; no model was loaded in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 47720 stars, AGPL-3.0 license, Python primary language, last commit 2026-08-17, empty topics, no homepage. Supported backends, API endpoints, and launcher options come from the repository README and wiki; no model was loaded in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/oobabooga/textgen", "date": "2026-09-28", "description": "47,720 stars and last commit 2026-08-17 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/oobabooga/textgen
+    date: '2026-09-28'
+    description: 47,720 stars and last commit 2026-08-17 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

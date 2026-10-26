@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A self-hostable connector gateway exposing 1500-plus SaaS providers and 10000-plus actions through SDK, CLI, MCP, and OpenAPI"
-github_url: "https://github.com/oomol-lab/open-connector"
+description: A self-hostable connector gateway exposing 1500-plus SaaS providers and 10000-plus actions through SDK, CLI, MCP, and OpenAPI
+github_url: https://github.com/oomol-lab/open-connector
 license: Apache-2.0
 primary_language: TypeScript
-tags: [data, security, tool-use, routing]
+tags:
+  - data
+  - security
+  - tool-use
+  - routing
 maturity: beta
 cost_model: self-hostable
-github_stars: 5911
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://oomol.com"
+github_stars: 6093
+github_stars_last_30d: 182
+trending_score: 38
+last_commit: '2026-10-26'
+docs_url: https://oomol.com
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Owns OAuth credentials and scopes in one inspectable runtime instead of scattering them across every agent integration."
+  - Owns OAuth credentials and scopes in one inspectable runtime instead of scattering them across every agent integration.
 best_for:
-  - "You are an agent that must act inside SaaS tools and need OAuth with scoped tokens held somewhere other than the agent's context."
-  - "You are building integrations for many tenants and need one auditable store for credentials, scopes, policies, and run logs."
-  - "You want one contract that works from TypeScript code, a CLI, an MCP host, or a plain HTTP client without rewriting each."
+  - You are an agent that must act inside SaaS tools and need OAuth with scoped tokens held somewhere other than the agent's context.
+  - You are building integrations for many tenants and need one auditable store for credentials, scopes, policies, and run logs.
+  - You want one contract that works from TypeScript code, a CLI, an MCP host, or a plain HTTP client without rewriting each.
 avoid_if:
-  - "You only need one or two API integrations, where hand-written OAuth and a small SDK call will be less work."
-  - "You cannot operate OAuth applications yourself, since self-hosting makes you responsible for redirect URIs, secrets, and consent flows."
-  - "You need guaranteed uptime of a provider's connector, because action executors are per-provider and their coverage varies."
+  - You only need one or two API integrations, where hand-written OAuth and a small SDK call will be less work.
+  - You cannot operate OAuth applications yourself, since self-hosting makes you responsible for redirect URIs, secrets, and consent flows.
+  - You need guaranteed uptime of a provider's connector, because action executors are per-provider and their coverage varies.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 5911, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: 1500+ providers, 10000+ actions, four credential types, lazy-loaded executors, SDK/oo CLI/MCP/OpenAPI surfaces, SQLite or PostgreSQL, Node.js 22+. Dynamic badge counts not fetched."
+enrichment_notes: 'API-verified: stars 5911, Apache-2.0, TypeScript, last commit 2026-09-28, topics, homepage. From README: 1500+ providers, 10000+ actions, four credential types, lazy-loaded executors, SDK/oo CLI/MCP/OpenAPI surfaces, SQLite or PostgreSQL, Node.js 22+. Dynamic badge counts not fetched.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

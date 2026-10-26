@@ -46,16 +46,16 @@ Before selecting a framework:
 
 ### Most Popular
 
-- [tensorflow](./tensorflow-tensorflow.md) — ⭐ 200583
-- [AutoGPT](./autogpt.md) — ⭐ 184931
-- [transformers](./huggingface-transformers.md) — ⭐ 166755
-- [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164197
-- [LangChain](./langchain.md) — ⭐ 148417
-- [ponytail](./ponytail.md) — ⭐ 147381
-- [Dify](./dify.md) — ⭐ 145081
-- [ComfyUI](./comfyui.md) — ⭐ 142561
-- [ComfyUI](./comfy-org-comfyui.md) — ⭐ 135314
-- [caveman](./caveman.md) — ⭐ 108165
+- [tensorflow](./tensorflow-tensorflow.md) — ⭐ 201266
+- [AutoGPT](./autogpt.md) — ⭐ 187762
+- [ponytail](./ponytail.md) — ⭐ 176834
+- [transformers](./huggingface-transformers.md) — ⭐ 168195
+- [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 165149
+- [Dify](./dify.md) — ⭐ 159604
+- [LangChain](./langchain.md) — ⭐ 148493
+- [ComfyUI](./comfy-org-comfyui.md) — ⭐ 143175
+- [ComfyUI](./comfyui.md) — ⭐ 143175
+- [caveman](./caveman.md) — ⭐ 115218
 
 ### Browse All
 

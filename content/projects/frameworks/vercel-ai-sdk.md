@@ -1,32 +1,40 @@
 ---
 id: vercel-ai-sdk
-name: "Vercel AI SDK"
+name: Vercel AI SDK
 version_tracked: null
 artifact_type: library
 category: agents
 subcategory: agent-frameworks
-description: "TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte"
-github_url: "https://github.com/vercel/ai"
-license: "Apache-2.0"
+description: 'TypeScript toolkit for LLM apps: one provider-agnostic API for text, structured output, tool loops and agents, plus streaming UI hooks for React, Vue and Svelte'
+github_url: https://github.com/vercel/ai
+license: Apache-2.0
 primary_language: TypeScript
-org_or_maintainer: "Vercel"
-tags: [agents, structured-output, tool-use]
+org_or_maintainer: Vercel
+tags:
+  - agents
+  - structured-output
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 27506
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-10-25"
-docs_url: "https://ai-sdk.dev/docs/introduction"
+github_stars: 27523
+github_stars_last_30d: 17
+trending_score: 16
+last_commit: '2026-10-26'
+docs_url: https://ai-sdk.dev/docs/introduction
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The TypeScript half of the LLM toolchain: `generateText`, `streamText`, `Output.object` and `ToolLoopAgent` behind one provider interface, with UI hooks that turn a token stream into React or Vue state without hand-written parsing"
+  - 'The TypeScript half of the LLM toolchain: `generateText`, `streamText`, `Output.object` and `ToolLoopAgent` behind one provider interface, with UI hooks that turn a token stream into React or Vue state without hand-written parsing'
 best_for:
   - Your application is TypeScript and the model is the least stable part of it — a model string like `anthropic/claude-opus-5.5` can be swapped for another provider without touching call sites
   - You need typed structured output from a model — `Output.object` with a Zod schema gives a validated result and a typed error path instead of regex over prose
@@ -37,13 +45,17 @@ avoid_if:
   - You want the default gateway route for compliance reasons — the convenience path proxies through Vercel's gateway, so direct provider packages are the option when traffic must not leave your account
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langchain, mastra, openai-agents-sdk, tanstack-ai]
+alternatives:
+  - langchain
+  - mastra
+  - openai-agents-sdk
+  - tanstack-ai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 27,506 stars, 1,480 open issues, last push 2026-10-25, TypeScript. README confirms Node 22+, `npm install ai`, Vercel AI Gateway as the default provider path, `Output.object` with Zod, `ToolLoopAgent`, `createAgentUIStreamResponse`, `@ai-sdk/react` useChat, and `npx skills add vercel/ai` for coding agents."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 27,506 stars, 1,480 open issues, last push 2026-10-25, TypeScript. README confirms Node 22+, `npm install ai`, Vercel AI Gateway as the default provider path, `Output.object` with Zod, `ToolLoopAgent`, `createAgentUIStreamResponse`, `@ai-sdk/react` useChat, and `npx skills add vercel/ai` for coding agents.'
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

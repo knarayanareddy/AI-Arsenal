@@ -6,39 +6,44 @@ artifact_type: library
 category: agents
 subcategory: autonomous
 description: Python harness that attaches a coding agent to your real Chrome over an editable CDP websocket and lets the agent write reusable helpers
-github_url: "https://github.com/browser-use/browser-harness"
+github_url: https://github.com/browser-use/browser-harness
 license: MIT
 primary_language: Python
-tags: [tool-use, code-gen]
+tags:
+  - tool-use
+  - code-gen
 maturity: beta
 cost_model: open-source
-github_stars: 18182
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-27"
-docs_url: "https://github.com/browser-use/browser-harness/blob/main/install.md"
+github_stars: 18633
+github_stars_last_30d: 451
+trending_score: 59
+last_commit: '2026-10-25'
+docs_url: https://github.com/browser-use/browser-harness/blob/main/install.md
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Operates the browser you are already logged into, and lets the agent accumulate domain helpers instead of re-solving the same site each run."
+  - Operates the browser you are already logged into, and lets the agent accumulate domain helpers instead of re-solving the same site each run.
 best_for:
-  - "You are already signed into several sites in your own Chrome profile and you need an agent to act with those live sessions rather than a fresh automated browser."
-  - "You keep re-explaining the same website workflow to agents and you want the agent to write a helper for it once and reuse it next time."
-  - "You want your existing coding agent (Claude Code or Codex) to drive the browser without you writing a Playwright script for every task."
+  - You are already signed into several sites in your own Chrome profile and you need an agent to act with those live sessions rather than a fresh automated browser.
+  - You keep re-explaining the same website workflow to agents and you want the agent to write a helper for it once and reuse it next time.
+  - You want your existing coding agent (Claude Code or Codex) to drive the browser without you writing a Playwright script for every task.
 avoid_if:
-  - "You need many browsers running in parallel with proxies and CAPTCHA solving, because the project explicitly routes that scale case to the paid Browser Use Cloud."
-  - "You cannot enable Chrome remote debugging or do not want an agent attached to your personal browsing session, because setup requires ticking a box at chrome://inspect/#remote-debugging."
-  - "You need a guarantee that the agent cannot modify its own tooling, because the design has the agent writing files into its workspace by design."
+  - You need many browsers running in parallel with proxies and CAPTCHA solving, because the project explicitly routes that scale case to the paid Browser Use Cloud.
+  - You cannot enable Chrome remote debugging or do not want an agent attached to your personal browsing session, because setup requires ticking a box at chrome://inspect/#remote-debugging.
+  - You need a guarantee that the agent cannot modify its own tooling, because the design has the agent writing files into its workspace by design.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and open-issue count came from the GitHub API. Setup prompt, install command, protected-source design, MCP server name and the Cloud scaling path are read from the official README and docs/MCP.md; the CDP connection was not tested here."
+enrichment_notes: Stars, license, last commit, primary language, topics and open-issue count came from the GitHub API. Setup prompt, install command, protected-source design, MCP server name and the Cloud scaling path are read from the official README and docs/MCP.md; the CDP connection was not tested here.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

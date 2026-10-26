@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "dataelement"
+org_or_maintainer: dataelement
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 65
+trending_score: 20
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: bisheng
-name: "BISHENG"
+name: BISHENG
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "Enterprise LLM devops platform pairing a flowchart workflow canvas with RAG pipelines, agent tools and model management in one console"
-github_url: "https://github.com/dataelement/bisheng"
+description: Enterprise LLM devops platform pairing a flowchart workflow canvas with RAG pipelines, agent tools and model management in one console
+github_url: https://github.com/dataelement/bisheng
 license: Apache-2.0
 primary_language: Python
-tags: [rag, retrieval]
+tags:
+  - rag
+  - retrieval
 maturity: beta
 cost_model: open-source
-github_stars: 12014
-last_commit: "2026-09-28"
-docs_url: "http://www.bisheng.ai"
+github_stars: 12079
+last_commit: '2026-10-26'
+docs_url: http://www.bisheng.ai
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An enterprise-oriented platform that unifies workflow building, RAG, agents, and model governance behind one system."
-best_for: ["You are an enterprise platform team in China or a Chinese-market deployment and you need a single console for RAG, workflow, fine-tuning and prompt observability rather than five stitched tools.", "You are a domain expert who cannot write orchestration code but needs loops, parallelism and human-in-the-loop checkpoints visualised as a flowchart instead of code.", "You need on-premise model management that includes a private model catalogue alongside OpenAI, Claude, Gemini and MiniMax in the same provider list."]
-avoid_if: ["You want a small library you can embed in an existing Python service, because this is a full application platform with its own runtime, database and UI.", "You have no capacity to operate a stateful server deployment, because self-hosting means owning the whole stack rather than importing a package.", "You are outside the Chinese-language-first ecosystem and need English-first documentation, because the canonical README and linked design wiki are Chinese-language."]
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Enterprise focus; expect operational overhead to self-host."
+  - An enterprise-oriented platform that unifies workflow building, RAG, agents, and model governance behind one system.
+best_for:
+  - You are an enterprise platform team in China or a Chinese-market deployment and you need a single console for RAG, workflow, fine-tuning and prompt observability rather than five stitched tools.
+  - You are a domain expert who cannot write orchestration code but needs loops, parallelism and human-in-the-loop checkpoints visualised as a flowchart instead of code.
+  - You need on-premise model management that includes a private model catalogue alongside OpenAI, Claude, Gemini and MiniMax in the same provider list.
+avoid_if:
+  - You want a small library you can embed in an existing Python service, because this is a full application platform with its own runtime, database and UI.
+  - You have no capacity to operate a stateful server deployment, because self-hosting means owning the whole stack rather than importing a package.
+  - You are outside the Chinese-language-first ecosystem and need English-first documentation, because the canonical README and linked design wiki are Chinese-language.
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Enterprise focus; expect operational overhead to self-host.
 ---
 
 ## Overview

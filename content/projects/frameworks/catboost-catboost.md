@@ -1,52 +1,61 @@
 ---
 id: catboost-catboost
-name: "catboost"
+name: catboost
 version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: libraries
-description: "Gradient-boosting library with native categorical features and ordered target statistics"
-github_url: "https://github.com/catboost/catboost"
-license: "Apache-2.0"
+description: Gradient-boosting library with native categorical features and ordered target statistics
+github_url: https://github.com/catboost/catboost
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "catboost"
-tags: [evaluation]
+org_or_maintainer: catboost
+tags:
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 9119
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-09-28"
-docs_url: "https://catboost.ai"
+github_stars: 9174
+github_stars_last_30d: 55
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://catboost.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gradient-boosting library with native categorical handling and ordered target statistics, which removes most encoding bugs on mixed-feature ranking problems."
+  - Gradient-boosting library with native categorical handling and ordered target statistics, which removes most encoding bugs on mixed-feature ranking problems.
 best_for:
-  - "You have categorical features — user, product, country, device — that carry much of the signal and integer-encoding them is distorting the model."
-  - "You are building a click-through or recommendation model where target encoding leakage is a real risk and ordered statistics give a leakage-resistant alternative."
-  - "You want a competitive GBDT baseline with minimal feature engineering, since native categoricals mean almost no preprocessing before training."
+  - You have categorical features — user, product, country, device — that carry much of the signal and integer-encoding them is distorting the model.
+  - You are building a click-through or recommendation model where target encoding leakage is a real risk and ordered statistics give a leakage-resistant alternative.
+  - You want a competitive GBDT baseline with minimal feature engineering, since native categoricals mean almost no preprocessing before training.
 avoid_if:
-  - "Your data is almost entirely numeric, where LightGBM or XGBoost are often marginally faster and equally accurate with a much wider tuning literature."
-  - "You need the widest set of objectives, since the set is smaller than XGBoost's and some ranking and custom-objective workflows are less flexible."
-  - "You are on a heavily constrained device, because categorical handling adds overhead and model size relative to a plain numeric booster."
+  - Your data is almost entirely numeric, where LightGBM or XGBoost are often marginally faster and equally accurate with a much wider tuning literature.
+  - You need the widest set of objectives, since the set is smaller than XGBoost's and some ranking and custom-objective workflows are less flexible.
+  - You are on a heavily constrained device, because categorical handling adds overhead and model size relative to a plain numeric booster.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (9119), Apache-2.0 license, last commit 2026-09-28, C++ as primary language and the topic list were API-verified. Symmetric oblivious trees, ordered target statistics, MaxCatToOnehot, max_ctr_complexity, and the objective set come from the official docs; performance and memory caveats reflect documented behaviour and engineering judgement, not measurements run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (9119), Apache-2.0 license, last commit 2026-09-28, C++ as primary language and the topic list were API-verified. Symmetric oblivious trees, ordered target statistics, MaxCatToOnehot, max_ctr_complexity, and the objective set come from the official docs; performance and memory caveats reflect documented behaviour and engineering judgement, not measurements run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/catboost/catboost", "date": "2026-09-28", "description": "9,119 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/catboost/catboost
+    date: '2026-09-28'
+    description: 9,119 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

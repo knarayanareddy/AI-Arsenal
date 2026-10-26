@@ -1,52 +1,63 @@
 ---
 id: google-flax
-name: "flax"
+name: flax
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "JAX neural network library whose Linen and nnx module systems keep parameters as explicit pytrees for jit-compatible training"
-github_url: "https://github.com/google/flax"
-license: "Apache-2.0"
+description: JAX neural network library whose Linen and nnx module systems keep parameters as explicit pytrees for jit-compatible training
+github_url: https://github.com/google/flax
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "google"
-tags: [jax, research, training]
+org_or_maintainer: google
+tags:
+  - jax
+  - research
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 7332
-github_stars_last_30d: 0
-trending_score: 31
-last_commit: "2026-09-25"
-docs_url: "https://flax.readthedocs.io"
+github_stars: 7357
+github_stars_last_30d: 25
+trending_score: 35
+last_commit: '2026-10-23'
+docs_url: https://flax.readthedocs.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "JAX neural-network library built around explicit parameter pytree management, which is why research code that must be jit-compiled end to end uses it instead of eager frameworks."
+  - JAX neural-network library built around explicit parameter pytree management, which is why research code that must be jit-compiled end to end uses it instead of eager frameworks.
 best_for:
-  - "You are running vision or audio research on TPU and need the full training step, optimizer included, to trace and compile end to end."
-  - "You are implementing per-example parameters, hypernetworks, or ensembles and need functional module transforms that PyTorch makes awkward."
-  - "You want one codebase to run single-device, pmapped across shards, and vmapped over a batch with no code duplication."
+  - You are running vision or audio research on TPU and need the full training step, optimizer included, to trace and compile end to end.
+  - You are implementing per-example parameters, hypernetworks, or ensembles and need functional module transforms that PyTorch makes awkward.
+  - You want one codebase to run single-device, pmapped across shards, and vmapped over a batch with no code duplication.
 avoid_if:
-  - "You need a pretrained checkpoint with a maintained PyTorch port, since the practical model zoo in Flax is a fraction of the PyTorch one."
-  - "Your team is new to JAX and the work is dynamic-shape or heavily stateful, because the static-shape discipline fights that directly."
-  - "You are shipping a service and want mature fused custom ops, where PyTorch and TensorRT paths are still the better-trodden ones."
+  - You need a pretrained checkpoint with a maintained PyTorch port, since the practical model zoo in Flax is a fraction of the PyTorch one.
+  - Your team is new to JAX and the work is dynamic-shape or heavily stateful, because the static-shape discipline fights that directly.
+  - You are shipping a service and want mature fused custom ops, where PyTorch and TensorRT paths are still the better-trodden ones.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (7332), Apache-2.0 license, last commit 2026-09-25, primary language Python, and the jax topic were read from the GitHub API. The Linen/nnx split, pytree parameters, class registry JSON serialization, and initializers come from the official README and hosted docs; nothing was installed or run hands-on."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (7332), Apache-2.0 license, last commit 2026-09-25, primary language Python, and the jax topic were read from the GitHub API. The Linen/nnx split, pytree parameters, class registry JSON serialization, and initializers come from the official README and hosted docs; nothing was installed or run hands-on.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/google/flax", "date": "2026-09-28", "description": "7,332 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/google/flax
+    date: '2026-09-28'
+    description: 7,332 stars and last commit 2026-09-25 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

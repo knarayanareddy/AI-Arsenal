@@ -1,52 +1,62 @@
 ---
 id: zenml-io-zenml
-name: "zenml"
+name: zenml
 version_tracked: null
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "ML pipeline abstraction that keeps pipeline code portable across orchestrators through a stack of swappable integrations"
-github_url: "https://github.com/zenml-io/zenml"
-license: "Apache-2.0"
+description: ML pipeline abstraction that keeps pipeline code portable across orchestrators through a stack of swappable integrations
+github_url: https://github.com/zenml-io/zenml
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "zenml-io"
-tags: [data, orchestration]
+org_or_maintainer: zenml-io
+tags:
+  - data
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 5594
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://docs.zenml.io"
+github_stars: 5628
+github_stars_last_30d: 34
+trending_score: 36
+last_commit: '2026-10-26'
+docs_url: https://docs.zenml.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "ML pipeline abstraction layer that ports pipeline code across orchestrators, and increasingly the place where agent steps become first-class pipeline artifacts."
+  - ML pipeline abstraction layer that ports pipeline code across orchestrators, and increasingly the place where agent steps become first-class pipeline artifacts.
 best_for:
-  - "You have a pipeline that must run locally today and on a managed orchestrator in six months, and you want that switch to be configuration."
-  - "You keep a shared library of steps used by several teams and need a single place to version, cache, and wrap them."
-  - "You are moving agent workflows into scheduled production jobs and want the agent runs tracked as pipeline artifacts with lineage."
+  - You have a pipeline that must run locally today and on a managed orchestrator in six months, and you want that switch to be configuration.
+  - You keep a shared library of steps used by several teams and need a single place to version, cache, and wrap them.
+  - You are moving agent workflows into scheduled production jobs and want the agent runs tracked as pipeline artifacts with lineage.
 avoid_if:
-  - "You have a single simple pipeline on a single backend, where the abstraction layer and its YAML are more config than orchestration is worth."
-  - "You need orchestrator-specific features like dynamic fan-out that the stack does not implement, forcing you to drop into raw backend code anyway."
-  - "Your team has no interest in a self-hosted control plane, because the server is where all the operational cost and most of the complexity lives."
+  - You have a single simple pipeline on a single backend, where the abstraction layer and its YAML are more config than orchestration is worth.
+  - You need orchestrator-specific features like dynamic fan-out that the stack does not implement, forcing you to drop into raw backend code anyway.
+  - Your team has no interest in a self-hosted control plane, because the server is where all the operational cost and most of the complexity lives.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (5594), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all 20 topics were read from the GitHub API. Stack components, materializers, step caching, and agent-step integration come from the official docs; no pipeline was run and no stack was deployed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (5594), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all 20 topics were read from the GitHub API. Stack components, materializers, step caching, and agent-step integration come from the official docs; no pipeline was run and no stack was deployed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/zenml-io/zenml", "date": "2026-09-28", "description": "5,594 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/zenml-io/zenml
+    date: '2026-09-28'
+    description: 5,594 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

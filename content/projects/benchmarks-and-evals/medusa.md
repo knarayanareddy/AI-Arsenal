@@ -5,43 +5,45 @@ version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials"
-github_url: "https://github.com/Pantheon-Security/medusa"
+description: A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials
+github_url: https://github.com/Pantheon-Security/medusa
 license: AGPL-3.0
 primary_language: Python
-tags: [security, community-favorite]
+tags:
+  - security
+  - community-favorite
 maturity: beta
 cost_model: open-source
-github_stars: 993
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-08-10"
-docs_url: "https://pantheonsecurity.io"
+github_stars: 1007
+github_stars_last_30d: 14
+trending_score: 24
+last_commit: '2026-08-10'
+docs_url: https://pantheonsecurity.io
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Detects the AI-specific compromise paths that traditional SAST rule sets were never written to look for."
+  - Detects the AI-specific compromise paths that traditional SAST rule sets were never written to look for.
 best_for:
-  - "You are cloning repositories and need to know whether a repo ships weaponized editor configs before you install anything from it."
-  - "You are auditing an MCP server or agent codebase and need rules for prompt injection, tool poisoning, and agent-specific weaknesses."
-  - "You need a CI gate with no toolchain to install, since one pip install gives you a scanner with parallel execution."
+  - You are cloning repositories and need to know whether a repo ships weaponized editor configs before you install anything from it.
+  - You are auditing an MCP server or agent codebase and need rules for prompt injection, tool poisoning, and agent-specific weaknesses.
+  - You need a CI gate with no toolchain to install, since one pip install gives you a scanner with parallel execution.
 avoid_if:
-  - "You cannot accept AGPL-3.0 in your pipeline, because the copyleft applies to the scanner you run in CI.
-"
-  - "You need coverage breadth across every language, since native rules are strongest in the languages the project ships and optional for others.
-"
-  - "You are looking for a fix engine, because the tool reports findings rather than patching code.
-"
+  - 'You cannot accept AGPL-3.0 in your pipeline, because the copyleft applies to the scanner you run in CI. '
+  - 'You need coverage breadth across every language, since native rules are strongest in the languages the project ships and optional for others. '
+  - 'You are looking for a fix engine, because the tool reports findings rather than patching code. '
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 993, AGPL-3.0, Python, last commit 2026-08-10, topics, homepage. From README: 40,000+ patterns, scan --git, secrets scan with 21 issuer types and y/n/s/a/q purge, 200 CVE detections, 28+ editor config types, v2026.7 features, content-hash cache, SARIF output. Precision unmeasured."
+enrichment_notes: 'API-verified: stars 993, AGPL-3.0, Python, last commit 2026-08-10, topics, homepage. From README: 40,000+ patterns, scan --git, secrets scan with 21 issuer types and y/n/s/a/q purge, 200 CVE detections, 28+ editor config types, v2026.7 features, content-hash cache, SARIF output. Precision unmeasured.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

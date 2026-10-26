@@ -6,18 +6,22 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Hugging Face's Rust-and-Python LLM server, now archived after entering maintenance mode in December 2025
-github_url: "https://github.com/huggingface/text-generation-inference"
+github_url: https://github.com/huggingface/text-generation-inference
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Hugging Face"
-tags: [llm, inference, streaming, batching]
+org_or_maintainer: Hugging Face
+tags:
+  - llm
+  - inference
+  - streaming
+  - batching
 maturity: production
 cost_model: open-source
 github_stars: 10882
-github_stars_last_30d: 0
-trending_score: 10
-last_commit: "2026-03-21"
-docs_url: "https://huggingface.co/docs/text-generation-inference"
+github_stars_last_30d: 19
+trending_score: 17
+last_commit: '2026-03-21'
+docs_url: https://huggingface.co/docs/text-generation-inference
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,33 +29,48 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [HF, GPTQ, AWQ]
+supported_formats:
+  - HF
+  - GPTQ
+  - AWQ
 api_compatible: openai
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - org-backed
 ecosystem_role:
-  - "The server that made continuous batching and Hugging Face-native serving the default: TGI forced optimized engines to adopt `transformers` model architectures, and the engines that inherited that idea are where the code goes now"
+  - 'The server that made continuous batching and Hugging Face-native serving the default: TGI forced optimized engines to adopt `transformers` model architectures, and the engines that inherited that idea are where the code goes now'
 best_for:
   - You maintain a running TGI deployment and need to know precisely how long it will keep working, which fixes are still accepted, and what migration target matches your hardware
   - You are reading inference-server history and want the design TGI introduced — token streaming, continuous batching, tensor parallelism behind an OpenAI-compatible HTTP and gRPC surface
 avoid_if:
-  - "You are choosing a serving engine today: the repository is archived, only minor bug fixes and documentation changes were ever going to be accepted from December 2025, and no new model architectures will be added"
+  - 'You are choosing a serving engine today: the repository is archived, only minor bug fixes and documentation changes were ever going to be accepted from December 2025, and no new model architectures will be added'
   - You need a model released after early 2026 — the loader will not know the architecture, and there is no upstream to add it
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [vllm, sglang, llama-cpp, vllm-mlx]
-integrates_with: [hugging-face-hub]
+alternatives:
+  - vllm
+  - sglang
+  - llama-cpp
+  - vllm-mlx
+integrates_with:
+  - hugging-face-hub
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: github.com/huggingface/text-generation-inference is archived (last push 2026-03-21, 10,882 stars, 324 open issues). README carries the maintenance-mode caution block naming vLLM, SGLang, llama.cpp and MLX as the engines it recommends. HF docs record the maintenance-mode date as 2025-12-11."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: github.com/huggingface/text-generation-inference is archived (last push 2026-03-21, 10,882 stars, 324 open issues). README carries the maintenance-mode caution block naming vLLM, SGLang, llama.cpp and MLX as the engines it recommends. HF docs record the maintenance-mode date as 2025-12-11.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://huggingface.co/docs/inference-endpoints/en/engines/tgi","date":"2025-12-11","description":"Hugging Face's own documentation confirms TGI entered maintenance mode on 12/11/2025, redirecting new inference-engine investment to vLLM, SGLang, llama.cpp, and MLX"}
+  - source: hackernews
+    url: https://huggingface.co/docs/inference-endpoints/en/engines/tgi
+    date: '2025-12-11'
+    description: Hugging Face's own documentation confirms TGI entered maintenance mode on 12/11/2025, redirecting new inference-engine investment to vLLM, SGLang, llama.cpp, and MLX
 featured: false
 status: archived
 ---

@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 1679
+trending_score: 55
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -29,16 +29,18 @@ name: AgentScope
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Apache-2.0 agent framework pairing composable SDK building blocks with a batteries-included FastAPI agent service, web UI, channels and scheduling"
-github_url: "https://github.com/agentscope-ai/agentscope"
+description: Apache-2.0 agent framework pairing composable SDK building blocks with a batteries-included FastAPI agent service, web UI, channels and scheduling
+github_url: https://github.com/agentscope-ai/agentscope
 license: Apache-2.0
 primary_language: Python
-tags: [retrieval, agents]
+tags:
+  - retrieval
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 32512
-last_commit: "2026-09-28"
-docs_url: "https://docs.agentscope.io/"
+github_stars: 34191
+last_commit: '2026-10-26'
+docs_url: https://docs.agentscope.io/
 phase: framework
 domain:
   - language
@@ -52,8 +54,14 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A Python agent framework that makes agent interaction, teams, tools, workspaces, and service operations inspectable.
-best_for: ["You need to ship an agent as a multi-user product with session isolation and a web interface, and would rather not build tenancy, persistence and a frontend before writing any agent logic.", "You are deploying an agent into an existing team chat surface such as Feishu, Lark or Discord and want channel routing and message plumbing handled rather than hand-built.", "You want the model's own reasoning to stay in charge of the loop, because the project's stated design position is to supply building blocks and hooks rather than impose an orchestration that constrains stronger models."]
-avoid_if: ["You want a small importable library with no server footprint, because the centre of gravity here is the agent service, its storage backends and its web UI, and running any of that is a deployment decision.", "You need a fixed, opinionated graph guaranteeing the same execution path for every request, because the framework's premise is leaving orchestration to the model, which helps capability and hurts determinism.", "You are on Python 3.10 or earlier, because the package requires 3.11 or higher and the constraint is stated at the top of the install section."]
+best_for:
+  - You need to ship an agent as a multi-user product with session isolation and a web interface, and would rather not build tenancy, persistence and a frontend before writing any agent logic.
+  - You are deploying an agent into an existing team chat surface such as Feishu, Lark or Discord and want channel routing and message plumbing handled rather than hand-built.
+  - You want the model's own reasoning to stay in charge of the loop, because the project's stated design position is to supply building blocks and hooks rather than impose an orchestration that constrains stronger models.
+avoid_if:
+  - You want a small importable library with no server footprint, because the centre of gravity here is the agent service, its storage backends and its web UI, and running any of that is a deployment decision.
+  - You need a fixed, opinionated graph guaranteeing the same execution path for every request, because the framework's premise is leaving orchestration to the model, which helps capability and hurts determinism.
+  - You are on Python 3.10 or earlier, because the package requires 3.11 or higher and the constraint is stated at the top of the install section.
 enrichment_notes: Official repository, Apache-2.0 license, and 2026-07-10 activity were reviewed on 2026-07-11. Cross-provider behavior and production fit remain draft.
 ---
 

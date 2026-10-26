@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "TypeScript terminal coding agent built around DeepSeek V4's prefix cache, keeping the system prefix and tool table byte-stable"
-github_url: "https://github.com/tigicion/dao-code"
+description: TypeScript terminal coding agent built around DeepSeek V4's prefix cache, keeping the system prefix and tool table byte-stable
+github_url: https://github.com/tigicion/dao-code
 license: MIT
 primary_language: TypeScript
-tags: [code-gen, llm, caching, efficiency]
+tags:
+  - code-gen
+  - llm
+  - caching
+  - efficiency
 maturity: beta
 cost_model: open-source
-github_stars: 1083
+github_stars: 788
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-22"
-docs_url: "https://github.com/tigicion/dao-code#readme"
+trending_score: 22
+last_commit: '2026-10-26'
+docs_url: https://github.com/tigicion/dao-code#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns DeepSeek's cheap cache-hit pricing into a structural advantage by engineering for byte-stable prefixes instead of trimming prompts."
+  - Turns DeepSeek's cheap cache-hit pricing into a structural advantage by engineering for byte-stable prefixes instead of trimming prompts.
 best_for:
-  - "You are paying per token for DeepSeek and you want the cache hit rate to stay above 90% across a long session rather than degrading as context grows."
-  - "You want cross-session memory and self-correction to be nearly free because reflection and memory run on cache-reusing forks of the same prefix."
-  - "You are in mainland China or on a restricted network and want a register-and-go pay-as-you-go model instead of an account-gated subscription."
+  - You are paying per token for DeepSeek and you want the cache hit rate to stay above 90% across a long session rather than degrading as context grows.
+  - You want cross-session memory and self-correction to be nearly free because reflection and memory run on cache-reusing forks of the same prefix.
+  - You are in mainland China or on a restricted network and want a register-and-go pay-as-you-go model instead of an account-gated subscription.
 avoid_if:
-  - "You need a frontier model for the task, because the whole design optimises a mid-tier model's economics rather than raising its capability ceiling."
-  - "You are billed somewhere the cache-hit multiplier is not extreme, because the cost advantage is a direct function of that specific price ratio."
-  - "You want a multi-provider harness, because this one is deliberately DeepSeek-V4-specific and treats that focus as the feature."
+  - You need a frontier model for the task, because the whole design optimises a mid-tier model's economics rather than raising its capability ceiling.
+  - You are billed somewhere the cache-hit multiplier is not extreme, because the cost advantage is a direct function of that specific price ratio.
+  - You want a multi-provider harness, because this one is deliberately DeepSeek-V4-specific and treats that focus as the feature.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Cost table, hit rates, cache-hit price ratio, fork mechanism and install command are read from the official README; the cost ledger was not re-run or independently reproduced."
+enrichment_notes: Stars, license, last commit, primary language, topics and issue count came from the GitHub API. Cost table, hit rates, cache-hit price ratio, fork mechanism and install command are read from the official README; the cost ledger was not re-run or independently reproduced.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

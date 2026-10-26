@@ -5,43 +5,65 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: platforms
-description: "All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction"
-github_url: "https://github.com/Mintplex-Labs/anything-llm"
+description: All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
+github_url: https://github.com/Mintplex-Labs/anything-llm
 license: MIT
 primary_language: Other
 org_or_maintainer: Mintplex-Labs
-tags: [self-hosted, agents]
+tags:
+  - self-hosted
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 66555
+github_stars: 67584
 github_stars_last_30d: 0
-trending_score: 68
-last_commit: "2026-09-28"
-docs_url: "https://anythingllm.com/"
+trending_score: 15
+last_commit: '2026-10-25'
+docs_url: https://anythingllm.com/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The leading \"RAG in a box\" application: packages the entire document-chat pipeline (ingestion, chunking, embedding, vector storage, retrieval, citation) behind a no-code UI with pluggable LLMs and vector DBs — the fastest path from \"folder of PDFs\" to grounded chat"
-best_for: ["You want a private document chat running locally today and you do not want to assemble a vector store, an embedding model and a front end before your first question.", "You need shared, multi-user access to the same workspace with a permission model, because multi-user support is a headline capability rather than something you bolt on.", "You want agents operating over your documents, since AI Agents are part of the product surface and not a separate framework you integrate."]
-avoid_if: ["You need to embed retrieval inside your own product, because this is a self-hosted application you run rather than a library you import.", "You need a fine-grained retrieval architecture you control, because the vector store, chunking and embedding choices are product configuration rather than a layer you extend.", "You are comparing agent frameworks on control over the loop, since the agent surface here is a workspace feature rather than a programmable harness."]
+  - 'The leading "RAG in a box" application: packages the entire document-chat pipeline (ingestion, chunking, embedding, vector storage, retrieval, citation) behind a no-code UI with pluggable LLMs and vector DBs — the fastest path from "folder of PDFs" to grounded chat'
+best_for:
+  - You want a private document chat running locally today and you do not want to assemble a vector store, an embedding model and a front end before your first question.
+  - You need shared, multi-user access to the same workspace with a permission model, because multi-user support is a headline capability rather than something you bolt on.
+  - You want agents operating over your documents, since AI Agents are part of the product surface and not a separate framework you integrate.
+avoid_if:
+  - You need to embed retrieval inside your own product, because this is a self-hosted application you run rather than a library you import.
+  - You need a fine-grained retrieval architecture you control, because the vector store, chunking and embedding choices are product configuration rather than a layer you extend.
+  - You are comparing agent frameworks on control over the loop, since the agent surface here is a workspace feature rather than a programmable harness.
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, onyx]
-integrates_with: [ollama, chroma, qdrant]
+alternatives:
+  - open-webui
+  - onyx
+integrates_with:
+  - ollama
+  - chroma
+  - qdrant
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (62.9k), MIT license, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Component-swap claims verified against official docs; retrieval quality not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/Mintplex-Labs/anything-llm","date":"2026-07-08","description":"62.9k stars, MIT, active development"}
+  - source: github-trending
+    url: https://github.com/Mintplex-Labs/anything-llm
+    date: '2026-07-08'
+    description: 62.9k stars, MIT, active development
 featured: false
 status: active
 ---

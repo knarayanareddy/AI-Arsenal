@@ -5,30 +5,47 @@ version_tracked: null
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "OpenAI's Contrastive Language-Image Pre-training model, MIT-licensed, aligning image and text encoders into one embedding space for zero-shot classification"
-github_url: "https://github.com/openai/CLIP"
+description: OpenAI's Contrastive Language-Image Pre-training model, MIT-licensed, aligning image and text encoders into one embedding space for zero-shot classification
+github_url: https://github.com/openai/CLIP
 license: MIT
 primary_language: Other
 org_or_maintainer: openai
-tags: [multimodal, embeddings, vision, foundational]
+tags:
+  - multimodal
+  - embeddings
+  - vision
+  - foundational
 maturity: production
 cost_model: open-source
-github_stars: 34382
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-03-25"
-docs_url: "https://github.com/openai/CLIP"
+github_stars: 34528
+github_stars_last_30d: 146
+trending_score: 27
+last_commit: '2026-03-25'
+docs_url: https://github.com/openai/CLIP
 demo_url: null
-paper_url: "https://arxiv.org/abs/2103.00020"
+paper_url: https://arxiv.org/abs/2103.00020
 paper_id: null
 phase: foundation-model
-domain: [vision, multimodal]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, production-proven, research-origin]
+domain:
+  - vision
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - production-proven
+  - research-origin
 ecosystem_role:
-  - "The foundational primitive of open multimodality: contrastive pretraining on 400M image-text pairs produced a shared embedding space that made zero-shot vision classification real — and CLIP-family encoders became the standard vision front-end inside LLaVA-class VLMs and the text conditioning inside Stable Diffusion"
-best_for: ["You are labelling or filtering images with a set of text prompts and you want zero-shot classification rather than collecting and training a labelled set for each category.", "You are building image search over a catalogue and you want text and images embedded in the same vector space so a query string retrieves relevant pictures.", "You need a baseline to beat, because the reported result is that CLIP matches a ResNet50 on ImageNet zero-shot without using any of the 1.28M labelled examples."]
-avoid_if: ["You need fine-grained distinctions between visually similar classes, because the contrastive objective trades that specificity for broad semantic coverage of a 400M-pair training corpus.", "You need a modern multimodal reasoning model, because this is a dual encoder from 2021 with no instruction following, no chain of thought and a fixed 77-token context on the text side.", "You are on Apple Silicon or Windows and want a one-command install, because the documented path is a git install on top of a specific PyTorch 1.7.1 and CUDA 11.0 combination."]
+  - 'The foundational primitive of open multimodality: contrastive pretraining on 400M image-text pairs produced a shared embedding space that made zero-shot vision classification real — and CLIP-family encoders became the standard vision front-end inside LLaVA-class VLMs and the text conditioning inside Stable Diffusion'
+best_for:
+  - You are labelling or filtering images with a set of text prompts and you want zero-shot classification rather than collecting and training a labelled set for each category.
+  - You are building image search over a catalogue and you want text and images embedded in the same vector space so a query string retrieves relevant pictures.
+  - You need a baseline to beat, because the reported result is that CLIP matches a ResNet50 on ImageNet zero-shot without using any of the 1.28M labelled examples.
+avoid_if:
+  - You need fine-grained distinctions between visually similar classes, because the contrastive objective trades that specificity for broad semantic coverage of a 400M-pair training corpus.
+  - You need a modern multimodal reasoning model, because this is a dual encoder from 2021 with no instruction following, no chain of thought and a fixed 77-token context on the text side.
+  - You are on Apple Silicon or Windows and want a one-command install, because the documented path is a git install on top of a specific PyTorch 1.7.1 and CUDA 11.0 combination.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -36,12 +53,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (33.9k), MIT, last push 2026-03-25 verified via the GitHub API on 2026-07-08. The repo is a stable reference release (2021 weights); currency lives in successors, which the entry states plainly. Paper is Radford et al. 2021.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/openai/CLIP","date":"2026-07-08","description":"33.9k stars; canonical repo of the 2021 model that started open multimodality"}
+  - source: github-trending
+    url: https://github.com/openai/CLIP
+    date: '2026-07-08'
+    description: 33.9k stars; canonical repo of the 2021 model that started open multimodality
 featured: false
 status: active
 ---

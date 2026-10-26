@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "AgentScope-based personal assistant with three-layer memory, kernel sandboxing, sub-agents and channels from DingTalk to Discord"
-github_url: "https://github.com/agentscope-ai/QwenPaw"
+description: AgentScope-based personal assistant with three-layer memory, kernel sandboxing, sub-agents and channels from DingTalk to Discord
+github_url: https://github.com/agentscope-ai/QwenPaw
 license: Apache-2.0
 primary_language: TypeScript
-tags: [agents, memory, security, voice]
+tags:
+  - agents
+  - memory
+  - security
+  - voice
 maturity: production
 cost_model: open-source
-github_stars: 35321
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://qwenpaw.agentscope.io/"
+github_stars: 36345
+github_stars_last_30d: 1024
+trending_score: 63
+last_commit: '2026-10-26'
+docs_url: https://qwenpaw.agentscope.io/
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Combines a self-evolving Markdown memory layer with real OS-level sandboxing and a broad IM channel set in one deployable assistant."
+  - Combines a self-evolving Markdown memory layer with real OS-level sandboxing and a broad IM channel set in one deployable assistant.
 best_for:
-  - "You want a personal assistant you can reach over DingTalk, Lark, WeChat, Discord, Telegram, iMessage or QQ from one instance rather than one bot per platform."
-  - "You need memory that stays readable and editable, because conversations and resources become Markdown you can read, search and correct."
-  - "You need it to work without an API key for basic use, because the bundled QwenPaw Local runtime ships 2B, 4B and 9B QwenPaw-Flash models trained for agent tasks."
+  - You want a personal assistant you can reach over DingTalk, Lark, WeChat, Discord, Telegram, iMessage or QQ from one instance rather than one bot per platform.
+  - You need memory that stays readable and editable, because conversations and resources become Markdown you can read, search and correct.
+  - You need it to work without an API key for basic use, because the bundled QwenPaw Local runtime ships 2B, 4B and 9B QwenPaw-Flash models trained for agent tasks.
 avoid_if:
-  - "You are on Python 3.10 or 3.14+, because the supported range is 3.11 up to but not including 3.14."
-  - "You want a minimal install, because this is a full agent OS with sandboxing, plugin marketplaces, sub-agents, scheduled tasks and multiple frontends."
-  - "You object to first-run telemetry, because an anonymous usage ping is sent once per version and is auto-accepted when you run init with defaults."
+  - You are on Python 3.10 or 3.14+, because the supported range is 3.11 up to but not including 3.14.
+  - You want a minimal install, because this is a full agent OS with sandboxing, plugin marketplaces, sub-agents, scheduled tasks and multiple frontends.
+  - You object to first-run telemetry, because an anonymous usage ping is sent once per version and is auto-accepted when you run init with defaults.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Feature pillars, channel list, memory layers, guard components, Python version range, telemetry scope and local model sizes are read from the official README and release notes; the assistant was not installed."
+enrichment_notes: Stars, license (Apache-2.0), last commit, primary language, topics and issue count came from the GitHub API. Feature pillars, channel list, memory layers, guard components, Python version range, telemetry scope and local model sizes are read from the official README and release notes; the assistant was not installed.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

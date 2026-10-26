@@ -1,52 +1,62 @@
 ---
 id: pytorch-audio
-name: "audio"
+name: audio
 version_tracked: null
 artifact_type: library
 category: voice-audio
 subcategory: libraries
-description: "TorchAudio's audio I/O, transforms, and metrics, covering backends, effects, and functional DSP for PyTorch pipelines"
-github_url: "https://github.com/pytorch/audio"
-license: "BSD-2-Clause"
+description: TorchAudio's audio I/O, transforms, and metrics, covering backends, effects, and functional DSP for PyTorch pipelines
+github_url: https://github.com/pytorch/audio
+license: BSD-2-Clause
 primary_language: Python
-org_or_maintainer: "pytorch"
-tags: [voice, pytorch]
+org_or_maintainer: pytorch
+tags:
+  - voice
+  - pytorch
 maturity: production
 cost_model: open-source
-github_stars: 2949
-github_stars_last_30d: 0
-trending_score: 28
-last_commit: "2026-09-28"
-docs_url: "https://pytorch.org/audio"
+github_stars: 2960
+github_stars_last_30d: 11
+trending_score: 34
+last_commit: '2026-10-26'
+docs_url: https://pytorch.org/audio
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [audio]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Torch audio I/O, transforms, and metrics, supplying the waveform, spectrogram, and resampling utilities that voice pipelines share across model implementations."
+  - Torch audio I/O, transforms, and metrics, supplying the waveform, spectrogram, and resampling utilities that voice pipelines share across model implementations.
 best_for:
-  - "You need load, resample, and spectrogram operations that stay differentiable and run inside a PyTorch training loop."
-  - "You want waveform augmentations such as gain, fade, and polarity inversion implemented as batched tensor ops rather than a Python loop."
-  - "You are migrating a pipeline from the legacy torchaudio backend and need the current functional and transform API mapped out."
+  - You need load, resample, and spectrogram operations that stay differentiable and run inside a PyTorch training loop.
+  - You want waveform augmentations such as gain, fade, and polarity inversion implemented as batched tensor ops rather than a Python loop.
+  - You are migrating a pipeline from the legacy torchaudio backend and need the current functional and transform API mapped out.
 avoid_if:
-  - "You need a decoder torchaudio does not ship, since backend availability follows whichever audio library you already installed."
-  - "You want state-of-the-art speech model inference, where a dedicated ASR or TTS package gives you checkpoints rather than signal processing."
-  - "Your preprocessing is entirely file-format handling, which belongs in an ffmpeg wrapper rather than a tensor library."
+  - You need a decoder torchaudio does not ship, since backend availability follows whichever audio library you already installed.
+  - You want state-of-the-art speech model inference, where a dedicated ASR or TTS package gives you checkpoints rather than signal processing.
+  - Your preprocessing is entirely file-format handling, which belongs in an ffmpeg wrapper rather than a tensor library.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (2949), BSD-2-Clause license, last commit 2026-09-28, primary language Python, and all seven topics were read from the GitHub API. Backend dispatch, the functional versus transformations split, the learnable separation and VAD components, and the multi-resolution STFT loss come from the official docs; no audio was processed and no backend probed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (2949), BSD-2-Clause license, last commit 2026-09-28, primary language Python, and all seven topics were read from the GitHub API. Backend dispatch, the functional versus transformations split, the learnable separation and VAD components, and the multi-resolution STFT loss come from the official docs; no audio was processed and no backend probed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/pytorch/audio", "date": "2026-09-28", "description": "2,949 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/pytorch/audio
+    date: '2026-09-28'
+    description: 2,949 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

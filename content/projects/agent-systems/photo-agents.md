@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: agents
 subcategory: autonomous
-description: "Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients"
-github_url: "https://github.com/jmerelnyc/Photo-agents"
+description: Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients
+github_url: https://github.com/jmerelnyc/Photo-agents
 license: MIT
 primary_language: Python
-tags: [memory, tool-use, research, pytorch]
+tags:
+  - memory
+  - tool-use
+  - research
+  - pytorch
 maturity: beta
 cost_model: open-source
-github_stars: 674
+github_stars: 666
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-07-03"
-docs_url: "https://github.com/jmerelnyc/Photo-agents#readme"
+trending_score: 22
+last_commit: '2026-07-03'
+docs_url: https://github.com/jmerelnyc/Photo-agents#readme
 demo_url: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Treats agent memory as layered storage of bounded visual observations rather than a growing transcript, and lets the agent write its own skills."
+  - Treats agent memory as layered storage of bounded visual observations rather than a growing transcript, and lets the agent write its own skills.
 best_for:
-  - "You want an agent that grounds itself in what is on screen rather than in a growing chat log, because observations are stored in explicit layers."
-  - "You want a single Python package that bundles an agent loop, a provider router, browser automation and several frontends, without assembling four projects."
-  - "You want to experiment with self-written skills, because the agent promotes procedures it has actually succeeded at into reusable SOPs."
+  - You want an agent that grounds itself in what is on screen rather than in a growing chat log, because observations are stored in explicit layers.
+  - You want a single Python package that bundles an agent loop, a provider router, browser automation and several frontends, without assembling four projects.
+  - You want to experiment with self-written skills, because the agent promotes procedures it has actually succeeded at into reusable SOPs.
 avoid_if:
-  - "You want a fully offline runtime, because the agent loop needs a network-reachable LLM provider even though memory and skills stay local."
-  - "You need an unlicensed or unattended deployment, because the whole runtime is gated behind a remote-validated Photo Agents API key checked on every start."
-  - "You need a stable 1.0 API, because the project is labelled beta with an explicit note that APIs may change before 1.0."
+  - You want a fully offline runtime, because the agent loop needs a network-reachable LLM provider even though memory and skills stay local.
+  - You need an unlicensed or unattended deployment, because the whole runtime is gated behind a remote-validated Photo Agents API key checked on every start.
+  - You need a stable 1.0 API, because the project is labelled beta with an explicit note that APIs may change before 1.0.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Install commands, memory layers, client list, on-disk state table, credential flow and the beta status note are read from the official README; the package was not installed or run."
+enrichment_notes: Stars, license (MIT), last commit, primary language, topics and issue count came from the GitHub API. Install commands, memory layers, client list, on-disk state table, credential flow and the beta status note are read from the official README; the package was not installed or run.
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

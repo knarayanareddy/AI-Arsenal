@@ -5,41 +5,47 @@ version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "A compact Python agent framework with hooks, durable sessions, graph memory, MCP adapters, and SQLite FTS5 retrieval"
-github_url: "https://github.com/wanxingai/LightAgent"
+description: A compact Python agent framework with hooks, durable sessions, graph memory, MCP adapters, and SQLite FTS5 retrieval
+github_url: https://github.com/wanxingai/LightAgent
 license: Apache-2.0
 primary_language: Python
-tags: [agents, stateful, tool-use, pytorch]
+tags:
+  - agents
+  - stateful
+  - tool-use
+  - pytorch
 maturity: beta
 cost_model: open-source
-github_stars: 1225
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-16"
-docs_url: "https://github.com/SUFE-AIFLM-Lab/"
+github_stars: 1239
+github_stars_last_30d: 14
+trending_score: 24
+last_commit: '2026-09-30'
+docs_url: https://github.com/SUFE-AIFLM-Lab/
 demo_url: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Gives you the runtime discipline of a large framework in a small surface, with event-sourced durability and policy gates."
+  - Gives you the runtime discipline of a large framework in a small surface, with event-sourced durability and policy gates.
 best_for:
-  - "You need memory with an admission policy and audit trail rather than a vector store any agent can write to freely."
-  - "You are wiring MCP over both stdio and SSE into an existing Python service and need one adapter for both transports."
-  - "You are prototyping with several providers and need OpenAI-compatible streaming output without committing to one vendor's SDK."
+  - You need memory with an admission policy and audit trail rather than a vector store any agent can write to freely.
+  - You are wiring MCP over both stdio and SSE into an existing Python service and need one adapter for both transports.
+  - You are prototyping with several providers and need OpenAI-compatible streaming output without committing to one vendor's SDK.
 avoid_if:
-  - "You want a stable 1.0 contract, because the project publishes a public API compatibility inventory specifically to stabilize before 1.0.
-"
-  - "You are deploying something that must survive dependency churn, because the release cadence is roughly monthly with breaking changes."
-  - "You need a graph database behind your agent memory, since shared graph memory is opt-in and fail-closed."
+  - 'You want a stable 1.0 contract, because the project publishes a public API compatibility inventory specifically to stabilize before 1.0. '
+  - You are deploying something that must survive dependency churn, because the release cadence is roughly monthly with breaking changes.
+  - You need a graph database behind your agent memory, since shared graph memory is opt-in and fail-closed.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1225, Apache-2.0, Python, last commit 2026-09-16, topics, homepage. From README: v0.10.0 event-sourced runtime with sessions, capability registry, budgets, compaction, FTS5; v0.9.x Connector, traces, LightFlow; max_tool_iterations; arXiv 2509.09292. Hook signatures not read."
+enrichment_notes: 'API-verified: stars 1225, Apache-2.0, Python, last commit 2026-09-16, topics, homepage. From README: v0.10.0 event-sourced runtime with sessions, capability registry, budgets, compaction, FTS5; v0.9.x Connector, traces, LightFlow; max_tool_iterations; arXiv 2509.09292. Hook signatures not read.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

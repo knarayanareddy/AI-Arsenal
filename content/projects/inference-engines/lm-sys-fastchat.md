@@ -1,52 +1,64 @@
 ---
 id: lm-sys-fastchat
-name: "FastChat"
+name: FastChat
 version_tracked: null
 artifact_type: tool
 category: llms
 subcategory: tools
-description: "Apache-2.0 research platform from LMSYS covering model training, multi-backend serving, and the Chatbot Arena evaluation harness"
-github_url: "https://github.com/lm-sys/FastChat"
-license: "Apache-2.0"
+description: Apache-2.0 research platform from LMSYS covering model training, multi-backend serving, and the Chatbot Arena evaluation harness
+github_url: https://github.com/lm-sys/FastChat
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "lm-sys"
-tags: [llm, inference, retrieval, training]
+org_or_maintainer: lm-sys
+tags:
+  - llm
+  - inference
+  - retrieval
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 39550
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-05-01"
-docs_url: "https://lmsys.org/"
+github_stars: 39551
+github_stars_last_30d: 1
+trending_score: 33
+last_commit: '2026-05-01'
+docs_url: https://lmsys.org/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [community-driven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Research-lab platform covering LLM training, serving, and evaluation in one repo — the reference for multi-round and multi-model LLM evaluation harnesses."
+  - Research-lab platform covering LLM training, serving, and evaluation in one repo — the reference for multi-round and multi-model LLM evaluation harnesses.
 best_for:
-  - "You need a leaderboard-grade head-to-head comparison where models are judged on the same prompts under the same judging conditions, and the arena protocol is what makes the result meaningful."
-  - "You are reproducing an LLM research result that used Vicuna training or a FastChat evaluation config, since the released checkpoints and eval scripts are the artifacts people cite."
-  - "You want one repository holding training code, several inference backends, and an evaluation client, so a paper's model and its numbers live in the same place."
+  - You need a leaderboard-grade head-to-head comparison where models are judged on the same prompts under the same judging conditions, and the arena protocol is what makes the result meaningful.
+  - You are reproducing an LLM research result that used Vicuna training or a FastChat evaluation config, since the released checkpoints and eval scripts are the artifacts people cite.
+  - You want one repository holding training code, several inference backends, and an evaluation client, so a paper's model and its numbers live in the same place.
 avoid_if:
-  - "You need a high-throughput production endpoint, because the serving layer here is a research harness optimized for flexibility and evaluation rather than batching and paged attention."
-  - "You need a stable long-term platform with a compatibility promise, since the repository is a moving research artifact whose breaking changes come with each paper."
-  - "Your models are not in a supported architecture family, because the training path and the Vicuna recipe are tied to specific base-model conventions."
+  - You need a high-throughput production endpoint, because the serving layer here is a research harness optimized for flexibility and evaluation rather than batching and paged attention.
+  - You need a stable long-term platform with a compatibility promise, since the repository is a moving research artifact whose breaking changes come with each paper.
+  - Your models are not in a supported architecture family, because the training path and the Vicuna recipe are tied to specific base-model conventions.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 39550 stars, Apache-2.0 license, Python primary language, last commit 2026-05-01, empty topics, no homepage. Server, worker, and controller split, supported backends, and the Vicuna training recipe come from official docs; the arena protocol claim is cited to the published paper, not independently verified."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 39550 stars, Apache-2.0 license, Python primary language, last commit 2026-05-01, empty topics, no homepage. Server, worker, and controller split, supported backends, and the Vicuna training recipe come from official docs; the arena protocol claim is cited to the published paper, not independently verified.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/lm-sys/FastChat", "date": "2026-09-28", "description": "39,550 stars and last commit 2026-05-01 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/lm-sys/FastChat
+    date: '2026-09-28'
+    description: 39,550 stars and last commit 2026-05-01 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

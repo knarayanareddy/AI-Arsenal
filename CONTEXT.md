@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T13:48:42.773Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-26T16:04:06.614Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -39,81 +39,81 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
-- OpenClaw (⭐388702, score:97) — Self-hosted personal AI agent that runs on your own hardware and reaches you through messaging channels you already use
-- DeepSeek Harness (⭐260425, score:95) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
-- LangChain (⭐148417, score:80) — The Python (and JS) framework that standardised LLM component interfaces — now positioned as an agent-engineering layer above LangGraph
-- Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
-- Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
+- DeepSeek Harness (⭐262384, score:80) — DeepSeek's open agent harness (dsh): every component — model adapter, tool registry, agent loop — is a replaceable plugin on the Cordis framework
+- opencode (⭐221825, score:73) — MIT-licensed terminal coding agent in TypeScript that edits files, runs shell commands, and exposes a client/server session protocol
+- goose (⭐55756, score:73) — Apache-2.0 Rust agent that installs dependencies, edits files, and runs commands locally, extended through provider-agnostic MCP tools
+- browser (⭐37012, score:73) — AGPL-3.0 headless browser written in Zig that speaks CDP for fast agent navigation without a full rendering engine
+- lerobot (⭐28486, score:73) — Apache-2.0 robotics learning stack standardizing datasets, policies, and evaluation so imitation learning transfers across robot hardware
 
 ### code-generation
-- opencode (⭐203399, score:92) — Terminal coding agent with a full TUI, provider-agnostic model access, and client/server split
-- Kilo Code (⭐27155, score:71) — IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
-- screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
-- Continue (⭐36053, score:60) — Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release
-- PR-Agent (⭐12832, score:58) — Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
+- screenshot-to-code (⭐80737, score:55) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
+- Open Code Review (⭐48336, score:55) — Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments
+- Kilo Code (⭐27755, score:55) — IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
+- PR-Agent (⭐13617, score:55) — Open-source pull-request reviewer that summarises, reviews, and suggests changes from the diff
+- mini-swe-agent (⭐8854, score:55) — Deliberately minimal software-engineering agent: bash as the only tool, linear message history, stateless action execution
 
 ### computer-vision
-- Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
-- Ultralytics YOLO (⭐62824, score:60) — Real-time vision framework: YOLO26 detection, segmentation, depth, pose, OBB and tracking behind one train/validate/export API — AGPL-3.0 or a paid licence
-- Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
-- Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
-- SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
+- opencv (⭐91329, score:60) — Apache-2.0 C++/Python computer-vision library covering decode, filtering, geometry, calibration, and DNN inference
+- mediapipe (⭐37413, score:58) — Apache-2.0 cross-platform pipeline for live media shipping ready-made face, hand, pose, and segmentation graphs that run on-device
+- PaddleOCR (⭐91706, score:55) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- Tesseract OCR (⭐77171, score:55) — The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
+- Supervision (⭐51371, score:55) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 
 ### data-pipelines
-- Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
-- cleanlab (⭐11682, score:50) — Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions
-- Scrapling (⭐84212, score:39) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
-- ClickHouse (⭐50123, score:38) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
-- datasets (⭐22014, score:35) — Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
+- Scrapling (⭐89842, score:73) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
+- ClickHouse (⭐50611, score:72) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
+- DuckDB (⭐42580, score:55) — In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
+- Marker (⭐40651, score:55) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- Polars (⭐40205, score:55) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
 
 ### evaluation
-- OpenCompass (⭐7392, score:52) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
-- MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
-- Terminal-Bench (⭐2606, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
-- BigCodeBench (⭐516, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
-- scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
+- scikit-learn (⭐67929, score:73) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
+- AiSOC (⭐3935, score:63) — A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step
+- VulnClaw (⭐3807, score:51) — An autonomous penetration-testing CLI that runs recon, discovery, exploitation, and reporting from natural language with evidence-gated output
+- SWE-bench (⭐6090, score:46) — Real GitHub issues paired with hidden fail-to-pass and pass-to-pass test suites, and the harness that turns a patch into a resolution rate
+- Gymnasium (⭐12731, score:44) — Standard API for reinforcement-learning environments with spaces, vectorisation, and a curated env registry
 
 ### llms
-- LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
-- exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
-- Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
-- Colossal-AI (HPC-AI Tech) (⭐41407, score:66) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
-- verl (⭐24007, score:60) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
+- tensorflow (⭐201266, score:73) — Apache-2.0 tensor and autodiff framework with graph execution, distributed strategies, and the broadest export surface of any DL stack
+- transformers (⭐168195, score:73) — Apache-2.0 model-definition layer exposing one AutoModel API over thousands of text, vision, audio, and multimodal checkpoints
+- LlamaFactory (⭐75742, score:73) — Apache-2.0 fine-tuning workbench covering 100+ LLM and VLM families behind one YAML config for LoRA, QLoRA, and RLHF
+- minimind (⭐64443, score:73) — Apache-2.0 minimal LLM codebase that pretrains and instruction-tunes a 64M-parameter model on one consumer GPU in roughly two hours
+- nanochat (⭐58949, score:73) — MIT-licensed single-GPU recipe that pretrains, midtrains, and instruction-tunes a small chat model end to end in one repository
 
 ### multimodal
-- Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
-- ComfyUI (⭐142561, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
-- FLUX (Black Forest Labs) (⭐26035, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-- MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
-- ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
+- ComfyUI (⭐143175, score:73) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
+- InvokeAI (⭐28868, score:73) — Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation
+- Fooocus (⭐53694, score:72) — GPL-3.0 minimal UI over SDXL and Flux that reduces image generation to prompt, style, aspect ratio, and advanced knobs
+- Stable Diffusion WebUI (⭐165149, score:55) — AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling
+- Hugging Face Diffusers (⭐34816, score:55) — The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch
 
 ### observability
-- DeepEval (⭐19090, score:70) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
-- LangSmith (⭐17, score:40) — LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
-- Langfuse (⭐36439, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-- Opik (⭐22902, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
-- Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
+- Langfuse (⭐36525, score:55) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
+- DeepEval (⭐19111, score:55) — A pytest-shaped evaluation framework for LLM apps, with RAG, agent-trajectory and multimodal metrics in one Apache-2.0 Python library
+- Phoenix (⭐12011, score:55) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
+- Rerun (⭐11643, score:55) — Visualize, query, and stream multimodal and robotics data for AI development
+- Helicone (⭐6238, score:49) — Apache-2.0 AI gateway plus observability: one base-URL change covers 100+ providers with routing, fallbacks, cost tracking and sessions
 
 ### rag
-- DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
-- AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
-- GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
-- Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
-- SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
+- opendataloader-pdf (⭐30033, score:73) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
+- TrendRadar (⭐63208, score:63) — A self-hosted trend and news aggregator with AI filtering, translation, push delivery to chat platforms, and an MCP server
+- Firecrawl (⭐195566, score:55) — Web data API with search, scrape, crawl and map endpoints, AGPL-licensed and also sold as a hosted service
+- RAGFlow (⭐92900, score:55) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- Crawl4AI (⭐86303, score:55) — Open-source crawler that turns any page into LLM-ready Markdown, runnable locally or through a hosted API with MCP
 
 ### tooling
-- MCP Reference Servers (⭐90043, score:84) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
-- Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
-- Cherry Studio (⭐52215, score:46) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
-- kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
-- spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
+- kestra (⭐30008, score:73) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
+- presidio (⭐11519, score:69) — PII detection and redaction framework with NLP and pattern recognizers plus context-aware scoring
+- Supabase (⭐113984, score:55) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
+- MCP Reference Servers (⭐91585, score:55) — Reference implementations of Model Context Protocol servers that expose files, search, and APIs to agents
+- Context7 (⭐63721, score:55) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
 
 ### voice-audio
-- Pipecat (⭐15163, score:62) — Frame-pipeline framework for building realtime voice agents and multimodal conversational applications
-- AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
-- LiveKit Agents (⭐13979, score:60) — Framework for realtime voice and video AI agents that join a LiveKit room as participants
-- Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
-- Chatterbox (Resemble AI) (⭐26600, score:55) — Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3
+- Handy (⭐34741, score:73) — MIT-licensed Rust desktop app for fully offline Whisper-family speech-to-text, built as a Tauri v2 native client
+- Whisper (⭐111321, score:55) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
+- GPT-SoVITS (⭐63806, score:55) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
+- whisper.cpp (⭐54686, score:55) — A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library
+- VoxCPM (⭐40654, score:55) — A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design
 
 ## Top Tools by Job
 

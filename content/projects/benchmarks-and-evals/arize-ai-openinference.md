@@ -1,52 +1,63 @@
 ---
 id: arize-ai-openinference
-name: "openinference"
+name: openinference
 version_tracked: null
 artifact_type: library
 category: observability
 subcategory: tracing
-description: "OpenTelemetry semantic conventions and instrumentors for generative-AI spans, so LLM calls carry standard attributes regardless of which SDK issued them"
-github_url: "https://github.com/Arize-ai/openinference"
-license: "Apache-2.0"
+description: OpenTelemetry semantic conventions and instrumentors for generative-AI spans, so LLM calls carry standard attributes regardless of which SDK issued them
+github_url: https://github.com/Arize-ai/openinference
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Arize-ai"
-tags: [observability, tracing, llm]
+org_or_maintainer: Arize-ai
+tags:
+  - observability
+  - tracing
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 1238
-github_stars_last_30d: 0
-trending_score: 25
-last_commit: "2026-09-28"
-docs_url: "https://arize-ai.github.io/openinference/"
+github_stars: 1285
+github_stars_last_30d: 47
+trending_score: 37
+last_commit: '2026-10-26'
+docs_url: https://arize-ai.github.io/openinference/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top, contribute-to]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - contribute-to
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "OpenTelemetry semantic conventions and instrumentation for LLM calls, which is the layer that makes AI traces comparable across vendor SDKs."
+  - OpenTelemetry semantic conventions and instrumentation for LLM calls, which is the layer that makes AI traces comparable across vendor SDKs.
 best_for:
-  - "You need LLM traces to appear in an OpenTelemetry backend you already run, with standard attributes rather than a vendor format."
-  - "You are switching agent frameworks or model providers and need traces that stay comparable across the change."
-  - "You need prompt, completion, token counts, and model name on spans in a form a generic observability tool can query."
+  - You need LLM traces to appear in an OpenTelemetry backend you already run, with standard attributes rather than a vendor format.
+  - You are switching agent frameworks or model providers and need traces that stay comparable across the change.
+  - You need prompt, completion, token counts, and model name on spans in a form a generic observability tool can query.
 avoid_if:
-  - "You want LLM-specific dashboards, evaluations, and alerting out of the box, since a convention produces spans rather than a product."
-  - "You are on an older OpenTelemetry Collector with no support for the GenAI conventions, where the attributes go unread."
-  - "You have no collector and no interest in one, since the value here is interoperability, which is what you would not be using."
+  - You want LLM-specific dashboards, evaluations, and alerting out of the box, since a convention produces spans rather than a product.
+  - You are on an older OpenTelemetry Collector with no support for the GenAI conventions, where the attributes go unread.
+  - You have no collector and no interest in one, since the value here is interoperability, which is what you would not be using.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (1238), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all 19 topics were read from the GitHub API. Semantic conventions for LLM, retrieval, embedding, and agent spans, the versioned attribute model, per-framework instrumentors, and HTTP-level context propagation come from the official docs; no trace was emitted and no collector was run here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (1238), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all 19 topics were read from the GitHub API. Semantic conventions for LLM, retrieval, embedding, and agent spans, the versioned attribute model, per-framework instrumentors, and HTTP-level context propagation come from the official docs; no trace was emitted and no collector was run here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Arize-ai/openinference", "date": "2026-09-28", "description": "1,238 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Arize-ai/openinference
+    date: '2026-09-28'
+    description: 1,238 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

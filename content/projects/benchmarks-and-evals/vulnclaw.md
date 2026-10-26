@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "An autonomous penetration-testing CLI that runs recon, discovery, exploitation, and reporting from natural language with evidence-gated output"
-github_url: "https://github.com/Netw0rkNoob/VulnClaw"
+description: An autonomous penetration-testing CLI that runs recon, discovery, exploitation, and reporting from natural language with evidence-gated output
+github_url: https://github.com/Netw0rkNoob/VulnClaw
 license: MIT
 primary_language: Python
-tags: [security, tool-use, orchestration]
+tags:
+  - security
+  - tool-use
+  - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 3460
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-23"
-docs_url: "https://unclecheng-li.github.io/vulnclaw.com/"
+github_stars: 3807
+github_stars_last_30d: 347
+trending_score: 51
+last_commit: '2026-10-12'
+docs_url: https://unclecheng-li.github.io/vulnclaw.com/
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Refuses to accept a claimed flag unless it appears verbatim in real tool output, blocking the usual hallucinated-success failure."
+  - Refuses to accept a claimed flag unless it appears verbatim in real tool output, blocking the usual hallucinated-success failure.
 best_for:
-  - "You are running an authorized engagement and want the full recon-to-report chain driven from one natural-language instruction."
-  - "You are preparing CTF or lab material and need an agent that shows its evidence rather than asserting a finding."
-  - "You are behind a restrictive egress and need a toolchain where fetch and memory MCP servers work locally with no cloud dependency."
+  - You are running an authorized engagement and want the full recon-to-report chain driven from one natural-language instruction.
+  - You are preparing CTF or lab material and need an agent that shows its evidence rather than asserting a finding.
+  - You are behind a restrictive egress and need a toolchain where fetch and memory MCP servers work locally with no cloud dependency.
 avoid_if:
-  - "You lack explicit written authorization for the target, since the project carries an authorized-only scope badge and a security statement."
-  - "You need deterministic, reproducible results for compliance evidence, since the agent decides its own next step each round."
-  - "You want passive reconnaissance only, because the default loop proceeds toward exploitation without a human gate."
+  - You lack explicit written authorization for the target, since the project carries an authorized-only scope badge and a security statement.
+  - You need deterministic, reproducible results for compliance evidence, since the agent decides its own next step each round.
+  - You want passive reconnaissance only, because the default loop proceeds toward exploitation without a human gate.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 3460, MIT, Python, last commit 2026-09-23, topics, homepage. From README: AgentState.evidence with preview-only context, verbatim anti-hallucination gate, stall guard, four MCP servers, 14 providers, JSONL traffic index, 50 skills via load_skill_reference, PyPI v0.4.0. Success rates unverified."
+enrichment_notes: 'API-verified: stars 3460, MIT, Python, last commit 2026-09-23, topics, homepage. From README: AgentState.evidence with preview-only context, verbatim anti-hallucination gate, stall guard, four MCP servers, 14 providers, JSONL traffic index, 50 skills via load_skill_reference, PyPI v0.4.0. Success rates unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

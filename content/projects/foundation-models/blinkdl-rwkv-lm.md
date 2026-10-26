@@ -1,52 +1,62 @@
 ---
 id: blinkdl-rwkv-lm
-name: "RWKV-LM"
+name: RWKV-LM
 version_tracked: null
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "RNN-architecture language model that trains in parallel and decodes one token at a time with no KV cache"
-github_url: "https://github.com/BlinkDL/RWKV-LM"
-license: "Apache-2.0"
+description: RNN-architecture language model that trains in parallel and decodes one token at a time with no KV cache
+github_url: https://github.com/BlinkDL/RWKV-LM
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "BlinkDL"
-tags: [attention, llm]
+org_or_maintainer: BlinkDL
+tags:
+  - attention
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 14729
-github_stars_last_30d: 0
-trending_score: 33
-last_commit: "2026-09-21"
+github_stars: 14765
+github_stars_last_30d: 36
+trending_score: 36
+last_commit: '2026-09-28'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "RNN-architecture language model with constant-memory decoding per token, positioned as the alternative to attention when inference cost per token must stay flat."
+  - RNN-architecture language model with constant-memory decoding per token, positioned as the alternative to attention when inference cost per token must stay flat.
 best_for:
-  - "You are serving a long-context or streaming workload and need per-token latency that does not grow with sequence length."
-  - "You have fixed memory and want a model whose state is O(1) in context length, so one GPU holds a much longer effective context than attention would allow."
-  - "You are interested in non-transformer sequence modelling and want a trained model family plus reference implementations to study the design."
+  - You are serving a long-context or streaming workload and need per-token latency that does not grow with sequence length.
+  - You have fixed memory and want a model whose state is O(1) in context length, so one GPU holds a much longer effective context than attention would allow.
+  - You are interested in non-transformer sequence modelling and want a trained model family plus reference implementations to study the design.
 avoid_if:
-  - "You need the strongest quality on short, prompt-heavy tasks, where dense attention models generally lead on benchmarks and tool-calling reliability."
-  - "Your serving stack depends on standard transformers-compatible tensor layouts, because the architecture needs its own kernels and conversion path."
-  - "You need the deepest pretrained open-weight ecosystem, since available RWKV checkpoints and quantisations number in the low tens rather than thousands."
+  - You need the strongest quality on short, prompt-heavy tasks, where dense attention models generally lead on benchmarks and tool-calling reliability.
+  - Your serving stack depends on standard transformers-compatible tensor layouts, because the architecture needs its own kernels and conversion path.
+  - You need the deepest pretrained open-weight ecosystem, since available RWKV checkpoints and quantisations number in the low tens rather than thousands.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (14729), Apache-2.0, last commit 2026-09-21, Python, and the topic list were API-verified; no homepage field. The RWKV-7 delta-rule update, parallel training formulation, infctx trainer, and no-KV-cache decoding come from the official README and repo code. Benchmark-gap statements are read from published comparisons, not reproduced here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (14729), Apache-2.0, last commit 2026-09-21, Python, and the topic list were API-verified; no homepage field. The RWKV-7 delta-rule update, parallel training formulation, infctx trainer, and no-KV-cache decoding come from the official README and repo code. Benchmark-gap statements are read from published comparisons, not reproduced here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/BlinkDL/RWKV-LM", "date": "2026-09-28", "description": "14,729 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/BlinkDL/RWKV-LM
+    date: '2026-09-28'
+    description: 14,729 stars and last commit 2026-09-21 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

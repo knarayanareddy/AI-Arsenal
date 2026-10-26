@@ -5,40 +5,45 @@ version_tracked: null
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "Generates tailored incident-response exercise scenarios from threat-actor profiles and MITRE ATT&CK or ATLAS technique sets"
-github_url: "https://github.com/mrwadams/attackgen"
+description: Generates tailored incident-response exercise scenarios from threat-actor profiles and MITRE ATT&CK or ATLAS technique sets
+github_url: https://github.com/mrwadams/attackgen
 license: GPL-3.0
 primary_language: Python
-tags: [security, community-favorite]
+tags:
+  - security
+  - community-favorite
 maturity: beta
 cost_model: open-source
-github_stars: 1246
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-28"
-docs_url: "https://attack.mitre.org/"
+github_stars: 1255
+github_stars_last_30d: 9
+trending_score: 24
+last_commit: '2026-10-24'
+docs_url: https://attack.mitre.org/
 demo_url: null
 phase: benchmark-and-eval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Turns a threat-actor selection into a facilitator-ready exercise with injects, success criteria, and rules of engagement."
+  - Turns a threat-actor selection into a facilitator-ready exercise with injects, success criteria, and rules of engagement.
 best_for:
-  - "You are planning a tabletop and need a scenario grounded in a named threat actor's actual technique usage rather than a generic exercise."
-  - "You are testing an AI system's resilience and want an insider-threat scenario shaped by deployment autonomy level, STRIDE threats, and a threat model."
-  - "You are a facilitator who needs injects, metrics, artefacts, and rules of engagement in one downloadable Markdown file."
+  - You are planning a tabletop and need a scenario grounded in a named threat actor's actual technique usage rather than a generic exercise.
+  - You are testing an AI system's resilience and want an insider-threat scenario shaped by deployment autonomy level, STRIDE threats, and a threat model.
+  - You are a facilitator who needs injects, metrics, artefacts, and rules of engagement in one downloadable Markdown file.
 avoid_if:
-  - "You are running live detection engineering, because this produces exercises and documents rather than executing against your estate."
-  - "You need an air-gapped deployment, since generation depends on a hosted model endpoint."
-  - "You are a team that must keep exercise data inside your boundary, because threat-actor context and your organisational profile are sent to the provider."
+  - You are running live detection engineering, because this produces exercises and documents rather than executing against your estate.
+  - You need an air-gapped deployment, since generation depends on a hosted model endpoint.
+  - You are a team that must keep exercise data inside your boundary, because threat-actor context and your organisational profile are sent to the provider.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1246, GPL-3.0, Python, last commit 2026-09-28, topics. From README: ATT&CK Enterprise/ICS/ATLAS, LiteLLM routing, provider list, v0.17 features, AI Insider Threat mode and its cited threat model, Docker, LangSmith, MCP server. Generation quality not exercised."
+enrichment_notes: 'API-verified: stars 1246, GPL-3.0, Python, last commit 2026-09-28, topics. From README: ATT&CK Enterprise/ICS/ATLAS, LiteLLM routing, provider list, v0.17 features, AI Insider Threat mode and its cited threat model, Docker, LangSmith, MCP server. Generation quality not exercised.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

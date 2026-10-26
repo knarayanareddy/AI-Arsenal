@@ -1,49 +1,67 @@
 ---
 id: verl
-name: "verl"
+name: verl
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO"
-github_url: "https://github.com/verl-project/verl"
-license: "Apache-2.0"
+description: ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
+github_url: https://github.com/verl-project/verl
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "verl-project (initiated by ByteDance Seed)"
-tags: [alignment, fine-tuning, llm]
+org_or_maintainer: verl-project (initiated by ByteDance Seed)
+tags:
+  - alignment
+  - fine-tuning
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 24007
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-10-23"
-docs_url: "https://verl.readthedocs.io/en/latest/"
+github_stars: 24024
+github_stars_last_30d: 17
+trending_score: 16
+last_commit: '2026-10-26'
+docs_url: https://verl.readthedocs.io/en/latest/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2409.19256v2"
+paper_url: https://arxiv.org/abs/2409.19256v2
 paper_id: null
 phase: training-and-alignment
-domain: [language, reinforcement-learning, reasoning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - reinforcement-learning
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The RL post-training stack behind much of the open reasoning-model work: HybridFlow splits dataflow definition from execution, and the ecosystem built around it (recipes, VLA, omni-modal, observability) now spans more code than the library itself"
+  - 'The RL post-training stack behind much of the open reasoning-model work: HybridFlow splits dataflow definition from execution, and the ecosystem built around it (recipes, VLA, omni-modal, observability) now spans more code than the library itself'
 best_for:
   - You are running GRPO or PPO on reasoning tasks and need real throughput — vLLM or SGLang rollouts feeding FSDP or Megatron updates, with 3D-HybridEngine resharding to cut the actor-swap cost
   - Your RL dataflow is not a textbook one — multi-turn tool use, agentic rollouts, custom rewards — and you need to express it as a controller graph rather than fork a monolithic trainer
-  - "You want the community's reference implementation: most open o1-style reproductions and several published RL results were produced on this code"
+  - 'You want the community''s reference implementation: most open o1-style reproductions and several published RL results were produced on this code'
 avoid_if:
   - You want DPO or a small single-node alignment run — `trl` needs a day of setup, not a cluster and a device-mapping plan
   - Your team will not invest in the hybrid-controller abstraction — the flexibility is real and so is the learning curve, and a recipe-style trainer will get to a baseline sooner
   - You need a stable API across quarters — this is a fast-moving research-derived project with a large issue count, and internals move between releases
-upstream_dependencies: [vllm]
+upstream_dependencies:
+  - vllm
 downstream_consumers: []
-alternatives: [openrlhf, trl, deepspeed]
-integrates_with: [vllm, sglang, megatron-lm]
+alternatives:
+  - openrlhf
+  - trl
+  - deepspeed
+integrates_with:
+  - vllm
+  - sglang
+  - megatron-lm
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Re-verified 2026-10-25: 24,007 stars, 1,394 open issues, Apache-2.0, last push 2026-10-23, repo now under verl-project (migrated from volcengine in 2026-01). README documents the HybridFlow model, FSDP/Megatron and vLLM/SGLang integration, 3D-HybridEngine resharding, and the extracted verl-recipe plus verl-vla/omni/SpeCo/RL-Insight ecosystem."
-added_date: "2026-07-08"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: 24,007 stars, 1,394 open issues, Apache-2.0, last push 2026-10-23, repo now under verl-project (migrated from volcengine in 2026-01). README documents the HybridFlow model, FSDP/Megatron and vLLM/SGLang integration, 3D-HybridEngine resharding, and the extracted verl-recipe plus verl-vla/omni/SpeCo/RL-Insight ecosystem.'
+added_date: '2026-07-08'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

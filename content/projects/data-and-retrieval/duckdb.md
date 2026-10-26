@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "duckdb"
+org_or_maintainer: duckdb
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 817
+trending_score: 55
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: duckdb
-name: "DuckDB"
+name: DuckDB
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause"
-github_url: "https://github.com/duckdb/duckdb"
+description: In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause
+github_url: https://github.com/duckdb/duckdb
 license: MIT
 primary_language: C++
-tags: [data, self-hosted, efficiency, local]
+tags:
+  - data
+  - self-hosted
+  - efficiency
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 41763
-last_commit: "2026-09-28"
-docs_url: "http://www.duckdb.org"
+github_stars: 42580
+last_commit: '2026-10-26'
+docs_url: http://www.duckdb.org
 phase: data-and-retrieval
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An embeddable columnar OLAP engine that powers local data prep and feature engineering for AI pipelines."
-best_for: ["You want to query Parquet or CSV in place without loading anything into a database, because a path in the FROM clause is a table and the file is read directly.", "You are running analysis inside an application or notebook and a client-server database would be an extra process to manage, since DuckDB runs in-process as a library or a CLI.", "You need SQL beyond the basics, because the dialect includes arbitrary and nested correlated subqueries, window functions, collations and complex types such as arrays, structs and maps."]
-avoid_if: ["You need multi-writer concurrent access over a network, because this is an embedded, single-process engine rather than a server other machines connect to.", "Your data already lives in a warehouse, because moving a warehouse workload onto a local engine is a rewrite rather than a query, and the warehouse is already solving the concurrency problem.", "You are on an unsupported platform without a build path, since development needs CMake, Python 3 and a C++17 compiler and the project recommends consulting its endoflife page for support status."]
-enrichment_notes: "Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. OLAP-focused, single-node by design."
+  - An embeddable columnar OLAP engine that powers local data prep and feature engineering for AI pipelines.
+best_for:
+  - You want to query Parquet or CSV in place without loading anything into a database, because a path in the FROM clause is a table and the file is read directly.
+  - You are running analysis inside an application or notebook and a client-server database would be an extra process to manage, since DuckDB runs in-process as a library or a CLI.
+  - You need SQL beyond the basics, because the dialect includes arbitrary and nested correlated subqueries, window functions, collations and complex types such as arrays, structs and maps.
+avoid_if:
+  - You need multi-writer concurrent access over a network, because this is an embedded, single-process engine rather than a server other machines connect to.
+  - Your data already lives in a warehouse, because moving a warehouse workload onto a local engine is a rewrite rather than a query, and the warehouse is already solving the concurrency problem.
+  - You are on an unsupported platform without a build path, since development needs CMake, Python 3 and a C++17 compiler and the project recommends consulting its endoflife page for support status.
+enrichment_notes: Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. OLAP-focused, single-node by design.
 ---
 
 ## Overview

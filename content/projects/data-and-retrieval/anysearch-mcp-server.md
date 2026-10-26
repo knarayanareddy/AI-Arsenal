@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "An MCP server exposing general and vertical web search, parallel batch queries, and full-page Markdown extraction over one hosted API"
-github_url: "https://github.com/anysearch-ai/anysearch-mcp-server"
+description: An MCP server exposing general and vertical web search, parallel batch queries, and full-page Markdown extraction over one hosted API
+github_url: https://github.com/anysearch-ai/anysearch-mcp-server
 license: Apache-2.0
 primary_language: Other
-tags: [tool-use, retrieval, research]
+tags:
+  - tool-use
+  - retrieval
+  - research
 maturity: production
 cost_model: freemium
-github_stars: 1854
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-17"
-docs_url: "https://www.anysearch.com"
+github_stars: 2053
+github_stars_last_30d: 199
+trending_score: 39
+last_commit: '2026-09-17'
+docs_url: https://www.anysearch.com
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Collapses web research onto a single tool surface with a defined key-resolution order and an error taxonomy the agent can act on."
+  - Collapses web research onto a single tool surface with a defined key-resolution order and an error taxonomy the agent can act on.
 best_for:
-  - "You are wiring a research agent that needs live web results rather than a frozen model snapshot and want one tool instead of five."
-  - "You are comparing options across domains such as finance, academic, legal, or security and need vertical search rather than general web ranking."
-  - "You are prototyping before you have credentials and want anonymous access to work at lower rate limits instead of blocking setup."
+  - You are wiring a research agent that needs live web results rather than a frozen model snapshot and want one tool instead of five.
+  - You are comparing options across domains such as finance, academic, legal, or security and need vertical search rather than general web ranking.
+  - You are prototyping before you have credentials and want anonymous access to work at lower rate limits instead of blocking setup.
 avoid_if:
-  - "You have a hard requirement that all retrieval stay inside your own infrastructure, because every query is proxied through AnySearch's hosted endpoint."
-  - "You are handling sensitive queries whose terms should not leave your network in plaintext to a third-party API."
-  - "You are building a high-volume crawler, because anonymous access is rate-limited and the README documents key exhaustion as a normal failure mode."
+  - You have a hard requirement that all retrieval stay inside your own infrastructure, because every query is proxied through AnySearch's hosted endpoint.
+  - You are handling sensitive queries whose terms should not leave your network in plaintext to a third-party API.
+  - You are building a high-volume crawler, because anonymous access is rate-limited and the README documents key exhaustion as a normal failure mode.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1854, Apache-2.0, null primary language, last commit 2026-09-17, topics, homepage. From README: four capabilities, key priority order, registration endpoint, 42901 and 409 error handling, hosted endpoint. Rate limits and result quality not measured."
+enrichment_notes: 'API-verified: stars 1854, Apache-2.0, null primary language, last commit 2026-09-17, topics, homepage. From README: four capabilities, key priority order, registration endpoint, 42901 and 409 error handling, hosted endpoint. Rate limits and result quality not measured.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

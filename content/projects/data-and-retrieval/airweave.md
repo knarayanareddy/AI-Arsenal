@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "airweave-ai"
+org_or_maintainer: airweave-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,40 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-10-24"
+trending_score: 15
+added_date: '2026-07-19'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: archived
 id: airweave
-name: "Airweave"
+name: Airweave
 artifact_type: platform
 category: rag
 subcategory: advanced-rag
-description: "Archived context-retrieval layer that continuously syncs apps and databases behind one LLM-friendly search API"
-github_url: "https://github.com/airweave-ai/airweave"
+description: Archived context-retrieval layer that continuously syncs apps and databases behind one LLM-friendly search API
+github_url: https://github.com/airweave-ai/airweave
 license: MIT
 primary_language: Python
-tags: [rag, retrieval]
+tags:
+  - rag
+  - retrieval
 maturity: beta
 cost_model: open-source
-github_stars: 6554
-last_commit: "2026-06-05"
-docs_url: "https://airweave.ai"
+github_stars: 6551
+last_commit: '2026-06-05'
+docs_url: https://airweave.ai
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Connector-rich retrieval platform that complements agent frameworks and competes with bespoke ingestion pipelines"
-best_for: ["You are wiring an agent to a dozen SaaS tools and databases and want one search endpoint instead of a bespoke connector per system.", "Your agent needs current, grounded context from live sources, so a continuous sync beats a one-shot crawl that goes stale between queries.", "You want to standardise retrieval across teams, since the same unified interface serves both RAG pipelines and agent tool calls."]
-avoid_if: ["You are starting a new integration, because the repository is archived and will not accept the connector additions your source needs.", "You need a governed production deployment, since an archived project means no security patches and no compatibility work against provider API changes.", "You have a single source of truth that already exposes good search, because a sync layer adds staleness and duplicate storage for no gain in that case."]
-enrichment_notes: "MIT platform with multi-service Docker deployment; provider costs, freshness, and connector permissions remain operator concerns. Draft pending review."
+  - Connector-rich retrieval platform that complements agent frameworks and competes with bespoke ingestion pipelines
+best_for:
+  - You are wiring an agent to a dozen SaaS tools and databases and want one search endpoint instead of a bespoke connector per system.
+  - Your agent needs current, grounded context from live sources, so a continuous sync beats a one-shot crawl that goes stale between queries.
+  - You want to standardise retrieval across teams, since the same unified interface serves both RAG pipelines and agent tool calls.
+avoid_if:
+  - You are starting a new integration, because the repository is archived and will not accept the connector additions your source needs.
+  - You need a governed production deployment, since an archived project means no security patches and no compatibility work against provider API changes.
+  - You have a single source of truth that already exposes good search, because a sync layer adds staleness and duplicate storage for no gain in that case.
+enrichment_notes: MIT platform with multi-service Docker deployment; provider costs, freshness, and connector permissions remain operator concerns. Draft pending review.
 ---
 
 ## Overview

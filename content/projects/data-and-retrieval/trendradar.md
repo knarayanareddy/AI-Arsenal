@@ -5,40 +5,46 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A self-hosted trend and news aggregator with AI filtering, translation, push delivery to chat platforms, and an MCP server"
-github_url: "https://github.com/sansan0/TrendRadar"
+description: A self-hosted trend and news aggregator with AI filtering, translation, push delivery to chat platforms, and an MCP server
+github_url: https://github.com/sansan0/TrendRadar
 license: GPL-3.0
 primary_language: Python
-tags: [data, tool-use, self-hosted]
+tags:
+  - data
+  - tool-use
+  - self-hosted
 maturity: production
 cost_model: self-hostable
-github_stars: 62598
-github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-13"
-docs_url: "https://trendradar.sandev.cc/zh/"
+github_stars: 63208
+github_stars_last_30d: 610
+trending_score: 63
+last_commit: '2026-10-20'
+docs_url: https://trendradar.sandev.cc/zh/
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Aggregates many sources, ranks them by your keywords, then pushes only what matches instead of another feed to scroll."
+  - Aggregates many sources, ranks them by your keywords, then pushes only what matches instead of another feed to scroll.
 best_for:
-  - "You are drowning in platform feeds and need one filtered stream of items matching keywords you actually care about."
-  - "You need multilingual coverage where a Chinese-language item is translated before it reaches your team chat."
-  - "You want a trend monitor you host yourself, with data staying local or on infrastructure you control."
+  - You are drowning in platform feeds and need one filtered stream of items matching keywords you actually care about.
+  - You need multilingual coverage where a Chinese-language item is translated before it reaches your team chat.
+  - You want a trend monitor you host yourself, with data staying local or on infrastructure you control.
 avoid_if:
-  - "You need guaranteed coverage of a niche source, because aggregation depth per platform varies and the list is not exhaustive."
-  - "You have a policy against outbound webhooks, since delivery targets WeChat, Feishu, DingTalk, Telegram, Slack, and email."
-  - "You need archival or analytical tooling, since this is a monitoring and alerting surface rather than a search system."
+  - You need guaranteed coverage of a niche source, because aggregation depth per platform varies and the list is not exhaustive.
+  - You have a policy against outbound webhooks, since delivery targets WeChat, Feishu, DingTalk, Telegram, Slack, and email.
+  - You need archival or analytical tooling, since this is a monitoring and alerting surface rather than a search system.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 62598, GPL-3.0, Python, last commit 2026-09-13, topics, homepage. From README: v6.10.0, MCP v4.1.0, RSS v4.5.0, AI push v5.0.0, multilingual v5.2.0, screening v6.5.0, push channels, GitHub Actions and Docker deployment, wantcat images. Source list unverified."
+enrichment_notes: 'API-verified: stars 62598, GPL-3.0, Python, last commit 2026-09-13, topics, homepage. From README: v6.10.0, MCP v4.1.0, RSS v4.5.0, AI push v5.0.0, multilingual v5.2.0, screening v6.5.0, push channels, GitHub Actions and Docker deployment, wantcat images. Source list unverified.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Rust vector database for high-performance similarity search with filtering and hybrid search
-github_url: "https://github.com/qdrant/qdrant"
+github_url: https://github.com/qdrant/qdrant
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, self-hosted]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 35239
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-10-23"
-docs_url: "https://qdrant.tech/documentation/"
+github_stars: 35260
+github_stars_last_30d: 3111
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://qdrant.tech/documentation/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,16 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source vector database written in Rust, positioned as a performance-focused, self-hostable alternative with a strong managed-cloud option
 best_for:
@@ -41,13 +52,18 @@ avoid_if:
   - You're already committed to a different database for other reasons and want to minimize the number of systems you operate — pgvector might let you avoid adding a new dedicated system entirely
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [milvus, weaviate, chroma, lancedb, pgvector]
+alternatives:
+  - milvus
+  - weaviate
+  - chroma
+  - lancedb
+  - pgvector
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Re-verified 2026-10-25: GitHub API 35239 stars, 799 open issues, last push 2026-10-23. Architecture and quantization sections rewritten from the current docs (TurboQuant from v1.18, 8-bit encoding from v1.20, rescoring defaults, Query API fusion) rather than the generator frames."
-added_date: "2026-06-13"
-last_reviewed: "2026-10-25"
+enrichment_notes: 'Re-verified 2026-10-25: GitHub API 35239 stars, 799 open issues, last push 2026-10-23. Architecture and quantization sections rewritten from the current docs (TurboQuant from v1.18, 8-bit encoding from v1.20, rescoring defaults, Query API fusion) rather than the generator frames.'
+added_date: '2026-06-13'
+last_reviewed: '2026-10-25'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

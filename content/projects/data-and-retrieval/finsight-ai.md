@@ -5,40 +5,47 @@ version_tracked: null
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A Spring Boot equity-research workspace with recoverable workflows, snapshot-bound reports, and hybrid pgvector retrieval"
-github_url: "https://github.com/juanjuandog/FinSight-AI"
+description: A Spring Boot equity-research workspace with recoverable workflows, snapshot-bound reports, and hybrid pgvector retrieval
+github_url: https://github.com/juanjuandog/FinSight-AI
 license: MIT
 primary_language: Java
-tags: [orchestration, retrieval, inference, battle-tested]
+tags:
+  - orchestration
+  - retrieval
+  - inference
+  - battle-tested
 maturity: beta
 cost_model: open-source
-github_stars: 1061
+github_stars: 555
 github_stars_last_30d: 0
-trending_score: 0
-last_commit: "2026-09-02"
+trending_score: 22
+last_commit: '2026-09-02'
 docs_url: null
 demo_url: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Treats the expensive model call as a distributed transaction with leases, fencing tokens, and versioned snapshots."
+  - Treats the expensive model call as a distributed transaction with leases, fencing tokens, and versioned snapshots.
 best_for:
-  - "You are running long research jobs that fail halfway and need stage-level recovery instead of restarting a paid run from scratch."
-  - "You are caching generated reports and need them invalidated when the underlying filings or metrics change."
-  - "You are building evidence-grounded answers and need every claim to resolve to a retrievable filing span with a trace."
+  - You are running long research jobs that fail halfway and need stage-level recovery instead of restarting a paid run from scratch.
+  - You are caching generated reports and need them invalidated when the underlying filings or metrics change.
+  - You are building evidence-grounded answers and need every claim to resolve to a retrievable filing span with a trace.
 avoid_if:
-  - "You are building a trading system, because the project states plainly that it is a research aid and its output is not investment advice."
-  - "You are outside the A-share market, since the data sources, filings, and metrics are specific to Chinese listed equities."
-  - "You need a hosted product, because this is a self-hosted Java and Python stack you operate yourself."
+  - You are building a trading system, because the project states plainly that it is a research aid and its output is not investment advice.
+  - You are outside the A-share market, since the data sources, filings, and metrics are specific to Chinese listed equities.
+  - You need a hosted product, because this is a self-hosted Java and Python stack you operate yourself.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: stars 1061, MIT, Java, last commit 2026-09-02, topics. From README: Java 17, Spring Boot 3.3.5, pgvector, named classes WorkflowOrchestrator, RedisBackedWorkflowLeaseService, StockAiAnalysisService, HybridRetrievalGateway, Redis Lua lease, snapshot hashes, FastAPI sidecar. Source files not read."
+enrichment_notes: 'API-verified: stars 1061, MIT, Java, last commit 2026-09-02, topics. From README: Java 17, Spring Boot 3.3.5, pgvector, named classes WorkflowOrchestrator, RedisBackedWorkflowLeaseService, StockAiAnalysisService, HybridRetrievalGateway, Redis Lua lease, snapshot hashes, FastAPI sidecar. Source files not read.'
 added_date: '2026-09-28'
 last_reviewed: '2026-09-28'
 added_by: maintainer

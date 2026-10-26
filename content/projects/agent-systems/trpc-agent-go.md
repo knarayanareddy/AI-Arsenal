@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "trpc-group"
+org_or_maintainer: trpc-group
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 48
+trending_score: 19
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: trpc-agent-go
-name: "trpc-agent-go"
+name: trpc-agent-go
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in"
-github_url: "https://github.com/trpc-group/trpc-agent-go"
+description: Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in
+github_url: https://github.com/trpc-group/trpc-agent-go
 license: Apache-2.0
 primary_language: Go
-tags: [retrieval, agents]
+tags:
+  - retrieval
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 1829
-last_commit: "2026-09-28"
-docs_url: "https://trpc-group.github.io/trpc-agent-go/"
+github_stars: 1877
+last_commit: '2026-10-26'
+docs_url: https://trpc-group.github.io/trpc-agent-go/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Go alternative to Python agent frameworks, spanning graph orchestration, protocols, evaluation, and observability"
-best_for: ["You run a Go service and want agent capability inside it, with streaming runners and context cancellation that fit your existing concurrency model.", "You need a graph runtime in Go with multi-conditional routing, because GraphAgent is positioned as the Go equivalent of LangGraph.", "You want agent-to-agent interoperability and a frontend protocol already wired, since A2A, AG-UI and MCP support are in the stack rather than add-ons."]
-avoid_if: ["Your agent ecosystem is Python, because the ecosystem of retrievers, tools and tutorials in this space is overwhelmingly Python-first.", "You need the newest framework features on day one, because at roughly 1.8k stars the surface is still consolidating.", "You need to pin prompt-cache savings in your budget, because the caching claim is about a specific automatic behaviour you should measure rather than trust."]
-enrichment_notes: "Apache-2.0 framework with broad, fast-moving features; interoperability and persistence require validation. Draft pending review."
+  - Go alternative to Python agent frameworks, spanning graph orchestration, protocols, evaluation, and observability
+best_for:
+  - You run a Go service and want agent capability inside it, with streaming runners and context cancellation that fit your existing concurrency model.
+  - You need a graph runtime in Go with multi-conditional routing, because GraphAgent is positioned as the Go equivalent of LangGraph.
+  - You want agent-to-agent interoperability and a frontend protocol already wired, since A2A, AG-UI and MCP support are in the stack rather than add-ons.
+avoid_if:
+  - Your agent ecosystem is Python, because the ecosystem of retrievers, tools and tutorials in this space is overwhelmingly Python-first.
+  - You need the newest framework features on day one, because at roughly 1.8k stars the surface is still consolidating.
+  - You need to pin prompt-cache savings in your budget, because the caching claim is about a specific automatic behaviour you should measure rather than trust.
+enrichment_notes: Apache-2.0 framework with broad, fast-moving features; interoperability and persistence require validation. Draft pending review.
 ---
 
 ## Overview

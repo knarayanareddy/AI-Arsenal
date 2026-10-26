@@ -1,52 +1,63 @@
 ---
 id: kestra-io-kestra
-name: "kestra"
+name: kestra
 version_tracked: null
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines"
-github_url: "https://github.com/kestra-io/kestra"
-license: "Apache-2.0"
+description: Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
+github_url: https://github.com/kestra-io/kestra
+license: Apache-2.0
 primary_language: Java
-org_or_maintainer: "kestra-io"
-tags: [orchestration, data]
+org_or_maintainer: kestra-io
+tags:
+  - orchestration
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 28401
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://kestra.io/docs"
+github_stars: 30008
+github_stars_last_30d: 1607
+trending_score: 73
+last_commit: '2026-10-26'
+docs_url: https://kestra.io/docs
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Event-driven orchestration and scheduling platform for data and AI pipelines, with durable execution semantics and a UI for long-running batch-plus-agent workloads."
+  - Event-driven orchestration and scheduling platform for data and AI pipelines, with durable execution semantics and a UI for long-running batch-plus-agent workloads.
 best_for:
-  - "You are scheduling recurring data and AI work - nightly embeddings, batch scoring, retrieval refreshes - and want a visual UI with run history and lineage instead of a cron job and a log file."
-  - "You need event-driven triggers so a new object or a webhook starts the pipeline, and you want the trigger logic in configuration rather than in a scheduler you maintain."
-  - "You are orchestrating hybrid batch and long-running agent steps and need one surface to see what is running, what failed, and where it stalled."
+  - You are scheduling recurring data and AI work - nightly embeddings, batch scoring, retrieval refreshes - and want a visual UI with run history and lineage instead of a cron job and a log file.
+  - You need event-driven triggers so a new object or a webhook starts the pipeline, and you want the trigger logic in configuration rather than in a scheduler you maintain.
+  - You are orchestrating hybrid batch and long-running agent steps and need one surface to see what is running, what failed, and where it stalled.
 avoid_if:
-  - "You only need a single job with a schedule, because a cron entry or a simple queue is less to run and to understand than a control plane."
-  - "You need deep per-task durability guarantees with version-pinned definitions, because the durability story here is good but shallower than a dedicated execution engine's."
-  - "You have no capacity to operate stateful infrastructure, since the platform requires a database, a server, and a worker pool with upgrades and backups to own."
+  - You only need a single job with a schedule, because a cron entry or a simple queue is less to run and to understand than a control plane.
+  - You need deep per-task durability guarantees with version-pinned definitions, because the durability story here is good but shallower than a dedicated execution engine's.
+  - You have no capacity to operate stateful infrastructure, since the platform requires a database, a server, and a worker pool with upgrades and backups to own.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 28401 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 20 GitHub topics including ai-agents, data-orchestration, workflow-automation. Trigger types, task catalog, control-flow semantics, and AI task types are from official docs; the platform was not deployed in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 28401 stars, Apache-2.0 license, Java primary language, last commit 2026-09-28, 20 GitHub topics including ai-agents, data-orchestration, workflow-automation. Trigger types, task catalog, control-flow semantics, and AI task types are from official docs; the platform was not deployed in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/kestra-io/kestra", "date": "2026-09-28", "description": "28,401 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/kestra-io/kestra
+    date: '2026-09-28'
+    description: 28,401 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,52 +1,65 @@
 ---
 id: mindee-doctr
-name: "doctr"
+name: doctr
 version_tracked: null
 artifact_type: library
 category: rag
 subcategory: document-processing
-description: "OCR library for documents that pairs a text-detection backend with a recognizer and reconstructs word-level geometry for downstream extraction"
-github_url: "https://github.com/mindee/doctr"
-license: "Apache-2.0"
+description: OCR library for documents that pairs a text-detection backend with a recognizer and reconstructs word-level geometry for downstream extraction
+github_url: https://github.com/mindee/doctr
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "mindee"
-tags: [vision, pytorch, rag]
+org_or_maintainer: mindee
+tags:
+  - vision
+  - pytorch
+  - rag
 maturity: production
 cost_model: open-source
-github_stars: 6366
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-09-28"
-docs_url: "https://mindee.github.io/doctr/"
+github_stars: 6395
+github_stars_last_30d: 29
+trending_score: 35
+last_commit: '2026-10-26'
+docs_url: https://mindee.github.io/doctr/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [vision, language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - vision
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "Document text recognition library with OCR predictors and post-processing for word-level geometry, used as a deterministic OCR baseline against VLM extractors."
+  - Document text recognition library with OCR predictors and post-processing for word-level geometry, used as a deterministic OCR baseline against VLM extractors.
 best_for:
-  - "You need bounding boxes and per-word confidence for every recognized token, because a downstream component consumes geometry rather than just text."
-  - "You are building a key-information-extraction pipeline where a layout classifier consumes recognized spans and their positions."
-  - "You want to serve OCR from either PyTorch or TensorFlow, or export a model to ONNX, and one maintained codebase covers all three."
+  - You need bounding boxes and per-word confidence for every recognized token, because a downstream component consumes geometry rather than just text.
+  - You are building a key-information-extraction pipeline where a layout classifier consumes recognized spans and their positions.
+  - You want to serve OCR from either PyTorch or TensorFlow, or export a model to ONNX, and one maintained codebase covers all three.
 avoid_if:
-  - "You are indexing scanned PDFs that need only searchable text and can live with word order confusion, where a page-level extractor is simpler and often better."
-  - "You need handwriting, low-light, or heavily degraded captures where a modern vision-language model is stronger."
-  - "You need GPU-batched throughput on millions of pages and have tuned a leaner pipeline already, since docTR optimizes for accuracy per page and clarity, not raw pages per second."
+  - You are indexing scanned PDFs that need only searchable text and can live with word order confusion, where a page-level extractor is simpler and often better.
+  - You need handwriting, low-light, or heavily degraded captures where a modern vision-language model is stronger.
+  - You need GPU-batched throughput on millions of pages and have tuned a leaner pipeline already, since docTR optimizes for accuracy per page and clarity, not raw pages per second.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (6366), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all nine topics were read from the GitHub API. Model families, the 32-pixel alignment detail, KIE scope, and ONNX export come from the official README and docs; no checkpoint was downloaded and no page was processed here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (6366), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all nine topics were read from the GitHub API. Model families, the 32-pixel alignment detail, KIE scope, and ONNX export come from the official README and docs; no checkpoint was downloaded and no page was processed here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/mindee/doctr", "date": "2026-09-28", "description": "6,366 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/mindee/doctr
+    date: '2026-09-28'
+    description: 6,366 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

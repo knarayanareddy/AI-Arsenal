@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Upsonic"
+org_or_maintainer: Upsonic
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,41 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 9
+trending_score: 16
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: upsonic
-name: "Upsonic"
+name: Upsonic
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Python framework for autonomous and traditional agents with workspace-confined file and shell access plus a layered OCR interface"
-github_url: "https://github.com/Upsonic/Upsonic"
+description: Python framework for autonomous and traditional agents with workspace-confined file and shell access plus a layered OCR interface
+github_url: https://github.com/Upsonic/Upsonic
 license: MIT
 primary_language: Python
-tags: [agents, llm]
+tags:
+  - agents
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 7955
-last_commit: "2026-06-18"
-docs_url: "https://docs.upsonic.ai"
+github_stars: 7964
+last_commit: '2026-06-18'
+docs_url: https://docs.upsonic.ai
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "An agent framework emphasizing reliability through task typing, structured outputs, and verification of results."
-best_for: ["You want an autonomous agent that operates on real files and shell commands and you need its reach confined to a directory you declare, because path traversal and dangerous commands are blocked.", "You need a document-processing step in the same framework as your agent, because the OCR interface is a layered pipeline rather than a separate tool you wire up.", "You want to start from an existing agent definition, because the prebuilt collection packages a skill, system prompt and first message per agent and accepts community contributions."]
-avoid_if: ["You need a framework with a large published ecosystem and long support history, because this project is a comparatively young MIT-licensed framework with a much smaller footprint.", "You want unconstrained agent execution across your machine, because the workspace restriction is a deliberate default you would have to work around.", "You need typed, schema-validated model output as the primary contract, because the API here is task-and-tool oriented rather than typed end to end."]
-enrichment_notes: "Repository, MIT license, and 2026-06-18 activity verified via the GitHub API on 2026-07-12. Reliability features help but do not guarantee correctness."
+  - An agent framework emphasizing reliability through task typing, structured outputs, and verification of results.
+best_for:
+  - You want an autonomous agent that operates on real files and shell commands and you need its reach confined to a directory you declare, because path traversal and dangerous commands are blocked.
+  - You need a document-processing step in the same framework as your agent, because the OCR interface is a layered pipeline rather than a separate tool you wire up.
+  - You want to start from an existing agent definition, because the prebuilt collection packages a skill, system prompt and first message per agent and accepts community contributions.
+avoid_if:
+  - You need a framework with a large published ecosystem and long support history, because this project is a comparatively young MIT-licensed framework with a much smaller footprint.
+  - You want unconstrained agent execution across your machine, because the workspace restriction is a deliberate default you would have to work around.
+  - You need typed, schema-validated model output as the primary contract, because the API here is task-and-tool oriented rather than typed end to end.
+enrichment_notes: Repository, MIT license, and 2026-06-18 activity verified via the GitHub API on 2026-07-12. Reliability features help but do not guarantee correctness.
 ---
 
 ## Overview

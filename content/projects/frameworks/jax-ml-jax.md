@@ -1,52 +1,61 @@
 ---
 id: jax-ml-jax
-name: "jax"
+name: jax
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "Apache-2.0 composable array framework whose jit, grad, vmap, and pmap transformations differentiate and compile Python programs"
-github_url: "https://github.com/jax-ml/jax"
-license: "Apache-2.0"
+description: Apache-2.0 composable array framework whose jit, grad, vmap, and pmap transformations differentiate and compile Python programs
+github_url: https://github.com/jax-ml/jax
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "jax-ml"
-tags: [research, training]
+org_or_maintainer: jax-ml
+tags:
+  - research
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 36358
-github_stars_last_30d: 0
-trending_score: 36
-last_commit: "2026-09-28"
-docs_url: "https://docs.jax.dev"
+github_stars: 36503
+github_stars_last_30d: 145
+trending_score: 45
+last_commit: '2026-10-26'
+docs_url: https://docs.jax.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Composable array-programming framework whose jit/grad/vmap transformations are the substrate for large-scale model training and differentiable simulators."
+  - Composable array-programming framework whose jit/grad/vmap transformations are the substrate for large-scale model training and differentiable simulators.
 best_for:
-  - "You want to express a model as pure functions over arrays and have differentiation, vectorization, and compilation applied automatically, so there is no imperative tape or module hierarchy to restructure."
-  - "You are training a model at scale across many accelerators and need pmap, sharding annotations, and jit compilation rather than a module-level distributed wrapper."
-  - "You need a differentiable simulator, a solver, or a Bayesian model where reverse-mode autodiff through control flow and higher-order derivatives are the hard part and JAX handles them structurally."
+  - You want to express a model as pure functions over arrays and have differentiation, vectorization, and compilation applied automatically, so there is no imperative tape or module hierarchy to restructure.
+  - You are training a model at scale across many accelerators and need pmap, sharding annotations, and jit compilation rather than a module-level distributed wrapper.
+  - You need a differentiable simulator, a solver, or a Bayesian model where reverse-mode autodiff through control flow and higher-order derivatives are the hard part and JAX handles them structurally.
 avoid_if:
-  - "Your project depends on a broad set of PyTorch-only libraries, custom CUDA operators written against that API, or the TorchScript and TorchServe ecosystem, because reimplementing against JAX is a port rather than a config change."
-  - "You are a Python engineer who finds eager execution and trace-based compilation debuggable, since a JAX error often points at a tracing stage rather than at the line that failed."
-  - "You need an enormous catalogue of prebuilt vision or language layers, because the model-definition layer in content/projects/frameworks/ is written against the dominant eager framework."
+  - Your project depends on a broad set of PyTorch-only libraries, custom CUDA operators written against that API, or the TorchScript and TorchServe ecosystem, because reimplementing against JAX is a port rather than a config change.
+  - You are a Python engineer who finds eager execution and trace-based compilation debuggable, since a JAX error often points at a tracing stage rather than at the line that failed.
+  - You need an enormous catalogue of prebuilt vision or language layers, because the model-definition layer in content/projects/frameworks/ is written against the dominant eager framework.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 36358 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, single topic 'jax', homepage docs.jax.dev. Tracing, jaxpr lowering, XLA compilation, pure callbacks, and sharding annotations are described in official docs; no accelerator kernel was benchmarked."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 36358 stars, Apache-2.0 license, Python primary language, last commit 2026-09-28, single topic ''jax'', homepage docs.jax.dev. Tracing, jaxpr lowering, XLA compilation, pure callbacks, and sharding annotations are described in official docs; no accelerator kernel was benchmarked.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/jax-ml/jax", "date": "2026-09-28", "description": "36,358 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/jax-ml/jax
+    date: '2026-09-28'
+    description: 36,358 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

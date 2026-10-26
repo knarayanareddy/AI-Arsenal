@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "HKUDS"
+org_or_maintainer: HKUDS
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,42 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 719
+trending_score: 55
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: nanobot
-name: "nanobot"
+name: nanobot
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "Lightweight self-hosted Python agent runtime with WebUI, chat channels, MCP tools, memory and an OpenAI-compatible API in one small core"
-github_url: "https://github.com/HKUDS/nanobot"
+description: Lightweight self-hosted Python agent runtime with WebUI, chat channels, MCP tools, memory and an OpenAI-compatible API in one small core
+github_url: https://github.com/HKUDS/nanobot
 license: MIT
 primary_language: Python
-tags: [self-hosted, agents]
+tags:
+  - self-hosted
+  - agents
 maturity: beta
 cost_model: self-hostable
-github_stars: 48647
-last_commit: "2026-09-28"
-docs_url: "https://nanobot.wiki"
+github_stars: 49366
+last_commit: '2026-10-26'
+docs_url: https://nanobot.wiki
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Lightweight Python chat-and-tools agent distributed as nanobot-ai"
-  - "Approachable alternative to heavyweight agent orchestration platforms"
-best_for: ["You want one personal agent reachable from Telegram, Discord, Slack, WeChat, Email and a browser at the same time, and you would rather run it yourself than rent a hosted assistant.", "You are building on top of a small agent core and want an OpenAI-compatible API surface plus MCP tool support without adopting a heavy framework.", "You need long-horizon scheduled goals and cron-driven automation running against a local or hosted model of your choosing."]
-avoid_if: ["You need a battle-tested framework with a large ecosystem behind it, because nanobot's differentiator is a small readable core rather than a broad integration surface.", "You cannot operate a long-running service, because the runtime is designed to be deployed and left running across channels and web clients.", "Your accuracy depends on a very specific agent architecture, because the framework is a general runtime with delegation and tools rather than a typed state machine."]
-enrichment_notes: "The README and metadata identify an actively developed lightweight project; integrations, model providers, and security posture should still be reviewed before production. Draft pending review."
+  - Lightweight Python chat-and-tools agent distributed as nanobot-ai
+  - Approachable alternative to heavyweight agent orchestration platforms
+best_for:
+  - You want one personal agent reachable from Telegram, Discord, Slack, WeChat, Email and a browser at the same time, and you would rather run it yourself than rent a hosted assistant.
+  - You are building on top of a small agent core and want an OpenAI-compatible API surface plus MCP tool support without adopting a heavy framework.
+  - You need long-horizon scheduled goals and cron-driven automation running against a local or hosted model of your choosing.
+avoid_if:
+  - You need a battle-tested framework with a large ecosystem behind it, because nanobot's differentiator is a small readable core rather than a broad integration surface.
+  - You cannot operate a long-running service, because the runtime is designed to be deployed and left running across channels and web clients.
+  - Your accuracy depends on a very specific agent architecture, because the framework is a general runtime with delegation and tools rather than a typed state machine.
+enrichment_notes: The README and metadata identify an actively developed lightweight project; integrations, model providers, and security posture should still be reviewed before production. Draft pending review.
 ---
 
 ## Overview

@@ -1,52 +1,64 @@
 ---
 id: google-research-scenic
-name: "scenic"
+name: scenic
 version_tracked: null
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "JAX vision research library that expresses data loading, model, loss, and metrics as whole composable functions rather than mutable modules"
-github_url: "https://github.com/google-research/scenic"
-license: "Apache-2.0"
+description: JAX vision research library that expresses data loading, model, loss, and metrics as whole composable functions rather than mutable modules
+github_url: https://github.com/google-research/scenic
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "google-research"
-tags: [vision, jax, research, training]
+org_or_maintainer: google-research
+tags:
+  - vision
+  - jax
+  - research
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 3838
-github_stars_last_30d: 0
-trending_score: 29
-last_commit: "2026-09-28"
-docs_url: "https://github.com/google-research/scenic"
+github_stars: 3847
+github_stars_last_30d: 9
+trending_score: 34
+last_commit: '2026-10-20'
+docs_url: https://github.com/google-research/scenic
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [actively-maintained]
+domain:
+  - vision
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "JAX-based computer-vision research library that expresses whole training pipelines — data loading, model, loss, metrics — as composable jit-compatible functions."
+  - JAX-based computer-vision research library that expresses whole training pipelines — data loading, model, loss, metrics — as composable jit-compatible functions.
 best_for:
-  - "You want a full training run for a vision model to compile as one graph, so augmentation, model, and loss fuse instead of round-tripping per step."
-  - "You are comparing architectures and want the whole run specified by config, so a change is a diff and not a rewritten training script."
-  - "You are porting a PyTorch vision implementation to JAX and want a library whose structure matches the paper's equations."
+  - You want a full training run for a vision model to compile as one graph, so augmentation, model, and loss fuse instead of round-tripping per step.
+  - You are comparing architectures and want the whole run specified by config, so a change is a diff and not a rewritten training script.
+  - You are porting a PyTorch vision implementation to JAX and want a library whose structure matches the paper's equations.
 avoid_if:
-  - "You need a large collection of ready-trained vision checkpoints with fine-tune recipes, where the Hugging Face Transformers path is faster to reach a result."
-  - "You are new to JAX, since Scenic assumes you are fluent in transformations, pytrees, and static shapes before you read a model."
-  - "Your task is an off-the-shelf classification run on ImageNet, where a short PyTorch loop and existing pretrained weights are the pragmatic choice."
+  - You need a large collection of ready-trained vision checkpoints with fine-tune recipes, where the Hugging Face Transformers path is faster to reach a result.
+  - You are new to JAX, since Scenic assumes you are fluent in transformations, pytrees, and static shapes before you read a model.
+  - Your task is an off-the-shelf classification run on ImageNet, where a short PyTorch loop and existing pretrained weights are the pragmatic choice.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Stars (3838), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all seven topics were read from the GitHub API. The functional input pipeline, model, loss, and metrics contract, whole-step compilation, pure callback mixed precision, and scan-based accumulation come from the official README and source layout; no baseline was trained here."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: Stars (3838), Apache-2.0 license, last commit 2026-09-28, primary language Python, and all seven topics were read from the GitHub API. The functional input pipeline, model, loss, and metrics contract, whole-step compilation, pure callback mixed precision, and scan-based accumulation come from the official README and source layout; no baseline was trained here.
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/google-research/scenic", "date": "2026-09-28", "description": "3,838 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/google-research/scenic
+    date: '2026-09-28'
+    description: 3,838 stars and last commit 2026-09-28 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

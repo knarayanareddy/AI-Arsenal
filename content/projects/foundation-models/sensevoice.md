@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "QwenAudio"
+org_or_maintainer: QwenAudio
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-10-24"
+github_stars_last_30d: 23
+trending_score: 17
+added_date: '2026-07-12'
+last_reviewed: '2026-10-24'
 added_by: maintainer
 status: active
 id: sensevoice
-name: "SenseVoice"
+name: SenseVoice
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A non-autoregressive multilingual speech-understanding model from Alibaba that jointly does ASR, spoken-language identification, emotion recognition"
+description: A non-autoregressive multilingual speech-understanding model from Alibaba that jointly does ASR, spoken-language identification, emotion recognition
 github_url: https://github.com/QwenAudio/SenseVoice
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "inference"
-  - "self-hosted"
+  - voice
+  - multimodal
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 9578
-last_commit: "2026-09-30"
+github_stars: 9601
+last_commit: '2026-09-30'
 docs_url: https://fun-audio-llm.github.io/
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A speech-understanding model that outputs transcription plus language, emotion, and audio-event labels in one fast non-autoregressive pass."
+  - A speech-understanding model that outputs transcription plus language, emotion, and audio-event labels in one fast non-autoregressive pass.
 best_for:
-  - "You need more than transcription, for example emotion and audio-event tags, from one low-latency model"
-  - "You want very fast multilingual recognition and can accept a non-autoregressive accuracy/latency trade-off"
+  - You need more than transcription, for example emotion and audio-event tags, from one low-latency model
+  - You want very fast multilingual recognition and can accept a non-autoregressive accuracy/latency trade-off
 avoid_if:
-  - "You cannot verify the repository's non-standard license for commercial use"
-  - "You need word-level timestamps and streaming as first-class features, which autoregressive models handle more directly"
-enrichment_notes: "Repository and 2026-09-30 activity verified via the GitHub API on 2026-10-24. License metadata is NOASSERTION; verify before commercial use. Speed comparisons vs. Whisper are project-reported."
+  - You cannot verify the repository's non-standard license for commercial use
+  - You need word-level timestamps and streaming as first-class features, which autoregressive models handle more directly
+enrichment_notes: Repository and 2026-09-30 activity verified via the GitHub API on 2026-10-24. License metadata is NOASSERTION; verify before commercial use. Speed comparisons vs. Whisper are project-reported.
 ---
 
 ## Overview

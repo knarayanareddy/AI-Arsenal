@@ -1,52 +1,62 @@
 ---
 id: danielmiessler-fabric
-name: "Fabric"
+name: Fabric
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: frameworks
-description: "MIT-licensed Go binary that runs named AI patterns against piped text from any shell, with a crowdsourced strategy library"
-github_url: "https://github.com/danielmiessler/Fabric"
-license: "MIT"
+description: MIT-licensed Go binary that runs named AI patterns against piped text from any shell, with a crowdsourced strategy library
+github_url: https://github.com/danielmiessler/Fabric
+license: MIT
 primary_language: Go
-org_or_maintainer: "danielmiessler"
-tags: [tool-use, agents]
+org_or_maintainer: danielmiessler
+tags:
+  - tool-use
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 44095
-github_stars_last_30d: 0
-trending_score: 37
-last_commit: "2026-09-27"
-docs_url: "https://docs.fabric.so"
+github_stars: 44440
+github_stars_last_30d: 345
+trending_score: 61
+last_commit: '2026-10-25'
+docs_url: https://docs.fabric.so
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
 ecosystem_role:
-  - "Pattern-based AI augmentation framework: a Go binary that ships an extensible library of chain-of-thought and extraction strategies usable from any shell."
+  - 'Pattern-based AI augmentation framework: a Go binary that ships an extensible library of chain-of-thought and extraction strategies usable from any shell.'
 best_for:
-  - "You are reviewing a document and want the same extraction or critique applied every time, with the strategy stored in a versioned text file your team can diff and review."
-  - "You write shell scripts and pipelines and need AI as a filter stage - piping curl output into a named pattern and getting structured text back, with no Python wrapper to maintain."
-  - "You want a shared strategy library across a team so that a well-tested prompt for summarization or threat modeling is written once rather than re-derived by each person."
+  - You are reviewing a document and want the same extraction or critique applied every time, with the strategy stored in a versioned text file your team can diff and review.
+  - You write shell scripts and pipelines and need AI as a filter stage - piping curl output into a named pattern and getting structured text back, with no Python wrapper to maintain.
+  - You want a shared strategy library across a team so that a well-tested prompt for summarization or threat modeling is written once rather than re-derived by each person.
 avoid_if:
-  - "You need autonomous multi-step tool use, because a Fabric invocation is a single pattern applied to input with no loop, no state, and no planning."
-  - "You need a governed, versioned execution layer with retries and audit trails, since a pattern run is stateless and the only record is whatever you pipe to a file."
-  - "You need per-tenant isolation or a hosted control plane, because the design assumes one user invoking a local binary against their own data."
+  - You need autonomous multi-step tool use, because a Fabric invocation is a single pattern applied to input with no loop, no state, and no planning.
+  - You need a governed, versioned execution layer with retries and audit trails, since a pattern run is stateless and the only record is whatever you pipe to a file.
+  - You need per-tenant isolation or a hosted control plane, because the design assumes one user invoking a local binary against their own data.
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "API-verified: 44095 stars, MIT license, Go primary language, last commit 2026-09-27, 5 GitHub topics, homepage danielmiessler.com. Front matter fields, plugin chain stages, and the web-extraction helper are read from official docs; no pattern was executed in this session."
-added_date: "2026-09-28"
-last_reviewed: "2026-09-28"
+enrichment_notes: 'API-verified: 44095 stars, MIT license, Go primary language, last commit 2026-09-27, 5 GitHub topics, homepage danielmiessler.com. Front matter fields, plugin chain stages, and the web-extraction helper are read from official docs; no pattern was executed in this session.'
+added_date: '2026-09-28'
+last_reviewed: '2026-09-28'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/danielmiessler/Fabric", "date": "2026-09-28", "description": "44,095 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/danielmiessler/Fabric
+    date: '2026-09-28'
+    description: 44,095 stars and last commit 2026-09-27 on GitHub as of 2026-09-28 (GitHub API)
 featured: false
 status: active
 ---

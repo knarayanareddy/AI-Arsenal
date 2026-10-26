@@ -1,50 +1,68 @@
 ---
 id: kilocode
-name: "Kilo Code"
+name: Kilo Code
 version_tracked: null
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway"
-github_url: "https://github.com/Kilo-Org/kilocode"
-license: "MIT"
+description: IDE-based agentic coding platform shipped as a VS Code and JetBrains extension with a model-agnostic gateway
+github_url: https://github.com/Kilo-Org/kilocode
+license: MIT
 primary_language: TypeScript
-org_or_maintainer: "Kilo"
-tags: [code-gen, agents, tool-use, routing]
+org_or_maintainer: Kilo
+tags:
+  - code-gen
+  - agents
+  - tool-use
+  - routing
 maturity: beta
 cost_model: freemium
-github_stars: 27155
-github_stars_last_30d: 0
-trending_score: 71
-last_commit: "2026-09-03"
-docs_url: "https://github.com/Kilo-Org/kilocode#readme"
+github_stars: 27755
+github_stars_last_30d: 600
+trending_score: 55
+last_commit: '2026-10-26'
+docs_url: https://github.com/Kilo-Org/kilocode#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The open extension-host alternative in the IDE coding-agent lane: an agent that runs inside VS Code and JetBrains with an optional gateway that bills model calls at provider rates rather than a markup."
+  - 'The open extension-host alternative in the IDE coding-agent lane: an agent that runs inside VS Code and JetBrains with an optional gateway that bills model calls at provider rates rather than a markup.'
 best_for:
-  - "Your team works in VS Code or JetBrains and wants agent-driven edits, terminal commands, and review inline, with the model chosen per task instead of fixed by vendor"
-  - "You want predictable model spend and prefer a gateway that passes provider rates through without a markup over paying a per-seat agent subscription"
+  - Your team works in VS Code or JetBrains and wants agent-driven edits, terminal commands, and review inline, with the model chosen per task instead of fixed by vendor
+  - You want predictable model spend and prefer a gateway that passes provider rates through without a markup over paying a per-seat agent subscription
 avoid_if:
-  - "You need the agent to run unattended or in CI — an extension host is bound to an interactive editor session, not a headless pipeline"
-  - "Your security policy forbids an editor extension holding repository-wide file access plus shell execution in the developer's own environment"
+  - You need the agent to run unattended or in CI — an extension host is bound to an interactive editor session, not a headless pipeline
+  - Your security policy forbids an editor extension holding repository-wide file access plus shell execution in the developer's own environment
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [cline, aider, opencode]
-integrates_with: [mcp-servers]
+alternatives:
+  - cline
+  - aider
+  - opencode
+integrates_with:
+  - mcp-servers
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stars (27,155), forks (3,112), licence (MIT), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Repository topics name vscode, jetbrains, and cli surfaces. Architecture and pricing claims derive from the README and repository description, not hands-on verification."
-added_date: "2026-09-03"
-last_reviewed: "2026-09-03"
+enrichment_notes: Stars (27,155), forks (3,112), licence (MIT), primary language (TypeScript), and last commit (2026-09-03) verified via the GitHub API on 2026-09-03. Repository topics name vscode, jetbrains, and cli surfaces. Architecture and pricing claims derive from the README and repository description, not hands-on verification.
+added_date: '2026-09-03'
+last_reviewed: '2026-09-03'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Kilo-Org/kilocode", "date": "2026-09-03", "description": "27,155 stars on GitHub as of 2026-09-03 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Kilo-Org/kilocode
+    date: '2026-09-03'
+    description: 27,155 stars on GitHub as of 2026-09-03 (GitHub API)
 featured: false
 status: active
 ---
