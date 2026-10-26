@@ -73,7 +73,7 @@ code --install-extension GitHub.copilot
 
 ## Strengths
 
-- What GitHub Copilot gives you that its headline description does not: copilot routes completions to fast custom models and chat/agent tasks to a selectable frontier-model pool; the coding agent runs in GitHub Actions-backed sandboxes, making changes on branches and opening PRs that follow branch protections, which is the part to check against your own pipeline before trusting the feature list.
+- What GitHub Copilot gives you that its headline description does not: copilot routes completions to fast custom models and chat/agent tasks to a selectable frontier-model pool; the coding agent runs in GitHub Actions-backed sandboxes, making changes on branches and opening PRs that follow branch protections.
 - Against `cursor`, `continue-dev`, `tabby-ml`, the difference that decides this is deployment model and cost rather than the feature list, and GitHub Copilot sits at the hosted end of that axis.
 - GitHub Copilot is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure GitHub Copilot's latency and its error rate under a degraded upstream before it carries production traffic.

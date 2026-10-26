@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the grammar is the product: generation interleaved with control flow buys guarantees that prompt instructions cannot, at the cost of writing templates.
 
 ## Overview
 
@@ -101,7 +101,7 @@ Follow the official documentation at https://github.com/guidance-ai/guidance for
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for structured-output.
+- Reception centred on the templating grammar — interleaving generation with control flow — which shaped the structured-output features later frameworks added.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

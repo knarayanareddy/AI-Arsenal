@@ -43,7 +43,7 @@ An open-source framework for packaging a model plus its pre/post-processing code
 
 ## Why It's in the Arsenal
 
-The entry exists because BentoML is A framework for packaging, deploying, and scaling AI model services. Read it beside `fly-io`, `modal`, `railway`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because BentoML is A framework for packaging, deploying, and scaling AI model services.
 
 ## Key Features
 

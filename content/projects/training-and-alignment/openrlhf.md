@@ -84,9 +84,7 @@ python -m openrlhf.cli.train_ppo_ray --pretrain <model> --reward_pretrain <rm> -
 
 ## Strengths
 
-- The implementation detail worth checking before adopting OpenRLHF is specific — ray orchestrates four model roles (actor, critic, reward, reference) as independent placement groups, each wrapped in DeepSpeed ZeRO for memory efficiency; generation is offloaded to vLLM engines that sync weights from the actor between rollout rounds. Supported algorithms include PPO, GRPO, REINFORCE++, DPO/IPO/cDPO, KTO, rejection sampling, and conditional SFT, all driven from a unified trainer CLI — because that is where the capability claim either survives contact with your data or does not.
-- It is a training-and-alignment entry in this catalog, so the comparison that matters is against the other training-and-alignment projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- The implementation detail worth checking before adopting OpenRLHF is specific — ray orchestrates four model roles (actor, critic, reward, reference) as independent placement groups, each wrapped in DeepSpeed ZeRO for memory efficiency; generation is offloaded to vLLM engines that sync weights from the actor between rollout rounds. Supported algorithms include PPO, GRPO, REINFORCE++, DPO/IPO/cDPO, KTO, rejection sampling, and conditional SFT, all driven from a unified trainer CLI The measurement that matters is rollout throughput versus weight-sync overhead between the vLLM engines and the actor, because that ratio decides whether a GRPO run finishes overnight or over a week.
 
 ## Limitations
 

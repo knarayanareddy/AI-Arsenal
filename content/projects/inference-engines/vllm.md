@@ -89,8 +89,6 @@ vllm serve meta-llama/Llama-3.1-8B-Instruct   # OpenAI-compatible API on :8000
 ## Strengths
 
 - Beyond the headline description, vLLM's architecture section is the honest source: pagedAttention divides the KV cache into fixed-size blocks (analogous to OS virtual-memory pages) rather than requiring contiguous memory per sequence, dramatically reducing memory waste and enabling continuous batching across many concurrent requests; supports tensor and pipeline parallelism for multi-GPU serving and an OpenAI-compatible API server.
-- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

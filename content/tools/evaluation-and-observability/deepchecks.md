@@ -48,7 +48,7 @@ The integration surface is an API rather than a vendored library unlike `evident
 
 ## Why It's in the Arsenal
 
-Deepchecks is catalogued as a testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality, which is the specific claim the rest of the entry has to support. Read it beside `evidently`, `ragas-rag-evaluation`, `deepeval`: the choice between them is a deployment and cost decision before it is a capability one.
+Deepchecks is catalogued because it treats validation as a test suite over data and model behaviour rather than a dashboard: checks return pass/fail, which is the form a CI gate can consume — the property that separates it from observability tools that only plot.
 
 ## Key Features
 
@@ -75,7 +75,7 @@ pip install deepchecks
 
 ## Strengths
 
-- What Deepchecks gives you that its headline description does not: each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration, which is the part to check against your own pipeline before trusting the feature list.
+- What Deepchecks gives you that its headline description does not: each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration.
 - Deepchecks overlaps `evidently`, `ragas-rag-evaluation`, `deepeval` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Deepchecks runs in-process on dataframes you pass it, and its LLM checks are thinner than its tabular and vision suites — that gap is what to verify before adopting it for RAG evaluation.
 - What this entry cannot give you is measured behaviour: measure Deepchecks's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -79,7 +79,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- The implementation detail worth reading before adopting SkillSpector is specific — skillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction-level attacks (injections, deceptive directives) and static analysis for script-level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting SkillSpector is specific — skillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction-level attacks (injections, deceptive directives) and static analysis for script-level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict The test is coverage of the threat model: a skill is Markdown instructions plus scripts, so detection has to catch both a malicious script and a prompt that talks the agent into running one.
 - No direct sibling is catalogued for SkillSpector in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - SkillSpector is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so SkillSpector's interface may still move; pin the version you build against rather than tracking latest.

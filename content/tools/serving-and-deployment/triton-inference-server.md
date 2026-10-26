@@ -46,7 +46,7 @@ NVIDIA's open-source inference server used across industry for production model 
 
 ## Why It's in the Arsenal
 
-The entry exists because NVIDIA Triton Inference Server is a nVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles. Read it beside `bentoml`, `ray-serve`, `kserve`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because NVIDIA Triton Inference Server is a nVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles.
 
 ## Key Features
 

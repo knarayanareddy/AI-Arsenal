@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and orchestration](./agents-and-orchestration/) | 27 entries | 2026-10-25 |
-| [cost and performance](./cost-and-performance/) | 17 entries | 2026-10-25 |
-| [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-10-25 |
-| [evaluation](./evaluation/) | 19 entries | 2026-10-25 |
-| [fine tuning](./fine-tuning/) | 14 entries | 2026-10-25 |
-| [inference and serving](./inference-and-serving/) | 28 entries | 2026-10-25 |
-| [prompting](./prompting/) | 21 entries | 2026-10-25 |
-| [rag and retrieval](./rag-and-retrieval/) | 23 entries | 2026-10-25 |
+| [agents and orchestration](./agents-and-orchestration/) | 27 entries | 2026-10-26 |
+| [cost and performance](./cost-and-performance/) | 17 entries | 2026-10-26 |
+| [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-10-26 |
+| [evaluation](./evaluation/) | 19 entries | 2026-10-26 |
+| [fine tuning](./fine-tuning/) | 14 entries | 2026-10-26 |
+| [inference and serving](./inference-and-serving/) | 28 entries | 2026-10-26 |
+| [prompting](./prompting/) | 21 entries | 2026-10-26 |
+| [rag and retrieval](./rag-and-retrieval/) | 23 entries | 2026-10-26 |
 
 ## Recently Added
 

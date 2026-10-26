@@ -74,7 +74,7 @@ vespa clone album-recommendation myapp && cd myapp && vespa deploy
 
 ## Strengths
 
-- What Vespa gives you that its headline description does not: documents are distributed across stateless container nodes (query processing) and stateful content nodes (index + ranking). Queries fan out; first-phase ranking runs over candidates cheaply, second-phase re-ranks the top-k with expression- or ONNX-based models on the node — moving compute to data instead of shipping candidates to a reranker service, which is the part to check against your own pipeline before trusting the feature list.
+- What Vespa gives you that its headline description does not: documents are distributed across stateless container nodes (query processing) and stateful content nodes (index + ranking). Queries fan out; first-phase ranking runs over candidates cheaply, second-phase re-ranks the top-k with expression- or ONNX-based models on the node — moving compute to data instead of shipping candidates to a reranker service.
 - Vespa overlaps `qdrant`, `weaviate`, `pinecone` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Pin the client library rather than the API: Vespa is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure Vespa's latency and its error rate under a degraded upstream before it carries production traffic.

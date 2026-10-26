@@ -5,7 +5,7 @@ version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: Multi-agent framework that simulates software-company roles for natural-language programming
+description: Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026
 github_url: "https://github.com/FoundationAgents/MetaGPT"
 license: MIT
 primary_language: Python
@@ -13,7 +13,7 @@ org_or_maintainer: null
 tags: [agents, orchestration, planning, code-gen]
 maturity: production
 cost_model: open-source
-github_stars: 68769
+github_stars: 71025
 github_stars_last_30d: 0
 trending_score: 40
 last_commit: "2026-01-21"
@@ -41,7 +41,7 @@ corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: "MetaGPT originated as a paper ('MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework') with continued academic output (AFlow accepted at ICLR 2025, further papers at NeurIPS/ICML 2025 per third-party coverage), and the GitHub repo shows active issue activity through June 2026, confirming both research-origin and ongoing maintenance."
 added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
@@ -79,25 +79,34 @@ pip install metagpt
 
 ## Key Use Cases
 
-1. **Depending on it safely**: the work is the boundary — which calls go through MetaGPT, what happens when it is slow, and what your system does instead, since those three answers determine whether adopting it is cheap or expensive.
-2. **What the MetaGPT scenarios have in common**: each separates building your own loop from adopting one, which is the decision this layer actually forces on you.
-3. **Choosing between candidates**: compare MetaGPT against `langgraph`, `crewai` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
+1. **Turning a one-line requirement into a documented spec**: the multi-role pipeline produces user stories, requirements, design and API documents, which is a deliverable even when the code it generates is not usable.
+2. **Research on SOP-constrained multi-agent collaboration**: "Code = SOP(Team)" is a published thesis with code, so it is a reproducible baseline for comparing structured role pipelines against free-form agent chatter.
+3. **Prototyping a product spec from a prompt**: faster and cheaper than a full agent coding loop when what the team needs is a structured brief to edit.
+4. **Teaching multi-agent orchestration**: the role sequence and shared message pool are visible in the code, which makes the framework easier to explain than an emergent system.
+5. **Workflows where artefacts must exist between steps**: requiring a design document before implementation is a constraint that most frameworks leave to the prompt, and here it is structural.
+6. **Agent workflow research**: AFlow (ICLR 2025 oral) is part of the same line of work and is interesting independently of the product framing.
 
 ## Strengths
 
-- What MetaGPT gives you that reading the feature list does not: agents are organized into role-based pipelines mirroring a software team's division of labor; a shared message pool and structured document artifacts (requirements docs, design docs) flow between roles in a defined sequence, constraining the otherwise open-ended nature of multi-agent collaboration, which is the part you have to evaluate against your own workload.
-- Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- The role-and-SOP structure is a real opinion about how to constrain multi-agent systems, and it produces intermediate artefacts that can be reviewed rather than only an end result.
+- Strong research record: MetaGPT, AFlow (ICLR 2025 oral, AOT and SPO papers) all ship code in or alongside this repository, which makes claims checkable.
+- 71k stars and an MIT licence put it among the most visible multi-agent projects, so examples and discussion are abundant.
+- The "software company" framing is a good fit for demos and for the specific task of producing a spec from a requirement.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the MetaGPT footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running MetaGPT against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Where MetaGPT overlaps `langgraph`, `crewai`, the overlap is real and choosing between them on feature lists alone is the mistake; the deciding axis is usually operational.
+- **Development has effectively stopped.** The last push was 2026-01-21, nine months before this review; the release notes stop at product announcements from 2025, and the Python ceiling is `<3.12`, which increasingly means an unsupported interpreter.
+- **The commercial successor is the real product.** The team's energy went to MGX (mgx.dev) and the research papers, so the open repository is a reference implementation you inherit rather than a maintained dependency.
+- **Role-play is not engineering.** The pipeline generates plausible documents; whether they correspond to working software is a separate question, and the published evaluations target benchmark tasks rather than production codebases.
+- **Token cost grows with role count.** Every role reads and writes into the shared message pool, so a five-role run is many model calls before any code exists.
+- **137 open issues with no active triage** is consistent with an archived-in-practice project; bugs you hit are yours.
+- **Alternatives have moved on.** `langgraph`, `crewai` and `openhands` all cover adjacent ground with active maintenance, and the honest reason to pick MetaGPT now is research reproduction, not production use.
 
 ## Relation to the Arsenal
 
-MetaGPT is a multi-agent framework that encodes software-company SOPs into role-based development agents. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+A research artefact more than a default choice: compare it with `langgraph` for explicit graph-based orchestration, `crewai` for role-based agents with active development, and `openhands` when the task is actually writing code in a repository. `autogen` and `smolagents` cover the conversational multi-agent end of the same space.
+
+The natural use is as a baseline in an evaluation of agent architectures — and that is a different product decision from adopting it.
 
 ## Resources
 

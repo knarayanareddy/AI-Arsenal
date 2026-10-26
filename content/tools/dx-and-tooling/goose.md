@@ -73,7 +73,7 @@ goose configure && goose session
 
 ## Strengths
 
-- What Goose gives you that its headline description does not: a Rust agent core maintains the task loop and tool registry; extensions are MCP servers (developer tools, browser, memory, custom APIs), and the same core powers the CLI and the desktop app so workflows transfer between them, which is the part to check against your own pipeline before trusting the feature list.
+- What Goose gives you that its headline description does not: a Rust agent core maintains the task loop and tool registry; extensions are MCP servers (developer tools, browser, memory, custom APIs), and the same core powers the CLI and the desktop app so workflows transfer between them.
 - Goose overlaps `claude-code`, `aider`, `openai-codex-cli` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Goose is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so Goose's interface may still move; pin the version you build against rather than tracking latest.

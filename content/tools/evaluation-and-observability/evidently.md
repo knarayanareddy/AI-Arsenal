@@ -46,7 +46,7 @@ A veteran open-source ML-observability framework that expanded into LLM evaluati
 
 ## Why It's in the Arsenal
 
-Evidently is a open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge. Read it beside `deepchecks`, `phoenix`, `ragas-rag-evaluation`: the choice between them is a deployment and cost decision before it is a capability one.
+Evidently is a open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge.
 
 ## Key Features
 
@@ -73,7 +73,7 @@ pip install evidently
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Evidently is specific — metrics compute over pandas-friendly datasets (reference vs current for drift); LLM descriptors run per-row evaluators including judge prompts; results serialize as JSON/HTML reports or pass/fail test suites, making evaluation a pipeline artifact rather than a dashboard-only activity — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Evidently is specific — metrics compute over pandas-friendly datasets (reference vs current for drift); LLM descriptors run per-row evaluators including judge prompts; results serialize as JSON/HTML reports or pass/fail test suites, making evaluation a pipeline artifact rather than a dashboard-only activity What to check is whether the numeric metrics transfer: drift and classification quality are mature, and the LLM metrics sit on top as newer additions with less field history behind them.
 - Against `deepchecks`, `phoenix`, `ragas-rag-evaluation`, the difference is scope: Evidently monitors drift and data quality over time, Ragas scores retrieval quality, and Phoenix traces requests.
 - The open-source library produces reports and test suites but ships no scheduler or alerting, so wiring drift checks into a pipeline is work you own.
 - What this entry cannot give you is measured behaviour: measure Evidently's latency and its error rate under a degraded upstream before it carries production traffic.

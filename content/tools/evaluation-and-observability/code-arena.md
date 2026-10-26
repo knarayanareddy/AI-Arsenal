@@ -74,7 +74,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- What Code Arena gives you that its headline description does not: models are pitted against shared coding tasks or against each other, with results aggregated into comparative rankings, which is the part to check against your own pipeline before trusting the feature list.
+- What Code Arena gives you that its headline description does not: models are pitted against shared coding tasks or against each other, with results aggregated into comparative rankings.
 - No direct sibling is catalogued for Code Arena in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Code Arena is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so Code Arena's interface may still move; pin the version you build against rather than tracking latest.

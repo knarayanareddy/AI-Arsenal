@@ -41,13 +41,11 @@ status: active
 
 ## Overview
 
-LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform.
-
-Treat LangSmith Hub as a service with a schema, not as code you own unlike `langfuse-prompts`, `promptlayer`; on the prompt-management path; under a freemium cost model; with `langsmith-hub`, `name`, `langsmith`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform. Prompts are stored as versioned objects pulled by handle at runtime, so a prompt change ships without a code deploy, and the same store holds the datasets that LangSmith's evaluators run against.
 
 ## Why It's in the Arsenal
 
-The entry exists because LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications. Read it beside `langfuse-prompts`, `promptlayer`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications.
 
 ## Key Features
 
@@ -103,7 +101,7 @@ Follow the official documentation at https://docs.smith.langchain.com/ for the a
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for prompt-management.
+- Reception is tied to LangSmith: teams use the hub because traces already live in the same product, and its public prompt gallery is the main draw for people outside the LangChain stack.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

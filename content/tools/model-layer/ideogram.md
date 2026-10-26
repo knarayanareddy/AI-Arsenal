@@ -72,7 +72,7 @@ A diffusion-based image generation model accessed via a hosted API/app; text-ren
 
 ## Strengths
 
-- What Ideogram gives you that its headline description does not: a diffusion-based image generation model accessed via a hosted API/app; text-rendering reliability comes from targeted training and architecture choices specific to the provider, which is the part to check against your own pipeline before trusting the feature list.
+- What Ideogram gives you that its headline description does not: a diffusion-based image generation model accessed via a hosted API/app; text-rendering reliability comes from targeted training and architecture choices specific to the provider.
 - No direct sibling is catalogued for Ideogram in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Ideogram is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Ideogram's latency and its error rate under a degraded upstream before it carries production traffic.

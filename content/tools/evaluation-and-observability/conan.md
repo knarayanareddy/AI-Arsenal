@@ -74,7 +74,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Conan is specific — runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Conan is specific — runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes The limit is scope: a live view helps one developer watch one session, and nothing here aggregates across users or retains history for a post-mortem.
 - No direct sibling is catalogued for Conan in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Conan means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - Marked beta, so Conan's interface may still move; pin the version you build against rather than tracking latest.

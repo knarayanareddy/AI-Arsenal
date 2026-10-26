@@ -6,15 +6,15 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-10-25 |
-| [by job](./by-job/) | 14 entries | 2026-10-25 |
-| [by stack](./by-stack/) | 9 entries | 2026-10-25 |
-| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-25 |
-| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-25 |
-| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-25 |
-| [model layer](./model-layer/) | 34 entries | 2026-10-25 |
-| [orchestration](./orchestration/) | 40 entries | 2026-10-25 |
-| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-25 |
+| [by cost](./by-cost/) | 5 entries | 2026-10-26 |
+| [by job](./by-job/) | 14 entries | 2026-10-26 |
+| [by stack](./by-stack/) | 9 entries | 2026-10-26 |
+| [data ingestion](./data-ingestion/) | 39 entries | 2026-10-26 |
+| [dx and tooling](./dx-and-tooling/) | 54 entries | 2026-10-26 |
+| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-10-26 |
+| [model layer](./model-layer/) | 34 entries | 2026-10-26 |
+| [orchestration](./orchestration/) | 40 entries | 2026-10-26 |
+| [serving and deployment](./serving-and-deployment/) | 42 entries | 2026-10-26 |
 
 ## Recently Added
 
@@ -62,7 +62,7 @@ _No star-tracked entries yet._
 - [Awesome-AITools](./dx-and-tooling/awesome-aitools.md) — Curated bilingual index of AI applications, agent skills and developer utilities across major model ecosystems
 - [awesome-opensource-ai](./dx-and-tooling/awesome-opensource-ai.md) — Opinionated index of genuinely open-source AI models, serving engines, RAG frameworks and MLOps tooling
 - [AWS Bedrock](./serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
-- [Axolotl](./model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [Axolotl](./model-layer/axolotl.md) — YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
 - [AxonHub](./serving-and-deployment/axonhub.md) — Go-based LLM gateway translating provider schemas, failing over automatically and metering spend per key
 - [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [BAML](./dx-and-tooling/baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
@@ -101,7 +101,7 @@ _No star-tracked entries yet._
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
 - [DB-GPT](./orchestration/db-gpt.md) — Agentic data framework for private text-to-SQL, schema-linked RAG and multi-model serving
 - [Deepchecks](./evaluation-and-observability/deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
-- [DeepSpeed](./model-layer/deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- [DeepSpeed](./model-layer/deepspeed.md) — Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks
 - [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
 - [dlt](./data-ingestion/dlt.md) — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
 - [DocETL](./data-ingestion/docetl.md) — Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema
@@ -171,7 +171,7 @@ _No star-tracked entries yet._
 - [Letta](./orchestration/letta.md) — Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK
 - [Liger Kernel](./model-layer/liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - [LiteLLM](./serving-and-deployment/litellm.md) — A proxy and SDK for routing requests across many LLM providers
-- [LLaMA-Factory](./model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [LLaMA-Factory](./model-layer/llamafactory.md) — No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment
 - [Llama Guard](./evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
 - [LLM Guard](./evaluation-and-observability/llm-guard.md) — Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more
 - [llmfit](./model-layer/llmfit.md) — Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use
@@ -179,10 +179,10 @@ _No star-tracked entries yet._
 - [LM Format Enforcer](./model-layer/lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [LM Studio](./dx-and-tooling/lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
 - [LMCache](./serving-and-deployment/lmcache.md) — KV cache layer that persists and shares prefix state across vLLM instances and storage tiers
-- [LoRAX](./serving-and-deployment/lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
+- [LoRAX](./serving-and-deployment/lorax.md) — Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead
 - [Manus](./orchestration/manus.md) — AI-powered platform for building full-stack web applications and automating tasks
 - [marimo](./dx-and-tooling/marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
-- [MarkItDown](./data-ingestion/markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
+- [MarkItDown](./data-ingestion/markitdown.md) — Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second
 - [Marqo](./data-ingestion/marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
 - [Megatron-LM](./model-layer/megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
@@ -220,7 +220,7 @@ _No star-tracked entries yet._
 - [OrchestraML](./orchestration/orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
 - [Orchestration Tools](./by-job/orchestration.md) — Curated tools for orchestration workflows in AI engineering
 - [Outlines](./model-layer/outlines.md) — A library for constrained generation and structured outputs with LLMs
-- [PEFT](./model-layer/peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PEFT](./model-layer/peft.md) — Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference
 - [Pinecone](./data-ingestion/pinecone.md) — A managed vector database for production semantic search applications
 - [Playwright](./data-ingestion/playwright.md) — Microsoft's browser automation framework — one API over Chromium, Firefox and WebKit, with auto-waiting, trace replay and storage-state reuse
 - [Portkey](./serving-and-deployment/portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
@@ -239,9 +239,9 @@ _No star-tracked entries yet._
 - [PyTorch Lightning](./model-layer/pytorch-lightning.md) — The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing
 - [Qursor](./dx-and-tooling/qursor.md) — AI-powered UI context for faster front-end development with agents
 - [Qwen 3](./model-layer/qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
-- [Ragas](./evaluation-and-observability/ragas.md) — Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines
+- [Ragas](./evaluation-and-observability/ragas.md) — Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks
 - [RAGatouille](./data-ingestion/ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
-- [Railway](./serving-and-deployment/railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [Railway](./serving-and-deployment/railway.md) — Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving
 - [RamaLama](./serving-and-deployment/ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Ray](./serving-and-deployment/ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Ray Serve](./serving-and-deployment/ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python

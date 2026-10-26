@@ -46,7 +46,7 @@ One of the leading open-model clouds: serverless per-token inference across 200+
 
 ## Why It's in the Arsenal
 
-Together AI is a inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints. Read it beside `fireworks-ai`, `openrouter`, `replicate`: the choice between them is a deployment and cost decision before it is a capability one.
+Together AI is a inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints.
 
 ## Key Features
 
@@ -73,7 +73,7 @@ pip install together
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Together AI is specific — together runs its own optimized inference kernels and scheduling across large GPU fleets; serverless requests share pooled capacity per model, while dedicated endpoints pin models to reserved GPUs. Fine-tunes produce hosted checkpoints servable via the same API — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Together AI is specific — together runs its own optimized inference kernels and scheduling across large GPU fleets; serverless requests share pooled capacity per model, while dedicated endpoints pin models to reserved GPUs. Fine-tunes produce hosted checkpoints servable via the same API The decision rests on the gap between serverless and dedicated: pooled capacity has variable latency under load, and a dedicated endpoint is the only way to pin p99 on this platform.
 - Together AI's honest comparison set is `fireworks-ai`, `openrouter`, `replicate`; what separates them is rarely capability, it is what you must operate.
 - Depending on Together AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Together AI's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -76,7 +76,7 @@ pip install runpod
 
 ## Strengths
 
-- What RunPod gives you that its headline description does not: pods are containers on dedicated GPUs in RunPod's secure or community (vetted third-party) datacenters; serverless packages your handler in a worker image that the platform autoscales per queue depth, billing only active seconds, which is the part to check against your own pipeline before trusting the feature list.
+- What RunPod gives you that its headline description does not: pods are containers on dedicated GPUs in RunPod's secure or community (vetted third-party) datacenters; serverless packages your handler in a worker image that the platform autoscales per queue depth, billing only active seconds.
 - Against `modal`, `replicate`, `fireworks-ai`, the difference that decides this is deployment model and cost rather than the feature list, and RunPod sits at the hosted end of that axis.
 - RunPod documents a client surface through `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
 - What this entry cannot give you is measured behaviour: measure RunPod's latency and its error rate under a degraded upstream before it carries production traffic.

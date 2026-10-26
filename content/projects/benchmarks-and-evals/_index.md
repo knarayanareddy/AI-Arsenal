@@ -75,7 +75,7 @@ Before selecting an evaluation/observability platform:
 - [LangSmith](./langsmith-platform.md) — LangChain's observability, evaluation, prompt and agent-deployment platform — cloud by default, self-hosted on the enterprise plan
 - [LightEval](./lighteval.md) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 - [lmms-eval](./lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
-- [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
+- [Lunary](./lunary.md) — Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC
 - [mcpkernel](./mcpkernel.md) — An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations
 - [medusa](./medusa.md) — A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks

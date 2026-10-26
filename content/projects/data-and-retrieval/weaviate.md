@@ -88,8 +88,6 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 ## Strengths
 
 - Beyond the headline description, Weaviate's architecture section is the honest source: combines HNSW-based vector indexing with an inverted-index-based keyword search engine, fusing both in hybrid queries; a module system allows plugging in embedding providers or generative models directly into the query flow (e.g. retrieve-then-generate in a single API call) rather than requiring separate application-layer orchestration.
-- It is a data-and-retrieval entry in this catalog, so the comparison that matters is against the other data-and-retrieval projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

@@ -88,7 +88,6 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 
 - Beyond the headline description, LMDeploy's architecture section is the honest source: provides both a Python inference engine and a serving component with support for continuous batching, tensor parallelism, and quantization formats (AWQ, W4A16) targeting efficient multi-GPU deployment.
 - Sits in the inference-engine phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

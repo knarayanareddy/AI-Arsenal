@@ -77,7 +77,7 @@ Follow the official documentation at https://docs.windsurf.com/windsurf/getting-
 
 ## Strengths
 
-- What Windsurf gives you that its headline description does not: cascade combines a repo index, a trace of your recent editor actions, and tool access (terminal, browser preview, MCP) so the agent can continue multi-step work with less prompt engineering; edits stream as reviewable diffs, which is the part to check against your own pipeline before trusting the feature list.
+- What Windsurf gives you that its headline description does not: cascade combines a repo index, a trace of your recent editor actions, and tool access (terminal, browser preview, MCP) so the agent can continue multi-step work with less prompt engineering; edits stream as reviewable diffs.
 - Windsurf's honest comparison set is `cursor`, `github-copilot`, `cline`; what separates them is rarely capability, it is what you must operate.
 - Windsurf is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Windsurf's latency and its error rate under a degraded upstream before it carries production traffic.

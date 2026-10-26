@@ -74,7 +74,7 @@ The pipeline is fetch to parse to normalise, and each stage drops information; t
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Taste Lab is specific — analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Taste Lab is specific — analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent What to check is whether the extracted system can regenerate a page — colours and a type scale are easy, spacing rules and responsive breakpoints are where the summary thins out.
 - No direct sibling is catalogued for Taste Lab in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Taste Lab means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - Marked beta, so Taste Lab's interface may still move; pin the version you build against rather than tracking latest.

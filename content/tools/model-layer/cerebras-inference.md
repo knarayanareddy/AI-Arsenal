@@ -46,7 +46,7 @@ Cerebras applies its wafer-scale engine (a single dinner-plate-sized chip with 4
 
 ## Why It's in the Arsenal
 
-The entry exists because Cerebras Inference is a wafer-scale-engine inference API claiming the fastest open-model token rates available. Read it beside `groq`, `together-ai`, `fireworks-ai`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Cerebras Inference is a wafer-scale-engine inference API claiming the fastest open-model token rates available.
 
 ## Key Features
 

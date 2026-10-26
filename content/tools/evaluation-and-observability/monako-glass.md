@@ -74,7 +74,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Monako Glass is specific — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Monako Glass is specific — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure The honest limit is that qualitative inspection does not scale past the sessions someone looks at, so the useful question is how the overlay links a visual defect back to a specific request.
 - No direct sibling is catalogued for Monako Glass in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Monako Glass is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so Monako Glass's interface may still move; pin the version you build against rather than tracking latest.

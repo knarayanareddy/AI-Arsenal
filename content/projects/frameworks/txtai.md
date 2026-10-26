@@ -91,8 +91,6 @@ pip install txtai
 ## Strengths
 
 - Beyond the headline description, txtai's architecture section is the honest source: provides an embeddable 'embeddings database' that can run in-process (SQLite-backed) or scale to external vector stores, combined with a workflow API for chaining semantic search with LLM calls, positioned as a lighter-weight alternative to a full RAG-framework-plus-vector-database stack.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

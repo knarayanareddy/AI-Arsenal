@@ -70,7 +70,7 @@ Models are served on Fireworks-operated GPU infrastructure behind an API compati
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Fireworks AI is specific — models are served on Fireworks-operated GPU infrastructure behind an API compatible with common client conventions, with fine-tuning jobs submitted and tracked through the same platform — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Fireworks AI is specific — models are served on Fireworks-operated GPU infrastructure behind an API compatible with common client conventions, with fine-tuning jobs submitted and tracked through the same platform The checks are per-token price at your context length and whether the fast variants are accurate enough on your task — the speed comes from serving optimisations that can change outputs.
 - No direct sibling is catalogued for Fireworks AI in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Fireworks AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Fireworks AI's latency and its error rate under a degraded upstream before it carries production traffic.

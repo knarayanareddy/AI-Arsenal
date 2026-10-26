@@ -41,9 +41,7 @@ status: active
 
 ## Overview
 
-An open-source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines.
-
-Treat Giskard as a service with a schema, not as code you own on the evaluation, security-and-guardrails path; under a open-source cost model; with `giskard`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+An open-source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines. Scans are generated per model type (LLM, text classification, tabular), and each detected issue is emitted as a reproducible test case that can be replayed as a regression.
 
 ## Why It's in the Arsenal
 
@@ -77,7 +75,7 @@ Follow the official documentation at https://github.com/Giskard-AI/giskard-oss f
 
 ## Strengths
 
-- What Giskard gives you that its headline description does not: giskard wraps a target model/application with a suite of adversarial and statistical test cases, producing a vulnerability report that can gate deployment in CI, which is the part to check against your own pipeline before trusting the feature list.
+- What Giskard gives you that its headline description does not: giskard wraps a target model/application with a suite of adversarial and statistical test cases, producing a vulnerability report that can gate deployment in CI.
 - No direct sibling is catalogued for Giskard in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Giskard scans models and datasets in-process; the continuous-scanning dashboards are the hosted product, so the open-source path is a scripted test run you wire into CI.
 - What this entry cannot give you is measured behaviour: measure Giskard's latency and its error rate under a degraded upstream before it carries production traffic.
@@ -102,7 +100,7 @@ Follow the official documentation at https://github.com/Giskard-AI/giskard-oss f
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for evaluation, security-and-guardrails.
+- Reception is strongest in LLM red-teaming and bias/robustness scanning, where Giskard's test suites are cited alongside promptfoo and garak — and weakest where a team wants metrics rather than automated attack generation.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

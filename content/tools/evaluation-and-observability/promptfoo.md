@@ -39,9 +39,7 @@ status: active
 
 ## Overview
 
-An open-source CLI and platform for regression-testing prompts and LLM outputs, with built-in support for red-teaming prompts against jailbreaks and injection.
-
-Treat promptfoo as a service with a schema, not as code you own on the evaluation path; under a open-source cost model; with `promptfoo`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+An open-source CLI and platform for regression-testing prompts and LLM outputs, with built-in support for red-teaming prompts against jailbreaks and injection. Assertions run from exact match to `llm-rubric` and `javascript` checks, targets can be provider SDKs or plain HTTP endpoints, and a CI step fails the build on a threshold you set.
 
 ## Why It's in the Arsenal
 
@@ -72,7 +70,7 @@ Test cases (prompt + assertions) are defined in config files; the CLI runs them 
 
 ## Strengths
 
-- What promptfoo gives you that its headline description does not: test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating, which is the part to check against your own pipeline before trusting the feature list.
+- What promptfoo gives you that its headline description does not: test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating.
 - No direct sibling is catalogued for promptfoo in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - promptfoo is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure promptfoo's latency and its error rate under a degraded upstream before it carries production traffic.

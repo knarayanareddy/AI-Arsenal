@@ -3,7 +3,7 @@ id: axolotl
 name: Axolotl
 type: tool
 job: [fine-tuning]
-description: Configuration-driven fine-tuning framework for many open-weight LLM families
+description: YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
 url: "https://github.com/axolotl-ai-cloud/axolotl"
 cost_model: open-source
 pricing_detail: Open source or free to start
@@ -20,7 +20,7 @@ github_url: "https://github.com/axolotl-ai-cloud/axolotl"
 alternatives: [llamafactory, mlx-lm, peft, torchtune, unsloth]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-06-30"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -38,7 +38,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the fine-tuning entry for Axolotl. Configuration-driven fine-tuning framework for many open-weight LLM families — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the reference for configuration-driven fine-tuning. One YAML covers LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, tracks new open-weight releases within weeks, and exports GGUF — assuming someone on the team owns the CUDA stack.
 
 ## Overview
 
@@ -72,29 +72,37 @@ Follow the official documentation at https://github.com/axolotl-ai-cloud/axolotl
 
 ## Use Cases
 
-1. **Integrating Axolotl**: the fine-tuning call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
-2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Axolotl.
-3. **Choosing between candidates**: Axolotl's comparison set is `llamafactory`, `mlx-lm`, `peft`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Fine-tuning a newly released open-weight model**: Axolotl's cadence is the feature — Gemma 4, Qwen3.5/3.6, GLM-4.6V, MiniCPM5 and Mistral Small 4 all landed within weeks of release, which is the difference between having an adapter and waiting for one.
+2. **LoRA on hardware that should not fit the model**: QLoRA plus CPU-staged FSDP2 loading lets a model larger than one GPU be loaded without materialising a quantised replica on every device.
+3. **Multi-node training without writing the parallelism**: FSDP2, HSDP, expert parallelism, Ulysses and Ringmaster context parallelism are YAML keys, not implementations you own.
+4. **Preference tuning on top of a base model**: DPO, GRPO (with an async variant the release notes measure at up to 58% faster steps), GDPO and EBFT are supported methods rather than recipes in a blog post.
+5. **Shipping an adapter into llama.cpp or Ollama**: `axolotl export` produces GGUF with optional quantisation, which closes the loop from training to the runtime most teams actually deploy on.
+6. **Reproducing a training run**: a YAML config plus a pinned image is the whole specification, which is what makes a run auditable months later.
 
 ## Strengths
 
-- Beyond the marketing, Axolotl's own notes are the useful part: a training run is fully specified by a YAML config (model, dataset, method, hyperparameters); Axolotl's runner reads the config and drives Hugging Face Transformers/PEFT under the hood.
-- Weighing Axolotl against `llamafactory`, `mlx-lm`, `peft`, `torchtune` comes down to one question: who runs the process when it breaks — you or the vendor.
-- Axolotl is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
-- What this entry cannot give you is measured behaviour: measure Axolotl's latency and its error rate under a degraded upstream before it carries production traffic.
+- Configuration-first without hiding the stack: the YAML is the interface, and underneath it drives Transformers, PEFT, DeepSpeed and FSDP directly, so escape hatches are ordinary PyTorch rather than a plugin API.
+- The breadth of modern techniques in one runner is unusual: NVFP4 LoRA, ScatterMoE and SonicMoE fused MoE LoRA, MixLoRA routed experts, selective activation checkpointing with CPU offload, and Ringmaster context parallelism for long sequences.
+- A release cadence that tracks model releases weekly rather than quarterly, with the changelog naming the papers and PRs behind each feature.
+- `uv`-first packaging removes the dependency-resolution pain that used to define the first day of fine-tuning a new model.
+- Apache-2.0 with a small, engaged maintainer team (249 open issues on a 12.6k-star project is a healthy ratio).
+- GGUF export and pluggable cloud launch interfaces mean the same config can end at a local runtime or a serverless job.
 
 ## Limitations / When NOT to Use
 
-- Axolotl is a training framework you run on your own GPUs, which means you own the environment: CUDA, flash-attention and DeepSpeed versions, plus multi-node launch.
-- Documentation for Axolotl describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- Where Axolotl overlaps `llamafactory`, `mlx-lm`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- **You own the environment.** CUDA, Flash Attention, TorchAO and DeepSpeed versions interact, and a training stack that works on one node type does not automatically work on the next.
+- **The YAML surface is large and moving.** Each release adds keys; a config is a snapshot of one version's semantics, so pin Axolotl alongside the model rather than resolving `latest`.
+- **No zero-code UI.** LLaMA-Factory wins when a non-specialist needs to launch a run; Axolotl assumes someone can read a config and a stack trace.
+- **Multi-node debugging is still multi-node debugging.** The framework removes the code, not the distributed-systems failure modes — NCCL hangs, topology mismatch and storage bottlenecks remain yours.
+- **Small team, fast pace.** The maintainers are responsive, and the roadmap is theirs; things you need may not be on it.
+- **Benchmarks for new techniques are the authors'.** "58% faster steps" or an NVFP4 accuracy claim depends on hardware and workload — measure it on your own cluster.
 
 ## Integration Patterns
 
-- *Wiring*: adopt Axolotl as a Python dependency or sidecar service against the `fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
-- *Alternatives*: `llamafactory`, `mlx-lm`, `peft`, `torchtune` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
-- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
-- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
+- *Wiring*: a config file plus a launch command in CI, with the resulting adapter or merged checkpoint pushed to a registry. Keep the Axolotl version pinned in the same commit as the config.
+- *Underneath*: it composes `peft` for adapters, `deepspeed` for ZeRO and offload, and FSDP2 for sharding — those are the layers to understand when a run does not fit.
+- *Alternatives*: `llamafactory` for a UI-driven workflow, `mlx-lm` for Apple Silicon, `torchtune` for a leaner PyTorch-native recipe set, and hosted fine-tuning APIs when you would rather not own a cluster.
+- *Downstream*: export to GGUF for llama.cpp and Ollama, or keep adapters separate for `vllm` and `sglang` multi-LoRA serving.
 
 ## Resources
 
@@ -104,7 +112,7 @@ Follow the official documentation at https://github.com/axolotl-ai-cloud/axolotl
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is practitioner-driven: configs circulate as starting points for each new open-weight release, and the changelog is read as a status report on which training techniques have reached usable form.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-10-25T13:48:42.773Z | Entries: 1300 | Schema version: 1.0.0
+Generated: 2026-10-26T15:14:34.346Z | Entries: 1300 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -60,7 +60,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 
 ### data-pipelines
-- Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- Marker (⭐40650, score:50) — Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode
 - cleanlab (⭐11682, score:50) — Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions
 - Scrapling (⭐84212, score:39) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
 - ClickHouse (⭐50123, score:38) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
@@ -68,8 +68,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### evaluation
 - OpenCompass (⭐7392, score:52) — LLM evaluation platform that runs 100+ benchmark datasets against local and hosted models under one configuration
-- MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
-- Terminal-Bench (⭐2606, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+- MTEB (⭐3476, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
+- Terminal-Bench (⭐2610, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐516, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
 
@@ -78,7 +78,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - Open R1 (Hugging Face) (⭐26399, score:68) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - Colossal-AI (HPC-AI Tech) (⭐41407, score:66) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
-- verl (⭐24007, score:60) — ByteDance-initiated RL post-training library implementing HybridFlow, with FSDP/Megatron backends and vLLM/SGLang rollouts for GRPO and PPO
+- SGLang (⭐38200, score:60) — LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
@@ -95,7 +95,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 
 ### rag
-- DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
+- DSPy (⭐38800, score:70) — Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos
 - AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
 - GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
@@ -139,11 +139,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
 
 ### fine-tuning
-- Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
-- DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- Axolotl — YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
+- DeepSpeed — Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks
 - Hugging Face Accelerate — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
 - Liger Kernel — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
-- LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
+- LLaMA-Factory — No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence

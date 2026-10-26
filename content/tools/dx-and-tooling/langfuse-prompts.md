@@ -46,7 +46,7 @@ Prompt versioning and management built into the open-source Langfuse observabili
 
 ## Why It's in the Arsenal
 
-The entry exists because Langfuse Prompts is a prompt management and versioning workflows inside the Langfuse observability platform. Read it beside `langsmith-hub`, `promptlayer`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Langfuse Prompts is a prompt management and versioning workflows inside the Langfuse observability platform.
 
 ## Key Features
 
@@ -102,7 +102,7 @@ Follow the official documentation at https://langfuse.com/docs/prompts for the a
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for prompt-management.
+- Reception follows Langfuse as a whole: the prompt registry is usually adopted because tracing already runs there, not as a standalone choice, and the self-hosted path is why teams with data-residency constraints pick it over a hosted hub.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

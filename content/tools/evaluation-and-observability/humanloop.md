@@ -70,7 +70,7 @@ Prompts are versioned in Humanloop's platform; evaluation runs and user feedback
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Humanloop is specific — prompts are versioned in Humanloop's platform; evaluation runs and user feedback are tied back to specific prompt versions, giving a closed loop from edit to measured impact — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Humanloop is specific — prompts are versioned in Humanloop's platform; evaluation runs and user feedback are tied back to specific prompt versions, giving a closed loop from edit to measured impact The test is whether the feedback loop closes: a prompt edit is only governed if a score, a reviewer comment or a production signal is attached to the version that changed.
 - No direct sibling is catalogued for Humanloop in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Humanloop means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Humanloop's latency and its error rate under a degraded upstream before it carries production traffic.

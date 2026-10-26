@@ -46,7 +46,7 @@ A constrained-decoding library: given a JSON Schema or regex, it computes which 
 
 ## Why It's in the Arsenal
 
-LM Format Enforcer is a token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. Read it beside `outlines`, `guidance`, `instructor`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
+LM Format Enforcer is a token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -73,8 +73,7 @@ pip install lm-format-enforcer
 
 ## Strengths
 
-- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — and that is where a capability claim either survives contact with your data or does not.
-- Weighing LM Format Enforcer against `outlines`, `guidance`, `instructor` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards The cost to measure is decode overhead: token masking runs per sampling step, and the slowdown is small for JSON and can grow for complex grammars.
 - The documented path into LM Format Enforcer runs through `vllm`, so the contract to test is the one those adapters expose.
 - Marked beta, so LM Format Enforcer's interface may still move; pin the version you build against rather than tracking latest.
 

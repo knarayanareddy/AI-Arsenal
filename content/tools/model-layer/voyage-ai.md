@@ -46,7 +46,7 @@ A specialist embeddings company (founded by Stanford's Tengyu Ma, acquired by Mo
 
 ## Why It's in the Arsenal
 
-The entry exists because Voyage AI is a embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB. Read it beside `cohere`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Voyage AI is a embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB.
 
 ## Key Features
 
@@ -73,7 +73,7 @@ pip install voyageai
 
 ## Strengths
 
-- What Voyage AI gives you that its headline description does not: contrastively trained embedding models with Matryoshka dimensionality and quantization options let you trade storage vs accuracy; rerankers apply cross-attention scoring on shortlists. APIs mirror the standard embed/rerank patterns so they slot into existing RAG pipelines, which is the part to check against your own pipeline before trusting the feature list.
+- What Voyage AI gives you that its headline description does not: contrastively trained embedding models with Matryoshka dimensionality and quantization options let you trade storage vs accuracy; rerankers apply cross-attention scoring on shortlists. APIs mirror the standard embed/rerank patterns so they slot into existing RAG pipelines.
 - Against `cohere`, the difference that decides this is deployment model and cost rather than the feature list, and Voyage AI sits at the hosted end of that axis.
 - Voyage AI documents a client surface through `langchain`, `llamaindex`, `pinecone`, which fixes the expected request and response contract so you are not inferring it from examples.
 - What this entry cannot give you is measured behaviour: measure Voyage AI's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -72,7 +72,7 @@ kubectl apply --server-side -f https://github.com/kserve/kserve/releases/latest/
 
 ## Strengths
 
-- What KServe gives you that its headline description does not: a controller reconciles InferenceService resources into Knative services (or raw deployments): each service wraps a model runtime container plus optional transformer/explainer sidecars, and an ingress gateway handles routing, revisions, and traffic splitting, which is the part to check against your own pipeline before trusting the feature list.
+- What KServe gives you that its headline description does not: a controller reconciles InferenceService resources into Knative services (or raw deployments): each service wraps a model runtime container plus optional transformer/explainer sidecars, and an ingress gateway handles routing, revisions, and traffic splitting.
 - KServe overlaps `ray-serve`, `triton-inference-server`, `bentoml` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - The documented path into KServe runs through `vllm`, so the contract to test is the one those adapters expose.
 - What this entry cannot give you is measured behaviour: measure KServe's latency and its error rate under a degraded upstream before it carries production traffic.

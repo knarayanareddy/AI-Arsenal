@@ -46,7 +46,7 @@ ShellMate is a closed-source, freemium AI assistant for the command line: it wat
 
 ## Why It's in the Arsenal
 
-ShellMate is catalogued as a aI-powered terminal assistant that suggests commands and explains outputs, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
+ShellMate is catalogued because the shell is where most operational work still happens, and an assistant that reads the session rather than a pasted snippet is a different product from a chat window. The catch is the same as every clipboard-adjacent tool: it sees whatever your terminal sees.
 
 ## Key Features
 
@@ -73,7 +73,7 @@ Its internals are not published. From the description it behaves as a wrapper ar
 
 ## Strengths
 
-- What ShellMate gives you that its headline description does not: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments, which is the part to check against your own pipeline before trusting the feature list.
+- What ShellMate gives you that its headline description does not: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments.
 - No direct sibling is catalogued for ShellMate in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - ShellMate is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so ShellMate's interface may still move; pin the version you build against rather than tracking latest.

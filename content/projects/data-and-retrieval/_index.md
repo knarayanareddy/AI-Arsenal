@@ -47,7 +47,7 @@ Before selecting a data/retrieval component:
 ### Most Popular
 
 - [Firecrawl](./firecrawl.md) — ⭐ 185940
-- [PaddleOCR](./paddleocr.md) — ⭐ 85010
+- [PaddleOCR](./paddleocr.md) — ⭐ 91703
 - [Crawl4AI](./crawl4ai.md) — ⭐ 84414
 - [Scrapling](./d4vinci-scrapling.md) — ⭐ 84212
 - [RAGFlow](./ragflow.md) — ⭐ 82655
@@ -105,7 +105,7 @@ Before selecting a data/retrieval component:
 - [LightRAG](./lightrag.md) — Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval
 - [Liteparse](./liteparse.md) — A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output
 - [LlamaParse](./llamaparse.md) — Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service
-- [Marker](./marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- [Marker](./marker.md) — Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode
 - [MemoryOS](./memoryos.md) — EMNLP 2025 memory operating system for personalized agents with hierarchical storage and retrieval
 - [DiskANN](./microsoft-diskann.md) — Disk-based approximate-nearest-neighbour index with filtered search, built for vector collections larger than one machine's memory
 - [Milvus](./milvus.md) — Distributed vector database in Go and C++ with HNSW and DiskANN indexes plus a single-binary Lite mode
@@ -116,7 +116,7 @@ Before selecting a data/retrieval component:
 - [open-connector](./open-connector.md) — A self-hostable connector gateway exposing 1500-plus SaaS providers and 10000-plus actions through SDK, CLI, MCP, and OpenAPI
 - [opendataloader-pdf](./opendataloader-project-opendataloader-pdf.md) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
 - [Orama](./orama.md) — A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server
-- [PaddleOCR](./paddleocr.md) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- [PaddleOCR](./paddleocr.md) — Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment
 - [PageIndex](./pageindex.md) — Vectorless, reasoning-based document indexing system for structured retrieval over long documents
 - [Pathway LLM App](./pathway-llm-app.md) — Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources
 - [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
@@ -134,7 +134,7 @@ Before selecting a data/retrieval component:
 - [annoy](./spotify-annoy.md) — Read-only memory-mapped approximate nearest-neighbour index built on a forest of random-projection trees
 - [Supabase](./supabase.md) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - [SurrealDB](./surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
-- [Surya](./surya.md) — Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker
+- [Surya](./surya.md) — 650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker
 - [Tesseract.js](./tesseract-js.md) — A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server
 - [Tesseract OCR](./tesseract-ocr.md) — The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
 - [tiktoken](./tiktoken.md) — OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation

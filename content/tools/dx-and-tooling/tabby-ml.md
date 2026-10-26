@@ -72,7 +72,7 @@ docker run -it --gpus all -p 8080:8080 -v $HOME/.tabby:/data tabbyml/tabby serve
 
 ## Strengths
 
-- What Tabby gives you that its headline description does not: a single binary/container runs model serving (llama.cpp-based), a code-index pipeline over your repos, and the API that IDE plugins consume; teams administer models, users, and analytics from a web console, which is the part to check against your own pipeline before trusting the feature list.
+- What Tabby gives you that its headline description does not: a single binary/container runs model serving (llama.cpp-based), a code-index pipeline over your repos, and the API that IDE plugins consume; teams administer models, users, and analytics from a web console.
 - Against `continue-dev`, `github-copilot`, the split is where the model runs: Tabby is a self-hosted server with its own GPU, Continue is a client that points at any provider, and Copilot is hosted.
 - Operating Tabby means owning the inference GPU, the repository index and the upgrade path for its IDE plugins.
 - What this entry cannot give you is measured behaviour: measure Tabby's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -75,7 +75,7 @@ Follow the official documentation at https://fly.io/docs/ for the authentication
 
 ## Strengths
 
-- What Fly.io gives you that its headline description does not: applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance, which is the part to check against your own pipeline before trusting the feature list.
+- What Fly.io gives you that its headline description does not: applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance.
 - Fly.io overlaps `bentoml`, `modal`, `railway`, `replicate` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Fly.io is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Fly.io's latency and its error rate under a degraded upstream before it carries production traffic.
@@ -100,7 +100,7 @@ Follow the official documentation at https://fly.io/docs/ for the authentication
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.
+- Reception centres on the deployment model — ship a container, get an anycast address — with Firecracker microVMs and cold-start behaviour the technical claims most often repeated.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

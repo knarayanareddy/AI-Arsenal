@@ -13,10 +13,10 @@ org_or_maintainer: "Embeddings-benchmark (HF-affiliated community)"
 tags: [evaluation, embeddings, retrieval]
 maturity: production
 cost_model: open-source
-github_stars: 3344
+github_stars: 3476
 github_stars_last_30d: 0
 trending_score: 50
-last_commit: "2026-07-07"
+last_commit: "2026-10-26"
 docs_url: "https://embeddings-benchmark.github.io/mteb/"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2210.07316"
@@ -77,22 +77,34 @@ results = mteb.evaluate(model, tasks=benchmark)
 
 ## Key Use Cases
 
-1. **Running it in anger**: the first real evaluation of MTEB is your own traffic, not the documentation's example; instrument latency, error rate and quality on a representative slice of data before the choice is load-bearing.
-2. **What dominates the decision**: `choosing`, `embedding`, `model`, `search` are the variables that actually move the outcome for MTEB in this phase, and none of them appear in a feature comparison.
-3. **Before committing**: pick the criterion that would make you abandon this choice, write it down, and check it against a representative slice of your own data — a catalog entry can tell you what is claimed, only a run tells you what is true.
-
+1. **Shortlisting embedding models for a retrieval stack**: read the retrieval split of MTEB(Multilingual) rather than the headline average, because a model that wins on classification or STS can lose on the task you actually run.
+2. **Sanity-checking a vendor claim**: a model card quoting an MTEB score can be reproduced with one `mteb.evaluate` call against the same task revision, which is the difference between a claim and a measurement.
+3. **Benchmarking your own fine-tune**: swap a trained encoder into the same task set and see whether the domain adaptation actually moved retrieval quality or only in-domain similarity.
+4. **Choosing a reranker**: the reranking tasks score cross-encoders the same way as bi-encoders, so the two stages of a retrieval pipeline can be compared on one scale.
+5. **Image retrieval selection**: MIEB extends the harness to vision-language encoders, which matters when a multimodal index is part of the plan.
+6. **Regression-gating an embedding upgrade**: run the same task subset in CI before a model swap, so a silent recall drop from a "better" checkpoint fails a build.
 ## Strengths
 
-- What MTEB gives you that reading the feature list does not: tasks are versioned dataset+metric definitions grouped into named benchmarks (MTEB(eng), MTEB(Multilingual), MIEB for images, BEIR compatibility); models implement a minimal encoder interface (or are wrapped automatically from sentence-transformers), and the framework handles batching, caching, metric computation (nDCG@10, MAP, v-measure, Spearman), and result serialization that feeds the public leaderboard, which is the part you have to evaluate against your own workload.
-- Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
-
+- The task suite is broad and versioned: hundreds of dataset-plus-metric definitions grouped into named benchmarks, so a score can be tied to a specific revision rather than to a moving leaderboard.
+- The metric coverage matches the job — nDCG@10 and MAP for retrieval, v-measure for clustering, Spearman for STS — instead of collapsing everything into one accuracy number.
+- The model interface is minimal: an encoder implementing `encode` works, sentence-transformers models are wrapped automatically, and the harness owns batching, caching and result serialisation.
+- Results feed the public Hugging Face leaderboard from the same code path, so a local run is directly comparable with a published one.
+- BEIR compatibility and the MIEB image extension mean the same harness covers text retrieval and vision-language encoders, which is rare.
+- Apache-2.0 with active development and a maintainer group drawn from the embedding community, which is why releases track new model families closely.
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the MTEB footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- The claims here come from the project's own documentation and public record, not from independent measurement on your workload; benchmark numbers in particular are point-in-time and harness-dependent.
-- No alternative is catalogued alongside MTEB here, so the entry cannot tell you what it is better than; treat that absence as a gap in the comparison rather than as a verdict.
+- **Leaderboard overfitting is the central risk.** Public benchmarks are optimised against, sometimes directly in training data selection; a high rank is evidence of general capability, not of fitness for your corpus, and the only defence is a private validation slice.
+- **The encoder is scored in isolation.** No chunking strategy, no reranker interaction, no generation — end-to-end RAG quality needs a separate harness, and a pipeline can degrade while the encoder's score improves.
+- **Run cost adds up.** Hundreds of tasks across hundreds of datasets is a substantial compute and download job; most teams should run a curated subset and say so, rather than reporting a full-suite number they inferred.
+- **Task revisions drift.** A dataset's revision can change its content and therefore its scores; a comparison that does not pin revisions is not a comparison.
+- **Domain mismatch is invisible in the aggregate.** Legal, clinical and code corpora are thinly represented relative to web text, so the winner on the leaderboard may be the loser on your documents.
+- **Scores are harness-dependent.** Prompt templates, instruction prefixes and pooling choices change results, and reported numbers do not always disclose the exact configuration.
 
+## Relation to the Arsenal
+
+The reference point for the embedding entries in this catalog — `bge-embeddings`, `huggingface-sentence-transformers` and `voyage-ai` all report MTEB numbers, and reading them through this harness is how those claims get checked. `stanford-futuredata-colbert` is the late-interaction alternative whose scores are also reported here.
+
+For end-to-end retrieval evaluation rather than encoder evaluation, pair it with `ragas` and the rest of [Benchmarks and Evals](../benchmarks-and-evals/_index.md); for the vector stores the retrievers sit on, see `qdrant`, `chroma` and `weaviate`.
 ## Relation to the Arsenal
 
 This is the benchmark-and-eval entry for MTEB in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.

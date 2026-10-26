@@ -72,8 +72,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data ghcr.io/open-webui/op
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Open WebUI is specific — a FastAPI + Svelte application that proxies chat to configured backends, stores conversations and embeddings locally (SQLite/Postgres + vector store), and executes pipelines/tools server-side so any connected model gains RAG and tool use — and that is where a capability claim either survives contact with your data or does not.
-- Weighing Open WebUI against `lm-studio`, `jan`, `chainlit` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The implementation detail worth reading before adopting Open WebUI is specific — a FastAPI + Svelte application that proxies chat to configured backends, stores conversations and embeddings locally (SQLite/Postgres + vector store), and executes pipelines/tools server-side so any connected model gains RAG and tool use The decision rests on multi-user behaviour — authentication, per-user isolation of chats and documents, and who owns the database are the questions that decide whether self-hosting is worth it.
 - The documented path into Open WebUI runs through `ollama`, `litellm`, so the contract to test is the one those adapters expose.
 - What this entry cannot give you is measured behaviour: measure Open WebUI's latency and its error rate under a degraded upstream before it carries production traffic.
 

@@ -85,9 +85,8 @@ Upstream: the Spring Boot/Framework platform (Broadcom-stewarded), all major mod
 
 ## Strengths
 
-- What Spring AI gives you that reading the feature list does not: chatClient offers a fluent request API over provider-specific model implementations; Advisors compose cross-cutting concerns (chat memory, RAG retrieval, safety) around calls in interceptor style; VectorStore abstracts 20+ backends behind one similarity-search interface with portable metadata filtering; tool calling maps @Tool-annotated Java methods into schema-validated function calls, and MCP support covers both consuming and exposing tool servers, which is the part you have to evaluate against your own workload.
+- ChatClient offers a fluent request API over provider-specific model implementations; Advisors compose cross-cutting concerns (chat memory, RAG retrieval, safety) around calls in interceptor style; VectorStore abstracts 20+ backends behind one similarity-search interface with portable metadata filtering; tool calling maps @Tool-annotated Java methods into schema-validated function calls, and MCP support covers both consuming and exposing tool servers.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

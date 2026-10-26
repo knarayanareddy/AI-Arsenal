@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-10-25T13:46:17.121Z",
+  "generated_at": "2026-10-26T15:27:08.834Z",
   "config": {
     "document": {
       "id": "id",
@@ -193,13 +193,13 @@
     "cost_model": {
       "open-source": 609,
       "self-hostable": 24,
-      "freemium": 81,
+      "freemium": 80,
       "usage-based": 34,
-      "paid": 12
+      "paid": 13
     },
     "status": {
-      "active": 912,
-      "archived": 17,
+      "active": 911,
+      "archived": 18,
       "deprecated": 2,
       "watching": 22,
       "reviewed": 3,
@@ -258,13 +258,13 @@
       "reasoning": 47,
       "multimodal": 64,
       "safety-and-alignment": 2,
-      "audio": 58,
+      "audio": 59,
       "vision": 103,
       "reinforcement-learning": 10
     },
     "relation_to_stack": {
       "build-on-top": 413,
-      "deploy-as-is": 288,
+      "deploy-as-is": 287,
       "study-and-reference": 114,
       "fork-and-adapt": 53,
       "contribute-to": 25
@@ -5808,7 +5808,7 @@
       "type": "tool",
       "name": "Axolotl",
       "title": "Axolotl",
-      "description": "Configuration-driven fine-tuning framework for many open-weight LLM families",
+      "description": "YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export",
       "tags": [
         "fine-tuning",
         "llm",
@@ -5849,8 +5849,8 @@
       "url": "content/tools/model-layer/axolotl",
       "boost_title": "Axolotl",
       "boost_tags": "fine-tuning llm pytorch",
-      "boost_description": "Configuration-driven fine-tuning framework for many open-weight LLM families",
-      "body": "Axolotl Configuration-driven fine-tuning framework for many open-weight LLM families fine-tuning llm pytorch TL;DR: the fine tuning entry for Axolotl. Configuration driven fine tuning framework for many open weight LLM families — the deciding factor is operational cost and what you have to run, not the feature list. Overview An open source, configuration driven fine tuning framework that lets you fine tune a wide range of open weight LLMs by editing a YAML file rather than writing custom training code. Axolotl is reached over a documented surface unlike llamafactory, mlx lm; on the fine tuning path; under a open source cost model; with axolotl, name, type, which means the things to measure are end t…"
+      "boost_description": "YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export",
+      "body": "Axolotl YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export fine-tuning llm pytorch TL;DR: the reference for configuration driven fine tuning. One YAML covers LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, tracks new open weight releases within weeks, and exports GGUF — assuming someone on the team owns the CUDA stack. Overview An open source, configuration driven fine tuning framework that lets you fine tune a wide range of open weight LLMs by editing a YAML file rather than writing custom training code. Axolotl is reached over a documented surface unlike llamafactory, mlx lm; on the fine tuning path; under a open source cost model; with axolotl, name, type, which mean…"
     },
     {
       "id": "axonhub",
@@ -6141,7 +6141,7 @@
       "boost_title": "Basedash",
       "boost_tags": "structured-output",
       "boost_description": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
-      "body": "Basedash AI-native platform for generating dashboards, reports, and insights from natural-language queries structured-output Overview An AI native platform for generating dashboards, reports, and insights from natural language queries over your data, aimed at letting non technical users explore data without writing SQL. Basedash is reached over a documented surface on the structured output path; under a paid cost model; with basedash, name, type, which means the things to measure are end to end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you. Why It's in the Arsenal Basedash is catalogued a…"
+      "body": "Basedash AI-native platform for generating dashboards, reports, and insights from natural-language queries structured-output Overview An AI native platform for generating dashboards, reports, and insights from natural language queries over your data, aimed at letting non technical users explore data without writing SQL. Basedash is reached over a documented surface on the structured output path; under a paid cost model; with basedash, name, type, which means the things to measure are end to end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you. Why It's in the Arsenal Basedash is in the catal…"
     },
     {
       "id": "baseten",
@@ -6654,7 +6654,7 @@
       "boost_title": "BentoML",
       "boost_tags": "inference docker cloud",
       "boost_description": "A framework for packaging, deploying, and scaling AI model services",
-      "body": "BentoML A framework for packaging, deploying, and scaling AI model services inference docker cloud Overview An open source framework for packaging a model plus its pre/post processing code into a single versioned, deployable artifact (a 'Bento'), then serving it on Kubernetes, Docker, or BentoCloud. Why It's in the Arsenal The entry exists because BentoML is A framework for packaging, deploying, and scaling AI model services. Read it beside fly io, modal, railway: the choice between them is a deployment and cost decision before it is a capability one. Key Features Packages model + custom inference code as one artifact Cloud agnostic deployment targets Built in adaptive batching for through…"
+      "body": "BentoML A framework for packaging, deploying, and scaling AI model services inference docker cloud Overview An open source framework for packaging a model plus its pre/post processing code into a single versioned, deployable artifact (a 'Bento'), then serving it on Kubernetes, Docker, or BentoCloud. Why It's in the Arsenal The entry exists because BentoML is A framework for packaging, deploying, and scaling AI model services. Key Features Packages model + custom inference code as one artifact Cloud agnostic deployment targets Built in adaptive batching for throughput Architecture / How It Works A Bento bundles model weights, a Python service definition, and dependencies into a reproducible…"
     },
     {
       "id": "besta-2023-graph-of-thoughts",
@@ -8292,7 +8292,7 @@
       "boost_title": "Cerebras Inference",
       "boost_tags": "inference llm efficiency",
       "boost_description": "Wafer-scale-engine inference API claiming the fastest open-model token rates available",
-      "body": "Cerebras Inference Wafer-scale-engine inference API claiming the fastest open-model token rates available inference llm efficiency Overview Cerebras applies its wafer scale engine (a single dinner plate sized chip with 44GB on chip SRAM) to inference: open models like Llama and Qwen run at token rates frequently benchmarked above every GPU provider and competitive with Groq, offered through an OpenAI compatible API. Why It's in the Arsenal The entry exists because Cerebras Inference is a wafer scale engine inference API claiming the fastest open model token rates available. Read it beside groq, together ai, fireworks ai: the choice between them is a deployment and cost decision before it is a capability one. Key Features…"
+      "body": "Cerebras Inference Wafer-scale-engine inference API claiming the fastest open-model token rates available inference llm efficiency Overview Cerebras applies its wafer scale engine (a single dinner plate sized chip with 44GB on chip SRAM) to inference: open models like Llama and Qwen run at token rates frequently benchmarked above every GPU provider and competitive with Groq, offered through an OpenAI compatible API. Why It's in the Arsenal The entry exists because Cerebras Inference is a wafer scale engine inference API claiming the fastest open model token rates available. Key Features Industry leading tokens/sec on supported open models OpenAI compatible API; free developer tier On chip SRAM architecture eliminating HB…"
     },
     {
       "id": "chainlit",
@@ -11436,7 +11436,7 @@
       "boost_title": "Command R+",
       "boost_tags": "llm rag tool-use multimodal",
       "boost_description": "Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows",
-      "body": "Command R+ Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows llm rag tool-use multimodal llms open-source-models Overview A 104 billion parameter dense transformer chat model from Cohere, released in 2024 and explicitly optimized for retrieval augmented generation with inline citations, multi step tool use, and multilingual enterprise workloads across 10 languages. Why it's in the Arsenal The case for Command R+ rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Command R+ is a dense (non MoE) decoder only transformer with a 128K token context window. Its dis…"
+      "body": "Command R+ Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows llm rag tool-use multimodal llms open-source-models Overview A 104 billion parameter dense transformer chat model from Cohere, released in 2024 and explicitly optimized for retrieval augmented generation with inline citations, multi step tool use, and multilingual enterprise workloads across 10 languages. Why it's in the Arsenal Command R+ is in the catalogue because it targets a specific production pattern — grounded generation over retrieved documents with citations — rather than general chat quality. What follows is what that commits you to: a long context serving budget, a citation format your application has to render, and a licence that…"
     },
     {
       "id": "common-crawl",
@@ -14490,7 +14490,7 @@
       "type": "tool",
       "name": "DeepSpeed",
       "title": "DeepSpeed",
-      "description": "Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory",
+      "description": "Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks",
       "tags": [
         "training",
         "fine-tuning",
@@ -14532,8 +14532,8 @@
       "url": "content/tools/model-layer/deepspeed",
       "boost_title": "DeepSpeed",
       "boost_tags": "training fine-tuning efficiency pytorch",
-      "boost_description": "Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory",
-      "body": "DeepSpeed Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory training fine-tuning efficiency pytorch Overview Microsoft's training optimization library, best known for ZeRO: partitioning optimizer states, gradients, and parameters across data parallel workers (stages 1 3) with optional CPU/NVMe offload, enabling models that would otherwise not fit — exposed as a JSON config consumed by most fine tuning frameworks. Why It's in the Arsenal DeepSpeed is catalogued as a microsoft's distributed training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single GPU memory, which is the specific claim the rest of the entry has to support. Read it beside axolotl: the ch…"
+      "boost_description": "Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks",
+      "body": "DeepSpeed Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks training fine-tuning efficiency pytorch Overview Microsoft's training optimization library, best known for ZeRO: partitioning optimizer states, gradients, and parameters across data parallel workers (stages 1 3) with optional CPU/NVMe offload, enabling models that would otherwise not fit — exposed as a JSON config consumed by most fine tuning frameworks. Why It's in the Arsenal Every memory error in distributed training resolves to the same question: which copy of the model state is on which device, and DeepSpeed is where most of those answers are implemented. It is catalogued because the ZeRO/offload trade off it encodes is the di…"
     },
     {
       "id": "deer-flow",
@@ -15069,7 +15069,7 @@
       "type": "project",
       "name": "Dify",
       "title": "Dify",
-      "description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
+      "description": "Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API",
       "tags": [
         "agents",
         "orchestration",
@@ -15114,8 +15114,8 @@
       "url": "content/projects/frameworks/dify",
       "boost_title": "Dify",
       "boost_tags": "agents orchestration rag cloud",
-      "boost_description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
-      "body": "Dify Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations agents orchestration rag cloud agents agent-frameworks Overview An open source platform for building LLM applications through a visual workflow builder, combining RAG pipeline construction, agent orchestration, and prompt management in a single self hostable product. Why it's in the Arsenal The case for Dify rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Applications are built as node based visual workflows (similar in spirit to a flowchart) connecting LLM calls, retrieval steps, tool calls, and co…"
+      "boost_description": "Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API",
+      "body": "Dify Self-hosted LLM app platform — visual workflow canvas, RAG pipeline, sandboxed agents, model routing and observability behind one API agents orchestration rag cloud agents agent-frameworks Overview An open source platform for building LLM applications through a visual workflow builder, combining RAG pipeline construction, agent orchestration, and prompt management in a single self hostable product. Why it's in the Arsenal Dify is catalogued because it is the platform most often reached for when the person who owns the prompt is not an engineer. That single fact explains both its feature set — canvas, RAG pipeline, model routing, observability — and its licence, which restricts reselling it as a service. Architecture Applications are built as node based visual workflows (similar…"
     },
     {
       "id": "dlt",
@@ -15697,7 +15697,7 @@
       "type": "project",
       "name": "DSPy",
       "title": "DSPy",
-      "description": "A framework for programming and optimizing language model pipelines",
+      "description": "Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos",
       "tags": [
         "llm",
         "rag",
@@ -15742,8 +15742,8 @@
       "url": "content/projects/frameworks/dspy",
       "boost_title": "DSPy",
       "boost_tags": "llm rag evaluation reasoning",
-      "boost_description": "A framework for programming and optimizing language model pipelines",
-      "body": "DSPy A framework for programming and optimizing language model pipelines llm rag evaluation reasoning rag frameworks Overview A framework from Stanford NLP for programming and automatically optimizing language model pipelines, treating prompt engineering as a compilable, metric driven optimization problem rather than manual trial and error. Why it's in the Arsenal DSPy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Developers define a pipeline's structure (modules like 'retrieve' and 'generate') and a target metric; DSPy's compiler then automatic…"
+      "boost_description": "Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos",
+      "body": "DSPy Declarative Python framework that compiles LM pipelines against a metric, replacing hand-written prompts with optimised instructions and demos llm rag evaluation reasoning rag frameworks Overview A framework from Stanford NLP for programming and automatically optimizing language model pipelines, treating prompt engineering as a compilable, metric driven optimization problem rather than manual trial and error. Why it's in the Arsenal DSPy is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Developers define a pipeline's structure (modules like 'retrieve' and 'generate') and a target metric; DSPy's compiler then automatic…"
     },
     {
       "id": "dubey-2024-llama3",
@@ -17333,7 +17333,7 @@
       "boost_title": "Evidently",
       "boost_tags": "evaluation observability monitoring",
       "boost_description": "Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge",
-      "body": "Evidently Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge evaluation observability monitoring Overview A veteran open source ML observability framework that expanded into LLM evaluation: define Reports and Test Suites over datasets with 100+ built in metrics — data drift, classification quality, text descriptors, RAG metrics, LLM as judge — run them in pipelines or CI, and visualize in notebooks or its dashboard. Why It's in the Arsenal Evidently is a open source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM as judge. Read it beside deepchecks, phoenix, ragas rag evaluation: the choice between them is a deployment and cost decision before it is…"
+      "body": "Evidently Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge evaluation observability monitoring Overview A veteran open source ML observability framework that expanded into LLM evaluation: define Reports and Test Suites over datasets with 100+ built in metrics — data drift, classification quality, text descriptors, RAG metrics, LLM as judge — run them in pipelines or CI, and visualize in notebooks or its dashboard. Why It's in the Arsenal Evidently is a open source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM as judge. Key Features 100+ metrics: drift, data quality, text descriptors, LLM judges Declarative Reports and Test Suites runnable in CI S…"
     },
     {
       "id": "exa",
@@ -17389,7 +17389,7 @@
       "type": "project",
       "name": "ExLlamaV2",
       "title": "ExLlamaV2",
-      "description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
+      "description": "Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI",
       "tags": [
         "inference",
         "quantization",
@@ -17399,7 +17399,7 @@
       "subcategory": "inference-engines",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "inference-engine",
       "audience": null,
       "domain": [
@@ -17432,8 +17432,8 @@
       "url": "content/projects/inference-engines/exllamav2",
       "boost_title": "ExLlamaV2",
       "boost_tags": "inference quantization local",
-      "boost_description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
-      "body": "ExLlamaV2 Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM inference quantization local llms inference-engines Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal ExLlamaV2 appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practic…"
+      "boost_description": "Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI",
+      "body": "ExLlamaV2 Archived consumer-GPU inference library behind the EXL2 quantisation format — superseded by ExLlamaV3; read it for the design, serve with TabbyAPI inference quantization local llms inference-engines Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal ExLlamaV2 appears in this catalog as a reference point for the inference engine phase; the useful question is which hardware and load it is good for, since that is what separates runtimes in practic…"
     },
     {
       "id": "exo",
@@ -18990,7 +18990,7 @@
       "type": "project",
       "name": "Flyte",
       "title": "Flyte",
-      "description": "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned",
+      "description": "Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced",
       "tags": [
         "self-hosted",
         "fine-tuning"
@@ -19032,8 +19032,8 @@
       "url": "content/projects/frameworks/flyte",
       "boost_title": "Flyte",
       "boost_tags": "self-hosted fine-tuning",
-      "boost_description": "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned",
-      "body": "Flyte A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned self-hosted fine-tuning data-pipelines platforms Overview Flyte is a Kubernetes native workflow orchestration platform for data and machine learning pipelines. Authored in Python (with a Go control plane) it emphasizes strongly typed, versioned, and reproducible workflows: each task declares typed inputs and outputs, results are cached and versioned, and the platform executes tasks as containers on Kubernetes with scaling, retries, and lineage tracking. Why it's in the Arsenal Reproducibility and scale are central to production ML, and Flyte is a mature, Kubernetes native orchestrator built specifically for typed, versioned data/ML workflow…"
+      "boost_description": "Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced",
+      "body": "Flyte Durable Python runtime for ML pipelines, model serving and agents — Flyte 2 is generally available, with its Kubernetes backend still being open-sourced self-hosted fine-tuning data-pipelines platforms Overview Flyte is a Kubernetes native workflow orchestration platform for data and machine learning pipelines. Authored in Python (with a Go control plane) it emphasizes strongly typed, versioned, and reproducible workflows: each task declares typed inputs and outputs, results are cached and versioned, and the platform executes tasks as containers on Kubernetes with scaling, retries, and lineage tracking. Why it's in the Arsenal Reproducibility and scale are central to production ML, and Flyte is a mature, Kubernetes native orchestrator built specifically for typed, versioned data/ML workflow…"
     },
     {
       "id": "frames",
@@ -19416,7 +19416,7 @@
       "boost_title": "Galileo",
       "boost_tags": "observability evaluation guardrails",
       "boost_description": "Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails",
-      "body": "Galileo Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails observability evaluation guardrails TL;DR: the evaluation, monitoring entry for Galileo. Commercial LLM evaluation and observability platform with research backed, label free metrics for hallucination, factuality, and guardrails — the deciding factor is operational cost and what you have to run, not the feature list. Overview Galileo is a platform for evaluating and monitoring LLM applications. Its distinguishing feature is a set of research backed metrics — for example hallucination/factuality and guardrail scores — that can be computed without hand labeled ground truth, so teams can quantify output quality and safety at scale…"
+      "body": "Galileo Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails observability evaluation guardrails TL;DR: the evaluation, monitoring entry for Galileo. Commercial LLM evaluation and observability platform with research backed, label free metrics for hallucination, factuality, and guardrails — strongest where hallucination detection has to run without labelled data, weakest where a team wants to own its evaluation logic. Overview Galileo is a platform for evaluating and monitoring LLM applications. Its distinguishing feature is a set of research backed metrics — for example hallucination/factuality and guardrail scores — that can be computed without hand labeled ground truth, so teams can q…"
     },
     {
       "id": "gao-2022-hyde",
@@ -20070,7 +20070,7 @@
       "boost_title": "Giskard",
       "boost_tags": "evaluation security guardrails",
       "boost_description": "Testing platform for evaluating and scanning ML and LLM applications",
-      "body": "Giskard Testing platform for evaluating and scanning ML and LLM applications evaluation security guardrails TL;DR: Giskard covers the evaluation, security and guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview An open source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines. Treat Giskard as a service with a schema, not as code you own on the evaluation, security and guardrails path; under a open source cost model; with giskard, name, type. The cache, the retry polic…"
+      "body": "Giskard Testing platform for evaluating and scanning ML and LLM applications evaluation security guardrails TL;DR: Giskard covers the evaluation, security and guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview An open source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines. Scans are generated per model type (LLM, text classification, tabular), and each detected issue is emitted as a reproducible test case that can be replayed as a regression. Why It's in the Arsena…"
     },
     {
       "id": "giskard-oss",
@@ -20411,7 +20411,7 @@
       "boost_title": "GLM-4 / GLM-4.5",
       "boost_tags": "llm agents code-gen",
       "boost_description": "Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants",
-      "body": "GLM-4 / GLM-4.5 Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants llm agents code-gen llms open-source-models Overview Zhipu AI's GLM model family, whose GLM 4.5 generation unifies reasoning, coding, and agentic abilities in MoE architectures: the 355B total/32B active flagship and the 106B/12B Air variant, both offering hybrid thinking (deliberate reasoning) and non thinking (instant) modes. MIT licensed weights and an aggressive capability per dollar position made the family a staple in open coding agent stacks. Why it's in the Arsenal The case for GLM 4 / GLM 4.5 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims…"
+      "body": "GLM-4 / GLM-4.5 Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants llm agents code-gen llms open-source-models Overview Zhipu AI's GLM model family, whose GLM 4.5 generation unifies reasoning, coding, and agentic abilities in MoE architectures: the 355B total/32B active flagship and the 106B/12B Air variant, both offering hybrid thinking (deliberate reasoning) and non thinking (instant) modes. MIT licensed weights and an aggressive capability per dollar position made the family a staple in open coding agent stacks. Why it's in the Arsenal GLM 4 is catalogued because it is the open weight line from a lab that also ships a hosted product, which makes it the reference for teams that want Zhipu's models w…"
     },
     {
       "id": "glm-5",
@@ -20522,7 +20522,7 @@
       "type": "project",
       "name": "Google ADK",
       "title": "Google ADK",
-      "description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
+      "description": "Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI",
       "tags": [
         "agents",
         "orchestration",
@@ -20567,8 +20567,8 @@
       "url": "content/projects/frameworks/google-adk",
       "boost_title": "Google ADK",
       "boost_tags": "agents orchestration graphs tool-use",
-      "boost_description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
-      "body": "Google ADK Google code-first Python toolkit for building, evaluating, and deploying AI agents agents orchestration graphs tool-use agents agent-frameworks Overview Google's official open source framework for building, evaluating, and deploying AI agents, designed to integrate closely with Google Cloud and Vertex AI while remaining usable with other model providers. Why it's in the Arsenal Google ADK is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Provides an agent abstraction with built in support for tool use, multi agent composition, and evaluation, plus tooling for deploying agents…"
+      "boost_description": "Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI",
+      "body": "Google ADK Google's code-first agent framework, version 2.0 — Agent and Workflow primitives, a graph execution engine, a Task API for delegation, and an eval/dev UI agents orchestration graphs tool-use agents agent-frameworks Overview ADK is Google's agent framework, and version 2.0 reorganised it around two classes. Agent is the unit: a model, instructions, tools, and the behaviour you want. Workflow is the structure: a graph declared with edges, where edges=[(\"START\", step a, step b)] means the order is yours rather than the model's discretion. That split is the important design decision. Most frameworks pick a side — either an autonomous loop where the model chooses what happens next, or a graph where you do — and then make the other awkward. ADK treats both as legitimate and lets you put an agent inside a work…"
     },
     {
       "id": "google-ai-edge-mediapipe",
@@ -21570,7 +21570,7 @@
       "boost_title": "Gradio",
       "boost_tags": "llm local cloud",
       "boost_description": "A Python library for building and sharing machine learning demos quickly",
-      "body": "Gradio A Python library for building and sharing machine learning demos quickly llm local cloud Overview A Python library for turning a model or function into a shareable web demo in minutes, widely used for quick stakeholder facing prototypes rather than production UIs. Why It's in the Arsenal The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Read it beside chainlit, fastapi, mesop: the choice between them is a deployment and cost decision before it is a capability one. Key Features Fast demo UI generation from a Python function Shareable public links for quick feedback Large library of pre built input/output components Archite…"
+      "body": "Gradio A Python library for building and sharing machine learning demos quickly llm local cloud Overview A Python library for turning a model or function into a shareable web demo in minutes, widely used for quick stakeholder facing prototypes rather than production UIs. Why It's in the Arsenal The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Key Features Fast demo UI generation from a Python function Shareable public links for quick feedback Large library of pre built input/output components Architecture / How It Works A Python function is wrapped with declared input/output component types; Gradio auto generates a web UI aroun…"
     },
     {
       "id": "graphify",
@@ -21819,7 +21819,7 @@
       "boost_title": "Groq",
       "boost_tags": "inference llm efficiency",
       "boost_description": "Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second",
-      "body": "Groq Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second inference llm efficiency Overview An inference provider running open models (Llama, Qwen, Whisper, and others) on its custom Language Processing Units: deterministic, SRAM based hardware that delivers hundreds of output tokens per second at low cost — defining the fast inference category that voice and agentic apps depend on. Why It's in the Arsenal Groq is catalogued as a ultra low latency inference on custom LPU hardware, serving open models at hundreds of tokens per second, which is the specific claim the rest of the entry has to support. Read it beside together ai, fireworks ai, cerebras inference: the choice bet…"
+      "body": "Groq Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second inference llm efficiency Overview An inference provider running open models (Llama, Qwen, Whisper, and others) on its custom Language Processing Units: deterministic, SRAM based hardware that delivers hundreds of output tokens per second at low cost — defining the fast inference category that voice and agentic apps depend on. Why It's in the Arsenal Groq is in the catalogue because its LPU inference changes the latency envelope rather than the quality one, which turns the question from 'which model is best' into 'which model answers fast enough for an interactive loop'. Key Features Hundreds of tokens/sec on flagship…"
     },
     {
       "id": "grounding-dino",
@@ -22060,7 +22060,7 @@
       "boost_title": "Guidance",
       "boost_tags": "structured-output llm guardrails",
       "boost_description": "Microsoft guidance library for controlling and constraining language model generation",
-      "body": "Guidance Microsoft guidance library for controlling and constraining language model generation structured-output llm guardrails TL;DR: the structured output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the deciding factor is operational cost and what you have to run, not the feature list. Overview A library for fine grained, token level control over LLM generation, letting you interleave control flow logic directly with model output rather than relying purely on prompt text. Why It's in the Arsenal Guidance is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what…"
+      "body": "Guidance Microsoft guidance library for controlling and constraining language model generation structured-output llm guardrails TL;DR: the structured output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the grammar is the product: generation interleaved with control flow buys guarantees that prompt instructions cannot, at the cost of writing templates. Overview A library for fine grained, token level control over LLM generation, letting you interleave control flow logic directly with model output rather than relying purely on prompt text. Why It's in the Arsenal Guidance is catalogued here on the strength of its own documentation and public record rather th…"
     },
     {
       "id": "gunasekar-2023-phi-1",
@@ -25336,7 +25336,7 @@
       "boost_title": "Instructor",
       "boost_tags": "structured-output llm openai",
       "boost_description": "A library for extracting typed structured outputs from language models",
-      "body": "Instructor A library for extracting typed structured outputs from language models structured-output llm openai Overview A lightweight Python library for extracting typed, Pydantic validated structured output from an LLM call, with automatic retries when the model's output fails validation. Why It's in the Arsenal The entry exists because Instructor is A library for extracting typed structured outputs from language models. Read it beside guidance, outlines, pydantic ai tool: the choice between them is a deployment and cost decision before it is a capability one. Key Features Pydantic validated typed LLM outputs Automatic retry on validation failure Works with hosted APIs (OpenAI, Anthropic, etc.) witho…"
+      "body": "Instructor A library for extracting typed structured outputs from language models structured-output llm openai Overview A lightweight Python library for extracting typed, Pydantic validated structured output from an LLM call, with automatic retries when the model's output fails validation. Why It's in the Arsenal The entry exists because Instructor is A library for extracting typed structured outputs from language models. Key Features Pydantic validated typed LLM outputs Automatic retry on validation failure Works with hosted APIs (OpenAI, Anthropic, etc.) without constrained decoding Architecture / How It Works Wraps a standard LLM API call, asking the model to produce output matching a Pydantic mode…"
     },
     {
       "id": "instrument-cost-per-feature",
@@ -28591,7 +28591,7 @@
       "boost_title": "Langfuse Prompts",
       "boost_tags": "observability llm evaluation",
       "boost_description": "Prompt management and versioning workflows inside the Langfuse observability platform",
-      "body": "Langfuse Prompts Prompt management and versioning workflows inside the Langfuse observability platform observability llm evaluation TL;DR: Langfuse Prompts covers the prompt management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview Prompt versioning and management built into the open source Langfuse observability platform, linking prompt versions directly to traces, datasets, and evaluation results. Why It's in the Arsenal The entry exists because Langfuse Prompts is a prompt management and versioning workflows inside the Langfuse observability platform. Read it beside langsmith hub, promptlayer: the choice between t…"
+      "body": "Langfuse Prompts Prompt management and versioning workflows inside the Langfuse observability platform observability llm evaluation TL;DR: Langfuse Prompts covers the prompt management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview Prompt versioning and management built into the open source Langfuse observability platform, linking prompt versions directly to traces, datasets, and evaluation results. Why It's in the Arsenal The entry exists because Langfuse Prompts is a prompt management and versioning workflows inside the Langfuse observability platform. Key Features Prompt versioning tied to traces and evaluations O…"
     },
     {
       "id": "langgraph",
@@ -28745,7 +28745,7 @@
       "boost_title": "LangSmith",
       "boost_tags": "observability evaluation tracing langchain",
       "boost_description": "A managed platform for tracing, evaluating, and monitoring LangChain applications",
-      "body": "LangSmith A managed platform for tracing, evaluating, and monitoring LangChain applications observability evaluation tracing langchain Overview LangChain's managed platform for tracing, evaluating, and monitoring applications built with LangChain or LangGraph, with first party integration requiring minimal setup. Treat LangSmith as a service with a schema, not as code you own on the evaluation, tracing path; under a freemium cost model; with langsmith, name, type. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one. Why It's in the Arsenal LangSmith is catalogued as A managed platform for tracing, evaluat…"
+      "body": "LangSmith A managed platform for tracing, evaluating, and monitoring LangChain applications observability evaluation tracing langchain Overview LangChain's managed platform for tracing, evaluating, and monitoring applications built with LangChain or LangGraph, with first party integration requiring minimal setup. Traces arrive as a run tree of spans — ingested by the SDK, the @traceable decorator or an HTTP endpoint — and evaluators attach to datasets so a prompt change is scored against the same experiments. Why It's in the Arsenal LangSmith is the reference implementation of framework native tracing: LangChain and LangGraph emit spans without instrumentation code. That is the lowest friction path for a team already on that…"
     },
     {
       "id": "langsmith-hub",
@@ -28793,7 +28793,7 @@
       "boost_title": "LangSmith Hub",
       "boost_tags": "langchain evaluation llm",
       "boost_description": "LangSmith prompt and dataset workflows for LangChain and LangGraph applications",
-      "body": "LangSmith Hub LangSmith prompt and dataset workflows for LangChain and LangGraph applications langchain evaluation llm TL;DR: LangSmith Hub covers the prompt management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform. Treat LangSmith Hub as a service with a schema, not as code you own unlike langfuse prompts, promptlayer; on the prompt management path; under a freemium cost model; with langsmith hub, name, langsmith. The cache, the retry policy and an explicit ti…"
+      "body": "LangSmith Hub LangSmith prompt and dataset workflows for LangChain and LangGraph applications langchain evaluation llm TL;DR: LangSmith Hub covers the prompt management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform. Prompts are stored as versioned objects pulled by handle at runtime, so a prompt change ships without a code deploy, and the same store holds the datasets that LangSmith's evaluators run against. Why It's in the Arsenal The entry exists because Lang…"
     },
     {
       "id": "langsmith-platform",
@@ -30955,7 +30955,7 @@
       "type": "tool",
       "name": "LLaMA-Factory",
       "title": "LLaMA-Factory",
-      "description": "Unified fine-tuning framework and UI for many LLMs and training methods",
+      "description": "No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment",
       "tags": [
         "fine-tuning",
         "llm",
@@ -30996,8 +30996,8 @@
       "url": "content/tools/model-layer/llamafactory",
       "boost_title": "LLaMA-Factory",
       "boost_tags": "fine-tuning llm pytorch",
-      "boost_description": "Unified fine-tuning framework and UI for many LLMs and training methods",
-      "body": "LLaMA-Factory Unified fine-tuning framework and UI for many LLMs and training methods fine-tuning llm pytorch TL;DR: the fine tuning entry for LLaMA Factory. Unified fine tuning framework and UI for many LLMs and training methods — the deciding factor is operational cost and what you have to run, not the feature list. Overview A unified fine tuning framework with both a web UI and CLI, supporting a very broad set of open models and training methods so teams can experiment without building custom training scripts. Why It's in the Arsenal The entry exists because LLaMA Factory is a unified fine tuning framework and UI for many LLMs and training methods. Read it beside axolotl, mlx lm, peft: the choice…"
+      "boost_description": "No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment",
+      "body": "LLaMA-Factory No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment fine-tuning llm pytorch TL;DR: the fastest path from a dataset to a fine tuned checkpoint. A Gradio UI and one CLI cover SFT, DPO and PPO over 100+ model templates, with merge and export built in; the UI is for exploration, not for production runs. Overview A unified fine tuning framework with both a web UI and CLI, supporting a very broad set of open models and training methods so teams can experiment without building custom training scripts. Why It's in the Arsenal The barrier to a first fine tune is rarely the maths; it is the day spent wiring a trainer, a dataset format and an export path. LLaMA Factory is in th…"
     },
     {
       "id": "llamafile",
@@ -31097,14 +31097,14 @@
       "boost_title": "Llama Guard",
       "boost_tags": "security guardrails llm",
       "boost_description": "Meta safety model family for classifying and moderating LLM inputs and outputs",
-      "body": "Llama Guard Meta safety model family for classifying and moderating LLM inputs and outputs security guardrails llm TL;DR: the security and guardrails entry for Llama Guard. Meta safety model family for classifying and moderating LLM inputs and outputs — the deciding factor is operational cost and what you have to run, not the feature list. Overview Meta's open weight safety classifier model family for moderating LLM inputs and outputs, deployable as a self hosted model rather than a third party moderation API. Why It's in the Arsenal The entry exists because Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs. Read it beside guardrails ai, nemo guardrails, rebuf…"
+      "body": "Llama Guard Meta safety model family for classifying and moderating LLM inputs and outputs security guardrails llm TL;DR: the security and guardrails entry for Llama Guard. Meta safety model family for classifying and moderating LLM inputs and outputs — a classifier, not a policy engine: it scores safety categories, and the categories are Meta's, so the policy work starts after the model returns a label. Overview Meta's open weight safety classifier model family for moderating LLM inputs and outputs, deployable as a self hosted model rather than a third party moderation API. Why It's in the Arsenal The entry exists because Llama Guard is a meta safety model family for classifying and moderating LLM inputs…"
     },
     {
       "id": "llamaindex",
       "type": "project",
       "name": "LlamaIndex",
       "title": "LlamaIndex",
-      "description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
+      "description": "Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents",
       "tags": [
         "rag",
         "retrieval",
@@ -31148,8 +31148,8 @@
       "url": "content/projects/frameworks/llamaindex",
       "boost_title": "LlamaIndex",
       "boost_tags": "rag retrieval embeddings llamaindex",
-      "boost_description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
-      "body": "LlamaIndex Data framework for building document agents, retrieval pipelines, and production RAG systems rag retrieval embeddings llamaindex rag frameworks Overview A data framework purpose built for connecting large language models to external data sources, providing document ingestion, indexing, and retrieval abstractions specifically oriented around building RAG applications and document centric agents. Why it's in the Arsenal LlamaIndex appears in this catalog as a reference point for the framework phase; the useful question is what adopting it would commit you to beyond the feature list. The sections below state what it claims to do and what adopting it would commit you to. Architecture Data flows through data connectors (ingestion) into in…"
+      "boost_description": "Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents",
+      "body": "LlamaIndex Retrieval-first Python framework — connectors, indices and query engines over 300+ integration packages, with Workflows for event-driven agents rag retrieval embeddings llamaindex rag frameworks Overview LlamaIndex is the framework that took the retrieval problem seriously as an architecture rather than a step in a chain. Its vocabulary — readers and connectors for ingestion, node parsers for chunking, indices for structure, retrievers and query engines for the read path, postprocessors for reranking — describes the actual shape of a document pipeline, and it was designed before that shape was obvious. The structure is a composable core plus a large surface of integration packages: llama index core holds the abstractions, and llama index llms openai, llama index embeddings huggingfac…"
     },
     {
       "id": "llamaindex-discord",
@@ -31830,7 +31830,7 @@
       "boost_title": "LM Format Enforcer",
       "boost_tags": "structured-output inference llm",
       "boost_description": "Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM",
-      "body": "LM Format Enforcer Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM structured-output inference llm Overview A constrained decoding library: given a JSON Schema or regex, it computes which tokens are permissible at each step and masks the rest, guaranteeing parseable output from any open model — while deliberately leaving the model freedom over ordering and formatting to minimize quality degradation, and shipping as a built in backend in vLLM. Why It's in the Arsenal LM Format Enforcer is a token filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. Read it beside outlines, guidance, instructor: the choice between them is a deployment and cost…"
+      "body": "LM Format Enforcer Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM structured-output inference llm Overview A constrained decoding library: given a JSON Schema or regex, it computes which tokens are permissible at each step and masks the rest, guaranteeing parseable output from any open model — while deliberately leaving the model freedom over ordering and formatting to minimize quality degradation, and shipping as a built in backend in vLLM. Why It's in the Arsenal LM Format Enforcer is a token filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. It is marked beta, so pin the interface rather than tracking it. Key Features JSON Schema and re…"
     },
     {
       "id": "lm-studio",
@@ -31878,7 +31878,7 @@
       "boost_title": "LM Studio",
       "boost_tags": "llm local inference",
       "boost_description": "Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server",
-      "body": "LM Studio Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server llm local inference Overview A desktop application (macOS/Windows/Linux) that makes local LLMs approachable: browse and download models from Hugging Face, chat with them offline, tune sampling/offload settings in a GUI, and expose everything through a local OpenAI compatible server. Why It's in the Arsenal LM Studio is catalogued as a desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI compatible local server, which is the specific claim the rest of the entry has to support. Read it beside open webui, jan, ollama: the choice between them is a deployment and cost decision b…"
+      "body": "LM Studio Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server llm local inference Overview A desktop application (macOS/Windows/Linux) that makes local LLMs approachable: browse and download models from Hugging Face, chat with them offline, tune sampling/offload settings in a GUI, and expose everything through a local OpenAI compatible server. Why It's in the Arsenal LM Studio matters because it made running a local model a desktop app experience — download, chat, flip one switch to expose an OpenAI compatible server. That convenience is why it appears in local first stacks that would otherwise pair ollama with a separate UI. Key Features One click model discovery/download…"
     },
     {
       "id": "lm-sys-fastchat",
@@ -32712,7 +32712,7 @@
       "type": "tool",
       "name": "LoRAX",
       "title": "LoRAX",
-      "description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
+      "description": "Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead",
       "tags": [
         "inference",
         "fine-tuning",
@@ -32753,8 +32753,8 @@
       "url": "content/tools/serving-and-deployment/lorax",
       "boost_title": "LoRAX",
       "boost_tags": "inference fine-tuning self-hosted efficiency",
-      "boost_description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
-      "body": "LoRAX Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU inference fine-tuning self-hosted efficiency TL;DR: the production serving entry for LoRAX. Multi LoRA inference server that serves thousands of fine tuned adapters on a single base model and GPU — the deciding factor is operational cost and what you have to run, not the feature list. Overview LoRAX (LoRA eXchange), from Predibase, is an inference server (forked from HF text generation inference) designed around adapter multiplexing: it keeps one base model resident and dynamically loads LoRA adapters per request, batching requests for different adapters into the same forward pass via heterogeneous continuous batching and SGMV kernels (…"
+      "boost_description": "Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead",
+      "body": "LoRAX Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead inference fine-tuning self-hosted efficiency TL;DR: the reference design for multi LoRA serving, not a deployment target. The repository is archived: read it to understand adapter multiplexing, then run vLLM or SGLang multi LoRA, which absorbed the technique and are still maintained. Overview LoRAX (LoRA eXchange), from Predibase, is an inference server (forked from HF text generation inference) designed around adapter multiplexing: it keeps one base model resident and dynamically loads LoRA adapters per request, batching requests for different adapters into the same forward pass via heterogeneous continuous batching and SGMV kernels (…"
     },
     {
       "id": "ltx-2",
@@ -32919,7 +32919,7 @@
       "type": "project",
       "name": "Lunary",
       "title": "Lunary",
-      "description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
+      "description": "Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC",
       "tags": [
         "observability",
         "tracing",
@@ -32929,7 +32929,7 @@
       "category": "observability",
       "subcategory": "tracing",
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "paid",
       "status": "active",
       "phase": "benchmark-and-eval",
       "audience": null,
@@ -32937,8 +32937,8 @@
         "language"
       ],
       "relation_to_stack": [
-        "deploy-as-is",
-        "build-on-top"
+        "build-on-top",
+        "deploy-as-is"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -32963,8 +32963,8 @@
       "url": "content/projects/benchmarks-and-evals/lunary",
       "boost_title": "Lunary",
       "boost_tags": "observability tracing rag cloud",
-      "boost_description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
-      "body": "Lunary Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts observability tracing rag cloud observability tracing Overview An open source LLM observability platform offering tracing, analytics, and prompt management, occupying a similar niche to Langfuse and Helicone with a smaller public/community footprint. Why it's in the Arsenal The case for Lunary rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Provides SDK based instrumentation for capturing traces and analytics from LLM applications, plus prompt management features, following the general pattern of t…"
+      "boost_description": "Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC",
+      "body": "Lunary Closed-source LLM observability platform for chatbot analytics, prompt templates and agent tracing — sold as SaaS at $20/user/month or self-hosted in your VPC observability tracing rag cloud observability tracing Overview Lunary is a commercial observability platform for conversational AI products, and its centre of gravity is different from the tracing first platforms it competes with. The screens are chat replays, user satisfaction, topic classification and cost analytics; agent tracing and prompt templates sit alongside them rather than defining the product. Integration is a monitoring wrapper: lunary.monitor(client) around an OpenAI style client captures requests without restructuring application code, and the SDK family spans Python and JavaScript with connectors for the major providers and frame…"
     },
     {
       "id": "madaan-2023-self-refine",
@@ -33350,7 +33350,7 @@
       "type": "project",
       "name": "Marker",
       "title": "Marker",
-      "description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
+      "description": "Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode",
       "tags": [
         "data",
         "rag",
@@ -33394,15 +33394,15 @@
       "url": "content/projects/data-and-retrieval/marker",
       "boost_title": "Marker",
       "boost_tags": "data rag llm",
-      "boost_description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
-      "body": "Marker Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts data rag llm data-pipelines document-processing Overview A document conversion tool that turns PDFs, images, EPUBs, and office documents into clean Markdown, JSON, or HTML using a pipeline of purpose trained deep learning models: layout detection, OCR, reading order resolution, table structure recovery, and LaTeX equation conversion. An optional use llm mode merges model output with LLM passes for the hardest structures (complex merged cell tables, inline math). Why it's in the Arsenal Marker appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to it that its own test d…"
+      "boost_description": "Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode",
+      "body": "Marker Apache-2.0 document converter: model-based layout, tables and equations to Markdown/JSON across PDF, Office, HTML and EPUB, with optional LLM hybrid mode data rag llm data-pipelines document-processing Overview A document conversion tool that turns PDFs, images, EPUBs, and office documents into clean Markdown, JSON, or HTML using a pipeline of purpose trained deep learning models: layout detection, OCR, reading order resolution, table structure recovery, and LaTeX equation conversion. An optional use llm mode merges model output with LLM passes for the hardest structures (complex merged cell tables, inline math). Why it's in the Arsenal Marker appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to it that its own test d…"
     },
     {
       "id": "markitdown",
       "type": "tool",
       "name": "MarkItDown",
       "title": "MarkItDown",
-      "description": "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown",
+      "description": "Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second",
       "tags": [
         "data",
         "rag",
@@ -33443,8 +33443,8 @@
       "url": "content/tools/data-ingestion/markitdown",
       "boost_title": "MarkItDown",
       "boost_tags": "data rag llm",
-      "boost_description": "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown",
-      "body": "MarkItDown Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown data rag llm Overview A lightweight Microsoft utility that became a standard preprocessing tool: convert files (PDF, Word, Excel, PowerPoint, images with EXIF/OCR, audio with transcription, HTML, CSV, ZIP...) to clean Markdown, on the thesis that Markdown is the most token efficient, LLM native document representation. Why It's in the Arsenal The entry exists because MarkItDown is a microsoft's utility for converting Office files, PDFs, images, and audio into LLM friendly Markdown. Read it beside docling, unstructured, llamaparse: the choice between them is a deployment and cost decision before it is a ca…"
+      "boost_description": "Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second",
+      "body": "MarkItDown Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second data rag llm Overview A lightweight Microsoft utility that became a standard preprocessing tool: convert files (PDF, Word, Excel, PowerPoint, images with EXIF/OCR, audio with transcription, HTML, CSV, ZIP...) to clean Markdown, on the thesis that Markdown is the most token efficient, LLM native document representation. Why It's in the Arsenal Most ingestion work is not a layout problem; it is a breadth problem. A corpus is 60% Word files, some PowerPoint, a few spreadsheets, a handful of scans and one audio recording, and MarkItDown is the shortest path from that pile to Markdown. It also documents its ow…"
     },
     {
       "id": "marqo",
@@ -34450,7 +34450,7 @@
       "boost_title": "Megatron-LM",
       "boost_tags": "training transformers efficiency self-hosted",
       "boost_description": "NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism",
-      "body": "Megatron-LM NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism training transformers efficiency self-hosted TL;DR: the fine tuning entry for Megatron LM. NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism — the deciding factor is operational cost and what you have to run, not the feature list. Overview Megatron LM (and its productized core, Megatron Core) is NVIDIA's ongoing research framework for training transformer models at scale, implementing the tensor parallelism scheme from the original Megatron paper plus pipeline parallelism, sequence parallelism, distributed optimizers, and FP8 support on Hopper+ GPUs (17K stars; actively…"
+      "body": "Megatron-LM NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism training transformers efficiency self-hosted TL;DR: the framework you adopt when one model no longer fits one GPU's worth of parallelism — tensor, pipeline, sequence and expert parallelism with fused kernels, and the layer most other training stacks still borrow from. Overview Megatron LM (and its productized core, Megatron Core) is NVIDIA's ongoing research framework for training transformer models at scale, implementing the tensor parallelism scheme from the original Megatron paper plus pipeline parallelism, sequence parallelism, distributed optimizers, and FP8 support on Hopper+ GPUs (17K stars; actively developed by NVIDIA). Why It'…"
     },
     {
       "id": "meilisearch",
@@ -34499,7 +34499,7 @@
       "boost_title": "Meilisearch",
       "boost_tags": "retrieval rag self-hosted",
       "boost_description": "Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance",
-      "body": "Meilisearch Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance retrieval rag self-hosted Overview A Rust search engine designed around instant, forgiving search as you type: schemaless JSON indexing, typo tolerance, faceting, and — since its AI search releases — native vector storage with hybrid ranking that fuses keyword and semantic scores, embedding integration included (it can call OpenAI/HF embedders for you). Why It's in the Arsenal Meilisearch is a lightning fast open source search engine with built in hybrid keyword+vector search and typo tolerance. Read it beside typesense, qdrant: the choice between them is a deployment and cost decision before it is a capability one. K…"
+      "body": "Meilisearch Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance retrieval rag self-hosted Overview A Rust search engine designed around instant, forgiving search as you type: schemaless JSON indexing, typo tolerance, faceting, and — since its AI search releases — native vector storage with hybrid ranking that fuses keyword and semantic scores, embedding integration included (it can call OpenAI/HF embedders for you). Why It's in the Arsenal Meilisearch is a lightning fast open source search engine with built in hybrid keyword+vector search and typo tolerance. Key Features Sub 50ms typo tolerant keyword search with faceting Native hybrid search: vectors + keywords with semantic rati…"
     },
     {
       "id": "melanie-mitchell",
@@ -35043,7 +35043,7 @@
       "type": "project",
       "name": "MetaGPT",
       "title": "MetaGPT",
-      "description": "Multi-agent framework that simulates software-company roles for natural-language programming",
+      "description": "Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026",
       "tags": [
         "agents",
         "orchestration",
@@ -35088,8 +35088,8 @@
       "url": "content/projects/frameworks/metagpt",
       "boost_title": "MetaGPT",
       "boost_tags": "agents orchestration planning code-gen",
-      "boost_description": "Multi-agent framework that simulates software-company roles for natural-language programming",
-      "body": "MetaGPT Multi-agent framework that simulates software-company roles for natural-language programming agents orchestration planning code-gen agents agent-frameworks Overview A multi agent framework that assigns LLM agents distinct software company roles (product manager, architect, engineer, QA) and has them collaborate through a structured 'standard operating procedure' to turn a one line requirement into working software. Why it's in the Arsenal MetaGPT is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Agents are organized into role based pipelines mirroring a software team's division of labor;…"
+      "boost_description": "Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026",
+      "body": "MetaGPT Research framework encoding software-team SOPs as role-based agents that turn a one-line requirement into specs and code; last pushed January 2026 agents orchestration planning code-gen agents agent-frameworks Overview A multi agent framework that assigns LLM agents distinct software company roles (product manager, architect, engineer, QA) and has them collaborate through a structured 'standard operating procedure' to turn a one line requirement into working software. Why it's in the Arsenal MetaGPT is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture Agents are organized into role based pipelines mirroring a software team's division of labor;…"
     },
     {
       "id": "microsoft-agent-framework",
@@ -36348,7 +36348,7 @@
       "boost_title": "MLX-LM",
       "boost_tags": "fine-tuning llm local",
       "boost_description": "Apple MLX library for running and fine-tuning LLMs on Apple Silicon",
-      "body": "MLX-LM Apple MLX library for running and fine-tuning LLMs on Apple Silicon fine-tuning llm local TL;DR: MLX LM covers the fine tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview Apple's MLX based library for running and fine tuning LLMs natively on Apple Silicon, taking advantage of unified memory architecture instead of requiring a discrete CUDA GPU. Why It's in the Arsenal The entry exists because MLX LM is a apple MLX library for running and fine tuning LLMs on Apple Silicon. Read it beside axolotl, llamafactory, peft: the choice between them is a deployment and cost decision…"
+      "body": "MLX-LM Apple MLX library for running and fine-tuning LLMs on Apple Silicon fine-tuning llm local TL;DR: MLX LM covers the fine tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview Apple's MLX based library for running and fine tuning LLMs natively on Apple Silicon, taking advantage of unified memory architecture instead of requiring a discrete CUDA GPU. Why It's in the Arsenal The entry exists because MLX LM is a apple MLX library for running and fine tuning LLMs on Apple Silicon. Key Features Native Apple Silicon (M series) acceleration Supports both inference and LoRA style fine…"
     },
     {
       "id": "mlx-tune",
@@ -38055,7 +38055,7 @@
       "boost_title": "NeMo Guardrails",
       "boost_tags": "security guardrails llm",
       "boost_description": "NVIDIA framework for adding programmable guardrails to LLM applications",
-      "body": "NeMo Guardrails NVIDIA framework for adding programmable guardrails to LLM applications security guardrails llm TL;DR: NeMo Guardrails covers the security and guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview NVIDIA's open source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang. Treat NeMo Guardrails as a service with a schema, not as code you own unlike guardrails ai, llamaguard; on the security and guardrails path; under a open source cost model; with nemo guardrails, name, nemo. The cache, t…"
+      "body": "NeMo Guardrails NVIDIA framework for adding programmable guardrails to LLM applications security guardrails llm TL;DR: NeMo Guardrails covers the security and guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded mode handling yourself before adopting it. Overview NVIDIA's open source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang. Colang 2.0 flows are event driven: a rail can call the LLM, run an action, or halt with a refusal, and the distribution ships prebuilt rails for jailbreak detection and topic control. The runtime sits between client and…"
     },
     {
       "id": "neurips",
@@ -38759,7 +38759,7 @@
       "boost_title": "NVIDIA NIM",
       "boost_tags": "inference self-hosted llm",
       "boost_description": "Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs",
-      "body": "NVIDIA NIM Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs inference self-hosted llm Overview NVIDIA's packaging of optimized inference as microservices: each NIM is a container bundling a model with TensorRT LLM/vLLM based engines pre tuned per GPU, exposing OpenAI compatible APIs — turning weeks of serving optimization into a docker run for supported models. Why It's in the Arsenal The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI compatible APIs. Read it beside vllm, text generation inference, triton inference server: the choice between them is a deployment and cost decision before it…"
+      "body": "NVIDIA NIM Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs inference self-hosted llm Overview NVIDIA's packaging of optimized inference as microservices: each NIM is a container bundling a model with TensorRT LLM/vLLM based engines pre tuned per GPU, exposing OpenAI compatible APIs — turning weeks of serving optimization into a docker run for supported models. Why It's in the Arsenal The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI compatible APIs. Key Features Prebuilt containers with per GPU optimized engine profiles OpenAI compatible API; Kubernetes/Helm deployment paths Enterprise su…"
     },
     {
       "id": "nvidia-tensorrt",
@@ -39981,7 +39981,7 @@
       "type": "project",
       "name": "OpenAI Agents SDK",
       "title": "OpenAI Agents SDK",
-      "description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
+      "description": "Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text",
       "tags": [
         "agents",
         "tool-use",
@@ -39997,11 +39997,11 @@
       "audience": null,
       "domain": [
         "language",
-        "reasoning"
+        "reasoning",
+        "audio"
       ],
       "relation_to_stack": [
-        "build-on-top",
-        "deploy-as-is"
+        "build-on-top"
       ],
       "practical_applicability": null,
       "result_status": null,
@@ -40026,8 +40026,8 @@
       "url": "content/projects/frameworks/openai-agents-sdk",
       "boost_title": "OpenAI Agents SDK",
       "boost_tags": "agents tool-use guardrails tracing",
-      "boost_description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
-      "body": "OpenAI Agents SDK Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing agents tool-use guardrails tracing agents agent-frameworks Overview OpenAI's official, lightweight Python SDK for building agentic applications, providing simple primitives for agents, tool use, and handoffs between agents, intended as a production ready successor to OpenAI's earlier experimental 'Swarm' framework. Why it's in the Arsenal The case for OpenAI Agents SDK rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Built around a small set of primitives: agents (an LLM with instructions and tools), han…"
+      "boost_description": "Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text",
+      "body": "OpenAI Agents SDK Lightweight Python agent framework — agents, handoffs, guardrails, sessions and tracing, with sandbox, realtime and voice run modes alongside text agents tool-use guardrails tracing agents agent-frameworks Overview The Agents SDK is OpenAI's answer to a specific question: what does a minimal agent framework look like if you stop trying to model graphs? An Agent is a configuration object — a name, instructions, a model, tools, guardrails, handoffs. A Runner executes it, looping over tool calls until the model produces a final answer. Everything else in the framework hangs off those two ideas. By late 2026 the framework covers four run modes rather than one. A text agent handles ordinary request response work. A SandboxAgent runs inside a container with a manifest of files, so it can inspect a re…"
     },
     {
       "id": "openai-codex-cli",
@@ -40176,7 +40176,7 @@
       "boost_title": "OpenAI Evals",
       "boost_tags": "evaluation llm foundational",
       "boost_description": "An open-source framework for evaluating language model behavior",
-      "body": "OpenAI Evals An open-source framework for evaluating language model behavior evaluation llm foundational Overview An open source framework for writing and running custom evaluation suites against any model's behavior, code first rather than UI driven. Treat OpenAI Evals as a service with a schema, not as code you own on the evaluation path; under a open source cost model; with openai evals, name, openai. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one. Why It's in the Arsenal OpenAI Evals is An open source framework for evaluating language model behavior. No direct siblin…"
+      "body": "OpenAI Evals An open-source framework for evaluating language model behavior evaluation llm foundational Overview An open source framework for writing and running custom evaluation suites against any model's behavior, code first rather than UI driven. An eval registry maps a name to its grader function, and each run is recorded as JSONL, so two models can be compared on the same registry without re authoring the eval. Why It's in the Arsenal OpenAI Evals is An open source framework for evaluating language model behavior. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. Key Features Code first custom evaluation sui…"
     },
     {
       "id": "openai-swarm",
@@ -40593,7 +40593,7 @@
       "type": "project",
       "name": "OpenHands",
       "title": "OpenHands",
-      "description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
+      "description": "Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations",
       "tags": [
         "agents",
         "code-gen",
@@ -40638,8 +40638,8 @@
       "url": "content/projects/frameworks/openhands",
       "boost_title": "OpenHands",
       "boost_tags": "agents code-gen tool-use planning",
-      "boost_description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
-      "body": "OpenHands AI software engineering agent platform for coding, terminal work, browser actions, and automation agents code-gen tool-use planning agents agent-frameworks Overview An open source platform for autonomous AI software engineering agents (formerly named OpenDevin), capable of reading and writing code, executing commands in a sandboxed environment, and browsing the web to complete end to end coding tasks. Why it's in the Arsenal The case for OpenHands rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture An agent loop operates within a sandboxed execution environment (typically a Docker container) with acces…"
+      "boost_description": "Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations",
+      "body": "OpenHands Self-hosted Agent Canvas that runs OpenHands, Claude Code, Codex or any ACP agent across local, Docker, VM and cloud backends, with Slack/GitHub automations agents code-gen tool-use planning agents agent-frameworks Overview An open source platform for autonomous AI software engineering agents (formerly named OpenDevin), capable of reading and writing code, executing commands in a sandboxed environment, and browsing the web to complete end to end coding tasks. Why it's in the Arsenal OpenHands is catalogued because it turned a research agent into a self hosted platform for running coding agents, including other vendors'. The interesting question is no longer whether an agent can edit a repository but who operates it, where it runs, and what it is allowed to touch. Architecture An agent loop operates with…"
     },
     {
       "id": "openjudge",
@@ -41143,7 +41143,7 @@
       "boost_title": "OpenRouter",
       "boost_tags": "llm routing inference",
       "boost_description": "Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing",
-      "body": "OpenRouter Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing llm routing inference Overview A model marketplace/gateway: one OpenAI compatible API fronts hundreds of models across OpenAI, Anthropic, Google, Meta hosts, and dozens of inference providers, with uptime aware routing, price/latency based provider selection, and unified billing — the fastest way to try any new model the day it ships. Why It's in the Arsenal The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass through pricing. Read it beside litellm, portkey: the choice between them is a deployment and cost decision before it is a capabili…"
+      "body": "OpenRouter Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing llm routing inference Overview A model marketplace/gateway: one OpenAI compatible API fronts hundreds of models across OpenAI, Anthropic, Google, Meta hosts, and dozens of inference providers, with uptime aware routing, price/latency based provider selection, and unified billing — the fastest way to try any new model the day it ships. Why It's in the Arsenal The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass through pricing. Key Features 400+ models behind one OpenAI compatible API Provider routing: fallbacks, price/latency preferences,…"
     },
     {
       "id": "openscience",
@@ -41503,7 +41503,7 @@
       "boost_title": "Opik",
       "boost_tags": "observability tracing evaluation monitoring",
       "boost_description": "Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards",
-      "body": "Opik Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards observability tracing evaluation monitoring observability tracing Overview An open source LLM evaluation and observability platform from Comet, extending Comet's established machine learning experiment tracking product into tracing and evaluation for LLM and agent applications. Why it's in the Arsenal Opik appears in this catalog as a reference point for the benchmark and eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to. Architecture Provides tracing instrumentation for LLM application calls, an evaluation…"
+      "body": "Opik Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards observability tracing evaluation monitoring observability tracing Overview An open source LLM evaluation and observability platform from Comet, extending Comet's established machine learning experiment tracking product into tracing and evaluation for LLM and agent applications. Why it's in the Arsenal Opik appears in this catalog as a reference point for the benchmark and eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to. Architecture Instrumentation arrives through SDKs and an OpenTelemetry compatible endpo…"
     },
     {
       "id": "optillm",
@@ -41990,7 +41990,7 @@
       "boost_title": "Outlines",
       "boost_tags": "structured-output llm inference",
       "boost_description": "A library for constrained generation and structured outputs with LLMs",
-      "body": "Outlines A library for constrained generation and structured outputs with LLMs structured-output llm inference Overview An open source library for constrained generation, guaranteeing that an LLM's output matches a JSON schema, regex, or context free grammar by controlling token sampling at generation time, not just by prompting. Why It's in the Arsenal Outlines is A library for constrained generation and structured outputs with LLMs. Read it beside guidance, instructor, pydantic ai tool: the choice between them is a deployment and cost decision before it is a capability one. Key Features Hard guarantees on output structure via constrained decoding Supports JSON schema, regex, and grammar constraints…"
+      "body": "Outlines A library for constrained generation and structured outputs with LLMs structured-output llm inference Overview An open source library for constrained generation, guaranteeing that an LLM's output matches a JSON schema, regex, or context free grammar by controlling token sampling at generation time, not just by prompting. Why It's in the Arsenal Outlines is A library for constrained generation and structured outputs with LLMs. Key Features Hard guarantees on output structure via constrained decoding Supports JSON schema, regex, and grammar constraints Integrates with local/open weight model inference Architecture / How It Works Outlines builds a finite state machine (or equivalent) from the ta…"
     },
     {
       "id": "ouyang-2022-instructgpt",
@@ -42089,7 +42089,7 @@
       "type": "project",
       "name": "PaddleOCR",
       "title": "PaddleOCR",
-      "description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
+      "description": "Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment",
       "tags": [
         "data",
         "multimodal",
@@ -42133,8 +42133,8 @@
       "url": "content/projects/data-and-retrieval/paddleocr",
       "boost_title": "PaddleOCR",
       "boost_tags": "data multimodal llm",
-      "boost_description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
-      "body": "PaddleOCR Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge data multimodal llm computer-vision document-processing Overview Baidu's open source OCR and document AI toolkit built on the PaddlePaddle framework: the PP OCR series provides detection+recognition models spanning ultra lightweight (edge/mobile) to server grade accuracy across 80+ languages, while PP StructureV3 and PP ChatOCR pipelines handle layout analysis, table extraction, and key information extraction for document understanding. Widely deployed in industrial OCR at Chinese scale. Why it's in the Arsenal PaddleOCR appears in this catalog as a reference point for the data and retrieval phase; the useful question is what your corpus does to i…"
+      "boost_description": "Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment",
+      "body": "PaddleOCR Baidu's OCR and document-parsing toolkit: PP-OCRv6 for 50-language text spotting and a 0.9B document VLM, with models small enough for edge deployment data multimodal llm computer-vision document-processing Overview Baidu's open OCR and document parsing toolkit, built on PaddlePaddle. Two product lines share one repository: the PP OCR series, a detector plus recogniser pipeline that has been the default industrial OCR for years and now ships in 1.5M / 7.7M / 34.5M parameter tiers, and the PaddleOCR VL series, a 0.9B vision language model aimed at page level parsing into Markdown and JSON. PP StructureV3 sits between them, chaining layout detection, table recognition and text extraction while keeping coordinates down to the table cell. Why it's in the Arsenal This is the entry that answers \"how c…"
     },
     {
       "id": "paddlepaddle-paddledetection",
@@ -42741,7 +42741,7 @@
       "type": "tool",
       "name": "PEFT",
       "title": "PEFT",
-      "description": "Hugging Face library for parameter-efficient fine-tuning methods",
+      "description": "Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference",
       "tags": [
         "fine-tuning",
         "llm",
@@ -42782,8 +42782,8 @@
       "url": "content/tools/model-layer/peft",
       "boost_title": "PEFT",
       "boost_tags": "fine-tuning llm huggingface",
-      "boost_description": "Hugging Face library for parameter-efficient fine-tuning methods",
-      "body": "PEFT Hugging Face library for parameter-efficient fine-tuning methods fine-tuning llm huggingface TL;DR: PEFT, for the fine tuning job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview Hugging Face's library of parameter efficient fine tuning methods (LoRA, QLoRA, IA3, prefix tuning, and others), used as a low level building block inside custom or higher level training pipelines. The integration surface is an API rather than a vendored library unlike axolotl, llamafactory; on the fine tuning path; under a open source cost model; with peft, name, type. What you actually depend on is the request and…"
+      "boost_description": "Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference",
+      "body": "PEFT Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference fine-tuning llm huggingface TL;DR: The library every other fine tuning tool in this catalog builds on — adapters as a wrapper around a frozen base model, which turns \"which model can I afford to tune\" into \"how many adapters can I store\". Overview PEFT implements parameter efficient fine tuning as a modelling trick rather than a training framework. You load a model exactly as you normally would, wrap it with get peft model(model, config), and train as usual — except only a small number of injected parameters are trainable. model.print trainable parameters() is the reality check, and for a LoRA on a 3B model it reports s…"
     },
     {
       "id": "peng-2023-rwkv",
@@ -42935,7 +42935,7 @@
       "boost_title": "Phi-4",
       "boost_tags": "llm reasoning local efficiency",
       "boost_description": "Microsoft small language model family optimized for efficient reasoning and local-friendly deployment",
-      "body": "Phi-4 Microsoft small language model family optimized for efficient reasoning and local-friendly deployment llm reasoning local efficiency llms open-source-models Overview A 14 billion parameter dense language model from Microsoft Research, released in December 2024, distinguished by a training approach that emphasizes large scale synthetic data generation over raw dataset scale to maximize reasoning performance per parameter. Why it's in the Arsenal The case for Phi 4 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture A dense decoder only transformer following the phi 3 medium architecture with modification…"
+      "body": "Phi-4 Microsoft small language model family optimized for efficient reasoning and local-friendly deployment llm reasoning local efficiency llms open-source-models Overview A 14 billion parameter dense language model from Microsoft Research, released in December 2024, distinguished by a training approach that emphasizes large scale synthetic data generation over raw dataset scale to maximize reasoning performance per parameter. Why it's in the Arsenal Phi 4 is in the catalogue because it is the clearest test of how far synthetic data training scales down: a small model that beats much larger ones on reasoning benchmarks. Whether that holds on your task is the question the entry exists to frame. Architecture A dense decoder only transformer following the…"
     },
     {
       "id": "phi-cookbook",
@@ -45026,7 +45026,7 @@
       "boost_title": "promptfoo",
       "boost_tags": "evaluation llm monitoring",
       "boost_description": "An open-source CLI and platform for prompt and LLM regression testing",
-      "body": "promptfoo An open-source CLI and platform for prompt and LLM regression testing evaluation llm monitoring Overview An open source CLI and platform for regression testing prompts and LLM outputs, with built in support for red teaming prompts against jailbreaks and injection. Treat promptfoo as a service with a schema, not as code you own on the evaluation path; under a open source cost model; with promptfoo, name, type. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one. Why It's in the Arsenal The entry exists because promptfoo is An open source CLI and platform for prompt an…"
+      "body": "promptfoo An open-source CLI and platform for prompt and LLM regression testing evaluation llm monitoring Overview An open source CLI and platform for regression testing prompts and LLM outputs, with built in support for red teaming prompts against jailbreaks and injection. Assertions run from exact match to llm rubric and javascript checks, targets can be provider SDKs or plain HTTP endpoints, and a CI step fails the build on a threshold you set. Why It's in the Arsenal The entry exists because promptfoo is An open source CLI and platform for prompt and LLM regression testing. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of…"
     },
     {
       "id": "promptlayer",
@@ -45264,7 +45264,7 @@
       "boost_title": "Puppeteer",
       "boost_tags": "data cloud",
       "boost_description": "Node.js browser automation library for Chrome and Chromium workflows",
-      "body": "Puppeteer Node.js browser automation library for Chrome and Chromium workflows data cloud TL;DR: Puppeteer, for the web scraping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview A Node.js library for controlling Chrome/Chromium specifically, commonly used for scraping and automation tasks in JavaScript first stacks before Playwright's cross browser API became dominant. Why It's in the Arsenal The entry exists because Puppeteer is a node.js browser automation library for Chrome and Chromium workflows. Read it beside crawl4ai tool, firecrawl tool, jina reader: the choice between them is…"
+      "body": "Puppeteer Node.js browser automation library for Chrome and Chromium workflows data cloud TL;DR: Puppeteer, for the web scraping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating. Overview A Node.js library for controlling Chrome/Chromium specifically, commonly used for scraping and automation tasks in JavaScript first stacks before Playwright's cross browser API became dominant. Why It's in the Arsenal The entry exists because Puppeteer is a node.js browser automation library for Chrome and Chromium workflows. Key Features Chrome/Chromium specific automation API Mature ecosystem of Node.js scra…"
     },
     {
       "id": "put-task-inputs-after-instructions",
@@ -45410,7 +45410,7 @@
       "boost_title": "Pydantic AI",
       "boost_tags": "agents tool-use structured-output",
       "boost_description": "A Python agent framework built around typed models and structured outputs",
-      "body": "Pydantic AI A Python agent framework built around typed models and structured outputs agents tool-use structured-output agents frameworks Overview A Python agent framework from the team behind Pydantic, built around typed, validated tool definitions and structured outputs as first class citizens rather than an afterthought layered on top of a generic agent loop. Why it's in the Arsenal The case for Pydantic AI rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to. Architecture Agents are defined with typed input/output models and tool functions using Pydantic's validation; the framework validates mod…"
+      "body": "Pydantic AI A Python agent framework built around typed models and structured outputs agents tool-use structured-output agents frameworks Overview A Python agent framework from the team behind Pydantic, built around typed, validated tool definitions and structured outputs as first class citizens rather than an afterthought layered on top of a generic agent loop. Why it's in the Arsenal Pydantic AI is catalogued because it brings Pydantic's validation model to agent construction: typed dependencies, validated tool arguments and structured responses are the framework's whole argument. For a codebase already using FastAPI and Pydantic, that is a smaller leap than any general purpose agent framework. Architecture Agents are defined…"
     },
     {
       "id": "pydantic-ai-tool",
@@ -46851,7 +46851,7 @@
       "type": "tool",
       "name": "Ragas",
       "title": "Ragas",
-      "description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
+      "description": "Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks",
       "tags": [
         "evaluation",
         "rag",
@@ -46892,8 +46892,8 @@
       "url": "content/tools/evaluation-and-observability/ragas",
       "boost_title": "Ragas",
       "boost_tags": "evaluation rag llm",
-      "boost_description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
-      "body": "Ragas Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines evaluation rag llm TL;DR: the evaluation entry for Ragas. Open source evaluation framework for LLM applications with reference free metrics for RAG pipelines — the deciding factor is operational cost and what you have to run, not the feature list. Overview Ragas is an open source framework for evaluating LLM applications, best known for its RAG metric suite: faithfulness (is the answer grounded in retrieved context), answer relevancy, context precision, and context recall — computed reference free by an LLM judge. It also generates synthetic evaluation datasets from a document corpus, addressing the cold start…"
+      "boost_description": "Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks",
+      "body": "Ragas Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks evaluation rag llm TL;DR: the default offline eval harness for RAG. Reference free metrics (faithfulness, context precision and recall) plus synthetic test set generation, at the cost of an LLM judge on every run — check repository activity before standardising, since releases slowed in 2026. Overview Ragas is an open source framework for evaluating LLM applications, best known for its RAG metric suite: faithfulness (is the answer grounded in retrieved context), answer relevancy, context precision, and context recall — computed reference free by an LLM judge. It also generates synthetic evaluation datasets from…"
     },
     {
       "id": "ragas-rag-evaluation",
@@ -47105,7 +47105,7 @@
       "type": "tool",
       "name": "Railway",
       "title": "Railway",
-      "description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
+      "description": "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving",
       "tags": [
         "cloud",
         "serverless"
@@ -47145,8 +47145,8 @@
       "url": "content/tools/serving-and-deployment/railway",
       "boost_title": "Railway",
       "boost_tags": "cloud serverless",
-      "boost_description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
-      "body": "Railway Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes cloud serverless TL;DR: the deployment, production serving entry for Railway. Developer friendly cloud deployment platform for apps, workers, databases, and prototypes — the deciding factor is operational cost and what you have to run, not the feature list. Overview A developer friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience. The integration surface is an API rather than a vendored library unlike bentoml, fly io; on the deployment, production serving path; under a usage based cost model; with…"
+      "boost_description": "Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving",
+      "body": "Railway Proprietary PaaS that builds from your repo (Railpack), adds managed databases and per-PR environments — for the app layer, not GPU serving cloud serverless TL;DR: the low ceremony PaaS for the application around your models. Repository to deploy via Railpack, managed Postgres/Redis, and a URL per pull request — proprietary hosting with a genuine exit path, and the wrong layer for GPU inference. Overview A developer friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience. The integration surface is an API rather than a vendored library unlike bentoml, fly io; on the deployment, production serving path; under a usage based cost model; wit…"
     },
     {
       "id": "ramalama",
@@ -47433,7 +47433,7 @@
       "boost_title": "Ray Serve",
       "boost_tags": "inference orchestration batching",
       "boost_description": "Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python",
-      "body": "Ray Serve Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python inference orchestration batching Overview Ray's serving library: define deployments as Python classes, compose them into inference graphs, and Ray Serve handles replica autoscaling, fractional GPUs, request batching, and rolling upgrades across a cluster — commonly used to scale vLLM to many replicas/models. Why It's in the Arsenal The entry exists because Ray Serve is a scalable model serving library on Ray for composing multi model inference graphs in pure Python. Read it beside triton inference server, bentoml, kserve: the choice between them is a deployment and cost decision before it is a capability one. Key Features Mo…"
+      "body": "Ray Serve Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python inference orchestration batching Overview Ray's serving library: define deployments as Python classes, compose them into inference graphs, and Ray Serve handles replica autoscaling, fractional GPUs, request batching, and rolling upgrades across a cluster — commonly used to scale vLLM to many replicas/models. Why It's in the Arsenal The entry exists because Ray Serve is a scalable model serving library on Ray for composing multi model inference graphs in pure Python. Key Features Model composition: chain/branch deployments in Python Autoscaling replicas, fractional GPU allocation, dynamic batching FastAPI integration and mult…"
     },
     {
       "id": "rd-agent",
@@ -48243,7 +48243,7 @@
       "boost_title": "Replicate",
       "boost_tags": "cloud inference serverless",
       "boost_description": "A hosted platform for running and deploying machine learning models via API",
-      "body": "Replicate A hosted platform for running and deploying machine learning models via API cloud inference serverless Overview A hosted platform for running community published open source machine learning models via a simple API, with pay per second billing and no GPU management required. Why It's in the Arsenal Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support. Read it beside aws bedrock, azure ai studio, bentoml: the choice between them is a deployment and cost decision before it is a capability one. Key Features Simple API access to a large catalog of open models Pay per second billing w…"
+      "body": "Replicate A hosted platform for running and deploying machine learning models via API cloud inference serverless Overview A hosted platform for running community published open source machine learning models via a simple API, with pay per second billing and no GPU management required. Why It's in the Arsenal Replicate is catalogued as the hosted path from a public model to an API call, with Cog as the packaging layer that keeps the container portable. The pair is the reference answer to 'run this model today', and the reason the exit path is credible. Key Features Simple API access to a large catalog of open models Pay per second billing with no idle cost Supports deploying your own custom models as wel…"
     },
     {
       "id": "repomix",
@@ -51099,7 +51099,7 @@
       "boost_title": "Sentence Transformers",
       "boost_tags": "embeddings retrieval huggingface",
       "boost_description": "The standard Python library for computing, training, and fine-tuning text embedding and reranker models",
-      "body": "Sentence Transformers The standard Python library for computing, training, and fine-tuning text embedding and reranker models embeddings retrieval huggingface Overview The library that made sentence embeddings practical: load any of thousands of Hugging Face embedding models with one line, encode with batching/normalization handled, compute similarities, and train custom bi encoders or cross encoder rerankers with purpose built losses (MultipleNegativesRanking, Matryoshka, distillation). Why It's in the Arsenal Sentence Transformers is The standard Python library for computing, training, and fine tuning text embedding and reranker models. Read it beside voyage ai, cohere: the choice between them is a deployment and cost decision before it is a capa…"
+      "body": "Sentence Transformers The standard Python library for computing, training, and fine-tuning text embedding and reranker models embeddings retrieval huggingface Overview The library that made sentence embeddings practical: load any of thousands of Hugging Face embedding models with one line, encode with batching/normalization handled, compute similarities, and train custom bi encoders or cross encoder rerankers with purpose built losses (MultipleNegativesRanking, Matryoshka, distillation). Why It's in the Arsenal Sentence Transformers is The standard Python library for computing, training, and fine tuning text embedding and reranker models. Key Features One line loading of thousands of pretrained embedding models Training framework for bi encoders, c…"
     },
     {
       "id": "sentencepiece",
@@ -51791,7 +51791,7 @@
       "type": "project",
       "name": "SGLang",
       "title": "SGLang",
-      "description": "High-performance serving framework for large language and multimodal models",
+      "description": "LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package",
       "tags": [
         "llm",
         "inference",
@@ -51836,8 +51836,8 @@
       "url": "content/projects/inference-engines/sglang",
       "boost_title": "SGLang",
       "boost_tags": "llm inference batching multimodal",
-      "boost_description": "High-performance serving framework for large language and multimodal models",
-      "body": "SGLang High-performance serving framework for large language and multimodal models llm inference batching multimodal llms inference-engines Overview A high performance serving framework for large language and multimodal models, distinguished by RadixAttention, a token level prefix caching mechanism that automatically discovers and reuses shared context across requests. Why it's in the Arsenal SGLang is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it. Architecture RadixAttention stores KV cache entries in a radix tree indexed at the token level, automatically identifying shared prefixes…"
+      "boost_description": "LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package",
+      "body": "SGLang LMSYS inference framework with RadixAttention prefix caching, compressed-FSM constrained decoding and rollouts for RL — LLM, VLM and diffusion in one package llm inference batching multimodal llms inference-engines Overview SGLang is LMSYS's open source serving framework, and its original thesis is still the one to evaluate it on: in real deployments the prompt is what repeats. A fixed system prompt, a retrieved document, a growing conversation history, a tool schema — the same tokens arrive at the front of request after request. RadixAttention keeps the KV cache in a radix tree indexed by token, so a new request matches the longest existing prefix and resumes computation from there instead of re running prefill. Around that core the project has grown well past a chat completions server. The same reposi…"
     },
     {
       "id": "shao-2024-deepseekmath",
@@ -52024,7 +52024,7 @@
       "boost_title": "ShellMate",
       "boost_tags": "agents",
       "boost_description": "AI-powered terminal assistant that suggests commands and explains outputs",
-      "body": "ShellMate AI-powered terminal assistant that suggests commands and explains outputs agents Overview ShellMate is a closed source, freemium AI assistant for the command line: it watches the interactive shell session and, on demand, suggests the next command or explains the output of one you just ran. It targets day to day CLI work and learning unfamiliar tools, and — being closed source and cloud backed — forwards session context to a hosted model provider rather than running locally. Why It's in the Arsenal ShellMate is catalogued as a aI powered terminal assistant that suggests commands and explains outputs, which is the specific claim the rest of the entry has to support. No dire…"
+      "body": "ShellMate AI-powered terminal assistant that suggests commands and explains outputs agents Overview ShellMate is a closed source, freemium AI assistant for the command line: it watches the interactive shell session and, on demand, suggests the next command or explains the output of one you just ran. It targets day to day CLI work and learning unfamiliar tools, and — being closed source and cloud backed — forwards session context to a hosted model provider rather than running locally. Why It's in the Arsenal ShellMate is catalogued because the shell is where most operational work still happens, and an assistant that reads the session rather than a pasted snippet is a different produ…"
     },
     {
       "id": "sherpa-onnx",
@@ -54730,7 +54730,7 @@
       "boost_title": "Streamlit",
       "boost_tags": "llm cloud data",
       "boost_description": "A Python framework for building data and AI apps with minimal frontend code",
-      "body": "Streamlit A Python framework for building data and AI apps with minimal frontend code llm cloud data Overview The most widely adopted Python framework for building data and AI app UIs quickly, with the largest plugin ecosystem among the Python UI tools and built in widgets for dataframes and charts. Why It's in the Arsenal Streamlit is A Python framework for building data and AI apps with minimal frontend code. Read it beside chainlit, fastapi, gradio: the choice between them is a deployment and cost decision before it is a capability one. Key Features Largest community/plugin ecosystem of the Python UI tools Built in widgets for dataframes, charts, and AI outputs Simple script based mental…"
+      "body": "Streamlit A Python framework for building data and AI apps with minimal frontend code llm cloud data Overview The most widely adopted Python framework for building data and AI app UIs quickly, with the largest plugin ecosystem among the Python UI tools and built in widgets for dataframes and charts. Why It's in the Arsenal Streamlit is A Python framework for building data and AI apps with minimal frontend code. Key Features Largest community/plugin ecosystem of the Python UI tools Built in widgets for dataframes, charts, and AI outputs Simple script based mental model Architecture / How It Works The entire script reruns top to bottom on each user interaction, with Streamlit's caching layer u…"
     },
     {
       "id": "strix",
@@ -55513,7 +55513,7 @@
       "type": "project",
       "name": "Surya",
       "title": "Surya",
-      "description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
+      "description": "650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker",
       "tags": [
         "data",
         "multimodal",
@@ -55556,8 +55556,8 @@
       "url": "content/projects/data-and-retrieval/surya",
       "boost_title": "Surya",
       "boost_tags": "data multimodal llm",
-      "boost_description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
-      "body": "Surya Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker data multimodal llm computer-vision document-processing Overview An open source OCR toolkit providing the model layer for modern document AI: text detection, text recognition across 90+ languages, layout analysis (tables, images, headers), reading order detection, table structure recognition, and LaTeX OCR. Built by Datalab as the foundation for Marker, but designed for standalone use in custom document processing pipelines. Why it's in the Arsenal Surya is catalogued here on the strength of its own documentation and public record, not on independent measurement — treat the claims below as what the project states about itself until you have run it…"
+      "boost_description": "650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker",
+      "body": "Surya 650M-parameter OCR model with layout analysis, reading order and table recognition — Apache-2.0 code, OpenRAIL-M weights, the engine behind Marker data multimodal llm computer-vision document-processing Overview An OCR stack built around a single 650M parameter vision language model that reads a page, labels its regions, orders them and returns each block as HTML. Layout analysis, reading order and table structure come from the same model; text line detection and OCR error detection remain separate, smaller models. Datalab uses it as the engine inside Marker, and ships it for direct use when you want the blocks rather than a finished Markdown document. Why it's in the Arsenal Surya matters for a different reason than the converter entries: it is the layer you reach for when the output of a c…"
     },
     {
       "id": "sutskever-2014-seq2seq",
@@ -56195,7 +56195,7 @@
       "boost_title": "Tavily",
       "boost_tags": "agents retrieval rag",
       "boost_description": "Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call",
-      "body": "Tavily Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call agents retrieval rag TL;DR: the web scraping entry for Tavily. Search API purpose built for LLMs and agents — returns ranked, cleaned, LLM ready results (and optional extracted content) from a single query call — the deciding factor is operational cost and what you have to run, not the feature list. Overview Tavily is a search API built specifically to feed LLMs and agents rather than humans. A single call runs a search, filters and de duplicates results, strips boilerplate, and returns LLM ready snippets — optionally including extracted full page content and a short synthesized answer. It exists because wiring g…"
+      "body": "Tavily Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call agents retrieval rag TL;DR: the web scraping entry for Tavily. Search API purpose built for LLMs and agents — returns ranked, cleaned, LLM ready results (and optional extracted content) from a single query call — the trade is control: you get cleaned, ranked results in one call, and you give up the ability to see or tune the ranking. Overview Tavily is a search API built specifically to feed LLMs and agents rather than humans. A single call runs a search, filters and de duplicates results, strips boilerplate, and returns LLM ready snippets — optionally including extracted full page content and a short synthesized…"
     },
     {
       "id": "temporal",
@@ -57228,7 +57228,7 @@
       "boost_title": "Together AI",
       "boost_tags": "llm inference fine-tuning",
       "boost_description": "Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints",
-      "body": "Together AI Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints llm inference fine-tuning Overview One of the leading open model clouds: serverless per token inference across 200+ chat, code, embedding, and image models, dedicated GPU endpoints for consistent latency, a fine tuning API (LoRA and full), and GPU clusters — with inference speed research (FlashAttention, speculative decoding) baked into the stack. Why It's in the Arsenal Together AI is a inference and fine tuning cloud for 200+ open source models with strong price/performance and dedicated endpoints. Read it beside fireworks ai, openrouter, replicate: the choice between them is a deployment and cost decision before it…"
+      "body": "Together AI Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints llm inference fine-tuning Overview One of the leading open model clouds: serverless per token inference across 200+ chat, code, embedding, and image models, dedicated GPU endpoints for consistent latency, a fine tuning API (LoRA and full), and GPU clusters — with inference speed research (FlashAttention, speculative decoding) baked into the stack. Why It's in the Arsenal Together AI is a inference and fine tuning cloud for 200+ open source models with strong price/performance and dedicated endpoints. Key Features Serverless inference for 200+ open models, OpenAI compatible Fine tuning API with LoRA and full parameter…"
     },
     {
       "id": "togethercomputer-redpajama-data",
@@ -58290,7 +58290,7 @@
       "boost_title": "NVIDIA Triton Inference Server",
       "boost_tags": "inference self-hosted batching triton",
       "boost_description": "NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles",
-      "body": "NVIDIA Triton Inference Server NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles inference self-hosted batching triton Overview NVIDIA's open source inference server used across industry for production model serving: one server process hosts models from any backend (TensorRT, PyTorch, ONNX Runtime, Python, vLLM), providing HTTP/gRPC APIs, dynamic batching, model versioning, ensembles/pipelines, and detailed metrics. Why It's in the Arsenal The entry exists because NVIDIA Triton Inference Server is a nVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles. Read it beside bentoml, ray serve, kserve: the choice between them is a deployment…"
+      "body": "NVIDIA Triton Inference Server NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles inference self-hosted batching triton Overview NVIDIA's open source inference server used across industry for production model serving: one server process hosts models from any backend (TensorRT, PyTorch, ONNX Runtime, Python, vLLM), providing HTTP/gRPC APIs, dynamic batching, model versioning, ensembles/pipelines, and detailed metrics. Why It's in the Arsenal The entry exists because NVIDIA Triton Inference Server is a nVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles. Key Features Multi backend: TensorRT( LLM), ONNX, PyTorch, Python, vLLM Dynamic bat…"
     },
     {
       "id": "trl",
@@ -61443,7 +61443,7 @@
       "boost_title": "Voyage AI",
       "boost_tags": "embeddings retrieval rag",
       "boost_description": "Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB",
-      "body": "Voyage AI Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB embeddings retrieval rag Overview A specialist embeddings company (founded by Stanford's Tengyu Ma, acquired by MongoDB in 2025): the voyage 3 embedding family and rerank models deliver leading retrieval accuracy — including domain specific variants for code, law, and finance — served via simple APIs with a generous free tier. Why It's in the Arsenal The entry exists because Voyage AI is a embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB. Read it beside cohere: the choice between them is a deployment and cost decision before it is a capability one. Key Features voyage 3/3…"
+      "body": "Voyage AI Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB embeddings retrieval rag Overview A specialist embeddings company (founded by Stanford's Tengyu Ma, acquired by MongoDB in 2025): the voyage 3 embedding family and rerank models deliver leading retrieval accuracy — including domain specific variants for code, law, and finance — served via simple APIs with a generous free tier. Why It's in the Arsenal The entry exists because Voyage AI is a embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB. Key Features voyage 3/3.5 embeddings: top tier retrieval accuracy, flexible dimensions Domain specific models: code, finance, law, mult…"
     },
     {
       "id": "vulnclaw",
@@ -61542,7 +61542,7 @@
       "boost_title": "Weights & Biases Weave",
       "boost_tags": "observability tracing evaluation",
       "boost_description": "An observability and evaluation toolkit for AI applications from Weights & Biases",
-      "body": "Weights & Biases Weave An observability and evaluation toolkit for AI applications from Weights & Biases observability tracing evaluation Overview Weights & Biases' LLM observability and evaluation toolkit, extending their classic ML experiment tracking into tracing and evaluation for LLM based applications. Weights & Biases Weave is reached over a documented surface on the tracing, evaluation path; under a freemium cost model; with wandb weave, name, weights, which means the things to measure are end to end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you. Why It's in the Arsenal Weights & Biases Weave…"
+      "body": "Weights & Biases Weave An observability and evaluation toolkit for AI applications from Weights & Biases observability tracing evaluation Overview Weights & Biases' LLM observability and evaluation toolkit, extending their classic ML experiment tracking into tracing and evaluation for LLM based applications. Weights & Biases Weave is reached over a documented surface on the tracing, evaluation path; under a freemium cost model; with wandb weave, name, weights, which means the things to measure are end to end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you. Why It's in the Arsenal Weave is catalogued bec…"
     },
     {
       "id": "wang-2022-self-consistency",

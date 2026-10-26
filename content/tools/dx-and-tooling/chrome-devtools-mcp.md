@@ -43,7 +43,7 @@ Chrome DevTools MCP is a Google-maintained Model Context Protocol server, Apache
 
 ## Why It's in the Arsenal
 
-The entry exists because Chrome DevTools MCP is a google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input. Read it beside `playwright`, `puppeteer`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Chrome DevTools MCP is a google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input.
 
 ## Key Features
 

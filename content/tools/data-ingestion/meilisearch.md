@@ -46,7 +46,7 @@ A Rust search engine designed around instant, forgiving search-as-you-type: sche
 
 ## Why It's in the Arsenal
 
-Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance. Read it beside `typesense`, `qdrant`: the choice between them is a deployment and cost decision before it is a capability one.
+Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance.
 
 ## Key Features
 
@@ -72,7 +72,7 @@ curl -L https://install.meilisearch.com | sh && ./meilisearch
 
 ## Strengths
 
-- In concrete terms, Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- In concrete terms, Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance.
 - Meilisearch overlaps `typesense`, `qdrant` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
 - The documented integration path for Meilisearch runs through `langchain`, `llamaindex`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
 - Capability is documented; behaviour is not. For Meilisearch, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.

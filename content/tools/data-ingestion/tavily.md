@@ -39,7 +39,7 @@ verdict_rationale: The de facto search API for agent frameworks — LLM-tuned ra
 status: active
 ---
 
-> **TL;DR:** the web-scraping entry for Tavily. Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the web-scraping entry for Tavily. Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call — the trade is control: you get cleaned, ranked results in one call, and you give up the ability to see or tune the ranking.
 
 ## Overview
 
@@ -79,7 +79,7 @@ pip install tavily-python
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Tavily is specific — tavily runs the query against web sources, applies its own relevance ranking and content cleaning server-side, and returns structured JSON (results, snippets, optional extracted content and answer). The client is thin — you send a query plus parameters (search depth, max results, domain filters) and get back model-ready text, so the heavy lifting of fetching and cleaning happens in the service — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Tavily is specific — tavily runs the query against web sources, applies its own relevance ranking and content cleaning server-side, and returns structured JSON (results, snippets, optional extracted content and answer). The client is thin — you send a query plus parameters (search depth, max results, domain filters) and get back model-ready text, so the heavy lifting of fetching and cleaning happens in the service The deciding measurement is freshness and citation quality on your own queries, because relevance ranking happens server-side and cannot be inspected or tuned.
 - Tavily's honest comparison set is `exa`, `firecrawl-tool`, `jina-reader`; what separates them is rarely capability, it is what you must operate.
 - Tavily is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Tavily's latency and its error rate under a degraded upstream before it carries production traffic.

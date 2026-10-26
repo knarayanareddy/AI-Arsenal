@@ -3,7 +3,7 @@ id: llamafactory
 name: LLaMA-Factory
 type: tool
 job: [fine-tuning]
-description: Unified fine-tuning framework and UI for many LLMs and training methods
+description: "No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment"
 url: "https://github.com/hiyouga/LlamaFactory"
 cost_model: open-source
 pricing_detail: Open source or free to start
@@ -20,7 +20,7 @@ github_url: "https://github.com/hiyouga/LlamaFactory"
 alternatives: [axolotl, mlx-lm, peft, torchtune, unsloth]
 integrates_with: []
 added_date: "2026-06-13"
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 reviewed_by: maintainer
 phase: model-layer
@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the fine-tuning entry for LLaMA-Factory. Unified fine-tuning framework and UI for many LLMs and training methods — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the fastest path from a dataset to a fine-tuned checkpoint. A Gradio UI and one CLI cover SFT, DPO and PPO over 100+ model templates, with merge and export built in; the UI is for exploration, not for production runs.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A unified fine-tuning framework with both a web UI and CLI, supporting a very br
 
 ## Why It's in the Arsenal
 
-The entry exists because LLaMA-Factory is a unified fine-tuning framework and UI for many LLMs and training methods. Read it beside `axolotl`, `mlx-lm`, `peft`: the choice between them is a deployment and cost decision before it is a capability one.
+The barrier to a first fine-tune is rarely the maths; it is the day spent wiring a trainer, a dataset format and an export path. LLaMA-Factory is in the Arsenal because it collapses that day into a CLI call and a browser UI over 100+ model templates, which makes fine-tuning something a team can evaluate before it commits to infrastructure — and the merge/export path means the result reaches a runtime instead of stopping at a checkpoint.
 
 ## Key Features
 
@@ -69,29 +69,37 @@ Follow the official documentation at https://github.com/hiyouga/LlamaFactory for
 
 ## Use Cases
 
-1. **Integrating LLaMA-Factory**: the fine-tuning call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
-2. **Validating the choice**: put LLaMA-Factory and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
-3. **Choosing between candidates**: LLaMA-Factory's comparison set is `axolotl`, `mlx-lm`, `peft`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Getting a first fine-tune running the same day**: `llamafactory-cli` plus LlamaBoard means SFT, DPO or PPO on a supported model without writing a training loop, which is the right trade for a team testing whether fine-tuning helps at all.
+2. **Teams where the trainer is not an ML engineer**: the web UI exposes dataset selection, method and hyperparameters, so a domain expert can run an experiment and hand the config back.
+3. **One interface across a large model zoo**: 100+ model templates, including vision-language models, behind the same CLI removes the per-family script sprawl that accumulates in research repos.
+4. **Adapter experiments before committing to infrastructure**: LoRA and QLoRA runs on a single GPU are cheap enough to answer "is this dataset any good" before anyone books a cluster.
+5. **Exporting to the runtime you deploy on**: merging adapters or exporting quantised checkpoints is part of the tool, so the trained artefact reaches llama.cpp or an inference server without a second pipeline.
+6. **Teaching and workshops**: a browser UI and a Colab notebook that actually train something are a better introduction than a config schema.
 
 ## Strengths
 
-- Beyond the marketing, LLaMA-Factory's own notes are the useful part: training jobs are configured through the UI or CLI and dispatched to underlying Transformers/PEFT/DeepSpeed training loops, with results exportable as merged or adapter checkpoints.
-- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the difference is surface: one CLI and web UI cover SFT, DPO and PPO across 100+ model templates, where the others expose a narrower training API.
-- LLaMA-Factory is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
-- What this entry cannot give you is measured behaviour: measure LLaMA-Factory's latency and its error rate under a degraded upstream before it carries production traffic.
+- Zero-code entry point with a real CLI underneath: the UI configures the same run the CLI executes, so a UI experiment is reproducible as a command.
+- Model coverage is the widest in this phase — 100+ families plus multimodal support, updated quickly after upstream releases.
+- One tool for SFT, DPO and PPO, with merge and export built in, which collapses three scripts into one.
+- Credible industrial adoption: the README cites Amazon SageMaker HyperPod, NVIDIA and Aliyun PAI usage, and the accompanying paper has over 1,000 citations.
+- Docker images, Colab and ModelScope/Demo links make the first run a five-minute affair rather than a dependency project.
+- Apache-2.0 and 75.7k stars: the community answers questions that the docs do not.
 
 ## Limitations / When NOT to Use
 
-- It is a training tool you run on your own hardware, so VRAM sets the model size, and the web UI hides configuration that still has to be understood for multi-GPU runs.
-- Documentation for LLaMA-Factory describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- Where LLaMA-Factory overlaps `axolotl`, `mlx-lm`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
+- **1,205 open issues.** Adoption this broad outruns triage; expect to diagnose your own failures, and expect some model templates to be stale relative to upstream.
+- **The UI hides what still has to be understood.** Multi-GPU, DeepSpeed configs and ZeRO stages are advanced settings a beginner will eventually need to reason about — the UI delays that learning rather than removing it.
+- **Less control over exotic configurations.** Techniques that Axolotl exposes as first-class keys (expert parallelism variants, NVFP4 MoE LoRA, selective activation checkpointing) may need code changes here.
+- **It is a training front end, not a serving stack.** Merge, export and then hand off; nothing here runs inference for you.
+- **Rapid release cadence with a broad surface.** Pin the version and read the changelog: option names and defaults move between releases.
+- **The "zero-code" promise ends at a custom dataset format.** Non-trivial data (multi-turn tool traces, interleaved images) still requires reading the dataset documentation carefully.
 
 ## Integration Patterns
 
-- *Wiring*: adopt LLaMA-Factory as a Python dependency or sidecar service against the `fine-tuning` job.  Wire it behind a thin adapter so the rest of your system depends on your interface rather than on this tool's API surface, which keeps a swap or a rollback cheap.
-- *Alternatives*: `axolotl`, `mlx-lm`, `peft`, `torchtune` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
-- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
-- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
+- *Wiring*: `llamafactory-cli train config.yaml` in CI or on a workstation, with the exported checkpoint as the artefact; LlamaBoard for exploration only, never as the system of record.
+- *Underneath*: Transformers, PEFT and DeepSpeed do the work — `deepspeed` for ZeRO and offload, `peft` for adapter maths, and `axolotl` is the closest configuration-first alternative.
+- *Alternatives*: `mlx-lm` on Apple Silicon, `torchtune` for a readable PyTorch recipe, hosted fine-tuning APIs when the dataset is small and the schedule matters more than control.
+- *Downstream*: export to GGUF for llama.cpp and Ollama, or serve adapters through `vllm` and `sglang` multi-LoRA endpoints.
 
 ## Resources
 
@@ -101,7 +109,7 @@ Follow the official documentation at https://github.com/hiyouga/LlamaFactory for
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is scale-driven: a heavily cited paper and vendor write-ups from SageMaker HyperPod, NVIDIA and Aliyun PAI made it the default recommendation for a team's first fine-tune.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

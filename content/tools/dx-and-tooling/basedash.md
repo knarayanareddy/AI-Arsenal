@@ -48,7 +48,7 @@ Basedash is reached over a documented surface on the structured-output path; und
 
 ## Why It's in the Arsenal
 
-Basedash is catalogued as a aI-native platform for generating dashboards, reports, and insights from natural-language queries, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
+Basedash is in the catalogue as an example of AI-native BI: natural-language analytics over a database the company already has. That is a different proposition from generating SQL in a chat window, because the saved, permissioned dashboard is the artefact that survives the conversation.
 
 ## Key Features
 
@@ -76,7 +76,7 @@ The integration happens in the developer's loop rather than at runtime, through 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Basedash is specific — natural-language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Basedash is specific — natural-language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically The test is answer faithfulness on your own schema: generated SQL can look right and aggregate the wrong join, so a review path for saved queries matters more than the natural-language interface.
 - No direct sibling is catalogued for Basedash in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Basedash is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Basedash's latency and its error rate under a degraded upstream before it carries production traffic.
