@@ -72,7 +72,7 @@ Renders and manages a collection of generated artifacts (interactive components/
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Claude Artifact Player is specific — renders and manages a collection of generated artifacts (interactive components/apps produced by a model) outside of the original chat interface they were created in — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Claude Artifact Player is specific — renders and manages a collection of generated artifacts (interactive components/apps produced by a model) outside of the original chat interface they were created in The check is what happens when the artefact is regenerated: an artefact player is only useful if a changed model output does not silently break the demo around it.
 - No direct sibling is catalogued for Claude Artifact Player in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Claude Artifact Player is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so Claude Artifact Player's interface may still move; pin the version you build against rather than tracking latest.

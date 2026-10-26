@@ -73,7 +73,7 @@ pip install lm-format-enforcer
 
 ## Strengths
 
-- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards The cost to measure is decode overhead: token masking runs per sampling step, and the slowdown is small for JSON and can grow for complex grammars.
 - Weighing LM Format Enforcer against `outlines`, `guidance`, `instructor` comes down to one question: who runs the process when it breaks — you or the vendor.
 - The documented path into LM Format Enforcer runs through `vllm`, so the contract to test is the one those adapters expose.
 - Marked beta, so LM Format Enforcer's interface may still move; pin the version you build against rather than tracking latest.

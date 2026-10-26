@@ -84,7 +84,7 @@ pip install semantic-kernel
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Semantic Kernel is specific — applications integrate AI capability through 'plugins' (functions exposed to the model) and 'planners' (components that sequence plugin calls to satisfy a goal), designed to slot into existing application architectures rather than serve as a standalone agent platform — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Semantic Kernel is specific — applications integrate AI capability through 'plugins' (functions exposed to the model) and 'planners' (components that sequence plugin calls to satisfy a goal), designed to slot into existing application architectures rather than serve as a standalone agent platform The test is how much of your existing architecture it respects: plugins map to service calls and planners sequence them, and the failure to watch for is a planner choosing a call sequence you would not have allowed.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
 - Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 

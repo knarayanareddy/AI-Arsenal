@@ -76,7 +76,7 @@ Work is a graph of steps where one step's output is the next step's input, so a 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting SeaTicket is specific — incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting SeaTicket is specific — incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low The measurement is escalation quality rather than deflection rate — a ticket routed to the wrong queue costs more than one answered slowly, and autonomous resolution needs an audit trail.
 - No direct sibling is catalogued for SeaTicket in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - SeaTicket is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - Marked beta, so SeaTicket's interface may still move; pin the version you build against rather than tracking latest.

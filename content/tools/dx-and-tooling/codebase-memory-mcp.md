@@ -77,7 +77,7 @@ An indexing pass parses the repo with tree-sitter grammars and writes symbols, f
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Codebase Memory MCP is specific — an indexing pass parses the repo with tree-sitter grammars and writes symbols, files, and relationships into an embedded graph store; the MCP server then answers Cypher-style structural queries against it. Because the index persists across sessions, the agent's knowledge of the codebase survives context resets — the graph is the memory, not the context window — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Codebase Memory MCP is specific — an indexing pass parses the repo with tree-sitter grammars and writes symbols, files, and relationships into an embedded graph store; the MCP server then answers Cypher-style structural queries against it. Because the index persists across sessions, the agent's knowledge of the codebase survives context resets — the graph is the memory, not the context window The property to verify is index freshness: a graph that lags the working tree answers confidently about code that no longer exists, so incremental re-indexing is the feature that matters.
 - No direct sibling is catalogued for Codebase Memory MCP in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - The memory store is a local index that goes stale as the repository moves, which is a job you own rather than something a vendor keeps current.
 - Marked beta, so Codebase Memory MCP's interface may still move; pin the version you build against rather than tracking latest.

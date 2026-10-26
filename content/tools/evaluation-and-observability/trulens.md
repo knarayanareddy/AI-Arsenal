@@ -70,7 +70,7 @@ An application is instrumented with TruLens wrappers; each run's inputs/outputs 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting TruLens is specific — an application is instrumented with TruLens wrappers; each run's inputs/outputs are captured and scored by configured feedback functions, with results stored for comparison across versions — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting TruLens is specific — an application is instrumented with TruLens wrappers; each run's inputs/outputs are captured and scored by configured feedback functions, with results stored for comparison across versions The measurement question is judge reliability: feedback functions are LLM calls of your choosing, so their agreement with human labels is the number that makes the scores usable.
 - No direct sibling is catalogued for TruLens in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - TruLens is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure TruLens's latency and its error rate under a degraded upstream before it carries production traffic.

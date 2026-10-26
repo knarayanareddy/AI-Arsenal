@@ -75,7 +75,7 @@ pip install trl
 
 ## Strengths
 
-- The implementation detail worth reading before adopting TRL is specific — each algorithm is a Trainer subclass handling its loss and data collation (e.g. DPO's chosen/rejected pairs, GRPO's grouped rollouts with reward functions); models remain standard Transformers modules, so PEFT adapters, quantized bases, and distributed launchers work unchanged — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting TRL is specific — each algorithm is a Trainer subclass handling its loss and data collation (e.g. DPO's chosen/rejected pairs, GRPO's grouped rollouts with reward functions); models remain standard Transformers modules, so PEFT adapters, quantized bases, and distributed launchers work unchanged The check is memory per method: DPO holds two reference forwards at once and GRPO fans out grouped rollouts, so the trainer that fits on one GPU for SFT may not fit for preference tuning.
 - Weighing TRL against `axolotl`, `llamafactory`, `unsloth` comes down to one question: who runs the process when it breaks — you or the vendor.
 - TRL documents a client surface through `peft`, `unsloth`, which fixes the expected request and response contract so you are not inferring it from examples.
 - What this entry cannot give you is measured behaviour: measure TRL's latency and its error rate under a degraded upstream before it carries production traffic.

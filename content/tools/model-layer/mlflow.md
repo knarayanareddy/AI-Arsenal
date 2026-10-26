@@ -75,7 +75,7 @@ Follow the official documentation at https://github.com/mlflow/mlflow for the au
 
 ## Strengths
 
-- The implementation detail worth reading before adopting MLflow is specific — a tracking server records runs (parameters, metrics, artifacts) logged from training code; the model registry layer tracks named model versions and their lifecycle stage independently of the raw run history — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting MLflow is specific — a tracking server records runs (parameters, metrics, artifacts) logged from training code; the model registry layer tracks named model versions and their lifecycle stage independently of the raw run history The test is whether the registry is treated as the source of truth: a run history nobody queries is a logging library, and the value appears only when deployment reads a model version from the registry.
 - Against `dvc`, `hugging-face-hub`, `weights-biases`, the difference is what you operate: MLflow is a tracking server you host, W&B is hosted, and DVC tracks data rather than runs.
 - MLflow is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure MLflow's latency and its error rate under a degraded upstream before it carries production traffic.

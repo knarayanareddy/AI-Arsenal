@@ -72,7 +72,7 @@ An orchestrating layer of agents executes and chains together ML lifecycle steps
 
 ## Strengths
 
-- The implementation detail worth reading before adopting OrchestraML is specific — an orchestrating layer of agents executes and chains together ML lifecycle steps (data prep, training, evaluation, deployment) based on a higher-level goal description — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting OrchestraML is specific — an orchestrating layer of agents executes and chains together ML lifecycle steps (data prep, training, evaluation, deployment) based on a higher-level goal description What to measure is where the agents stop: data preparation and training-step selection are automatable, and deployment decisions still need an owner who can read the resulting evidence.
 - No direct sibling is catalogued for OrchestraML in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - OrchestraML is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so OrchestraML's interface may still move; pin the version you build against rather than tracking latest.

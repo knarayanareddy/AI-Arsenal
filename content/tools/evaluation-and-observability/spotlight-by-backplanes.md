@@ -74,7 +74,7 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Spotlight by Backplanes is specific — instrumented agent sessions report step-by-step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Spotlight by Backplanes is specific — instrumented agent sessions report step-by-step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging The test is completeness of session reconstruction: a backend that sees instrumentation but not your tool calls leaves gaps exactly where the failure happened.
 - No direct sibling is catalogued for Spotlight by Backplanes in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Spotlight by Backplanes is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so Spotlight by Backplanes's interface may still move; pin the version you build against rather than tracking latest.

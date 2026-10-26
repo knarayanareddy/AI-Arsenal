@@ -74,7 +74,7 @@ Captures additional structured context about a UI (beyond raw markup) and suppli
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Qursor is specific — captures additional structured context about a UI (beyond raw markup) and supplies it to an agent's prompt/tool-call context during front-end development tasks — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Qursor is specific — captures additional structured context about a UI (beyond raw markup) and supplies it to an agent's prompt/tool-call context during front-end development tasks What to verify is whether the extra context changes the edit rather than only the prompt: more structure costs tokens, and the gain shows up in fewer correction rounds or not at all.
 - No direct sibling is catalogued for Qursor in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Qursor is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so Qursor's interface may still move; pin the version you build against rather than tracking latest.

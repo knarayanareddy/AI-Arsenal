@@ -77,7 +77,7 @@ Follow the official documentation at https://docs.wandb.ai/ for the authenticati
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Weights & Biases is specific — training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Weights & Biases is specific — training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams The test is whether the logged data is sufficient to reconstruct a run: metrics without the config, dataset version and git SHA are a chart, not an experiment record.
 - Weights & Biases's honest comparison set is `dvc`, `hugging-face-hub`, `mlflow`; what separates them is rarely capability, it is what you must operate.
 - Weights & Biases is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Weights & Biases's latency and its error rate under a degraded upstream before it carries production traffic.

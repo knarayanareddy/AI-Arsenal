@@ -77,7 +77,7 @@ Follow the official documentation at https://opendatalab.github.io/MinerU/ for t
 
 ## Strengths
 
-- The implementation detail worth reading before adopting MinerU is specific — a cascade of detection models segments each page (text, titles, figures, tables, formulas), specialized recognizers process each region, and a reading-order model reassembles results into linear Markdown — with the VLM-backed 2.x pipeline consolidating steps into a single multimodal model — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting MinerU is specific — a cascade of detection models segments each page (text, titles, figures, tables, formulas), specialized recognizers process each region, and a reading-order model reassembles results into linear Markdown — with the VLM-backed 2.x pipeline consolidating steps into a single multimodal model The quality signal to check is table and formula fidelity on your own PDFs: the region-based pipeline and the VLM pipeline disagree most on exactly those elements, and a switch between them changes the output.
 - Against `docling`, `llamaparse`, the difference is where the compute goes: Docling parses on CPU, MinerU's VLM backends want a GPU, and LlamaParse is a hosted service.
 - MinerU is a Python package plus model weights that run in your own process, so the dependency you own is the GPU runtime and the model download rather than a vendor's availability.
 - What this entry cannot give you is measured behaviour: measure MinerU's latency and its error rate under a degraded upstream before it carries production traffic.

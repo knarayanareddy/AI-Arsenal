@@ -75,7 +75,7 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 
 ## Strengths
 
-- The implementation detail worth reading before adopting SkyPilot is specific — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting SkyPilot is specific — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns The measurement is restart cost after preemption: the controller relaunches a job, and how much work survives depends on whether your training loop checkpoints often enough for the spot market it chose.
 - SkyPilot's honest comparison set is `modal`, `runpod`; what separates them is rarely capability, it is what you must operate.
 - The documented path into SkyPilot runs through `vllm`, so the contract to test is the one those adapters expose.
 - What this entry cannot give you is measured behaviour: measure SkyPilot's latency and its error rate under a degraded upstream before it carries production traffic.
