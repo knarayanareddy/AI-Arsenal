@@ -61,7 +61,7 @@ A 14-billion-parameter dense language model from Microsoft Research, released in
 
 ## Why it's in the Arsenal
 
-The case for Phi-4 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+Phi-4 is in the catalogue because it is the clearest test of how far synthetic-data training scales down: a small model that beats much larger ones on reasoning benchmarks. Whether that holds on your task is the question the entry exists to frame.
 
 ## Architecture
 

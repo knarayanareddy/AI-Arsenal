@@ -46,7 +46,7 @@ ShellMate is a closed-source, freemium AI assistant for the command line: it wat
 
 ## Why It's in the Arsenal
 
-ShellMate is catalogued as a aI-powered terminal assistant that suggests commands and explains outputs, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
+ShellMate is catalogued because the shell is where most operational work still happens, and an assistant that reads the session rather than a pasted snippet is a different product from a chat window. The catch is the same as every clipboard-adjacent tool: it sees whatever your terminal sees.
 
 ## Key Features
 

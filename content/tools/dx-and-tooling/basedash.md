@@ -48,7 +48,7 @@ Basedash is reached over a documented surface on the structured-output path; und
 
 ## Why It's in the Arsenal
 
-Basedash is catalogued as a aI-native platform for generating dashboards, reports, and insights from natural-language queries, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
+Basedash is in the catalogue as an example of AI-native BI: natural-language analytics over a database the company already has. That is a different proposition from generating SQL in a chat window, because the saved, permissioned dashboard is the artefact that survives the conversation.
 
 ## Key Features
 

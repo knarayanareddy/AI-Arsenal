@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** the fine-tuning entry for Megatron-LM. NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the framework you adopt when one model no longer fits one GPU's worth of parallelism — tensor, pipeline, sequence and expert parallelism with fused kernels, and the layer most other training stacks still borrow from.
 
 ## Overview
 

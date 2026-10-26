@@ -39,9 +39,7 @@ status: active
 
 ## Overview
 
-An open-source CLI and platform for regression-testing prompts and LLM outputs, with built-in support for red-teaming prompts against jailbreaks and injection.
-
-Treat promptfoo as a service with a schema, not as code you own on the evaluation path; under a open-source cost model; with `promptfoo`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+An open-source CLI and platform for regression-testing prompts and LLM outputs, with built-in support for red-teaming prompts against jailbreaks and injection. Assertions run from exact match to `llm-rubric` and `javascript` checks, targets can be provider SDKs or plain HTTP endpoints, and a CI step fails the build on a threshold you set.
 
 ## Why It's in the Arsenal
 

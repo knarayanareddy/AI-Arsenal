@@ -41,9 +41,7 @@ status: active
 
 ## Overview
 
-NVIDIA's open-source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang.
-
-Treat NeMo Guardrails as a service with a schema, not as code you own unlike `guardrails-ai`, `llamaguard`; on the security-and-guardrails path; under a open-source cost model; with `nemo-guardrails`, `name`, `nemo`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+NVIDIA's open-source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang. Colang 2.0 flows are event-driven: a rail can call the LLM, run an action, or halt with a refusal, and the distribution ships prebuilt rails for jailbreak detection and topic control. The runtime sits between client and model as a Python library or a microservice, using an LLMRails object that owns the flow state.
 
 ## Why It's in the Arsenal
 

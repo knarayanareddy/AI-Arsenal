@@ -48,7 +48,7 @@ The integration surface is an API rather than a vendored library unlike `evident
 
 ## Why It's in the Arsenal
 
-Deepchecks is catalogued as a testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality, which is the specific claim the rest of the entry has to support.
+Deepchecks is catalogued because it treats validation as a test suite over data and model behaviour rather than a dashboard: checks return pass/fail, which is the form a CI gate can consume — the property that separates it from observability tools that only plot.
 
 ## Key Features
 

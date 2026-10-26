@@ -56,7 +56,7 @@ An open-source platform for autonomous AI software-engineering agents (formerly 
 
 ## Why it's in the Arsenal
 
-The case for OpenHands rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+OpenHands is catalogued because it turned a research agent into a self-hosted platform for running coding agents, including other vendors'. The interesting question is no longer whether an agent can edit a repository but who operates it, where it runs, and what it is allowed to touch.
 
 ## Architecture
 

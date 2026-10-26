@@ -43,7 +43,7 @@ A hosted platform for running community-published open-source machine learning m
 
 ## Why It's in the Arsenal
 
-Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support.
+Replicate is catalogued as the hosted path from a public model to an API call, with Cog as the packaging layer that keeps the container portable. The pair is the reference answer to 'run this model today', and the reason the exit path is credible.
 
 ## Key Features
 

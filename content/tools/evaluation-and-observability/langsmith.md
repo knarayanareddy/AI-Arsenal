@@ -39,13 +39,11 @@ status: active
 
 ## Overview
 
-LangChain's managed platform for tracing, evaluating, and monitoring applications built with LangChain or LangGraph, with first-party integration requiring minimal setup.
-
-Treat LangSmith as a service with a schema, not as code you own on the evaluation, tracing path; under a freemium cost model; with `langsmith`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+LangChain's managed platform for tracing, evaluating, and monitoring applications built with LangChain or LangGraph, with first-party integration requiring minimal setup. Traces arrive as a run tree of spans — ingested by the SDK, the `@traceable` decorator or an HTTP endpoint — and evaluators attach to datasets so a prompt change is scored against the same experiments.
 
 ## Why It's in the Arsenal
 
-LangSmith is catalogued as A managed platform for tracing, evaluating, and monitoring LangChain applications, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
+LangSmith is the reference implementation of framework-native tracing: LangChain and LangGraph emit spans without instrumentation code. That is the lowest-friction path for a team already on that stack, and the reason it is the thing every other tracing tool is compared against.
 
 ## Key Features
 

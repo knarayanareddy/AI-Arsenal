@@ -39,7 +39,7 @@ verdict_rationale: The de facto search API for agent frameworks — LLM-tuned ra
 status: active
 ---
 
-> **TL;DR:** the web-scraping entry for Tavily. Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the web-scraping entry for Tavily. Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call — the trade is control: you get cleaned, ranked results in one call, and you give up the ability to see or tune the ranking.
 
 ## Overview
 

@@ -45,7 +45,7 @@ Weights & Biases Weave is reached over a documented surface on the tracing, eval
 
 ## Why It's in the Arsenal
 
-Weights & Biases Weave is catalogued as An observability and evaluation toolkit for AI applications from Weights & Biases, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
+Weave is catalogued because it extends W&B's experiment-tracking model to LLM applications, so traces and evaluations sit beside the training runs that produced the model. The value is continuity with existing experiment history rather than a better trace viewer.
 
 ## Key Features
 

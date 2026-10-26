@@ -41,9 +41,7 @@ status: active
 
 ## Overview
 
-An open-source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines.
-
-Treat Giskard as a service with a schema, not as code you own on the evaluation, security-and-guardrails path; under a open-source cost model; with `giskard`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+An open-source testing framework for scanning ML and LLM applications for vulnerabilities — bias, hallucination, injection susceptibility — before they ship, integrable into CI pipelines. Scans are generated per model type (LLM, text classification, tabular), and each detected issue is emitted as a reproducible test case that can be replayed as a regression.
 
 ## Why It's in the Arsenal
 

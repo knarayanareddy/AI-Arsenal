@@ -85,10 +85,10 @@ Upstream: `trl` (RL trainers), `accelerate` (distribution), and open base models
 
 ## Limitations
 
-- Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast-moving product
-- Reasoning RL is compute-heavy; not a lightweight fine-tune
-
-The engineering question with Open R1 (Hugging Face) is not whether it works but what it commits you to unlike `alignment-handbook`, `verl`; in the training-and-alignment phase; under a open-source cost model; with `open-r1`, `name`, `open`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+- **The sprint is over.** The repository was a reproduction effort for DeepSeek-R1's recipe; commits slowed after the initial release, so it should be read as a reference recipe rather than a maintained dependency.
+- **Compute is the entry ticket.** Reasoning RL runs rollouts and verifiable-reward grading at a scale that assumes a multi-node cluster; a single-GPU attempt measures the harness, not the method.
+- **The data pipeline matters more than the trainer.** Synthetic reasoning data generation, filtering and difficulty curation are where reproduction succeeds or fails, and they are the least portable part of the recipe.
+- **Reward hacking is the failure mode.** Verifiable rewards on maths and code do not punish a model that learns the format without the reasoning, so evaluation has to include held-out tasks.
 
 ## Relation to the Arsenal
 

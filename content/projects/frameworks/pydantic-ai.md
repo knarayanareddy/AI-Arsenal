@@ -55,7 +55,7 @@ A Python agent framework from the team behind Pydantic, built around typed, vali
 
 ## Why it's in the Arsenal
 
-The case for Pydantic AI rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+Pydantic AI is catalogued because it brings Pydantic's validation model to agent construction: typed dependencies, validated tool arguments and structured responses are the framework's whole argument. For a codebase already using FastAPI and Pydantic, that is a smaller leap than any general-purpose agent framework.
 
 ## Architecture
 

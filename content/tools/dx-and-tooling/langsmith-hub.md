@@ -41,9 +41,7 @@ status: active
 
 ## Overview
 
-LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform.
-
-Treat LangSmith Hub as a service with a schema, not as code you own unlike `langfuse-prompts`, `promptlayer`; on the prompt-management path; under a freemium cost model; with `langsmith-hub`, `name`, `langsmith`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform. Prompts are stored as versioned objects pulled by handle at runtime, so a prompt change ships without a code deploy, and the same store holds the datasets that LangSmith's evaluators run against.
 
 ## Why It's in the Arsenal
 

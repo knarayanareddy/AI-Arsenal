@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the grammar is the product: generation interleaved with control flow buys guarantees that prompt instructions cannot, at the cost of writing templates.
 
 ## Overview
 

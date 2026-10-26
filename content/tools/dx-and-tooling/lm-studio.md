@@ -46,7 +46,7 @@ A desktop application (macOS/Windows/Linux) that makes local LLMs approachable: 
 
 ## Why It's in the Arsenal
 
-LM Studio is catalogued as a desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server, which is the specific claim the rest of the entry has to support.
+LM Studio matters because it made running a local model a desktop-app experience — download, chat, flip one switch to expose an OpenAI-compatible server. That convenience is why it appears in local-first stacks that would otherwise pair `ollama` with a separate UI.
 
 ## Key Features
 

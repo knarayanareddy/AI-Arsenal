@@ -61,7 +61,7 @@ A 104-billion-parameter dense transformer chat model from Cohere, released in 20
 
 ## Why it's in the Arsenal
 
-The case for Command R+ rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+Command R+ is in the catalogue because it targets a specific production pattern — grounded generation over retrieved documents with citations — rather than general chat quality. What follows is what that commits you to: a long-context serving budget, a citation format your application has to render, and a licence that is not Apache.
 
 ## Architecture
 

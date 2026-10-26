@@ -56,7 +56,7 @@ An open-source platform for building LLM applications through a visual workflow 
 
 ## Why it's in the Arsenal
 
-The case for Dify rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+Dify is catalogued because it is the platform most often reached for when the person who owns the prompt is not an engineer. That single fact explains both its feature set — canvas, RAG pipeline, model routing, observability — and its licence, which restricts reselling it as a service.
 
 ## Architecture
 

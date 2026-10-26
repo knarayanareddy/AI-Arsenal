@@ -55,7 +55,7 @@ Zhipu AI's GLM model family, whose GLM-4.5 generation unifies reasoning, coding,
 
 ## Why it's in the Arsenal
 
-The case for GLM-4 / GLM-4.5 rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.
+GLM-4 is catalogued because it is the open-weight line from a lab that also ships a hosted product, which makes it the reference for teams that want Zhipu's models without their API. The trade to understand is between that coverage and the ecosystem support a Western lab's weights receive.
 
 ## Architecture
 

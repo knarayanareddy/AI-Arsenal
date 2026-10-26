@@ -46,7 +46,7 @@ An inference provider running open models (Llama, Qwen, Whisper, and others) on 
 
 ## Why It's in the Arsenal
 
-Groq is catalogued as a ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second, which is the specific claim the rest of the entry has to support.
+Groq is in the catalogue because its LPU inference changes the latency envelope rather than the quality one, which turns the question from 'which model is best' into 'which model answers fast enough for an interactive loop'.
 
 ## Key Features
 

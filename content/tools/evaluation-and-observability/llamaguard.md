@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** the security-and-guardrails entry for Llama Guard. Meta safety model family for classifying and moderating LLM inputs and outputs — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the security-and-guardrails entry for Llama Guard. Meta safety model family for classifying and moderating LLM inputs and outputs — a classifier, not a policy engine: it scores safety categories, and the categories are Meta's, so the policy work starts after the model returns a label.
 
 ## Overview
 
