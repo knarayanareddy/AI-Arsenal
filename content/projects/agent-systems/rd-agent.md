@@ -94,11 +94,10 @@ pip install rdagent
 
 ## Limitations
 
-- Research-forward; expects data-science literacy and compute
-- Narrower than general coding agents by design
-- Running loops can incur significant LLM/compute cost
-
-The engineering question with RD-Agent is not whether it works but what it commits you to in the agent-system phase; under a open-source cost model; with `rd-agent`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+- **Research-forward, not product-shaped.** RD-Agent implements published R&D loops (proposal, experiment, feedback) rather than a general coding agent; it expects a data-science reader who can tell whether a generated factor or model is meaningful.
+- **The loop needs compute to be honest.** Each iteration trains or evaluates something, so the cost of a run scales with how many hypotheses it explores — a cheap loop produces cheap hypotheses.
+- **Narrow by design.** Code-writing for R&D differs from repository engineering: there is no test suite to satisfy and no PR to review, which is why it does not substitute for a coding agent.
+- **Few guardrails on a runaway loop.** Autonomy plus an evaluation metric is a system that will exploit the metric; budget limits and human checkpoints have to be configured rather than assumed.
 
 ## Relation to the Arsenal
 

@@ -90,7 +90,6 @@ Compared with in the data-and-retrieval phase; under a open-source cost model; w
 
 - Beyond the headline description, Unstructured's architecture section is the honest source: provides format-specific parsing strategies unified under a common element-based output model (titles, narrative text, tables, list items, etc.), with both a fast/rule-based parsing path and slower, more accurate model-based parsing (e.g. for scanned documents requiring OCR) selectable based on accuracy/speed tradeoffs.
 - Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

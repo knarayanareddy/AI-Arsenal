@@ -86,8 +86,7 @@ git clone https://github.com/hpcaitech/Open-Sora
 
 ## Strengths
 
-- What Open-Sora gives you that reading the feature list does not: open-Sora follows the diffusion-transformer approach to video: a spatiotemporal latent diffusion model denoises video latents conditioned on text (and optionally an initial image), with a VAE encoding/decoding frames. The repo documents the data pipeline, training stages, and inference so the whole system can be reproduced or fine-tuned, not just run, which is the part you have to evaluate against your own workload.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
+- Open-Sora follows the diffusion-transformer approach to video: a spatiotemporal latent diffusion model denoises video latents conditioned on text (and optionally an initial image), with a VAE encoding/decoding frames. The repo documents the data pipeline, training stages, and inference so the whole system can be reproduced or fine-tuned, not just run.
 - Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations

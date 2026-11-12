@@ -43,7 +43,7 @@ An open-source library for constrained generation, guaranteeing that an LLM's ou
 
 ## Why It's in the Arsenal
 
-Outlines is A library for constrained generation and structured outputs with LLMs. Read it beside `guidance`, `instructor`, `pydantic-ai-tool`: the choice between them is a deployment and cost decision before it is a capability one.
+Outlines is A library for constrained generation and structured outputs with LLMs.
 
 ## Key Features
 
@@ -70,7 +70,7 @@ Outlines builds a finite-state machine (or equivalent) from the target schema/gr
 
 ## Strengths
 
-- What Outlines gives you that its headline description does not: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled, which is the part to check against your own pipeline before trusting the feature list.
+- What Outlines gives you that its headline description does not: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled.
 - Against `guidance`, `instructor`, `pydantic-ai-tool`, Outlines compiles a schema into a finite-state machine over the tokenizer vocabulary, which is why it can guarantee structure instead of validating it after the fact.
 - Outlines is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Outlines's latency and its error rate under a degraded upstream before it carries production traffic.

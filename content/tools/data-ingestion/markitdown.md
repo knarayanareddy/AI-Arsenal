@@ -3,7 +3,7 @@ id: markitdown
 name: "MarkItDown"
 type: tool
 job: [web-scraping, data-labeling]
-description: "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown"
+description: "Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second"
 url: "https://github.com/microsoft/markitdown"
 cost_model: open-source
 pricing_detail: "MIT open source"
@@ -20,7 +20,7 @@ github_url: "https://github.com/microsoft/markitdown"
 alternatives: [docling, unstructured, llamaparse]
 integrates_with: []
 added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 reviewed_by: maintainer
 phase: data-ingestion
@@ -46,7 +46,7 @@ A lightweight Microsoft utility that became a standard preprocessing tool: conve
 
 ## Why It's in the Arsenal
 
-The entry exists because MarkItDown is a microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown. Read it beside `docling`, `unstructured`, `llamaparse`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
+Most ingestion work is not a layout problem; it is a breadth problem. A corpus is 60% Word files, some PowerPoint, a few spreadsheets, a handful of scans and one audio recording, and MarkItDown is the shortest path from that pile to Markdown. It also documents its own limits — the README says the output is for text analysis tools and may not be high-fidelity for humans — which is the rare case of a converter that tells you when to reach for `marker` or `docling` instead.
 
 ## Key Features
 
@@ -71,29 +71,37 @@ Follow the official documentation at https://github.com/microsoft/markitdown#rea
 
 ## Use Cases
 
-1. **What it does in a system**: MarkItDown sits on the web-scraping, data-labeling leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
-2. **Validating the choice**: put MarkItDown and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
-3. **Choosing between candidates**: MarkItDown's comparison set is `docling`, `unstructured`, `llamaparse`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Bulk-converting an office-document estate**: Word, PowerPoint, Excel and PDF into Markdown in one call, which is the unglamorous job that precedes most RAG projects.
+2. **Feeding an agent a file the user just uploaded**: `convert_stream()` on bytes is the safe path for untrusted input, and the MCP server exposes the same conversion to Claude-style agents directly.
+3. **Metadata extraction without reading content**: EXIF for images and audio, plus transcription for audio, means a media library can be indexed cheaply.
+4. **ZIP and archive triage**: the ZIP converter iterates contents, so an archive can be flattened into text before anyone opens it.
+5. **YouTube and HTML to text**: transcripts and page content become Markdown without a browser automation stack.
+6. **A first pass before a better converter**: run MarkItDown to see what a corpus contains, then spend model-based conversion only on the documents that matter.
 
 ## Strengths
 
-- What MarkItDown gives you that its headline description does not: per-format converters (mammoth for docx, pdfminer for PDF, speech recognition for audio) normalize content into a common Markdown stream; an extensible converter registry lets you add formats, and the MCP server exposes conversion directly to agents like Claude, which is the part to check against your own pipeline before trusting the feature list.
-- Weighing MarkItDown against `docling`, `unstructured`, `llamaparse` comes down to one question: who runs the process when it breaks — you or the vendor.
-- MarkItDown is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
-- Marked beta, so MarkItDown's interface may still move; pin the version you build against rather than tracking latest.
+- Format coverage is exceptional for a lightweight library: PDF, Office, images with OCR, audio with transcription, HTML, CSV/JSON/XML, ZIP, EPUB and YouTube URLs.
+- The security posture is documented rather than implied — the README states that conversion runs with the process's own privileges and tells you to sanitise input and call the narrowest `convert_*` function.
+- Token efficiency is the design goal: output is Markdown for LLM consumption, deliberately not high-fidelity for humans, which sets the right expectation.
+- Small dependency footprint per format, an extensible converter registry, and an MCP server that makes it an agent tool out of the box.
+- MIT licensed, Microsoft-maintained, Python 3.10-3.14, and extraordinary adoption (192k stars) — the answer to "does this format work" is usually already in an issue.
+- The plugin interface means a custom format is a small class rather than a fork.
 
 ## Limitations / When NOT to Use
 
-- Depending on MarkItDown means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for MarkItDown describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- MarkItDown is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
+- **It is not a high-fidelity converter, by its own admission.** Complex tables, multi-column PDFs and equations degrade; for those, `marker`, `docling` or `mineru` exist and the comparison is not close.
+- **768 open issues and a beta maturity label.** The converter registry is stable in practice, the individual converters are uneven, and the popular formats are far better tested than the long tail.
+- **I/O with process privileges is a real attack surface.** A conversion service that accepts arbitrary uploads is a file-read primitive unless it is sandboxed and restricted.
+- **PDF handling is text extraction, not layout understanding.** Scanned PDFs need OCR (the image path exists but is not a document parser), and reading order is not reconstructed.
+- **Optional dependencies are easy to miss.** Audio transcription and OCR pull extra packages; a bare install silently degrades on those formats.
+- **Output quality varies by format and author.** A well-structured DOCX converts well; a designed brochure does not — sample per source system, not per format.
 
 ## Integration Patterns
 
-- *Wiring*: adopt MarkItDown as a Python dependency or sidecar service against the `web-scraping, data-labeling` job.  For a RAG pipeline this is the retrieval leg: keep the embedding model and the index in separate services so you can re-embed the corpus without touching the query path, and re-run the benchmark after any change to the chunking or the vector store.
-- *Alternatives*: `docling`, `unstructured`, `llamaparse` solve the same job in this phase. The decision between them is usually deployment model and operational cost rather than feature list, so compare what each one asks you to run: a managed service you pay per call, a self-hosted process you operate, or a library you embed in your own service.
-- *Deployment and cost*: The Apache/MIT licence means there is no per-seat or per-call charge to design around; budget for the hosting instead.
-- *Before production*: measure latency and error rate at your real traffic shape, set an explicit timeout and retry policy on every call, and decide what happens when the dependency is unavailable — a cached response, a degraded answer, or a hard failure. Add the calls to your tracing so the cost of this integration is visible next to the rest of the request.
+- *Wiring*: `MarkItDown().convert_local(path)` inside an ingestion job, or `convert_stream()` behind an upload endpoint with size limits and a sandboxed worker.
+- *Alternatives*: `docling` and `marker` for fidelity on PDFs, `unstructured` for element-level partitioning, `llamaparse` when the answer should be a managed API.
+- *Downstream*: chunking and embedding for `chroma`, `qdrant` or `weaviate`, with `ragas` closing the loop to check whether extraction quality actually changed retrieval quality.
+- *In agents*: run the MCP server rather than giving the agent filesystem access to a conversion script.
 
 ## Resources
 

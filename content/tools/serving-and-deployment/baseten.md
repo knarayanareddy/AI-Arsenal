@@ -78,7 +78,7 @@ pip install truss baseten
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Baseten is specific — you author a Truss describing how to load and call your model, push it to Baseten, and the platform builds a container, provisions GPUs, and serves an autoscaling HTTP endpoint. Traffic drives replica count (up from and down to zero), so you pay for active inference. Because Truss is open and portable, the packaging isn't tied to the platform even though the runtime is — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Baseten is specific — you author a Truss describing how to load and call your model, push it to Baseten, and the platform builds a container, provisions GPUs, and serves an autoscaling HTTP endpoint. Traffic drives replica count (up from and down to zero), so you pay for active inference. Because Truss is open and portable, the packaging isn't tied to the platform even though the runtime is The measurement is cold-start time on your model, since scaling to zero is the default and a multi-gigabyte checkpoint turns a canary into a minute-long wait.
 - Baseten's honest comparison set is `modal`, `replicate`, `runpod`, `bentoml`; what separates them is rarely capability, it is what you must operate.
 - Baseten is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Baseten's latency and its error rate under a degraded upstream before it carries production traffic.

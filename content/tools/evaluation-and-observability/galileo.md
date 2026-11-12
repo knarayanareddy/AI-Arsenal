@@ -39,7 +39,7 @@ verdict_rationale: A strong enterprise-grade eval + guardrails platform whose la
 status: active
 ---
 
-> **TL;DR:** the evaluation, monitoring entry for Galileo. Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the evaluation, monitoring entry for Galileo. Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails — strongest where hallucination detection has to run without labelled data, weakest where a team wants to own its evaluation logic.
 
 ## Overview
 

@@ -87,8 +87,6 @@ Upstream: model-provider-agnostic, works with any LLM as the judge model. Downst
 ## Strengths
 
 - Beyond the headline description, Ragas for RAG Evaluation's architecture section is the honest source: evaluates examples containing questions, generated answers, retrieved contexts, and (optionally) reference answers using a library of RAG-specific metric functions (faithfulness, context precision, context recall, answer relevance) that combine rule-based checks with LLM-as-judge scoring for the more subjective dimensions.
-- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

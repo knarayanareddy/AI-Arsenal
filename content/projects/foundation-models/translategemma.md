@@ -88,9 +88,7 @@ print(translate("Translate English to French: 'Retrieval-augmented generation gr
 
 ## Strengths
 
-- The implementation detail worth checking before adopting TranslateGemma is specific — architecturally TranslateGemma is a supervised translation fine-tune of the Gemma 3 decoder rather than a new base model, so it reuses Gemma 3's tokenizer, parameter shapes, and efficient long-context attention and loads through the same Hugging Face transformers/Gemma tooling. Its distinguishing layer is translation-specific training spanning 55 languages; per this entry's notes, those fine-tuning details track Google's Gemma 3 lineage but have not been independently verified against a technical report — because that is where the capability claim either survives contact with your data or does not.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
+- The implementation detail worth checking before adopting TranslateGemma is specific — architecturally TranslateGemma is a supervised translation fine-tune of the Gemma 3 decoder rather than a new base model, so it reuses Gemma 3's tokenizer, parameter shapes, and efficient long-context attention and loads through the same Hugging Face transformers/Gemma tooling. Its distinguishing layer is translation-specific training spanning 55 languages; per this entry's notes, those fine-tuning details track Google's Gemma 3 lineage but have not been independently verified against a technical report The test is a held-out, domain-specific translation set — a supervised fine-tune inherits Gemma 3's strengths and its failure modes, and a 55-language claim says nothing about your pair's register.
 
 ## Limitations
 

@@ -75,7 +75,6 @@ The flow is request to span to aggregate: spans are written asynchronously, so a
 ## Strengths
 
 - Beyond the marketing, Guardrails AI's own notes are the useful part: a 'guard' wraps an LLM call with a configured set of validators; failing outputs can be rejected, corrected via re-prompting, or flagged depending on configuration.
-- Weighing Guardrails AI against `llamaguard`, `nemo-guardrails`, `rebuff` comes down to one question: who runs the process when it breaks — you or the vendor.
 - Guardrails AI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Guardrails AI's latency and its error rate under a degraded upstream before it carries production traffic.
 

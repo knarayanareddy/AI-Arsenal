@@ -83,7 +83,6 @@ bigcodebench.evaluate --split complete --subset hard --samples <generated>.jsonl
 
 - Beyond the headline description, BigCodeBench's architecture section is the honest source: each task couples a natural-language-rich prompt (Complete: full docstring; Instruct: terse instruction; Hard: a curated difficult subset) with a hidden test suite averaging 5.6 cases at ~99% branch coverage, executed in a sandboxed evaluation harness. Scoring is calibrated pass@k; an Evaluation-as-a-Service leaderboard (with Hugging Face-hosted execution) keeps results comparable across submissions.
 - Sits in the benchmark-and-eval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

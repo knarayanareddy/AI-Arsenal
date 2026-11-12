@@ -61,7 +61,7 @@ _No star-tracked entries yet._
 - [Great Expectations (GX Core)](./great-expectations.md) — Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI
 - [Jina AI Reader](./jina-reader.md) — URL-to-Markdown reader endpoint at r.jina.ai, with per-request controls for extraction, caching, proxies and PDF pagination
 - [Label Studio](./label-studio.md) — Apache-2.0 multi-modal annotation platform: configurable templates for text, image, audio, video and time series, plus ML-backend pre-labelling
-- [MarkItDown](./markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
+- [MarkItDown](./markitdown.md) — Microsoft's lightweight converter for Office files, PDFs, images, audio and HTML into Markdown for LLM pipelines — breadth first, fidelity second
 - [Marqo](./marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [Meilisearch](./meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - [MinerU](./mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models

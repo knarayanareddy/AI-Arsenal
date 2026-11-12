@@ -72,7 +72,7 @@ Requests are made against LiteLLM's unified API; it translates them into the tar
 
 ## Strengths
 
-- What LiteLLM gives you that its headline description does not: requests are made against LiteLLM's unified API; it translates them into the target provider's native format and can route, retry, or fall back across multiple configured providers, which is the part to check against your own pipeline before trusting the feature list.
+- What LiteLLM gives you that its headline description does not: requests are made against LiteLLM's unified API; it translates them into the target provider's native format and can route, retry, or fall back across multiple configured providers.
 - No direct sibling is catalogued for LiteLLM in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - LiteLLM is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure LiteLLM's latency and its error rate under a degraded upstream before it carries production traffic.

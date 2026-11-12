@@ -3,7 +3,7 @@ id: lorax
 name: LoRAX
 type: tool
 job: [production-serving]
-description: Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
+description: Archived multi-LoRA inference server that pioneered adapter multiplexing — read it as the reference design; serve adapters with vLLM or SGLang instead
 url: "https://loraexchange.ai/"
 cost_model: open-source
 pricing_detail: Apache-2.0 open source; managed serving available via Predibase
@@ -38,7 +38,7 @@ status: archived
 enrichment_status: draft
 ---
 
-> **TL;DR:** the production-serving entry for LoRAX. Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the reference design for multi-LoRA serving, not a deployment target. The repository is archived: read it to understand adapter multiplexing, then run vLLM or SGLang multi-LoRA, which absorbed the technique and are still maintained.
 
 ## Overview
 
@@ -69,29 +69,31 @@ docker run --gpus all -p 8080:80 ghcr.io/predibase/lorax:main \
 
 ## Use Cases
 
-1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so LoRAX can be swapped without touching callers.
-2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since LoRAX is most likely to be slow or rate-limited in production rather than simply gone.
-3. **Choosing between candidates**: LoRAX's comparison set is `bentoml`, `hf-inference-endpoints`; the axis that separates them is what you operate, so answer that before reading the feature lists.
+1. **Reading it rather than running it**: the project is archived, so its value now is as the clearest written account of adapter multiplexing — heterogeneous continuous batching, adapter prefetch and SGMV kernels — which is the design every modern multi-LoRA server inherits.
+2. **Understanding why vLLM and SGLang multi-LoRA work the way they do**: the scheduler and kernel ideas transfer directly, and the docs explain the throughput argument better than a changelog does.
+3. **Historical cost modelling for fine-tune serving**: the "thousands of adapters on one GPU" claim is what made per-customer adapters economically viable, and the reasoning still defines the ceiling on adapter count.
+4. **Evaluating an existing LoRAX deployment**: if you inherited one, the archived status is the finding — plan the migration rather than extending it.
 
 ## Strengths
 
-- The implementation detail worth reading before adopting LoRAX is specific — the base model stays resident in GPU memory; LoRA weight deltas are small enough to page in on demand. Custom SGMV (segmented gather matrix-vector) kernels apply different adapters to different sequences within the same batched matmul, so throughput approaches single-model serving even with many concurrent adapters — and that is where a capability claim either survives contact with your data or does not.
-- Weighing LoRAX against `bentoml`, `hf-inference-endpoints` comes down to one question: who runs the process when it breaks — you or the vendor.
-- The documented path into LoRAX runs through `huggingface`, so the contract to test is the one those adapters expose.
-- What this entry cannot give you is measured behaviour: measure LoRAX's latency and its error rate under a degraded upstream before it carries production traffic.
+- The clearest explanation of adapter multiplexing available in open source: base model resident, adapter deltas paged in, different adapters batched into one forward pass.
+- Optimisations that became the template: SGMV kernels, adapter exchange scheduling, adapter-tiering to hide load latency.
+- A complete operational story for its time — Docker images, Helm charts, Prometheus metrics, OpenTelemetry tracing, OpenAI-compatible API with per-request `adapter_id`.
+- Apache-2.0 with no commercial strings, which is why its ideas spread even as the codebase stopped.
 
 ## Limitations / When NOT to Use
 
-- LoRAX is a Rust/CUDA server you deploy on your own GPUs; the hardware floor is Ampere or newer, and the kernels are compiled for the target architecture.
-- Documentation for LoRAX describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
-- Where LoRAX overlaps `bentoml`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
-- The project is archived, so its multi-adapter serving approach has stopped evolving while vLLM's LoRA support kept moving; the architecture is still worth reading even though the binary is not a safe default.
+- **The repository is archived.** It is not a deployment target in 2026: no fixes, no new model support, no security patches.
+- **The successors absorbed the feature.** vLLM and SGLang both serve many LoRA adapters per base model, with active development and far wider model coverage; the reason to read LoRAX is understanding, not operation.
+- **It is a fork of text-generation-inference**, so its model support stopped where that lineage stopped plus whatever was added before archiving.
+- **Hardware assumptions are dated.** Ampere-or-newer CUDA kernels compiled per architecture; newer GPU generations are not covered.
+- **Single-node, single-model-family design.** Cross-node adapter routing, which larger deployments need, was never in scope.
 
 ## Integration Patterns
 
-- Compare against vLLM's multi-LoRA mode and [HF Inference Endpoints](./hf-inference-endpoints.md) before adopting — the single-engine mainstream may already cover your adapter count.
-- Link this tool from job guides using its canonical ID `lorax`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+- *Do not wire it in.* For multi-adapter serving today, use `vllm` or `sglang` multi-LoRA mode behind an OpenAI-compatible endpoint.
+- *Read it for*: the scheduling argument, the SGMV kernel approach, and the vocabulary (adapter exchange, heterogeneous batching) used in newer engines' documentation.
+- *Alternatives*: `ray-serve` when adapters need to be routed across a cluster, `bentoml` when the unit is a packaged model rather than an adapter, and hosted endpoints when the adapter count is small enough that per-endpoint pricing is cheaper than a GPU.
 
 ## Resources
 

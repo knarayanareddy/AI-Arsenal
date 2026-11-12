@@ -68,7 +68,8 @@ function editorialFindings() {
 }
 
 const DESCRIPTION =
-  'A framework for programming and optimizing language model pipelines';
+  'Declarative Python framework that compiles LM pipelines against a metric, ' +
+  'replacing hand-written prompts with optimised instructions and demos';
 
 test('Overview copied from description is caught, however many times repeated', () => {
   for (const repeats of [1, 3, 6]) {

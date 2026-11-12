@@ -77,8 +77,7 @@ Follow the official documentation at https://github.com/bentoml/OpenLLM#readme f
 
 ## Strengths
 
-- The implementation detail worth reading before adopting OpenLLM is specific — openLLM maintains a repo of model recipes (engine config, quantization, prompts); openllm serve pulls the recipe, launches a vLLM-backed BentoML service, and exposes OpenAI-style routes so existing clients work unchanged — and that is where a capability claim either survives contact with your data or does not.
-- Weighing OpenLLM against `vllm`, `ollama`, `text-generation-inference` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The implementation detail worth reading before adopting OpenLLM is specific — openLLM maintains a repo of model recipes (engine config, quantization, prompts); openllm serve pulls the recipe, launches a vLLM-backed BentoML service, and exposes OpenAI-style routes so existing clients work unchanged What to test is the recipe layer: a recipe pins engine and quantisation choices, so upgrading OpenLLM rewrites the serving configuration whether you asked it to or not.
 - OpenLLM documents a client surface through `bentoml`, `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
 - Marked beta, so OpenLLM's interface may still move; pin the version you build against rather than tracking latest.
 

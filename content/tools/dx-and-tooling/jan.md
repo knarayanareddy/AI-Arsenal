@@ -76,7 +76,7 @@ Follow the official documentation at https://jan.ai/docs for the authentication 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Jan is specific — a Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from Hugging Face, run in-process with configurable offload, and are also exposed on a local OpenAI-compatible endpoint; extensions add providers and tools — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Jan is specific — a Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from Hugging Face, run in-process with configurable offload, and are also exposed on a local OpenAI-compatible endpoint; extensions add providers and tools What to verify is the model support path: llama.cpp backends buy portability and lag the newest architectures, so a brand-new release may not load.
 - Jan's honest comparison set is `lm-studio`, `open-webui`; what separates them is rarely capability, it is what you must operate.
 - Jan is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Jan's latency and its error rate under a degraded upstream before it carries production traffic.

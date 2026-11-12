@@ -95,8 +95,6 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 ## Strengths
 
 - Beyond the headline description, Llama 3.x's architecture section is the honest source: a dense (not MoE) decoder-only transformer family across all Llama 3.x sizes, in contrast to the MoE design Meta introduced later with Llama 4. Sizes span 1B, 3B, 8B, 11B, 70B, 90B, and 405B, with the 11B/90B variants adding vision encoder support for multimodal input.
-- It is a foundation-model entry in this catalog, so the comparison that matters is against the other foundation-model projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

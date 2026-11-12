@@ -74,7 +74,7 @@ An orchestrating agent breaks the brief into subtasks (planning, scaffolding, co
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Manus is specific — an orchestrating agent breaks the brief into subtasks (planning, scaffolding, coding, deploying) and executes them largely autonomously with periodic checkpoints — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Manus is specific — an orchestrating agent breaks the brief into subtasks (planning, scaffolding, coding, deploying) and executes them largely autonomously with periodic checkpoints What to verify is the checkpoint rate: an autonomous run that only reports at the end is unusable on real work, and the interval at which you can intervene is the design decision.
 - No direct sibling is catalogued for Manus in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Manus is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure Manus's latency and its error rate under a degraded upstream before it carries production traffic.

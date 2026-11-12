@@ -84,7 +84,6 @@ Upstream: none of particular note. Downstream: none of particular note yet given
 
 - Beyond the headline description, SurrealDB's architecture section is the honest source: built in Rust, SurrealDB 3.0 unifies multiple data models (relational, document, graph, time-series, vector, geospatial, key-value) queryable through a single query language (SurrealQL), with vector indexing for millisecond-precision embedding retrieval and 'context graphs' embedded directly in the database layer specifically designed for AI agent memory, plus a plugin framework (Surrealism) for embedding business logic and access control as transactional modules inside the database runtime.
 - Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

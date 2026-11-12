@@ -45,7 +45,7 @@ Apple's MLX-based library for running and fine-tuning LLMs natively on Apple Sil
 
 ## Why It's in the Arsenal
 
-The entry exists because MLX-LM is a apple MLX library for running and fine-tuning LLMs on Apple Silicon. Read it beside `axolotl`, `llamafactory`, `peft`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because MLX-LM is a apple MLX library for running and fine-tuning LLMs on Apple Silicon.
 
 ## Key Features
 
@@ -75,7 +75,7 @@ Follow the official documentation at https://github.com/ml-explore/mlx-lm for th
 
 ## Strengths
 
-- What MLX-LM gives you that its headline description does not: built on Apple's MLX array framework, which is designed around unified memory, so the same machine's memory is shared between CPU and GPU/Neural Engine compute without explicit data transfer, which is the part to check against your own pipeline before trusting the feature list.
+- What MLX-LM gives you that its headline description does not: built on Apple's MLX array framework, which is designed around unified memory, so the same machine's memory is shared between CPU and GPU/Neural Engine compute without explicit data transfer.
 - MLX-LM's honest comparison set is `axolotl`, `llamafactory`, `peft`, `torchtune`; what separates them is rarely capability, it is what you must operate.
 - MLX-LM is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure MLX-LM's latency and its error rate under a degraded upstream before it carries production traffic.
@@ -101,7 +101,7 @@ Follow the official documentation at https://github.com/ml-explore/mlx-lm for th
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for fine-tuning.
+- Reception is bound to the hardware: it is the reference implementation for running and fine-tuning models on Apple silicon, and most macOS local-LLM guides point at it for that reason.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

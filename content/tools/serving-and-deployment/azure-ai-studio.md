@@ -75,7 +75,7 @@ Follow the official documentation at https://learn.microsoft.com/en-us/azure/ai-
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Azure AI Studio is specific — provides a managed workspace where model endpoints, evaluation pipelines, and deployment targets are all configured and monitored through a single Azure-native control plane — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Azure AI Studio is specific — provides a managed workspace where model endpoints, evaluation pipelines, and deployment targets are all configured and monitored through a single Azure-native control plane The check is which model deployments the subscription can see: catalog availability, quota and region differ per tenant, so a demo in one subscription can be unrunnable in another.
 - Azure AI Studio overlaps `aws-bedrock`, `google-vertex-ai`, `hf-inference-endpoints`, `modal` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Depending on Azure AI Studio means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Azure AI Studio's latency and its error rate under a degraded upstream before it carries production traffic.
@@ -100,7 +100,7 @@ Follow the official documentation at https://learn.microsoft.com/en-us/azure/ai-
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment.
+- Reception is entangled with Azure OpenAI: teams arrive for GPT-model access under an enterprise agreement and stay for the evaluation and deployment console built around it.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

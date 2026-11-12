@@ -13,7 +13,7 @@ org_or_maintainer: "harbor-framework"
 tags: [evaluation, agents, llm]
 maturity: beta
 cost_model: open-source
-github_stars: 2606
+github_stars: 2610
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-07-11"
@@ -75,22 +75,35 @@ tb run --agent claude-code --model claude-sonnet-4-5 --task-id hello-world
 
 ## Key Use Cases
 
-1. **Running Terminal-Bench on your own workload**: the published score conditions on someone else's tasks, harness and prompt, so reproduce it on a slice of your data before treating it as a decision input.
-2. **What the Terminal-Bench scenarios have in common**: each describes a measurement that would change a decision rather than a number that is merely interesting.
-3. **Choosing between candidates**: compare Terminal-Bench against `swe-bench` on the same task with the same data, and record which you would abandon first — that decision, not the feature list, is what this entry should inform.
-
+1. **Comparing two agents you already run**: the same task revision through two adapters removes the scaffolding difference, which is the only way a "model A is better at ops work" claim becomes checkable.
+2. **Regression-testing an agent after a model swap**: a pass-rate delta on a fixed task revision is a concrete signal, unlike a subjective read of a handful of transcripts.
+3. **Building a task for a failure you hit in production**: the task format (instruction, setup, verification tests, timeouts) is the cheapest way to make a real failure repeatable.
+4. **Choosing a harness rather than a model**: because adapters normalise the interface, differences between agents show up as task outcomes instead of protocol differences.
+5. **Interrogating a published agent score**: a number is reproducible only when the task revision and harness are named, so requesting those two details is the fastest way to separate a measurement from a marketing figure.
+6. **Teaching what agents actually do**: the tasks span compiling, debugging, sysadmin and data processing, which is a better description of the job than a chat transcript.
 ## Strengths
 
-- What Terminal-Bench gives you that reading the feature list does not: tasks are self-contained Docker environments with a task.yaml (instruction, timeouts), setup scripts, and outcome-verification tests; the tb CLI orchestrates agent-environment sessions, records full terminal transcripts (asciinema), and computes pass rates. Agent adapters wrap commercial CLIs (Claude Code, Codex, Gemini CLI) and custom agents behind a common interface, so results are comparable across harnesses, which is the part you have to evaluate against your own workload.
-- It is a benchmark-and-eval entry in this catalog, so the comparison that matters is against the other benchmark-and-eval projects rather than against projects in adjacent phases.
-- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
-
+- Outcome-based verification: tasks carry executable tests, so a pass means the system state is correct rather than that an LLM judge liked the answer.
+- Real environments — each task is a self-contained Docker container with setup and a time budget, which is where agent failures actually happen.
+- The harness records full terminal transcripts, so a failed run can be read rather than guessed at.
+- Agent adapters normalise commercial CLIs and custom agents behind one interface, which makes cross-agent comparison legitimate.
+- ~100 tasks in beta is already enough to separate good agents from bad, and the task format is contribution-friendly.
+- Apache-2.0 with a community task pipeline, and the maintainers shipped a successor framework (`harbor`) rather than letting the harness rot.
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the Terminal-Bench footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Nothing in this entry substitutes for running Terminal-Bench against your own data; the specifics that decide adoption — your corpus, your latency budget, your ops capacity — are not represented here.
-- Terminal-Bench is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
+- **The harness moved.** This repository is the 1.x line (`terminal-bench-1`, last push July 2026); Terminal-Bench 2.0 runs on `harbor`, a separate framework that has most of the recent activity. A new deployment should start there, and this entry documents the lineage rather than the current default.
+- **Beta scale limits discrimination.** Around a hundred tasks means a handful of flaky tasks moves the pass rate by several points; treat small deltas as noise and check per-task variance.
+- **Docker is a hard requirement.** Air-gapped or locked-down environments need images mirrored and a registry of their own before the benchmark can run at all.
+- **Shell-only by design.** Browser agents, API orchestrators and GUI automation have no place to stand here, so the benchmark says nothing about them.
+- **Task quality varies.** Community-contributed tasks differ in ambiguity and difficulty; a task whose instruction is underspecified penalises a careful agent.
+- **Cost per run is real.** Long-horizon tasks each need minutes of container time plus model calls, so a full sweep across several agents is a budget line, not a quick check.
+- **Two versions in circulation.** Scores published against 1.x and 2.0 are not comparable, and a comparison that does not name the version should be discarded.
 
+## Relation to the Arsenal
+
+The terminal-side complement to `swe-bench` (repository patches) and the harness most often reported alongside it when frontier labs characterise a coding agent. For the agents it measures, see `openhands`, `openai-agents-sdk` and the coding-agent entries in [Frameworks](../frameworks/_index.md).
+
+For what to do with a failing task, the loop is `terminal-bench` to reproduce, then the agent's own tracing (`openlit`, `langfuse`) to find the step that broke.
 ## Relation to the Arsenal
 
 This is the benchmark-and-eval entry for Terminal-Bench in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.

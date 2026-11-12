@@ -87,7 +87,6 @@ pip install litserve
 ## Strengths
 
 - Beyond the headline description, LitServe's architecture section is the honest source: litServe wraps your model in an API class and runs a server that queues requests, batches them dynamically, and dispatches to worker processes bound to devices. Streaming and multi-model setups are configuration on top of that loop, so you get serving features without implementing the concurrency and batching machinery yourself.
-- It is a inference-engine entry in this catalog, so the comparison that matters is against the other inference-engine projects rather than against projects in adjacent phases.
 - Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
 
 ## Limitations

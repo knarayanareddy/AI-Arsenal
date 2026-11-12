@@ -46,7 +46,7 @@ NVIDIA's packaging of optimized inference as microservices: each NIM is a contai
 
 ## Why It's in the Arsenal
 
-The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs. Read it beside `vllm`, `text-generation-inference`, `triton-inference-server`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs.
 
 ## Key Features
 
@@ -72,7 +72,7 @@ docker run --gpus all -p 8000:8000 -e NGC_API_KEY nvcr.io/nim/meta/llama-3.1-8b-
 
 ## Strengths
 
-- The implementation detail worth reading before adopting NVIDIA NIM is specific — on startup a NIM detects the GPU and selects a matching optimized engine profile (TensorRT-LLM builds where available, falling back to vLLM), then serves the bundled model behind standard APIs; the catalog spans LLMs, embeddings, rerankers, and domain models — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting NVIDIA NIM is specific — on startup a NIM detects the GPU and selects a matching optimized engine profile (TensorRT-LLM builds where available, falling back to vLLM), then serves the bundled model behind standard APIs; the catalog spans LLMs, embeddings, rerankers, and domain models The constraint is the hardware matrix: each container is built for specific GPU generations and driver versions, and a NIM that runs on H100 may have no arm64 or consumer-card path.
 - NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - NIM containers run on your GPUs but are licensed through NVIDIA AI Enterprise, so the container, model profile and driver stack are constraints you inherit rather than choices you make.
 - What this entry cannot give you is measured behaviour: measure NVIDIA NIM's latency and its error rate under a degraded upstream before it carries production traffic.

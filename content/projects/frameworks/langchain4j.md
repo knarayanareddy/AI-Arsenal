@@ -11,7 +11,7 @@ api_compatible: null
 org_or_maintainer: "langchain4j"
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: []
+alternatives: [spring-ai, haystack]
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
@@ -21,7 +21,7 @@ featured: false
 github_stars_last_30d: 0
 trending_score: 0
 added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+last_reviewed: "2026-10-26"
 added_by: maintainer
 status: active
 id: langchain4j
@@ -40,9 +40,9 @@ tags:
   - "self-hosted"
 maturity: beta
 cost_model: open-source
-github_stars: 12578
-last_commit: "2026-07-12"
-docs_url: https://docs.langchain4j.dev/
+github_stars: 13304
+last_commit: "2026-10-26"
+docs_url: "https://docs.langchain4j.dev/"
 phase: framework
 domain:
   - "language"
@@ -85,24 +85,37 @@ Add the LangChain4j dependency (plus a provider module) to Maven/Gradle, configu
 
 ## Key Use Cases
 
-1. **Where it fits**: "You are building LLM features in Java/Kotlin and want idiomatic APIs plus Quarkus/Spring Boot integration
-2. **Adoption checkpoint**: before building on LangChain4j, reproduce the specific claim you are relying on — install it, run it against a representative slice of your data, and record the number that would make you abandon the choice. A project entry can tell you what is claimed; only your own run tells you what is true.
+1. **Adding a summariser or extractor to a service that already exists**: the smallest useful integration is a single AI Service bean behind an existing endpoint, and that path avoids a new deployable entirely.
+2. **Deciding who owns the model plumbing**: a shared `ChatModel` bean is usually the moment a platform team takes model credentials away from product teams — worth naming before the first feature ships, because retrofitting it means touching every call site.
+3. **Migrating off a provider's native SDK**: the unified API makes the migration a mechanical replacement of client construction, provided the features you use exist on the new provider; check that first, since the abstraction does not cover everything.
+4. **Java teams adding RAG to an existing search stack**: `EmbeddingStore` covers 30+ vector stores, which means the existing Elasticsearch or pgvector install can be reused instead of adding a new datastore.
+5. **Tool calling and MCP on the JVM**: tool schemas are derived from Java methods and records, and MCP support means an existing Java service can expose tools without a Python bridge.
+6. **Typed structured output**: returning POJOs and records from a chat call rather than parsing JSON strings is the difference between a validated object and a stringly-typed guess.
+7. **Multi-step agents with observability hooks**: the toolbox includes agents, chat memory and listeners, so a tool loop can be instrumented using the JVM's existing logging and tracing rather than a parallel telemetry stack.
 
 ## Strengths
 
-- What LangChain4j gives you that reading the feature list does not: langChain4j provides abstractions, ChatModel, EmbeddingModel, EmbeddingStore, tools, and AI Services, that wrap concrete providers and vector databases behind Java interfaces. Its AI Services feature lets developers declare a Java interface annotated with prompts and tools and have the library generate an implementation that handles chat memory, tool invocation, structured output, and RAG retrieval, and it ships Quarkus and Spring Boot integrations for dependency injection and configuration, which is the part you have to evaluate against your own workload.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Recorded as beta, so the capability is real while the interface is still moving; pin the version you depend on rather than tracking head.
+- The AI Services pattern is the strongest idea in the library: an annotated interface becomes a working, tool-enabled, memory-carrying implementation, which is far less code than wiring the same behaviour by hand.
+- It is genuinely idiomatic Java — annotations, fluent builders, dependency injection, records — rather than a transliteration of a Python API. The README is explicit that it is not a LangChain port.
+- Breadth of integrations (20+ model providers, 30+ embedding stores) with a single abstraction over each, which is the actual value of a framework on the JVM.
+- First-class Quarkus, Spring Boot, Helidon and Micronaut integrations, so configuration and lifecycle follow the framework conventions a Java team already uses.
+- Apache-2.0 with a real community: 13.3k stars over 1,054 open issues is a large, active codebase rather than a vendor demo.
+- Independent API and release cycle from Python LangChain, which means one ecosystem's churn does not propagate into the JVM build.
 
 ## Limitations
 
-- The cost this entry cannot quantify for you is operational: the LangChain4j footprint at your data volume, the failure modes of its dependencies, and who is on call when it degrades.
-- Documentation describes intended behaviour, not observed behaviour: latency, memory and failure rates for LangChain4j at your scale need measuring before this informs a production decision.
-- LangChain4j is beta, so the interface and even the scope can change between minor versions; any code written against it should be isolated behind your own boundary rather than imported directly across your codebase.
+- **The maturity label in this entry says beta, and the project's own README says the library is under active development.** Core abstractions are stable in practice, and the surface changes: pin versions, read release notes, and keep the framework behind your own interface.
+- **1,054 open issues** is the honest measure of a project this broad: coverage is uneven across integrations, and a niche provider or vector store can be thinly maintained.
+- **Abstractions cost debuggability.** A unified API hides provider-specific features and parameters, so the option you need may not be reachable without dropping to the provider's own client.
+- **The JVM's ecosystem is thinner on AI evaluation.** `ragas` and similar tools are Python-first, so an evaluation loop usually means exporting data to Python or building the harness yourself.
+- **Not a LangChain port, despite the name.** Teams arriving from Python expect module parity that does not exist; approaching it as a new library is faster than mapping concepts across.
+- **Documentation is improving unevenly.** Examples lag the API in places, and the fastest path is often the `langchain4j-examples` repository rather than the docs.
 
 ## Relation to the Arsenal
 
-It brings the agent/RAG framework pattern to the JVM alongside the Python-centric frameworks in the catalog.
+It is the JVM answer to the Python frameworks in this catalog: `langgraph` and `crewai` for orchestration, `haystack` for pipeline composition, `dspy` for prompt optimisation — none of which solve the "our service is Java" constraint. The ingestion and storage entries (`pgvector`, `weaviate`, `qdrant`) are reachable through its `EmbeddingStore` abstraction rather than as separate integrations to write.
+
+The realistic split is organisational: choose LangChain4j because the team and the deployment target are on the JVM, not because its abstractions are better than the Python alternatives'.
 
 ## Resources
 

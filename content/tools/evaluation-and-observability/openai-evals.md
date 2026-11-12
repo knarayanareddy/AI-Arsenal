@@ -39,9 +39,7 @@ status: active
 
 ## Overview
 
-An open-source framework for writing and running custom evaluation suites against any model's behavior, code-first rather than UI-driven.
-
-Treat OpenAI Evals as a service with a schema, not as code you own on the evaluation path; under a open-source cost model; with `openai-evals`, `name`, `openai`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+An open-source framework for writing and running custom evaluation suites against any model's behavior, code-first rather than UI-driven. An eval registry maps a name to its grader function, and each run is recorded as JSONL, so two models can be compared on the same registry without re-authoring the eval.
 
 ## Why It's in the Arsenal
 

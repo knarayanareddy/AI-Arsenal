@@ -77,7 +77,7 @@ Follow the official documentation at https://protectai.github.io/llm-guard/ for 
 
 ## Strengths
 
-- What LLM Guard gives you that its headline description does not: each scanner takes the prompt (or output), returns a sanitized version plus a validity flag and risk score; scanners chain sequentially into a pipeline. ML-based scanners load Hugging Face models locally at startup, so detection quality and latency are controlled by which scanners you enable, which is the part to check against your own pipeline before trusting the feature list.
+- What LLM Guard gives you that its headline description does not: each scanner takes the prompt (or output), returns a sanitized version plus a validity flag and risk score; scanners chain sequentially into a pipeline. ML-based scanners load Hugging Face models locally at startup, so detection quality and latency are controlled by which scanners you enable.
 - LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Pin the client library rather than the API: LLM Guard is reachable through `langchain`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure LLM Guard's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -46,7 +46,7 @@ A model marketplace/gateway: one OpenAI-compatible API fronts hundreds of models
 
 ## Why It's in the Arsenal
 
-The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing. Read it beside `litellm`, `portkey`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing.
 
 ## Key Features
 
@@ -73,7 +73,7 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 
 ## Strengths
 
-- The implementation detail worth reading before adopting OpenRouter is specific — requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting OpenRouter is specific — requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages The number that matters is cost per completed request after routing, not advertised token prices: a provider that fails mid-stream still bills, and the fallback behaviour is the part to test.
 - OpenRouter overlaps `litellm`, `portkey` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Pin the client library rather than the API: OpenRouter is reachable through `litellm`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure OpenRouter's latency and its error rate under a degraded upstream before it carries production traffic.

@@ -76,7 +76,7 @@ A request is transformed into the exact payload the provider expects — message
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Qwen 3 is specific — standard transformer-based architecture released as open weights; can be served through engines like vLLM, SGLang, or Ollama, or fine-tuned with standard PEFT/Axolotl-style tooling — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Qwen 3 is specific — standard transformer-based architecture released as open weights; can be served through engines like vLLM, SGLang, or Ollama, or fine-tuned with standard PEFT/Axolotl-style tooling What to check is which variant you are running: thinking versus non-thinking modes and the 0.6B-235B size range imply different VRAM and latency envelopes, and the licence terms differ by model size.
 - No direct sibling is catalogued for Qwen 3 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Qwen 3 means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Qwen 3's latency and its error rate under a degraded upstream before it carries production traffic.

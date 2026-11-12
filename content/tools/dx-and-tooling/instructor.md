@@ -44,7 +44,7 @@ A lightweight Python library for extracting typed, Pydantic-validated structured
 
 ## Why It's in the Arsenal
 
-The entry exists because Instructor is A library for extracting typed structured outputs from language models. Read it beside `guidance`, `outlines`, `pydantic-ai-tool`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Instructor is A library for extracting typed structured outputs from language models.
 
 ## Key Features
 
@@ -71,7 +71,6 @@ Wraps a standard LLM API call, asking the model to produce output matching a Pyd
 ## Strengths
 
 - Beyond the feature list, Instructor's own implementation notes give the specifics — wraps a standard LLM API call, asking the model to produce output matching a Pydantic model's schema, validating the response, and re-prompting automatically on validation errors — which is where a capability claim either holds or does not for your workload.
-- Weighing Instructor against `guidance`, `outlines`, `pydantic-ai-tool` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
 - Instructor is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
 - Capability is documented; behaviour is not. For Instructor, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 

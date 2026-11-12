@@ -94,11 +94,11 @@ pip install lightrag-hku
 
 ## Limitations
 
-- LLM extraction adds indexing cost and can introduce graph noise
-- Research-origin; operational maturity below managed services
-- Overkill for simple retrieval workloads
-
-The engineering question with LightRAG is not whether it works but what it commits you to in the data-and-retrieval phase; under a open-source cost model; with `lightrag`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+- **Indexing costs LLM calls.** Entities and relations are extracted by a model at ingestion time, so a corpus that grows means paying for extraction again — and the graph is only as good as that extraction.
+- **Graph noise compounds.** A missed relation or a duplicated entity is not visible in a retrieval result; the dual-level query then returns a plausible answer built on a wrong edge.
+- **Operational maturity is research-grade.** Storage backends (Neo4j, NetworkX, and vector stores) are configurable, which also means several moving parts to version and back up.
+- **Overkill below a certain size.** For a few thousand chunks, hybrid vector search with a reranker is easier to operate and usually good enough.
+- **Benchmark claims are the project's own.** Multi-hop QA results on their evaluation sets do not transfer automatically to your domain's entity density.
 
 ## Relation to the Arsenal
 

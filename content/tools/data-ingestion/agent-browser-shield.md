@@ -75,7 +75,7 @@ The pipeline is fetch to parse to normalise, and each stage drops information; t
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Agent Browser Shield is specific — intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Agent Browser Shield is specific — intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context The test is adversarial: sanitisation and injection filtering are heuristics, so measure how many injected instructions still reach the model in a red-team run against real pages.
 - No direct sibling is catalogued for Agent Browser Shield in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Agent Browser Shield is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so Agent Browser Shield's interface may still move; pin the version you build against rather than tracking latest.

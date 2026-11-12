@@ -76,7 +76,7 @@ Follow the official documentation at https://github.com/protectai/rebuff for the
 
 ## Strengths
 
-- What Rebuff gives you that its headline description does not: incoming prompts/content are scored against injection-detection heuristics and/or a classifier before being passed to the underlying LLM, flagging suspicious inputs, which is the part to check against your own pipeline before trusting the feature list.
+- What Rebuff gives you that its headline description does not: incoming prompts/content are scored against injection-detection heuristics and/or a classifier before being passed to the underlying LLM, flagging suspicious inputs.
 - Rebuff overlaps `guardrails-ai`, `llamaguard`, `nemo-guardrails` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Rebuff is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Rebuff's latency and its error rate under a degraded upstream before it carries production traffic.
@@ -103,7 +103,7 @@ Follow the official documentation at https://github.com/protectai/rebuff for the
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for security-and-guardrails.
+- Reception is mostly cautionary: Rebuff is cited in prompt-injection writeups and equally often noted as bypassable, which is why it belongs in a layered design rather than as the defence.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

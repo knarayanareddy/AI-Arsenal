@@ -84,7 +84,6 @@ python main.py
 
 - Beyond the headline description, ComfyUI's architecture section is the honest source: a Python execution engine with a graph scheduler that caches node outputs and re-executes only changed subgraphs; model loading is backend-aware (offloading, quantized variants, smart VRAM management). The custom-node ecosystem (thousands of community extensions) extends it with control networks, video pipelines, and API integrations; workflows are JSON-serializable and embeddable in output images for exact reproduction.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

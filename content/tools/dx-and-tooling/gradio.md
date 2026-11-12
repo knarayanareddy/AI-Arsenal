@@ -43,7 +43,7 @@ A Python library for turning a model or function into a shareable web demo in mi
 
 ## Why It's in the Arsenal
 
-The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Read it beside `chainlit`, `fastapi`, `mesop`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly.
 
 ## Key Features
 
@@ -70,7 +70,7 @@ A Python function is wrapped with declared input/output component types; Gradio 
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Gradio is specific — a Python function is wrapped with declared input/output component types; Gradio auto-generates a web UI around that function and can expose it via a temporary public URL — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Gradio is specific — a Python function is wrapped with declared input/output component types; Gradio auto-generates a web UI around that function and can expose it via a temporary public URL What to measure is behaviour past one user: the queue serialises heavy requests by default, and a `share=True` tunnel must never outlive the demo.
 - Gradio overlaps `chainlit`, `fastapi`, `mesop`, `streamlit` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Gradio is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Gradio's latency and its error rate under a degraded upstream before it carries production traffic.

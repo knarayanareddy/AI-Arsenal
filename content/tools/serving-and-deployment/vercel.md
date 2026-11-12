@@ -71,7 +71,7 @@ Application code is built and deployed to Vercel's edge network; AI logic typica
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Vercel is specific — application code is built and deployed to Vercel's edge network; AI logic typically runs as a thin API/edge function layer that calls out to external model providers — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Vercel is specific — application code is built and deployed to Vercel's edge network; AI logic typically runs as a thin API/edge function layer that calls out to external model providers The constraint to plan around is execution time: edge and serverless functions cap request duration, which caps streaming and long-running agent steps regardless of the model behind them.
 - No direct sibling is catalogued for Vercel in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - Depending on Vercel means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
 - What this entry cannot give you is measured behaviour: measure Vercel's latency and its error rate under a degraded upstream before it carries production traffic.

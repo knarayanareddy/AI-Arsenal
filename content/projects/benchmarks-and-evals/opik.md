@@ -66,9 +66,7 @@ Opik appears in this catalog as a reference point for the benchmark-and-eval pha
 
 ## Architecture
 
-Provides tracing instrumentation for LLM application calls, an evaluation framework with both heuristic and LLM-graded metrics, and a dashboard shared conceptually with Comet's broader ML experiment-tracking platform, available as both open-source self-hosted and managed cloud offerings.
-
-The engineering question with Opik is not whether it works but what it commits you to unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `opik`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+Instrumentation arrives through SDKs and an OpenTelemetry-compatible endpoint: LLM calls, tool calls and agent steps become spans in a trace tree. Evaluation runs attach metric functions to datasets — heuristic scorers such as contains, regex and JSON validity alongside LLM-as-judge metrics — and both live beside the traces rather than in a separate tool. The self-hosted deployment ships as Docker Compose with the application server and its datastore, while the managed offering is the same surface operated by Comet.
 
 ## Ecosystem Position
 

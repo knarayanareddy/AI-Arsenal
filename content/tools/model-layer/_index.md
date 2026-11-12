@@ -45,11 +45,11 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Hugging Face Accelerate](./accelerate.md) — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
-- [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [Axolotl](./axolotl.md) — YAML-configuration fine-tuning framework for open-weight LLMs — LoRA/QLoRA, DPO/GRPO, FSDP2 and expert parallelism, with GGUF export
 - [Cerebras Inference](./cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
 - [ClearML](./clearml.md) — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
-- [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- [DeepSpeed](./deepspeed.md) — Distributed training engine — ZeRO sharding, CPU/NVMe offload and long-context parallelism used under PyTorch training frameworks
 - [DVC](./dvc.md) — Git-native version control for datasets and models — pointer files in Git, content in a cache, and a pipeline graph that reproduces only what changed
 - [FastEmbed](./fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [Groq](./groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
@@ -59,7 +59,7 @@ _No star-tracked entries yet._
 - [Ideogram AI](./ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [Liger Kernel](./liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
-- [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [LLaMA-Factory](./llamafactory.md) — No-code and CLI fine-tuning for 100+ open LLMs and VLMs — SFT, DPO and PPO with a Gradio web UI, merge/export and quantised deployment
 - [llmfit](./llmfit.md) — Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
@@ -68,7 +68,7 @@ _No star-tracked entries yet._
 - [OpenPipe ART](./openpipe-art.md) — Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs
-- [PEFT](./peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PEFT](./peft.md) — Hugging Face adapter library — LoRA, QLoRA, IA3 and prefix tuning wrapped around any Transformers or Diffusers model, with adapter hot-swapping at inference
 - [PyTorch Lightning](./pytorch-lightning.md) — The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing
 - [Qwen 3](./qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
 - [Sentence Transformers](./sentence-transformers.md) — The standard Python library for computing, training, and fine-tuning text embedding and reranker models

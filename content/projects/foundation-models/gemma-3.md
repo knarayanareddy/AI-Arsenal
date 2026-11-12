@@ -94,9 +94,8 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Gemma 3 is specific — a dense decoder-only transformer using Grouped-Query Attention with QK-norm (replacing Gemma 2's soft-capping), and a distinguishing 5:1 interleaving of local sliding-window attention layers (1024-token span) to global attention layers. Only the global layers (1/6 of total) need to retain KV cache for the full 128K context, which is the specific architectural mechanism that keeps long-context inference memory-feasible on constrained hardware. RoPE base frequency is 1M on global layers and 10K on local layers — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Gemma 3 is specific — a dense decoder-only transformer using Grouped-Query Attention with QK-norm (replacing Gemma 2's soft-capping), and a distinguishing 5:1 interleaving of local sliding-window attention layers (1024-token span) to global attention layers. Only the global layers (1/6 of total) need to retain KV cache for the full 128K context, which is the specific architectural mechanism that keeps long-context inference memory-feasible on constrained hardware. RoPE base frequency is 1M on global layers and 10K on local layers The test is long-context memory: with only the global layers holding a full KV cache, 128K prompts become feasible on a single 80GB card, and short-context benchmarks show nothing about where that breaks.
 - Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

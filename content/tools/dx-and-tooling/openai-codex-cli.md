@@ -77,7 +77,7 @@ Follow the official documentation at https://developers.openai.com/codex/cli for
 
 ## Strengths
 
-- What OpenAI Codex CLI gives you that its headline description does not: the CLI drives an agent loop against OpenAI models; proposed shell commands and patches execute inside a sandbox with network disabled by default, and the autonomy level controls which actions require human approval, which is the part to check against your own pipeline before trusting the feature list.
+- What OpenAI Codex CLI gives you that its headline description does not: the CLI drives an agent loop against OpenAI models; proposed shell commands and patches execute inside a sandbox with network disabled by default, and the autonomy level controls which actions require human approval.
 - OpenAI Codex CLI's honest comparison set is `claude-code`, `gemini-cli`, `aider`; what separates them is rarely capability, it is what you must operate.
 - OpenAI Codex CLI is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - What this entry cannot give you is measured behaviour: measure OpenAI Codex CLI's latency and its error rate under a degraded upstream before it carries production traffic.

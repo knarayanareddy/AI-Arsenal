@@ -89,7 +89,6 @@ pip install microsoft-agent-framework
 
 - Beyond the headline description, Microsoft Agent Framework's architecture section is the honest source: spans a range of orchestration complexity from simple single agents through graph-based multi-agent workflows, with deep integration into Azure telemetry, Semantic Kernel's plugin/skill model, and enterprise compliance tooling; supports both Python and .NET as first-class languages.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

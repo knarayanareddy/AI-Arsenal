@@ -100,7 +100,7 @@ Follow the official documentation at https://docs.aws.amazon.com/bedrock/ for th
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment.
+- Reception inside AWS organisations is about procurement rather than modelling: model access arrives inside the same IAM, VPC and billing boundary as everything else, and that is usually the whole argument.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

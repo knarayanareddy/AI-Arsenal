@@ -87,7 +87,6 @@ pip install langgraph
 
 - Beyond the headline description, LangGraph's architecture section is the honest source: applications are modeled as a directed graph of nodes (units of work) and edges (state routing); graph state is persisted across steps via checkpointing, enabling human-in-the-loop pauses, retries, and streaming — a lower-level, more explicit model than conversational-loop agent frameworks.
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

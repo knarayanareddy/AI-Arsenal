@@ -86,8 +86,6 @@ pip install autogpt
 ## Strengths
 
 - Beyond the headline description, AutoGPT's architecture section is the honest source: has evolved from its original 2023 single-script recursive-planning-loop design into a fuller platform (AutoGPT Platform) with a web UI, credential management, and a broader agent-building workflow, rather than remaining a bare autonomous-loop library.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

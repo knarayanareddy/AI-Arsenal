@@ -87,7 +87,6 @@ pip install mastra
 
 - Beyond the headline description, Mastra's architecture section is the honest source: provides agent, workflow, and tool abstractions built natively in TypeScript with full type safety, targeting Node.js backends and integrating with common JS-ecosystem deployment targets (Vercel, Node servers).
 - Sits in the framework phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

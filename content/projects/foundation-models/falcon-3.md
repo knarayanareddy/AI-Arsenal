@@ -93,9 +93,8 @@ print(generate("Explain retrieval augmented generation in one sentence.", max_ne
 
 ## Strengths
 
-- The implementation detail worth checking before adopting Falcon 3 is specific — a dense decoder-only transformer family, documented publicly at the model-card level (parameter counts, context length, tokenizer) but with less architectural novelty disclosed than TII's newer Falcon-H1 line, which explicitly documents its hybrid State Space Model plus attention design — because that is where the capability claim either survives contact with your data or does not.
+- The implementation detail worth checking before adopting Falcon 3 is specific — a dense decoder-only transformer family, documented publicly at the model-card level (parameter counts, context length, tokenizer) but with less architectural novelty disclosed than TII's newer Falcon-H1 line, which explicitly documents its hybrid State Space Model plus attention design The deciding checks are runtime support and context length: the 1B/3B/7B/10B sizes land on different kernel paths in vLLM and llama.cpp, and the family licence is TII's own rather than Apache-2.0.
 - Sits in the foundation-model phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** the fine-tuning entry for Megatron-LM. NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** the framework you adopt when one model no longer fits one GPU's worth of parallelism — tensor, pipeline, sequence and expert parallelism with fused kernels, and the layer most other training stacks still borrow from.
 
 ## Overview
 
@@ -74,8 +74,7 @@ git clone https://github.com/NVIDIA/Megatron-LM
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Megatron-LM is specific — model layers are sharded across GPUs (tensor parallelism), layer groups across pipeline stages (pipeline parallelism), and sequence activations across ranks (sequence parallelism), with communication scheduled to overlap compute. Megatron-Core exposes these as composable library primitives that other frameworks embed — and that is where a capability claim either survives contact with your data or does not.
-- Weighing Megatron-LM against `torchtune`, `axolotl` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The implementation detail worth reading before adopting Megatron-LM is specific — model layers are sharded across GPUs (tensor parallelism), layer groups across pipeline stages (pipeline parallelism), and sequence activations across ranks (sequence parallelism), with communication scheduled to overlap compute. Megatron-Core exposes these as composable library primitives that other frameworks embed What to verify is the parallelism plan against your interconnect: tensor parallelism pays on NVLink and stops paying over PCIe, and the 3D split has to match the topology you actually have.
 - Pin the client library rather than the API: Megatron-LM is reachable through `pytorch`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure Megatron-LM's latency and its error rate under a degraded upstream before it carries production traffic.
 

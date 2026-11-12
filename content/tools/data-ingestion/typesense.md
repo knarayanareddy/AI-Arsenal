@@ -72,7 +72,7 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 
 ## Strengths
 
-- What Typesense gives you that its headline description does not: indexes live fully in RAM backed by disk snapshots; vector fields use HNSW, and hybrid queries fuse keyword and vector rankings with rank fusion. Embedding fields can be declared to auto-generate from document text at index and query time, which is the part to check against your own pipeline before trusting the feature list.
+- What Typesense gives you that its headline description does not: indexes live fully in RAM backed by disk snapshots; vector fields use HNSW, and hybrid queries fuse keyword and vector rankings with rank fusion. Embedding fields can be declared to auto-generate from document text at index and query time.
 - Typesense's honest comparison set is `meilisearch`, `qdrant`; what separates them is rarely capability, it is what you must operate.
 - Pin the client library rather than the API: Typesense is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
 - What this entry cannot give you is measured behaviour: measure Typesense's latency and its error rate under a degraded upstream before it carries production traffic.

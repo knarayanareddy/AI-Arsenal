@@ -73,7 +73,7 @@ Acts as a control plane that sits in front of individually deployed agents, medi
 
 ## Strengths
 
-- What AGNT.Hub gives you that its headline description does not: acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy, which is the part to check against your own pipeline before trusting the feature list.
+- What AGNT.Hub gives you that its headline description does not: acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy.
 - No direct sibling is catalogued for AGNT.Hub in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
 - AGNT.Hub is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
 - Marked beta, so AGNT.Hub's interface may still move; pin the version you build against rather than tracking latest.

@@ -77,7 +77,7 @@ Follow the official documentation at https://google-gemini.github.io/gemini-cli/
 
 ## Strengths
 
-- The implementation detail worth reading before adopting Gemini CLI is specific — a Node.js CLI that streams a ReAct-style loop against Gemini models: built-in tools (grep, file edit, terminal, web fetch/search) plus user-configured MCP servers are exposed to the model, with user confirmation before mutating actions — and that is where a capability claim either survives contact with your data or does not.
+- The implementation detail worth reading before adopting Gemini CLI is specific — a Node.js CLI that streams a ReAct-style loop against Gemini models: built-in tools (grep, file edit, terminal, web fetch/search) plus user-configured MCP servers are exposed to the model, with user confirmation before mutating actions What to verify is what the confirmation gate actually covers in your repository: read-only commands run without prompting, and the blast radius of a wrong edit scales with how much context the model was handed.
 - Gemini CLI overlaps `claude-code`, `aider`, `openai-codex-cli` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
 - Gemini CLI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Gemini CLI's latency and its error rate under a degraded upstream before it carries production traffic.

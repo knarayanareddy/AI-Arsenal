@@ -74,7 +74,7 @@ _No star-tracked entries yet._
 - [OpenJudge](./openjudge.md) — AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training
 - [promptfoo](./promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
 - [PyRIT](./pyrit.md) — Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team
-- [Ragas](./ragas.md) — Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines
+- [Ragas](./ragas.md) — Evaluation framework for LLM apps: reference-free RAG metrics, synthetic test-set generation and judge pipelines that plug into existing observability stacks
 - [Rebuff](./rebuff.md) — Prompt injection detection and guardrail toolkit for LLM applications
 - [SkillSpector](./skillspector.md) — Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills
 - [Spotlight by Backplanes](./spotlight-by-backplanes.md) — Understand, improve, and track AI agent sessions with observability tooling

@@ -93,8 +93,6 @@ Install with `pip install paddlespeech` (and PaddlePaddle), then run tasks throu
 ## Strengths
 
 - Beyond the headline description, PaddleSpeech's architecture section is the honest source: paddleSpeech implements conformer/transformer ASR encoders with CTC and attention decoding, FastSpeech/VITS-style TTS acoustic models plus neural vocoders, and speaker-embedding models, all in PaddlePaddle. It exposes a command-line and Python API where a single call downloads and runs a pretrained model, and it includes a server module for streaming ASR/TTS deployment.
-- It is a framework entry in this catalog, so the comparison that matters is against the other framework projects rather than against projects in adjacent phases.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 

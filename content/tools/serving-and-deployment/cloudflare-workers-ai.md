@@ -73,7 +73,7 @@ npm create cloudflare@latest my-app
 
 ## Strengths
 
-- What Cloudflare Workers AI gives you that its headline description does not: models are pre-deployed on GPU capacity across Cloudflare data centers; a Workers binding (env.AI.run) or REST call routes to nearby capacity, with the neurons unit metering compute per request rather than per instance-hour, which is the part to check against your own pipeline before trusting the feature list.
+- What Cloudflare Workers AI gives you that its headline description does not: models are pre-deployed on GPU capacity across Cloudflare data centers; a Workers binding (env.AI.run) or REST call routes to nearby capacity, with the neurons unit metering compute per request rather than per instance-hour.
 - Cloudflare Workers AI's honest comparison set is `replicate`, `fireworks-ai`, `modal`; what separates them is rarely capability, it is what you must operate.
 - Cloudflare Workers AI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
 - What this entry cannot give you is measured behaviour: measure Cloudflare Workers AI's latency and its error rate under a degraded upstream before it carries production traffic.

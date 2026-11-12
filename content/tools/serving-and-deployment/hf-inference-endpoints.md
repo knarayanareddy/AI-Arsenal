@@ -47,7 +47,7 @@ Hugging Face Inference Endpoints is reached over a documented surface unlike `aw
 
 ## Why It's in the Arsenal
 
-The entry exists because Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints. Read it beside `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`: the choice between them is a deployment and cost decision before it is a capability one.
+The entry exists because Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints.
 
 ## Key Features
 
@@ -102,7 +102,7 @@ Follow the official documentation at https://huggingface.co/docs/inference-endpo
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.
+- Reception follows the Hub: the endpoint product is adopted because the model and dataset already live in the same account, not because its serving stack is best in class.
 
 ---
 *Last reviewed: 2026-06-30 by @maintainer*

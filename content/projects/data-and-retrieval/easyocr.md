@@ -102,7 +102,6 @@ Models download on first use, so the first read is slower. Set gpu=True when a C
 
 - Beyond the headline description, EasyOCR's architecture section is the honest source: the library wraps two stages, text detection to find where text is on the image and recognition to transcribe each region, with the model choice per language handled internally. The reader API takes an image path, a list of languages, and returns recognised text together with the bounding boxes for each result, so callers can filter by confidence or by region without re-running recognition. Models are fetched and cached on first use rather than specified by the caller, which is what removes the configuration step. Language selection is explicit at read time, so a document with mixed scripts is handled by passing more than one language code rather than by detection. On the deployment side the same code is wrapped in Gradio for a web demo and published as Hugging Face Spaces, which is why the project can offer a hosted try-it without a separate service.
 - Sits in the data-and-retrieval phase alongside the alternatives named in its Ecosystem Position section; cross-phase comparison is usually a category error rather than a useful alternative.
-- Maturity is recorded as production, so the interface is treated as stable enough to build against — which still says nothing about behaviour at your load, and that is the gap to measure.
 
 ## Limitations
 
